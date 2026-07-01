@@ -26,4 +26,7 @@ interface WordDao {
 
     @Query("SELECT * FROM words ORDER BY RANDOM() LIMIT 1")
     suspend fun getRandomWord(): WordEntity?
+
+    @Query("SELECT * FROM words WHERE id != :excludeId ORDER BY RANDOM() LIMIT 1")
+    suspend fun getRandomWordExcluding(excludeId: Long): WordEntity?
 }

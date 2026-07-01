@@ -1,8 +1,12 @@
 package com.example.oneminutelanguage
 
+import android.Manifest
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -21,23 +25,28 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.work.ExistingPeriodicWorkPolicy
-import androidx.work.PeriodicWorkRequestBuilder
-import androidx.work.WorkManager
 import com.example.oneminutelanguage.ui.AddWordScreen
 import com.example.oneminutelanguage.ui.MainViewModel
 import com.example.oneminutelanguage.ui.theme.OneMinuteLanguageTheme
-import com.example.oneminutelanguage.widget.WidgetUpdateWorker
-import java.util.concurrent.TimeUnit
+import com.example.oneminutelanguage.widget.ScreenOnForegroundService
 
 class MainActivity : ComponentActivity() {
+
+    private val notificationPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { /* foreground service still runs even if the notification stays hidden */ }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        scheduleWidgetUpdates()
+        requestNotificationPermissionIfNeeded()
+        // Safety net: guarantees the screen-on service is alive even if it was killed
+        // (e.g. after a reboot) while the widget is still pinned to the home screen.
+        ScreenOnForegroundService.start(applicationContext)
 
         // Handle both standard Intent extras and Glance action parameters
         val openAddWordScreen = intent?.extras?.getBoolean("navigate_to_add_word", false) ?: false ||
@@ -52,16 +61,13 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    private fun scheduleWidgetUpdates() {
-        val workRequest = PeriodicWorkRequestBuilder<WidgetUpdateWorker>(
-            15, TimeUnit.MINUTES
-        ).build()
-
-        WorkManager.getInstance(applicationContext).enqueueUniquePeriodicWork(
-            "WidgetUpdateWork",
-            ExistingPeriodicWorkPolicy.UPDATE,
-            workRequest
-        )
+    private fun requestNotificationPermissionIfNeeded() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU &&
+            ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS)
+            != PackageManager.PERMISSION_GRANTED
+        ) {
+            notificationPermissionLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+        }
     }
 }
 
