@@ -9,17 +9,22 @@ import androidx.lifecycle.viewModelScope
 import com.example.oneminutelanguage.data.DatabaseProvider
 import com.example.oneminutelanguage.data.WordEntity
 import com.example.oneminutelanguage.widget.WidgetUpdater
-import com.google.mlkit.nl.translate.TranslateLanguage
 import kotlinx.coroutines.launch
 
 class AddWordViewModel(application: Application) : AndroidViewModel(application) {
 
-    // Hardcoded for now: English -> Dutch.
-    // Later this can be made configurable based on the user's settings.
+    // Read fresh each time this screen is opened, so a language change made in
+    // Settings takes effect on the next visit without needing app restart.
+    private val sourceLanguageCode = LanguageSettingsStore.getSourceLanguage(application)
+    private val targetLanguageCode = LanguageSettingsStore.getTargetLanguage(application)
+
     private val translationHelper = TranslationHelper(
-        sourceLanguage = TranslateLanguage.ENGLISH,
-        targetLanguage = TranslateLanguage.DUTCH
+        sourceLanguage = sourceLanguageCode,
+        targetLanguage = targetLanguageCode
     )
+
+    val sourceLanguageName: String = SupportedLanguages.displayNameFor(sourceLanguageCode)
+    val targetLanguageName: String = SupportedLanguages.displayNameFor(targetLanguageCode)
 
     private val wordDao = DatabaseProvider.getDatabase(application).wordDao()
 
@@ -48,11 +53,19 @@ class AddWordViewModel(application: Application) : AndroidViewModel(application)
         val currentState = translationState
         if (currentState !is TranslationState.Success) return
 
+        val capitalizedOriginal = originalWord.trim().replaceFirstChar { it.titlecase() }
+        val capitalizedTranslation = currentState.translatedText.trim().replaceFirstChar { it.titlecase() }
+
         viewModelScope.launch {
+            if (wordDao.wordExists(capitalizedOriginal)) {
+                translationState = TranslationState.Error("\"$capitalizedOriginal\" is already in your list.")
+                return@launch
+            }
+
             wordDao.insertWord(
                 WordEntity(
-                    language1Word = originalWord,
-                    language2Word = currentState.translatedText,
+                    language1Word = capitalizedOriginal,
+                    language2Word = capitalizedTranslation,
                     dateAdded = System.currentTimeMillis()
                 )
             )

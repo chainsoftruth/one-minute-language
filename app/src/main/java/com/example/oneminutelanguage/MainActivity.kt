@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -31,7 +32,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.oneminutelanguage.ui.AddWordScreen
+import com.example.oneminutelanguage.ui.DatabaseScreen
 import com.example.oneminutelanguage.ui.MainViewModel
+import com.example.oneminutelanguage.ui.SettingsScreen
 import com.example.oneminutelanguage.ui.theme.OneMinuteLanguageTheme
 import com.example.oneminutelanguage.widget.ScreenOnForegroundService
 
@@ -54,7 +57,11 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             OneMinuteLanguageTheme {
-                Surface(modifier = Modifier.fillMaxSize()) {
+                Surface(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .safeDrawingPadding()
+                ) {
                     AppNavHost(startAtAddWord = openAddWordScreen)
                 }
             }
@@ -81,7 +88,9 @@ fun AppNavHost(startAtAddWord: Boolean) {
     ) {
         composable("main") {
             MainScreen(
-                onAddWordClick = { navController.navigate("add_word") }
+                onAddWordClick = { navController.navigate("add_word") },
+                onViewDatabaseClick = { navController.navigate("database") },
+                onSettingsClick = { navController.navigate("settings") }
             )
         }
         composable("add_word") {
@@ -93,12 +102,24 @@ fun AppNavHost(startAtAddWord: Boolean) {
                 }
             )
         }
+        composable("database") {
+            DatabaseScreen(
+                onAddWordClick = { navController.navigate("add_word") }
+            )
+        }
+        composable("settings") {
+            SettingsScreen(
+                onSettingsUpdated = { navController.popBackStack() }
+            )
+        }
     }
 }
 
 @Composable
 fun MainScreen(
     onAddWordClick: () -> Unit = {},
+    onViewDatabaseClick: () -> Unit = {},
+    onSettingsClick: () -> Unit = {},
     viewModel: MainViewModel = viewModel()
 ) {
     val totalWords by viewModel.totalWordsCount.collectAsState(initial = 0)
@@ -135,7 +156,7 @@ fun MainScreen(
         Spacer(modifier = Modifier.height(12.dp))
 
         Button(
-            onClick = { /* TODO: navigate to Database screen */ },
+            onClick = onViewDatabaseClick,
             modifier = Modifier.fillMaxWidth(0.8f),
         ) {
             Text("View Database")
@@ -144,7 +165,7 @@ fun MainScreen(
         Spacer(modifier = Modifier.height(12.dp))
 
         Button(
-            onClick = { /* TODO: navigate to Settings screen */ },
+            onClick = onSettingsClick,
             modifier = Modifier.fillMaxWidth(0.8f),
         ) {
             Text("Settings")

@@ -47,7 +47,7 @@ fun AddWordScreen(
         OutlinedTextField(
             value = inputText,
             onValueChange = { inputText = it },
-            label = { Text("Word (English)") },
+            label = { Text("Word (${viewModel.sourceLanguageName})") },
             modifier = Modifier.fillMaxWidth()
         )
 
