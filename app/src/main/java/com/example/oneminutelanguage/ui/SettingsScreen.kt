@@ -9,17 +9,22 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -99,7 +104,7 @@ fun SettingsScreen(
 
             is SettingsApplyState.DownloadingModels -> {
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    CircularProgressIndicator(modifier = Modifier.height(20.dp))
+                    CircularProgressIndicator(modifier = Modifier.size(20.dp))
                     Spacer(modifier = Modifier.width(8.dp))
                     Text("Downloading language model…")
                 }
@@ -107,7 +112,7 @@ fun SettingsScreen(
 
             is SettingsApplyState.Translating -> {
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    CircularProgressIndicator(modifier = Modifier.height(20.dp))
+                    CircularProgressIndicator(modifier = Modifier.size(20.dp))
                     Spacer(modifier = Modifier.width(8.dp))
                     Text("Translating existing words… (${applyState.current}/${applyState.total})")
                 }
@@ -128,6 +133,109 @@ fun SettingsScreen(
                 )
             }
         }
+
+        Spacer(modifier = Modifier.height(24.dp))
+        HorizontalDivider()
+        Spacer(modifier = Modifier.height(16.dp))
+
+        val defaultWordsState = viewModel.defaultWordsState
+        val defaultWordsBusy = defaultWordsState is DefaultWordsState.DownloadingModels ||
+            defaultWordsState is DefaultWordsState.Importing ||
+            defaultWordsState is DefaultWordsState.Removing
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = "Include default word list",
+                    style = MaterialTheme.typography.labelLarge
+                )
+                Text(
+                    text = "Adds a bundled starter vocabulary, translated into your current languages.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+
+            Spacer(modifier = Modifier.width(12.dp))
+
+            Switch(
+                checked = viewModel.defaultWordsEnabled,
+                onCheckedChange = viewModel::onToggleDefaultWords,
+                enabled = !defaultWordsBusy
+            )
+        }
+
+        Spacer(modifier = Modifier.height(8.dp))
+
+        when (defaultWordsState) {
+            is DefaultWordsState.Idle -> Unit
+
+            is DefaultWordsState.DownloadingModels -> {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    CircularProgressIndicator(modifier = Modifier.size(20.dp))
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text("Downloading language model…")
+                }
+            }
+
+            is DefaultWordsState.Importing -> {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    CircularProgressIndicator(modifier = Modifier.size(20.dp))
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text("Adding default words… (${defaultWordsState.current}/${defaultWordsState.total})")
+                }
+            }
+
+            is DefaultWordsState.Removing -> {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    CircularProgressIndicator(modifier = Modifier.size(20.dp))
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text("Removing default words…")
+                }
+            }
+
+            is DefaultWordsState.Done -> {
+                Text(
+                    text = if (viewModel.defaultWordsEnabled) "Default words added." else "Default words removed.",
+                    style = MaterialTheme.typography.bodyMedium
+                )
+            }
+
+            is DefaultWordsState.Error -> {
+                Text(
+                    text = "Error: ${defaultWordsState.message}",
+                    color = MaterialTheme.colorScheme.error,
+                    style = MaterialTheme.typography.bodyMedium
+                )
+            }
+        }
+    }
+
+    if (viewModel.showDisableDefaultWordsConfirmation) {
+        AlertDialog(
+            onDismissRequest = viewModel::cancelDisableDefaultWords,
+            title = { Text("Remove default words?") },
+            text = {
+                Text(
+                    "This deletes every default word-list entry from your database — including " +
+                        "any word you added manually that happens to match one by text. This can't be undone."
+                )
+            },
+            confirmButton = {
+                TextButton(onClick = viewModel::confirmDisableDefaultWords) {
+                    Text("Remove")
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = viewModel::cancelDisableDefaultWords) {
+                    Text("Cancel")
+                }
+            }
+        )
     }
 }
 

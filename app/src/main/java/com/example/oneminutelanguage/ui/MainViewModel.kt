@@ -13,7 +13,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     private val statsDao = database.dailyStatsDao()
 
     val totalWordsCount: Flow<Int> = wordDao.getWordCount()
-    
+
     val todayViewCount: Flow<Int> = statsDao.getViewCountForDate(LocalDate.now().toString())
         .map { it ?: 0 }
 }

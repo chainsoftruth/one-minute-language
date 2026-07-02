@@ -3,7 +3,6 @@ package com.example.oneminutelanguage.translation
 import android.content.Context
 import com.google.mlkit.nl.translate.TranslateLanguage
 
-/** Persists the user's chosen source/target language pair. */
 object LanguageSettingsStore {
     private const val PREFS_NAME = "language_settings"
     private const val KEY_SOURCE = "source_language"

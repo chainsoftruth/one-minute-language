@@ -4,17 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="6dp"
-    android:background="#99FFFFFF">
+    android:background="@drawable/widget_mesh_gradient">
 
     <ViewFlipper
         android:id="@+id/word_flipper"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:inAnimation="@anim/fade_in"
-        android:outAnimation="@anim/fade_out"
+        android:inAnimation="@anim/slide_up_in"
+        android:outAnimation="@anim/slide_up_out"
         android:measureAllChildren="true">
 
-        <!-- Child A -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -30,13 +29,8 @@
                 android:textSize="28sp"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:singleLine="true"
-                android:maxLines="1"
-                android:ellipsize="marquee"
-                android:marqueeRepeatLimit="marquee_forever"
-                android:scrollHorizontally="true"
-                android:focusable="true"
-                android:focusableInTouchMode="true" />
+                android:maxLines="2"
+                android:ellipsize="end" />
 
             <TextView
                 android:id="@+id/secondary_text_a"
@@ -48,16 +42,10 @@
                 android:textSize="18sp"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:singleLine="true"
                 android:maxLines="1"
-                android:ellipsize="marquee"
-                android:marqueeRepeatLimit="marquee_forever"
-                android:scrollHorizontally="true"
-                android:focusable="true"
-                android:focusableInTouchMode="true" />
+                android:ellipsize="end" />
         </LinearLayout>
 
-        <!-- Child B -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -73,13 +61,8 @@
                 android:textSize="28sp"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:singleLine="true"
-                android:maxLines="1"
-                android:ellipsize="marquee"
-                android:marqueeRepeatLimit="marquee_forever"
-                android:scrollHorizontally="true"
-                android:focusable="true"
-                android:focusableInTouchMode="true" />
+                android:maxLines="2"
+                android:ellipsize="end" />
 
             <TextView
                 android:id="@+id/secondary_text_b"
@@ -91,13 +74,8 @@
                 android:textSize="18sp"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:singleLine="true"
                 android:maxLines="1"
-                android:ellipsize="marquee"
-                android:marqueeRepeatLimit="marquee_forever"
-                android:scrollHorizontally="true"
-                android:focusable="true"
-                android:focusableInTouchMode="true" />
+                android:ellipsize="end" />
         </LinearLayout>
     </ViewFlipper>
 
@@ -109,7 +87,6 @@
         android:paddingTop="0dp"
         android:paddingEnd="6dp"
         android:text="+"
-        android:textStyle="bold"
         android:textColor="#000000"
         android:textSize="26sp" />
 

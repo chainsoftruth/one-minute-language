@@ -8,18 +8,17 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.room.withTransaction
 import com.example.oneminutelanguage.data.DatabaseProvider
+import com.example.oneminutelanguage.translation.DefaultWordsImporter
+import com.example.oneminutelanguage.translation.DefaultWordsPrefs
 import com.example.oneminutelanguage.translation.LanguageSettingsStore
 import com.example.oneminutelanguage.translation.TranslationHelper
 import com.example.oneminutelanguage.widget.WidgetUpdater
 import kotlinx.coroutines.launch
 
 class SettingsViewModel(application: Application) : AndroidViewModel(application) {
-
     private val database = DatabaseProvider.getDatabase(application)
     private val wordDao = database.wordDao()
 
-    // What's shown in the dropdowns. Nothing is persisted or re-translated
-    // until the user taps "Update Settings".
     var sourceLanguage by mutableStateOf(LanguageSettingsStore.getSourceLanguage(application))
         private set
 
@@ -27,6 +26,15 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
         private set
 
     var applyState by mutableStateOf<SettingsApplyState>(SettingsApplyState.Idle)
+        private set
+
+    var defaultWordsEnabled by mutableStateOf(DefaultWordsPrefs.isEnabled(application))
+        private set
+
+    var defaultWordsState by mutableStateOf<DefaultWordsState>(DefaultWordsState.Idle)
+        private set
+
+    var showDisableDefaultWordsConfirmation by mutableStateOf(false)
         private set
 
     fun selectSourceLanguage(code: String) {
@@ -37,12 +45,6 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
         targetLanguage = code
     }
 
-    /**
-     * Persists the selected languages. If either changed, downloads the model for
-     * the old -> new pair and re-translates every existing word's corresponding
-     * column (English -> Ukrainian if source changed, Dutch -> French if target
-     * changed, etc.) before committing.
-     */
     fun applyChanges() {
         val context: Application = getApplication()
         val previousSource = LanguageSettingsStore.getSourceLanguage(context)
@@ -95,8 +97,6 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
                             updated
                         }
 
-                        // Translation (network/ML work) happens above, outside the
-                        // transaction — only the fast DB writes are atomic here.
                         database.withTransaction {
                             updatedWords.forEach { wordDao.updateWord(it) }
                         }
@@ -114,6 +114,60 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
             } finally {
                 sourceMigrator?.close()
                 targetMigrator?.close()
+            }
+        }
+    }
+
+    fun onToggleDefaultWords(turnOn: Boolean) {
+        if (turnOn) {
+            enableDefaultWords()
+        } else {
+            showDisableDefaultWordsConfirmation = true
+        }
+    }
+
+    fun confirmDisableDefaultWords() {
+        showDisableDefaultWordsConfirmation = false
+        disableDefaultWords()
+    }
+
+    fun cancelDisableDefaultWords() {
+        showDisableDefaultWordsConfirmation = false
+    }
+
+    private fun enableDefaultWords() {
+        val context: Application = getApplication()
+
+        DefaultWordsPrefs.setEnabled(context, true)
+        defaultWordsEnabled = true
+
+        viewModelScope.launch {
+            try {
+                defaultWordsState = DefaultWordsState.DownloadingModels
+                DefaultWordsImporter.importDefaultWords(context) { current, total ->
+                    defaultWordsState = DefaultWordsState.Importing(current, total)
+                }
+                WidgetUpdater.refreshWidget(context)
+                defaultWordsState = DefaultWordsState.Done
+            } catch (e: Exception) {
+                defaultWordsState = DefaultWordsState.Error(e.message ?: "Failed to import default words")
+            }
+        }
+    }
+
+    private fun disableDefaultWords() {
+        val context: Application = getApplication()
+
+        viewModelScope.launch {
+            try {
+                defaultWordsState = DefaultWordsState.Removing
+                wordDao.deleteAllDefaultWords()
+                DefaultWordsPrefs.setEnabled(context, false)
+                defaultWordsEnabled = false
+                WidgetUpdater.refreshWidget(context)
+                defaultWordsState = DefaultWordsState.Done
+            } catch (e: Exception) {
+                defaultWordsState = DefaultWordsState.Error(e.message ?: "Failed to remove default words")
             }
         }
     }

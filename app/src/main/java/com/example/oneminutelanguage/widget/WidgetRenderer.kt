@@ -9,16 +9,13 @@ import android.widget.RemoteViews
 import com.example.oneminutelanguage.MainActivity
 import com.example.oneminutelanguage.R
 import com.example.oneminutelanguage.data.DatabaseProvider
+import com.example.oneminutelanguage.data.WordDao
+import com.example.oneminutelanguage.data.WordEntity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import kotlin.random.Random
 
-/**
- * Builds the widget's RemoteViews: fetches the next word, sizes the text, flips the
- * ViewFlipper to the freshly-populated hidden child (crossfade), and wires the "+"
- * button. Replaces the old Glance-based WordGlanceWidget with the same visual result.
- */
 object WidgetRenderer {
-
     suspend fun buildRemoteViews(
         context: Context,
         appWidgetManager: AppWidgetManager,
@@ -32,11 +29,8 @@ object WidgetRenderer {
             val today = java.time.LocalDate.now().toString()
             statsDao.incrementViewCount(today)
 
-            // Exclude whatever word is currently on screen so a repeat doesn't
-            // look like the widget failed to refresh. Falls back to any random
-            // word if there's only one word in the database.
             val lastWordId = WidgetPrefs.getLastWordId(context)
-            val randomWord = wordDao.getRandomWordExcluding(lastWordId) ?: wordDao.getRandomWord()
+            val randomWord = pickRandomWord(wordDao, lastWordId)
 
             if (randomWord != null) {
                 WidgetPrefs.setLastWordId(context, randomWord.id)
@@ -55,8 +49,6 @@ object WidgetRenderer {
         val isCompact = isCompactWidget(appWidgetManager, appWidgetId)
         val views = RemoteViews(context.packageName, R.layout.widget_layout)
 
-        // Write the new word into whichever ViewFlipper child is currently hidden,
-        // then flip to it so the ViewFlipper's fade animations play.
         val showingChildA = WidgetPrefs.isChildAVisible(context)
         val nextChildIndex = if (showingChildA) 1 else 0
         val primaryId = if (nextChildIndex == 0) R.id.primary_text_a else R.id.primary_text_b
@@ -76,11 +68,8 @@ object WidgetRenderer {
             scaledFontSize(data.language1Word, isPrimary = false, compact = isCompact)
         )
 
-        // Text is single-line with ellipsize="marquee" in the layout; a TextView only
-        // actually scrolls its marquee while "selected", which RemoteViews has no
-        // dedicated action for, so it's set via the generic reflection setter.
-        views.setBoolean(primaryId, "setSelected", true)
-        views.setBoolean(secondaryId, "setSelected", true)
+        views.setInt(primaryId, "setMaxLines", if (isCompact) 1 else 2)
+        views.setInt(secondaryId, "setMaxLines", 1)
 
         val secondaryTopPaddingPx = dpToPx(context, if (isCompact) 0 else 1)
         views.setViewPadding(secondaryId, 0, secondaryTopPaddingPx, 0, 0)
@@ -104,7 +93,6 @@ object WidgetRenderer {
         return views
     }
 
-    /** True when the widget is currently sized to roughly a 1-row home screen slot. */
     fun isCompactWidget(appWidgetManager: AppWidgetManager, appWidgetId: Int): Boolean {
         return try {
             val options = appWidgetManager.getAppWidgetOptions(appWidgetId)
@@ -118,16 +106,18 @@ object WidgetRenderer {
     private fun dpToPx(context: Context, dp: Int): Int {
         return (dp * context.resources.displayMetrics.density).toInt()
     }
+
+    private suspend fun pickRandomWord(wordDao: WordDao, excludeId: Long): WordEntity? {
+        val count = wordDao.getWordCountExcluding(excludeId)
+        if (count <= 0) {
+            return wordDao.getWordAtOffset(0)
+        }
+        val offset = Random.nextInt(count)
+        return wordDao.getWordAtOffsetExcluding(excludeId, offset)
+    }
 }
 
-/**
- * Large by default, shrinking in steps as the word gets longer so it never overflows
- * the widget. `isPrimary` sets the base tier — the learned-language word reads larger
- * than the English reference below it. `compact` drops the base tier further for a
- * 1-row-height widget, which has much less vertical room to work with.
- */
 private fun scaledFontSize(text: String, isPrimary: Boolean, compact: Boolean): Float {
-    // Another 10% down from the previous 18/31/11/20 set.
     val base = when {
         isPrimary && compact -> 16
         isPrimary -> 28

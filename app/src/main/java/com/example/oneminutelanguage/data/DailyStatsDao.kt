@@ -9,7 +9,6 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface DailyStatsDao {
-
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insertIfNotExists(stats: DailyStatsEntity)
 

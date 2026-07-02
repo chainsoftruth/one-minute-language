@@ -32,7 +32,7 @@ class DatabaseViewModel(application: Application) : AndroidViewModel(application
     fun deleteWord(word: WordEntity) {
         viewModelScope.launch {
             wordDao.deleteWord(word)
-            // In case the deleted word was the one currently shown on the widget.
+
             WidgetUpdater.refreshWidget(getApplication())
         }
     }

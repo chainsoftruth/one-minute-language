@@ -18,14 +18,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.launch
 
-/**
- * Keeps the process alive at foreground priority so:
- * 1) a dynamically-registered ACTION_SCREEN_ON receiver actually survives and fires, and
- * 2) widget refresh calls (screen-on or manual "+"/refresh tap) aren't deferred/dropped by
- *    background execution limits and OEM battery throttling (the "once per minute" symptom).
- */
 class ScreenOnForegroundService : Service() {
-
     private val serviceJob = Job()
     private val serviceScope = CoroutineScope(Dispatchers.IO + serviceJob)
 

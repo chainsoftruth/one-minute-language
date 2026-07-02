@@ -9,7 +9,6 @@ import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface WordDao {
-
     @Insert
     suspend fun insertWord(word: WordEntity)
 
@@ -31,14 +30,26 @@ interface WordDao {
     @Query("SELECT * FROM words ORDER BY dateAdded DESC LIMIT 1")
     suspend fun getLatestWord(): WordEntity?
 
-    @Query("SELECT * FROM words ORDER BY RANDOM() LIMIT 1")
-    suspend fun getRandomWord(): WordEntity?
+    @Query("SELECT COUNT(*) FROM words")
+    suspend fun getTotalWordCountOnce(): Int
 
-    @Query("SELECT * FROM words WHERE id != :excludeId ORDER BY RANDOM() LIMIT 1")
-    suspend fun getRandomWordExcluding(excludeId: Long): WordEntity?
+    @Query("SELECT COUNT(*) FROM words WHERE id != :excludeId")
+    suspend fun getWordCountExcluding(excludeId: Long): Int
+
+    @Query("SELECT * FROM words LIMIT 1 OFFSET :offset")
+    suspend fun getWordAtOffset(offset: Int): WordEntity?
+
+    @Query("SELECT * FROM words WHERE id != :excludeId LIMIT 1 OFFSET :offset")
+    suspend fun getWordAtOffsetExcluding(excludeId: Long, offset: Int): WordEntity?
 
     @Query("SELECT EXISTS(SELECT 1 FROM words WHERE LOWER(language1Word) = LOWER(:word))")
     suspend fun wordExists(word: String): Boolean
+
+    @Query("SELECT * FROM words WHERE LOWER(language1Word) = LOWER(:word) LIMIT 1")
+    suspend fun findByLanguage1Word(word: String): WordEntity?
+
+    @Query("DELETE FROM words WHERE isDefault = 1")
+    suspend fun deleteAllDefaultWords()
 
     @Query(
         "SELECT * FROM words " +

@@ -12,9 +12,6 @@ import com.example.oneminutelanguage.widget.WidgetUpdater
 import kotlinx.coroutines.launch
 
 class AddWordViewModel(application: Application) : AndroidViewModel(application) {
-
-    // Read fresh each time this screen is opened, so a language change made in
-    // Settings takes effect on the next visit without needing app restart.
     private val sourceLanguageCode = LanguageSettingsStore.getSourceLanguage(application)
     private val targetLanguageCode = LanguageSettingsStore.getTargetLanguage(application)
 

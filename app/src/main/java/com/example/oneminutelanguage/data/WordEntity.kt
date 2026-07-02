@@ -1,5 +1,6 @@
 package com.example.oneminutelanguage.data
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
@@ -10,5 +11,8 @@ data class WordEntity(
 
     val language1Word: String,
     val language2Word: String,
-    val dateAdded: Long
+    val dateAdded: Long,
+
+    @ColumnInfo(defaultValue = "0")
+    val isDefault: Boolean = false
 )

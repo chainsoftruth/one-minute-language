@@ -101,12 +101,11 @@ private fun WordRow(word: WordEntity, onDelete: () -> Unit) {
         verticalAlignment = Alignment.CenterVertically
     ) {
         Column(modifier = Modifier.weight(1f)) {
-            // Learned-language word, primary.
             Text(
                 text = word.language2Word,
                 style = MaterialTheme.typography.titleMedium
             )
-            // English reference, secondary.
+
             Text(
                 text = word.language1Word,
                 style = MaterialTheme.typography.bodyMedium,

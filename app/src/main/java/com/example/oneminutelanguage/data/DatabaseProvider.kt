@@ -4,7 +4,6 @@ import android.content.Context
 import androidx.room.Room
 
 object DatabaseProvider {
-
     @Volatile
     private var INSTANCE: AppDatabase? = null
 
@@ -14,7 +13,9 @@ object DatabaseProvider {
                 context.applicationContext,
                 AppDatabase::class.java,
                 "one_minute_language_db"
-            ).build()
+            )
+                .addMigrations(MIGRATION_1_2)
+                .build()
             INSTANCE = instance
             instance
         }

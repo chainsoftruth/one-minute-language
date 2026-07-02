@@ -1,6 +1,5 @@
 package com.example.oneminutelanguage.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -12,32 +11,47 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = TealPrimaryDark,
+    onPrimary = OnTealPrimaryDark,
+    primaryContainer = TealPrimaryContainerDark,
+    onPrimaryContainer = OnTealPrimaryContainerDark,
+    secondary = TealSecondaryDark,
+    onSecondary = OnTealSecondaryDark,
+    secondaryContainer = TealSecondaryContainerDark,
+    onSecondaryContainer = OnTealSecondaryContainerDark,
+    tertiary = CoralTertiaryDark,
+    onTertiary = OnCoralTertiaryDark,
+    tertiaryContainer = CoralTertiaryContainerDark,
+    onTertiaryContainer = OnCoralTertiaryContainerDark,
+    background = BackgroundDark,
+    onBackground = OnBackgroundDark,
+    surface = BackgroundDark,
+    onSurface = OnBackgroundDark
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Purple40,
-    secondary = PurpleGrey40,
-    tertiary = Pink40
-
-    /* Other default colors to override
-    background = Color(0xFFFFFBFE),
-    surface = Color(0xFFFFFBFE),
-    onPrimary = Color.White,
-    onSecondary = Color.White,
-    onTertiary = Color.White,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
-    */
+    primary = TealPrimaryLight,
+    onPrimary = OnTealPrimaryLight,
+    primaryContainer = TealPrimaryContainerLight,
+    onPrimaryContainer = OnTealPrimaryContainerLight,
+    secondary = TealSecondaryLight,
+    onSecondary = OnTealSecondaryLight,
+    secondaryContainer = TealSecondaryContainerLight,
+    onSecondaryContainer = OnTealSecondaryContainerLight,
+    tertiary = CoralTertiaryLight,
+    onTertiary = OnCoralTertiaryLight,
+    tertiaryContainer = CoralTertiaryContainerLight,
+    onTertiaryContainer = OnCoralTertiaryContainerLight,
+    background = BackgroundLight,
+    onBackground = OnBackgroundLight,
+    surface = BackgroundLight,
+    onSurface = OnBackgroundLight
 )
 
 @Composable
 fun OneMinuteLanguageTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {

@@ -8,6 +8,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+import androidx.compose.ui.Alignment
 import androidx.compose.material3.Button
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
@@ -78,24 +81,22 @@ fun AddWordScreen(
 
         Spacer(modifier = Modifier.height(16.dp))
 
-        // React to the current translation state
         when (val state = viewModel.translationState) {
             is TranslationState.Idle -> {
-                // Nothing to show yet
             }
 
             is TranslationState.DownloadingModel -> {
-                Row {
-                    CircularProgressIndicator(modifier = Modifier.height(20.dp))
-                    Spacer(modifier = Modifier.height(8.dp))
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    CircularProgressIndicator(modifier = Modifier.size(20.dp))
+                    Spacer(modifier = Modifier.width(8.dp))
                     Text("Downloading language model…")
                 }
             }
 
             is TranslationState.Translating -> {
-                Row {
-                    CircularProgressIndicator(modifier = Modifier.height(20.dp))
-                    Spacer(modifier = Modifier.height(8.dp))
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    CircularProgressIndicator(modifier = Modifier.size(20.dp))
+                    Spacer(modifier = Modifier.width(8.dp))
                     Text("Translating…")
                 }
             }

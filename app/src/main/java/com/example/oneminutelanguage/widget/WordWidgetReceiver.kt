@@ -4,12 +4,12 @@ import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class WordWidgetReceiver : AppWidgetProvider() {
-
     override fun onUpdate(
         context: Context,
         appWidgetManager: AppWidgetManager,
@@ -25,8 +25,7 @@ class WordWidgetReceiver : AppWidgetProvider() {
         newOptions: Bundle
     ) {
         super.onAppWidgetOptionsChanged(context, appWidgetManager, appWidgetId, newOptions)
-        // Widget was resized (e.g. dropped to 1-row height) — rebuild immediately
-        // so compact text sizing applies without waiting for the next screen-on.
+
         renderEach(context, appWidgetManager, intArrayOf(appWidgetId))
     }
 
@@ -41,10 +40,20 @@ class WordWidgetReceiver : AppWidgetProvider() {
     }
 
     private fun renderEach(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray) {
+        val pendingResult = goAsync()
+
         CoroutineScope(Dispatchers.IO).launch {
-            for (appWidgetId in appWidgetIds) {
-                val views = WidgetRenderer.buildRemoteViews(context, appWidgetManager, appWidgetId)
-                appWidgetManager.updateAppWidget(appWidgetId, views)
+            try {
+                for (appWidgetId in appWidgetIds) {
+                    try {
+                        val views = WidgetRenderer.buildRemoteViews(context, appWidgetManager, appWidgetId)
+                        appWidgetManager.updateAppWidget(appWidgetId, views)
+                    } catch (e: Exception) {
+                        Log.e("WordWidgetReceiver", "Failed to render widget $appWidgetId", e)
+                    }
+                }
+            } finally {
+                pendingResult.finish()
             }
         }
     }

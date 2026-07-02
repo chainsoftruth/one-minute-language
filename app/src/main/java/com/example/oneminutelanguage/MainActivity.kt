@@ -31,38 +31,41 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.compose.ui.graphics.Color
 import com.example.oneminutelanguage.ui.AddWordScreen
 import com.example.oneminutelanguage.ui.DatabaseScreen
 import com.example.oneminutelanguage.ui.MainViewModel
 import com.example.oneminutelanguage.ui.SettingsScreen
+import com.example.oneminutelanguage.ui.theme.MeshGradientBackground
 import com.example.oneminutelanguage.ui.theme.OneMinuteLanguageTheme
 import com.example.oneminutelanguage.widget.ScreenOnForegroundService
 
 class MainActivity : ComponentActivity() {
-
     private val notificationPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
-    ) { /* foreground service still runs even if the notification stays hidden */ }
+    ) {  }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         requestNotificationPermissionIfNeeded()
-        // Safety net: guarantees the screen-on service is alive even if it was killed
-        // (e.g. after a reboot) while the widget is still pinned to the home screen.
+
         ScreenOnForegroundService.start(applicationContext)
 
-        // Handle both standard Intent extras and Glance action parameters
         val openAddWordScreen = intent?.extras?.getBoolean("navigate_to_add_word", false) ?: false ||
                 intent?.getBooleanExtra("navigate_to_add_word", false) ?: false
 
         setContent {
             OneMinuteLanguageTheme {
-                Surface(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .safeDrawingPadding()
-                ) {
-                    AppNavHost(startAtAddWord = openAddWordScreen)
+                MeshGradientBackground {
+                    Surface(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .safeDrawingPadding(),
+                        color = Color.Transparent,
+                        contentColor = MaterialTheme.colorScheme.onBackground
+                    ) {
+                        AppNavHost(startAtAddWord = openAddWordScreen)
+                    }
                 }
             }
         }

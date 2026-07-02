@@ -4,10 +4,6 @@ import com.google.mlkit.nl.translate.TranslateLanguage
 
 data class LanguageOption(val code: String, val displayName: String)
 
-/**
- * Top 10 European languages by speaker count, with Dutch and Ukrainian
- * pinned in regardless of ranking, and Russian excluded by requirement.
- */
 object SupportedLanguages {
     val all: List<LanguageOption> = listOf(
         LanguageOption(TranslateLanguage.ENGLISH, "English"),
