@@ -30,11 +30,11 @@ object WidgetRenderer {
             val today = java.time.LocalDate.now().toString()
             statsDao.incrementViewCount(today)
 
-            val lastWordId = WidgetPrefs.getLastWordId(context)
+            val lastWordId = WidgetPrefs.getLastWordId(context, appWidgetId)
             val randomWord = pickRandomWord(wordDao, lastWordId)
 
             if (randomWord != null) {
-                WidgetPrefs.setLastWordId(context, randomWord.id)
+                WidgetPrefs.setLastWordId(context, appWidgetId, randomWord.id)
                 WordWidgetData(
                     language1Word = randomWord.language1Word,
                     language2Word = randomWord.language2Word
@@ -50,7 +50,7 @@ object WidgetRenderer {
         val isCompact = isCompactWidget(appWidgetManager, appWidgetId)
         val views = RemoteViews(context.packageName, R.layout.widget_layout)
 
-        val showingChildA = WidgetPrefs.isChildAVisible(context)
+        val showingChildA = WidgetPrefs.isChildAVisible(context, appWidgetId)
         val nextChildIndex = if (showingChildA) 1 else 0
         val primaryId = if (nextChildIndex == 0) R.id.primary_text_a else R.id.primary_text_b
         val secondaryId = if (nextChildIndex == 0) R.id.secondary_text_a else R.id.secondary_text_b
@@ -75,14 +75,15 @@ object WidgetRenderer {
         views.setViewPadding(secondaryId, 0, secondaryTopPaddingPx, 0, 0)
 
         views.setDisplayedChild(R.id.word_flipper, nextChildIndex)
-        WidgetPrefs.setChildAVisible(context, nextChildIndex == 0)
+        WidgetPrefs.setChildAVisible(context, appWidgetId, nextChildIndex == 0)
 
         views.setOnClickPendingIntent(
             R.id.word_flipper,
             PendingIntent.getActivity(
                 context,
-                1,
+                appWidgetId,
                 Intent(context, SpeakWordActivity::class.java).apply {
+                    putExtra(SpeakWordActivity.EXTRA_APP_WIDGET_ID, appWidgetId)
                     flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 },
                 PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE

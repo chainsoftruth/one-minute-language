@@ -1,5 +1,6 @@
 package com.example.oneminutelanguage.speech
 
+import android.appwidget.AppWidgetManager
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.lifecycle.lifecycleScope
@@ -14,9 +15,19 @@ class SpeakWordActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        val appWidgetId = intent.getIntExtra(
+            EXTRA_APP_WIDGET_ID,
+            AppWidgetManager.INVALID_APPWIDGET_ID
+        )
+
+        if (appWidgetId == AppWidgetManager.INVALID_APPWIDGET_ID) {
+            finish()
+            return
+        }
+
         lifecycleScope.launch {
             try {
-                val wordId = WidgetPrefs.getLastWordId(applicationContext)
+                val wordId = WidgetPrefs.getLastWordId(applicationContext, appWidgetId)
                 if (wordId >= 0) {
                     val word = withContext(Dispatchers.IO) {
                         DatabaseProvider.getDatabase(applicationContext).wordDao().getWordById(wordId)
@@ -33,5 +44,9 @@ class SpeakWordActivity : ComponentActivity() {
                 finish()
             }
         }
+    }
+
+    companion object {
+        const val EXTRA_APP_WIDGET_ID = "extra_app_widget_id"
     }
 }

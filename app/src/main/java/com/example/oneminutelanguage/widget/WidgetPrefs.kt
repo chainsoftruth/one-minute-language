@@ -8,27 +8,27 @@ object WidgetPrefs {
     private const val KEY_SHOWING_CHILD_A = "showing_child_a"
     private const val NO_LAST_WORD = -1L
 
-    fun getLastWordId(context: Context): Long {
+    fun getLastWordId(context: Context, appWidgetId: Int): Long {
         return context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-            .getLong(KEY_LAST_WORD_ID, NO_LAST_WORD)
+            .getLong("${KEY_LAST_WORD_ID}_$appWidgetId", NO_LAST_WORD)
     }
 
-    fun setLastWordId(context: Context, id: Long) {
+    fun setLastWordId(context: Context, appWidgetId: Int, id: Long) {
         context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
             .edit()
-            .putLong(KEY_LAST_WORD_ID, id)
+            .putLong("${KEY_LAST_WORD_ID}_$appWidgetId", id)
             .apply()
     }
 
-    fun isChildAVisible(context: Context): Boolean {
+    fun isChildAVisible(context: Context, appWidgetId: Int): Boolean {
         return context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
-            .getBoolean(KEY_SHOWING_CHILD_A, true)
+            .getBoolean("${KEY_SHOWING_CHILD_A}_$appWidgetId", true)
     }
 
-    fun setChildAVisible(context: Context, visible: Boolean) {
+    fun setChildAVisible(context: Context, appWidgetId: Int, visible: Boolean) {
         context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
             .edit()
-            .putBoolean(KEY_SHOWING_CHILD_A, visible)
+            .putBoolean("${KEY_SHOWING_CHILD_A}_$appWidgetId", visible)
             .apply()
     }
 }
