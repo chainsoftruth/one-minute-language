@@ -46,12 +46,12 @@ class AddWordViewModel(application: Application) : AndroidViewModel(application)
         }
     }
 
-    fun saveWord(originalWord: String, onSaved: () -> Unit) {
-        val currentState = translationState
-        if (currentState !is TranslationState.Success) return
+    fun saveWord(originalWord: String, translatedWord: String, onSaved: () -> Unit) {
+        if (translationState !is TranslationState.Success) return
+        if (translatedWord.isBlank()) return
 
         val capitalizedOriginal = originalWord.trim().replaceFirstChar { it.titlecase() }
-        val capitalizedTranslation = currentState.translatedText.trim().replaceFirstChar { it.titlecase() }
+        val capitalizedTranslation = translatedWord.trim().replaceFirstChar { it.titlecase() }
 
         viewModelScope.launch {
             if (wordDao.wordExists(capitalizedOriginal)) {

@@ -17,6 +17,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -33,6 +34,14 @@ fun AddWordScreen(
     onWordSaved: () -> Unit = {}
 ) {
     var inputText by remember { mutableStateOf("") }
+    var editedTranslation by remember { mutableStateOf("") }
+
+    LaunchedEffect(viewModel.translationState) {
+        val state = viewModel.translationState
+        if (state is TranslationState.Success) {
+            editedTranslation = state.translatedText
+        }
+    }
 
     Column(
         modifier = Modifier
@@ -70,10 +79,11 @@ fun AddWordScreen(
             onClick = {
                 viewModel.saveWord(
                     originalWord = inputText,
+                    translatedWord = editedTranslation,
                     onSaved = onWordSaved
                 )
             },
-            enabled = viewModel.translationState is TranslationState.Success,
+            enabled = viewModel.translationState is TranslationState.Success && editedTranslation.isNotBlank(),
             modifier = Modifier.fillMaxWidth()
         ) {
             Text("Save Word")
@@ -102,9 +112,11 @@ fun AddWordScreen(
             }
 
             is TranslationState.Success -> {
-                Text(
-                    text = "Translation: ${state.translatedText}",
-                    style = MaterialTheme.typography.titleMedium
+                OutlinedTextField(
+                    value = editedTranslation,
+                    onValueChange = { editedTranslation = it },
+                    label = { Text("Translation (${viewModel.targetLanguageName})") },
+                    modifier = Modifier.fillMaxWidth()
                 )
             }
 
