@@ -11,7 +11,7 @@ A home-screen widget that quietly teaches you one word at a time — every time 
 ![Min SDK](https://img.shields.io/badge/minSdk-24-blue)
 ![Jetpack Compose](https://img.shields.io/badge/UI-Jetpack%20Compose-4285F4?logo=jetpackcompose&logoColor=white)
 ![ML Kit](https://img.shields.io/badge/translation-ML%20Kit-EA4335?logo=googletranslate&logoColor=white)
-![Version](https://img.shields.io/badge/version-1.1-success)
+![Version](https://img.shields.io/badge/version-1.2-success)
 
 </div>
 
