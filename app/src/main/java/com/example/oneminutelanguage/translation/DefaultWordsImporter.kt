@@ -15,15 +15,26 @@ object DefaultWordsImporter {
     ) {
         val wordDao = DatabaseProvider.getDatabase(context).wordDao()
         val englishWords = loadWordsFromAssets(context)
+        val dutchWords = loadWordsFromAssets(context, "words_nl.json")
+        val ukrainianWords = loadWordsFromAssets(context, "words_uk.json")
+        val frenchWords = loadWordsFromAssets(context, "words_fr.json")
+        val germanWords = loadWordsFromAssets(context, "words_de.json")
+        val italianWords = loadWordsFromAssets(context, "words_it.json")
+        val spanishWords = loadWordsFromAssets(context, "words_es.json")
+        val portugueseWords = loadWordsFromAssets(context, "words_pt.json")
+        val polishWords = loadWordsFromAssets(context, "words_pl.json")
+        val romanianWords = loadWordsFromAssets(context, "words_ro.json")
 
         val sourceCode = LanguageSettingsStore.getSourceLanguage(context)
         val targetCode = LanguageSettingsStore.getTargetLanguage(context)
 
-        val sourceHelper = if (sourceCode != TranslateLanguage.ENGLISH) {
+        val hardcodedLanguages = setOf(TranslateLanguage.ENGLISH, TranslateLanguage.DUTCH, TranslateLanguage.UKRAINIAN, TranslateLanguage.FRENCH, TranslateLanguage.GERMAN, TranslateLanguage.ITALIAN, TranslateLanguage.SPANISH, TranslateLanguage.PORTUGUESE, TranslateLanguage.POLISH, TranslateLanguage.ROMANIAN)
+
+        val sourceHelper = if (sourceCode !in hardcodedLanguages) {
             TranslationHelper(sourceLanguage = TranslateLanguage.ENGLISH, targetLanguage = sourceCode)
         } else null
 
-        val targetHelper = if (targetCode != TranslateLanguage.ENGLISH) {
+        val targetHelper = if (targetCode !in hardcodedLanguages) {
             TranslationHelper(sourceLanguage = TranslateLanguage.ENGLISH, targetLanguage = targetCode)
         } else null
 
@@ -34,7 +45,20 @@ object DefaultWordsImporter {
             englishWords.forEachIndexed { index, englishWord ->
                 onProgress(index + 1, englishWords.size)
 
-                val sourceText = capitalize(stripNumericAnnotation(sourceHelper?.translate(englishWord) ?: englishWord))
+                val sourceRaw = when {
+                    sourceCode == TranslateLanguage.DUTCH -> dutchWords.getOrElse(index) { englishWord }
+                    sourceCode == TranslateLanguage.UKRAINIAN -> ukrainianWords.getOrElse(index) { englishWord }
+                    sourceCode == TranslateLanguage.FRENCH -> frenchWords.getOrElse(index) { englishWord }
+                    sourceCode == TranslateLanguage.GERMAN -> germanWords.getOrElse(index) { englishWord }
+                    sourceCode == TranslateLanguage.ITALIAN -> italianWords.getOrElse(index) { englishWord }
+                    sourceCode == TranslateLanguage.SPANISH -> spanishWords.getOrElse(index) { englishWord }
+                    sourceCode == TranslateLanguage.PORTUGUESE -> portugueseWords.getOrElse(index) { englishWord }
+                    sourceCode == TranslateLanguage.POLISH -> polishWords.getOrElse(index) { englishWord }
+                    sourceCode == TranslateLanguage.ROMANIAN -> romanianWords.getOrElse(index) { englishWord }
+                    sourceCode == TranslateLanguage.ENGLISH -> englishWord
+                    else -> sourceHelper?.translate(englishWord) ?: englishWord
+                }
+                val sourceText = capitalize(stripNumericAnnotation(sourceRaw))
                 val existing = wordDao.findByLanguage1Word(sourceText)
 
                 if (existing != null) {
@@ -44,7 +68,20 @@ object DefaultWordsImporter {
                     return@forEachIndexed
                 }
 
-                val targetText = capitalize(stripNumericAnnotation(targetHelper?.translate(englishWord) ?: englishWord))
+                val targetRaw = when {
+                    targetCode == TranslateLanguage.DUTCH -> dutchWords.getOrElse(index) { englishWord }
+                    targetCode == TranslateLanguage.UKRAINIAN -> ukrainianWords.getOrElse(index) { englishWord }
+                    targetCode == TranslateLanguage.FRENCH -> frenchWords.getOrElse(index) { englishWord }
+                    targetCode == TranslateLanguage.GERMAN -> germanWords.getOrElse(index) { englishWord }
+                    targetCode == TranslateLanguage.ITALIAN -> italianWords.getOrElse(index) { englishWord }
+                    targetCode == TranslateLanguage.SPANISH -> spanishWords.getOrElse(index) { englishWord }
+                    targetCode == TranslateLanguage.PORTUGUESE -> portugueseWords.getOrElse(index) { englishWord }
+                    targetCode == TranslateLanguage.POLISH -> polishWords.getOrElse(index) { englishWord }
+                    targetCode == TranslateLanguage.ROMANIAN -> romanianWords.getOrElse(index) { englishWord }
+                    targetCode == TranslateLanguage.ENGLISH -> englishWord
+                    else -> targetHelper?.translate(englishWord) ?: englishWord
+                }
+                val targetText = capitalize(stripNumericAnnotation(targetRaw))
 
                 wordDao.insertWord(
                     WordEntity(
@@ -65,9 +102,9 @@ object DefaultWordsImporter {
         DatabaseProvider.getDatabase(context).wordDao().deleteAllDefaultWords()
     }
 
-    private suspend fun loadWordsFromAssets(context: Context): List<String> {
+    private suspend fun loadWordsFromAssets(context: Context, fileName: String = "words.json"): List<String> {
         return withContext(Dispatchers.IO) {
-            val json = context.assets.open("words.json").bufferedReader().use { it.readText() }
+            val json = context.assets.open(fileName).bufferedReader().use { it.readText() }
             val array = JSONObject(json).getJSONArray("words")
             (0 until array.length()).map { array.getString(it) }
         }
