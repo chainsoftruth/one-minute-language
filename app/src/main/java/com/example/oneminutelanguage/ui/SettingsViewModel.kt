@@ -45,6 +45,12 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
         targetLanguage = code
     }
 
+    fun swapLanguages() {
+        val previous = sourceLanguage
+        sourceLanguage = targetLanguage
+        targetLanguage = previous
+    }
+
     fun applyChanges() {
         val context: Application = getApplication()
         val previousSource = LanguageSettingsStore.getSourceLanguage(context)
@@ -54,6 +60,24 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
 
         if (previousSource == newSource && previousTarget == newTarget) {
             applyState = SettingsApplyState.Success
+            return
+        }
+
+        if (previousSource == newTarget && previousTarget == newSource) {
+            viewModelScope.launch {
+                try {
+                    wordDao.swapLanguageColumns()
+
+                    LanguageSettingsStore.setSourceLanguage(context, newSource)
+                    LanguageSettingsStore.setTargetLanguage(context, newTarget)
+
+                    WidgetUpdater.refreshWidget(context)
+
+                    applyState = SettingsApplyState.Success
+                } catch (e: Exception) {
+                    applyState = SettingsApplyState.Error(e.message ?: "Failed to swap languages")
+                }
+            }
             return
         }
 

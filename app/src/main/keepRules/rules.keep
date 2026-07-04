@@ -1,12 +1,11 @@
-# Add project specific R8 rules here.
-# AGP will combine all keep rule files in src/main/keepRules to pass to R8
-#
-# For more details, see
-#   https://d.android.com/r/tools/r8/keep-rules
-
-# If your project uses WebView with JS, uncomment the following
-# and specify the fully qualified class name to the JavaScript interface
-# class:
-#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
-#   public *;
-#}
+# ML Kit Translate's internal DI wiring (TranslatorImpl$Factory and friends) was
+# getting incorrectly stripped/renamed by R8 full mode, causing a NullPointerException
+# on a Firebase/Play-Services-injected field at runtime (crash confirmed via mapping.txt:
+# com.example.oneminutelanguage.translation.TranslationHelper -> s12,
+# com.google.mlkit.nl.translate.internal.TranslatorImpl$Factory -> a22, field zzc -> c).
+-keep class com.google.mlkit.** { *; }
+-dontwarn com.google.mlkit.**
+-keep class com.google.android.gms.** { *; }
+-dontwarn com.google.android.gms.**
+-keep class com.google.firebase.** { *; }
+-dontwarn com.google.firebase.**

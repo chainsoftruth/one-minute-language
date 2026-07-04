@@ -26,6 +26,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".speech.SpeakWordActivity"
+            android:exported="false"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:taskAffinity=""
+            android:theme="@style/Theme.OneMinuteLanguage.Translucent" />
         <receiver
             android:name=".widget.WordWidgetReceiver"
             android:exported="false">

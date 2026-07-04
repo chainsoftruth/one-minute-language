@@ -26,3 +26,7 @@ mapping.txt
 
 # IDE - machine-specific, not meant to be shared
 .idea/
+
+# Claude workspace
+docs/
+trash/

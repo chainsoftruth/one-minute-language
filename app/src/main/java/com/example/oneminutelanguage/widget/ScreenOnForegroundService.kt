@@ -73,7 +73,7 @@ class ScreenOnForegroundService : Service() {
         }
 
         return NotificationCompat.Builder(this, CHANNEL_ID)
-            .setContentTitle("OneMinuteLanguage")
+            .setContentTitle("OneMinute Language")
             .setContentText("Watching for screen-on to refresh your widget")
             .setSmallIcon(R.mipmap.ic_launcher)
             .setPriority(NotificationCompat.PRIORITY_MIN)

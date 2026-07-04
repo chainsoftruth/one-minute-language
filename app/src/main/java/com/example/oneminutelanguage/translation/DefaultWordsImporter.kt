@@ -34,7 +34,7 @@ object DefaultWordsImporter {
             englishWords.forEachIndexed { index, englishWord ->
                 onProgress(index + 1, englishWords.size)
 
-                val sourceText = capitalize(sourceHelper?.translate(englishWord) ?: englishWord)
+                val sourceText = capitalize(stripNumericAnnotation(sourceHelper?.translate(englishWord) ?: englishWord))
                 val existing = wordDao.findByLanguage1Word(sourceText)
 
                 if (existing != null) {
@@ -44,7 +44,7 @@ object DefaultWordsImporter {
                     return@forEachIndexed
                 }
 
-                val targetText = capitalize(targetHelper?.translate(englishWord) ?: englishWord)
+                val targetText = capitalize(stripNumericAnnotation(targetHelper?.translate(englishWord) ?: englishWord))
 
                 wordDao.insertWord(
                     WordEntity(
@@ -75,5 +75,11 @@ object DefaultWordsImporter {
 
     private fun capitalize(text: String): String {
         return text.trim().replaceFirstChar { it.titlecase() }
+    }
+
+    private val numericParenthetical = Regex("""\s*\([^)]*\d[^)]*\)""")
+
+    private fun stripNumericAnnotation(text: String): String {
+        return numericParenthetical.replace(text, "").trim()
     }
 }

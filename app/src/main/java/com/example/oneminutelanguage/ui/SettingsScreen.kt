@@ -66,7 +66,14 @@ fun SettingsScreen(
             onSelect = viewModel::selectSourceLanguage
         )
 
-        Spacer(modifier = Modifier.height(20.dp))
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.Center
+        ) {
+            TextButton(onClick = viewModel::swapLanguages) {
+                Text("⇅ Swap languages")
+            }
+        }
 
         LanguageDropdown(
             label = "Language you're learning",

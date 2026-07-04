@@ -36,4 +36,20 @@ class DatabaseViewModel(application: Application) : AndroidViewModel(application
             WidgetUpdater.refreshWidget(getApplication())
         }
     }
+
+    fun setWordEnabled(word: WordEntity, enabled: Boolean) {
+        viewModelScope.launch {
+            wordDao.setWordEnabled(word.id, enabled)
+
+            WidgetUpdater.refreshWidget(getApplication())
+        }
+    }
+
+    fun setAllWordsEnabled(enabled: Boolean) {
+        viewModelScope.launch {
+            wordDao.setAllWordsEnabled(enabled)
+
+            WidgetUpdater.refreshWidget(getApplication())
+        }
+    }
 }

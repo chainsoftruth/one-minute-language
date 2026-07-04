@@ -14,15 +14,21 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Search
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
@@ -36,6 +42,39 @@ fun DatabaseScreen(
 ) {
     val query by viewModel.searchQuery.collectAsState()
     val words by viewModel.words.collectAsState()
+
+    var pendingBulkEnable by remember { mutableStateOf<Boolean?>(null) }
+
+    pendingBulkEnable?.let { enable ->
+        AlertDialog(
+            onDismissRequest = { pendingBulkEnable = null },
+            title = { Text(if (enable) "Enable all words?" else "Disable all words?") },
+            text = {
+                Text(
+                    if (enable) {
+                        "All words will be shown on the widget."
+                    } else {
+                        "No words will be shown on the widget until you enable some again."
+                    }
+                )
+            },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        viewModel.setAllWordsEnabled(enable)
+                        pendingBulkEnable = null
+                    }
+                ) {
+                    Text(if (enable) "Enable all" else "Disable all")
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { pendingBulkEnable = null }) {
+                    Text("Cancel")
+                }
+            }
+        )
+    }
 
     Column(
         modifier = Modifier
@@ -71,7 +110,20 @@ fun DatabaseScreen(
             }
         }
 
-        Spacer(modifier = Modifier.height(12.dp))
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            TextButton(onClick = { pendingBulkEnable = true }) {
+                Text("Select all")
+            }
+
+            TextButton(onClick = { pendingBulkEnable = false }) {
+                Text("Deselect all")
+            }
+        }
+
+        Spacer(modifier = Modifier.height(4.dp))
 
         if (words.isEmpty()) {
             Text(
@@ -83,6 +135,7 @@ fun DatabaseScreen(
                 items(words, key = { it.id }) { word ->
                     WordRow(
                         word = word,
+                        onEnabledChange = { viewModel.setWordEnabled(word, it) },
                         onDelete = { viewModel.deleteWord(word) }
                     )
                     HorizontalDivider()
@@ -93,7 +146,11 @@ fun DatabaseScreen(
 }
 
 @Composable
-private fun WordRow(word: WordEntity, onDelete: () -> Unit) {
+private fun WordRow(
+    word: WordEntity,
+    onEnabledChange: (Boolean) -> Unit,
+    onDelete: () -> Unit
+) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -103,7 +160,12 @@ private fun WordRow(word: WordEntity, onDelete: () -> Unit) {
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 text = word.language2Word,
-                style = MaterialTheme.typography.titleMedium
+                style = MaterialTheme.typography.titleMedium,
+                color = if (word.isEnabled) {
+                    MaterialTheme.colorScheme.onSurface
+                } else {
+                    MaterialTheme.colorScheme.onSurfaceVariant
+                }
             )
 
             Text(
@@ -112,6 +174,13 @@ private fun WordRow(word: WordEntity, onDelete: () -> Unit) {
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
         }
+
+        Switch(
+            checked = word.isEnabled,
+            onCheckedChange = onEnabledChange
+        )
+
+        Spacer(modifier = Modifier.width(4.dp))
 
         IconButton(onClick = onDelete) {
             Icon(

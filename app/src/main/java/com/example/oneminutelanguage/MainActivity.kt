@@ -22,6 +22,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
@@ -35,6 +36,7 @@ import androidx.compose.ui.graphics.Color
 import com.example.oneminutelanguage.ui.AddWordScreen
 import com.example.oneminutelanguage.ui.DatabaseScreen
 import com.example.oneminutelanguage.ui.MainViewModel
+import com.example.oneminutelanguage.ui.QuizScreen
 import com.example.oneminutelanguage.ui.SettingsScreen
 import com.example.oneminutelanguage.ui.theme.MeshGradientBackground
 import com.example.oneminutelanguage.ui.theme.OneMinuteLanguageTheme
@@ -93,7 +95,8 @@ fun AppNavHost(startAtAddWord: Boolean) {
             MainScreen(
                 onAddWordClick = { navController.navigate("add_word") },
                 onViewDatabaseClick = { navController.navigate("database") },
-                onSettingsClick = { navController.navigate("settings") }
+                onSettingsClick = { navController.navigate("settings") },
+                onCheckProgressClick = { navController.navigate("quiz") }
             )
         }
         composable("add_word") {
@@ -115,6 +118,11 @@ fun AppNavHost(startAtAddWord: Boolean) {
                 onSettingsUpdated = { navController.popBackStack() }
             )
         }
+        composable("quiz") {
+            QuizScreen(
+                onDone = { navController.popBackStack() }
+            )
+        }
     }
 }
 
@@ -123,10 +131,20 @@ fun MainScreen(
     onAddWordClick: () -> Unit = {},
     onViewDatabaseClick: () -> Unit = {},
     onSettingsClick: () -> Unit = {},
+    onCheckProgressClick: () -> Unit = {},
     viewModel: MainViewModel = viewModel()
 ) {
     val totalWords by viewModel.totalWordsCount.collectAsState(initial = 0)
     val viewsToday by viewModel.todayViewCount.collectAsState(initial = 0)
+
+    val greeting = remember {
+        when (java.time.LocalTime.now().hour) {
+            in 5..11 -> "Good morning! ☀️"
+            in 12..17 -> "Good afternoon! 👋"
+            in 18..22 -> "Good evening! 🌙"
+            else -> "Burning the midnight oil? 🦉"
+        }
+    }
 
     Column(
         modifier = Modifier
@@ -136,14 +154,33 @@ fun MainScreen(
         verticalArrangement = Arrangement.Center,
     ) {
         Text(
-            text = "Widget views today: $viewsToday",
+            text = greeting,
+            style = MaterialTheme.typography.headlineMedium,
+        )
+
+        Spacer(modifier = Modifier.height(4.dp))
+
+        Text(
+            text = "Ready for a minute of language?",
+            style = MaterialTheme.typography.bodyMedium,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+
+        Spacer(modifier = Modifier.height(24.dp))
+
+        Text(
+            text = when (viewsToday) {
+                0 -> "You haven't seen the widget yet today"
+                1 -> "You've seen the widget once today"
+                else -> "You've seen the widget $viewsToday times today"
+            },
             style = MaterialTheme.typography.titleMedium,
         )
 
         Spacer(modifier = Modifier.height(8.dp))
 
         Text(
-            text = "Total words: $totalWords",
+            text = "$totalWords words in your collection",
             style = MaterialTheme.typography.titleMedium,
         )
 
@@ -163,6 +200,15 @@ fun MainScreen(
             modifier = Modifier.fillMaxWidth(0.8f),
         ) {
             Text("View Database")
+        }
+
+        Spacer(modifier = Modifier.height(12.dp))
+
+        Button(
+            onClick = onCheckProgressClick,
+            modifier = Modifier.fillMaxWidth(0.8f),
+        ) {
+            Text("Check Progress")
         }
 
         Spacer(modifier = Modifier.height(12.dp))

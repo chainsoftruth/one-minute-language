@@ -21,6 +21,12 @@ interface WordDao {
     @Query("SELECT * FROM words")
     suspend fun getAllWordsOnce(): List<WordEntity>
 
+    @Query("SELECT * FROM words WHERE isEnabled = 1")
+    suspend fun getEnabledWordsOnce(): List<WordEntity>
+
+    @Query("UPDATE words SET isEnabled = 0 WHERE id IN (:ids)")
+    suspend fun disableWords(ids: List<Long>)
+
     @Query("SELECT * FROM words ORDER BY dateAdded DESC")
     fun getAllWords(): Flow<List<WordEntity>>
 
@@ -30,17 +36,29 @@ interface WordDao {
     @Query("SELECT * FROM words ORDER BY dateAdded DESC LIMIT 1")
     suspend fun getLatestWord(): WordEntity?
 
+    @Query("SELECT * FROM words WHERE id = :id LIMIT 1")
+    suspend fun getWordById(id: Long): WordEntity?
+
     @Query("SELECT COUNT(*) FROM words")
     suspend fun getTotalWordCountOnce(): Int
 
-    @Query("SELECT COUNT(*) FROM words WHERE id != :excludeId")
+    @Query("SELECT COUNT(*) FROM words WHERE isEnabled = 1 AND id != :excludeId")
     suspend fun getWordCountExcluding(excludeId: Long): Int
 
-    @Query("SELECT * FROM words LIMIT 1 OFFSET :offset")
+    @Query("SELECT * FROM words WHERE isEnabled = 1 LIMIT 1 OFFSET :offset")
     suspend fun getWordAtOffset(offset: Int): WordEntity?
 
-    @Query("SELECT * FROM words WHERE id != :excludeId LIMIT 1 OFFSET :offset")
+    @Query("SELECT * FROM words WHERE isEnabled = 1 AND id != :excludeId LIMIT 1 OFFSET :offset")
     suspend fun getWordAtOffsetExcluding(excludeId: Long, offset: Int): WordEntity?
+
+    @Query("UPDATE words SET isEnabled = :enabled WHERE id = :id")
+    suspend fun setWordEnabled(id: Long, enabled: Boolean)
+
+    @Query("UPDATE words SET isEnabled = :enabled")
+    suspend fun setAllWordsEnabled(enabled: Boolean)
+
+    @Query("UPDATE words SET language1Word = language2Word, language2Word = language1Word")
+    suspend fun swapLanguageColumns()
 
     @Query("SELECT EXISTS(SELECT 1 FROM words WHERE LOWER(language1Word) = LOWER(:word))")
     suspend fun wordExists(word: String): Boolean

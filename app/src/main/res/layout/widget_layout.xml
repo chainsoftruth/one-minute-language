@@ -42,8 +42,12 @@
                 android:textSize="18sp"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:maxLines="1"
-                android:ellipsize="end" />
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
         </LinearLayout>
 
         <LinearLayout
@@ -74,8 +78,12 @@
                 android:textSize="18sp"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:maxLines="1"
-                android:ellipsize="end" />
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true" />
         </LinearLayout>
     </ViewFlipper>
 

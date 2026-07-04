@@ -14,5 +14,8 @@ data class WordEntity(
     val dateAdded: Long,
 
     @ColumnInfo(defaultValue = "0")
-    val isDefault: Boolean = false
+    val isDefault: Boolean = false,
+
+    @ColumnInfo(defaultValue = "1")
+    val isEnabled: Boolean = true
 )

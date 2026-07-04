@@ -8,6 +8,7 @@ import android.util.TypedValue
 import android.widget.RemoteViews
 import com.example.oneminutelanguage.MainActivity
 import com.example.oneminutelanguage.R
+import com.example.oneminutelanguage.speech.SpeakWordActivity
 import com.example.oneminutelanguage.data.DatabaseProvider
 import com.example.oneminutelanguage.data.WordDao
 import com.example.oneminutelanguage.data.WordEntity
@@ -60,22 +61,33 @@ object WidgetRenderer {
         views.setTextViewTextSize(
             primaryId,
             TypedValue.COMPLEX_UNIT_SP,
-            scaledFontSize(data.language2Word, isPrimary = true, compact = isCompact)
+            if (isCompact) 16f else 28f
         )
         views.setTextViewTextSize(
             secondaryId,
             TypedValue.COMPLEX_UNIT_SP,
-            scaledFontSize(data.language1Word, isPrimary = false, compact = isCompact)
+            if (isCompact) 12f else 18f
         )
 
-        views.setInt(primaryId, "setMaxLines", if (isCompact) 1 else 2)
-        views.setInt(secondaryId, "setMaxLines", 1)
+        views.setInt(primaryId, "setMaxLines", 2)
 
         val secondaryTopPaddingPx = dpToPx(context, if (isCompact) 0 else 1)
         views.setViewPadding(secondaryId, 0, secondaryTopPaddingPx, 0, 0)
 
         views.setDisplayedChild(R.id.word_flipper, nextChildIndex)
         WidgetPrefs.setChildAVisible(context, nextChildIndex == 0)
+
+        views.setOnClickPendingIntent(
+            R.id.word_flipper,
+            PendingIntent.getActivity(
+                context,
+                1,
+                Intent(context, SpeakWordActivity::class.java).apply {
+                    flags = Intent.FLAG_ACTIVITY_NEW_TASK
+                },
+                PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+            )
+        )
 
         views.setOnClickPendingIntent(
             R.id.btn_add_word,
@@ -115,28 +127,4 @@ object WidgetRenderer {
         val offset = Random.nextInt(count)
         return wordDao.getWordAtOffsetExcluding(excludeId, offset)
     }
-}
-
-private fun scaledFontSize(text: String, isPrimary: Boolean, compact: Boolean): Float {
-    val base = when {
-        isPrimary && compact -> 16
-        isPrimary -> 28
-        compact -> 10
-        else -> 18
-    }
-
-    val lengthPenalty = when {
-        text.length <= 8 -> 0
-        text.length <= 14 -> 4
-        text.length <= 20 -> 10
-        else -> 14
-    }
-
-    val minSize = when {
-        isPrimary && compact -> 9
-        isPrimary -> 12
-        compact -> 7
-        else -> 10
-    }
-    return (base - lengthPenalty).coerceAtLeast(minSize).toFloat()
 }
