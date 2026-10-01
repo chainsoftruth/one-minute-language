@@ -9,6 +9,17 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import com.example.oneminutelanguage.course.CoursePrefs
+import com.example.oneminutelanguage.course.DRILL_SIZE
+import com.example.oneminutelanguage.course.Match
+import com.example.oneminutelanguage.course.SPEECH_ALMOST
+import com.example.oneminutelanguage.course.SPEECH_CORRECT
+import com.example.oneminutelanguage.course.SPEECH_TRIES
+import com.example.oneminutelanguage.course.best
+import com.example.oneminutelanguage.course.gradeListen
+import com.example.oneminutelanguage.course.gradeSelf
+import com.example.oneminutelanguage.course.gradeSpeech
+import com.example.oneminutelanguage.course.listeningDrill
+import com.example.oneminutelanguage.course.speakingDrill
 import com.example.oneminutelanguage.course.CourseRepository
 import com.example.oneminutelanguage.course.ItemResult
 import com.example.oneminutelanguage.course.Item
@@ -28,6 +39,7 @@ import com.example.oneminutelanguage.course.vocabCardSchedule
 import com.example.oneminutelanguage.data.DatabaseProvider
 import com.example.oneminutelanguage.data.LessonProgressEntity
 import com.example.oneminutelanguage.data.ReviewCardEntity
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import java.time.LocalDate
 import kotlin.random.Random
@@ -39,12 +51,21 @@ sealed interface LessonPhase {
 
     /** Vocab lessons: swipeable word cards before the exercises. */
     data object Intro : LessonPhase
+
+    /** Listening lessons: the dialogue player, before the questions. */
+    data object Dialogue : LessonPhase
+
+    /** Speaking lessons with a dialogue: the learner plays speaker B. */
+    data object Roleplay : LessonPhase
     data object Items : LessonPhase
     data object Done : LessonPhase
 }
 
 class LessonViewModel(application: Application, savedStateHandle: SavedStateHandle) : AndroidViewModel(application) {
-    private val lessonId: String = checkNotNull(savedStateHandle["lessonId"])
+    /** "listening" or "speaking" for a practice drill (route drill/{kind}); null for a normal lesson. */
+    private val drillKind: String? = savedStateHandle["kind"]
+    val isDrill = drillKind != null
+    private val lessonId: String = savedStateHandle["lessonId"] ?: "drill.$drillKind"
     private val db = DatabaseProvider.getDatabase(application)
 
     var phase by mutableStateOf<LessonPhase>(LessonPhase.Loading); private set
@@ -57,6 +78,7 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
 
     private var courseId = ""
     private var introDone = false
+    private var dialogueDone = false
     /** Generated vocab items -> the words they test, so a wrong answer schedules the right review cards. */
     private var lexOf: Map<Item, List<String>> = emptyMap()
     private lateinit var queue: LessonQueue
@@ -75,16 +97,22 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
     var mistakes by mutableIntStateOf(0); private set
     var nextLesson by mutableStateOf<Lesson?>(null); private set
 
+    /** Speaking items: tries used so far and the last close-but-not-good guess (shown so the learner can retry). */
+    var speechTries by mutableIntStateOf(0); private set
+    var speechTry by mutableStateOf<Match?>(null); private set
+
     init {
         viewModelScope.launch {
             val id = CoursePrefs.selectedCourse(application)
-            val found = id?.let { CourseRepository.lesson(application, it, lessonId) }
-            if (id == null || found == null) {
+            val found = if (drillKind != null) null else id?.let { CourseRepository.lesson(application, it, lessonId) }
+            if (id == null || (found == null && drillKind == null)) {
                 phase = LessonPhase.Failed("This lesson isn't available.")
                 return@launch
             }
             courseId = id
             ttsLocale = CourseRepository.courses(application).firstOrNull { it.id == id }?.ttsLocale ?: ttsLocale
+            if (drillKind != null) return@launch startDrill(drillKind)
+            if (found == null) return@launch
             if (found.kind == LessonKind.VOCAB) {
                 val lexicon = CourseRepository.lexicon(application, id)
                 val entries = found.vocab.mapNotNull { lexicon[it] }
@@ -103,11 +131,39 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
         }
     }
 
+    /** Ten listening or speaking items from finished lessons, topped up with the example sentences of known words. */
+    private suspend fun startDrill(kind: String) {
+        val app = getApplication<Application>()
+        val lexicon = CourseRepository.lexicon(app, courseId)
+        val done = db.lessonProgressDao().getAll(courseId).first().mapNotNull { CourseRepository.lesson(app, courseId, it.lessonId) }
+        val lessonItems = done.flatMap { it.items }
+        val items = if (kind == "listening") {
+            listeningDrill(lessonItems, lexicon.values.toList(), Random)
+        } else {
+            val reviewed = db.reviewCardDao().lexCardIds(courseId).mapNotNull { lexicon[it.removePrefix("lex:")] }
+            speakingDrill(lessonItems, reviewed.ifEmpty { lexicon.values.toList() }, Random)
+        }
+        if (items.isEmpty()) {
+            phase = LessonPhase.Failed("There is nothing to practise yet. Finish a lesson first.")
+            return
+        }
+        lesson = Lesson(
+            id = lessonId, title = if (kind == "listening") "Listening drill" else "Speaking drill",
+            kind = if (kind == "listening") LessonKind.LISTENING else LessonKind.SPEAKING, items = items.take(DRILL_SIZE)
+        )
+        startItems()
+    }
+
     fun startItems() {
         val l = lesson ?: return
         if (l.kind == LessonKind.VOCAB && !introDone) {
             introDone = true
             phase = LessonPhase.Intro
+            return
+        }
+        if (l.dialogue.isNotEmpty() && !dialogueDone && (l.kind == LessonKind.LISTENING || l.kind == LessonKind.SPEAKING)) {
+            dialogueDone = true
+            phase = if (l.kind == LessonKind.LISTENING) LessonPhase.Dialogue else LessonPhase.Roleplay
             return
         }
         if (l.items.isEmpty()) return finish()
@@ -124,6 +180,8 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
         step++
         pending = null
         result = null
+        speechTries = 0
+        speechTry = null
         progressDone = queue.progressDone
         progressTotal = queue.progressTotal
     }
@@ -134,6 +192,7 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
             when (val item = currentItem) {
                 is Item.Choice -> gradeChoice(item, answer.toInt())
                 is Item.Gap, is Item.Order, is Item.Transform, is Item.Translate -> gradeText(item, answer)
+                is Item.Listen -> gradeListen(item, answer)
                 else -> return
             }
         )
@@ -142,6 +201,38 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
     fun submitMatch(mistakes: Int) {
         val item = currentItem as? Item.Match ?: return
         record(gradeMatch(item, mistakes))
+    }
+
+    /**
+     * The recogniser guesses for a speak item. Close but not good enough (0.5 to 0.8) allows another try, up to
+     * [SPEECH_TRIES]; clearly right or clearly wrong is graded at once.
+     */
+    fun submitSpeech(guesses: List<String>) {
+        val item = currentItem as? Item.Speak ?: return
+        if (result != null || guesses.isEmpty()) return
+        val match = best(guesses, item.nl)
+        speechTries++
+        if (match.score >= SPEECH_CORRECT || match.score < SPEECH_ALMOST || speechTries >= SPEECH_TRIES) {
+            record(gradeSpeech(match, item.nl))
+        } else {
+            speechTry = match
+        }
+    }
+
+    /** Shadowing (no recogniser): the learner grades themselves. */
+    fun selfGrade(good: Boolean) {
+        val item = currentItem as? Item.Speak ?: return
+        record(gradeSelf(good, item.nl))
+    }
+
+    /** An open speaking prompt is finished, not graded: it counts as done and the next item shows. */
+    fun finishOpenPrompt() {
+        if (currentItem !is Item.OpenPrompt) return
+        queue.answer(true)
+        progressDone = queue.progressDone
+        progressTotal = queue.progressTotal
+        viewModelScope.launch { db.dailyStatsDao().addExercises(LocalDate.now().toString(), 1) }
+        showNext()
     }
 
     private fun record(r: ItemResult) {
@@ -155,7 +246,7 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
 
     fun continueNext() = showNext()
 
-    /** For item types that arrive in later stages. */
+    /** Skips an item (speaking in a quiet place, or an item type that arrives in a later stage); it counts neither way. */
     fun skip() {
         queue.skip()
         showNext()
@@ -170,6 +261,8 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
         score = if (hasItems) queue.score else 100
         mistakes = if (hasItems) queue.mistakes else 0
         phase = LessonPhase.Done
+        // A drill is practice only: no lesson progress, no review cards.
+        if (isDrill) return
         viewModelScope.launch {
             val now = System.currentTimeMillis()
             val old = db.lessonProgressDao().get(lessonId)

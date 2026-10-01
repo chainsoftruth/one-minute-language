@@ -120,7 +120,16 @@ fun AppScaffold(startAtAddWord: Boolean) {
             composable("practice") {
                 PracticeScreen(
                     onQuizClick = { mode -> navController.navigate("quiz?mode=$mode") },
-                    onReviewClick = { navController.navigate("review") }
+                    onReviewClick = { navController.navigate("review") },
+                    onDrillClick = { navController.navigate("drill/$it") }
+                )
+            }
+            // A drill is a lesson made of generated items; it reuses the lesson player.
+            composable("drill/{kind}") {
+                LessonScreen(
+                    onClose = { navController.popBackStack() },
+                    onNextLesson = {},
+                    onBackToUnit = { navController.popBackStack() }
                 )
             }
             composable("words") {

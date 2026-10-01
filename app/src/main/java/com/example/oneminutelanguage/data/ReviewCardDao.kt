@@ -28,6 +28,10 @@ interface ReviewCardDao {
     @Query("SELECT COUNT(*) FROM review_cards WHERE courseId = :courseId AND intervalDays >= 21")
     fun masteredCount(courseId: String): Flow<Int>
 
+    /** The words that have a review card (the speaking drill uses their example sentences). */
+    @Query("SELECT cardId FROM review_cards WHERE courseId = :courseId AND cardId LIKE 'lex:%'")
+    suspend fun lexCardIds(courseId: String): List<String>
+
     @Query("DELETE FROM review_cards WHERE cardId = :cardId")
     suspend fun delete(cardId: String)
 }

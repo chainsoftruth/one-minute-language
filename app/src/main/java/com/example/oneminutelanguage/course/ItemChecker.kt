@@ -29,8 +29,14 @@ fun expectedAnswer(item: Item): String = when (item) {
     is Item.Transform -> item.answers.first()
     is Item.Translate -> item.answers.first()
     is Item.Match -> item.pairs.joinToString("  ·  ") { it.joinToString(" = ") }
-    else -> ""
+    is Item.Listen -> if (item.options.isEmpty()) item.nl else item.options[item.answer]
+    is Item.Speak -> item.nl
+    is Item.OpenPrompt, is Item.Write -> ""
 }
+
+/** Listen items: a picked option, or (no options) a dictation checked strictly, accents forgiven. */
+fun gradeListen(item: Item.Listen, input: String): ItemResult =
+    if (item.options.isEmpty()) gradeText(item, input) else gradeChoice(Item.Choice(item.nl, item.options, item.answer), input.toInt())
 
 /** Review grade for a result: right = GOOD, almost (typo, missing article) = HARD, wrong = AGAIN. */
 fun gradeFor(result: ItemResult): Grade = when (result.verdict) {
@@ -39,18 +45,19 @@ fun gradeFor(result: ItemResult): Grade = when (result.verdict) {
     Verdict.WRONG -> Grade.AGAIN
 }
 
-/** Typed items: gap, order (tiles joined by spaces), transform strict; translate lenient. */
+/** Typed items: gap, order (tiles joined by spaces), transform and dictation strict; translate lenient. */
 fun gradeText(item: Item, input: String): ItemResult {
     val accepted = when (item) {
         is Item.Gap -> item.answers
         is Item.Order -> listOf(item.answer) + item.alt
         is Item.Transform -> item.answers
         is Item.Translate -> item.answers
+        is Item.Listen -> listOf(item.nl)
         else -> error("Not a typed item: $item")
     }
     val shown = expectedAnswer(item)
     // A noun typed without its article (vocab exercises): counts, but the learner is told.
-    if (item is Item.Translate && missingArticle(input, accepted)) {
+    if ((item is Item.Translate || item is Item.Listen) && missingArticle(input, accepted)) {
         return ItemResult(true, Verdict.ALMOST, shown, "Don't forget the article: $shown", diffWords(input, shown))
     }
     val verdict = check(input, accepted, lenient = item is Item.Translate)

@@ -29,11 +29,15 @@ fun buildLesson(entries: List<LexEntry>, pool: List<LexEntry>, random: Random): 
     buildVocabLesson(entries, pool, random).map { it.item }
 
 /**
- * One question for a due `lex:` card. New cards get multiple choice, known ones must type the word.
- * ponytail: from 4 repetitions on the plan wants listen + type; until the listening exercises (Stage 4) it is translate.
+ * One question for a due `lex:` card. New cards get multiple choice, then the learner types the word from the
+ * English, and from 4 repetitions on hears the word and types it (dictation).
  */
 fun buildReviewItem(entry: LexEntry, pool: List<LexEntry>, reps: Int, random: Random): Item =
-    if (reps >= 2) Item.Translate(entry.en, entry.answers()) else choiceNlEn(entry, pool, random)
+    when {
+        reps >= 4 -> Item.Listen(entry.answers().first())
+        reps >= 2 -> Item.Translate(entry.en, entry.answers())
+        else -> choiceNlEn(entry, pool, random)
+    }
 
 /** Groups of 5; a leftover of 1-2 words borrows from the previous group so every match has 3-6 pairs. */
 private fun matchChunks(entries: List<LexEntry>): List<List<LexEntry>> {

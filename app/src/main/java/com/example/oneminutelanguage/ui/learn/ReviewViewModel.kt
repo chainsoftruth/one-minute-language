@@ -19,6 +19,7 @@ import com.example.oneminutelanguage.course.etaText
 import com.example.oneminutelanguage.course.expectedAnswer
 import com.example.oneminutelanguage.course.gradeChoice
 import com.example.oneminutelanguage.course.gradeFor
+import com.example.oneminutelanguage.course.gradeListen
 import com.example.oneminutelanguage.course.gradeMatch
 import com.example.oneminutelanguage.course.gradeText
 import com.example.oneminutelanguage.course.schedule
@@ -116,9 +117,9 @@ class ReviewViewModel(application: Application) : AndroidViewModel(application) 
         }
     }
 
-    /** Listening, speaking and writing items arrive in Stages 4-5; their cards just wait. */
+    /** Speaking and writing items arrive in Stages 4-5 (they need the recogniser / a text box); their cards just wait. */
     private fun Item.isShownHere() = this is Item.Choice || this is Item.Gap || this is Item.Order ||
-        this is Item.Transform || this is Item.Translate || this is Item.Match
+        this is Item.Transform || this is Item.Translate || this is Item.Match || this is Item.Listen
 
     private suspend fun nextText(): String? =
         cards.nextDueAt(courseId)?.let { etaText(System.currentTimeMillis(), it) }
@@ -143,6 +144,7 @@ class ReviewViewModel(application: Application) : AndroidViewModel(application) 
             when (val item = currentItem) {
                 is Item.Choice -> gradeChoice(item, answer.toInt())
                 is Item.Gap, is Item.Order, is Item.Transform, is Item.Translate -> gradeText(item, answer)
+                is Item.Listen -> gradeListen(item, answer)
                 else -> return
             }
         )

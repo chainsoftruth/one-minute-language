@@ -141,6 +141,9 @@ private fun ReviewExercise(item: Item, step: Int, vm: ReviewViewModel) {
         is Item.Translate -> TranslateExercise(item, step, !checked, onInput, onDone = vm::check)
         is Item.Order -> OrderExercise(item, step, !checked, onInput)
         is Item.Match -> MatchExercise(item, step, onDone = vm::submitMatch)
+        is Item.Listen ->
+            if (item.options.isEmpty()) DictationExercise(item, step, vm.ttsLocale, !checked, onInput, onDone = vm::check)
+            else ListenExercise(item, step, vm.ttsLocale, vm.pending?.toIntOrNull(), vm.result) { vm.pending = it.toString() }
         else -> Unit // never queued: the view model leaves those cards alone
     }
 }

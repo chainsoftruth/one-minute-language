@@ -108,7 +108,7 @@ fun TranslateExercise(item: Item.Translate, step: Int, enabled: Boolean, onInput
 }
 
 @Composable
-private fun Prompt(text: String, sub: String?) {
+internal fun Prompt(text: String, sub: String?) {
     Card(modifier = Modifier.fillMaxWidth(), shape = MaterialTheme.shapes.large, colors = appCardColors()) {
         Column(modifier = Modifier.padding(horizontal = 20.dp, vertical = 16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
             Text(text, style = MaterialTheme.typography.headlineSmall)
@@ -120,7 +120,9 @@ private fun Prompt(text: String, sub: String?) {
 }
 
 @Composable
-private fun AnswerField(step: Int, enabled: Boolean, placeholder: String, onInput: (String?) -> Unit, onDone: () -> Unit) {
+internal fun AnswerField(
+    step: Int, enabled: Boolean, placeholder: String, onInput: (String?) -> Unit, onDone: () -> Unit, minLines: Int = 1
+) {
     var text by remember(step) { mutableStateOf("") }
     OutlinedTextField(
         value = text,
@@ -131,7 +133,8 @@ private fun AnswerField(step: Int, enabled: Boolean, placeholder: String, onInpu
         enabled = enabled,
         modifier = Modifier.fillMaxWidth(),
         placeholder = { Text(placeholder) },
-        singleLine = true,
+        singleLine = minLines == 1,
+        minLines = minLines,
         keyboardOptions = KeyboardOptions(
             autoCorrectEnabled = false,
             capitalization = KeyboardCapitalization.None,
@@ -242,13 +245,14 @@ fun MatchExercise(item: Item.Match, step: Int, onDone: (mistakes: Int) -> Unit) 
     }
 }
 
+/** Writing tasks arrive in Stage 5. */
 @Composable
 fun ComingSoonExercise(onSkip: () -> Unit) {
     Card(modifier = Modifier.fillMaxWidth(), shape = MaterialTheme.shapes.large, colors = appCardColors()) {
         Column(modifier = Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
             Text("Coming in a later update", style = MaterialTheme.typography.titleMedium)
             Text(
-                "Listening, speaking and writing exercises are on their way.",
+                "Writing exercises are on their way.",
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
@@ -257,3 +261,4 @@ fun ComingSoonExercise(onSkip: () -> Unit) {
         }
     }
 }
+

@@ -92,6 +92,25 @@ class CourseContentTest {
         }
     }
 
+    @Test fun dialoguesAndVocabListsAreWellFormed() {
+        for (course in courseDirs()) {
+            val lexIds = File(course, "lexicon").listFiles { f -> f.extension == "json" }.orEmpty()
+                .flatMap { parseLexicon(it.readText(), it.path) }.map { it.id }.toSet()
+            for (unit in units(course.name)) for (lesson in unit.lessons) {
+                if (lesson.dialogue.isNotEmpty()) {
+                    assertTrue("${lesson.id}: 6-14 dialogue lines", lesson.dialogue.size in 6..14)
+                    assertTrue("${lesson.id}: speakers are A or B", lesson.dialogue.all { it.who == "A" || it.who == "B" })
+                    assertTrue("${lesson.id}: both speakers talk", lesson.dialogue.map { it.who }.toSet().size == 2)
+                    assertTrue("${lesson.id}: only listening and speaking lessons have a dialogue", lesson.kind == LessonKind.LISTENING || lesson.kind == LessonKind.SPEAKING)
+                }
+                if (lesson.kind == LessonKind.VOCAB) {
+                    assertTrue("${lesson.id}: 15-30 words", lesson.vocab.size in 15..30)
+                    assertTrue("${lesson.id}: unknown lexicon ids ${lesson.vocab.filter { it !in lexIds }}", lesson.vocab.all { it in lexIds })
+                }
+            }
+        }
+    }
+
     @Test fun grammarLessonsFollowTheAuthoringStandard() {
         for (course in courseDirs()) for (unit in units(course.name)) {
             for (lesson in unit.lessons) {

@@ -97,8 +97,10 @@ fun LessonScreen(
             }
             LessonPhase.Explain -> ExplainPhase(viewModel, onClose)
             LessonPhase.Intro -> IntroPhase(viewModel, onClose)
+            LessonPhase.Dialogue -> DialoguePhase(viewModel, onClose)
+            LessonPhase.Roleplay -> RoleplayPhase(viewModel, onClose)
             LessonPhase.Items -> ItemsPhase(viewModel, onClose)
-            LessonPhase.Done -> DonePhase(viewModel, onNextLesson, onBackToUnit)
+            LessonPhase.Done -> DonePhase(viewModel, onClose, onNextLesson, onBackToUnit)
         }
     }
 }
@@ -290,9 +292,9 @@ private fun ColumnScope.ItemsPhase(viewModel: LessonViewModel, onClose: () -> Un
     }
 
     val item = viewModel.currentItem
-    if (item is Item.Choice || item is Item.Gap || item is Item.Order || item is Item.Transform || item is Item.Translate) {
+    if (item is Item.Choice || item is Item.Gap || item is Item.Order || item is Item.Transform || item is Item.Translate || item is Item.Listen) {
         CheckBar(viewModel, item)
-    } else if (item is Item.Match && result != null) {
+    } else if ((item is Item.Match || item is Item.Speak) && result != null) {
         FeedbackPanel(result, item.explain, onContinue = viewModel::continueNext)
     }
 
@@ -318,21 +320,29 @@ private fun ExerciseView(item: Item, step: Int, vm: LessonViewModel) {
         is Item.Translate -> TranslateExercise(item, step, !checked, onInput, onDone = vm::check)
         is Item.Order -> OrderExercise(item, step, !checked, onInput)
         is Item.Match -> MatchExercise(item, step, onDone = vm::submitMatch)
-        // Listening, speaking and writing arrive in Stages 4 and 5.
-        is Item.Listen, is Item.Speak, is Item.OpenPrompt, is Item.Write -> ComingSoonExercise(onSkip = vm::skip)
+        is Item.Listen ->
+            if (item.options.isEmpty()) DictationExercise(item, step, vm.ttsLocale, !checked, onInput, onDone = vm::check)
+            else ListenExercise(item, step, vm.ttsLocale, vm.pending?.toIntOrNull(), vm.result) { vm.pending = it.toString() }
+        is Item.Speak -> SpeakExercise(
+            item, step, vm.ttsLocale, vm.speechTries, vm.speechTry, vm.result,
+            onHeard = vm::submitSpeech, onSelfGrade = vm::selfGrade, onSkip = vm::skip
+        )
+        is Item.OpenPrompt -> PromptExercise(item, step, vm.ttsLocale, onDone = { vm.finishOpenPrompt() })
+        // Writing arrives in Stage 5.
+        is Item.Write -> ComingSoonExercise(onSkip = vm::skip)
     }
 }
 
 // ---- Done ----
 
 @Composable
-private fun DonePhase(viewModel: LessonViewModel, onNextLesson: (String) -> Unit, onBackToUnit: (String) -> Unit) {
+private fun DonePhase(viewModel: LessonViewModel, onClose: () -> Unit, onNextLesson: (String) -> Unit, onBackToUnit: (String) -> Unit) {
     Column(
         modifier = Modifier.fillMaxSize().padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center
     ) {
-        Text("Lesson complete", style = MaterialTheme.typography.headlineSmall)
+        Text(if (viewModel.isDrill) "Drill complete" else "Lesson complete", style = MaterialTheme.typography.headlineSmall)
         Spacer(Modifier.height(24.dp))
         ProgressRing(progress = viewModel.score / 100f, size = 160.dp, strokeWidth = 14.dp) {
             Text("${viewModel.score}%", style = MaterialTheme.typography.displaySmall)
@@ -340,6 +350,7 @@ private fun DonePhase(viewModel: LessonViewModel, onNextLesson: (String) -> Unit
         Spacer(Modifier.height(16.dp))
         Text(
             if (viewModel.mistakes == 0) "No mistakes. Well done!"
+            else if (viewModel.isDrill) "${viewModel.mistakes} ${if (viewModel.mistakes == 1) "mistake" else "mistakes"}. Run it again to improve."
             else "${viewModel.mistakes} ${if (viewModel.mistakes == 1) "mistake" else "mistakes"} added to your review",
             style = MaterialTheme.typography.bodyLarge,
             textAlign = TextAlign.Center
@@ -349,7 +360,11 @@ private fun DonePhase(viewModel: LessonViewModel, onNextLesson: (String) -> Unit
             Button(onClick = { onNextLesson(next.id) }, modifier = Modifier.fillMaxWidth()) { Text("Next lesson: ${next.title}") }
             Spacer(Modifier.height(8.dp))
         }
-        OutlinedButton(onClick = { onBackToUnit(viewModel.unitId) }, modifier = Modifier.fillMaxWidth()) { Text("Back to unit") }
+        if (viewModel.isDrill) {
+            Button(onClick = onClose, modifier = Modifier.fillMaxWidth()) { Text("Done") }
+        } else {
+            OutlinedButton(onClick = { onBackToUnit(viewModel.unitId) }, modifier = Modifier.fillMaxWidth()) { Text("Back to unit") }
+        }
     }
 }
 

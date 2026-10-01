@@ -32,6 +32,9 @@ import androidx.compose.material3.ListItem
 import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SegmentedButton
+import androidx.compose.material3.SegmentedButtonDefaults
+import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
@@ -39,6 +42,8 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -46,8 +51,11 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.oneminutelanguage.course.CoursePrefs
+import com.example.oneminutelanguage.speech.WordSpeaker
 import com.example.oneminutelanguage.translation.SupportedLanguages
 import com.example.oneminutelanguage.ui.components.appCardColors
 import com.example.oneminutelanguage.widget.FOCUS_SET_SIZE
@@ -183,6 +191,8 @@ fun SettingsScreen(
                 }
             }
 
+            SpeechSettings()
+
             SettingsGroup("Widget") {
                 ListItem(
                     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
@@ -223,6 +233,48 @@ fun SettingsScreen(
                 TextButton(onClick = viewModel::cancelDisableDefaultWords) {
                     Text("Cancel")
                 }
+            }
+        )
+    }
+}
+
+/** How fast Dutch audio plays, and whether the phone has a Dutch voice (with a link to install one). */
+@Composable
+private fun SpeechSettings() {
+    val context = LocalContext.current
+    var rate by remember { mutableFloatStateOf(CoursePrefs.ttsRate(context)) }
+    val voiceMissing by WordSpeaker.voiceMissing.collectAsState()
+    LaunchedEffect(Unit) { WordSpeaker.checkVoice(context, "nl-NL") }
+
+    SettingsGroup("Speech") {
+        ListItem(
+            colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+            headlineContent = { Text("Speech speed") },
+            supportingContent = {
+                val speeds = listOf("Slow" to 0.8f, "Normal" to 1.0f)
+                SingleChoiceSegmentedButtonRow(modifier = Modifier.fillMaxWidth().padding(top = 8.dp)) {
+                    speeds.forEachIndexed { index, (label, value) ->
+                        SegmentedButton(
+                            selected = rate == value,
+                            onClick = {
+                                rate = value
+                                CoursePrefs.setTtsRate(context, value)
+                            },
+                            shape = SegmentedButtonDefaults.itemShape(index, speeds.size),
+                            label = { Text(label) }
+                        )
+                    }
+                }
+            }
+        )
+        ListItem(
+            colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+            headlineContent = { Text("Dutch voice") },
+            supportingContent = {
+                Text(if (voiceMissing) "Not found. Audio exercises need it." else "Installed")
+            },
+            trailingContent = {
+                if (voiceMissing) TextButton(onClick = { WordSpeaker.installVoiceData(context) }) { Text("Install") }
             }
         )
     }

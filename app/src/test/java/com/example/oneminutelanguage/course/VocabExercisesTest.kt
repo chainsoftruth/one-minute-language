@@ -71,11 +71,12 @@ class VocabExercisesTest {
         assertTrue(items.any { it is Item.Translate })
     }
 
-    @Test fun reviewItemsGrowFromChoiceToTyping() {
+    @Test fun reviewItemsGrowFromChoiceToTypingToDictation() {
         assertTrue(buildReviewItem(entries[0], pool, 0, Random(1)) is Item.Choice)
         assertTrue(buildReviewItem(entries[0], pool, 1, Random(1)) is Item.Choice)
         assertTrue(buildReviewItem(entries[0], pool, 2, Random(1)) is Item.Translate)
-        assertTrue(buildReviewItem(entries[0], pool, 6, Random(1)) is Item.Translate)
+        assertTrue(buildReviewItem(entries[0], pool, 3, Random(1)) is Item.Translate)
+        assertEquals(Item.Listen(entries[0].answers().first()), buildReviewItem(entries[0], pool, 4, Random(1)))
     }
 
     @Test fun bareNounIsAlmostRightAndNeedsTheArticle() {

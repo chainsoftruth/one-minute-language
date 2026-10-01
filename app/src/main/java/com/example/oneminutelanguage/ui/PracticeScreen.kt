@@ -9,6 +9,8 @@ import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Headphones
+import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.Quiz
 import androidx.compose.material.icons.filled.Replay
 import androidx.compose.material.icons.filled.Spellcheck
@@ -46,7 +48,12 @@ class PracticeViewModel(application: Application) : AndroidViewModel(application
 }
 
 @Composable
-fun PracticeScreen(onQuizClick: (mode: String) -> Unit, onReviewClick: () -> Unit, viewModel: PracticeViewModel = viewModel()) {
+fun PracticeScreen(
+    onQuizClick: (mode: String) -> Unit,
+    onReviewClick: () -> Unit,
+    onDrillClick: (kind: String) -> Unit,
+    viewModel: PracticeViewModel = viewModel()
+) {
     val isDutch = rememberIsDutchTarget()
     val due by viewModel.dueCount.collectAsState()
 
@@ -66,6 +73,19 @@ fun PracticeScreen(onQuizClick: (mode: String) -> Unit, onReviewClick: () -> Uni
             subtitle = "Words and mistakes that are due",
             badge = due.takeIf { it > 0 }?.toString(),
             onClick = onReviewClick
+        )
+
+        ActionCard(
+            icon = Icons.Default.Headphones,
+            title = "Listening drill",
+            subtitle = "Hear 10 sentences from your lessons",
+            onClick = { onDrillClick("listening") }
+        )
+        ActionCard(
+            icon = Icons.Default.Mic,
+            title = "Speaking drill",
+            subtitle = "Say 10 sentences out loud",
+            onClick = { onDrillClick("speaking") }
         )
 
         ActionCard(
