@@ -24,7 +24,6 @@ import androidx.compose.foundation.shape.CornerSize
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.LinearProgressIndicator
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
@@ -49,19 +48,55 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.graphics.Brush
+import com.example.oneminutelanguage.ui.theme.Accent
 import com.example.oneminutelanguage.ui.theme.appColors
 
-/** Cards sit on the mesh background; a little transparency lets the glow show through. */
+/** Frosted cards (One UI): milky white on the pastel page, a faint white veil in dark mode. */
 @Composable
-fun appCardColors() = CardDefaults.cardColors(
-    containerColor = MaterialTheme.colorScheme.surfaceContainerLow.copy(alpha = 0.92f)
-)
+fun appCardColors() = CardDefaults.cardColors(containerColor = MaterialTheme.appColors.glass)
+
+/** Small grey heading above a group of cards. */
+@Composable
+fun SectionLabel(text: String, modifier: Modifier = Modifier) {
+    Text(
+        text = text.uppercase(),
+        modifier = modifier.padding(top = 12.dp, start = 4.dp),
+        style = MaterialTheme.typography.labelMedium,
+        color = MaterialTheme.colorScheme.onSurfaceVariant
+    )
+}
+
+/** One UI app-icon look: white glyph on a glossy squircle with the accent's gradient and a soft top highlight. */
+@Composable
+fun IconTile(icon: ImageVector, accent: Accent, modifier: Modifier = Modifier, size: Dp = 44.dp) {
+    val shape = RoundedCornerShape(size * 0.34f)
+    Box(
+        modifier = modifier
+            .size(size)
+            .background(Brush.linearGradient(accent.tile), shape)
+            .background(Brush.verticalGradient(listOf(Color.White.copy(alpha = 0.28f), Color.Transparent)), shape),
+        contentAlignment = Alignment.Center
+    ) {
+        Icon(imageVector = icon, contentDescription = null, tint = Color.White, modifier = Modifier.size(size * 0.55f))
+    }
+}
 
 @Composable
-fun StatTile(value: String, label: String, icon: ImageVector, modifier: Modifier = Modifier) {
+fun StatTile(
+    value: String,
+    label: String,
+    icon: ImageVector,
+    modifier: Modifier = Modifier,
+    accent: Accent = MaterialTheme.appColors.blue
+) {
     Card(modifier = modifier, shape = MaterialTheme.shapes.medium, colors = appCardColors()) {
         Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-            Icon(imageVector = icon, contentDescription = null, tint = MaterialTheme.colorScheme.primary)
+            IconTile(icon, accent, size = 36.dp, modifier = Modifier.padding(bottom = 8.dp))
             Text(text = value, style = MaterialTheme.typography.displaySmall)
             Text(
                 text = label,
@@ -106,7 +141,8 @@ fun ActionCard(
     subtitle: String,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
-    badge: String? = null
+    badge: String? = null,
+    accent: Accent = MaterialTheme.appColors.blue
 ) {
     Card(
         onClick = onClick,
@@ -120,18 +156,7 @@ fun ActionCard(
                 .padding(horizontal = 16.dp, vertical = 12.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Box(
-                modifier = Modifier
-                    .size(44.dp)
-                    .background(MaterialTheme.colorScheme.primaryContainer, CircleShape),
-                contentAlignment = Alignment.Center
-            ) {
-                Icon(
-                    imageVector = icon,
-                    contentDescription = null,
-                    tint = MaterialTheme.colorScheme.onPrimaryContainer
-                )
-            }
+            IconTile(icon, accent, size = 48.dp)
             Spacer(Modifier.width(16.dp))
             Column(modifier = Modifier.weight(1f)) {
                 Text(text = title, style = MaterialTheme.typography.titleMedium)
@@ -143,19 +168,19 @@ fun ActionCard(
             }
             if (badge != null) {
                 Spacer(Modifier.width(8.dp))
-                Surface(shape = CircleShape, color = MaterialTheme.colorScheme.tertiaryContainer) {
+                Surface(shape = CircleShape, color = MaterialTheme.colorScheme.tertiary) {
                     Text(
                         text = badge,
                         modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
                         style = MaterialTheme.typography.labelMedium,
-                        color = MaterialTheme.colorScheme.onTertiaryContainer
+                        color = MaterialTheme.colorScheme.onTertiary
                     )
                 }
             }
             Icon(
                 imageVector = Icons.AutoMirrored.Filled.KeyboardArrowRight,
                 contentDescription = null,
-                tint = MaterialTheme.colorScheme.onSurfaceVariant
+                tint = MaterialTheme.colorScheme.outline
             )
         }
     }
@@ -192,7 +217,7 @@ fun AnswerOption(
 ) {
     val scheme = MaterialTheme.colorScheme
     val container = when (state) {
-        AnswerState.IDLE, AnswerState.DIMMED -> scheme.surfaceContainerLow
+        AnswerState.IDLE, AnswerState.DIMMED -> MaterialTheme.appColors.glass
         AnswerState.SELECTED -> scheme.primaryContainer
         AnswerState.CORRECT -> MaterialTheme.appColors.successContainer
         AnswerState.WRONG -> scheme.errorContainer
@@ -238,7 +263,7 @@ fun AnswerOption(
     }
 }
 
-/** "Continue learning": teal-to-coral gradient card with an optional progress bar. */
+/** "Continue learning": deep teal gradient with two soft circles, a play button and an optional progress bar. */
 @Composable
 fun HeroCard(
     title: String,
@@ -247,23 +272,51 @@ fun HeroCard(
     modifier: Modifier = Modifier,
     progress: Float? = null
 ) {
-    val scheme = MaterialTheme.colorScheme
-    Card(onClick = onClick, modifier = modifier.fillMaxWidth(), shape = MaterialTheme.shapes.large) {
-        Column(
+    val colors = MaterialTheme.appColors
+    Card(
+        onClick = onClick,
+        modifier = modifier.fillMaxWidth(),
+        shape = MaterialTheme.shapes.large,
+        colors = CardDefaults.cardColors(containerColor = colors.heroEnd, contentColor = Color.White)
+    ) {
+        Box(
             modifier = Modifier
-                .background(Brush.linearGradient(listOf(scheme.primary, scheme.tertiary)))
-                .padding(20.dp),
-            verticalArrangement = Arrangement.spacedBy(6.dp)
+                .background(Brush.linearGradient(listOf(colors.heroStart, colors.heroEnd)))
+                .drawBehind {
+                    drawCircle(Color.White.copy(alpha = 0.08f), radius = size.height * 0.9f, center = Offset(size.width, 0f))
+                    drawCircle(Color.White.copy(alpha = 0.06f), radius = size.height * 0.45f, center = Offset(size.width * 0.72f, size.height))
+                }
         ) {
-            Text(title, style = MaterialTheme.typography.labelLarge, color = scheme.onPrimary.copy(alpha = 0.85f))
-            Text(subtitle, style = MaterialTheme.typography.titleLarge, color = scheme.onPrimary)
-            if (progress != null) {
-                LinearProgressIndicator(
-                    progress = { progress.coerceIn(0f, 1f) },
-                    modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
-                    color = scheme.onPrimary,
-                    trackColor = scheme.onPrimary.copy(alpha = 0.3f)
-                )
+            Column(modifier = Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Column(modifier = Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                        Text(title.uppercase(), style = MaterialTheme.typography.labelMedium, color = Color.White.copy(alpha = 0.8f))
+                        Text(subtitle, style = MaterialTheme.typography.titleLarge)
+                    }
+                    Spacer(Modifier.width(12.dp))
+                    Box(
+                        modifier = Modifier.size(48.dp).background(Color.White, CircleShape),
+                        contentAlignment = Alignment.Center
+                    ) {
+                        Icon(Icons.Default.PlayArrow, contentDescription = null, tint = colors.heroEnd)
+                    }
+                }
+                if (progress != null) {
+                    val p = progress.coerceIn(0f, 1f)
+                    Row(modifier = Modifier.padding(top = 10.dp), verticalAlignment = Alignment.CenterVertically) {
+                        LinearProgressIndicator(
+                            progress = { p },
+                            modifier = Modifier.weight(1f).height(6.dp),
+                            color = Color.White,
+                            trackColor = Color.White.copy(alpha = 0.25f),
+                            strokeCap = StrokeCap.Round,
+                            gapSize = 0.dp,
+                            drawStopIndicator = {}
+                        )
+                        Spacer(Modifier.width(12.dp))
+                        Text("${(p * 100).toInt()}%", style = MaterialTheme.typography.labelLarge)
+                    }
+                }
             }
         }
     }

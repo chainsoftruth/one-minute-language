@@ -17,14 +17,29 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 
-/** Colours with a meaning the Material roles don't cover: correct / skipped answers and the de / het tags. */
+/** A feature colour: [color] for text and rings, [container] for pills, [tile] for the glossy icon gradient. */
+data class Accent(val color: Color, val container: Color, val tile: List<Color>)
+
+private fun accent(pair: Pair<Color, Color>, tile: Pair<Color, Color>) = Accent(pair.first, pair.second, tile.toList())
+
+/** Colours the Material roles don't cover: answers, de / het tags, page and glass, the hero card and feature accents. */
 data class AppColors(
     val success: Color,
     val successContainer: Color,
     val warning: Color,
     val warningContainer: Color,
     val articleDe: Color,
-    val articleHet: Color
+    val articleHet: Color,
+    val page: List<Color>,
+    val glass: Color,
+    val heroStart: Color,
+    val heroEnd: Color,
+    val teal: Accent,
+    val coral: Accent,
+    val amber: Accent,
+    val violet: Accent,
+    val blue: Accent,
+    val rose: Accent
 )
 
 private val LightAppColors = AppColors(
@@ -33,7 +48,17 @@ private val LightAppColors = AppColors(
     warning = WarningLight,
     warningContainer = WarningContainerLight,
     articleDe = ArticleDeLight,
-    articleHet = ArticleHetLight
+    articleHet = ArticleHetLight,
+    page = PageLight,
+    glass = GlassLight,
+    heroStart = HeroStartLight,
+    heroEnd = HeroEndLight,
+    teal = accent(AccentTealLight, TileTeal),
+    coral = accent(AccentCoralLight, TileCoral),
+    amber = accent(AccentAmberLight, TileAmber),
+    violet = accent(AccentVioletLight, TileViolet),
+    blue = accent(AccentBlueLight, TileBlue),
+    rose = accent(AccentRoseLight, TileRose)
 )
 
 private val DarkAppColors = AppColors(
@@ -42,7 +67,17 @@ private val DarkAppColors = AppColors(
     warning = WarningDark,
     warningContainer = WarningContainerDark,
     articleDe = ArticleDeDark,
-    articleHet = ArticleHetDark
+    articleHet = ArticleHetDark,
+    page = PageDark,
+    glass = GlassDark,
+    heroStart = HeroStartDark,
+    heroEnd = HeroEndDark,
+    teal = accent(AccentTealDark, TileTeal),
+    coral = accent(AccentCoralDark, TileCoral),
+    amber = accent(AccentAmberDark, TileAmber),
+    violet = accent(AccentVioletDark, TileViolet),
+    blue = accent(AccentBlueDark, TileBlue),
+    rose = accent(AccentRoseDark, TileRose)
 )
 
 private val LocalAppColors = staticCompositionLocalOf { LightAppColors }
@@ -52,25 +87,26 @@ val MaterialTheme.appColors: AppColors
     @ReadOnlyComposable
     get() = LocalAppColors.current
 
+// One UI corners: soft and large.
 private val AppShapes = Shapes(
-    small = RoundedCornerShape(12.dp),
-    medium = RoundedCornerShape(20.dp),
-    large = RoundedCornerShape(28.dp)
+    small = RoundedCornerShape(16.dp),
+    medium = RoundedCornerShape(26.dp),
+    large = RoundedCornerShape(32.dp)
 )
 
 private val DarkColorScheme = darkColorScheme(
-    primary = TealPrimaryDark,
-    onPrimary = OnTealPrimaryDark,
-    primaryContainer = TealPrimaryContainerDark,
-    onPrimaryContainer = OnTealPrimaryContainerDark,
-    secondary = TealSecondaryDark,
-    onSecondary = OnTealSecondaryDark,
-    secondaryContainer = TealSecondaryContainerDark,
-    onSecondaryContainer = OnTealSecondaryContainerDark,
-    tertiary = CoralTertiaryDark,
-    onTertiary = OnCoralTertiaryDark,
-    tertiaryContainer = CoralTertiaryContainerDark,
-    onTertiaryContainer = OnCoralTertiaryContainerDark,
+    primary = PrimaryDark,
+    onPrimary = OnPrimaryDark,
+    primaryContainer = PrimaryContainerDark,
+    onPrimaryContainer = OnPrimaryContainerDark,
+    secondary = SecondaryDark,
+    onSecondary = OnSecondaryDark,
+    secondaryContainer = SecondaryContainerDark,
+    onSecondaryContainer = OnSecondaryContainerDark,
+    tertiary = TertiaryDark,
+    onTertiary = OnTertiaryDark,
+    tertiaryContainer = TertiaryContainerDark,
+    onTertiaryContainer = OnTertiaryContainerDark,
     background = BackgroundDark,
     onBackground = OnBackgroundDark,
     surface = BackgroundDark,
@@ -87,18 +123,18 @@ private val DarkColorScheme = darkColorScheme(
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = TealPrimaryLight,
-    onPrimary = OnTealPrimaryLight,
-    primaryContainer = TealPrimaryContainerLight,
-    onPrimaryContainer = OnTealPrimaryContainerLight,
-    secondary = TealSecondaryLight,
-    onSecondary = OnTealSecondaryLight,
-    secondaryContainer = TealSecondaryContainerLight,
-    onSecondaryContainer = OnTealSecondaryContainerLight,
-    tertiary = CoralTertiaryLight,
-    onTertiary = OnCoralTertiaryLight,
-    tertiaryContainer = CoralTertiaryContainerLight,
-    onTertiaryContainer = OnCoralTertiaryContainerLight,
+    primary = PrimaryLight,
+    onPrimary = OnPrimaryLight,
+    primaryContainer = PrimaryContainerLight,
+    onPrimaryContainer = OnPrimaryContainerLight,
+    secondary = SecondaryLight,
+    onSecondary = OnSecondaryLight,
+    secondaryContainer = SecondaryContainerLight,
+    onSecondaryContainer = OnSecondaryContainerLight,
+    tertiary = TertiaryLight,
+    onTertiary = OnTertiaryLight,
+    tertiaryContainer = TertiaryContainerLight,
+    onTertiaryContainer = OnTertiaryContainerLight,
     background = BackgroundLight,
     onBackground = OnBackgroundLight,
     surface = BackgroundLight,

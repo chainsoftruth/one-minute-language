@@ -53,6 +53,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.oneminutelanguage.data.WordEntity
+import com.example.oneminutelanguage.ui.theme.appColors
 import com.example.oneminutelanguage.translation.LanguageSettingsStore
 import com.example.oneminutelanguage.translation.SupportedLanguages
 import com.example.oneminutelanguage.ui.components.ArticleTag
@@ -132,7 +133,8 @@ fun DatabaseScreen(
                 scrollBehavior = scrollBehavior,
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = Color.Transparent,
-                    scrolledContainerColor = MaterialTheme.colorScheme.surfaceContainer
+                    // The page gradient's top colour: opaque, but no visible band against the background.
+                    scrolledContainerColor = MaterialTheme.appColors.page.first()
                 )
             )
         },

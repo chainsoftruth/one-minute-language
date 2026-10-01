@@ -1,6 +1,5 @@
 package com.example.oneminutelanguage.ui.learn
 
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -53,6 +52,14 @@ import com.example.oneminutelanguage.course.UnitKind
 import com.example.oneminutelanguage.course.firstUnfinished
 import com.example.oneminutelanguage.ui.components.ProgressRing
 import com.example.oneminutelanguage.ui.components.appCardColors
+import com.example.oneminutelanguage.ui.components.IconTile
+import com.example.oneminutelanguage.ui.theme.Accent
+import com.example.oneminutelanguage.ui.theme.appColors
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.foundation.shape.CircleShape
 
 internal fun unitKindIcon(kind: UnitKind): ImageVector = when (kind) {
     UnitKind.GRAMMAR -> Icons.AutoMirrored.Filled.MenuBook
@@ -67,7 +74,6 @@ private fun kindFromId(id: String) = when {
     else -> UnitKind.CHECKPOINT
 }
 
-@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun LearnScreen(
     onChooseCourse: () -> Unit,
@@ -110,8 +116,8 @@ fun LearnScreen(
                     }
                 }
                 item { PlacementOffer(state.course, onPlacementClick) }
-                state.path.forEach { level ->
-                    stickyHeader { LevelHeader(level, completed) }
+                state.path.forEachIndexed { i, level ->
+                    item { LevelHeader(level, completed, i) }
                     items(level.units, key = { it.id }) { entry ->
                         UnitCard(
                             entry = entry,
@@ -149,34 +155,60 @@ private fun PlacementOffer(course: CourseInfo, onTake: () -> Unit) {
     }
 }
 
+/** A1 teal, A2 blue, B1 violet (a later level wraps around). */
 @Composable
-private fun LevelHeader(level: PathLevel, completed: Set<String>) {
+private fun levelAccent(index: Int): Accent = with(MaterialTheme.appColors) { listOf(teal, blue, violet)[index % 3] }
+
+@Composable
+private fun kindAccent(kind: UnitKind): Accent = with(MaterialTheme.appColors) {
+    when (kind) {
+        UnitKind.GRAMMAR -> teal
+        UnitKind.THEME -> coral
+        UnitKind.CHECKPOINT -> amber
+    }
+}
+
+@Composable
+private fun LevelHeader(level: PathLevel, completed: Set<String>, index: Int) {
     val lessons = level.units.mapNotNull { it.unit }.flatMap { it.lessons }
-    Surface(color = MaterialTheme.colorScheme.background.copy(alpha = 0.95f), modifier = Modifier.fillMaxWidth()) {
-        Row(modifier = Modifier.padding(vertical = 8.dp), verticalAlignment = Alignment.CenterVertically) {
-            Text(
-                "${level.outline.level} · ${level.outline.title}",
-                style = MaterialTheme.typography.titleMedium,
-                modifier = Modifier.weight(1f)
-            )
-            Text(
-                "${lessons.count { it.id in completed }}/${lessons.size} lessons",
-                style = MaterialTheme.typography.labelLarge,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-        }
+    val accent = levelAccent(index)
+    Row(
+        modifier = Modifier.fillMaxWidth().padding(top = 16.dp, bottom = 4.dp, start = 4.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        Text(
+            level.outline.level,
+            modifier = Modifier
+                .background(Brush.linearGradient(accent.tile), CircleShape)
+                .padding(horizontal = 12.dp, vertical = 4.dp),
+            style = MaterialTheme.typography.titleMedium,
+            color = Color.White
+        )
+        Text(
+            level.outline.title,
+            style = MaterialTheme.typography.titleLarge,
+            modifier = Modifier.weight(1f).padding(start = 12.dp)
+        )
+        Text(
+            "${lessons.count { it.id in completed }}/${lessons.size} lessons",
+            style = MaterialTheme.typography.labelLarge,
+            color = MaterialTheme.colorScheme.onSurfaceVariant
+        )
     }
 }
 
 @Composable
 private fun UnitCard(entry: PathUnit, completed: Set<String>, isNext: Boolean, onClick: () -> Unit) {
     val unit = entry.unit
+    val kind = unit?.kind ?: kindFromId(entry.id)
+    val accent = kindAccent(kind)
     Card(
         onClick = onClick,
         enabled = unit != null,
         modifier = Modifier.fillMaxWidth().alpha(if (unit != null) 1f else 0.55f),
         shape = MaterialTheme.shapes.medium,
-        colors = appCardColors()
+        colors = appCardColors(),
+        border = if (isNext) BorderStroke(2.dp, MaterialTheme.colorScheme.primary) else null
     ) {
         Row(
             modifier = Modifier.defaultMinSize(minHeight = 72.dp).padding(16.dp),
@@ -186,14 +218,11 @@ private fun UnitCard(entry: PathUnit, completed: Set<String>, isNext: Boolean, o
             val total = unit?.lessons?.size ?: 0
             ProgressRing(
                 progress = if (total == 0) 0f else done.toFloat() / total,
-                size = 48.dp,
-                strokeWidth = 5.dp
+                size = 52.dp,
+                strokeWidth = 4.dp,
+                color = accent.color
             ) {
-                Icon(
-                    unitKindIcon(unit?.kind ?: kindFromId(entry.id)),
-                    contentDescription = null,
-                    tint = MaterialTheme.colorScheme.primary
-                )
+                IconTile(unitKindIcon(kind), accent, size = 36.dp)
             }
             Spacer(Modifier.width(16.dp))
             Column(modifier = Modifier.weight(1f)) {
@@ -210,12 +239,12 @@ private fun UnitCard(entry: PathUnit, completed: Set<String>, isNext: Boolean, o
             }
             if (isNext) {
                 Spacer(Modifier.width(8.dp))
-                Surface(shape = MaterialTheme.shapes.small, color = MaterialTheme.colorScheme.tertiaryContainer) {
+                Surface(shape = CircleShape, color = MaterialTheme.colorScheme.primary) {
                     Text(
                         "Next",
-                        modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
+                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp),
                         style = MaterialTheme.typography.labelMedium,
-                        color = MaterialTheme.colorScheme.onTertiaryContainer
+                        color = MaterialTheme.colorScheme.onPrimary
                     )
                 }
             }

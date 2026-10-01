@@ -8,9 +8,9 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
+import com.example.oneminutelanguage.ui.theme.AppBackground
 import androidx.core.content.ContextCompat
 import com.example.oneminutelanguage.ui.AppScaffold
-import com.example.oneminutelanguage.ui.theme.MeshGradientBackground
 import com.example.oneminutelanguage.ui.theme.OneMinuteLanguageTheme
 import com.example.oneminutelanguage.widget.ScreenOnForegroundService
 
@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             OneMinuteLanguageTheme {
-                MeshGradientBackground {
+                AppBackground {
                     AppScaffold(startAtAddWord = openAddWordScreen)
                 }
             }

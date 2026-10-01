@@ -7,10 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <!-- Widget: light values here, dark ones in values-night. -->
-    <color name="widget_background">#CCFFFFFF</color>
-    <color name="widget_text">#FF000000</color>
+    <!-- Widget: light values here, dark ones in values-night. Same palette as the app (frosted panel, text, blue accent, ArticleTag). -->
+    <color name="widget_bg_start">#EBF6F3FF</color>
+    <color name="widget_bg_end">#EBFCEEF7</color>
+    <color name="widget_edge">#99FFFFFF</color>
+    <color name="widget_button">#FFFFFFFF</color>
+    <color name="widget_text">#FF1B1B24</color>
+    <color name="widget_text_secondary">#FF55566B</color>
+    <color name="widget_accent">#FF3E5BF0</color>
     <color name="widget_tag_de">#FF00897B</color>
     <color name="widget_tag_het">#FFE65100</color>
-    <color name="widget_tag_text">#FFFFFFFF</color>
+    <color name="widget_tag_de_bg">#2900897B</color>
+    <color name="widget_tag_het_bg">#29E65100</color>
 </resources>

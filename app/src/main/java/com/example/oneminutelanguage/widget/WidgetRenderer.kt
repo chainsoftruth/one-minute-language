@@ -5,6 +5,7 @@ import android.appwidget.AppWidgetManager
 import android.content.Context
 import android.content.Intent
 import android.graphics.Paint
+import android.graphics.Typeface
 import android.os.Build
 import android.text.TextPaint
 import android.util.SizeF
@@ -29,8 +30,8 @@ import kotlin.random.Random
 object WidgetRenderer {
     private const val ROOT_PADDING_DP = 6f
     private const val SECONDARY_MARGIN_DP = 1f
-    private const val ADD_BUTTON_SP = 26
-    private const val ADD_BUTTON_PADDING_DP = 6f
+    private const val ADD_BUTTON_DP = 28f
+    private const val ADD_BUTTON_GAP_DP = 2f
     private const val PRIMARY_MAX_SP = 28
     private const val PRIMARY_MIN_SP = 14
     private const val SECONDARY_MAX_SP = 18
@@ -78,7 +79,8 @@ object WidgetRenderer {
         }
 
         val metrics = context.resources.displayMetrics
-        val paint = TextPaint(Paint.ANTI_ALIAS_FLAG)
+        // Same face as the word in widget_layout.xml (slightly wider than regular, so it is the safe one to measure).
+        val paint = TextPaint(Paint.ANTI_ALIAS_FLAG).apply { typeface = Typeface.create("sans-serif-medium", Typeface.NORMAL) }
         val spToPx = { sp: Int -> TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, sp.toFloat(), metrics) }
         val measure = { text: String, sp: Int ->
             paint.textSize = spToPx(sp)
@@ -89,8 +91,8 @@ object WidgetRenderer {
             paint.fontMetrics.let { it.bottom - it.top }
         }
 
-        // The + chip width is reserved on both sides so the text stays centred and never runs under it.
-        val chipPx = ceil(measure("+", ADD_BUTTON_SP) + dpToPx(context, ADD_BUTTON_PADDING_DP)).toInt()
+        // The round + button's width is reserved on both sides so the text stays centred and never runs under it.
+        val chipPx = ceil(dpToPx(context, ADD_BUTTON_DP + ADD_BUTTON_GAP_DP)).toInt()
         val (widthDp, heightDp) = widgetSizeDp(appWidgetManager, appWidgetId)
         val rootPaddingPx = dpToPx(context, ROOT_PADDING_DP)
         val textWidth = dpToPx(context, widthDp) - 2 * rootPaddingPx - 2 * chipPx
@@ -132,6 +134,10 @@ object WidgetRenderer {
             if (article != null) {
                 views.setTextViewText(articleId, article)
                 views.setInt(articleId, "setBackgroundResource", if (article == "de") R.drawable.widget_tag_de else R.drawable.widget_tag_het)
+                val tagColor = if (article == "de") R.color.widget_tag_de else R.color.widget_tag_het
+                // API 31+ keeps the resource, so the tag follows a light/dark switch without a re-render.
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) views.setColorStateList(articleId, "setTextColor", tagColor)
+                else views.setTextColor(articleId, context.getColor(tagColor))
             }
             views.setTextViewText(secondaryId, data.language1Word)
             views.setTextViewTextSize(primaryId, TypedValue.COMPLEX_UNIT_SP, primarySp.toFloat())

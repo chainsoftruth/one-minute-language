@@ -39,6 +39,10 @@ import com.example.oneminutelanguage.ui.components.ProgressRing
 import com.example.oneminutelanguage.ui.components.appCardColors
 import com.example.oneminutelanguage.ui.learn.LearnState
 import com.example.oneminutelanguage.ui.components.StatTile
+import com.example.oneminutelanguage.ui.theme.appColors
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
+import androidx.compose.material3.Surface
 
 @Composable
 fun TodayScreen(
@@ -70,6 +74,9 @@ fun TodayScreen(
             else -> "Burning the midnight oil? 🦉"
         }
     }
+    val today = remember {
+        java.time.LocalDate.now().format(java.time.format.DateTimeFormatter.ofPattern("EEEE d MMMM"))
+    }
 
     Column(
         modifier = Modifier
@@ -79,12 +86,25 @@ fun TodayScreen(
             .padding(horizontal = 16.dp, vertical = 8.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-            Text(
-                text = greeting,
-                style = MaterialTheme.typography.headlineSmall,
-                modifier = Modifier.weight(1f)
-            )
+        Row(modifier = Modifier.fillMaxWidth().padding(top = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = today,
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Text(text = greeting, style = MaterialTheme.typography.headlineSmall)
+            }
+            if (streakDays > 0) {
+                Surface(shape = CircleShape, color = MaterialTheme.appColors.coral.container) {
+                    Text(
+                        "🔥 $streakDays",
+                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp),
+                        style = MaterialTheme.typography.labelLarge,
+                        color = MaterialTheme.appColors.coral.color
+                    )
+                }
+            }
             IconButton(onClick = onSettingsClick) {
                 Icon(Icons.Default.Settings, contentDescription = "Settings")
             }
@@ -106,7 +126,8 @@ fun TodayScreen(
                 icon = Icons.Default.Replay,
                 title = if (dueReviews == 1) "1 review due" else "$dueReviews reviews due",
                 subtitle = "Keep your words fresh",
-                onClick = onReviewClick
+                onClick = onReviewClick,
+                accent = MaterialTheme.appColors.coral
             )
         }
 
@@ -115,17 +136,19 @@ fun TodayScreen(
                 value = viewsToday.toString(),
                 label = "words shown today",
                 icon = Icons.Default.Visibility,
-                modifier = Modifier.weight(1f)
+                modifier = Modifier.weight(1f),
+                accent = MaterialTheme.appColors.teal
             )
             StatTile(
                 value = totalWords.toString(),
                 label = "words in your collection",
                 icon = Icons.AutoMirrored.Filled.MenuBook,
-                modifier = Modifier.weight(1f)
+                modifier = Modifier.weight(1f),
+                accent = MaterialTheme.appColors.violet
             )
         }
 
-        Text("Quick actions", style = MaterialTheme.typography.titleMedium)
+        Text("Quick actions", style = MaterialTheme.typography.titleLarge, modifier = Modifier.padding(top = 8.dp))
 
         ActionCard(
             icon = Icons.Default.Add,
@@ -137,14 +160,16 @@ fun TodayScreen(
             icon = Icons.Default.Quiz,
             title = "Quick quiz",
             subtitle = "Check what you remember",
-            onClick = { onQuizClick(null) }
+            onClick = { onQuizClick(null) },
+            accent = MaterialTheme.appColors.violet
         )
         if (isDutch) {
             ActionCard(
                 icon = Icons.Default.Spellcheck,
                 title = "de / het drill",
                 subtitle = "Pick the article for each noun",
-                onClick = { onQuizClick(QuizMode.ARTICLE.name) }
+                onClick = { onQuizClick(QuizMode.ARTICLE.name) },
+                accent = MaterialTheme.appColors.amber
             )
         }
     }
@@ -191,22 +216,34 @@ private fun ContinueSection(
     // The goal card opens the Progress screen.
     Card(onClick = onProgressClick, modifier = Modifier.fillMaxWidth(), shape = MaterialTheme.shapes.medium, colors = appCardColors()) {
         Row(modifier = Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
-            ProgressRing(progress = exercisesDone.toFloat() / dailyGoal, size = 88.dp, strokeWidth = 10.dp) {
+            val goalMet = exercisesDone >= dailyGoal
+            ProgressRing(
+                progress = exercisesDone.toFloat() / dailyGoal,
+                size = 80.dp,
+                strokeWidth = 9.dp,
+                color = if (goalMet) MaterialTheme.appColors.success else MaterialTheme.appColors.coral.color
+            ) {
                 Text("$exercisesDone", style = MaterialTheme.typography.titleLarge)
             }
-            Column(modifier = Modifier.padding(start = 16.dp)) {
-                Text("Daily goal", style = MaterialTheme.typography.titleMedium)
+            Column(modifier = Modifier.padding(start = 16.dp).weight(1f)) {
+                Text(if (goalMet) "Goal reached ✓" else "Daily goal", style = MaterialTheme.typography.titleMedium)
                 Text(
                     "$exercisesDone / $dailyGoal exercises",
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 Text(
-                    "🔥 $streakDays ${if (streakDays == 1) "day" else "days"}",
-                    style = MaterialTheme.typography.titleMedium,
-                    modifier = Modifier.padding(top = 4.dp)
+                    "🔥 $streakDays ${if (streakDays == 1) "day" else "days"} streak",
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.appColors.coral.color,
+                    modifier = Modifier.padding(top = 6.dp)
                 )
             }
+            Icon(
+                Icons.AutoMirrored.Filled.KeyboardArrowRight,
+                contentDescription = null,
+                tint = MaterialTheme.colorScheme.outline
+            )
         }
     }
 }

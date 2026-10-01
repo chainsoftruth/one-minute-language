@@ -54,6 +54,7 @@ import com.example.oneminutelanguage.course.levelCounts
 import com.example.oneminutelanguage.ui.components.ActionCard
 import com.example.oneminutelanguage.ui.components.StatTile
 import com.example.oneminutelanguage.ui.components.appCardColors
+import com.example.oneminutelanguage.ui.theme.appColors
 import java.time.LocalDate
 
 @Composable
@@ -77,8 +78,8 @@ fun ProgressScreen(onBack: () -> Unit, onUnitClick: (String) -> Unit, onPlacemen
             ) {
                 val data = state.data
                 Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                    StatTile(data.currentStreak.toString(), "day streak", Icons.Default.LocalFireDepartment, Modifier.weight(1f))
-                    StatTile(data.longestStreak.toString(), "longest streak", Icons.Default.EmojiEvents, Modifier.weight(1f))
+                    StatTile(data.currentStreak.toString(), "day streak", Icons.Default.LocalFireDepartment, Modifier.weight(1f), MaterialTheme.appColors.coral)
+                    StatTile(data.longestStreak.toString(), "longest streak", Icons.Default.EmojiEvents, Modifier.weight(1f), MaterialTheme.appColors.amber)
                 }
 
                 Section("Levels") {

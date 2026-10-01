@@ -34,6 +34,8 @@ import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.stateIn
 import com.example.oneminutelanguage.ui.components.ActionCard
+import com.example.oneminutelanguage.ui.components.SectionLabel
+import com.example.oneminutelanguage.ui.theme.appColors
 import com.google.mlkit.nl.translate.TranslateLanguage
 
 /** The de / het modes only make sense when the language being learned is Dutch. */
@@ -67,29 +69,35 @@ fun PracticeScreen(
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        Text("Practice", style = MaterialTheme.typography.headlineSmall)
+        val accents = MaterialTheme.appColors
+        Text("Practice", style = MaterialTheme.typography.headlineSmall, modifier = Modifier.padding(top = 8.dp))
 
         ActionCard(
             icon = Icons.Default.Replay,
             title = "Review",
             subtitle = "Words and mistakes that are due",
             badge = due.takeIf { it > 0 }?.toString(),
-            onClick = onReviewClick
+            onClick = onReviewClick,
+            accent = accents.coral
         )
 
+        SectionLabel("Listen & speak")
         ActionCard(
             icon = Icons.Default.Headphones,
             title = "Listening drill",
             subtitle = "Hear 10 sentences from your lessons",
-            onClick = { onDrillClick("listening") }
+            onClick = { onDrillClick("listening") },
+            accent = accents.teal
         )
         ActionCard(
             icon = Icons.Default.Mic,
             title = "Speaking drill",
             subtitle = "Say 10 sentences out loud",
-            onClick = { onDrillClick("speaking") }
+            onClick = { onDrillClick("speaking") },
+            accent = accents.rose
         )
 
+        SectionLabel("Quizzes")
         ActionCard(
             icon = Icons.Default.Quiz,
             title = "Meaning quiz",
@@ -100,22 +108,26 @@ fun PracticeScreen(
             icon = Icons.Default.SwapHoriz,
             title = "Reverse quiz",
             subtitle = "See the meaning, pick the word",
-            onClick = { onQuizClick(QuizMode.REVERSE.name) }
+            onClick = { onQuizClick(QuizMode.REVERSE.name) },
+            accent = accents.violet
         )
         if (isDutch) {
             ActionCard(
                 icon = Icons.Default.Spellcheck,
                 title = "de / het quiz",
                 subtitle = "Pick the article for each noun",
-                onClick = { onQuizClick(QuizMode.ARTICLE.name) }
+                onClick = { onQuizClick(QuizMode.ARTICLE.name) },
+                accent = accents.amber
             )
         }
 
+        SectionLabel("More")
         ActionCard(
             icon = Icons.Default.Public,
             title = "Resources",
             subtitle = "Free sites for reading, listening and exams",
-            onClick = onResourcesClick
+            onClick = onResourcesClick,
+            accent = accents.blue
         )
     }
 }

@@ -2,7 +2,11 @@ package com.example.oneminutelanguage.ui
 
 import android.app.Activity
 import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.draw.clip
+import com.example.oneminutelanguage.ui.theme.appColors
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.FitnessCenter
 import androidx.compose.material.icons.filled.Home
@@ -12,6 +16,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.NavigationBarItemDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -63,13 +68,27 @@ fun AppScaffold(startAtAddWord: Boolean) {
         contentWindowInsets = WindowInsets(0),
         bottomBar = {
             if (tabs.any { it.route == currentRoute }) {
-                NavigationBar(containerColor = MaterialTheme.colorScheme.surfaceContainer) {
+                // Floating frosted pill above the system bar.
+                NavigationBar(
+                    modifier = Modifier
+                        .navigationBarsPadding()
+                        .padding(horizontal = 16.dp, vertical = 8.dp)
+                        .clip(RoundedCornerShape(32.dp)),
+                    containerColor = MaterialTheme.appColors.glass,
+                    tonalElevation = 0.dp,
+                    windowInsets = WindowInsets(0)
+                ) {
                     tabs.forEach { tab ->
                         NavigationBarItem(
                             selected = currentRoute == tab.route,
                             onClick = { navController.switchTab(tab.route) },
                             icon = { Icon(tab.icon, contentDescription = null) },
-                            label = { Text(tab.label) }
+                            label = { Text(tab.label) },
+                            colors = NavigationBarItemDefaults.colors(
+                                selectedIconColor = MaterialTheme.colorScheme.onPrimary,
+                                selectedTextColor = MaterialTheme.colorScheme.primary,
+                                indicatorColor = MaterialTheme.colorScheme.primary
+                            )
                         )
                     }
                 }

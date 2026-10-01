@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="6dp"
-    android:background="@drawable/widget_mesh_gradient">
+    android:background="@drawable/widget_bg">
 
     <ViewFlipper
         android:id="@+id/word_flipper"
@@ -29,7 +29,7 @@
                 android:paddingHorizontal="8dp"
                 android:paddingVertical="1dp"
                 android:text=""
-                android:textColor="@color/widget_tag_text"
+                android:textColor="@color/widget_tag_de"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 android:visibility="gone" />
@@ -40,6 +40,7 @@
                 android:layout_height="wrap_content"
                 android:text="Het woord"
                 android:textColor="@color/widget_text"
+                android:fontFamily="sans-serif-medium"
                 android:textSize="28sp"
                 android:gravity="center"
                 android:textAlignment="center"
@@ -54,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
                 android:text="The word"
-                android:textColor="@color/widget_text"
+                android:textColor="@color/widget_text_secondary"
                 android:textSize="18sp"
                 android:gravity="center"
                 android:textAlignment="center"
@@ -79,7 +80,7 @@
                 android:paddingHorizontal="8dp"
                 android:paddingVertical="1dp"
                 android:text=""
-                android:textColor="@color/widget_tag_text"
+                android:textColor="@color/widget_tag_de"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 android:visibility="gone" />
@@ -90,6 +91,7 @@
                 android:layout_height="wrap_content"
                 android:text=""
                 android:textColor="@color/widget_text"
+                android:fontFamily="sans-serif-medium"
                 android:textSize="28sp"
                 android:gravity="center"
                 android:textAlignment="center"
@@ -104,7 +106,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
                 android:text=""
-                android:textColor="@color/widget_text"
+                android:textColor="@color/widget_text_secondary"
                 android:textSize="18sp"
                 android:gravity="center"
                 android:textAlignment="center"
@@ -115,15 +117,19 @@
         </LinearLayout>
     </ViewFlipper>
 
+    <!-- Round button; its size + margin is WidgetRenderer.ADD_BUTTON_DP + ADD_BUTTON_GAP_DP. -->
     <TextView
         android:id="@+id/btn_add_word"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
         android:layout_gravity="top|end"
-        android:paddingTop="0dp"
-        android:paddingEnd="6dp"
+        android:background="@drawable/widget_add_bg"
+        android:gravity="center"
+        android:includeFontPadding="false"
         android:text="+"
-        android:textColor="@color/widget_text"
-        android:textSize="26sp" />
+        android:contentDescription="Add word"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/widget_accent"
+        android:textSize="20sp" />
 
 </FrameLayout>
