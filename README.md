@@ -51,7 +51,7 @@ No lessons, no streaks, no notifications to dismiss. Just a word, sitting quietl
 
 ### Upgrade notes
 
-- Install over your current version: the database upgrades automatically (adds one column for "learned" words) and keeps every word and its on/off switch.
+- **New app ID** (`io.github.chainsoftruth.oneminutelanguage`, ready for Google Play): v1.5 installs as a new app next to v1.2 and starts with an empty word list. Turn on "Include default word list" in Settings, re-add your own words, then uninstall the old version.
 - Changing the language pair re-imports the starter words, so their "learned" state starts over; your own words keep it.
 
 ## 🆕 What's new in v1.3 and v1.4
