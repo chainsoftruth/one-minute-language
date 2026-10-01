@@ -28,7 +28,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.compose.material3.Card
+import androidx.compose.ui.platform.LocalContext
+import com.example.oneminutelanguage.course.CoursePrefs
+import com.example.oneminutelanguage.course.firstUnfinished
 import com.example.oneminutelanguage.ui.components.ActionCard
+import com.example.oneminutelanguage.ui.components.HeroCard
+import com.example.oneminutelanguage.ui.components.ProgressRing
+import com.example.oneminutelanguage.ui.components.appCardColors
+import com.example.oneminutelanguage.ui.learn.LearnState
 import com.example.oneminutelanguage.ui.components.StatTile
 
 @Composable
@@ -37,11 +45,18 @@ fun TodayScreen(
     onSettingsClick: () -> Unit,
     /** null = the quiz setup screen without a preselected mode. */
     onQuizClick: (mode: String?) -> Unit,
+    onChooseCourse: () -> Unit,
+    onLessonClick: (lessonId: String) -> Unit,
+    onLearnClick: () -> Unit,
     viewModel: MainViewModel = viewModel()
 ) {
+    val context = LocalContext.current
     val totalWords by viewModel.totalWordsCount.collectAsState(initial = 0)
     val viewsToday by viewModel.todayViewCount.collectAsState(initial = 0)
     val isDutch = rememberIsDutchTarget()
+    val learnState by viewModel.learnState.collectAsState()
+    val (exercisesDone, streakDays) = viewModel.exercisesAndStreak.collectAsState().value
+    val dailyGoal = remember { CoursePrefs.dailyGoal(context) }
 
     val greeting = remember {
         when (java.time.LocalTime.now().hour) {
@@ -71,7 +86,15 @@ fun TodayScreen(
             }
         }
 
-        // Stage 2 adds the "Continue learning" card and the daily-goal ring here.
+        ContinueSection(
+            learnState = learnState,
+            exercisesDone = exercisesDone,
+            dailyGoal = dailyGoal,
+            streakDays = streakDays,
+            onChooseCourse = onChooseCourse,
+            onLessonClick = onLessonClick,
+            onLearnClick = onLearnClick
+        )
 
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             StatTile(
@@ -109,6 +132,64 @@ fun TodayScreen(
                 subtitle = "Pick the article for each noun",
                 onClick = { onQuizClick(QuizMode.ARTICLE.name) }
             )
+        }
+    }
+}
+
+/** "Continue learning" hero card and the daily goal with its streak. */
+@Composable
+private fun ContinueSection(
+    learnState: LearnState,
+    exercisesDone: Int,
+    dailyGoal: Int,
+    streakDays: Int,
+    onChooseCourse: () -> Unit,
+    onLessonClick: (String) -> Unit,
+    onLearnClick: () -> Unit
+) {
+    when (learnState) {
+        LearnState.Loading -> Unit
+        LearnState.NoCourse -> HeroCard(
+            title = "Deep learning",
+            subtitle = "Choose a language",
+            onClick = onChooseCourse
+        )
+        is LearnState.Ready -> {
+            val next = firstUnfinished(learnState.path, learnState.progress.keys)
+            if (next == null) {
+                HeroCard(title = "Continue learning", subtitle = "All available lessons done", onClick = onLearnClick, progress = 1f)
+            } else {
+                val (unit, lesson) = next
+                val levelLessons = learnState.path.first { level -> level.units.any { it.id == unit.id } }
+                    .units.mapNotNull { it.unit }.flatMap { it.lessons }
+                HeroCard(
+                    title = "Continue learning",
+                    subtitle = "${unit.title} · ${lesson.title}",
+                    onClick = { onLessonClick(lesson.id) },
+                    progress = levelLessons.count { it.id in learnState.progress }.toFloat() / levelLessons.size
+                )
+            }
+        }
+    }
+
+    Card(modifier = Modifier.fillMaxWidth(), shape = MaterialTheme.shapes.medium, colors = appCardColors()) {
+        Row(modifier = Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
+            ProgressRing(progress = exercisesDone.toFloat() / dailyGoal, size = 88.dp, strokeWidth = 10.dp) {
+                Text("$exercisesDone", style = MaterialTheme.typography.titleLarge)
+            }
+            Column(modifier = Modifier.padding(start = 16.dp)) {
+                Text("Daily goal", style = MaterialTheme.typography.titleMedium)
+                Text(
+                    "$exercisesDone / $dailyGoal exercises",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+                Text(
+                    "🔥 $streakDays ${if (streakDays == 1) "day" else "days"}",
+                    style = MaterialTheme.typography.titleMedium,
+                    modifier = Modifier.padding(top = 4.dp)
+                )
+            }
         }
     }
 }

@@ -20,7 +20,17 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.foundation.shape.CornerSize
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
+import androidx.compose.material3.LinearProgressIndicator
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.withStyle
+import com.example.oneminutelanguage.course.ItemResult
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -223,6 +233,81 @@ fun AnswerOption(
                 )
                 else -> Unit
             }
+        }
+    }
+}
+
+/** "Continue learning": teal-to-coral gradient card with an optional progress bar. */
+@Composable
+fun HeroCard(
+    title: String,
+    subtitle: String,
+    onClick: () -> Unit,
+    modifier: Modifier = Modifier,
+    progress: Float? = null
+) {
+    val scheme = MaterialTheme.colorScheme
+    Card(onClick = onClick, modifier = modifier.fillMaxWidth(), shape = MaterialTheme.shapes.large) {
+        Column(
+            modifier = Modifier
+                .background(Brush.linearGradient(listOf(scheme.primary, scheme.tertiary)))
+                .padding(20.dp),
+            verticalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            Text(title, style = MaterialTheme.typography.labelLarge, color = scheme.onPrimary.copy(alpha = 0.85f))
+            Text(subtitle, style = MaterialTheme.typography.titleLarge, color = scheme.onPrimary)
+            if (progress != null) {
+                LinearProgressIndicator(
+                    progress = { progress.coerceIn(0f, 1f) },
+                    modifier = Modifier.fillMaxWidth().padding(top = 8.dp),
+                    color = scheme.onPrimary,
+                    trackColor = scheme.onPrimary.copy(alpha = 0.3f)
+                )
+            }
+        }
+    }
+}
+
+/** Shown under an exercise after "Check". Correct / wrong is spelled out and has an icon, never colour alone. */
+@Composable
+fun FeedbackPanel(result: ItemResult, explain: String?, onContinue: () -> Unit, modifier: Modifier = Modifier) {
+    val scheme = MaterialTheme.colorScheme
+    val good = result.correct
+    Surface(
+        modifier = modifier.fillMaxWidth(),
+        shape = MaterialTheme.shapes.large.copy(bottomStart = CornerSize(0.dp), bottomEnd = CornerSize(0.dp)),
+        color = if (good) MaterialTheme.appColors.successContainer else scheme.errorContainer,
+        contentColor = if (good) scheme.onSurface else scheme.onErrorContainer
+    ) {
+        Column(modifier = Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Icon(
+                    imageVector = if (good) Icons.Default.Check else Icons.Default.Close,
+                    contentDescription = null,
+                    tint = if (good) MaterialTheme.appColors.success else scheme.error
+                )
+                Text(if (good) "Correct!" else "Not quite", style = MaterialTheme.typography.titleMedium)
+            }
+            result.note?.let { Text(it, style = MaterialTheme.typography.bodyMedium) }
+            if (!good) {
+                Text("Correct answer", style = MaterialTheme.typography.labelMedium)
+                Text(result.expected, style = MaterialTheme.typography.titleMedium)
+            }
+            result.diff?.let { diff ->
+                Text(
+                    text = buildAnnotatedString {
+                        diff.forEachIndexed { i, (word, matched) ->
+                            if (i > 0) append(' ')
+                            if (matched) append(word) else withStyle(
+                                SpanStyle(color = scheme.error, fontWeight = FontWeight.Bold, textDecoration = TextDecoration.Underline)
+                            ) { append(word) }
+                        }
+                    },
+                    style = MaterialTheme.typography.bodyLarge
+                )
+            }
+            explain?.let { Text(it, style = MaterialTheme.typography.bodyMedium) }
+            Button(onClick = onContinue, modifier = Modifier.fillMaxWidth().padding(top = 4.dp)) { Text("Continue") }
         }
     }
 }

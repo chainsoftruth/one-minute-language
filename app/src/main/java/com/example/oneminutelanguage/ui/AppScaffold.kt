@@ -1,17 +1,13 @@
 package com.example.oneminutelanguage.ui
 
 import android.app.Activity
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsets
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.FitnessCenter
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.School
-import androidx.compose.material3.Card
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
@@ -32,7 +28,10 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.example.oneminutelanguage.ui.components.appCardColors
+import com.example.oneminutelanguage.ui.learn.CourseSelectScreen
+import com.example.oneminutelanguage.ui.learn.LearnScreen
+import com.example.oneminutelanguage.ui.learn.LessonScreen
+import com.example.oneminutelanguage.ui.learn.UnitScreen
 
 private class Tab(val route: String, val label: String, val icon: ImageVector)
 
@@ -82,10 +81,38 @@ fun AppScaffold(startAtAddWord: Boolean) {
                 TodayScreen(
                     onAddWordClick = { navController.navigate("add_word") },
                     onSettingsClick = { navController.navigate("settings") },
-                    onQuizClick = { mode -> navController.navigate(if (mode == null) "quiz" else "quiz?mode=$mode") }
+                    onQuizClick = { mode -> navController.navigate(if (mode == null) "quiz" else "quiz?mode=$mode") },
+                    onChooseCourse = { navController.navigate("course_select") },
+                    onLessonClick = { navController.navigate("lesson/$it") },
+                    onLearnClick = { navController.switchTab("learn") }
                 )
             }
-            composable("learn") { LearnPlaceholder() }
+            composable("learn") {
+                LearnScreen(
+                    onChooseCourse = { navController.navigate("course_select") },
+                    onUnitClick = { navController.navigate("unit/$it") }
+                )
+            }
+            composable("course_select") {
+                CourseSelectScreen(onSelected = { navController.popBackStack() }, onBack = { navController.popBackStack() })
+            }
+            composable("unit/{unitId}") {
+                UnitScreen(onBack = { navController.popBackStack() }, onLessonClick = { navController.navigate("lesson/$it") })
+            }
+            composable("lesson/{lessonId}") {
+                LessonScreen(
+                    onClose = { navController.popBackStack() },
+                    // Replace the finished lesson, keeping the unit screen underneath.
+                    onNextLesson = { id -> navController.navigate("lesson/$id") { popUpTo("lesson/{lessonId}") { inclusive = true } } },
+                    onBackToUnit = { unitId ->
+                        // Opened from Today (no unit screen below)? Then show the unit instead of just closing.
+                        if (!navController.popBackStack("unit/{unitId}", inclusive = false)) {
+                            navController.popBackStack()
+                            navController.navigate("unit/$unitId")
+                        }
+                    }
+                )
+            }
             composable("practice") {
                 PracticeScreen(onQuizClick = { mode -> navController.navigate("quiz?mode=$mode") })
             }
@@ -114,27 +141,5 @@ private fun NavHostController.switchTab(route: String) {
         popUpTo(graph.findStartDestination().id) { saveState = true }
         launchSingleTop = true
         restoreState = true
-    }
-}
-
-// Stage 2 replaces this with the real Learn tab.
-@Composable
-private fun LearnPlaceholder() {
-    Column(modifier = Modifier.fillMaxSize().statusBarsPadding().padding(16.dp)) {
-        Text("Learn", style = MaterialTheme.typography.headlineSmall)
-        Card(
-            modifier = Modifier.padding(top = 16.dp),
-            shape = MaterialTheme.shapes.medium,
-            colors = appCardColors()
-        ) {
-            Column(modifier = Modifier.padding(20.dp)) {
-                Text("Deep learning arrives soon", style = MaterialTheme.typography.titleMedium)
-                Text(
-                    "A structured Dutch course from A1 to B1 is on its way.",
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-        }
     }
 }

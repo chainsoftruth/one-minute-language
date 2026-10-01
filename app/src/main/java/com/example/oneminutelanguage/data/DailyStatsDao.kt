@@ -28,4 +28,18 @@ interface DailyStatsDao {
         insertIfNotExists(DailyStatsEntity(date = date, widgetViewCount = 0))
         incrementViewCountRaw(date)
     }
+
+    @Query("UPDATE daily_stats SET exercisesDone = exercisesDone + :n WHERE date = :date")
+    suspend fun addExercisesRaw(date: String, n: Int)
+
+    suspend fun addExercises(date: String, n: Int) {
+        insertIfNotExists(DailyStatsEntity(date = date))
+        addExercisesRaw(date, n)
+    }
+
+    @Query("SELECT exercisesDone FROM daily_stats WHERE date = :date")
+    fun getExercisesForDate(date: String): Flow<Int?>
+
+    @Query("SELECT date FROM daily_stats WHERE exercisesDone >= :minExercises ORDER BY date DESC LIMIT 400")
+    suspend fun activeDays(minExercises: Int): List<String>
 }

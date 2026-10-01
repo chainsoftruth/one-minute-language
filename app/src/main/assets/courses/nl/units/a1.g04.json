@@ -1,0 +1,124 @@
+{
+  "id": "a1.g04", "level": "A1", "kind": "grammar",
+  "title": "de, het, plurals, -je",
+  "subtitle": "Articles, plural endings and diminutives",
+  "lessons": [
+    {
+      "id": "a1.g04.l1", "title": "de or het?", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Dutch has two words for *the*: **de** and **het**. You can't guess which one a noun takes from English, so always learn a noun together with its article. About two in three nouns are *de*-words." },
+        { "type": "table", "head": ["", "de-word", "het-word"], "rows": [["singular", "de stoel", "het huis"], ["plural", "de stoelen", "de huizen"]] },
+        { "type": "tip", "text": "Every plural takes **de**, and every diminutive (a word ending in *-je*) takes **het**: *de stoelen*, *het stoeltje*." },
+        { "type": "ex", "nl": "Het huis is groot.", "en": "The house is big." },
+        { "type": "p", "text": "Some groups help you guess. Most nouns that start with *ge-* or *be-* are **het**-words (*het gebouw*, *het bezoek*), and so are most nouns that end in *-ment*, *-isme* or *-um* (*het appartement*, *het toerisme*, *het museum*). Languages are **het** too: *het Nederlands*." },
+        { "type": "p", "text": "Nouns that end in *-heid*, *-ie* or the verb suffix *-ing* are almost always **de**-words: *de vrijheid*, *de familie*, *de oplossing*." },
+        { "type": "ex", "nl": "De fiets staat voor de deur.", "en": "The bike is in front of the door." },
+        { "type": "ex", "nl": "Het museum is vandaag open.", "en": "The museum is open today." }
+      ],
+      "items": [
+        { "type": "choice", "q": "___ fiets", "options": ["de", "het"], "answer": 0 },
+        { "type": "choice", "q": "___ huis", "options": ["de", "het"], "answer": 1 },
+        { "type": "choice", "q": "___ museum", "options": ["de", "het"], "answer": 1, "explain": "Most nouns ending in -um are het-words." },
+        { "type": "choice", "q": "___ vrijheid", "options": ["de", "het"], "answer": 0, "explain": "Nouns ending in -heid are always de-words." },
+        { "type": "choice", "q": "___ gebouw", "options": ["de", "het"], "answer": 1, "explain": "Most nouns starting with ge- are het-words." },
+        { "type": "choice", "q": "___ Nederlands (the language)", "options": ["de", "het"], "answer": 1, "explain": "Languages are het-words." },
+        { "type": "gap", "text": "Ik zie ___ meisje.", "answers": ["het"], "en": "I see the girl.", "explain": "Words ending in -je are always het-words." },
+        { "type": "gap", "text": "___ kinderen spelen buiten.", "answers": ["de"], "hint": "plural", "en": "The children play outside.", "explain": "Every plural takes de." },
+        { "type": "gap", "text": "Waar is ___ boek?", "answers": ["het"], "en": "Where is the book?" },
+        { "type": "gap", "text": "Ik wil ___ appartement huren.", "answers": ["het"], "en": "I want to rent the apartment.", "explain": "Nouns ending in -ment are het-words." },
+        { "type": "order", "answer": "Het huis is groot.", "en": "The house is big." },
+        { "type": "order", "answer": "De fiets staat voor de deur.", "en": "The bike is in front of the door.", "extra": ["het"] },
+        { "type": "match", "pairs": [["het huis", "the house"], ["de stoel", "the chair"], ["het boek", "the book"], ["de tafel", "the table"]] },
+        { "type": "translate", "en": "The museum is open.", "answers": ["Het museum is open"], "explain": "museum ends in -um, so it is a het-word." }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: lidwoord (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menulidwoord/" }
+      ]
+    },
+    {
+      "id": "a1.g04.l2", "title": "Plurals: -en, -s, 's", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Most plurals end in **-en**: *de stoel → de stoelen*. The spelling follows the sound. A long vowel written with two letters loses one in the open syllable (*boom → bomen*), a short vowel gets a double consonant (*man → mannen*), and *s* and *f* between vowels turn into *z* and *v* (*huis → huizen*, *brief → brieven*)." },
+        { "type": "table", "head": ["singular", "plural", "what happens"], "rows": [["de boom", "de bomen", "oo → o in an open syllable"], ["de man", "de mannen", "short vowel: double consonant"], ["het huis", "de huizen", "s → z"], ["de brief", "de brieven", "f → v"]] },
+        { "type": "ex", "nl": "In de tuin staan twee bomen.", "en": "There are two trees in the garden." },
+        { "type": "p", "text": "After an unstressed *-el, -em, -en, -er* or *-je* the plural is **-s**: *de tafel → de tafels*, *de bakker → de bakkers*, *het meisje → de meisjes*. Words ending in *a, i, o, u* or *y* take **'s**: *de auto → de auto's*, *de baby → de baby's*." },
+        { "type": "tip", "text": "A handful of common nouns are irregular, so learn them as pairs: *het kind → de kinderen*, *het ei → de eieren*, *de stad → de steden*, *het schip → de schepen*, *de dag → de dagen*, *het lid → de leden*." },
+        { "type": "ex", "nl": "Ik heb drie auto's.", "en": "I have three cars." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Plural of de stoel", "options": ["stoelen", "stoels", "stoelens"], "answer": 0 },
+        { "type": "choice", "q": "Plural of het huis", "options": ["huisen", "huizen", "huissen"], "answer": 1, "explain": "The s between two vowels becomes z." },
+        { "type": "choice", "q": "Plural of de man", "options": ["manen", "mannen", "mans"], "answer": 1, "explain": "A short vowel needs a double consonant before -en." },
+        { "type": "choice", "q": "Plural of de auto", "options": ["autos", "auto's", "autoën"], "answer": 1, "explain": "Words ending in -o take 's." },
+        { "type": "choice", "q": "Plural of het kind", "options": ["kinds", "kinden", "kinderen"], "answer": 2, "explain": "kind is irregular: de kinderen." },
+        { "type": "transform", "q": "de boom", "instruction": "Write the plural with its article", "answers": ["de bomen"], "explain": "The long oo is written o in an open syllable." },
+        { "type": "transform", "q": "het meisje", "instruction": "Write the plural with its article", "answers": ["de meisjes"], "explain": "Words ending in -je take -s." },
+        { "type": "transform", "q": "de brief", "instruction": "Write the plural with its article", "answers": ["de brieven"], "explain": "The f becomes v between vowels." },
+        { "type": "gap", "text": "Er staan twee ___ in de tuin.", "answers": ["bomen"], "hint": "boom", "en": "There are two trees in the garden." },
+        { "type": "gap", "text": "Ik heb drie ___.", "answers": ["auto's"], "hint": "auto", "en": "I have three cars." },
+        { "type": "gap", "text": "In mijn klas zitten veel ___.", "answers": ["kinderen"], "hint": "kind", "en": "There are many children in my class." },
+        { "type": "order", "answer": "De kinderen spelen in het park.", "en": "The children play in the park." },
+        { "type": "translate", "en": "The streets are long.", "answers": ["De straten zijn lang"], "explain": "straat → straten: the long aa loses a letter." },
+        { "type": "match", "pairs": [["de stad", "de steden"], ["het ei", "de eieren"], ["het schip", "de schepen"], ["het lid", "de leden"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: meervoud (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menumeervoud/" },
+        { "title": "NT2 TaalMenu: meervoud (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menumeervoud/" }
+      ]
+    },
+    {
+      "id": "a1.g04.l3", "title": "Small things: -je", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Add **-je** to make something small, cute or friendly: *het huis → het huisje*. The ending depends on the last sounds of the word." },
+        { "type": "table", "head": ["ending", "after", "example"], "rows": [["-je", "most consonants (b, d, f, g, k, p, s, t, z)", "huis → huisje, boek → boekje"], ["-tje", "long vowel or diphthong + l, n, r; unstressed -el, -en, -er", "stoel → stoeltje, tafel → tafeltje"], ["-pje", "-m after a long vowel", "boom → boompje, bloem → bloempje"], ["-etje", "short vowel + l, n, r, m, ng", "bal → balletje, man → mannetje, ring → ringetje"], ["-kje", "unstressed -ing", "koning → koninkje"]] },
+        { "type": "tip", "text": "A diminutive is always **het**, and its plural is **-s**: *het stoeltje → de stoeltjes*." },
+        { "type": "ex", "nl": "Wil je een kopje koffie?", "en": "Would you like a cup of coffee?" },
+        { "type": "p", "text": "Dutch uses diminutives all the time, also for amounts and politeness: *een kopje thee*, *een momentje*, *een tientje*. Don't worry about the rules at first. Read the examples out loud and your ear will learn them." },
+        { "type": "ex", "nl": "Het balletje rolt weg.", "en": "The little ball rolls away." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Diminutive of de stoel", "options": ["stoelje", "stoeltje", "stoeletje"], "answer": 1, "explain": "After -l comes -tje." },
+        { "type": "choice", "q": "Diminutive of de boom", "options": ["boomje", "boompje", "boometje"], "answer": 1, "explain": "After a long vowel + m comes -pje." },
+        { "type": "choice", "q": "Diminutive of de bal", "options": ["balje", "baltje", "balletje"], "answer": 2, "explain": "A short vowel + l takes -etje, with a double consonant." },
+        { "type": "choice", "q": "Diminutive of de koning", "options": ["koningje", "koninkje", "koningetje"], "answer": 1, "explain": "Unstressed -ing takes -kje." },
+        { "type": "choice", "q": "Diminutive of het huis", "options": ["huisje", "huistje", "huisetje"], "answer": 0 },
+        { "type": "choice", "q": "___ stoeltje", "options": ["de", "het"], "answer": 1, "explain": "Diminutives are always het-words." },
+        { "type": "transform", "q": "het boek", "instruction": "Make the diminutive", "answers": ["het boekje"] },
+        { "type": "transform", "q": "de man", "instruction": "Make the diminutive", "answers": ["het mannetje"], "explain": "Short vowel + n: -etje with a double consonant." },
+        { "type": "transform", "q": "de bloem", "instruction": "Make the diminutive", "answers": ["het bloempje"], "explain": "After a long vowel + m comes -pje." },
+        { "type": "gap", "text": "Wil je een ___ koffie?", "answers": ["kopje"], "hint": "kop", "en": "Would you like a cup of coffee?" },
+        { "type": "gap", "text": "Dat is een heel mooi ___.", "answers": ["tafeltje"], "hint": "tafel", "en": "That is a very pretty little table." },
+        { "type": "order", "answer": "Wil je een kopje koffie?", "en": "Would you like a cup of coffee?" },
+        { "type": "translate", "en": "I see a little dog.", "answers": ["Ik zie een hondje", "Ik zie een klein hondje"] },
+        { "type": "match", "pairs": [["de stoel", "het stoeltje"], ["de boom", "het boompje"], ["de bal", "het balletje"], ["de koning", "het koninkje"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: grammar overview (A1)", "url": "https://nt2taalmenu.nl/a1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "a1.g04.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "___ boek", "options": ["de", "het"], "answer": 1 },
+        { "type": "choice", "q": "___ tafels", "options": ["de", "het"], "answer": 0, "explain": "Every plural takes de." },
+        { "type": "choice", "q": "Plural of het meisje", "options": ["meisjes", "meisjen", "meisjesen"], "answer": 0, "explain": "Words ending in -je take -s." },
+        { "type": "choice", "q": "___ gezin", "options": ["de", "het"], "answer": 1, "explain": "Most nouns starting with ge- are het-words." },
+        { "type": "gap", "text": "Ik heb twee ___.", "answers": ["broers"], "hint": "broer", "en": "I have two brothers.", "explain": "Words ending in -er take -s." },
+        { "type": "gap", "text": "Mijn dochter heeft een nieuw ___.", "answers": ["fietsje"], "hint": "fiets", "en": "My daughter has a new little bike." },
+        { "type": "gap", "text": "___ museum is vandaag gesloten.", "answers": ["het"], "en": "The museum is closed today.", "explain": "Most nouns ending in -um are het-words." },
+        { "type": "gap", "text": "Op tafel staan drie ___.", "answers": ["glazen"], "hint": "glas", "en": "There are three glasses on the table.", "explain": "The s between vowels becomes z." },
+        { "type": "order", "answer": "Het meisje heeft een mooi boekje.", "en": "The girl has a pretty little book.", "extra": ["de"] },
+        { "type": "order", "answer": "Ik koop drie stoelen.", "en": "I am buying three chairs.", "extra": ["stoel"] },
+        { "type": "transform", "q": "het kind", "instruction": "Write the plural with its article", "answers": ["de kinderen"] },
+        { "type": "transform", "q": "de stad", "instruction": "Write the plural with its article", "answers": ["de steden"] },
+        { "type": "transform", "q": "de kat", "instruction": "Make the diminutive", "answers": ["het katje"] },
+        { "type": "translate", "en": "The children have two dogs.", "answers": ["De kinderen hebben twee honden"], "explain": "hond → honden" },
+        { "type": "translate", "en": "I see the little house.", "answers": ["Ik zie het huisje"], "explain": "A diminutive takes het." },
+        { "type": "match", "pairs": [["de dag", "de dagen"], ["de baby", "de baby's"], ["het huis", "de huizen"], ["de man", "de mannen"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: lidwoord (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menulidwoord/" }
+      ]
+    }
+  ]
+}

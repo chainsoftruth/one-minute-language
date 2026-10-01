@@ -1,0 +1,40 @@
+{
+  "id": "nl",
+  "topics": [
+    { "id": "basics", "title": "Basics" },
+    { "id": "people", "title": "People & family" },
+    { "id": "food_drink", "title": "Food & drink" },
+    { "id": "time_numbers", "title": "Time & numbers" },
+    { "id": "shopping_money", "title": "Shopping & money" },
+    { "id": "nature_weather", "title": "Nature & weather" },
+    { "id": "feelings", "title": "Feelings" },
+    { "id": "function_words", "title": "Function words" },
+    { "id": "home_housing", "title": "Home & housing" },
+    { "id": "daily_life", "title": "Daily life" },
+    { "id": "health_body", "title": "Health & body" },
+    { "id": "travel", "title": "Travel & directions" },
+    { "id": "leisure_media", "title": "Leisure & media" },
+    { "id": "social", "title": "Social interaction" },
+    { "id": "society", "title": "Society & civic life" },
+    { "id": "work", "title": "Work" },
+    { "id": "education", "title": "Education" }
+  ],
+  "levels": [
+    {
+      "level": "A1", "title": "Foundations",
+      "units": ["a1.g01", "a1.g02", "a1.t01", "a1.g03", "a1.g04", "a1.g05", "a1.t02", "a1.g06", "a1.g07", "a1.g08",
+                "a1.t03", "a1.g09", "a1.g10", "a1.g11", "a1.t04", "a1.cp"]
+    },
+    {
+      "level": "A2", "title": "Everyday life",
+      "units": ["a2.g01", "a2.g02", "a2.g03", "a2.g04", "a2.t01", "a2.g05", "a2.g06", "a2.g07", "a2.t02", "a2.g08",
+                "a2.g09", "a2.t03", "a2.g10", "a2.g11", "a2.g12", "a2.t04", "a2.t05", "a2.cp"]
+    },
+    {
+      "level": "B1", "title": "Independent user",
+      "units": ["b1.g01", "b1.g02", "b1.g03", "b1.g04", "b1.g05", "b1.g06", "b1.t01", "b1.g07", "b1.g08", "b1.g09",
+                "b1.g10", "b1.t02", "b1.t03", "b1.g11", "b1.g12", "b1.g13", "b1.g14", "b1.t04", "b1.t05", "b1.t06",
+                "b1.t07", "b1.exam"]
+    }
+  ]
+}

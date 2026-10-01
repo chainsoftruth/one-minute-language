@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.ksp)
 }
 
@@ -35,6 +36,8 @@ android {
     }
     // WordAssetsTest reads words.json from disk; without this a data-only change leaves the test UP-TO-DATE.
     testOptions.unitTests.all { it.inputs.dir("src/main/assets") }
+    // MigrationTestHelper reads the exported Room schemas as assets.
+    sourceSets.getByName("androidTest").assets.directories.add("$projectDir/schemas")
 }
 
 dependencies {
@@ -54,12 +57,14 @@ dependencies {
     implementation(libs.coroutines.play.services)
     implementation(libs.lifecycle.viewmodel.compose)
     implementation(libs.navigation.compose)
+    implementation(libs.kotlinx.serialization.json)
     ksp(libs.room.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.room.testing)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.2")
