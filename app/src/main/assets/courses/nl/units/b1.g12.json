@@ -1,0 +1,157 @@
+{
+  "id": "b1.g12", "level": "B1", "kind": "grammar",
+  "title": "Indirect speech and questions",
+  "subtitle": "Hij zegt dat…, Ze vraagt of…, Weet u waar…?",
+  "lessons": [
+    {
+      "id": "b1.g12.l1", "title": "Reporting statements with dat", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "To report what someone said, use **dat** + a subordinate clause (**verb at the end**): *Hij zegt: \"Ik ben moe.\" → Hij zegt **dat hij** moe **is**.* The **pronouns shift** to the person who is speaking now: *ik → hij / zij*, *jij → ik*, *wij → zij*, *mijn → zijn / haar*." },
+        { "type": "p", "text": "When the reporting verb is in the **past** (*zei, vroeg*), the **tense shifts back** too: present → **past** (*is → was*), perfect → **pluperfect** (*heeft gewerkt → had gewerkt*). Time words change when the moment is no longer the same: *morgen → de volgende dag*, *gisteren → de dag ervoor*, *nu → toen*." },
+        { "type": "table", "head": ["direct", "reported"], "rows": [["\"Ik ben moe.\"", "Hij zegt dat hij moe is. / Hij zei dat hij moe was."], ["\"Ik heb honger.\"", "Zij zei dat zij honger had."], ["\"Wij gaan verhuizen.\"", "Zij zeiden dat zij gingen verhuizen."], ["\"Ik heb gewerkt.\"", "Hij zei dat hij had gewerkt."]] },
+        { "type": "ex", "nl": "Zij zei dat haar broer ziek was.", "en": "She said that her brother was ill." },
+        { "type": "ex", "nl": "Hij zei dat hij de dag ervoor ziek was geweest.", "en": "He said that he had been ill the day before." },
+        { "type": "tip", "text": "In speech, people often keep the present tense when the news is still true: *Hij zei dat hij moe is.* Use the past tense in writing and exams." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Hij zegt: \"Ik ben moe.\" → Hij zegt dat hij moe ___.", "options": ["is", "ben", "bent"], "answer": 0 },
+        { "type": "choice", "q": "Zij zei: \"Ik heb honger.\" → Zij zei dat zij honger ___.", "options": ["had", "heeft", "heb"], "answer": 0 },
+        { "type": "choice", "q": "Hij zegt: \"Wij gaan verhuizen.\" → Hij zegt dat zij ___ verhuizen.", "options": ["gaan", "gaat", "ga"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Zij zei dat zij ziek was.", "Zij zei dat zij was ziek.", "Zij zei zij dat ziek was."], "answer": 0 },
+        { "type": "choice", "q": "Hij zei: \"Ik was gisteren ziek.\" → Hij zei dat hij ___ ziek was.", "options": ["de dag ervoor", "morgen", "nu"], "answer": 0 },
+        { "type": "gap", "text": "Hij zegt: \"Ik werk hier.\" → Hij zegt dat hij hier ___. (werken)", "answers": ["werkt"], "en": "He says that he works here." },
+        { "type": "gap", "text": "Zij zei: \"Ik ben ziek.\" → Zij zei dat zij ziek ___. (zijn, past)", "answers": ["was"], "en": "She said that she was ill." },
+        { "type": "gap", "text": "Hij zei: \"Ik heb gewerkt.\" → Hij zei dat hij had ___. (werken)", "answers": ["gewerkt"], "en": "He said that he had worked." },
+        { "type": "gap", "text": "Wij zeiden: \"Wij komen.\" → Wij zeiden dat wij ___. (komen, past)", "answers": ["kwamen"], "en": "We said that we were coming." },
+        { "type": "gap", "text": "Zij zegt: \"Mijn broer woont hier.\" → Zij zegt dat ___ broer hier woont.", "answers": ["haar"], "en": "She says that her brother lives here." },
+        { "type": "gap", "text": "Hij zei: \"Ik wil een koffie.\" → Hij zei dat hij een koffie ___. (willen, past)", "answers": ["wilde", "wou"], "en": "He said that he wanted a coffee." },
+        { "type": "transform", "q": "Hij zegt: \"Ik ben moe.\"", "instruction": "Report it: Hij zegt dat ...", "answers": ["Hij zegt dat hij moe is"] },
+        { "type": "transform", "q": "Zij zei: \"Ik heb honger.\"", "instruction": "Report it: Zij zei dat ...", "answers": ["Zij zei dat zij honger had", "Zij zei dat ze honger had"] },
+        { "type": "transform", "q": "Jan zei: \"Ik ga naar huis.\"", "instruction": "Report it: Jan zei dat ...", "answers": ["Jan zei dat hij naar huis ging"] },
+        { "type": "transform", "q": "Hij zei: \"Ik heb de brief gelezen.\"", "instruction": "Report it: Hij zei dat ...", "answers": ["Hij zei dat hij de brief had gelezen", "Hij zei dat hij de brief gelezen had"] },
+        { "type": "order", "answer": "Hij zegt dat hij moe is.", "en": "He says that he is tired." },
+        { "type": "order", "answer": "Zij zei dat zij honger had.", "en": "She said that she was hungry." },
+        { "type": "order", "answer": "Hij zei dat hij naar huis ging.", "en": "He said that he was going home." },
+        { "type": "order", "answer": "Ik zei dat ik de brief had gelezen.", "alt": ["Ik zei dat ik de brief gelezen had."], "en": "I said that I had read the letter." },
+        { "type": "translate", "en": "He says that he is tired.", "answers": ["Hij zegt dat hij moe is"] },
+        { "type": "translate", "en": "She said that she was ill.", "answers": ["Zij zei dat zij ziek was", "Ze zei dat ze ziek was", "Zij zei dat ze ziek was", "Ze zei dat zij ziek was"] },
+        { "type": "translate", "en": "They said that they were coming.", "answers": ["Zij zeiden dat zij kwamen", "Ze zeiden dat ze kwamen", "Zij zeiden dat ze kwamen", "Ze zeiden dat zij kwamen"] },
+        { "type": "match", "pairs": [["ik → hij / zij", "pronoun shift"], ["is → was", "tense shift after zei"], ["heb gewerkt → had gewerkt", "perfect → pluperfect"], ["morgen → de volgende dag", "time shift"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: bijzinnen (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-bijzin/" },
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "b1.g12.l2", "title": "Reporting questions: of and question words", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "A **yes/no question** becomes a clause with **of** (*whether, if*): *\"Komt u morgen?\" → Zij vraagt **of** ik morgen kom.* A **question with a question word** keeps the word and sends the verb to the end: *\"Waar woon je?\" → Hij vraagt **waar** ik woon.* There is **no inversion** and no question mark when the main clause is a statement." },
+        { "type": "p", "text": "Pronouns and tenses shift as in reported statements: *jij / u → ik*, *ik → hij / zij*. Reporting verbs are **vragen**, **willen weten** and **zich afvragen** (to wonder): *Ik vraag me af of hij komt.*" },
+        { "type": "table", "head": ["direct", "reported"], "rows": [["\"Komt u morgen?\"", "Zij vraagt of ik morgen kom."], ["\"Waar woon je?\"", "Hij vraagt waar ik woon."], ["\"Wat doe je?\"", "Zij wil weten wat ik doe."], ["\"Heb je tijd?\"", "Hij vroeg of ik tijd had."]] },
+        { "type": "ex", "nl": "Hij wilde weten waarom ik laat was.", "en": "He wanted to know why I was late." },
+        { "type": "ex", "nl": "Ik vraag me af of het morgen regent.", "en": "I wonder whether it will rain tomorrow." },
+        { "type": "tip", "text": "Never put *dat* before a question: *Hij vroeg dat ik tijd had* is wrong. Use **of** (yes/no) or the **question word**." }
+      ],
+      "items": [
+        { "type": "choice", "q": "\"Komt u morgen?\" → Zij vraagt ___ ik morgen kom.", "options": ["of", "dat", "wat"], "answer": 0 },
+        { "type": "choice", "q": "\"Waar woon je?\" → Hij vraagt ___ ik woon.", "options": ["waar", "dat", "wie"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Hij vroeg of ik tijd had.", "Hij vroeg of had ik tijd.", "Hij vroeg dat ik tijd had."], "answer": 0 },
+        { "type": "choice", "q": "Ik vraag me af ___ hij komt.", "options": ["of", "dat", "wie"], "answer": 0 },
+        { "type": "choice", "q": "In an indirect question, where is the finite verb?", "options": ["At the end.", "Second.", "First."], "answer": 0 },
+        { "type": "gap", "text": "\"Heb je tijd?\" → Hij vroeg ___ ik tijd had.", "answers": ["of"], "en": "He asked whether I had time." },
+        { "type": "gap", "text": "\"Wat doe je?\" → Zij wil weten ___ ik doe.", "answers": ["wat"], "en": "She wants to know what I do." },
+        { "type": "gap", "text": "\"Waarom ben je laat?\" → Hij vroeg ___ ik laat was.", "answers": ["waarom"], "en": "He asked why I was late." },
+        { "type": "gap", "text": "\"Wanneer komt de trein?\" → Ik vraag me af ___ de trein komt.", "answers": ["wanneer"], "en": "I wonder when the train is coming." },
+        { "type": "gap", "text": "\"Hoe laat is het?\" → Zij vraagt hoe laat het ___. (zijn)", "answers": ["is"], "en": "She asks what time it is." },
+        { "type": "gap", "text": "\"Woon je hier?\" → Hij vroeg of ik hier ___. (wonen, past)", "answers": ["woonde"], "en": "He asked whether I lived here." },
+        { "type": "transform", "q": "Zij vraagt: \"Komt u morgen?\"", "instruction": "Report it: Zij vraagt of ...", "answers": ["Zij vraagt of ik morgen kom", "Ze vraagt of ik morgen kom"] },
+        { "type": "transform", "q": "Hij vraagt: \"Waar woon je?\"", "instruction": "Report it: Hij vraagt waar ...", "answers": ["Hij vraagt waar ik woon"] },
+        { "type": "transform", "q": "Zij vroeg: \"Heb je tijd?\"", "instruction": "Report it: Zij vroeg of ...", "answers": ["Zij vroeg of ik tijd had", "Ze vroeg of ik tijd had"] },
+        { "type": "transform", "q": "Hij vroeg: \"Waarom ben je laat?\"", "instruction": "Report it: Hij vroeg waarom ...", "answers": ["Hij vroeg waarom ik laat was"] },
+        { "type": "order", "answer": "Zij vraagt of ik morgen kom.", "en": "She asks whether I am coming tomorrow." },
+        { "type": "order", "answer": "Hij vraagt waar ik woon.", "en": "He asks where I live." },
+        { "type": "order", "answer": "Ik vraag me af of hij komt.", "en": "I wonder whether he is coming." },
+        { "type": "order", "answer": "Hij wilde weten waarom ik laat was.", "en": "He wanted to know why I was late." },
+        { "type": "translate", "en": "She asks whether I am coming tomorrow.", "answers": ["Zij vraagt of ik morgen kom", "Ze vraagt of ik morgen kom"] },
+        { "type": "translate", "en": "He asked where I lived.", "answers": ["Hij vroeg waar ik woonde"] },
+        { "type": "translate", "en": "I wonder whether he is coming.", "answers": ["Ik vraag me af of hij komt", "Ik vraag mij af of hij komt"] },
+        { "type": "match", "pairs": [["of", "reports a yes/no question"], ["waar, wat, wanneer", "the question word stays"], ["verb at the end", "indirect question"], ["ik vraag me af", "I wonder"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: bijzinnen (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-bijzin/" },
+        { "title": "NT2 TaalMenu: reflexieve werkwoorden (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-reflexieve-werkwoorden/" }
+      ]
+    },
+    {
+      "id": "b1.g12.l3", "title": "Polite questions and reported requests", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "A **polite question** often puts a question inside a question: **Weet u waar het station is?** **Kunt u me vertellen hoe laat de trein vertrekt?** The first part is a real question (inversion, question mark). The second part is a **subordinate clause** with the **verb at the end**. Useful openings: *Weet u…? Kunt u me vertellen…? Kunt u me zeggen…? Mag ik vragen…?*" },
+        { "type": "p", "text": "A **command or request** is reported with **moeten** or with **om … te**: *\"Wacht hier!\" → Hij zei dat ik hier **moest wachten**.* *\"Sluit de deur.\" → Zij vroeg me **om de deur te sluiten**.* A prohibition uses **mogen**: *\"Je mag hier niet roken.\" → Hij zei dat ik hier niet **mocht** roken.*" },
+        { "type": "table", "head": ["direct", "reported or polite"], "rows": [["Waar is het station?", "Weet u waar het station is?"], ["\"Wacht hier!\"", "Hij zei dat ik hier moest wachten."], ["\"Sluit de deur, alsjeblieft.\"", "Zij vroeg me om de deur te sluiten."], ["\"Je mag hier niet roken.\"", "Hij zei dat ik hier niet mocht roken."]] },
+        { "type": "ex", "nl": "Kunt u me vertellen hoe laat het is?", "en": "Can you tell me what time it is?" },
+        { "type": "ex", "nl": "Zij vroeg me om de deur dicht te doen.", "en": "She asked me to close the door." },
+        { "type": "tip", "text": "Compare: *Waar is het station?* (inversion) and *Weet u waar het station **is**?* (verb at the end)." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Weet u waar het station ___?", "options": ["is", "het is", "is het"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Kunt u me vertellen hoe laat de trein vertrekt?", "Kunt u me vertellen hoe laat vertrekt de trein?", "Kunt u me vertellen de trein hoe laat vertrekt?"], "answer": 0 },
+        { "type": "choice", "q": "\"Wacht hier!\" → Hij zei dat ik hier ___.", "options": ["moest wachten", "wacht moest", "moet wacht"], "answer": 0 },
+        { "type": "choice", "q": "\"Sluit de deur!\" → Zij vroeg me ___ de deur te sluiten.", "options": ["om", "dat", "of"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Hij zei dat ik hier niet mocht roken.", "Hij zei dat ik mocht hier niet roken.", "Hij zei dat ik hier niet mag rook."], "answer": 0 },
+        { "type": "gap", "text": "Kunt u me vertellen ___ laat het is?", "answers": ["hoe"], "en": "Can you tell me what time it is?" },
+        { "type": "gap", "text": "Weet u ___ ik hier een kaartje kan kopen?", "answers": ["waar"], "en": "Do you know where I can buy a ticket here?" },
+        { "type": "gap", "text": "\"Wacht hier!\" → Hij zei dat ik hier ___ wachten. (moeten, past)", "answers": ["moest"], "en": "He said that I had to wait here." },
+        { "type": "gap", "text": "Hij zei dat ik hier niet ___ roken. (mogen, past)", "answers": ["mocht"], "en": "He said that I was not allowed to smoke here." },
+        { "type": "gap", "text": "Zij vroeg me om de deur dicht te ___. (doen)", "answers": ["doen"], "en": "She asked me to close the door." },
+        { "type": "gap", "text": "Mag ik ___ of u mij kunt helpen? (vragen)", "answers": ["vragen"], "en": "May I ask whether you can help me?" },
+        { "type": "transform", "q": "Waar is het station?", "instruction": "Make it a polite question: Weet u waar ...", "answers": ["Weet u waar het station is"] },
+        { "type": "transform", "q": "Hoe laat vertrekt de trein?", "instruction": "Make it polite: Kunt u me vertellen hoe ...", "answers": ["Kunt u me vertellen hoe laat de trein vertrekt", "Kunt u mij vertellen hoe laat de trein vertrekt"] },
+        { "type": "transform", "q": "Hij zei: \"Wacht hier!\"", "instruction": "Report it: Hij zei dat ik ...", "answers": ["Hij zei dat ik hier moest wachten"] },
+        { "type": "transform", "q": "Zij zei: \"Je mag hier niet roken.\"", "instruction": "Report it: Zij zei dat ik hier ...", "answers": ["Zij zei dat ik hier niet mocht roken", "Ze zei dat ik hier niet mocht roken"] },
+        { "type": "order", "answer": "Weet u waar het station is?", "en": "Do you know where the station is?" },
+        { "type": "order", "answer": "Kunt u me vertellen hoe laat het is?", "en": "Can you tell me what time it is?" },
+        { "type": "order", "answer": "Hij zei dat ik hier moest wachten.", "en": "He said that I had to wait here." },
+        { "type": "order", "answer": "Zij vroeg me om de deur te sluiten.", "en": "She asked me to close the door." },
+        { "type": "translate", "en": "Do you know where the station is?", "answers": ["Weet u waar het station is", "Weet je waar het station is"] },
+        { "type": "translate", "en": "Can you tell me what time the train leaves?", "answers": ["Kunt u mij vertellen hoe laat de trein vertrekt", "Kunt u me vertellen hoe laat de trein vertrekt", "Kun je me vertellen hoe laat de trein vertrekt", "Kun je mij vertellen hoe laat de trein vertrekt", "Kunt u me zeggen hoe laat de trein vertrekt", "Kunt u mij zeggen hoe laat de trein vertrekt"] },
+        { "type": "translate", "en": "He said that I had to wait.", "answers": ["Hij zei dat ik moest wachten"] },
+        { "type": "match", "pairs": [["Weet u waar …?", "polite question"], ["Hij zei dat ik moest wachten.", "reported command"], ["Hij zei dat ik niet mocht roken.", "reported prohibition"], ["Zij vroeg me om … te …", "reported request"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: bijzinnen (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-bijzin/" },
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "b1.g12.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Zij zegt: \"Ik ben ziek.\" → Zij zegt dat zij ziek ___.", "options": ["is", "ben", "bent"], "answer": 0 },
+        { "type": "choice", "q": "Hij vroeg: \"Heb je tijd?\" → Hij vroeg ___ ik tijd had.", "options": ["of", "dat", "wat"], "answer": 0 },
+        { "type": "choice", "q": "Hij zei: \"Ik heb gewerkt.\" → Hij zei dat hij ___ gewerkt.", "options": ["had", "heeft", "was"], "answer": 0 },
+        { "type": "choice", "q": "Weet u ___ de bushalte is?", "options": ["waar", "dat", "wie"], "answer": 0 },
+        { "type": "choice", "q": "Hij zei: \"Wacht hier!\" → Hij zei dat ik hier ___.", "options": ["moest wachten", "wacht moest", "moet wacht"], "answer": 0 },
+        { "type": "gap", "text": "Zij vraagt: \"Waar woon je?\" → Zij vraagt ___ ik woon.", "answers": ["waar"], "en": "She asks where I live." },
+        { "type": "gap", "text": "Hij zei: \"Ik kom morgen.\" → Hij zei dat hij de volgende dag ___. (komen, past)", "answers": ["kwam"], "en": "He said that he was coming the next day." },
+        { "type": "gap", "text": "\"Hoe heet u?\" → Hij vroeg hoe ik ___. (heten, past)", "answers": ["heette"], "en": "He asked what my name was." },
+        { "type": "gap", "text": "Ik vraag me ___ of het morgen regent.", "answers": ["af"], "en": "I wonder whether it will rain tomorrow." },
+        { "type": "gap", "text": "Zij zei: \"Mijn zus is ziek.\" → Zij zei dat ___ zus ziek was.", "answers": ["haar"], "en": "She said that her sister was ill." },
+        { "type": "gap", "text": "Kunt u me ___ waar het museum is? (vertellen)", "answers": ["vertellen", "zeggen"], "en": "Can you tell me where the museum is?" },
+        { "type": "transform", "q": "Hij zegt: \"Ik heb geen tijd.\"", "instruction": "Report it: Hij zegt dat ...", "answers": ["Hij zegt dat hij geen tijd heeft"] },
+        { "type": "transform", "q": "Zij vroeg: \"Wanneer komt u?\"", "instruction": "Report it: Zij vroeg wanneer ...", "answers": ["Zij vroeg wanneer ik kwam", "Ze vroeg wanneer ik kwam"] },
+        { "type": "transform", "q": "Waar is de bushalte?", "instruction": "Make it a polite question: Weet u waar ...", "answers": ["Weet u waar de bushalte is"] },
+        { "type": "transform", "q": "Hij zei: \"Doe de deur dicht!\"", "instruction": "Report it: Hij zei dat ik ...", "answers": ["Hij zei dat ik de deur dicht moest doen"] },
+        { "type": "order", "answer": "Hij zegt dat hij geen tijd heeft.", "en": "He says that he has no time." },
+        { "type": "order", "answer": "Zij vroeg wanneer ik kwam.", "en": "She asked when I was coming." },
+        { "type": "order", "answer": "Weet u waar de bushalte is?", "en": "Do you know where the bus stop is?" },
+        { "type": "order", "answer": "Hij zei dat ik de deur dicht moest doen.", "en": "He said that I had to close the door." },
+        { "type": "translate", "en": "She said that she had no time.", "answers": ["Zij zei dat zij geen tijd had", "Ze zei dat ze geen tijd had", "Zij zei dat ze geen tijd had", "Ze zei dat zij geen tijd had"] },
+        { "type": "translate", "en": "I asked whether he was coming.", "answers": ["Ik vroeg of hij kwam", "Ik vroeg of hij zou komen"] },
+        { "type": "translate", "en": "Can you tell me where the museum is?", "answers": ["Kunt u me vertellen waar het museum is", "Kunt u mij vertellen waar het museum is", "Kun je me vertellen waar het museum is", "Kun je mij vertellen waar het museum is", "Kunt u me zeggen waar het museum is", "Kunt u mij zeggen waar het museum is"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: bijzinnen (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-bijzin/" }
+      ]
+    }
+  ]
+}

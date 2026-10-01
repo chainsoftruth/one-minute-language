@@ -1,0 +1,157 @@
+{
+  "id": "b1.g09", "level": "B1", "kind": "grammar",
+  "title": "The passive",
+  "subtitle": "worden + participle, zijn + participle, Er wordt gewerkt",
+  "lessons": [
+    {
+      "id": "b1.g09.l1", "title": "worden + participle: the action", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "In an **active** sentence the doer is the subject: *De bakker bakt het brood.* In a **passive** sentence the thing that is done becomes the subject: *Het brood **wordt** gebakken.* The passive is built with **worden + past participle**, and the participle goes **to the end**. The doer is optional; if you name it, use **door**: *Het brood wordt **door de bakker** gebakken.*" },
+        { "type": "p", "text": "*Worden* changes with the subject: **ik word, jij wordt, hij/zij/het wordt, wij/jullie/zij worden**. After inversion the *t* of *jij wordt* disappears: *Word jij gebeld?* The past is **werd** (singular) and **werden** (plural). Use the passive when **what happens** matters more than **who does it**." },
+        { "type": "table", "head": ["active", "passive"], "rows": [["De bakker bakt het brood.", "Het brood wordt door de bakker gebakken."], ["De gemeente stuurt de brieven.", "De brieven worden door de gemeente gestuurd."], ["Iemand repareert de fiets.", "De fiets wordt gerepareerd."], ["De koerier bezorgde het pakket.", "Het pakket werd door de koerier bezorgd."]] },
+        { "type": "ex", "nl": "Het pakket wordt morgen bezorgd.", "en": "The parcel will be delivered tomorrow." },
+        { "type": "ex", "nl": "De klanten worden teruggebeld.", "en": "The customers are called back." },
+        { "type": "tip", "text": "Dutch often uses *wordt* where English says *is being* or *will be*: *Het wordt morgen gedaan* = *It will be done tomorrow*." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Het pakket ___ morgen bezorgd.", "options": ["wordt", "worden", "werd"], "answer": 0 },
+        { "type": "choice", "q": "De brieven ___ elke dag gesorteerd.", "options": ["worden", "wordt", "werd"], "answer": 0 },
+        { "type": "choice", "q": "Gisteren ___ de fiets gerepareerd.", "options": ["werd", "wordt", "werden"], "answer": 0 },
+        { "type": "choice", "q": "In *De bakker bakt het brood*, what becomes the subject of the passive sentence?", "options": ["Het brood", "De bakker", "Bakt"], "answer": 0 },
+        { "type": "choice", "q": "Ik ___ morgen opgehaald.", "options": ["word", "wordt", "worden"], "answer": 0 },
+        { "type": "gap", "text": "De brieven ___ elke dag door de gemeente verstuurd. (worden)", "answers": ["worden"], "en": "The letters are sent by the town hall every day." },
+        { "type": "gap", "text": "Het pakket ___ gisteren bezorgd. (past tense of worden)", "answers": ["werd"], "en": "The parcel was delivered yesterday." },
+        { "type": "gap", "text": "De kamer wordt elke dag ___. (schoonmaken)", "answers": ["schoongemaakt"], "en": "The room is cleaned every day." },
+        { "type": "gap", "text": "Het huis wordt volgend jaar ___. (verkopen)", "answers": ["verkocht"], "en": "The house will be sold next year." },
+        { "type": "gap", "text": "De klant ___ morgen teruggebeld. (worden)", "answers": ["wordt"], "en": "The customer will be called back tomorrow." },
+        { "type": "gap", "text": "Jij ___ vanavond gebeld. (worden)", "answers": ["wordt"], "en": "You will be called tonight." },
+        { "type": "transform", "q": "De bakker bakt het brood.", "instruction": "Make it passive: Het brood ...", "answers": ["Het brood wordt door de bakker gebakken", "Het brood wordt gebakken door de bakker"] },
+        { "type": "transform", "q": "De gemeente stuurt de brieven.", "instruction": "Make it passive: De brieven ...", "answers": ["De brieven worden door de gemeente gestuurd", "De brieven worden door de gemeente verstuurd", "De brieven worden gestuurd door de gemeente"] },
+        { "type": "transform", "q": "Iemand repareert de fiets.", "instruction": "Make it passive, without door: De fiets ...", "answers": ["De fiets wordt gerepareerd"] },
+        { "type": "transform", "q": "De koerier bezorgde het pakket.", "instruction": "Make it passive, past tense: Het pakket ...", "answers": ["Het pakket werd door de koerier bezorgd", "Het pakket werd bezorgd door de koerier"] },
+        { "type": "order", "answer": "Het pakket wordt morgen bezorgd.", "en": "The parcel will be delivered tomorrow." },
+        { "type": "order", "answer": "De kamer wordt elke dag schoongemaakt.", "en": "The room is cleaned every day." },
+        { "type": "order", "answer": "Het brood werd door de bakker gebakken.", "alt": ["Door de bakker werd het brood gebakken."], "en": "The bread was baked by the baker." },
+        { "type": "order", "answer": "De klanten worden morgen teruggebeld.", "alt": ["Morgen worden de klanten teruggebeld."], "en": "The customers will be called back tomorrow." },
+        { "type": "translate", "en": "The letters are sent by the town hall.", "answers": ["De brieven worden door de gemeente gestuurd", "De brieven worden door de gemeente verstuurd"] },
+        { "type": "translate", "en": "The house was sold last year.", "answers": ["Het huis werd vorig jaar verkocht"] },
+        { "type": "translate", "en": "I am picked up tomorrow.", "answers": ["Ik word morgen opgehaald"] },
+        { "type": "match", "pairs": [["ik word gebeld", "I am being called"], ["hij wordt gebeld", "he is being called"], ["wij worden gebeld", "we are being called"], ["zij werden gebeld", "they were being called"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" },
+        { "title": "NT2 TaalMenu: B1 menu", "url": "https://nt2taalmenu.nl/nt2-b1-menu/" }
+      ]
+    },
+    {
+      "id": "b1.g09.l2", "title": "zijn + participle: the result", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "**Zijn + participle** describes a **result or state**: *Het pakket **is** bezorgd* (it has been delivered, it is there now). *De winkel **is** gesloten* (the shop is closed). Compare **worden**, which describes the **process**: *Het pakket **wordt** bezorgd* (it is being delivered). So *is bezorgd* is also the **perfect passive**: *Het pakket is gisteren bezorgd.*" },
+        { "type": "p", "text": "Note that Dutch does not say *is bezorgd geworden* in everyday use: the perfect passive is simply **zijn + participle**. The past forms are **was / waren + participle**: *Toen ik aankwam, was de winkel al gesloten.* This also means: *The shop had been closed.* A doer is still possible: *De straat is door de gemeente afgesloten.*" },
+        { "type": "table", "head": ["", "worden (action)", "zijn (result)"], "rows": [["present", "Het pakket wordt bezorgd.", "Het pakket is bezorgd."], ["past", "Het pakket werd bezorgd.", "Het pakket was bezorgd."], ["meaning", "is being / will be delivered", "has been / is delivered (done)"]] },
+        { "type": "ex", "nl": "Het raam is gerepareerd.", "en": "The window has been repaired." },
+        { "type": "ex", "nl": "Toen wij aankwamen, was de winkel al gesloten.", "en": "When we arrived, the shop was already closed." },
+        { "type": "tip", "text": "Ask yourself: is it **happening** (worden) or **finished** (zijn)? *De deur wordt gesloten* = someone is closing it. *De deur is gesloten* = it is shut." }
+      ],
+      "items": [
+        { "type": "choice", "q": "The parcel has been delivered (it is there now): Het pakket ___ bezorgd.", "options": ["is", "wordt", "werd"], "answer": 0 },
+        { "type": "choice", "q": "The parcel is being delivered right now: Het pakket ___ bezorgd.", "options": ["wordt", "is", "was"], "answer": 0 },
+        { "type": "choice", "q": "The form is filled in (it is done): Het formulier ___ ingevuld.", "options": ["is", "wordt", "word"], "answer": 0 },
+        { "type": "choice", "q": "What does *De deur was gesloten* mean?", "options": ["The door was shut (a state).", "The door was being shut.", "The door will be shut."], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is the perfect passive of *De post wordt bezorgd*?", "options": ["De post is bezorgd.", "De post is geworden bezorgd.", "De post heeft bezorgd."], "answer": 0 },
+        { "type": "gap", "text": "Het raam ___ gesloten. (the window is shut)", "answers": ["is"], "en": "The window is closed." },
+        { "type": "gap", "text": "De brief ___ gisteren verstuurd. (perfect)", "answers": ["is", "werd"], "en": "The letter was sent yesterday." },
+        { "type": "gap", "text": "Het pakket ___ al bezorgd, kijk maar.", "answers": ["is"], "en": "The parcel has already been delivered, look." },
+        { "type": "gap", "text": "Toen ik aankwam, ___ de winkel al gesloten.", "answers": ["was"], "en": "When I arrived, the shop was already closed." },
+        { "type": "gap", "text": "Het rapport ___ nog niet geschreven.", "answers": ["is"], "en": "The report has not been written yet." },
+        { "type": "gap", "text": "De bus ___ gisteren door een ongeluk vertraagd.", "answers": ["werd", "is"], "en": "The bus was delayed by an accident yesterday." },
+        { "type": "transform", "q": "De gemeente heeft de straat afgesloten.", "instruction": "Make it passive: De straat ...", "answers": ["De straat is door de gemeente afgesloten", "De straat is afgesloten door de gemeente"] },
+        { "type": "transform", "q": "De post wordt bezorgd.", "instruction": "Perfect passive: De post ...", "answers": ["De post is bezorgd"] },
+        { "type": "transform", "q": "Het formulier werd ingevuld.", "instruction": "Result in the past: Het formulier ...", "answers": ["Het formulier was ingevuld"] },
+        { "type": "transform", "q": "Iemand heeft de deur gesloten.", "instruction": "Passive with zijn: De deur ...", "answers": ["De deur is gesloten"] },
+        { "type": "order", "answer": "Het pakket is gisteren bezorgd.", "alt": ["Gisteren is het pakket bezorgd."], "en": "The parcel was delivered yesterday." },
+        { "type": "order", "answer": "De winkel is op zondag gesloten.", "alt": ["Op zondag is de winkel gesloten."], "en": "The shop is closed on Sundays." },
+        { "type": "order", "answer": "Toen wij aankwamen, was de winkel al gesloten.", "en": "When we arrived, the shop was already closed." },
+        { "type": "order", "answer": "De straat is door de gemeente afgesloten.", "en": "The street has been closed off by the town hall." },
+        { "type": "translate", "en": "The window has been repaired.", "answers": ["Het raam is gerepareerd", "Het raam is gemaakt", "Het raam is hersteld"] },
+        { "type": "translate", "en": "The letters were sent yesterday.", "answers": ["De brieven zijn gisteren verstuurd", "De brieven zijn gisteren gestuurd", "De brieven werden gisteren verstuurd", "De brieven werden gisteren gestuurd"] },
+        { "type": "translate", "en": "The shop is closed on Sundays.", "answers": ["De winkel is op zondag gesloten", "De winkel is op zondagen gesloten", "De winkel is zondags gesloten"] },
+        { "type": "match", "pairs": [["wordt bezorgd", "action: it is being delivered"], ["is bezorgd", "result: it has been delivered"], ["werd bezorgd", "action in the past: it was delivered"], ["was bezorgd", "result in the past: it had been delivered"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" },
+        { "title": "NT2 TaalMenu: B1 menu", "url": "https://nt2taalmenu.nl/nt2-b1-menu/" }
+      ]
+    },
+    {
+      "id": "b1.g09.l3", "title": "Er wordt gewerkt: impersonal passive and modals", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Dutch can make a passive even from a verb **without an object**, when the doer is people in general or does not matter: *Er wordt hard gewerkt.* (people are working hard.) *Er wordt hier niet gerookt.* There is no real subject, so **er** takes the first position. If another element opens the sentence, you drop it: *Hier wordt niet gerookt.*" },
+        { "type": "p", "text": "With a **modal verb** the passive goes at the end: modal + participle + **worden**: *Het formulier moet ingevuld worden.* The order *moet worden ingevuld* is also correct. In a subordinate clause: *…dat het formulier ingevuld moet worden.* For the doer use **door**, for a tool use **met**: *Het brood wordt **met de hand** gebakken.*" },
+        { "type": "table", "head": ["pattern", "example"], "rows": [["impersonal", "Er wordt hard gewerkt."], ["another element first", "Hier wordt niet gerookt."], ["modal + passive", "Het formulier moet ingevuld worden."], ["prohibition", "Er mag niet gerookt worden."], ["subordinate clause", "Ik hoop dat er morgen niet gestaakt wordt."]] },
+        { "type": "ex", "nl": "In dat café wordt veel gelachen.", "en": "There is a lot of laughing in that café." },
+        { "type": "ex", "nl": "Het kantoor moet om negen uur geopend worden.", "en": "The office must be opened at nine o'clock." },
+        { "type": "tip", "text": "Some verbs have no passive: *hebben, krijgen, weten, kennen*. You cannot say *Een auto wordt gehad*." }
+      ],
+      "items": [
+        { "type": "choice", "q": "___ wordt hier niet gerookt.", "options": ["Er", "Het", "Ze"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Het formulier moet ingevuld worden.", "Het formulier moet ingevuld wordt.", "Het formulier moet worden ingevulde."], "answer": 0 },
+        { "type": "choice", "q": "Er ___ in Nederland veel gefietst. (a general fact, present)", "options": ["wordt", "werd", "is"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence has no *er*, because another element opens it?", "options": ["Hier wordt niet gerookt.", "Er wordt hier niet gerookt.", "Wordt er hier niet gerookt."], "answer": 0 },
+        { "type": "choice", "q": "Which verb has no passive?", "options": ["hebben", "bakken", "sturen"], "answer": 0 },
+        { "type": "gap", "text": "Er ___ in het weekend niet gewerkt. (worden)", "answers": ["wordt"], "en": "No work is done at the weekend." },
+        { "type": "gap", "text": "Het formulier moet ___ worden. (invullen)", "answers": ["ingevuld"], "en": "The form must be filled in." },
+        { "type": "gap", "text": "Er mag hier niet ___ worden. (roken)", "answers": ["gerookt"], "en": "Smoking is not allowed here." },
+        { "type": "gap", "text": "De post moet voor tien uur ___ worden. (bezorgen)", "answers": ["bezorgd"], "en": "The post must be delivered before ten." },
+        { "type": "gap", "text": "In dat café ___ veel gelachen.", "answers": ["wordt"], "en": "In that café there is a lot of laughing." },
+        { "type": "gap", "text": "___ wordt in de klas veel gepraat.", "answers": ["Er"], "en": "There is a lot of talking in the class." },
+        { "type": "transform", "q": "Men werkt hier hard.", "instruction": "Impersonal passive: Er ...", "answers": ["Er wordt hier hard gewerkt"] },
+        { "type": "transform", "q": "Je mag hier niet roken.", "instruction": "Passive: Er mag hier ...", "answers": ["Er mag hier niet gerookt worden"] },
+        { "type": "transform", "q": "Je moet het formulier invullen.", "instruction": "Passive: Het formulier moet ...", "answers": ["Het formulier moet ingevuld worden", "Het formulier moet worden ingevuld"] },
+        { "type": "transform", "q": "Men danst in de zaal.", "instruction": "Impersonal passive: In de zaal ...", "answers": ["In de zaal wordt gedanst"] },
+        { "type": "order", "answer": "Er wordt hier niet gerookt.", "en": "There is no smoking here." },
+        { "type": "order", "answer": "Het formulier moet ingevuld worden.", "alt": ["Het formulier moet worden ingevuld."], "en": "The form must be filled in." },
+        { "type": "order", "answer": "Hier wordt in het weekend niet gewerkt.", "en": "No work is done here at the weekend." },
+        { "type": "order", "answer": "Ik hoop dat er morgen niet gestaakt wordt.", "alt": ["Ik hoop dat er morgen niet wordt gestaakt."], "en": "I hope there will be no strike tomorrow." },
+        { "type": "translate", "en": "There is a lot of dancing in this club.", "answers": ["Er wordt veel gedanst in deze club", "In deze club wordt veel gedanst", "Er wordt in deze club veel gedanst"] },
+        { "type": "translate", "en": "The form must be filled in.", "answers": ["Het formulier moet ingevuld worden", "Het formulier moet worden ingevuld"] },
+        { "type": "translate", "en": "Smoking is not allowed here.", "answers": ["Hier mag niet gerookt worden", "Er mag hier niet gerookt worden", "Hier mag niet worden gerookt", "Er mag hier niet worden gerookt"] },
+        { "type": "match", "pairs": [["Er wordt gewerkt.", "impersonal passive"], ["Het formulier moet ingevuld worden.", "modal + passive"], ["Het huis is verkocht.", "result (zijn)"], ["Het brood wordt gebakken.", "action (worden)"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" },
+        { "title": "NT2 TaalMenu: er (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-er/" }
+      ]
+    },
+    {
+      "id": "b1.g09.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "De pizza ___ nu door de kok gemaakt. (it is being made)", "options": ["wordt", "is", "was"], "answer": 0 },
+        { "type": "choice", "q": "Het pakket is gisteren ___.", "options": ["bezorgd", "bezorgen", "gebezorgd"], "answer": 0 },
+        { "type": "choice", "q": "De brief ___ gisteren door de postbode gebracht. (past, with worden)", "options": ["werd", "wordt", "word"], "answer": 0 },
+        { "type": "choice", "q": "De les ___ elke dag opgenomen.", "options": ["wordt", "word", "worden"], "answer": 0 },
+        { "type": "choice", "q": "Er mag hier niet ___ worden.", "options": ["gerookt", "roken", "gerookte"], "answer": 0 },
+        { "type": "gap", "text": "De post ___ elke ochtend door de postbode bezorgd. (worden)", "answers": ["wordt"], "en": "The post is delivered by the postman every morning." },
+        { "type": "gap", "text": "Het boek is door een Nederlandse schrijver ___. (schrijven)", "answers": ["geschreven"], "en": "The book was written by a Dutch author." },
+        { "type": "gap", "text": "Gisteren ___ de nieuwe brug geopend.", "answers": ["werd", "is"], "en": "The new bridge was opened yesterday." },
+        { "type": "gap", "text": "De winkel was al ___ toen ik aankwam. (sluiten)", "answers": ["gesloten"], "en": "The shop was already closed when I arrived." },
+        { "type": "gap", "text": "Er ___ in de kantine veel gepraat. (worden)", "answers": ["wordt"], "en": "There is a lot of talking in the canteen." },
+        { "type": "gap", "text": "Het formulier moet vandaag nog ___ worden. (versturen)", "answers": ["verstuurd"], "en": "The form must still be sent today." },
+        { "type": "transform", "q": "De leraar legt de regel uit.", "instruction": "Make it passive: De regel ...", "answers": ["De regel wordt door de leraar uitgelegd", "De regel wordt uitgelegd door de leraar"] },
+        { "type": "transform", "q": "Iemand heeft mijn fiets gestolen.", "instruction": "Passive with zijn: Mijn fiets ...", "answers": ["Mijn fiets is gestolen"] },
+        { "type": "transform", "q": "Men spreekt hier Nederlands.", "instruction": "Passive: Hier ...", "answers": ["Hier wordt Nederlands gesproken"] },
+        { "type": "transform", "q": "De directeur opent het kantoor om negen uur.", "instruction": "Passive: Het kantoor ...", "answers": ["Het kantoor wordt om negen uur door de directeur geopend", "Het kantoor wordt door de directeur om negen uur geopend"] },
+        { "type": "order", "answer": "De brief wordt morgen door mijn collega verstuurd.", "en": "The letter will be sent by my colleague tomorrow." },
+        { "type": "order", "answer": "Het boek is door een Nederlandse schrijver geschreven.", "en": "The book was written by a Dutch author." },
+        { "type": "order", "answer": "Er wordt in de tuin gewerkt.", "alt": ["In de tuin wordt er gewerkt."], "en": "Work is going on in the garden." },
+        { "type": "order", "answer": "Het kantoor moet om negen uur geopend worden.", "alt": ["Het kantoor moet om negen uur worden geopend."], "en": "The office must be opened at nine o'clock." },
+        { "type": "translate", "en": "The report is being written.", "answers": ["Het rapport wordt geschreven"] },
+        { "type": "translate", "en": "The parcel was delivered by a neighbour.", "answers": ["Het pakket werd door een buurman bezorgd", "Het pakket is door een buurman bezorgd", "Het pakket werd bezorgd door een buurman", "Het pakket is bezorgd door een buurman", "Het pakket werd door de buurman bezorgd", "Het pakket is door de buurman bezorgd"] },
+        { "type": "translate", "en": "Work is going on in the street.", "answers": ["Er wordt in de straat gewerkt", "In de straat wordt gewerkt", "Er wordt op straat gewerkt"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    }
+  ]
+}

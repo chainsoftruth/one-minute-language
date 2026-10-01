@@ -1,0 +1,157 @@
+{
+  "id": "b1.g14", "level": "B1", "kind": "grammar",
+  "title": "Pronouns review",
+  "subtitle": "mij or me, hen or hun, zich, zelf, elkaar, men and je",
+  "lessons": [
+    {
+      "id": "b1.g14.l1", "title": "Personal pronouns: stressed or unstressed, hen or hun", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Most personal pronouns have a **stressed** and an **unstressed** form. Use the **stressed** form for **emphasis or contrast** and **after a preposition**: *Ik wacht op **jou**.* *Dit cadeau is voor **mij**.* *Hij belt **mij**, niet jou.* Use the **unstressed** form in ordinary sentences: *Ik bel **je** morgen.* *Hij ziet **me**.*" },
+        { "type": "table", "head": ["person", "subject", "object (stressed)", "object (unstressed)"], "rows": [["ik", "ik", "mij", "me"], ["jij", "jij / je", "jou", "je"], ["hij", "hij", "hem", "hem"], ["zij (she)", "zij / ze", "haar", "haar"], ["wij", "wij / we", "ons", "ons"], ["zij (they)", "zij / ze", "hen / hun", "ze"]] },
+        { "type": "p", "text": "For **they / them** the norm has two forms: **hen** for a direct object and after a preposition (*Ik ken hen. Ik praat met hen.*), and **hun** for an indirect object, *to them* (*Ik geef hun het boek.*). Many speakers mix them up. **Ze** is always safe: *Ik ken ze. Ik geef ze het boek.*" },
+        { "type": "ex", "nl": "Ik wacht op jou.", "en": "I am waiting for you." },
+        { "type": "ex", "nl": "Ik geef hun het boek.", "en": "I give them the book." },
+        { "type": "tip", "text": "*Hun* is also the possessive *their*: *hun huis*. As a personal pronoun it means *to them*." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Dit cadeau is voor ___. (me)", "options": ["mij", "ik", "mijn"], "answer": 0 },
+        { "type": "choice", "q": "Ik wacht op ___. (you, informal)", "options": ["jou", "jij", "jouw"], "answer": 0 },
+        { "type": "choice", "q": "Ik ken ___ goed. (the colleagues, direct object)", "options": ["hen", "hun", "zij"], "answer": 0 },
+        { "type": "choice", "q": "Ik geef ___ het boek. (to them, the norm)", "options": ["hun", "hen", "zij"], "answer": 0 },
+        { "type": "choice", "q": "Which is the unstressed form of the subject *jij*?", "options": ["je", "jou", "jouw"], "answer": 0 },
+        { "type": "gap", "text": "Hij belt ___, niet jou. (me, stressed)", "answers": ["mij"], "en": "He is calling me, not you." },
+        { "type": "gap", "text": "Ik praat met ___. (them)", "answers": ["hen", "ze"], "en": "I am talking with them." },
+        { "type": "gap", "text": "Ik geef ___ een cadeau. (to them)", "answers": ["hun", "ze"], "en": "I give them a present." },
+        { "type": "gap", "text": "Dit is voor ___. (you, informal)", "answers": ["jou", "je"], "en": "This is for you." },
+        { "type": "gap", "text": "Ik zie ___ niet. (him)", "answers": ["hem"], "en": "I don't see him." },
+        { "type": "gap", "text": "Zij geeft ___ een boek. (to him)", "answers": ["hem"], "en": "She gives him a book." },
+        { "type": "transform", "q": "Ik ken de collega's.", "instruction": "Replace *de collega's* with hen.", "answers": ["Ik ken hen"] },
+        { "type": "transform", "q": "Ik geef de kinderen een cadeau.", "instruction": "Replace *de kinderen* with hun.", "answers": ["Ik geef hun een cadeau", "Ik geef ze een cadeau"] },
+        { "type": "transform", "q": "Ik wacht op Anna.", "instruction": "Replace *Anna* with a pronoun.", "answers": ["Ik wacht op haar"] },
+        { "type": "transform", "q": "Ik bel de buurman.", "instruction": "Replace *de buurman* with a pronoun.", "answers": ["Ik bel hem"] },
+        { "type": "order", "answer": "Ik wacht op jou.", "en": "I am waiting for you." },
+        { "type": "order", "answer": "Dit cadeau is voor mij.", "en": "This present is for me." },
+        { "type": "order", "answer": "Ik geef hun het boek.", "en": "I give them the book." },
+        { "type": "order", "answer": "Ik praat vaak met hen.", "en": "I often talk with them." },
+        { "type": "translate", "en": "I am waiting for you.", "answers": ["Ik wacht op jou", "Ik wacht op je", "Ik wacht op u"] },
+        { "type": "translate", "en": "I know them.", "answers": ["Ik ken hen", "Ik ken ze"] },
+        { "type": "translate", "en": "I give them the book.", "answers": ["Ik geef hun het boek", "Ik geef ze het boek", "Ik geef het boek aan hen", "Ik geef het boek aan ze"] },
+        { "type": "match", "pairs": [["mij", "stressed: me"], ["me", "unstressed: me"], ["hen", "them (object / after a preposition)"], ["hun", "to them (indirect object)"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: verwijswoorden (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-verwijswoorden/" },
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "b1.g14.l2", "title": "zich, zelf and elkaar", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "A **reflexive pronoun** is used when the subject and the object are the **same person**: *Ik was **me**. Hij wast **zich**.* Compare *Hij wast **hem*** (he washes another person). The forms are **me, je, zich, ons, je, zich**. With **-zelf** the pronoun is emphasised: *mezelf, jezelf, zichzelf, onszelf*: *Ik help **mezelf**.* The separate word **zelf** means *by oneself*: *Ik doe het **zelf**.*" },
+        { "type": "p", "text": "**Elkaar** means *each other*: *Zij kennen **elkaar**. Wij zien **elkaar** morgen.* With a preposition: *Zij houden van **elkaar**.* Do not use *zich* for *each other*." },
+        { "type": "table", "head": ["person", "reflexive", "example"], "rows": [["ik", "me / mezelf", "Ik was me."], ["jij", "je / jezelf", "Jij wast je."], ["hij / zij", "zich / zichzelf", "Hij wast zich."], ["wij", "ons / onszelf", "Wij wassen ons."], ["zij (they)", "zich / zichzelf", "Zij wassen zich."], ["each other", "elkaar", "Zij kennen elkaar."]] },
+        { "type": "ex", "nl": "Zij voelt zich niet goed.", "en": "She does not feel well." },
+        { "type": "ex", "nl": "Wij zien elkaar morgen.", "en": "We will see each other tomorrow." },
+        { "type": "tip", "text": "*Zelf* does not change: *Ik doe het zelf. Hij doet het zelf. Zij doen het zelf.*" }
+      ],
+      "items": [
+        { "type": "choice", "q": "Hij wast ___. (himself)", "options": ["zich", "hem", "elkaar"], "answer": 0 },
+        { "type": "choice", "q": "Wij herinneren ___ de reis.", "options": ["ons", "zich", "elkaar"], "answer": 0 },
+        { "type": "choice", "q": "Zij kennen ___ al lang. (each other)", "options": ["elkaar", "zich", "zichzelf"], "answer": 0 },
+        { "type": "choice", "q": "Ik doe het ___. (by myself)", "options": ["zelf", "mezelf", "me"], "answer": 0 },
+        { "type": "choice", "q": "Zij houden veel van ___. (each other)", "options": ["elkaar", "zich", "hen"], "answer": 0 },
+        { "type": "gap", "text": "Ik was ___. (reflexive)", "answers": ["me", "mezelf"], "en": "I wash myself." },
+        { "type": "gap", "text": "Zij voelt ___ ziek.", "answers": ["zich"], "en": "She feels ill." },
+        { "type": "gap", "text": "Wij zien ___ morgen. (each other)", "answers": ["elkaar"], "en": "We will see each other tomorrow." },
+        { "type": "gap", "text": "Hij heeft het ___ gedaan. (by himself)", "answers": ["zelf"], "en": "He has done it himself." },
+        { "type": "gap", "text": "Jij moet ___ haasten.", "answers": ["je"], "en": "You must hurry." },
+        { "type": "gap", "text": "Ik vraag ___ af of hij komt.", "answers": ["me", "mij"], "en": "I wonder whether he is coming." },
+        { "type": "transform", "q": "Zij kent Jan. Jan kent haar.", "instruction": "Combine with elkaar: Zij kennen ...", "answers": ["Zij kennen elkaar"] },
+        { "type": "transform", "q": "Ik doe het.", "instruction": "Add zelf: Ik doe het ...", "answers": ["Ik doe het zelf"] },
+        { "type": "transform", "q": "Zij wast het kind.", "instruction": "Now she washes herself: Zij wast ...", "answers": ["Zij wast zich"] },
+        { "type": "transform", "q": "Jan ziet Els. Els ziet Jan.", "instruction": "Use elkaar: Jan en Els zien ...", "answers": ["Jan en Els zien elkaar"] },
+        { "type": "order", "answer": "Hij wast zich.", "en": "He washes himself." },
+        { "type": "order", "answer": "Wij zien elkaar morgen.", "alt": ["Morgen zien wij elkaar."], "en": "We will see each other tomorrow." },
+        { "type": "order", "answer": "Zij houden veel van elkaar.", "en": "They love each other very much." },
+        { "type": "order", "answer": "Ik doe het zelf.", "en": "I will do it myself." },
+        { "type": "translate", "en": "She feels ill.", "answers": ["Zij voelt zich ziek", "Ze voelt zich ziek"] },
+        { "type": "translate", "en": "We see each other tomorrow.", "answers": ["Wij zien elkaar morgen", "We zien elkaar morgen", "Morgen zien wij elkaar", "Morgen zien we elkaar"] },
+        { "type": "translate", "en": "I will do it myself.", "answers": ["Ik doe het zelf", "Ik zal het zelf doen", "Ik ga het zelf doen"] },
+        { "type": "match", "pairs": [["zich", "he / she / they (reflexive)"], ["ons", "we (reflexive)"], ["elkaar", "each other"], ["zelf", "emphasis: by oneself"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: reflexieve werkwoorden (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-reflexieve-werkwoorden/" },
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "b1.g14.l3", "title": "men, je, het, dit and dat", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "To talk about **people in general** Dutch has **men** (formal, mostly written: *Men mag hier niet roken.*) and **je** (spoken, *you* in general: *Je mag hier niet roken.*). **Men** is always a **singular subject** and has **zich** as its reflexive: *Men moet zich aanmelden.* *Ze* (*they*) is also common in speech: *Ze zeggen dat het koud wordt.*" },
+        { "type": "p", "text": "**Het** can be a **dummy subject** with no meaning: *Het regent. Het is koud. Het gaat goed.* To point at something use **dit / dat**, which stay the same before a plural verb: *Wat is dit? Dat zijn mijn schoenen.* Before a noun use **dit / dat** with het-words and **deze / die** with de-words and plurals." },
+        { "type": "table", "head": ["word", "use", "example"], "rows": [["men", "formal, general subject", "Men mag hier niet roken."], ["je", "spoken, general you", "Je mag hier niet roken."], ["het", "dummy subject", "Het regent."], ["dit / dat", "pointing at things", "Dat zijn mijn schoenen."]] },
+        { "type": "ex", "nl": "Men moet zich aanmelden bij de balie.", "en": "One must register at the desk." },
+        { "type": "ex", "nl": "Dit zijn mijn ouders.", "en": "These are my parents." },
+        { "type": "tip", "text": "*Men* needs a **singular verb**: *men mag*, not *men mogen*." }
+      ],
+      "items": [
+        { "type": "choice", "q": "___ mag hier niet roken. (formal sign)", "options": ["Men", "Hen", "Het"], "answer": 0 },
+        { "type": "choice", "q": "In Nederland moet ___ een fietslicht hebben. (spoken, general)", "options": ["je", "jou", "hun"], "answer": 0 },
+        { "type": "choice", "q": "___ regent vandaag.", "options": ["Het", "Hij", "Dat"], "answer": 0 },
+        { "type": "choice", "q": "Dat ___ mijn schoenen.", "options": ["zijn", "is", "heeft"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Men moet zich aanmelden.", "Men moeten zich aanmelden."], "answer": 0 },
+        { "type": "gap", "text": "___ zegt dat het morgen mooi weer wordt. (formal: one says)", "answers": ["Men"], "en": "They say that the weather will be nice tomorrow." },
+        { "type": "gap", "text": "Als ___ in Nederland woont, moet je een zorgverzekering hebben.", "answers": ["je"], "en": "If you live in the Netherlands, you must have health insurance." },
+        { "type": "gap", "text": "___ is koud buiten.", "answers": ["Het"], "en": "It is cold outside." },
+        { "type": "gap", "text": "___ zijn mijn ouders. (these)", "answers": ["Dit", "Dat"], "en": "These are my parents." },
+        { "type": "gap", "text": "Wat is ___? — Dat is een fiets. (this)", "answers": ["dit"], "en": "What is this? — That is a bike." },
+        { "type": "gap", "text": "Ik weet ___ niet. (it)", "answers": ["het"], "en": "I don't know." },
+        { "type": "transform", "q": "Je mag hier niet roken.", "instruction": "Make it formal with men: Men ...", "answers": ["Men mag hier niet roken"] },
+        { "type": "transform", "q": "Men zegt dat het koud wordt.", "instruction": "Say it with ze: Ze ...", "answers": ["Ze zeggen dat het koud wordt"] },
+        { "type": "transform", "q": "De regen valt.", "instruction": "Use the dummy subject: Het ...", "answers": ["Het regent"] },
+        { "type": "transform", "q": "Je moet je aanmelden.", "instruction": "Make it formal with men: Men ...", "answers": ["Men moet zich aanmelden"] },
+        { "type": "order", "answer": "Men mag hier niet roken.", "en": "One may not smoke here." },
+        { "type": "order", "answer": "Het regent al de hele dag.", "en": "It has been raining all day." },
+        { "type": "order", "answer": "Dat zijn mijn schoenen.", "en": "Those are my shoes." },
+        { "type": "order", "answer": "Je moet je paspoort laten zien.", "en": "You have to show your passport." },
+        { "type": "translate", "en": "One may not smoke here.", "answers": ["Men mag hier niet roken", "Je mag hier niet roken", "Hier mag niet gerookt worden"] },
+        { "type": "translate", "en": "It is raining.", "answers": ["Het regent"] },
+        { "type": "translate", "en": "Those are my shoes.", "answers": ["Dat zijn mijn schoenen"] },
+        { "type": "match", "pairs": [["men", "formal general subject"], ["je", "spoken general you"], ["Het regent.", "dummy subject het"], ["Dat zijn …", "pointing at several things"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: aanwijzende voornaamwoorden (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuaanwijzendvoornaamwoord/" },
+        { "title": "NT2 TaalMenu: verwijswoorden (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-verwijswoorden/" }
+      ]
+    },
+    {
+      "id": "b1.g14.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Ik wacht op ___. (them)", "options": ["hen", "hun", "zij"], "answer": 0 },
+        { "type": "choice", "q": "Zij wast ___. (herself)", "options": ["zich", "haar", "elkaar"], "answer": 0 },
+        { "type": "choice", "q": "Wij kennen ___ al jaren. (each other)", "options": ["elkaar", "onszelf", "zich"], "answer": 0 },
+        { "type": "choice", "q": "Ik doe het liever ___. (by myself)", "options": ["zelf", "mezelf", "me"], "answer": 0 },
+        { "type": "choice", "q": "___ mag hier niet parkeren. (formal sign)", "options": ["Men", "Hen", "Hun"], "answer": 0 },
+        { "type": "gap", "text": "Ik geef ___ een cadeau. (to him)", "answers": ["hem"], "en": "I give him a present." },
+        { "type": "gap", "text": "Hij belt ___, niet jou. (me, stressed)", "answers": ["mij"], "en": "He is calling me, not you." },
+        { "type": "gap", "text": "Wij gaan ___ aanmelden. (reflexive)", "answers": ["ons"], "en": "We are going to register." },
+        { "type": "gap", "text": "Zij houden niet van ___. (each other)", "answers": ["elkaar"], "en": "They do not like each other." },
+        { "type": "gap", "text": "___ regent al een week.", "answers": ["Het"], "en": "It has been raining for a week." },
+        { "type": "gap", "text": "Dit ___ mijn collega's. (zijn)", "answers": ["zijn"], "en": "These are my colleagues." },
+        { "type": "transform", "q": "Ik ken de buren.", "instruction": "Replace *de buren* with hen.", "answers": ["Ik ken hen"] },
+        { "type": "transform", "q": "Ik geef mijn ouders het boek.", "instruction": "Replace *mijn ouders* with hun.", "answers": ["Ik geef hun het boek", "Ik geef ze het boek"] },
+        { "type": "transform", "q": "Marie ziet Piet. Piet ziet Marie.", "instruction": "Use elkaar: Marie en Piet zien ...", "answers": ["Marie en Piet zien elkaar"] },
+        { "type": "transform", "q": "Je mag hier niet fietsen.", "instruction": "Make it formal with men: Men ...", "answers": ["Men mag hier niet fietsen"] },
+        { "type": "order", "answer": "Ik wacht op hen.", "en": "I am waiting for them." },
+        { "type": "order", "answer": "Zij voelt zich niet goed.", "en": "She does not feel well." },
+        { "type": "order", "answer": "Zij houden niet van elkaar.", "en": "They do not like each other." },
+        { "type": "order", "answer": "Men mag hier niet fietsen.", "en": "One may not cycle here." },
+        { "type": "translate", "en": "I am waiting for them.", "answers": ["Ik wacht op hen", "Ik wacht op ze"] },
+        { "type": "translate", "en": "She is washing herself.", "answers": ["Zij wast zich", "Ze wast zich"] },
+        { "type": "translate", "en": "We know each other.", "answers": ["Wij kennen elkaar", "We kennen elkaar"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: reflexieve werkwoorden (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-reflexieve-werkwoorden/" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "id": "b1.g10", "level": "B1", "kind": "grammar",
+  "title": "Separable and prefix verbs",
+  "subtitle": "One verb in every position, prefix families, and stress that changes the meaning",
+  "lessons": [
+    {
+      "id": "b1.g10.l1", "title": "One separable verb, every position", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "A **separable verb** has a stressed prefix (*op-, mee-, uit-, terug-, aan-, af-, in-*). Where the prefix stands depends on the sentence. In a **main clause** with a single verb the prefix goes to the **end**. In a **subordinate clause**, after a **modal**, or in the **infinitive** the verb stays in **one piece**. In the **perfect** the participle gets **ge-** between prefix and verb. With **te** the *te* goes in the middle." },
+        { "type": "table", "head": ["position", "opbellen", "meenemen"], "rows": [["present", "Ik bel je op.", "Zij neemt een paraplu mee."], ["past", "Ik belde je op.", "Zij nam een paraplu mee."], ["perfect", "Ik heb je opgebeld.", "Zij heeft een paraplu meegenomen."], ["after a modal", "Ik wil je opbellen.", "Zij moet een paraplu meenemen."], ["subordinate clause", "…dat ik je opbel.", "…dat zij een paraplu meeneemt."], ["with te", "…om je op te bellen.", "…een paraplu mee te nemen."]] },
+        { "type": "ex", "nl": "Ik bel je morgen op.", "en": "I will call you tomorrow." },
+        { "type": "ex", "nl": "Ik probeer haar vandaag op te bellen.", "en": "I am trying to call her today." },
+        { "type": "tip", "text": "More forms: *uitnodigen* – nodigt uit, nodigde uit, heeft **uitgenodigd**, **uit te nodigen**. *terugkomen* – komt terug, kwam terug, is **teruggekomen**, **terug te komen**." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik ___ je morgen op.", "options": ["bel", "bellen", "opbel"], "answer": 0 },
+        { "type": "choice", "q": "Gisteren ___ hij zijn vriend op. (past tense)", "options": ["belde", "opbelde", "belden"], "answer": 0 },
+        { "type": "choice", "q": "Hij heeft zijn vriend ___.", "options": ["opgebeld", "geopbeld", "gebeld op"], "answer": 0 },
+        { "type": "choice", "q": "Ik hoop dat hij me morgen ___.", "options": ["opbelt", "belt op", "op belt"], "answer": 0 },
+        { "type": "choice", "q": "Vergeet niet haar morgen ___!", "options": ["op te bellen", "te opbellen", "opte bellen"], "answer": 0 },
+        { "type": "gap", "text": "Zij ___ om tien uur aan. (aankomen)", "answers": ["komt"], "en": "She arrives at ten o'clock." },
+        { "type": "gap", "text": "Wij ___ onze vrienden gisteren uit. (uitnodigen, past)", "answers": ["nodigden"], "en": "We invited our friends yesterday." },
+        { "type": "gap", "text": "Hij is gisteren ___. (terugkomen)", "answers": ["teruggekomen"], "en": "He came back yesterday." },
+        { "type": "gap", "text": "Ik heb mijn paraplu ___. (meenemen)", "answers": ["meegenomen"], "en": "I have taken my umbrella with me." },
+        { "type": "gap", "text": "Ik heb het formulier ___. (invullen)", "answers": ["ingevuld"], "en": "I have filled in the form." },
+        { "type": "gap", "text": "Ik weet dat hij je morgen ___. (opbellen)", "answers": ["opbelt"], "en": "I know that he will call you tomorrow." },
+        { "type": "transform", "q": "Ik bel hem op.", "instruction": "Past tense: Ik ...", "answers": ["Ik belde hem op"] },
+        { "type": "transform", "q": "Zij nemen een paraplu mee.", "instruction": "Perfect: Zij ...", "answers": ["Zij hebben een paraplu meegenomen", "Ze hebben een paraplu meegenomen"] },
+        { "type": "transform", "q": "Hij nodigt ons uit.", "instruction": "Start with: Ik weet dat hij ons ...", "answers": ["Ik weet dat hij ons uitnodigt"] },
+        { "type": "transform", "q": "Ik moet haar opbellen.", "instruction": "Start with: Ik probeer haar ...", "answers": ["Ik probeer haar op te bellen"] },
+        { "type": "order", "answer": "Ik bel je morgen op.", "alt": ["Morgen bel ik je op."], "en": "I will call you tomorrow." },
+        { "type": "order", "answer": "Hij is gisteren teruggekomen.", "alt": ["Gisteren is hij teruggekomen."], "en": "He came back yesterday." },
+        { "type": "order", "answer": "Ik hoop dat hij me morgen opbelt.", "en": "I hope that he will call me tomorrow." },
+        { "type": "order", "answer": "Wij nodigden haar voor het feest uit.", "alt": ["Voor het feest nodigden wij haar uit."], "en": "We invited her to the party." },
+        { "type": "translate", "en": "I will call you back tomorrow.", "answers": ["Ik bel je morgen terug", "Morgen bel ik je terug", "Ik bel jou morgen terug"] },
+        { "type": "translate", "en": "He took an umbrella with him.", "answers": ["Hij nam een paraplu mee", "Hij heeft een paraplu meegenomen"] },
+        { "type": "translate", "en": "I forgot to call her.", "answers": ["Ik ben vergeten haar op te bellen", "Ik ben vergeten haar te bellen", "Ik vergat haar op te bellen", "Ik vergat haar te bellen"] },
+        { "type": "match", "pairs": [["Ik bel je op.", "present"], ["Ik belde je op.", "past"], ["Ik heb je opgebeld.", "perfect"], ["…dat ik je opbel.", "subordinate clause"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: scheidbare werkwoorden (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-scheidbare-werkwoorden/" },
+        { "title": "NT2 TaalMenu: werkwoorden met prefix (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-werkwoorden-met-prefix/" }
+      ]
+    },
+    {
+      "id": "b1.g10.l2", "title": "Separable or inseparable prefix?", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "**Separable prefixes** are usually small words with a meaning of their own (*aan, af, in, mee, op, terug, uit, weg*). They carry the **stress** (*ÚITnodigen*), they split in a main clause and they put **ge-** between prefix and verb: *uitgenodigd, meegenomen, opgestaan*." },
+        { "type": "p", "text": "**Inseparable prefixes** are **be-, ge-, her-, ont-, ver-, er-**. They are never stressed, never split, and the participle gets **no ge-**: *Ik bestel koffie. Ik heb koffie besteld.* *Zij vertelde een verhaal. Zij heeft het verteld.* *Wij ontmoetten hem. Wij hebben hem ontmoet.* *Hij herhaalt de vraag. Hij heeft de vraag herhaald.*" },
+        { "type": "table", "head": ["verb", "present", "past", "perfect"], "rows": [["uitnodigen (separable)", "nodigt uit", "nodigde uit", "heeft uitgenodigd"], ["meenemen (separable)", "neemt mee", "nam mee", "heeft meegenomen"], ["bestellen (inseparable)", "bestelt", "bestelde", "heeft besteld"], ["vertellen (inseparable)", "vertelt", "vertelde", "heeft verteld"]] },
+        { "type": "ex", "nl": "Ik heb een broodje besteld.", "en": "I have ordered a sandwich." },
+        { "type": "ex", "nl": "Zij heeft haar zus afgehaald.", "en": "She has picked up her sister." },
+        { "type": "tip", "text": "Quick test: if the participle has **ge-** inside (*uitgenodigd*), the verb is separable. If it starts with **be-, ver-, ont-, her-**, there is no extra *ge-*." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Which verb is inseparable?", "options": ["bestellen", "uitnodigen", "meenemen"], "answer": 0 },
+        { "type": "choice", "q": "Hij heeft koffie ___.", "options": ["besteld", "gebesteld", "bestelt"], "answer": 0 },
+        { "type": "choice", "q": "Zij ___ gisteren een mooi verhaal.", "options": ["vertelde", "gevertelde", "telde ver"], "answer": 0 },
+        { "type": "choice", "q": "Which participle is correct for *terugkomen*?", "options": ["teruggekomen", "geterugkomen", "terugkomen"], "answer": 0 },
+        { "type": "choice", "q": "Which participle is correct for *herhalen* (to repeat)?", "options": ["herhaald", "geherhaald", "hergehaald"], "answer": 0 },
+        { "type": "gap", "text": "Ik ___ een broodje. (bestellen, present)", "answers": ["bestel"], "en": "I order a sandwich." },
+        { "type": "gap", "text": "Wij hebben de rekening ___. (betalen)", "answers": ["betaald"], "en": "We have paid the bill." },
+        { "type": "gap", "text": "Zij is vroeg ___. (opstaan)", "answers": ["opgestaan"], "en": "She got up early." },
+        { "type": "gap", "text": "Hij ___ zijn oma vaak. (bezoeken, present)", "answers": ["bezoekt"], "en": "He often visits his grandmother." },
+        { "type": "gap", "text": "Ik heb zijn naam ___. (vergeten)", "answers": ["vergeten"], "en": "I have forgotten his name." },
+        { "type": "gap", "text": "Hij ___ mij om negen uur af. (afhalen, past)", "answers": ["haalde"], "en": "He picked me up at nine o'clock." },
+        { "type": "transform", "q": "Ik bestel koffie.", "instruction": "Perfect: Ik heb ...", "answers": ["Ik heb koffie besteld"] },
+        { "type": "transform", "q": "Zij haalt haar zus af.", "instruction": "Perfect: Zij heeft ...", "answers": ["Zij heeft haar zus afgehaald", "Ze heeft haar zus afgehaald"] },
+        { "type": "transform", "q": "Wij ontmoeten onze buren.", "instruction": "Past tense: Wij ...", "answers": ["Wij ontmoetten onze buren", "We ontmoetten onze buren"] },
+        { "type": "transform", "q": "Hij nodigt ons uit.", "instruction": "Perfect: Hij heeft ...", "answers": ["Hij heeft ons uitgenodigd"] },
+        { "type": "order", "answer": "Ik heb een broodje besteld.", "en": "I have ordered a sandwich." },
+        { "type": "order", "answer": "Zij heeft haar zus afgehaald.", "en": "She has picked up her sister." },
+        { "type": "order", "answer": "Hij vertelde een mooi verhaal.", "en": "He told a nice story." },
+        { "type": "order", "answer": "Wij zijn vroeg opgestaan.", "alt": ["Vroeg zijn wij opgestaan."], "en": "We got up early." },
+        { "type": "translate", "en": "I ordered a coffee.", "answers": ["Ik heb een koffie besteld", "Ik bestelde een koffie", "Ik heb koffie besteld", "Ik bestelde koffie"] },
+        { "type": "translate", "en": "She has repeated the question.", "answers": ["Zij heeft de vraag herhaald", "Ze heeft de vraag herhaald"] },
+        { "type": "translate", "en": "We got up early.", "answers": ["Wij zijn vroeg opgestaan", "We zijn vroeg opgestaan", "Wij stonden vroeg op", "We stonden vroeg op"] },
+        { "type": "match", "pairs": [["opbellen", "separable: opgebeld"], ["bestellen", "inseparable: besteld"], ["meenemen", "separable: meegenomen"], ["vertellen", "inseparable: verteld"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: werkwoorden met prefix (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-werkwoorden-met-prefix/" },
+        { "title": "NT2 TaalMenu: scheidbare werkwoorden (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-scheidbare-werkwoorden/" }
+      ]
+    },
+    {
+      "id": "b1.g10.l3", "title": "Stress decides the meaning", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "A few prefixes (**door-, over-, onder-, voor-**) can be separable **or** inseparable, and the **meaning changes** with it. If the stress is on the prefix, the verb is separable (*vóórkomen*). If the stress is on the verb, it is inseparable (*voorkómen*). On paper the infinitive looks the same, but the sentence tells you which one it is: a verb that **splits**, or a participle with **ge-**, is separable." },
+        { "type": "table", "head": ["verb", "meaning", "present", "perfect"], "rows": [["vóórkomen", "to occur", "Dat komt vaak voor.", "Dat is vaak voorgekomen."], ["voorkómen", "to prevent", "Ik voorkom een ongeluk.", "Wij hebben het ongeluk voorkomen."], ["óndergaan", "to set (sun)", "De zon gaat onder.", "De zon is ondergegaan."], ["ondergáan", "to undergo", "Hij ondergaat een operatie.", "Hij heeft een operatie ondergaan."], ["dóórlopen", "to keep walking", "Loop door!", "Hij is doorgelopen."], ["doorlópen", "to go through", "Ze doorloopt de opleiding.", "Ze heeft de opleiding doorlopen."]] },
+        { "type": "ex", "nl": "Dat komt vaak voor.", "en": "That happens often." },
+        { "type": "ex", "nl": "De politie wil ongelukken voorkomen.", "en": "The police want to prevent accidents." },
+        { "type": "tip", "text": "In speech you hear the stress. In writing, look at the participle: *voorgekomen* is separable, *voorkomen* is inseparable." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Dat ___ vaak voor. (it occurs)", "options": ["komt", "voorkomt", "kom"], "answer": 0 },
+        { "type": "choice", "q": "De politie wil ongelukken ___.", "options": ["voorkomen", "voor komen", "voorgekomen"], "answer": 0 },
+        { "type": "choice", "q": "De zon gaat om negen uur ___.", "options": ["onder", "ondergaat", "ondergegaan"], "answer": 0 },
+        { "type": "choice", "q": "Hij heeft een operatie ___.", "options": ["ondergaan", "ondergegaan", "geondergaan"], "answer": 0 },
+        { "type": "choice", "q": "Which participle belongs to separable *doorlopen* (keep walking)?", "options": ["doorgelopen", "doorlopen", "gedoorlopen"], "answer": 0 },
+        { "type": "gap", "text": "Dat komt vaak ___. (voorkomen, to occur)", "answers": ["voor"], "en": "That happens often." },
+        { "type": "gap", "text": "Dat is vaak ___. (voorkomen, to occur, perfect)", "answers": ["voorgekomen"], "en": "That has happened often." },
+        { "type": "gap", "text": "Ik wil een ongeluk ___. (voorkomen, to prevent)", "answers": ["voorkomen"], "en": "I want to prevent an accident." },
+        { "type": "gap", "text": "De zon gaat in juni laat ___. (ondergaan)", "answers": ["onder"], "en": "In June the sun sets late." },
+        { "type": "gap", "text": "Zij heeft de opleiding ___. (doorlopen, to go through)", "answers": ["doorlopen"], "en": "She has gone through the training." },
+        { "type": "gap", "text": "Loop ___! Niet stilstaan. (doorlopen)", "answers": ["door"], "en": "Keep walking! Don't stand still." },
+        { "type": "transform", "q": "Ongelukken komen vaak voor.", "instruction": "Perfect: Ongelukken zijn ...", "answers": ["Ongelukken zijn vaak voorgekomen"] },
+        { "type": "transform", "q": "Hij ondergaat een operatie.", "instruction": "Perfect: Hij heeft ...", "answers": ["Hij heeft een operatie ondergaan"] },
+        { "type": "transform", "q": "De zon gaat onder.", "instruction": "Perfect: De zon is ...", "answers": ["De zon is ondergegaan"] },
+        { "type": "transform", "q": "Zij doorloopt de opleiding.", "instruction": "Perfect: Zij heeft ...", "answers": ["Zij heeft de opleiding doorlopen", "Ze heeft de opleiding doorlopen"] },
+        { "type": "order", "answer": "Dat komt vaak voor.", "en": "That happens often." },
+        { "type": "order", "answer": "Wij willen ongelukken voorkomen.", "en": "We want to prevent accidents." },
+        { "type": "order", "answer": "De zon gaat om tien uur onder.", "en": "The sun sets at ten o'clock." },
+        { "type": "order", "answer": "Hij heeft een zware operatie ondergaan.", "en": "He has undergone a serious operation." },
+        { "type": "translate", "en": "That happens often.", "answers": ["Dat komt vaak voor", "Dat gebeurt vaak"] },
+        { "type": "translate", "en": "We want to prevent accidents.", "answers": ["Wij willen ongelukken voorkomen", "We willen ongelukken voorkomen", "Wij willen ongevallen voorkomen", "We willen ongevallen voorkomen"] },
+        { "type": "translate", "en": "The sun has set.", "answers": ["De zon is ondergegaan", "De zon is onder"] },
+        { "type": "match", "pairs": [["Dat komt vaak voor.", "occurs (separable)"], ["Ik voorkom een ongeluk.", "prevents (inseparable)"], ["De zon gaat onder.", "sets (separable)"], ["Hij ondergaat een operatie.", "undergoes (inseparable)"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: werkwoorden met prefix (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-werkwoorden-met-prefix/" },
+        { "title": "NT2 TaalMenu: scheidbare werkwoorden (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-scheidbare-werkwoorden/" }
+      ]
+    },
+    {
+      "id": "b1.g10.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Zij ___ haar vriend morgen op.", "options": ["belt", "opbelt", "bellen"], "answer": 0 },
+        { "type": "choice", "q": "Hij heeft zijn tas ___.", "options": ["meegenomen", "genomen mee", "gemeegenomen"], "answer": 0 },
+        { "type": "choice", "q": "Ik hoop dat zij me morgen ___.", "options": ["terugbelt", "belt terug", "terug belt"], "answer": 0 },
+        { "type": "choice", "q": "Ongelukken komen elke week ___.", "options": ["voor", "voorkomen", "voorkomt"], "answer": 0 },
+        { "type": "choice", "q": "Ik probeer mijn zus om vijf uur ___.", "options": ["af te halen", "te afhalen", "af halen te"], "answer": 0 },
+        { "type": "gap", "text": "Hij belde zijn moeder ___. (terugbellen)", "answers": ["terug"], "en": "He called his mother back." },
+        { "type": "gap", "text": "Zij heeft ons voor het feest ___. (uitnodigen)", "answers": ["uitgenodigd"], "en": "She has invited us to the party." },
+        { "type": "gap", "text": "Ik weet dat zij morgen ___. (terugkomen)", "answers": ["terugkomt"], "en": "I know that she will come back tomorrow." },
+        { "type": "gap", "text": "Hij heeft de vraag ___. (herhalen)", "answers": ["herhaald"], "en": "He has repeated the question." },
+        { "type": "gap", "text": "Ik ben gisteren om zeven uur ___. (opstaan)", "answers": ["opgestaan"], "en": "I got up at seven o'clock yesterday." },
+        { "type": "gap", "text": "Wij ___ ons gisteren in voor de cursus. (inschrijven, past)", "answers": ["schreven"], "en": "We signed up for the course yesterday." },
+        { "type": "transform", "q": "Ik bel mijn moeder terug.", "instruction": "Past tense: Ik ...", "answers": ["Ik belde mijn moeder terug"] },
+        { "type": "transform", "q": "Hij vertelt een verhaal.", "instruction": "Perfect: Hij heeft ...", "answers": ["Hij heeft een verhaal verteld"] },
+        { "type": "transform", "q": "Zij komt om vijf uur aan.", "instruction": "Start with: Ik denk dat zij ...", "answers": ["Ik denk dat zij om vijf uur aankomt"] },
+        { "type": "transform", "q": "Ik moet het formulier invullen.", "instruction": "Start with: Ik probeer het formulier ...", "answers": ["Ik probeer het formulier in te vullen"] },
+        { "type": "order", "answer": "Hij heeft zijn tas meegenomen.", "en": "He has taken his bag with him." },
+        { "type": "order", "answer": "Ik denk dat zij om vijf uur aankomt.", "en": "I think she arrives at five o'clock." },
+        { "type": "order", "answer": "Wij schreven ons gisteren in voor de cursus.", "alt": ["Gisteren schreven wij ons in voor de cursus."], "en": "We signed up for the course yesterday." },
+        { "type": "order", "answer": "Ik probeer mijn zus om vijf uur af te halen.", "en": "I am trying to pick up my sister at five o'clock." },
+        { "type": "translate", "en": "She invited us to the party.", "answers": ["Zij heeft ons uitgenodigd voor het feest", "Ze heeft ons uitgenodigd voor het feest", "Zij nodigde ons uit voor het feest", "Ze nodigde ons uit voor het feest", "Zij heeft ons voor het feest uitgenodigd", "Ze heeft ons voor het feest uitgenodigd", "Zij nodigde ons voor het feest uit", "Ze nodigde ons voor het feest uit"] },
+        { "type": "translate", "en": "I ordered a pizza.", "answers": ["Ik heb een pizza besteld", "Ik bestelde een pizza"] },
+        { "type": "translate", "en": "I hope that he comes back tomorrow.", "answers": ["Ik hoop dat hij morgen terugkomt"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: scheidbare werkwoorden (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-scheidbare-werkwoorden/" },
+        { "title": "NT2 TaalMenu: werkwoorden met prefix (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-werkwoorden-met-prefix/" }
+      ]
+    }
+  ]
+}

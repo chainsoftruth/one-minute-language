@@ -1,0 +1,157 @@
+{
+  "id": "b1.g13", "level": "B1", "kind": "grammar",
+  "title": "Adjectives and adverbs 2",
+  "subtitle": "All the -e cases, comparatives before a noun, iets leuks, hoe… hoe",
+  "lessons": [
+    {
+      "id": "b1.g13.l1", "title": "All the -e cases", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "An adjective **before a noun** takes **-e**. There is one exception: with a **het-word in the singular** that has **een**, **geen**, no article or *elk / welk*, there is **no -e**: *een groot huis*, *warm water*. A **de-word** always takes **-e** (*een grote auto*), and so does every **plural** (*grote huizen*)." },
+        { "type": "p", "text": "After **definite** words the **-e** is always there, even for het-words: **het** grote huis, **dit** grote huis, **mijn** grote huis, **jouw** nieuwe boek. Only *ons* follows the noun: *ons grote huis* (het-word with *ons*), *onze grote auto* (de-word). Spelling changes: **groot → grote, wit → witte, lief → lieve, vies → vieze, goed → goede, duur → dure**. Adjectives ending in *-en* usually stay as they are: *een open deur*." },
+        { "type": "table", "head": ["noun", "indefinite", "definite / possessive"], "rows": [["de auto", "een grote auto", "de grote auto, mijn grote auto"], ["het huis", "een groot huis", "het grote huis, mijn grote huis, dit grote huis"], ["plural", "grote huizen", "de grote huizen"], ["het water", "warm water", "het warme water"]] },
+        { "type": "ex", "nl": "Wij hebben ons grote huis verkocht.", "en": "We have sold our big house." },
+        { "type": "ex", "nl": "Dit is een goed idee.", "en": "This is a good idea." },
+        { "type": "tip", "text": "*Het* + adjective + het-word always has **-e**: *het grote huis*. Only **een + het-word** has none: *een groot huis*." }
+      ],
+      "items": [
+        { "type": "choice", "q": "een ___ huis", "options": ["groot", "grote", "groten"], "answer": 0 },
+        { "type": "choice", "q": "het ___ huis", "options": ["grote", "groot", "groten"], "answer": 0 },
+        { "type": "choice", "q": "mijn ___ auto", "options": ["nieuwe", "nieuw", "nieuwen"], "answer": 0 },
+        { "type": "choice", "q": "dit ___ boek", "options": ["interessante", "interessant", "interessanten"], "answer": 0 },
+        { "type": "choice", "q": "Which is correct?", "options": ["warm water", "warme water", "warmen water"], "answer": 0 },
+        { "type": "gap", "text": "Dat is een ___ kind. (klein)", "answers": ["klein"], "en": "That is a small child." },
+        { "type": "gap", "text": "De ___ man woont naast mij. (oud)", "answers": ["oude"], "en": "The old man lives next to me." },
+        { "type": "gap", "text": "Wij hebben een ___ auto. (wit)", "answers": ["witte"], "en": "We have a white car." },
+        { "type": "gap", "text": "Zij heeft ___ boeken. (leuk)", "answers": ["leuke"], "en": "She has nice books." },
+        { "type": "gap", "text": "Ik zie ons ___ huis. (groot)", "answers": ["grote"], "en": "I see our big house." },
+        { "type": "gap", "text": "Dat is een ___ idee. (goed)", "answers": ["goed"], "en": "That is a good idea." },
+        { "type": "transform", "q": "Het huis is groot.", "instruction": "Start with: Ik zie het ...", "answers": ["Ik zie het grote huis"] },
+        { "type": "transform", "q": "De auto is nieuw.", "instruction": "Start with: Ik koop een ...", "answers": ["Ik koop een nieuwe auto"] },
+        { "type": "transform", "q": "Het kind is klein.", "instruction": "Start with: Dat is een ...", "answers": ["Dat is een klein kind"] },
+        { "type": "transform", "q": "De tas is zwaar.", "instruction": "Start with: Ik draag mijn ...", "answers": ["Ik draag mijn zware tas"] },
+        { "type": "order", "answer": "Dit is een groot huis.", "en": "This is a big house." },
+        { "type": "order", "answer": "Ik zie het grote huis.", "en": "I see the big house." },
+        { "type": "order", "answer": "Zij koopt een nieuwe fiets.", "en": "She buys a new bike." },
+        { "type": "order", "answer": "Wij hebben ons grote huis verkocht.", "en": "We have sold our big house." },
+        { "type": "translate", "en": "I see a big house.", "answers": ["Ik zie een groot huis"] },
+        { "type": "translate", "en": "She has a new bike.", "answers": ["Zij heeft een nieuwe fiets", "Ze heeft een nieuwe fiets"] },
+        { "type": "translate", "en": "This is a good idea.", "answers": ["Dit is een goed idee", "Dat is een goed idee"] },
+        { "type": "match", "pairs": [["een groot huis", "het-word + een: no -e"], ["het grote huis", "definite article: -e"], ["mijn grote huis", "possessive: -e"], ["grote huizen", "plural: -e"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: het adjectief (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuadjectief/" },
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "b1.g13.l2", "title": "Comparatives and superlatives before a noun", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "A **comparative** before a noun follows the same **-e rule**: *een groter huis* (het-word with *een*: no -e), but *een grotere auto* (de-word), *het grotere huis*, *de grotere auto's*. Adjectives ending in **-r** insert **-d-**: *duur → duurder → een duurdere fiets*." },
+        { "type": "p", "text": "A **superlative** before a noun always ends in **-ste** after *de / het / mijn…*: *de mooiste foto*, *het mooiste huis*, *mijn beste vriend*. After *zijn* it is **het mooist(e)**: *Dit huis is het mooist.* For long adjectives and participles use **meest**: *de meest interessante man*. Irregular: **goed – beter – best**, **veel – meer – meest**, **graag – liever – liefst**." },
+        { "type": "table", "head": ["base", "comparative", "superlative"], "rows": [["groot", "groter", "grootst"], ["duur", "duurder", "duurst"], ["mooi", "mooier", "mooist"], ["goed", "beter", "best"]] },
+        { "type": "ex", "nl": "Dit is een grotere auto.", "en": "This is a bigger car." },
+        { "type": "ex", "nl": "Dat is de mooiste foto van de reis.", "en": "That is the most beautiful photo of the trip." },
+        { "type": "tip", "text": "Before a noun the superlative is **always -ste** (*het beste restaurant*). The short form **-st** is only for sentences like *Dit is het beste* / *het best*." }
+      ],
+      "items": [
+        { "type": "choice", "q": "een ___ huis (groot, comparative)", "options": ["groter", "grotere", "grootste"], "answer": 0 },
+        { "type": "choice", "q": "een ___ auto (groot, comparative)", "options": ["grotere", "groter", "groot"], "answer": 0 },
+        { "type": "choice", "q": "het ___ huis (mooi, superlative)", "options": ["mooiste", "mooist", "mooier"], "answer": 0 },
+        { "type": "choice", "q": "mijn ___ vriend (goed, superlative)", "options": ["beste", "best", "betere"], "answer": 0 },
+        { "type": "choice", "q": "Hij is de ___ interessante man.", "options": ["meest", "meeste", "meer"], "answer": 0 },
+        { "type": "gap", "text": "Dit is een ___ fiets. (duur, comparative)", "answers": ["duurdere"], "en": "This is a more expensive bike." },
+        { "type": "gap", "text": "Zij woont in een ___ huis. (klein, comparative)", "answers": ["kleiner"], "en": "She lives in a smaller house." },
+        { "type": "gap", "text": "Dat is de ___ foto. (mooi, superlative)", "answers": ["mooiste"], "en": "That is the most beautiful photo." },
+        { "type": "gap", "text": "Hij heeft een ___ baan gevonden. (goed, comparative)", "answers": ["betere"], "en": "He has found a better job." },
+        { "type": "gap", "text": "Dit is het ___ restaurant. (goed, superlative)", "answers": ["beste"], "en": "This is the best restaurant." },
+        { "type": "gap", "text": "Zij is de ___ studente van de klas. (slim, superlative)", "answers": ["slimste"], "en": "She is the smartest student in the class." },
+        { "type": "transform", "q": "De auto is groot.", "instruction": "Comparative: Dit is een ...", "answers": ["Dit is een grotere auto"] },
+        { "type": "transform", "q": "Het huis is oud.", "instruction": "Comparative: Dit is een ...", "answers": ["Dit is een ouder huis"] },
+        { "type": "transform", "q": "De foto is mooi.", "instruction": "Superlative: Dit is de ...", "answers": ["Dit is de mooiste foto"] },
+        { "type": "transform", "q": "Het restaurant is goed.", "instruction": "Superlative: Dit is het ...", "answers": ["Dit is het beste restaurant"] },
+        { "type": "order", "answer": "Dit is een grotere auto.", "en": "This is a bigger car." },
+        { "type": "order", "answer": "Zij woont in een ouder huis.", "en": "She lives in an older house." },
+        { "type": "order", "answer": "Dat is de mooiste foto van de reis.", "en": "That is the most beautiful photo of the trip." },
+        { "type": "order", "answer": "Hij is de meest interessante man.", "en": "He is the most interesting man." },
+        { "type": "translate", "en": "I am looking for a cheaper hotel.", "answers": ["Ik zoek een goedkoper hotel"] },
+        { "type": "translate", "en": "This is the best restaurant.", "answers": ["Dit is het beste restaurant"] },
+        { "type": "translate", "en": "She has a bigger car.", "answers": ["Zij heeft een grotere auto", "Ze heeft een grotere auto"] },
+        { "type": "match", "pairs": [["groter", "comparative"], ["het grootste", "superlative before a noun"], ["beter", "irregular comparative"], ["de meest interessante", "meest + long adjective"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: trappen van vergelijking (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menutrappenvanvergelijking/" },
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "b1.g13.l3", "title": "iets leuks, de rode, hoe… hoe, zo… mogelijk", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "After **iets, niets, wat, veel, weinig, meer, genoeg** an adjective takes **-s**: *iets lekkers, niets bijzonders, wat leuks, veel moois*. (*Iets anders* is fixed.) An adjective can also **stand for a noun**: **de / het + adjective + -e**. *Welke jas wil je? **De rode.*** *Het nieuwe is beter dan het oude.*" },
+        { "type": "p", "text": "**Hoe … hoe** pairs two comparatives and works like two subordinate clauses: *Hoe eerder, hoe beter.* *Hoe meer ik oefen, hoe beter ik word.* **Zo … mogelijk** means *as … as possible*: *zo snel mogelijk, zo veel mogelijk, zo vroeg mogelijk.*" },
+        { "type": "table", "head": ["pattern", "example"], "rows": [["iets / niets + adjective + -s", "Ik zoek iets leuks."], ["adjective as a noun", "De rode is mooier."], ["hoe … hoe", "Hoe eerder, hoe beter."], ["zo … mogelijk", "Kom zo snel mogelijk."]] },
+        { "type": "ex", "nl": "Wij hebben veel moois gezien.", "en": "We have seen many beautiful things." },
+        { "type": "ex", "nl": "Hoe meer je oefent, hoe beter je wordt.", "en": "The more you practise, the better you get." },
+        { "type": "tip", "text": "In *hoe meer ik oefen, hoe beter ik word* the verb is at the end of **both** parts, just like in a subordinate clause." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Heb je iets ___ te drinken? (lekker)", "options": ["lekkers", "lekker", "lekkere"], "answer": 0 },
+        { "type": "choice", "q": "Er is niets ___ aan de hand. (bijzonder)", "options": ["bijzonders", "bijzonder", "bijzondere"], "answer": 0 },
+        { "type": "choice", "q": "Welke jas wil je? — De ___. (rood)", "options": ["rode", "rood", "roden"], "answer": 0 },
+        { "type": "choice", "q": "Hoe eerder, ___ beter.", "options": ["hoe", "dat", "als"], "answer": 0 },
+        { "type": "choice", "q": "Kom zo snel ___ terug.", "options": ["mogelijk", "mogelijke", "mogelijks"], "answer": 0 },
+        { "type": "gap", "text": "Ik zoek iets ___. (leuk)", "answers": ["leuks"], "en": "I am looking for something nice." },
+        { "type": "gap", "text": "Wij hebben veel ___ gezien. (mooi)", "answers": ["moois"], "en": "We have seen many beautiful things." },
+        { "type": "gap", "text": "Het ___ is dat het gratis is. (leuk)", "answers": ["leuke"], "en": "The nice thing is that it is free." },
+        { "type": "gap", "text": "Hoe meer ik oefen, hoe ___ ik word. (goed, comparative)", "answers": ["beter"], "en": "The more I practise, the better I get." },
+        { "type": "gap", "text": "Bel mij zo ___ mogelijk terug. (snel)", "answers": ["snel"], "en": "Call me back as soon as possible." },
+        { "type": "gap", "text": "Ik heb twee fietsen. De ___ is nieuw. (blauw)", "answers": ["blauwe"], "en": "I have two bikes. The blue one is new." },
+        { "type": "transform", "q": "Ik wil iets drinken. (koud)", "instruction": "Add the adjective: Ik wil iets ... drinken", "answers": ["Ik wil iets kouds drinken"] },
+        { "type": "transform", "q": "Wij zagen veel mooie dingen.", "instruction": "Use veel + adjective: Wij zagen veel ...", "answers": ["Wij zagen veel moois", "We zagen veel moois"] },
+        { "type": "transform", "q": "Welke tas wil je? De groene tas.", "instruction": "Drop the noun: De ...", "answers": ["De groene"] },
+        { "type": "transform", "q": "Kom snel. Zo snel als je kunt.", "instruction": "Use zo ... mogelijk: Kom zo ...", "answers": ["Kom zo snel mogelijk"] },
+        { "type": "order", "answer": "Hoe eerder, hoe beter.", "en": "The sooner, the better." },
+        { "type": "order", "answer": "Ik zoek iets leuks voor mijn zus.", "en": "I am looking for something nice for my sister." },
+        { "type": "order", "answer": "Kom zo snel mogelijk terug.", "en": "Come back as soon as possible." },
+        { "type": "order", "answer": "Hoe meer ik oefen, hoe beter ik word.", "en": "The more I practise, the better I get." },
+        { "type": "translate", "en": "I want something nice.", "answers": ["Ik wil iets leuks"] },
+        { "type": "translate", "en": "The sooner the better.", "answers": ["Hoe eerder hoe beter"] },
+        { "type": "translate", "en": "Please call me as soon as possible.", "answers": ["Bel me zo snel mogelijk", "Bel mij zo snel mogelijk", "Bel me alsjeblieft zo snel mogelijk", "Bel mij alsjeblieft zo snel mogelijk", "Kunt u mij zo snel mogelijk bellen", "Kunt u me zo snel mogelijk bellen", "Kun je me zo snel mogelijk bellen", "Kun je mij zo snel mogelijk bellen"] },
+        { "type": "match", "pairs": [["iets leuks", "partitive -s"], ["de rode", "adjective as a noun"], ["hoe eerder, hoe beter", "the sooner, the better"], ["zo snel mogelijk", "as fast as possible"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: het adjectief (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuadjectief/" },
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "b1.g13.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "het ___ huis (oud)", "options": ["oude", "oud", "ouden"], "answer": 0 },
+        { "type": "choice", "q": "een ___ auto (snel, comparative)", "options": ["snellere", "sneller", "snelste"], "answer": 0 },
+        { "type": "choice", "q": "Heb je iets ___ voor mij? (leuk)", "options": ["leuks", "leuk", "leuke"], "answer": 0 },
+        { "type": "choice", "q": "Dit is de ___ film die ik ooit zag. (goed)", "options": ["beste", "best", "betere"], "answer": 0 },
+        { "type": "choice", "q": "Hoe ___ je oefent, hoe beter je wordt.", "options": ["meer", "meest", "veel"], "answer": 0 },
+        { "type": "gap", "text": "Wij wonen in een ___ huis. (groot)", "answers": ["groot"], "en": "We live in a big house." },
+        { "type": "gap", "text": "Dat is een ___ foto. (mooi)", "answers": ["mooie"], "en": "That is a beautiful photo." },
+        { "type": "gap", "text": "Ik zoek niets ___. (bijzonder)", "answers": ["bijzonders"], "en": "I am not looking for anything special." },
+        { "type": "gap", "text": "Dit is mijn ___ dag van het jaar. (leuk, superlative)", "answers": ["leukste"], "en": "This is the nicest day of my year." },
+        { "type": "gap", "text": "Welk boek wil je? Het ___. (dik)", "answers": ["dikke"], "en": "Which book do you want? The thick one." },
+        { "type": "gap", "text": "Probeer zo ___ mogelijk te oefenen. (veel)", "answers": ["veel"], "en": "Try to practise as much as possible." },
+        { "type": "transform", "q": "De fiets is duur.", "instruction": "Comparative: Dit is een ...", "answers": ["Dit is een duurdere fiets"] },
+        { "type": "transform", "q": "Het boek is nieuw.", "instruction": "Start with: Ik lees het ...", "answers": ["Ik lees het nieuwe boek"] },
+        { "type": "transform", "q": "Ik wil iets. Het is lekker.", "instruction": "Start with: Ik wil iets ...", "answers": ["Ik wil iets lekkers"] },
+        { "type": "transform", "q": "Het huis is mooi.", "instruction": "Superlative: Dit is het ...", "answers": ["Dit is het mooiste huis"] },
+        { "type": "order", "answer": "Dit is een duurdere fiets.", "en": "This is a more expensive bike." },
+        { "type": "order", "answer": "Ik lees het nieuwe boek.", "en": "I am reading the new book." },
+        { "type": "order", "answer": "Zij zoekt iets leuks voor haar zus.", "en": "She is looking for something nice for her sister." },
+        { "type": "order", "answer": "Hoe meer je oefent, hoe beter je wordt.", "en": "The more you practise, the better you get." },
+        { "type": "translate", "en": "She lives in a small house.", "answers": ["Zij woont in een klein huis", "Ze woont in een klein huis"] },
+        { "type": "translate", "en": "That is the nicest photo.", "answers": ["Dat is de leukste foto", "Dat is de mooiste foto"] },
+        { "type": "translate", "en": "I am looking for something interesting.", "answers": ["Ik zoek iets interessants"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: het adjectief (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuadjectief/" }
+      ]
+    }
+  ]
+}

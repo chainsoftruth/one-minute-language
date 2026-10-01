@@ -1,0 +1,157 @@
+{
+  "id": "b1.g11", "level": "B1", "kind": "grammar",
+  "title": "Word order mastery",
+  "subtitle": "The sentence pattern, where niet goes, and linking words that cause inversion",
+  "lessons": [
+    {
+      "id": "b1.g11.l1", "title": "The pattern of a Dutch sentence", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "A **main clause** has four slots. **Front**: exactly **one element** (subject, time, place, an object…). **Verb 2**: the **finite verb** is always second. **Middle**: the subject (if it is not in front), pronoun objects, then **time – manner – place**. **End**: all other verb parts (infinitive, participle, separable prefix)." },
+        { "type": "table", "head": ["front", "verb 2", "middle", "end"], "rows": [["Ik", "ga", "morgen met de fiets naar school.", ""], ["Morgen", "ga", "ik met de fiets naar school.", ""], ["Gisteren", "heb", "ik hem het boek", "gegeven."], ["Hij", "wil", "morgen met ons mee", "komen."]] },
+        { "type": "p", "text": "In a **subordinate clause** the pattern is different: **conjunction – subject – middle – all verbs at the end**: *…omdat ik morgen met de fiets naar school ga*, *…dat hij het hem gisteren heeft gegeven*. In the middle, the usual order is **pronouns → time → manner → place**." },
+        { "type": "ex", "nl": "Morgen ga ik met de fiets naar school.", "en": "Tomorrow I am going to school by bike." },
+        { "type": "ex", "nl": "Ik weet dat hij morgen met de trein komt.", "en": "I know he is coming by train tomorrow." },
+        { "type": "tip", "text": "Only **one** element may stand before the finite verb: *Morgen ik ga* is wrong, *Morgen ga ik* is right." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Morgen ga ik naar school.", "Morgen ik ga naar school.", "Morgen naar school ga ik."], "answer": 0 },
+        { "type": "choice", "q": "Which order is correct (time – manner – place)?", "options": ["Ik ga morgen met de fiets naar school.", "Ik ga naar school met de fiets morgen.", "Ik ga met de fiets morgen naar school."], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik denk dat hij morgen met de trein komt.", "Ik denk dat hij komt morgen met de trein.", "Ik denk dat komt hij morgen met de trein."], "answer": 0 },
+        { "type": "choice", "q": "Gisteren ___ ik hem het boek gegeven.", "options": ["heb", "gaf", "heeft"], "answer": 0 },
+        { "type": "choice", "q": "Where does the finite verb stand in a main clause?", "options": ["In second position.", "In last position.", "Always first."], "answer": 0 },
+        { "type": "gap", "text": "Morgen ___ ik naar de dokter. (gaan)", "answers": ["ga"], "en": "Tomorrow I am going to the doctor." },
+        { "type": "gap", "text": "Hij heeft het boek gisteren ___. (kopen)", "answers": ["gekocht"], "en": "He bought the book yesterday." },
+        { "type": "gap", "text": "Ik zeg dat hij morgen ___. (komen)", "answers": ["komt"], "en": "I say that he is coming tomorrow." },
+        { "type": "gap", "text": "Op zaterdag ___ wij vaak naar het strand. (gaan)", "answers": ["gaan"], "en": "On Saturdays we often go to the beach." },
+        { "type": "gap", "text": "Ik kan morgen niet ___. (komen)", "answers": ["komen"], "en": "I cannot come tomorrow." },
+        { "type": "gap", "text": "Weet je of hij vanavond ___? (komen)", "answers": ["komt"], "en": "Do you know whether he is coming tonight?" },
+        { "type": "transform", "q": "Ik ga morgen naar school.", "instruction": "Start with Morgen: Morgen ...", "answers": ["Morgen ga ik naar school"] },
+        { "type": "transform", "q": "Wij eten vandaag op het terras.", "instruction": "Start with: Op het terras ...", "answers": ["Op het terras eten wij vandaag", "Op het terras eten we vandaag"] },
+        { "type": "transform", "q": "Ik geef het hem gisteren.", "instruction": "Perfect: Ik heb ...", "answers": ["Ik heb het hem gisteren gegeven"] },
+        { "type": "transform", "q": "Hij komt morgen.", "instruction": "Start with: Ik weet dat hij ...", "answers": ["Ik weet dat hij morgen komt"] },
+        { "type": "order", "answer": "Morgen ga ik met de fiets naar school.", "alt": ["Ik ga morgen met de fiets naar school."], "en": "Tomorrow I am going to school by bike." },
+        { "type": "order", "answer": "Gisteren heb ik hem het boek gegeven.", "alt": ["Ik heb hem gisteren het boek gegeven."], "en": "Yesterday I gave him the book." },
+        { "type": "order", "answer": "Ik weet dat zij vandaag thuis blijft.", "en": "I know that she is staying at home today." },
+        { "type": "order", "answer": "Zij zegt dat hij morgen met de trein komt.", "en": "She says that he is coming by train tomorrow." },
+        { "type": "translate", "en": "Tomorrow I am going to school by bike.", "answers": ["Morgen ga ik met de fiets naar school", "Ik ga morgen met de fiets naar school", "Morgen fiets ik naar school", "Ik fiets morgen naar school"] },
+        { "type": "translate", "en": "I know that she is coming tomorrow.", "answers": ["Ik weet dat zij morgen komt", "Ik weet dat ze morgen komt"] },
+        { "type": "translate", "en": "Yesterday I gave him the book.", "answers": ["Gisteren heb ik hem het boek gegeven", "Ik heb hem gisteren het boek gegeven", "Gisteren gaf ik hem het boek", "Ik gaf hem gisteren het boek"] },
+        { "type": "match", "pairs": [["front", "one element before the verb"], ["verb 2", "the finite verb in a main clause"], ["middle", "pronouns, time, manner, place"], ["end", "participle, infinitive, prefix"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: signaalwoorden (B1)", "url": "https://nt2taalmenu.nl/b1-verzamel-signaal-woorden/" },
+        { "title": "NT2 TaalMenu: bijzinnen (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-bijzin/" }
+      ]
+    },
+    {
+      "id": "b1.g11.l2", "title": "Where does niet go?", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "The neutral place of **niet** is **at the end of the middle**, **before the verb parts at the end**: *Ik werk **niet**.* *Ik kan **niet** komen.* *Ik heb het boek **niet** gelezen.* *Ik bel je **niet** op.* So *niet* stands **after** the subject, **pronoun objects** (*Ik zie hem niet*), **definite objects** (*Ik ken de man niet*) and **specific time words** (*Ik kom morgen niet*)." },
+        { "type": "p", "text": "*Niet* stands **before** an **adjective** (*Het is niet groot*), a **prepositional phrase** (*Ik woon niet in Utrecht*), the **final verb** and the **separable prefix**. With an **indefinite** noun (*een …*, or no article) you use **geen** instead: *Ik heb geen tijd.* If you contrast one word, *niet* goes right before it: *Ik woon niet in Utrecht, maar in Leiden.*" },
+        { "type": "table", "head": ["niet goes…", "example"], "rows": [["after a pronoun object", "Ik zie hem niet."], ["after a definite object", "Ik ken de man niet."], ["after a specific time word", "Ik kom morgen niet."], ["before an adjective", "Het is niet groot."], ["before a place phrase", "Ik woon niet in Utrecht."], ["before the final verb", "Ik heb het boek niet gelezen."], ["before the prefix", "Ik bel je niet op."], ["indefinite noun: geen", "Ik heb geen tijd."]] },
+        { "type": "ex", "nl": "Ik heb de film niet gezien.", "en": "I have not seen the film." },
+        { "type": "ex", "nl": "Zij woont niet in Amsterdam, maar in Haarlem.", "en": "She does not live in Amsterdam but in Haarlem." },
+        { "type": "tip", "text": "Short rule: **niet** as far to the end as possible, but **before** the verb parts at the end, adjectives and place phrases." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik zie hem niet.", "Ik zie niet hem.", "Niet ik zie hem."], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik heb het boek niet gelezen.", "Ik heb niet het boek gelezen.", "Ik heb het boek gelezen niet."], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik kan morgen niet komen.", "Ik kan morgen komen niet.", "Ik niet kan morgen komen."], "answer": 0 },
+        { "type": "choice", "q": "Ik heb ___ tijd.", "options": ["geen", "niet", "niets"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik bel je niet op.", "Ik bel je op niet.", "Ik niet bel je op."], "answer": 0 },
+        { "type": "gap", "text": "Ik ken de man ___.", "answers": ["niet"], "en": "I don't know the man." },
+        { "type": "gap", "text": "Het huis is ___ groot.", "answers": ["niet"], "en": "The house is not big." },
+        { "type": "gap", "text": "Ik woon ___ in Utrecht.", "answers": ["niet"], "en": "I don't live in Utrecht." },
+        { "type": "gap", "text": "Hij heeft ___ auto.", "answers": ["geen"], "en": "He has no car." },
+        { "type": "gap", "text": "Wij hebben het ___ gedaan.", "answers": ["niet"], "en": "We have not done it." },
+        { "type": "gap", "text": "Zij komt morgen ___.", "answers": ["niet"], "en": "She is not coming tomorrow." },
+        { "type": "transform", "q": "Ik zie hem.", "instruction": "Make it negative.", "answers": ["Ik zie hem niet"] },
+        { "type": "transform", "q": "Ik heb de film gezien.", "instruction": "Make it negative.", "answers": ["Ik heb de film niet gezien"] },
+        { "type": "transform", "q": "Ik bel je op.", "instruction": "Make it negative.", "answers": ["Ik bel je niet op"] },
+        { "type": "transform", "q": "Ik heb een auto.", "instruction": "Make it negative.", "answers": ["Ik heb geen auto"] },
+        { "type": "order", "answer": "Ik zie hem niet.", "en": "I don't see him." },
+        { "type": "order", "answer": "Ik heb het boek niet gelezen.", "en": "I have not read the book." },
+        { "type": "order", "answer": "Zij woont niet in Amsterdam.", "en": "She does not live in Amsterdam." },
+        { "type": "order", "answer": "Ik kan morgen niet komen.", "alt": ["Morgen kan ik niet komen."], "en": "I cannot come tomorrow." },
+        { "type": "translate", "en": "I don't know the man.", "answers": ["Ik ken de man niet"] },
+        { "type": "translate", "en": "She has not seen the film.", "answers": ["Zij heeft de film niet gezien", "Ze heeft de film niet gezien"] },
+        { "type": "translate", "en": "We are not coming tomorrow.", "answers": ["Wij komen morgen niet", "We komen morgen niet", "Morgen komen wij niet", "Morgen komen we niet"] },
+        { "type": "match", "pairs": [["Ik zie hem niet.", "after a pronoun object"], ["Ik ken de man niet.", "after a definite object"], ["Het is niet groot.", "before an adjective"], ["Ik heb geen tijd.", "indefinite noun: geen"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: ontkennen (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuontkennen/" },
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "b1.g11.l3", "title": "Linking words: inversion or not?", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Linking words fall into three groups. **Coordinating conjunctions** (*en, maar, want, of*) do **not** change the order: *Ik bleef thuis, **want** ik was ziek.* **Subordinating conjunctions** (*omdat, dat, als, hoewel, terwijl*) send the verb **to the end**: *Ik bleef thuis, **omdat** ik ziek was.* **Linking adverbs** (*daarom, daardoor, toch, daarna, bovendien, vervolgens, eerst*) take the **front slot**, so the verb is **second** and the subject comes **after** it: *Ik was ziek. **Daarom bleef ik** thuis.*" },
+        { "type": "p", "text": "**Dus** can go either way: *…dus ik bleef thuis* or *…dus bleef ik thuis*. **Toen** has two meanings: **then** (adverb, inversion: *Toen ging ik naar huis*) and **when** (conjunction, verb at the end: *Toen ik thuiskwam, was het eten klaar*)." },
+        { "type": "table", "head": ["type", "words", "order", "example"], "rows": [["coordinating", "en, maar, want, of", "unchanged", "Ik bleef thuis, want ik was ziek."], ["subordinating", "omdat, dat, als, hoewel", "verb at the end", "Ik bleef thuis, omdat ik ziek was."], ["linking adverb", "daarom, toch, daarna, bovendien", "inversion", "Ik was ziek. Daarom bleef ik thuis."]] },
+        { "type": "ex", "nl": "Het regende. Toch ging ik fietsen.", "en": "It was raining. Still, I went cycling." },
+        { "type": "ex", "nl": "Eerst koken wij en daarna eten wij.", "en": "First we cook and then we eat." },
+        { "type": "tip", "text": "A sub-clause in front also causes inversion: *Toen ik thuiskwam, **was** het eten klaar.* The whole clause counts as the one element in the front slot." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik was ziek. Daarom bleef ik thuis.", "Ik was ziek. Daarom ik bleef thuis.", "Ik was ziek. Daarom ik thuis bleef."], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik bleef thuis, want ik was ziek.", "Ik bleef thuis, want was ik ziek.", "Ik bleef thuis, want ik ziek was."], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik bleef thuis, omdat ik ziek was.", "Ik bleef thuis, omdat ik was ziek.", "Ik bleef thuis, omdat was ik ziek."], "answer": 0 },
+        { "type": "choice", "q": "Toen ik thuiskwam, ___ het eten al klaar.", "options": ["was", "het was", "wel"], "answer": 0 },
+        { "type": "choice", "q": "Daarna ___ wij naar huis.", "options": ["gingen", "wij gingen", "gegaan"], "answer": 0 },
+        { "type": "gap", "text": "Ik had honger. Daarom ___ ik een broodje. (eten)", "answers": ["at"], "en": "I was hungry. That is why I ate a sandwich." },
+        { "type": "gap", "text": "Het regende. ___ ging ik fietsen.", "answers": ["Toch"], "en": "It was raining. Still, I went cycling." },
+        { "type": "gap", "text": "Ik bleef thuis, ___ ik ziek was. (because; verb at the end)", "answers": ["omdat"], "en": "I stayed at home because I was ill." },
+        { "type": "gap", "text": "Ik bleef thuis, ___ ik was ziek. (because; no change of order)", "answers": ["want"], "en": "I stayed at home, because I was ill." },
+        { "type": "gap", "text": "Eerst koken wij en ___ eten wij.", "answers": ["daarna", "dan"], "en": "First we cook and then we eat." },
+        { "type": "gap", "text": "Zij werkt hard. Bovendien ___ zij ook nog les. (geven)", "answers": ["geeft"], "en": "She works hard. In addition she also teaches." },
+        { "type": "transform", "q": "Ik was ziek. Ik bleef thuis.", "instruction": "Start the second sentence with Daarom: Daarom ...", "answers": ["Daarom bleef ik thuis"] },
+        { "type": "transform", "q": "Ik bleef thuis. Ik was ziek.", "instruction": "Join with omdat: Ik bleef thuis, omdat ...", "answers": ["Ik bleef thuis omdat ik ziek was"] },
+        { "type": "transform", "q": "Ik werk hard. Ik ben nog steeds arm.", "instruction": "Start the second sentence with Toch: Toch ...", "answers": ["Toch ben ik nog steeds arm", "Toch ben ik nog arm"] },
+        { "type": "transform", "q": "Ik leerde Nederlands. Ik kreeg een baan.", "instruction": "Start the second sentence with Daardoor: Daardoor ...", "answers": ["Daardoor kreeg ik een baan"] },
+        { "type": "order", "answer": "Daarom bleef ik thuis.", "en": "That is why I stayed at home." },
+        { "type": "order", "answer": "Ik bleef thuis, omdat ik ziek was.", "en": "I stayed at home because I was ill." },
+        { "type": "order", "answer": "Ik bleef thuis, want ik was ziek.", "en": "I stayed at home, because I was ill." },
+        { "type": "order", "answer": "Bovendien werkt zij als vrijwilliger.", "en": "In addition she works as a volunteer." },
+        { "type": "translate", "en": "I was hungry, so I ate a sandwich.", "answers": ["Ik had honger, dus ik at een broodje", "Ik had honger, dus at ik een broodje"] },
+        { "type": "translate", "en": "It was raining, but I still went cycling.", "answers": ["Het regende, maar ik ging toch fietsen", "Het regende, maar toch ging ik fietsen", "Het regende, maar ik ben toch gaan fietsen"] },
+        { "type": "translate", "en": "He stayed at home because he was ill.", "answers": ["Hij bleef thuis omdat hij ziek was", "Hij is thuisgebleven omdat hij ziek was", "Hij is thuis gebleven omdat hij ziek was"] },
+        { "type": "match", "pairs": [["want, maar, en, of", "no change of order"], ["omdat, dat, als", "verb to the end"], ["daarom, toch, daarna", "inversion (verb second)"], ["toen (= when)", "subordinating: verb at the end"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: signaalwoorden (B1)", "url": "https://nt2taalmenu.nl/b1-verzamel-signaal-woorden/" },
+        { "title": "NT2 TaalMenu: voegwoorden (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-voeg-woorden/" }
+      ]
+    },
+    {
+      "id": "b1.g11.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Gisteren heb ik haar niet gezien.", "Gisteren heb ik niet haar gezien.", "Gisteren ik heb haar niet gezien."], "answer": 0 },
+        { "type": "choice", "q": "Ik weet dat hij morgen niet ___.", "options": ["komt", "kom", "gekomen"], "answer": 0 },
+        { "type": "choice", "q": "Het was koud. ___ gingen wij naar buiten.", "options": ["Toch", "Want", "Omdat"], "answer": 0 },
+        { "type": "choice", "q": "Ik blijf thuis, ___ het regent.", "options": ["omdat", "daarom", "toch"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik heb geen tijd voor sport.", "Ik heb niet tijd voor sport.", "Ik heb tijd niet voor sport."], "answer": 0 },
+        { "type": "gap", "text": "Wij hebben het huis ___ gekocht.", "answers": ["niet"], "en": "We have not bought the house." },
+        { "type": "gap", "text": "Vandaag ___ zij thuis. (blijven)", "answers": ["blijft"], "en": "Today she is staying at home." },
+        { "type": "gap", "text": "Ik wil je morgen ___ opbellen.", "answers": ["niet"], "en": "I don't want to call you tomorrow." },
+        { "type": "gap", "text": "Hij zegt dat hij ___ tijd heeft.", "answers": ["geen"], "en": "He says that he has no time." },
+        { "type": "gap", "text": "Eerst koken wij, ___ eten wij.", "answers": ["daarna", "dan"], "en": "First we cook, then we eat." },
+        { "type": "gap", "text": "Hij was moe. ___ ging hij naar bed.", "answers": ["Daarom"], "en": "He was tired. That is why he went to bed." },
+        { "type": "transform", "q": "Ik ga morgen met de bus naar mijn werk.", "instruction": "Start with: Morgen ...", "answers": ["Morgen ga ik met de bus naar mijn werk"] },
+        { "type": "transform", "q": "Ik heb de brief gelezen.", "instruction": "Make it negative.", "answers": ["Ik heb de brief niet gelezen"] },
+        { "type": "transform", "q": "Het regende. Wij bleven thuis.", "instruction": "Start the second sentence with Daarom: Daarom ...", "answers": ["Daarom bleven wij thuis", "Daarom bleven we thuis"] },
+        { "type": "transform", "q": "Wij blijven thuis. Het regent.", "instruction": "Join with omdat: Wij blijven thuis, omdat ...", "answers": ["Wij blijven thuis omdat het regent", "We blijven thuis omdat het regent"] },
+        { "type": "order", "answer": "Gisteren heb ik haar niet gezien.", "alt": ["Ik heb haar gisteren niet gezien."], "en": "I did not see her yesterday." },
+        { "type": "order", "answer": "Ik weet dat hij morgen niet komt.", "en": "I know that he is not coming tomorrow." },
+        { "type": "order", "answer": "Daarom blijf ik vandaag thuis.", "en": "That is why I am staying at home today." },
+        { "type": "order", "answer": "Wij blijven thuis, omdat het regent.", "en": "We are staying at home because it is raining." },
+        { "type": "translate", "en": "I have no time for sport.", "answers": ["Ik heb geen tijd voor sport"] },
+        { "type": "translate", "en": "I did not see him yesterday.", "answers": ["Ik heb hem gisteren niet gezien", "Gisteren heb ik hem niet gezien", "Ik zag hem gisteren niet", "Gisteren zag ik hem niet"] },
+        { "type": "translate", "en": "I think that she is not coming.", "answers": ["Ik denk dat zij niet komt", "Ik denk dat ze niet komt"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: signaalwoorden (B1)", "url": "https://nt2taalmenu.nl/b1-verzamel-signaal-woorden/" }
+      ]
+    }
+  ]
+}

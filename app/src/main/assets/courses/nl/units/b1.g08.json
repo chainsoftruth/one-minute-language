@@ -1,0 +1,157 @@
+{
+  "id": "b1.g08", "level": "B1", "kind": "grammar",
+  "title": "The word er",
+  "subtitle": "Place, quantity, there is / there are, and where er goes",
+  "lessons": [
+    {
+      "id": "b1.g08.l1", "title": "er = there, and Er is…", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "**Er** is a small word with several jobs. The first is **place**: unstressed *there*, referring to a place that was already mentioned. *Ik woon in Utrecht. Ik woon **er** al jaren.* When you point at the place or stress it, you say **daar** instead. With a direction, *er* goes with *naartoe* or *heen*: *Ik ga **er** morgen naartoe.*" },
+        { "type": "p", "text": "The second job is **existential**: *there is / there are*. *Er* introduces a **new, indefinite subject** (*een man, veel mensen, geen melk*), and the subject comes **after the verb**: *Er staat een man voor de deur.* If the subject is **definite** (*de man, mijn broer*), there is no *er*: *De man staat voor de deur.* If another element already opens the sentence, you do not need *er*: *Op tafel ligt een brief.*" },
+        { "type": "table", "head": ["use", "example", "meaning"], "rows": [["place (= daar)", "Ik woon er al jaren.", "I have lived there for years."], ["place + direction", "Ik ga er morgen naartoe.", "I am going there tomorrow."], ["there is / there are", "Er staat een man voor de deur.", "There is a man at the door."], ["definite subject: no er", "De man staat voor de deur.", "The man is at the door."]] },
+        { "type": "ex", "nl": "Er zijn veel mensen in het park.", "en": "There are many people in the park." },
+        { "type": "ex", "nl": "Ik heb vroeger in Breda gewoond. Mijn oma woont er nog.", "en": "I used to live in Breda. My grandmother still lives there." },
+        { "type": "tip", "text": "With *er* + a verb of position the verb is often *staan, liggen, zitten, hangen* rather than *zijn*: *Er **ligt** een brief op tafel.*" }
+      ],
+      "items": [
+        { "type": "choice", "q": "___ liggen veel boeken op tafel.", "options": ["Er", "Het", "Ze"], "answer": 0 },
+        { "type": "choice", "q": "Ik ben in Utrecht geboren en ik woon ___ nog steeds.", "options": ["er", "het", "hem"], "answer": 0 },
+        { "type": "choice", "q": "Ik ga ___ morgen naartoe.", "options": ["er", "het", "dat"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Er woont een man naast mij.", "Er een man woont naast mij.", "Naast mij er woont een man."], "answer": 0 },
+        { "type": "choice", "q": "Why is there no *er* in: De trein staat op spoor 3.", "options": ["The subject is definite.", "The subject is plural.", "The verb is separable."], "answer": 0 },
+        { "type": "gap", "text": "___ zitten veel kinderen in de klas.", "answers": ["Er"], "en": "There are many children in the class." },
+        { "type": "gap", "text": "Ik ken Amsterdam goed, want ik woon ___ al tien jaar.", "answers": ["er"], "en": "I know Amsterdam well, because I have lived there for ten years." },
+        { "type": "gap", "text": "___ ligt een brief op tafel.", "answers": ["Er"], "en": "There is a letter on the table." },
+        { "type": "gap", "text": "Is het museum open? Ik ga ___ morgen naartoe.", "answers": ["er"], "en": "Is the museum open? I am going there tomorrow." },
+        { "type": "gap", "text": "Er ___ twee mannen voor de deur. (staan)", "answers": ["staan"], "en": "There are two men at the door." },
+        { "type": "gap", "text": "Er ___ geen melk meer in de koelkast. (zijn)", "answers": ["is"], "en": "There is no milk left in the fridge." },
+        { "type": "transform", "q": "Een brief ligt op tafel.", "instruction": "Start with Er: Er ...", "answers": ["Er ligt een brief op tafel"] },
+        { "type": "transform", "q": "Veel mensen wachten op de bus.", "instruction": "Start with Er: Er ...", "answers": ["Er wachten veel mensen op de bus"] },
+        { "type": "transform", "q": "Ik woon al jaren in Rotterdam.", "instruction": "Replace *in Rotterdam* with er.", "answers": ["Ik woon er al jaren"] },
+        { "type": "transform", "q": "Naast mij woont een oude man.", "instruction": "Start with Er: Er ...", "answers": ["Er woont een oude man naast mij"] },
+        { "type": "order", "answer": "Er staat een man voor de deur.", "en": "There is a man at the door." },
+        { "type": "order", "answer": "Ik woon er al jaren.", "en": "I have lived there for years." },
+        { "type": "order", "answer": "Er zijn veel mensen in het park.", "en": "There are many people in the park." },
+        { "type": "order", "answer": "Gisteren was er een feest bij ons.", "alt": ["Er was gisteren een feest bij ons."], "en": "Yesterday there was a party at our place." },
+        { "type": "translate", "en": "There are three chairs in the room.", "answers": ["Er staan drie stoelen in de kamer", "Er zijn drie stoelen in de kamer"] },
+        { "type": "translate", "en": "I live there.", "answers": ["Ik woon er", "Ik woon daar"] },
+        { "type": "translate", "en": "There is a letter for you.", "answers": ["Er is een brief voor jou", "Er is een brief voor je", "Er ligt een brief voor jou", "Er ligt een brief voor je"] },
+        { "type": "match", "pairs": [["Er woont een man naast mij.", "there is a man (existential)"], ["Ik woon er al jaren.", "there = a place"], ["De man woont naast mij.", "definite subject: no er"], ["Ik ga er naartoe.", "place with a direction"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: er (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-er/" },
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "b1.g08.l2", "title": "er with a number or quantity", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "When you leave out a noun that was already mentioned but you still name a **number or a quantity**, you need **er**: *Heb je broers? Ja, ik heb **er** twee.* *Hoeveel kinderen heb je? Ik heb **er** drie.* The same goes for *veel, weinig, genoeg, meer, zoveel, nog wat* and *geen*: *Heb je koffie? Nee, ik heb **er** geen.*" },
+        { "type": "p", "text": "*Er* stands early in the middle part of the sentence, and the number or quantity stays later: *Ik heb **er** gisteren drie gekocht.* If the **noun is still there**, you do not use this *er*: *Ik heb twee broers.* If you refer to something **definite** (*de boeken, mijn fiets*), you use *ze* or *het*, not *er*: *Heb je de boeken? Ja, ik heb **ze**.*" },
+        { "type": "table", "head": ["question", "answer with er"], "rows": [["Heb je broers?", "Ja, ik heb er twee."], ["Hoeveel euro heb je?", "Ik heb er vijftig."], ["Heb je koffie?", "Nee, ik heb er geen."], ["Zijn er nog stoelen?", "Er zijn er nog veel."]] },
+        { "type": "ex", "nl": "Mijn buurman heeft veel katten. Ik heb er maar één.", "en": "My neighbour has many cats. I only have one." },
+        { "type": "ex", "nl": "Er zijn er drie.", "en": "There are three of them." },
+        { "type": "tip", "text": "In *Er zijn er drie* the first *er* is the *there are* of lesson 1 and the second *er* is the quantity *er*. Both are needed." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Heb je broers? — Ja, ik heb ___ twee.", "options": ["er", "ze", "hen"], "answer": 0 },
+        { "type": "choice", "q": "Hoeveel boeken heb je? — Ik heb ___ veel.", "options": ["er", "ze", "het"], "answer": 0 },
+        { "type": "choice", "q": "Heb je koffie? — Nee, ik heb ___ geen.", "options": ["er", "het", "dat"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik heb er drie gekocht.", "Ik heb drie er gekocht.", "Ik heb gekocht er drie."], "answer": 0 },
+        { "type": "choice", "q": "Why is there no quantity *er* in: Ik heb twee zussen.", "options": ["The noun is still in the sentence.", "It is a het-word.", "It is a question."], "answer": 0 },
+        { "type": "gap", "text": "Hoeveel kinderen heb je? — Ik heb ___ drie.", "answers": ["er"], "en": "How many children do you have? — I have three." },
+        { "type": "gap", "text": "Zijn er nog stoelen? — Ja, er zijn ___ nog veel.", "answers": ["er"], "en": "Are there any chairs left? — Yes, there are still many." },
+        { "type": "gap", "text": "Heb je nog tijd? — Nee, ik heb ___ weinig.", "answers": ["er"], "en": "Do you still have time? — No, I have little." },
+        { "type": "gap", "text": "Ik wil appels kopen. Ik neem ___ een kilo.", "answers": ["er"], "en": "I want to buy apples. I will take a kilo." },
+        { "type": "gap", "text": "Hij heeft veel vrienden. Ik heb ___ ook veel.", "answers": ["er"], "en": "He has many friends. I have many too." },
+        { "type": "gap", "text": "Heb je een pen? — Ja, ik heb ___ een.", "answers": ["er"], "en": "Do you have a pen? — Yes, I have one." },
+        { "type": "transform", "q": "Heb je zussen? (twee)", "instruction": "Answer with er: Ja, ik ...", "answers": ["Ja ik heb er twee", "Ik heb er twee"] },
+        { "type": "transform", "q": "Ik heb drie broers.", "instruction": "Replace *broers* with er.", "answers": ["Ik heb er drie"] },
+        { "type": "transform", "q": "Zij heeft vijf boeken gelezen.", "instruction": "Replace *boeken* with er.", "answers": ["Zij heeft er vijf gelezen", "Ze heeft er vijf gelezen"] },
+        { "type": "transform", "q": "Wij hebben veel problemen.", "instruction": "Replace *problemen* with er.", "answers": ["Wij hebben er veel", "We hebben er veel"] },
+        { "type": "order", "answer": "Ik heb er twee.", "en": "I have two (of them)." },
+        { "type": "order", "answer": "Er zijn er drie.", "en": "There are three of them." },
+        { "type": "order", "answer": "Ik heb er gisteren drie gekocht.", "alt": ["Gisteren heb ik er drie gekocht."], "en": "Yesterday I bought three (of them)." },
+        { "type": "order", "answer": "Hij heeft er nog veel.", "en": "He still has many (of them)." },
+        { "type": "translate", "en": "I have three (of them).", "answers": ["Ik heb er drie"] },
+        { "type": "translate", "en": "We still have a lot of them.", "answers": ["Wij hebben er nog veel", "We hebben er nog veel"] },
+        { "type": "translate", "en": "I bought five (of them) yesterday.", "answers": ["Ik heb er gisteren vijf gekocht", "Gisteren heb ik er vijf gekocht"] },
+        { "type": "match", "pairs": [["Ik heb er twee.", "number: er is needed"], ["Ik heb twee broers.", "noun present: no er"], ["Er zijn er drie.", "existential + quantity"], ["Ik heb er geen.", "none of them"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: er (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-er/" },
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "b1.g08.l3", "title": "Where does er go?", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "**Er** goes as early as possible in the middle part of the sentence: **right after the verb and the subject**, and **before** adverbs of time and *niet*. *Ik ga **er** morgen naartoe.* *Ik woon **er** niet meer.* In a **question** the order is verb + subject + *er*: *Ga jij **er** morgen naartoe?* With the existential *er* the subject follows the verb: *Is **er** een toilet in de buurt?*" },
+        { "type": "p", "text": "In a **subordinate clause** *er* comes straight after the conjunction (or after the subject pronoun): *Ik weet dat **er** veel mensen komen. Ik denk dat hij **er** woont.* *Er* is also used when the **subject is not named** in a passive sentence: *Er wordt hier niet gerookt* (there is no smoking here). The passive itself comes in the next unit." },
+        { "type": "table", "head": ["sentence type", "example"], "rows": [["main clause", "Ik ga er morgen naartoe."], ["question", "Ga jij er morgen naartoe?"], ["existential question", "Is er een toilet in de buurt?"], ["subordinate clause", "Ik weet dat er veel mensen komen."], ["with niet", "Ik woon er niet meer."]] },
+        { "type": "ex", "nl": "Wij zijn er vorig jaar geweest.", "en": "We were there last year." },
+        { "type": "ex", "nl": "Ik denk dat er morgen regen komt.", "en": "I think it will rain tomorrow." },
+        { "type": "tip", "text": "Don't put *er* at the end of the clause. It belongs **before** the time word and before *niet*." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik ga er morgen naartoe.", "Ik ga morgen er naartoe.", "Er ik ga morgen naartoe."], "answer": 0 },
+        { "type": "choice", "q": "Ik denk dat ___ veel mensen komen.", "options": ["er", "het", "hij"], "answer": 0 },
+        { "type": "choice", "q": "Woont ___ iemand in dit huis?", "options": ["er", "het", "ze"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Is er een toilet in de buurt?", "Is een toilet er in de buurt?", "Er een toilet is in de buurt?"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik weet dat er veel mensen komen.", "Ik weet dat komen er veel mensen.", "Ik weet dat veel er mensen komen."], "answer": 0 },
+        { "type": "gap", "text": "Ik ben ___ gisteren geweest.", "answers": ["er"], "en": "I was there yesterday." },
+        { "type": "gap", "text": "Gisteren was ___ een feest in de straat.", "answers": ["er"], "en": "Yesterday there was a party in the street." },
+        { "type": "gap", "text": "Ik weet dat ___ veel mensen komen.", "answers": ["er"], "en": "I know that many people are coming." },
+        { "type": "gap", "text": "Ga jij ___ morgen naartoe?", "answers": ["er"], "en": "Are you going there tomorrow?" },
+        { "type": "gap", "text": "Is ___ een toilet in de buurt?", "answers": ["er"], "en": "Is there a toilet nearby?" },
+        { "type": "gap", "text": "Ik woon ___ niet meer.", "answers": ["er"], "en": "I don't live there anymore." },
+        { "type": "transform", "q": "Ik ga morgen naar Brussel.", "instruction": "Replace *naar Brussel* with er (and naartoe).", "answers": ["Ik ga er morgen naartoe"] },
+        { "type": "transform", "q": "Er is een toilet in de buurt.", "instruction": "Make it a question.", "answers": ["Is er een toilet in de buurt"] },
+        { "type": "transform", "q": "Veel mensen komen naar het feest.", "instruction": "Start with: Ik denk dat er ...", "answers": ["Ik denk dat er veel mensen naar het feest komen"] },
+        { "type": "transform", "q": "Ik woon niet meer in Leiden.", "instruction": "Replace *in Leiden* with er.", "answers": ["Ik woon er niet meer"] },
+        { "type": "order", "answer": "Ik ga er morgen naartoe.", "alt": ["Morgen ga ik er naartoe."], "en": "I am going there tomorrow." },
+        { "type": "order", "answer": "Is er een toilet in de buurt?", "en": "Is there a toilet nearby?" },
+        { "type": "order", "answer": "Ik weet dat er veel mensen komen.", "en": "I know that many people are coming." },
+        { "type": "order", "answer": "Wij zijn er vorig jaar geweest.", "alt": ["Vorig jaar zijn wij er geweest."], "en": "We were there last year." },
+        { "type": "translate", "en": "Is there a station nearby?", "answers": ["Is er een station in de buurt", "Is er hier een station in de buurt", "Is er een station dichtbij", "Is er hier een station"] },
+        { "type": "translate", "en": "I have lived there for five years.", "answers": ["Ik woon er al vijf jaar", "Ik woon daar al vijf jaar", "Ik heb er vijf jaar gewoond"] },
+        { "type": "translate", "en": "I think there are many people.", "answers": ["Ik denk dat er veel mensen zijn"] },
+        { "type": "match", "pairs": [["main clause", "Ik ga er morgen naartoe."], ["question", "Ga jij er morgen naartoe?"], ["subordinate clause", "dat er veel mensen komen"], ["with niet", "Ik woon er niet meer."]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: er (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-er/" },
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "b1.g08.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "___ zit een vogel in de boom.", "options": ["Er", "Het", "Ze"], "answer": 0 },
+        { "type": "choice", "q": "Heb je tijd? — Nee, ik heb ___ weinig.", "options": ["er", "ze", "dat"], "answer": 0 },
+        { "type": "choice", "q": "Ik wacht ___ al een half uur. (op de bus)", "options": ["erop", "eraan", "ermee"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Er zijn er twintig.", "Er twintig zijn er.", "Twintig er zijn er."], "answer": 0 },
+        { "type": "choice", "q": "Ik denk dat ___ morgen veel mensen komen.", "options": ["er", "het", "ze"], "answer": 0 },
+        { "type": "gap", "text": "Ik heb twee fietsen. Mijn broer heeft ___ drie.", "answers": ["er"], "en": "I have two bikes. My brother has three." },
+        { "type": "gap", "text": "Hij heeft het boek gelezen en praat ___ de hele dag over.", "answers": ["er"], "en": "He has read the book and talks about it all day." },
+        { "type": "gap", "text": "Ik woon in Haarlem en ik werk ___ ook.", "answers": ["er"], "en": "I live in Haarlem and I work there too." },
+        { "type": "gap", "text": "___ wordt hier niet gerookt.", "answers": ["Er"], "en": "There is no smoking here." },
+        { "type": "gap", "text": "Zijn er nog kaartjes? — Ja, er zijn ___ nog twee.", "answers": ["er"], "en": "Are there any tickets left? — Yes, there are still two." },
+        { "type": "gap", "text": "Wij gaan morgen naar het strand. Ik ga ___ graag naartoe.", "answers": ["er"], "en": "We are going to the beach tomorrow. I like going there." },
+        { "type": "transform", "q": "Een kind speelt in de tuin.", "instruction": "Start with Er: Er ...", "answers": ["Er speelt een kind in de tuin"] },
+        { "type": "transform", "q": "Ik heb vier katten.", "instruction": "Replace the noun with er.", "answers": ["Ik heb er vier"] },
+        { "type": "transform", "q": "Ik denk aan mijn vakantie.", "instruction": "Replace *aan mijn vakantie* with a pronominal adverb: Ik denk ...", "answers": ["Ik denk eraan", "Ik denk er aan"] },
+        { "type": "transform", "q": "Wij hebben vijf stoelen gekocht.", "instruction": "Replace the noun with er.", "answers": ["Wij hebben er vijf gekocht", "We hebben er vijf gekocht"] },
+        { "type": "order", "answer": "Er staan vijf fietsen voor de deur.", "en": "There are five bikes at the door." },
+        { "type": "order", "answer": "Ik heb er drie gezien.", "en": "I have seen three (of them)." },
+        { "type": "order", "answer": "Hij woont er sinds vorig jaar.", "alt": ["Sinds vorig jaar woont hij er."], "en": "He has lived there since last year." },
+        { "type": "order", "answer": "Ik weet dat er morgen een staking is.", "en": "I know that there is a strike tomorrow." },
+        { "type": "translate", "en": "There are two apples in the bag.", "answers": ["Er zitten twee appels in de tas", "Er zijn twee appels in de tas", "Er liggen twee appels in de tas"] },
+        { "type": "translate", "en": "She has many (of them).", "answers": ["Zij heeft er veel", "Ze heeft er veel"] },
+        { "type": "translate", "en": "Is anyone there?", "answers": ["Is er iemand", "Is daar iemand", "Is er iemand daar"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: er (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-er/" }
+      ]
+    }
+  ]
+}
