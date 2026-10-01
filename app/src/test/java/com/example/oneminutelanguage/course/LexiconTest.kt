@@ -101,7 +101,19 @@ class LexiconTest {
 
     @Test fun a1HasAtLeast750Words() = assertTrue("A1 has ${cumulative("A1")}", cumulative("A1") >= 750)
 
-    @Ignore("Enabled in Stage 7") @Test fun a2HasAtLeast1650WordsCumulative() = assertTrue(cumulative("A2") >= 1650)
+    @Test fun a2HasAtLeast1650WordsCumulative() = assertTrue("A2 has ${cumulative("A2")}", cumulative("A2") >= 1650)
+
+    @Test fun a2LexiconCoversTheStageSevenTargets() {
+        val a2 = courseIds().flatMap { entries(it) }.filter { it.lvl == "A2" }
+        val verbs = a2.filter { it.pos == "verb" }
+        assertTrue("A2 entries: ${a2.size}", a2.size >= 900)
+        assertTrue("A2 verbs: ${verbs.size}", verbs.size >= 200)
+        assertTrue("A2 separable verbs: ${verbs.count { it.sep }}", verbs.count { it.sep } >= 60)
+        assertTrue("A2 reflexive verbs: ${verbs.count { it.refl }}", verbs.count { it.refl } >= 10)
+        assertTrue("A2 verbs with a fixed preposition: ${verbs.count { it.prep != null }}", verbs.count { it.prep != null } >= 20)
+        assertTrue("Every A2 verb needs an example", verbs.all { !it.ex.isNullOrBlank() })
+        assertTrue("A2 examples: ${a2.count { it.ex != null }}", a2.count { it.ex != null } * 10 >= a2.size * 6)
+    }
 
     @Ignore("Enabled in Stage 9") @Test fun b1HasAtLeast2800WordsCumulative() = assertTrue(cumulative("B1") >= 2800)
 }

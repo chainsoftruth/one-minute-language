@@ -1,0 +1,19 @@
+[
+  {"id":"tiener","nl":"tiener","en":"teenager","pos":"noun","lvl":"A2","topic":"people","art":"de","pl":"tieners","ex":"Mijn zoon is een tiener.","exEn":"My son is a teenager."},
+  {"id":"bejaarde","nl":"bejaarde","en":"elderly person","pos":"noun","lvl":"A2","topic":"people","art":"de","pl":"bejaarden","ex":"De bejaarden wonen in een tehuis.","exEn":"The elderly live in a home."},
+  {"id":"buurkind","nl":"buurkind","en":"neighbour's child","pos":"noun","lvl":"A2","topic":"people","art":"het","pl":"buurkinderen","ex":"Het buurkind speelt in de tuin.","exEn":"The neighbour's child plays in the garden."},
+  {"id":"stiefvader","nl":"stiefvader","en":"stepfather","pos":"noun","lvl":"A2","topic":"people","art":"de","pl":"stiefvaders","ex":"Mijn stiefvader is aardig.","exEn":"My stepfather is nice."},
+  {"id":"stiefmoeder","nl":"stiefmoeder","en":"stepmother","pos":"noun","lvl":"A2","topic":"people","art":"de","pl":"stiefmoeders","ex":"Mijn stiefmoeder kookt goed.","exEn":"My stepmother cooks well."},
+  {"id":"schoonmoeder","nl":"schoonmoeder","en":"mother-in-law","pos":"noun","lvl":"A2","topic":"people","art":"de","pl":"schoonmoeders","ex":"Mijn schoonmoeder woont in Delft.","exEn":"My mother-in-law lives in Delft."},
+  {"id":"schoonvader","nl":"schoonvader","en":"father-in-law","pos":"noun","lvl":"A2","topic":"people","art":"de","pl":"schoonvaders","ex":"Mijn schoonvader houdt van tuinieren.","exEn":"My father-in-law likes gardening."},
+  {"id":"vreemde","nl":"vreemde","en":"stranger","pos":"noun","lvl":"A2","topic":"people","art":"de","pl":"vreemden","ex":"Praat niet met vreemden.","exEn":"Don't talk to strangers."},
+  {"id":"bewoner","nl":"bewoner","en":"resident (of a building)","pos":"noun","lvl":"A2","topic":"people","art":"de","pl":"bewoners","ex":"De bewoners klagen over het lawaai.","exEn":"The residents complain about the noise."},
+  {"id":"buurtbewoner","nl":"buurtbewoner","en":"local resident","pos":"noun","lvl":"A2","topic":"people","art":"de","pl":"buurtbewoners","ex":"Buurtbewoners helpen elkaar.","exEn":"Local residents help each other."},
+  {"id":"jongere","nl":"jongere","en":"young person","pos":"noun","lvl":"A2","topic":"people","art":"de","pl":"jongeren","ex":"Veel jongeren fietsen naar school.","exEn":"Many young people cycle to school."},
+  {"id":"immigrant","nl":"immigrant","en":"immigrant","pos":"noun","lvl":"A2","topic":"people","art":"de","pl":"immigranten","ex":"Veel immigranten leren Nederlands.","exEn":"Many immigrants learn Dutch."},
+  {"id":"expat","nl":"expat","en":"expat","pos":"noun","lvl":"A2","topic":"people","art":"de","pl":"expats","ex":"Veel expats wonen in Eindhoven.","exEn":"Many expats live in Eindhoven."},
+  {"id":"stadsgenoot","nl":"stadsgenoot","en":"fellow citizen","pos":"noun","lvl":"A2","topic":"people","art":"de","pl":"stadsgenoten","ex":"Mijn stadsgenoten zijn vriendelijk.","exEn":"My fellow citizens are friendly."},
+  {"id":"landgenoot","nl":"landgenoot","en":"compatriot","pos":"noun","lvl":"A2","topic":"people","art":"de","pl":"landgenoten","ex":"Ik ontmoet een landgenoot.","exEn":"I meet a compatriot."},
+  {"id":"amsterdammer","nl":"Amsterdammer","en":"person from Amsterdam","pos":"noun","lvl":"A2","topic":"people","art":"de","pl":"Amsterdammers","ex":"De Amsterdammers houden van fietsen.","exEn":"People from Amsterdam love cycling."},
+  {"id":"rotterdammer","nl":"Rotterdammer","en":"person from Rotterdam","pos":"noun","lvl":"A2","topic":"people","art":"de","pl":"Rotterdammers","ex":"Een Rotterdammer is direct.","exEn":"A person from Rotterdam is direct."}
+]
