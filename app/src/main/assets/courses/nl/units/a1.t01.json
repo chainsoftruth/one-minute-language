@@ -1,100 +1,377 @@
 {
-  "id": "a1.t01", "level": "A1", "kind": "theme",
+  "id": "a1.t01",
+  "level": "A1",
+  "kind": "theme",
   "title": "Introducing yourself",
   "subtitle": "Greet people, say who you are, where you live and which languages you speak",
   "lessons": [
     {
-      "id": "a1.t01.l1", "title": "Meeting people", "kind": "vocab",
+      "id": "a1.t01.l1",
+      "title": "Meeting people",
+      "kind": "vocab",
       "vocab": [
-        "hallo", "goedemorgen", "tot_ziens", "aangenaam", "naam", "heten", "wonen", "werken", "spreken", "land",
-        "taal", "nederland", "nederlands", "engels", "buurman", "buurvrouw", "vader", "moeder", "broer", "zus", "familie"
+        "hallo",
+        "goedemorgen",
+        "tot_ziens",
+        "aangenaam",
+        "naam",
+        "heten",
+        "wonen",
+        "werken",
+        "spreken",
+        "land",
+        "taal",
+        "nederland",
+        "nederlands",
+        "engels",
+        "buurman",
+        "buurvrouw",
+        "vader",
+        "moeder",
+        "broer",
+        "zus",
+        "familie"
       ]
     },
     {
-      "id": "a1.t01.l2", "title": "A short profile", "kind": "reading",
+      "id": "a1.t01.l6",
+      "title": "Family and friends",
+      "kind": "vocab",
+      "vocab": [
+        "zoon",
+        "dochter",
+        "opa",
+        "oma",
+        "oom",
+        "tante",
+        "neef",
+        "nicht",
+        "man",
+        "vrouw",
+        "kind",
+        "baby",
+        "vriend",
+        "vriendin",
+        "collega",
+        "echtgenoot",
+        "echtgenote",
+        "partner",
+        "gezin",
+        "ouder"
+      ]
+    },
+    {
+      "id": "a1.t01.l2",
+      "title": "A short profile",
+      "kind": "reading",
       "explain": [
-        { "type": "tip", "text": "Read the text once for the main idea, then answer the questions. You don't need to understand every word. Tap a word you don't know." }
+        {
+          "type": "tip",
+          "text": "Read the text once for the main idea, then answer the questions. You don't need to understand every word. Tap a word you don't know."
+        }
       ],
       "text": "Hallo! Ik ben Sanne. Ik kom uit Nederland, maar ik woon in Utrecht. Ik werk in een winkel. Ik heb een broer en een zus. Mijn broer heet Tim en mijn zus heet Eva. Mijn vader en moeder wonen in Leiden. Ik spreek Nederlands en een beetje Engels. Ik vind koken leuk. Op zaterdag eet ik vaak met mijn familie.",
       "items": [
-        { "type": "choice", "q": "Waar woont Sanne?", "options": ["In Utrecht", "In Amsterdam", "In Engeland"], "answer": 0, "en": "Where does Sanne live?", "explain": "She says: ik woon in Utrecht. She comes from the Netherlands, but that is not the same as where she lives." },
-        { "type": "choice", "q": "Hoeveel broers heeft Sanne?", "options": ["Eén", "Twee", "Geen"], "answer": 0, "en": "How many brothers does Sanne have?" },
-        { "type": "choice", "q": "Waar wonen de ouders van Sanne?", "options": ["In Leiden", "In Utrecht", "In Engeland"], "answer": 0, "en": "Where do Sanne's parents live?" },
-        { "type": "choice", "q": "Welke talen spreekt Sanne?", "options": ["Nederlands en een beetje Engels", "Nederlands en Frans", "Alleen Nederlands"], "answer": 0, "en": "Which languages does Sanne speak?" },
-        { "type": "choice", "q": "Wat doet Sanne op zaterdag?", "options": ["Ze eet met haar familie", "Ze werkt in een winkel", "Ze woont in Leiden"], "answer": 0, "en": "What does Sanne do on Saturday?", "explain": "The text says: op zaterdag eet ik vaak met mijn familie (on Saturday I often eat with my family)." }
+        {
+          "type": "choice",
+          "q": "Waar woont Sanne?",
+          "options": [
+            "In Utrecht",
+            "In Amsterdam",
+            "In Engeland"
+          ],
+          "answer": 0,
+          "en": "Where does Sanne live?",
+          "explain": "She says: ik woon in Utrecht. She comes from the Netherlands, but that is not the same as where she lives."
+        },
+        {
+          "type": "choice",
+          "q": "Hoeveel broers heeft Sanne?",
+          "options": [
+            "Eén",
+            "Twee",
+            "Geen"
+          ],
+          "answer": 0,
+          "en": "How many brothers does Sanne have?"
+        },
+        {
+          "type": "choice",
+          "q": "Waar wonen de ouders van Sanne?",
+          "options": [
+            "In Leiden",
+            "In Utrecht",
+            "In Engeland"
+          ],
+          "answer": 0,
+          "en": "Where do Sanne's parents live?"
+        },
+        {
+          "type": "choice",
+          "q": "Welke talen spreekt Sanne?",
+          "options": [
+            "Nederlands en een beetje Engels",
+            "Nederlands en Frans",
+            "Alleen Nederlands"
+          ],
+          "answer": 0,
+          "en": "Which languages does Sanne speak?"
+        },
+        {
+          "type": "choice",
+          "q": "Wat doet Sanne op zaterdag?",
+          "options": [
+            "Ze eet met haar familie",
+            "Ze werkt in een winkel",
+            "Ze woont in Leiden"
+          ],
+          "answer": 0,
+          "en": "What does Sanne do on Saturday?",
+          "explain": "The text says: op zaterdag eet ik vaak met mijn familie (on Saturday I often eat with my family)."
+        }
       ],
       "sources": [
-        { "title": "NT2 TaalMenu: A1", "url": "https://nt2taalmenu.nl/nt2-a1-menu/" }
+        {
+          "title": "NT2 TaalMenu: A1",
+          "url": "https://nt2taalmenu.nl/nt2-a1-menu/"
+        }
       ]
     },
     {
-      "id": "a1.t01.l3", "title": "At the door", "kind": "listening",
+      "id": "a1.t01.l3",
+      "title": "At the door",
+      "kind": "listening",
       "dialogue": [
-        { "who": "A", "nl": "Goedemorgen! Ik ben Jan. Ik ben je nieuwe buurman.", "en": "Good morning! I'm Jan. I'm your new neighbour." },
-        { "who": "B", "nl": "Hallo Jan! Ik ben Lisa. Aangenaam.", "en": "Hello Jan! I'm Lisa. Pleased to meet you." },
-        { "who": "A", "nl": "Woon je hier al lang?", "en": "Have you lived here long?" },
-        { "who": "B", "nl": "Nee, ik woon hier pas twee maanden. En jij?", "en": "No, I've only lived here for two months. And you?" },
-        { "who": "A", "nl": "Ik woon sinds gisteren op nummer vijf.", "en": "I've lived at number five since yesterday." },
-        { "who": "B", "nl": "Wat leuk! Kom je uit Nederland?", "en": "How nice! Are you from the Netherlands?" },
-        { "who": "A", "nl": "Nee, ik kom uit Engeland, maar ik spreek een beetje Nederlands.", "en": "No, I'm from England, but I speak a little Dutch." },
-        { "who": "B", "nl": "Je spreekt heel goed Nederlands. Tot ziens, Jan!", "en": "You speak Dutch very well. Goodbye, Jan!" }
+        {
+          "who": "A",
+          "nl": "Goedemorgen! Ik ben Jan. Ik ben je nieuwe buurman.",
+          "en": "Good morning! I'm Jan. I'm your new neighbour."
+        },
+        {
+          "who": "B",
+          "nl": "Hallo Jan! Ik ben Lisa. Aangenaam.",
+          "en": "Hello Jan! I'm Lisa. Pleased to meet you."
+        },
+        {
+          "who": "A",
+          "nl": "Woon je hier al lang?",
+          "en": "Have you lived here long?"
+        },
+        {
+          "who": "B",
+          "nl": "Nee, ik woon hier pas twee maanden. En jij?",
+          "en": "No, I've only lived here for two months. And you?"
+        },
+        {
+          "who": "A",
+          "nl": "Ik woon sinds gisteren op nummer vijf.",
+          "en": "I've lived at number five since yesterday."
+        },
+        {
+          "who": "B",
+          "nl": "Wat leuk! Kom je uit Nederland?",
+          "en": "How nice! Are you from the Netherlands?"
+        },
+        {
+          "who": "A",
+          "nl": "Nee, ik kom uit Engeland, maar ik spreek een beetje Nederlands.",
+          "en": "No, I'm from England, but I speak a little Dutch."
+        },
+        {
+          "who": "B",
+          "nl": "Je spreekt heel goed Nederlands. Tot ziens, Jan!",
+          "en": "You speak Dutch very well. Goodbye, Jan!"
+        }
       ],
       "items": [
-        { "type": "listen", "nl": "Ik ben Lisa. Aangenaam.", "q": "What does she say?", "options": ["I'm Lisa. Pleased to meet you.", "I'm Lisa. Good morning.", "I'm Anna. Pleased to meet you."], "answer": 0 },
-        { "type": "listen", "nl": "Ik woon op nummer vijf.", "q": "Where does he live?", "options": ["At number five", "At number fifteen", "At number fourteen"], "answer": 0, "explain": "vijf = 5, vijftien = 15, veertien = 14." },
-        { "type": "listen", "nl": "Ik kom uit Engeland.", "q": "What does he say?", "options": ["I'm from England.", "I live in England.", "I'm from Holland."], "answer": 0 },
-        { "type": "listen", "nl": "Ik woon in Utrecht." },
-        { "type": "choice", "q": "Waar komt Jan vandaan?", "options": ["Uit Engeland", "Uit Nederland", "Uit Utrecht"], "answer": 0, "en": "Where does Jan come from?" },
-        { "type": "choice", "q": "Hoe lang woont Lisa hier al?", "options": ["Twee maanden", "Twee jaar", "Sinds gisteren"], "answer": 0, "en": "How long has Lisa lived here?" }
+        {
+          "type": "listen",
+          "nl": "Ik ben Lisa. Aangenaam.",
+          "q": "What does she say?",
+          "options": [
+            "I'm Lisa. Pleased to meet you.",
+            "I'm Lisa. Good morning.",
+            "I'm Anna. Pleased to meet you."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "listen",
+          "nl": "Ik woon op nummer vijf.",
+          "q": "Where does he live?",
+          "options": [
+            "At number five",
+            "At number fifteen",
+            "At number fourteen"
+          ],
+          "answer": 0,
+          "explain": "vijf = 5, vijftien = 15, veertien = 14."
+        },
+        {
+          "type": "listen",
+          "nl": "Ik kom uit Engeland.",
+          "q": "What does he say?",
+          "options": [
+            "I'm from England.",
+            "I live in England.",
+            "I'm from Holland."
+          ],
+          "answer": 0
+        },
+        {
+          "type": "listen",
+          "nl": "Ik woon in Utrecht."
+        },
+        {
+          "type": "choice",
+          "q": "Waar komt Jan vandaan?",
+          "options": [
+            "Uit Engeland",
+            "Uit Nederland",
+            "Uit Utrecht"
+          ],
+          "answer": 0,
+          "en": "Where does Jan come from?"
+        },
+        {
+          "type": "choice",
+          "q": "Hoe lang woont Lisa hier al?",
+          "options": [
+            "Twee maanden",
+            "Twee jaar",
+            "Sinds gisteren"
+          ],
+          "answer": 0,
+          "en": "How long has Lisa lived here?"
+        }
       ],
       "sources": [
-        { "title": "Taalklas: free Dutch video course", "url": "https://www.taalklas.nl/" },
-        { "title": "NT2 TaalMenu: A1", "url": "https://nt2taalmenu.nl/nt2-a1-menu/" }
+        {
+          "title": "Taalklas: free Dutch video course",
+          "url": "https://www.taalklas.nl/"
+        },
+        {
+          "title": "NT2 TaalMenu: A1",
+          "url": "https://nt2taalmenu.nl/nt2-a1-menu/"
+        }
       ]
     },
     {
-      "id": "a1.t01.l4", "title": "Say it yourself", "kind": "speaking",
+      "id": "a1.t01.l4",
+      "title": "Say it yourself",
+      "kind": "speaking",
       "dialogue": [
-        { "who": "A", "nl": "Goedemorgen! Ik ben Jan. Ik ben je nieuwe buurman.", "en": "Good morning! I'm Jan. I'm your new neighbour." },
-        { "who": "B", "nl": "Hallo Jan! Ik ben Lisa. Aangenaam.", "en": "Hello Jan! I'm Lisa. Pleased to meet you." },
-        { "who": "A", "nl": "Woon je hier al lang?", "en": "Have you lived here long?" },
-        { "who": "B", "nl": "Nee, ik woon hier pas twee maanden. En jij?", "en": "No, I've only lived here for two months. And you?" },
-        { "who": "A", "nl": "Ik woon sinds gisteren op nummer vijf.", "en": "I've lived at number five since yesterday." },
-        { "who": "B", "nl": "Wat leuk! Kom je uit Nederland?", "en": "How nice! Are you from the Netherlands?" },
-        { "who": "A", "nl": "Nee, ik kom uit Engeland, maar ik spreek een beetje Nederlands.", "en": "No, I'm from England, but I speak a little Dutch." },
-        { "who": "B", "nl": "Je spreekt heel goed Nederlands. Tot ziens, Jan!", "en": "You speak Dutch very well. Goodbye, Jan!" }
+        {
+          "who": "A",
+          "nl": "Goedemorgen! Ik ben Jan. Ik ben je nieuwe buurman.",
+          "en": "Good morning! I'm Jan. I'm your new neighbour."
+        },
+        {
+          "who": "B",
+          "nl": "Hallo Jan! Ik ben Lisa. Aangenaam.",
+          "en": "Hello Jan! I'm Lisa. Pleased to meet you."
+        },
+        {
+          "who": "A",
+          "nl": "Woon je hier al lang?",
+          "en": "Have you lived here long?"
+        },
+        {
+          "who": "B",
+          "nl": "Nee, ik woon hier pas twee maanden. En jij?",
+          "en": "No, I've only lived here for two months. And you?"
+        },
+        {
+          "who": "A",
+          "nl": "Ik woon sinds gisteren op nummer vijf.",
+          "en": "I've lived at number five since yesterday."
+        },
+        {
+          "who": "B",
+          "nl": "Wat leuk! Kom je uit Nederland?",
+          "en": "How nice! Are you from the Netherlands?"
+        },
+        {
+          "who": "A",
+          "nl": "Nee, ik kom uit Engeland, maar ik spreek een beetje Nederlands.",
+          "en": "No, I'm from England, but I speak a little Dutch."
+        },
+        {
+          "who": "B",
+          "nl": "Je spreekt heel goed Nederlands. Tot ziens, Jan!",
+          "en": "You speak Dutch very well. Goodbye, Jan!"
+        }
       ],
       "items": [
-        { "type": "speak", "nl": "Ik ben Lisa. Aangenaam.", "en": "I'm Lisa. Pleased to meet you." },
-        { "type": "speak", "nl": "Ik woon in Utrecht.", "en": "I live in Utrecht." },
+        {
+          "type": "speak",
+          "nl": "Ik ben Lisa. Aangenaam.",
+          "en": "I'm Lisa. Pleased to meet you."
+        },
+        {
+          "type": "speak",
+          "nl": "Ik woon in Utrecht.",
+          "en": "I live in Utrecht."
+        },
         {
           "type": "prompt",
           "task": "Introduce yourself: your name, where you are from, where you live and which languages you speak.",
           "model": "Hallo, ik ben Mia. Ik kom uit Spanje, maar ik woon in Rotterdam. Ik spreek Spaans, Nederlands en een beetje Engels.",
           "seconds": 30,
-          "points": ["Your name", "Where you are from", "Where you live", "Which languages you speak"]
+          "points": [
+            "Your name",
+            "Where you are from",
+            "Where you live",
+            "Which languages you speak"
+          ]
         }
       ]
     },
     {
-      "id": "a1.t01.l5", "title": "Write about yourself", "kind": "writing",
+      "id": "a1.t01.l5",
+      "title": "Write about yourself",
+      "kind": "writing",
       "explain": [
-        { "type": "p", "text": "Write short, clear sentences. Say who you are first, then add one fact per sentence: where you are from, where you live, what you do." },
-        { "type": "ex", "nl": "Ik ben Mia en ik kom uit Spanje.", "en": "I am Mia and I come from Spain." },
-        { "type": "ex", "nl": "Ik woon in Rotterdam en ik werk in een restaurant.", "en": "I live in Rotterdam and I work in a restaurant." },
-        { "type": "tip", "text": "Start with a greeting (*Hallo!*) and use **en** and **maar** to join two short sentences." }
+        {
+          "type": "p",
+          "text": "Write short, clear sentences. Say who you are first, then add one fact per sentence: where you are from, where you live, what you do."
+        },
+        {
+          "type": "ex",
+          "nl": "Ik ben Mia en ik kom uit Spanje.",
+          "en": "I am Mia and I come from Spain."
+        },
+        {
+          "type": "ex",
+          "nl": "Ik woon in Rotterdam en ik werk in een restaurant.",
+          "en": "I live in Rotterdam and I work in a restaurant."
+        },
+        {
+          "type": "tip",
+          "text": "Start with a greeting (*Hallo!*) and use **en** and **maar** to join two short sentences."
+        }
       ],
       "items": [
         {
           "type": "write",
           "task": "You joined a Dutch class. Write a short introduction of yourself for the other students.",
-          "points": ["Your name", "Where you are from and where you live", "Your work or study", "Your family", "Which languages you speak"],
-          "minWords": 40, "maxWords": 60,
+          "points": [
+            "Your name",
+            "Where you are from and where you live",
+            "Your work or study",
+            "Your family",
+            "Which languages you speak"
+          ],
+          "minWords": 40,
+          "maxWords": 60,
           "model": "Hallo! Ik ben Mia. Ik kom uit Spanje, maar ik woon in Rotterdam. Ik werk in een restaurant. Ik heb een broer en een zus. Mijn broer woont in Madrid. Ik spreek Spaans, Nederlands en een beetje Engels. Ik vind Nederland erg leuk."
         }
       ],
       "sources": [
-        { "title": "NT2 TaalMenu: A1", "url": "https://nt2taalmenu.nl/nt2-a1-menu/" }
+        {
+          "title": "NT2 TaalMenu: A1",
+          "url": "https://nt2taalmenu.nl/nt2-a1-menu/"
+        }
       ]
     }
   ]

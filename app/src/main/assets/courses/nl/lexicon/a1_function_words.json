@@ -111,5 +111,7 @@
   {"id":"waar","nl":"waar","en":"where","pos":"adv","lvl":"A1","topic":"function_words","ex":"Waar woon je?","exEn":"Where do you live?"},
   {"id":"waarom","nl":"waarom","en":"why","pos":"adv","lvl":"A1","topic":"function_words","ex":"Waarom ben je moe?","exEn":"Why are you tired?"},
   {"id":"hoe","nl":"hoe","en":"how","pos":"adv","lvl":"A1","topic":"function_words","ex":"Hoe heet je?","exEn":"What is your name?"},
-  {"id":"beetje","nl":"beetje","en":"a little (een beetje)","pos":"noun","lvl":"A1","topic":"function_words","art":"het","pl":"-","ex":"Ik spreek een beetje Nederlands.","exEn":"I speak a little Dutch."}
+  {"id":"beetje","nl":"beetje","en":"a little (een beetje)","pos":"noun","lvl":"A1","topic":"function_words","art":"het","pl":"-","ex":"Ik spreek een beetje Nederlands.","exEn":"I speak a little Dutch."},
+  {"id":"per","nl":"per","en":"per, a","pos":"prep","lvl":"A1","topic":"function_words","ex":"De appels kosten twee euro per kilo.","exEn":"The apples cost two euros a kilo."},
+  {"id":"er","nl":"er","en":"there (with is/zijn)","pos":"adv","lvl":"A1","topic":"function_words","ex":"Er is ook een klein balkon.","exEn":"There is also a small balcony."}
 ]

@@ -1,0 +1,111 @@
+{
+  "id": "a1.t02", "level": "A1", "kind": "theme",
+  "title": "Days & routine",
+  "subtitle": "Talk about the week, your daily routine and make an appointment",
+  "lessons": [
+    {
+      "id": "a1.t02.l1", "title": "Days and times", "kind": "vocab",
+      "vocab": [
+        "maandag", "dinsdag", "woensdag", "donderdag", "vrijdag", "zaterdag", "zondag", "week", "weekend", "ochtend",
+        "middag", "avond", "nacht", "vandaag", "morgen", "gisteren", "altijd", "vaak", "soms", "nooit", "uur", "afspraak"
+      ]
+    },
+    {
+      "id": "a1.t02.l2", "title": "My day", "kind": "vocab",
+      "vocab": [
+        "opstaan", "wakker_worden", "douchen", "zich_aankleden", "ontbijten", "ontbijt", "werken", "school", "lunch", "avondeten",
+        "fietsen", "slapen", "huiswerk", "televisie", "lezen", "koken", "afwassen", "boodschap", "sport", "vriend"
+      ]
+    },
+    {
+      "id": "a1.t02.l3", "title": "Tim's week", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "Look for the days of the week and the times first. Then read the details. Tap a word you don't know." }
+      ],
+      "text": "Ik ben Tim en ik werk in Utrecht. Op maandag, dinsdag en donderdag ga ik met de trein naar mijn werk. Ik sta dan om zeven uur op en ik ontbijt om half acht. Op woensdag werk ik thuis. Dan sta ik later op. Op vrijdagavond ga ik naar een café met mijn vrienden. Op zaterdag slaap ik lang en daarna doe ik boodschappen. Op zondag bel ik mijn moeder. Dan eten wij samen. Ik heb geen tijd voor sport, maar ik fiets elke dag een beetje.",
+      "items": [
+        { "type": "choice", "q": "Hoe laat staat Tim op maandag op?", "options": ["Om zeven uur", "Om half acht", "Om acht uur"], "answer": 0, "en": "What time does Tim get up on Monday?", "explain": "He gets up at seven and has breakfast at half past seven (7:30)." },
+        { "type": "choice", "q": "Waar werkt Tim op woensdag?", "options": ["Thuis", "In Utrecht", "In een café"], "answer": 0, "en": "Where does Tim work on Wednesday?" },
+        { "type": "choice", "q": "Wat doet Tim op vrijdagavond?", "options": ["Hij gaat naar een café", "Hij werkt", "Hij belt zijn moeder"], "answer": 0, "en": "What does Tim do on Friday evening?" },
+        { "type": "choice", "q": "Wanneer belt Tim zijn moeder?", "options": ["Op zondag", "Op zaterdag", "Op maandag"], "answer": 0, "en": "When does Tim call his mother?" },
+        { "type": "choice", "q": "Heeft Tim veel tijd voor sport?", "options": ["Nee, hij heeft geen tijd", "Ja, elke dag", "Ja, op zondag"], "answer": 0, "en": "Does Tim have a lot of time for sport?", "explain": "He says: ik heb geen tijd voor sport." }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A1", "url": "https://nt2taalmenu.nl/nt2-a1-menu/" }
+      ]
+    },
+    {
+      "id": "a1.t02.l4", "title": "Making an appointment", "kind": "listening",
+      "dialogue": [
+        { "who": "A", "nl": "Goedemorgen, praktijk van dokter De Vries.", "en": "Good morning, Dr De Vries' practice." },
+        { "who": "B", "nl": "Goedemorgen. Ik wil graag een afspraak maken.", "en": "Good morning. I'd like to make an appointment." },
+        { "who": "A", "nl": "Natuurlijk. Wanneer kunt u komen?", "en": "Of course. When can you come?" },
+        { "who": "B", "nl": "Kan ik donderdag komen?", "en": "Can I come on Thursday?" },
+        { "who": "A", "nl": "Donderdag kan ik niet. Kunt u vrijdag?", "en": "I can't do Thursday. Can you do Friday?" },
+        { "who": "B", "nl": "Ja, vrijdag kan ik wel. Hoe laat?", "en": "Yes, I can do Friday. What time?" },
+        { "who": "A", "nl": "Om half tien of om kwart voor elf.", "en": "At half past nine or at a quarter to eleven." },
+        { "who": "B", "nl": "Half tien is goed.", "en": "Half past nine is fine." },
+        { "who": "A", "nl": "Prima. Wat is uw naam?", "en": "Fine. What is your name?" },
+        { "who": "B", "nl": "Mijn naam is Jansen. Tot vrijdag!", "en": "My name is Jansen. See you Friday!" }
+      ],
+      "items": [
+        { "type": "listen", "nl": "Ik wil graag een afspraak maken.", "q": "What does he want?", "options": ["To make an appointment", "To cancel an appointment", "To buy a ticket"], "answer": 0 },
+        { "type": "listen", "nl": "Om kwart voor elf.", "q": "What time is it?", "options": ["10:45", "11:15", "10:15"], "answer": 0, "explain": "kwart voor elf = a quarter to eleven = 10:45." },
+        { "type": "listen", "nl": "Donderdag kan ik niet.", "q": "Which day is not possible?", "options": ["Thursday", "Friday", "Tuesday"], "answer": 0 },
+        { "type": "listen", "nl": "Tot vrijdag." },
+        { "type": "choice", "q": "Welke dag krijgt meneer Jansen een afspraak?", "options": ["Vrijdag", "Donderdag", "Dinsdag"], "answer": 0, "en": "Which day does Mr Jansen get an appointment?" },
+        { "type": "choice", "q": "Hoe laat is de afspraak?", "options": ["Half tien", "Kwart voor elf", "Tien uur"], "answer": 0, "en": "What time is the appointment?" }
+      ],
+      "sources": [
+        { "title": "Taalklas: free Dutch video course", "url": "https://www.taalklas.nl/" }
+      ]
+    },
+    {
+      "id": "a1.t02.l5", "title": "Say it yourself", "kind": "speaking",
+      "dialogue": [
+        { "who": "A", "nl": "Goedemorgen, praktijk van dokter De Vries.", "en": "Good morning, Dr De Vries' practice." },
+        { "who": "B", "nl": "Goedemorgen. Ik wil graag een afspraak maken.", "en": "Good morning. I'd like to make an appointment." },
+        { "who": "A", "nl": "Natuurlijk. Wanneer kunt u komen?", "en": "Of course. When can you come?" },
+        { "who": "B", "nl": "Kan ik donderdag komen?", "en": "Can I come on Thursday?" },
+        { "who": "A", "nl": "Donderdag kan ik niet. Kunt u vrijdag?", "en": "I can't do Thursday. Can you do Friday?" },
+        { "who": "B", "nl": "Ja, vrijdag kan ik wel. Hoe laat?", "en": "Yes, I can do Friday. What time?" },
+        { "who": "A", "nl": "Om half tien of om kwart voor elf.", "en": "At half past nine or at a quarter to eleven." },
+        { "who": "B", "nl": "Half tien is goed.", "en": "Half past nine is fine." },
+        { "who": "A", "nl": "Prima. Wat is uw naam?", "en": "Fine. What is your name?" },
+        { "who": "B", "nl": "Mijn naam is Jansen. Tot vrijdag!", "en": "My name is Jansen. See you Friday!" }
+      ],
+      "items": [
+        { "type": "speak", "nl": "Ik wil graag een afspraak maken.", "en": "I'd like to make an appointment." },
+        { "type": "speak", "nl": "Kan ik vrijdag komen?", "en": "Can I come on Friday?" },
+        {
+          "type": "prompt",
+          "task": "Describe your day: when you get up, what you do in the morning and in the evening, and when you go to sleep.",
+          "model": "Ik sta om zeven uur op. Dan ontbijt ik. Daarna ga ik naar mijn werk. Ik werk tot vijf uur. 's Avonds kook ik en ik kijk televisie. Ik ga om elf uur slapen.",
+          "seconds": 40,
+          "points": ["When you get up", "What you do in the morning", "What you do in the evening", "When you go to sleep"]
+        }
+      ]
+    },
+    {
+      "id": "a1.t02.l6", "title": "Write about your day", "kind": "writing",
+      "explain": [
+        { "type": "p", "text": "Put your day in order with time words: *eerst*, *dan*, *daarna*, *later*, and with clock times: *om zeven uur*, *om half negen*. Remember that the verb stays in second place: *Dan ontbijt ik.*" },
+        { "type": "ex", "nl": "Om zeven uur sta ik op en daarna douche ik.", "en": "At seven o'clock I get up and then I take a shower." },
+        { "type": "ex", "nl": "'s Avonds kook ik en ik kijk televisie.", "en": "In the evening I cook and watch television." },
+        { "type": "tip", "text": "Use *sta op* (the prefix goes to the end) and *om* before a time. If you are unsure about a word, look in the dictionary first." }
+      ],
+      "items": [
+        {
+          "type": "write",
+          "task": "A Dutch friend asks: 'What does your day look like?' Write a short answer.",
+          "points": ["What time you get up", "What you do in the morning", "What you do in the afternoon", "What you do in the evening"],
+          "minWords": 50, "maxWords": 70,
+          "model": "Ik sta om zeven uur op. Dan douche ik en ik ontbijt. Om half negen begin ik met werken. Ik eet om twaalf uur een broodje met mijn collega. Ik werk tot vijf uur. Dan fiets ik naar huis. 's Avonds kook ik en ik kijk televisie. Op zaterdag slaap ik lang en op zondag bel ik mijn familie."
+        }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A1", "url": "https://nt2taalmenu.nl/nt2-a1-menu/" }
+      ]
+    }
+  ]
+}

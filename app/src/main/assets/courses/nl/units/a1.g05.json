@@ -1,0 +1,122 @@
+{
+  "id": "a1.g05", "level": "A1", "kind": "grammar",
+  "title": "Word order 1",
+  "subtitle": "The verb in second place, questions, and time before place",
+  "lessons": [
+    {
+      "id": "a1.g05.l1", "title": "The verb comes second", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "In a Dutch statement the conjugated verb is always the **second element**. The first element is often the subject, but it can also be a time, a place or something else you want to stress. When it is not the subject, the subject moves behind the verb. This is called **inversion**." },
+        { "type": "table", "head": ["1st", "verb", "rest"], "rows": [["Ik", "ga", "morgen naar huis."], ["Morgen", "ga", "ik naar huis."], ["Naar huis", "ga", "ik morgen."], ["In Utrecht", "woon", "ik al drie jaar."]] },
+        { "type": "ex", "nl": "Vandaag werk ik thuis.", "en": "Today I work at home." },
+        { "type": "tip", "text": "The first *element* can be several words: *Op zaterdag* or *In de zomer* count as one block. Then comes the verb. Never put the subject between the first block and the verb: *Morgen ik ga* is wrong." },
+        { "type": "ex", "nl": "Op zaterdag eten wij bij mijn oma.", "en": "On Saturday we eat at my grandma's." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Morgen ik ga naar huis.", "Morgen ga ik naar huis.", "Ga morgen ik naar huis."], "answer": 1 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Vandaag werk ik thuis.", "Vandaag ik werk thuis.", "Vandaag thuis werk ik niet."], "answer": 0 },
+        { "type": "choice", "q": "Which word must be second in the sentence?", "options": ["the subject", "the verb", "the time"], "answer": 1 },
+        { "type": "gap", "text": "Vandaag ___ ik thuis.", "answers": ["werk"], "hint": "werken", "en": "Today I work at home." },
+        { "type": "gap", "text": "Op zaterdag ___ wij naar de markt.", "answers": ["gaan"], "hint": "gaan", "en": "On Saturday we go to the market." },
+        { "type": "gap", "text": "Hier ___ ik.", "answers": ["woon"], "hint": "wonen", "en": "Here is where I live." },
+        { "type": "transform", "q": "Ik drink nu koffie.", "instruction": "Start with Nu", "answers": ["Nu drink ik koffie"] },
+        { "type": "transform", "q": "Wij gaan in de zomer naar Spanje.", "instruction": "Start with In de zomer", "answers": ["In de zomer gaan wij naar Spanje", "In de zomer gaan we naar Spanje"] },
+        { "type": "transform", "q": "Ik ga morgen naar huis.", "instruction": "Start with Morgen", "answers": ["Morgen ga ik naar huis"] },
+        { "type": "order", "answer": "Morgen ga ik naar huis.", "en": "Tomorrow I am going home.", "alt": ["Ik ga morgen naar huis."] },
+        { "type": "order", "answer": "Op zondag eten wij bij mijn oma.", "en": "On Sunday we eat at my grandma's.", "alt": ["Wij eten op zondag bij mijn oma."] },
+        { "type": "order", "answer": "Nu werkt hij thuis.", "en": "Now he works at home.", "alt": ["Hij werkt nu thuis."] },
+        { "type": "translate", "en": "Tomorrow I am going to the market.", "answers": ["Morgen ga ik naar de markt", "Ik ga morgen naar de markt"] },
+        { "type": "translate", "en": "In the summer we eat in the garden.", "answers": ["In de zomer eten wij in de tuin", "In de zomer eten we in de tuin", "Wij eten in de zomer in de tuin", "We eten in de zomer in de tuin"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: inversie (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuinversie/" }
+      ]
+    },
+    {
+      "id": "a1.g05.l2", "title": "Asking questions", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "A **yes/no question** starts with the verb: *Woon je in Utrecht?* A **question word** goes first, then the verb, then the subject: *Waar woon je?* Remember the verb is always in second place." },
+        { "type": "table", "head": ["question word", "means", "example"], "rows": [["wie", "who", "Wie is dat?"], ["wat", "what", "Wat doe je?"], ["waar", "where", "Waar woon je?"], ["wanneer", "when", "Wanneer kom je?"], ["waarom", "why", "Waarom ben je moe?"], ["hoe", "how", "Hoe heet je?"], ["hoeveel", "how much / many", "Hoeveel kost het?"], ["welk / welke", "which", "Welke fiets is van jou?"]] },
+        { "type": "ex", "nl": "Hoe laat begint de les?", "en": "What time does the lesson start?" },
+        { "type": "tip", "text": "Use **welk** with *het*-words and **welke** with *de*-words and plurals: *welk boek, welke tafel, welke boeken*. Use **hoe laat** to ask for the time: *Hoe laat is het?*" },
+        { "type": "ex", "nl": "Waar kom je vandaan?", "en": "Where are you from?" }
+      ],
+      "items": [
+        { "type": "choice", "q": "Which question word means 'why'?", "options": ["waarom", "wanneer", "waar"], "answer": 0 },
+        { "type": "choice", "q": "___ woon je? (where)", "options": ["Wie", "Waar", "Wat"], "answer": 1 },
+        { "type": "choice", "q": "___ kost een kaartje? (how much)", "options": ["Hoeveel", "Hoe laat", "Wanneer"], "answer": 0 },
+        { "type": "choice", "q": "___ boek is dat? (which)", "options": ["Welke", "Welk", "Wie"], "answer": 1, "explain": "boek is a het-word, so welk." },
+        { "type": "choice", "q": "___ fiets is van jou? (which)", "options": ["Welke", "Welk", "Wat"], "answer": 0, "explain": "fiets is a de-word, so welke." },
+        { "type": "gap", "text": "___ ben je? Ik ben Lisa.", "answers": ["Wie"], "en": "Who are you? I am Lisa." },
+        { "type": "gap", "text": "___ kom je vandaan? Uit Spanje.", "answers": ["Waar"], "en": "Where are you from? From Spain." },
+        { "type": "gap", "text": "___ laat is het? Het is half drie.", "answers": ["Hoe"], "en": "What time is it? It is half past two." },
+        { "type": "gap", "text": "___ eet je? Een broodje.", "answers": ["Wat"], "en": "What are you eating? A sandwich." },
+        { "type": "gap", "text": "___ vertrekt de trein? Om tien uur.", "answers": ["Wanneer"], "en": "When does the train leave? At ten o'clock." },
+        { "type": "transform", "q": "Je woont in Utrecht.", "instruction": "Turn it into a yes/no question", "answers": ["Woon je in Utrecht", "Woon jij in Utrecht"] },
+        { "type": "transform", "q": "Hij werkt vandaag.", "instruction": "Turn it into a yes/no question", "answers": ["Werkt hij vandaag"] },
+        { "type": "order", "answer": "Waar woon jij?", "en": "Where do you live?" },
+        { "type": "order", "answer": "Hoe laat is het?", "en": "What time is it?" },
+        { "type": "order", "answer": "Heb jij een fiets?", "en": "Do you have a bike?" },
+        { "type": "order", "answer": "Hoeveel kost de kaart?", "en": "How much does the ticket cost?" },
+        { "type": "translate", "en": "Do you speak Dutch? (informal)", "answers": ["Spreek je Nederlands", "Spreek jij Nederlands"] },
+        { "type": "translate", "en": "When do you come? (informal)", "answers": ["Wanneer kom je", "Wanneer kom jij"] },
+        { "type": "translate", "en": "How much does it cost?", "answers": ["Hoeveel kost het", "Hoeveel kost dit", "Hoeveel kost dat"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: vraagwoorden (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuvraagwoorden/" },
+        { "title": "NT2 TaalMenu: gesloten vragen (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menugeslotenvragen/" }
+      ]
+    },
+    {
+      "id": "a1.g05.l3", "title": "Time, manner, place", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "After the verb, extra information usually follows a fixed order: **time** first, then **manner** (how or with whom), then **place**. Think *TMP*: Time – Manner – Place." },
+        { "type": "table", "head": ["subject + verb", "time", "manner", "place"], "rows": [["Ik ga", "morgen", "met de bus", "naar Utrecht."], ["Wij eten", "vandaag", "", "thuis."], ["Hij werkt", "elke dag", "hard", "in de tuin."], ["Zij fietst", "elke ochtend", "snel", "naar school."]] },
+        { "type": "ex", "nl": "Ik ga morgen met de bus naar Utrecht.", "en": "I am going to Utrecht by bus tomorrow." },
+        { "type": "tip", "text": "If you swap the order, people will still understand you, but time before place sounds more natural. Most of the time you only need two of the three parts." },
+        { "type": "ex", "nl": "Wij eten vandaag thuis.", "en": "We eat at home today." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Which sentence has the natural order?", "options": ["Ik ga met de bus morgen naar Utrecht.", "Ik ga morgen met de bus naar Utrecht.", "Ik ga naar Utrecht morgen met de bus."], "answer": 1 },
+        { "type": "choice", "q": "Which sentence has the natural order?", "options": ["Hij werkt in de tuin elke dag.", "Hij werkt elke dag in de tuin.", "Hij elke dag werkt in de tuin."], "answer": 1 },
+        { "type": "gap", "text": "Ik ga ___ naar het strand.", "answers": ["morgen"], "en": "I am going to the beach tomorrow." },
+        { "type": "gap", "text": "Wij eten vandaag ___.", "answers": ["thuis"], "en": "We eat at home today." },
+        { "type": "order", "answer": "Ik ga morgen met de bus naar Utrecht.", "en": "I am going to Utrecht by bus tomorrow." },
+        { "type": "order", "answer": "Zij fietst elke dag naar school.", "en": "She cycles to school every day.", "alt": ["Elke dag fietst zij naar school."] },
+        { "type": "order", "answer": "Ik woon al drie jaar in Utrecht.", "en": "I have been living in Utrecht for three years." },
+        { "type": "order", "answer": "Wij werken vandaag thuis.", "en": "We work at home today.", "alt": ["Vandaag werken wij thuis."] },
+        { "type": "translate", "en": "We are going to the beach tomorrow.", "answers": ["Wij gaan morgen naar het strand", "We gaan morgen naar het strand", "Morgen gaan wij naar het strand", "Morgen gaan we naar het strand"] },
+        { "type": "translate", "en": "She lives in Leiden.", "answers": ["Zij woont in Leiden", "Ze woont in Leiden"] },
+        { "type": "translate", "en": "He works at home today.", "answers": ["Hij werkt vandaag thuis", "Vandaag werkt hij thuis"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: grammar overview (A1)", "url": "https://nt2taalmenu.nl/a1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "a1.g05.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["In de zomer wij gaan naar Spanje.", "In de zomer gaan wij naar Spanje.", "In de zomer naar Spanje gaan wij niet."], "answer": 1 },
+        { "type": "choice", "q": "___ ben je moe? Omdat ik niet slaap. (why)", "options": ["Waarom", "Wanneer", "Hoe"], "answer": 0 },
+        { "type": "choice", "q": "___ tafel is van jou? (which)", "options": ["Welk", "Welke", "Wie"], "answer": 1 },
+        { "type": "gap", "text": "Morgen ___ ik naar de dokter.", "answers": ["ga"], "hint": "gaan", "en": "Tomorrow I am going to the doctor." },
+        { "type": "gap", "text": "___ heet je? Ik heet Sam.", "answers": ["Hoe"], "en": "What is your name? I am called Sam." },
+        { "type": "gap", "text": "___ is dat? Dat is mijn buurman.", "answers": ["Wie"], "en": "Who is that? That is my neighbour." },
+        { "type": "transform", "q": "Ik werk vandaag thuis.", "instruction": "Start with Vandaag", "answers": ["Vandaag werk ik thuis"] },
+        { "type": "transform", "q": "Je komt uit Spanje.", "instruction": "Turn it into a yes/no question", "answers": ["Kom je uit Spanje", "Kom jij uit Spanje"] },
+        { "type": "transform", "q": "Zij woont in Leiden.", "instruction": "Turn it into a yes/no question", "answers": ["Woont zij in Leiden"] },
+        { "type": "order", "answer": "Waar werk je?", "en": "Where do you work?" },
+        { "type": "order", "answer": "Op zaterdag ga ik naar de markt.", "en": "On Saturday I go to the market.", "alt": ["Ik ga op zaterdag naar de markt."] },
+        { "type": "order", "answer": "Wanneer komt de bus?", "en": "When does the bus come?" },
+        { "type": "order", "answer": "Ik fiets elke dag naar mijn werk.", "en": "I cycle to my work every day." },
+        { "type": "translate", "en": "What time does the lesson start?", "answers": ["Hoe laat begint de les"] },
+        { "type": "translate", "en": "Where is the station?", "answers": ["Waar is het station"] },
+        { "type": "translate", "en": "Today I am eating at home.", "answers": ["Vandaag eet ik thuis", "Ik eet vandaag thuis"] },
+        { "type": "translate", "en": "Who is that man?", "answers": ["Wie is die man", "Wie is dat", "Wie is die man daar"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: inversie (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuinversie/" }
+      ]
+    }
+  ]
+}

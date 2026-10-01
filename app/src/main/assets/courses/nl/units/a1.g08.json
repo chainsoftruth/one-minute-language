@@ -1,0 +1,100 @@
+{
+  "id": "a1.g08", "level": "A1", "kind": "grammar",
+  "title": "Adjectives 1",
+  "subtitle": "When an adjective gets an -e, and how to spell it",
+  "lessons": [
+    {
+      "id": "a1.g08.l1", "title": "With or without -e", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "An adjective that stands **after** the verb (*zijn, worden, blijven*) never changes: *Het huis is groot. De tafel is nieuw.* An adjective **before** a noun usually gets an **-e**: *de grote tafel, een nieuwe fiets, grote huizen*." },
+        { "type": "table", "head": ["", "de-word", "het-word"], "rows": [["een / no article", "een grote man", "een groot huis"], ["de / het / dit / mijn", "de grote man", "het grote huis"], ["plural", "grote mannen, de grote mannen", "grote huizen, de grote huizen"]] },
+        { "type": "ex", "nl": "Ik woon in een groot huis met een grote tuin.", "en": "I live in a big house with a big garden." },
+        { "type": "tip", "text": "There is only **one** case without -e: a singular *het*-word after **een, geen** or no article: *een groot huis, geen groot probleem, mooi weer*. In all other cases add -e." },
+        { "type": "ex", "nl": "Het kleine meisje heeft een nieuwe fiets.", "en": "The little girl has a new bike." }
+      ],
+      "items": [
+        { "type": "choice", "q": "een ___ huis (big)", "options": ["groot", "grote"], "answer": 0, "explain": "het huis is a het-word with een: no -e." },
+        { "type": "choice", "q": "de ___ man (tall)", "options": ["lang", "lange"], "answer": 1 },
+        { "type": "choice", "q": "het ___ huis (old)", "options": ["oud", "oude"], "answer": 1, "explain": "After het (a definite word) the adjective takes -e." },
+        { "type": "choice", "q": "Het huis is ___. (big)", "options": ["groot", "grote"], "answer": 0, "explain": "After the verb zijn the adjective never changes." },
+        { "type": "choice", "q": "___ huizen (big)", "options": ["groot", "grote"], "answer": 1 },
+        { "type": "gap", "text": "Ik heb een ___ fiets.", "answers": ["nieuwe"], "hint": "nieuw", "en": "I have a new bike." },
+        { "type": "gap", "text": "Wij hebben een ___ huis.", "answers": ["klein"], "hint": "klein", "en": "We have a small house." },
+        { "type": "gap", "text": "Zij woont in een ___ stad.", "answers": ["grote"], "hint": "groot", "en": "She lives in a big city." },
+        { "type": "gap", "text": "Het ___ huis staat in Utrecht.", "answers": ["oude"], "hint": "oud", "en": "The old house is in Utrecht." },
+        { "type": "gap", "text": "De fiets is ___.", "answers": ["nieuw"], "hint": "nieuw", "en": "The bike is new." },
+        { "type": "transform", "q": "Het huis is groot.", "instruction": "Say: the big house", "answers": ["het grote huis"] },
+        { "type": "transform", "q": "De man is lang.", "instruction": "Say: the tall man", "answers": ["de lange man"] },
+        { "type": "transform", "q": "Het boek is nieuw.", "instruction": "Say: a new book (een ...)", "answers": ["een nieuw boek"], "explain": "boek is a het-word with een: no -e." },
+        { "type": "order", "answer": "Ik woon in een groot huis.", "en": "I live in a big house." },
+        { "type": "order", "answer": "De grote man heeft een kleine hond.", "en": "The big man has a small dog." },
+        { "type": "translate", "en": "I have a new bike.", "answers": ["Ik heb een nieuwe fiets"] },
+        { "type": "translate", "en": "The house is old.", "answers": ["Het huis is oud"] },
+        { "type": "translate", "en": "The old man is nice.", "answers": ["De oude man is aardig"] },
+        { "type": "match", "pairs": [["een groot huis", "a big house"], ["de grote tafel", "the big table"], ["het grote huis", "the big house"], ["grote huizen", "big houses"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: adjectief (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuadjectief/" }
+      ]
+    },
+    {
+      "id": "a1.g08.l2", "title": "Spelling of the -e", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Adding **-e** can change the spelling, with the same rules as for plurals and verb stems. A long vowel written with two letters loses one (*groot → grote*). A short vowel gets a double consonant (*wit → witte*). A final **f** becomes **v**, a final **s** becomes **z** (*lief → lieve*, *vies → vieze*)." },
+        { "type": "table", "head": ["adjective", "with -e", "what happens"], "rows": [["groot", "grote", "oo → o"], ["wit", "witte", "t → tt"], ["lief", "lieve", "f → v"], ["vies", "vieze", "s → z"], ["mooi", "mooie", "just add -e"], ["duur", "dure", "uu → u"], ["oud", "oude", "just add -e"], ["nieuw", "nieuwe", "just add -e"]] },
+        { "type": "ex", "nl": "Zij draagt een witte jas en een blauwe broek.", "en": "She is wearing a white coat and blue trousers." },
+        { "type": "tip", "text": "More than one adjective? Each one gets the same ending: *een mooie witte jas*, *het kleine oude huis*." },
+        { "type": "ex", "nl": "Het is een lieve vrouw met een mooie stem.", "en": "She is a kind woman with a beautiful voice." }
+      ],
+      "items": [
+        { "type": "transform", "q": "groot", "instruction": "Write the form before a de-word (de ... stad)", "answers": ["grote"] },
+        { "type": "transform", "q": "wit", "instruction": "Write the form before a de-word (de ... muur)", "answers": ["witte"], "explain": "A short vowel needs a double consonant." },
+        { "type": "transform", "q": "lief", "instruction": "Write the form before a de-word (een ... vrouw)", "answers": ["lieve"], "explain": "f becomes v between vowels." },
+        { "type": "transform", "q": "vies", "instruction": "Write the form before a de-word (een ... kamer)", "answers": ["vieze"] },
+        { "type": "transform", "q": "mooi", "instruction": "Write the form before a de-word (een ... jas)", "answers": ["mooie"] },
+        { "type": "transform", "q": "duur", "instruction": "Write the form before a de-word (een ... jas)", "answers": ["dure"] },
+        { "type": "choice", "q": "Which is correct?", "options": ["de witte muur", "de wite muur", "de wit muur"], "answer": 0 },
+        { "type": "choice", "q": "Which is correct?", "options": ["een lieve vrouw", "een liefe vrouw", "een lief vrouw"], "answer": 0 },
+        { "type": "choice", "q": "Which is correct?", "options": ["een lief meisje", "een lieve meisje", "een liefe meisje"], "answer": 0, "explain": "meisje is a het-word with een: no -e." },
+        { "type": "gap", "text": "Zij draagt een ___ jas. (wit)", "answers": ["witte"], "en": "She is wearing a white coat." },
+        { "type": "gap", "text": "Hij is een ___ man. (lief)", "answers": ["lieve"], "en": "He is a kind man." },
+        { "type": "gap", "text": "Dat is een ___ kamer. (vies)", "answers": ["vieze"], "en": "That is a dirty room." },
+        { "type": "gap", "text": "Ik wil een ___ tas kopen. (nieuw)", "answers": ["nieuwe"], "en": "I want to buy a new bag." },
+        { "type": "order", "answer": "Zij heeft een lieve zus.", "en": "She has a kind sister." },
+        { "type": "order", "answer": "Ik heb een mooie witte jas.", "en": "I have a beautiful white coat." },
+        { "type": "translate", "en": "I have a white coat.", "answers": ["Ik heb een witte jas"] },
+        { "type": "translate", "en": "She is a kind woman.", "answers": ["Zij is een lieve vrouw", "Ze is een lieve vrouw"] },
+        { "type": "match", "pairs": [["groot", "grote"], ["wit", "witte"], ["lief", "lieve"], ["vies", "vieze"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: adjectief (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuadjectief/" }
+      ]
+    },
+    {
+      "id": "a1.g08.l3", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "een ___ tafel (big)", "options": ["groot", "grote"], "answer": 1 },
+        { "type": "choice", "q": "een ___ boek (new)", "options": ["nieuw", "nieuwe"], "answer": 0 },
+        { "type": "choice", "q": "de ___ kinderen (small)", "options": ["klein", "kleine"], "answer": 1 },
+        { "type": "choice", "q": "Het eten is ___. (good)", "options": ["goed", "goede"], "answer": 0 },
+        { "type": "gap", "text": "Dit is een ___ stoel. (mooi)", "answers": ["mooie"], "en": "This is a beautiful chair." },
+        { "type": "gap", "text": "Het ___ meisje heet Sanne. (klein)", "answers": ["kleine"], "en": "The little girl is called Sanne." },
+        { "type": "gap", "text": "Ik heb een ___ probleem. (groot)", "answers": ["groot"], "en": "I have a big problem.", "explain": "probleem is a het-word with een." },
+        { "type": "gap", "text": "Zij hebben twee ___ honden. (groot)", "answers": ["grote"], "en": "They have two big dogs." },
+        { "type": "gap", "text": "Het is een ___ dag. (lang)", "answers": ["lange"], "en": "It is a long day." },
+        { "type": "transform", "q": "De jas is wit.", "instruction": "Say: the white coat", "answers": ["de witte jas"] },
+        { "type": "transform", "q": "Het eten is lekker.", "instruction": "Say: the tasty food", "answers": ["het lekkere eten"], "explain": "lekker → lekkere: the short vowel needs kk." },
+        { "type": "transform", "q": "De kamer is vies.", "instruction": "Say: a dirty room", "answers": ["een vieze kamer"] },
+        { "type": "order", "answer": "Wij wonen in een groot huis.", "en": "We live in a big house." },
+        { "type": "order", "answer": "Het oude huis is erg mooi.", "en": "The old house is very beautiful." },
+        { "type": "order", "answer": "Ik zie een kleine witte hond.", "en": "I see a small white dog." },
+        { "type": "translate", "en": "The new teacher is nice.", "answers": ["De nieuwe leraar is aardig", "De nieuwe lerares is aardig"] },
+        { "type": "translate", "en": "I have a nice job.", "answers": ["Ik heb leuk werk", "Ik heb een leuke baan"] },
+        { "type": "translate", "en": "Where is the green bag?", "answers": ["Waar is de groene tas"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: adjectief (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuadjectief/" }
+      ]
+    }
+  ]
+}

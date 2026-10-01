@@ -1,0 +1,104 @@
+{
+  "id": "a1.g09", "level": "A1", "kind": "grammar",
+  "title": "Modals + imperative",
+  "subtitle": "can, want, must, may, shall, and giving instructions",
+  "lessons": [
+    {
+      "id": "a1.g09.l1", "title": "kunnen, willen, moeten, mogen, zullen", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "A **modal verb** says what you can, want or must do. It is the conjugated verb (second place), and the second verb goes to the **end** of the sentence as an infinitive: *Ik wil morgen komen.* *Kun je me helpen?*" },
+        { "type": "table", "head": ["", "kunnen", "willen", "moeten", "mogen", "zullen"], "rows": [["ik", "kan", "wil", "moet", "mag", "zal"], ["jij / je", "kunt (kun je?)", "wilt (wil je?)", "moet", "mag", "zult (zul je?)"], ["u", "kunt", "wilt", "moet", "mag", "zult"], ["hij / zij / het", "kan", "wil", "moet", "mag", "zal"], ["wij / jullie / zij", "kunnen", "willen", "moeten", "mogen", "zullen"]] },
+        { "type": "ex", "nl": "Ik wil morgen naar de markt gaan, maar ik moet werken.", "en": "I want to go to the market tomorrow, but I have to work." },
+        { "type": "table", "head": ["verb", "meaning", "example"], "rows": [["kunnen", "can, be able to", "Ik kan goed zwemmen."], ["willen", "want to", "Wij willen koffie drinken."], ["moeten", "must, have to", "Je moet nu gaan."], ["mogen", "may, be allowed to", "Hier mag je parkeren."], ["zullen", "shall (suggestion)", "Zullen we gaan?"]] },
+        { "type": "tip", "text": "*Moeten niet* means *must not*. For *don't have to* Dutch says **niet hoeven te**: *Je hoeft niet te komen* (You don't have to come)." },
+        { "type": "ex", "nl": "Mag ik hier zitten?", "en": "May I sit here?" }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik ___ goed zwemmen. (can)", "options": ["kan", "kunt", "kunnen"], "answer": 0 },
+        { "type": "choice", "q": "Jij ___ morgen werken. (must)", "options": ["moeten", "moet", "moetst"], "answer": 1 },
+        { "type": "choice", "q": "___ ik hier parkeren? (may)", "options": ["Mag", "Wil", "Moet"], "answer": 0 },
+        { "type": "choice", "q": "___ we naar huis gaan? (shall)", "options": ["Zullen", "Moeten", "Zal"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik wil komen morgen.", "Ik wil morgen komen.", "Ik morgen wil komen."], "answer": 1 },
+        { "type": "gap", "text": "Ik wil morgen ___. (komen)", "answers": ["komen"], "en": "I want to come tomorrow." },
+        { "type": "gap", "text": "Wij moeten nu ___. (gaan)", "answers": ["gaan"], "en": "We have to go now." },
+        { "type": "gap", "text": "Kun je me ___? (helpen)", "answers": ["helpen"], "en": "Can you help me?" },
+        { "type": "gap", "text": "Anna ___ goed Nederlands spreken. (kunnen)", "answers": ["kan"], "en": "Anna can speak Dutch well." },
+        { "type": "gap", "text": "De kinderen ___ buiten spelen. (mogen)", "answers": ["mogen"], "en": "The children are allowed to play outside." },
+        { "type": "gap", "text": "___ je koffie of thee? (willen)", "answers": ["wil"], "en": "Do you want coffee or tea?", "explain": "With je after the verb the t of wilt disappears." },
+        { "type": "transform", "q": "Ik werk morgen.", "instruction": "Add kunnen", "answers": ["Ik kan morgen werken"] },
+        { "type": "transform", "q": "Hij komt.", "instruction": "Add willen", "answers": ["Hij wil komen"] },
+        { "type": "transform", "q": "Wij gaan naar huis.", "instruction": "Add moeten", "answers": ["Wij moeten naar huis gaan", "We moeten naar huis gaan"] },
+        { "type": "order", "answer": "Ik wil morgen komen.", "en": "I want to come tomorrow." },
+        { "type": "order", "answer": "Wij moeten nu naar huis gaan.", "en": "We have to go home now." },
+        { "type": "order", "answer": "Hier mag je niet parkeren.", "en": "You may not park here." },
+        { "type": "translate", "en": "Can you help me? (informal)", "answers": ["Kun je me helpen", "Kun jij me helpen", "Kan je me helpen", "Kun je mij helpen"] },
+        { "type": "translate", "en": "I want to go home.", "answers": ["Ik wil naar huis gaan", "Ik wil naar huis"] },
+        { "type": "translate", "en": "We have to work tomorrow.", "answers": ["Wij moeten morgen werken", "We moeten morgen werken", "Morgen moeten wij werken", "Morgen moeten we werken"] },
+        { "type": "match", "pairs": [["kunnen", "can"], ["willen", "want to"], ["moeten", "must"], ["mogen", "may"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: modale werkwoorden (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menumodalewerkwoorden/" }
+      ]
+    },
+    {
+      "id": "a1.g09.l2", "title": "Commands and requests", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "The **imperative** is easy: use the **stem**, without a subject. *Kom binnen!* *Luister goed.* *Lees de tekst.* It works for one person and for a group. Add **alsjeblieft** (informal) or **alstublieft** (formal) to be polite." },
+        { "type": "table", "head": ["infinitive", "command (jij / jullie)", "polite (u)"], "rows": [["komen", "Kom binnen!", "Komt u binnen."], ["wachten", "Wacht even.", "Wacht u even."], ["luisteren", "Luister goed.", "Luistert u goed."], ["lezen", "Lees de tekst.", "Leest u de tekst."], ["nemen", "Neem een stoel.", "Neemt u een stoel."]] },
+        { "type": "ex", "nl": "Kom binnen en neem een stoel.", "en": "Come in and take a seat." },
+        { "type": "p", "text": "The verb **zijn** is irregular: **wees** (*Wees stil. Wees voorzichtig.*). A negative command uses **niet**: *Kom niet te laat.* In shops and offices people often avoid commands and ask a question instead: *Kunt u even wachten?*" },
+        { "type": "tip", "text": "With **u** the verb keeps its *-t* and *u* is spoken: *Komt u binnen.* This is polite and normal in everyday life, not stiff." },
+        { "type": "ex", "nl": "Wees alsjeblieft stil, de baby slaapt.", "en": "Please be quiet, the baby is sleeping." }
+      ],
+      "items": [
+        { "type": "transform", "q": "Jij komt binnen.", "instruction": "Make it a command", "answers": ["Kom binnen"] },
+        { "type": "transform", "q": "Jij luistert goed.", "instruction": "Make it a command", "answers": ["Luister goed"] },
+        { "type": "transform", "q": "U komt binnen.", "instruction": "Make it a polite command", "answers": ["Komt u binnen"] },
+        { "type": "transform", "q": "Jij bent rustig.", "instruction": "Make it a command", "answers": ["Wees rustig"] },
+        { "type": "choice", "q": "Which is a correct command (informal)?", "options": ["Kom binnen!", "Komt binnen!", "Komen binnen!"], "answer": 0 },
+        { "type": "choice", "q": "Which is the polite form?", "options": ["Komt u binnen.", "Kom binnen.", "Kom u binnen."], "answer": 0 },
+        { "type": "gap", "text": "___ binnen! (komen)", "answers": ["Kom"], "en": "Come in!" },
+        { "type": "gap", "text": "___ even! (wachten)", "answers": ["Wacht"], "en": "Wait a moment!" },
+        { "type": "gap", "text": "___ stil! (zijn)", "answers": ["Wees"], "en": "Be quiet!", "explain": "zijn has the irregular command form wees." },
+        { "type": "gap", "text": "___ de tekst. (lezen)", "answers": ["Lees"], "en": "Read the text." },
+        { "type": "gap", "text": "___ u even? (wachten)", "answers": ["Wacht"], "en": "Please wait a moment. (formal)", "explain": "The polite form is Wacht u even." },
+        { "type": "order", "answer": "Wacht hier even.", "en": "Wait here a moment." },
+        { "type": "order", "answer": "Komt u binnen.", "en": "Come in. (formal)" },
+        { "type": "order", "answer": "Wees alsjeblieft stil.", "en": "Please be quiet." },
+        { "type": "order", "answer": "Kom niet te laat.", "en": "Don't be late." },
+        { "type": "translate", "en": "Come in! (informal)", "answers": ["Kom binnen"] },
+        { "type": "translate", "en": "Read the text.", "answers": ["Lees de tekst"] },
+        { "type": "translate", "en": "Take a chair.", "answers": ["Neem een stoel"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: werkwoorden (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuwerkwoorden/" }
+      ]
+    },
+    {
+      "id": "a1.g09.l3", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Wij ___ vandaag niet werken. (can)", "options": ["kunnen", "kan", "kunt"], "answer": 0 },
+        { "type": "choice", "q": "___ jij morgen komen? (can)", "options": ["Kun", "Kunt", "Kunnen"], "answer": 0, "explain": "Kun je / kun jij: the t drops after jij." },
+        { "type": "choice", "q": "Which is correct?", "options": ["Zij moet naar huis gaan.", "Zij gaan moet naar huis.", "Zij moet gaan naar huis."], "answer": 0 },
+        { "type": "choice", "q": "You don't have to come.", "options": ["Je hoeft niet te komen.", "Je moet niet komen.", "Je mag niet komen."], "answer": 0 },
+        { "type": "gap", "text": "Ik ___ niet zwemmen. (kunnen)", "answers": ["kan"], "en": "I can't swim." },
+        { "type": "gap", "text": "___ ik even bellen? (mogen)", "answers": ["Mag"], "en": "May I make a quick call?" },
+        { "type": "gap", "text": "Wij willen een huis ___. (kopen)", "answers": ["kopen"], "en": "We want to buy a house." },
+        { "type": "gap", "text": "___ we samen eten? (zullen)", "answers": ["Zullen"], "en": "Shall we eat together?" },
+        { "type": "gap", "text": "___ de deur. (openen)", "answers": ["Open"], "en": "Open the door.", "explain": "The stem of openen is open." },
+        { "type": "transform", "q": "Wij eten samen.", "instruction": "Make it: Zullen we...?", "answers": ["Zullen we samen eten"] },
+        { "type": "transform", "q": "U wacht even.", "instruction": "Make it a polite command", "answers": ["Wacht u even"] },
+        { "type": "transform", "q": "Ik kom morgen.", "instruction": "Add moeten", "answers": ["Ik moet morgen komen"] },
+        { "type": "order", "answer": "Kunt u me helpen?", "en": "Can you help me? (formal)" },
+        { "type": "order", "answer": "Ik moet vandaag werken.", "en": "I have to work today." },
+        { "type": "order", "answer": "Zullen we koffie drinken?", "en": "Shall we have coffee?" },
+        { "type": "translate", "en": "Can I come in?", "answers": ["Mag ik binnenkomen", "Kan ik binnenkomen", "Mag ik binnen komen"] },
+        { "type": "translate", "en": "Please wait a moment. (formal)", "answers": ["Wacht u even alstublieft", "Wacht u alstublieft even", "Wacht u even", "Kunt u even wachten"] },
+        { "type": "translate", "en": "The children are not allowed to go outside.", "answers": ["De kinderen mogen niet naar buiten", "De kinderen mogen niet buiten spelen", "De kinderen mogen niet naar buiten gaan"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: modale werkwoorden (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menumodalewerkwoorden/" }
+      ]
+    }
+  ]
+}

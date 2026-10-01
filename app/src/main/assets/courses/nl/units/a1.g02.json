@@ -1,0 +1,101 @@
+{
+  "id": "a1.g02", "level": "A1", "kind": "grammar",
+  "title": "Pronouns, zijn, hebben",
+  "subtitle": "I, you, he, she... and the two most important verbs: to be and to have",
+  "lessons": [
+    {
+      "id": "a1.g02.l1", "title": "Subject pronouns", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "The subject pronoun says who does something. Most pronouns have two forms: a **full** form (to stress or contrast) and a **short** form (what you normally say and write). Use the short form unless you want to stress the person: *Jij komt uit Spanje, maar ik kom uit Frankrijk.*" },
+        { "type": "table", "head": ["", "full", "short", "meaning"], "rows": [["1 sg.", "ik", "-", "I"], ["2 sg. informal", "jij", "je", "you"], ["2 formal", "u", "-", "you (polite)"], ["3 sg.", "hij / zij / het", "- / ze / -", "he / she / it"], ["1 pl.", "wij", "we", "we"], ["2 pl.", "jullie", "-", "you (more than one)"], ["3 pl.", "zij", "ze", "they"]] },
+        { "type": "ex", "nl": "Ik ben Anna en dit is mijn broer. Hij heet Tim.", "en": "I am Anna and this is my brother. He is called Tim." },
+        { "type": "tip", "text": "Use **u** for strangers, older people, customers and in formal letters. Use **je** or **jij** for friends, family, children and colleagues you know well. When in doubt, start with *u*. People will tell you if *je* is fine." },
+        { "type": "p", "text": "**Ze** is both *she* and *they*. The verb tells you which one: *ze is* (she is), *ze zijn* (they are). **Het** is *it*, for things and for general statements: *Het regent* (It is raining)." },
+        { "type": "ex", "nl": "Ze zijn mijn buren. Ze wonen naast mij.", "en": "They are my neighbours. They live next to me." }
+      ],
+      "items": [
+        { "type": "choice", "q": "she", "options": ["hij", "zij", "wij"], "answer": 1 },
+        { "type": "choice", "q": "we", "options": ["jullie", "wij", "ik"], "answer": 1 },
+        { "type": "choice", "q": "Which pronoun is polite and formal?", "options": ["jij", "u", "jullie"], "answer": 1 },
+        { "type": "choice", "q": "Which pronoun do you use for two friends?", "options": ["jullie", "u", "ze"], "answer": 0 },
+        { "type": "choice", "q": "What is the short form of 'wij'?", "options": ["we", "ze", "je"], "answer": 0 },
+        { "type": "gap", "text": "Tim is mijn broer. ___ is aardig.", "answers": ["hij"], "en": "Tim is my brother. He is nice." },
+        { "type": "gap", "text": "Lisa is mijn zus. ___ is moe.", "answers": ["zij", "ze"], "en": "Lisa is my sister. She is tired." },
+        { "type": "gap", "text": "Jij en ik zijn vrienden. ___ zijn blij.", "answers": ["wij", "we"], "en": "You and I are friends. We are happy." },
+        { "type": "gap", "text": "Anna en Tim zijn mijn vrienden. ___ zijn aardig.", "answers": ["zij", "ze"], "en": "Anna and Tim are my friends. They are nice." },
+        { "type": "transform", "q": "Tim en Eva zijn thuis.", "instruction": "Replace the names with a pronoun", "answers": ["Zij zijn thuis", "Ze zijn thuis"], "explain": "Two or more people = zij / ze (they)." },
+        { "type": "transform", "q": "Jij en ik zijn vrienden.", "instruction": "Replace the subject with a pronoun", "answers": ["Wij zijn vrienden", "We zijn vrienden"], "explain": "You and I = wij / we (we)." },
+        { "type": "order", "answer": "Wij zijn vrienden.", "en": "We are friends." },
+        { "type": "order", "answer": "Jullie zijn mijn buren.", "en": "You (plural) are my neighbours." },
+        { "type": "translate", "en": "He is my brother.", "answers": ["Hij is mijn broer"] },
+        { "type": "translate", "en": "She is my friend.", "answers": ["Zij is mijn vriendin", "Ze is mijn vriendin"], "explain": "A female friend is a vriendin." },
+        { "type": "match", "pairs": [["ik", "I"], ["hij", "he"], ["wij", "we"], ["jullie", "you (plural)"], ["u", "you (formal)"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: persoonlijke voornaamwoorden (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menupersoonlijkevoornaamwoorden/" }
+      ]
+    },
+    {
+      "id": "a1.g02.l2", "title": "zijn and hebben", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "**Zijn** (to be) and **hebben** (to have) are irregular, so learn them by heart. You will use them in almost every conversation, and later they also build the perfect tense." },
+        { "type": "table", "head": ["", "zijn (to be)", "hebben (to have)"], "rows": [["ik", "ben", "heb"], ["jij / je", "bent", "hebt"], ["u", "bent", "hebt / heeft"], ["hij / zij / het", "is", "heeft"], ["wij / we", "zijn", "hebben"], ["jullie", "zijn", "hebben"], ["zij / ze", "zijn", "hebben"]] },
+        { "type": "ex", "nl": "Ik ben student en ik heb een kleine kamer.", "en": "I am a student and I have a small room." },
+        { "type": "p", "text": "In a question the verb comes first. With *jij* or *je* the **t** of *bent* and *hebt* disappears: *Jij bent moe → Ben jij moe?*, *Je hebt tijd → Heb je tijd?* With *u* the t stays: *Bent u moe?*" },
+        { "type": "tip", "text": "Dutch says *Ik heb honger* (I have hunger) and *Ik heb dorst* for *I am hungry / thirsty*. For age you can say *Ik ben twintig* (I am twenty)." },
+        { "type": "ex", "nl": "Heb je een broer of een zus?", "en": "Do you have a brother or a sister?" }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik ___ student.", "options": ["ben", "bent", "is"], "answer": 0 },
+        { "type": "choice", "q": "Wij ___ een nieuw huis.", "options": ["heb", "heeft", "hebben"], "answer": 2 },
+        { "type": "choice", "q": "Zij ___ blij. (they)", "options": ["is", "zijn", "ben"], "answer": 1, "explain": "Zij can mean she (is) or they (zijn). The verb shows which one." },
+        { "type": "choice", "q": "Which is correct?", "options": ["Hij hebt een fiets", "Hij heeft een fiets", "Hij heb een fiets"], "answer": 1 },
+        { "type": "gap", "text": "Hij ___ een fiets.", "answers": ["heeft"], "en": "He has a bike." },
+        { "type": "gap", "text": "Jij ___ een mooie jas.", "answers": ["hebt"], "en": "You have a nice coat." },
+        { "type": "gap", "text": "Wij ___ in de klas.", "answers": ["zijn"], "en": "We are in the classroom." },
+        { "type": "gap", "text": "Jullie ___ moe.", "answers": ["zijn"], "en": "You (plural) are tired." },
+        { "type": "gap", "text": "___ je tijd?", "answers": ["heb"], "en": "Do you have time?", "explain": "With je after the verb, the t of hebt disappears." },
+        { "type": "gap", "text": "___ jij moe?", "answers": ["ben"], "en": "Are you tired?", "explain": "With jij after the verb, the t of bent disappears." },
+        { "type": "gap", "text": "___ u ziek?", "answers": ["bent"], "en": "Are you ill? (formal)", "explain": "With u the t stays: bent u." },
+        { "type": "gap", "text": "Mijn zus ___ twee kinderen.", "answers": ["heeft"], "en": "My sister has two children." },
+        { "type": "order", "answer": "Ik heb een broer en een zus.", "en": "I have a brother and a sister." },
+        { "type": "order", "answer": "Ben je moe?", "en": "Are you tired?" },
+        { "type": "order", "answer": "Wij hebben een grote tuin.", "en": "We have a big garden." },
+        { "type": "translate", "en": "I am tired.", "answers": ["Ik ben moe"] },
+        { "type": "translate", "en": "We have a dog.", "answers": ["Wij hebben een hond", "We hebben een hond"] },
+        { "type": "translate", "en": "Do you have a sister?", "answers": ["Heb je een zus", "Heb jij een zus"] },
+        { "type": "translate", "en": "Are you a teacher? (formal)", "answers": ["Bent u leraar", "Bent u een leraar", "Bent u lerares", "Bent u een lerares"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: hebben en zijn (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuhebbenenzijn/" },
+        { "title": "NT2 TaalMenu: werkwoorden (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuwerkwoorden/" }
+      ]
+    },
+    {
+      "id": "a1.g02.l3", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "you (to your friend)", "options": ["u", "je", "jullie"], "answer": 1 },
+        { "type": "choice", "q": "you (to your boss, formal)", "options": ["u", "je", "jij"], "answer": 0 },
+        { "type": "choice", "q": "Ze ___ mijn buren. (they)", "options": ["is", "zijn", "ben"], "answer": 1 },
+        { "type": "choice", "q": "Mijn moeder ___ vijftig.", "options": ["heeft", "is", "hebt"], "answer": 1, "explain": "For age Dutch uses zijn: Ze is achtenvijftig." },
+        { "type": "gap", "text": "Ik ___ honger.", "answers": ["heb"], "en": "I am hungry.", "explain": "Dutch says: I have hunger." },
+        { "type": "gap", "text": "Het ___ een mooie dag.", "answers": ["is"], "en": "It is a beautiful day." },
+        { "type": "gap", "text": "Jullie ___ een leuk huis.", "answers": ["hebben"], "en": "You (plural) have a nice house." },
+        { "type": "gap", "text": "Mijn vriend en ik ___ in Utrecht.", "answers": ["zijn"], "en": "My friend and I are in Utrecht." },
+        { "type": "gap", "text": "___ jullie dorst?", "answers": ["hebben"], "en": "Are you thirsty? (plural)", "explain": "Dutch says: Do you have thirst? With jullie the verb is hebben." },
+        { "type": "order", "answer": "Zij heeft een kleine kamer.", "en": "She has a small room." },
+        { "type": "order", "answer": "Bent u de nieuwe buurman?", "en": "Are you the new neighbour? (formal)" },
+        { "type": "order", "answer": "Heb je een pen?", "en": "Do you have a pen?" },
+        { "type": "transform", "q": "Jij bent moe.", "instruction": "Turn it into a question", "answers": ["Ben jij moe", "Ben je moe"], "explain": "The verb goes first, and the t of bent disappears." },
+        { "type": "transform", "q": "Je hebt tijd.", "instruction": "Turn it into a question", "answers": ["Heb je tijd", "Heb jij tijd"] },
+        { "type": "translate", "en": "He has two sisters.", "answers": ["Hij heeft twee zussen"] },
+        { "type": "translate", "en": "They are at home.", "answers": ["Ze zijn thuis", "Zij zijn thuis"] },
+        { "type": "translate", "en": "I am thirsty.", "answers": ["Ik heb dorst"] },
+        { "type": "match", "pairs": [["ik", "ben"], ["hij", "is"], ["wij", "zijn"], ["jij", "bent"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: hebben en zijn (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuhebbenenzijn/" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "id": "a1.cp", "level": "A1", "kind": "checkpoint",
+  "title": "A1 checkpoint",
+  "subtitle": "Check what you have learned: grammar, words, reading, listening, speaking and writing",
+  "lessons": [
+    {
+      "id": "a1.cp.l1", "title": "Grammar and words", "kind": "test",
+      "items": [
+        { "type": "choice", "q": "___ huis", "options": ["de", "het"], "answer": 1 },
+        { "type": "choice", "q": "Plural of de stoel", "options": ["stoelen", "stoelens", "stoels"], "answer": 0 },
+        { "type": "choice", "q": "Zij ___ blij. (they)", "options": ["is", "zijn", "ben"], "answer": 1 },
+        { "type": "choice", "q": "Ik ___ in Utrecht. (wonen)", "options": ["woon", "woont", "wonen"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Morgen ik ga naar huis.", "Morgen ga ik naar huis."], "answer": 1 },
+        { "type": "choice", "q": "Ik heb ___ auto.", "options": ["geen", "niet"], "answer": 0 },
+        { "type": "choice", "q": "___ boek is dat? (which)", "options": ["Welk", "Welke"], "answer": 0 },
+        { "type": "choice", "q": "een ___ huis (big)", "options": ["groot", "grote"], "answer": 0 },
+        { "type": "choice", "q": "Hij ___ morgen werken. (must)", "options": ["moet", "moeten", "moets"], "answer": 0 },
+        { "type": "choice", "q": "half vier", "options": ["3:30", "4:30", "3:45"], "answer": 0 },
+        { "type": "gap", "text": "Wij ___ een nieuw huis.", "answers": ["hebben"], "en": "We have a new house." },
+        { "type": "gap", "text": "Tim is mijn broer. ___ is aardig.", "answers": ["Hij"], "en": "Tim is my brother. He is nice." },
+        { "type": "gap", "text": "Ik lees het boek ___.", "answers": ["niet"], "en": "I am not reading the book." },
+        { "type": "gap", "text": "Waar ___ je? (werken)", "answers": ["werk"], "en": "Where do you work?" },
+        { "type": "gap", "text": "Ik bel je morgen ___. (opbellen)", "answers": ["op"], "en": "I'll call you tomorrow." },
+        { "type": "gap", "text": "Dit is mijn zus. ___ naam is Eva. (her)", "answers": ["Haar"], "en": "This is my sister. Her name is Eva." },
+        { "type": "gap", "text": "De les begint ___ negen uur.", "answers": ["om"], "en": "The lesson begins at nine o'clock." },
+        { "type": "gap", "text": "De kat zit ___ de tafel. (under)", "answers": ["onder"], "en": "The cat is sitting under the table." },
+        { "type": "transform", "q": "de boom", "instruction": "Write the plural with its article", "answers": ["de bomen"] },
+        { "type": "transform", "q": "Hij werkt.", "instruction": "Turn it into a question", "answers": ["Werkt hij"] },
+        { "type": "transform", "q": "Ik ga morgen naar huis.", "instruction": "Start with Morgen", "answers": ["Morgen ga ik naar huis"] },
+        { "type": "transform", "q": "Ik heb een zus.", "instruction": "Make it negative", "answers": ["Ik heb geen zus"] },
+        { "type": "transform", "q": "45", "instruction": "Write the number in words", "answers": ["vijfenveertig"] },
+        { "type": "order", "answer": "Ik wil morgen komen.", "en": "I want to come tomorrow." },
+        { "type": "order", "answer": "Hoe laat is het?", "en": "What time is it?" },
+        { "type": "order", "answer": "Zij heeft een mooie nieuwe jas.", "en": "She has a beautiful new coat." },
+        { "type": "order", "answer": "Ik begrijp het niet.", "en": "I don't understand it." },
+        { "type": "translate", "en": "I have a little dog.", "answers": ["Ik heb een hondje", "Ik heb een klein hondje"] },
+        { "type": "translate", "en": "Where do you live? (informal)", "answers": ["Waar woon je", "Waar woon jij"] },
+        { "type": "translate", "en": "We are going to Utrecht by bus tomorrow.", "answers": ["Wij gaan morgen met de bus naar Utrecht", "We gaan morgen met de bus naar Utrecht", "Morgen gaan wij met de bus naar Utrecht", "Morgen gaan we met de bus naar Utrecht"] },
+        { "type": "translate", "en": "It is a quarter past two.", "answers": ["Het is kwart over twee"] },
+        { "type": "match", "pairs": [["de fiets", "the bicycle"], ["het brood", "the bread"], ["de kaas", "the cheese"], ["de tas", "the bag"]] },
+        { "type": "match", "pairs": [["maandag", "Monday"], ["woensdag", "Wednesday"], ["zaterdag", "Saturday"], ["zondag", "Sunday"]] }
+      ]
+    },
+    {
+      "id": "a1.cp.l2", "title": "Reading: a message from Anna", "kind": "reading",
+      "text": "Hoi Eva, hoe gaat het? Ik woon nu in Leiden, in een klein huis met een tuin. Mijn buurman heet meneer Bakker. Hij is aardig en hij heeft twee katten. Ik werk drie dagen per week in een winkel. Op woensdag en op zaterdag ben ik thuis. Dan doe ik boodschappen en ik kook voor mijn vrienden. Kom je een keer bij mij? Je kunt op zaterdag komen! Tot snel, Anna",
+      "items": [
+        { "type": "choice", "q": "Waar woont Anna?", "options": ["In Leiden", "In Utrecht", "In Amsterdam"], "answer": 0, "en": "Where does Anna live?" },
+        { "type": "choice", "q": "Hoe heet de buurman van Anna?", "options": ["Meneer Bakker", "Meneer Jansen", "Meneer De Vries"], "answer": 0, "en": "What is Anna's neighbour called?" },
+        { "type": "choice", "q": "Wat heeft de buurman?", "options": ["Twee katten", "Twee honden", "Een grote tuin"], "answer": 0, "en": "What does the neighbour have?" },
+        { "type": "choice", "q": "Wanneer is Anna thuis?", "options": ["Op woensdag en zaterdag", "Op maandag en dinsdag", "Elke dag"], "answer": 0, "en": "When is Anna at home?" },
+        { "type": "choice", "q": "Wat vraagt Anna aan Eva?", "options": ["Of Eva op bezoek komt", "Of Eva kookt", "Of Eva werkt"], "answer": 0, "en": "What does Anna ask Eva?", "explain": "Kom je een keer bij mij? means: Will you come to my place sometime?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A1", "url": "https://nt2taalmenu.nl/nt2-a1-menu/" }
+      ]
+    },
+    {
+      "id": "a1.cp.l3", "title": "Listening: at the station", "kind": "listening",
+      "dialogue": [
+        { "who": "A", "nl": "Goedemiddag. Ik wil naar Leiden. Wat kost een kaartje?", "en": "Good afternoon. I want to go to Leiden. How much is a ticket?" },
+        { "who": "B", "nl": "Een kaartje kost zeven euro.", "en": "A ticket costs seven euros." },
+        { "who": "A", "nl": "Hoe laat gaat de trein?", "en": "What time does the train go?" },
+        { "who": "B", "nl": "De trein gaat om tien over drie.", "en": "The train goes at ten past three." },
+        { "who": "A", "nl": "Van welk perron?", "en": "From which platform?" },
+        { "who": "B", "nl": "Van perron vier.", "en": "From platform four." },
+        { "who": "A", "nl": "Kan ik pinnen?", "en": "Can I pay by card?" },
+        { "who": "B", "nl": "Ja, alstublieft.", "en": "Yes, here you are." },
+        { "who": "A", "nl": "Dank u wel.", "en": "Thank you." },
+        { "who": "B", "nl": "Graag gedaan. Goede reis!", "en": "You're welcome. Have a good trip!" }
+      ],
+      "items": [
+        { "type": "listen", "nl": "Een kaartje kost zeven euro.", "q": "How much is the ticket?", "options": ["€7", "€17", "€70"], "answer": 0 },
+        { "type": "listen", "nl": "De trein gaat om tien over drie.", "q": "When does the train go?", "options": ["3:10", "2:50", "3:50"], "answer": 0 },
+        { "type": "listen", "nl": "Van perron vier.", "q": "Which platform?", "options": ["4", "14", "40"], "answer": 0 },
+        { "type": "choice", "q": "Waar wil de reiziger naartoe?", "options": ["Naar Leiden", "Naar Utrecht", "Naar Amsterdam"], "answer": 0, "en": "Where does the traveller want to go?" },
+        { "type": "choice", "q": "Hoe betaalt de reiziger?", "options": ["Met pinpas", "Met geld", "Dat zegt hij niet"], "answer": 0, "en": "How does the traveller pay?" }
+      ],
+      "sources": [
+        { "title": "Taalklas: free Dutch video course", "url": "https://www.taalklas.nl/" }
+      ]
+    },
+    {
+      "id": "a1.cp.l4", "title": "Speaking", "kind": "speaking",
+      "items": [
+        { "type": "speak", "nl": "Ik woon in een klein huis.", "en": "I live in a small house." },
+        { "type": "speak", "nl": "Ik sta om zeven uur op.", "en": "I get up at seven o'clock." },
+        { "type": "speak", "nl": "Mag ik twee broden, alstublieft?", "en": "May I have two loaves of bread, please?" }
+      ]
+    },
+    {
+      "id": "a1.cp.l5", "title": "Writing: a message to a neighbour", "kind": "writing",
+      "items": [
+        {
+          "type": "write",
+          "task": "You have a new neighbour. Write a short message: introduce yourself, say where you are from and what you do, and invite your neighbour for coffee on Saturday.",
+          "points": ["Your name", "Where you are from and where you live", "Your work or study", "An invitation for Saturday"],
+          "minWords": 45, "maxWords": 70,
+          "model": "Hoi Anna, ik ben Sam en ik ben je nieuwe buurman. Ik kom uit Engeland, maar ik woon nu in Leiden. Ik werk in een winkel. Ik heb een broer en een zus. Op zaterdag ben ik thuis. Wil je dan koffie komen drinken? Ik woon op nummer zes. Tot snel, Sam"
+        }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A1", "url": "https://nt2taalmenu.nl/nt2-a1-menu/" }
+      ]
+    }
+  ]
+}

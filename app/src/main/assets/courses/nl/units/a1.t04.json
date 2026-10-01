@@ -1,0 +1,118 @@
+{
+  "id": "a1.t04", "level": "A1", "kind": "theme",
+  "title": "Home & neighbourhood",
+  "subtitle": "Describe your home, read an advert and ask the way",
+  "lessons": [
+    {
+      "id": "a1.t04.l1", "title": "Rooms and furniture", "kind": "vocab",
+      "vocab": [
+        "huis", "appartement", "woning", "adres", "straat", "kamer", "woonkamer", "slaapkamer", "badkamer", "keuken", "toilet",
+        "tuin", "deur", "raam", "trap", "tafel", "stoel", "bed", "kast", "lamp", "koelkast"
+      ]
+    },
+    {
+      "id": "a1.t04.l2", "title": "In the neighbourhood", "kind": "vocab",
+      "vocab": [
+        "station", "halte", "supermarkt", "park", "ziekenhuis", "bibliotheek", "school", "links", "rechts", "rechtdoor", "ver",
+        "dichtbij", "weg", "brug", "kruispunt", "oversteken", "afslaan", "plattegrond", "hoek", "stoplicht"
+      ]
+    },
+    {
+      "id": "a1.t04.l3", "title": "An apartment to rent", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "An advert lists facts: rooms, place, price. Find these first. Tap a word you don't know." }
+      ],
+      "text": "Te huur: een mooi appartement in Utrecht. Het appartement heeft een woonkamer, een keuken, een slaapkamer en een badkamer. Er is ook een klein balkon. Het appartement ligt op de tweede verdieping en er is een lift. Het station is vijf minuten lopen. In de buurt zijn een supermarkt en een park. De huur is 650 euro per maand. Wilt u komen kijken? Bel dan mijn nummer.",
+      "items": [
+        { "type": "choice", "q": "Waar ligt het appartement?", "options": ["In Utrecht", "In Leiden", "In Amsterdam"], "answer": 0, "en": "Where is the apartment?" },
+        { "type": "choice", "q": "Op welke verdieping ligt het appartement?", "options": ["Op de tweede", "Op de eerste", "Op de derde"], "answer": 0, "en": "On which floor is the apartment?" },
+        { "type": "choice", "q": "Wat is er in de buurt?", "options": ["Een supermarkt en een park", "Een school en een ziekenhuis", "Een bibliotheek en een zwembad"], "answer": 0, "en": "What is nearby?" },
+        { "type": "choice", "q": "Hoeveel is de huur?", "options": ["650 euro per maand", "560 euro per maand", "650 euro per week"], "answer": 0, "en": "How much is the rent?" },
+        { "type": "choice", "q": "Hoe lang is het lopen naar het station?", "options": ["Vijf minuten", "Tien minuten", "Een uur"], "answer": 0, "en": "How long is the walk to the station?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A1", "url": "https://nt2taalmenu.nl/nt2-a1-menu/" }
+      ]
+    },
+    {
+      "id": "a1.t04.l4", "title": "Asking the way", "kind": "listening",
+      "dialogue": [
+        { "who": "A", "nl": "Pardon, waar is het station, alstublieft?", "en": "Excuse me, where is the station, please?" },
+        { "who": "B", "nl": "Het station? Dat is niet ver. Ga hier rechtdoor.", "en": "The station? That isn't far. Go straight on from here." },
+        { "who": "A", "nl": "Rechtdoor, en dan?", "en": "Straight on, and then?" },
+        { "who": "B", "nl": "Bij het stoplicht ga je links.", "en": "At the traffic light you go left." },
+        { "who": "A", "nl": "Bij het stoplicht links.", "en": "Left at the traffic light." },
+        { "who": "B", "nl": "Ja. Dan zie je een brug. Het station is naast de brug.", "en": "Yes. Then you see a bridge. The station is next to the bridge." },
+        { "who": "A", "nl": "Is het ver lopen?", "en": "Is it a long walk?" },
+        { "who": "B", "nl": "Nee, ongeveer tien minuten.", "en": "No, about ten minutes." },
+        { "who": "A", "nl": "Dank u wel!", "en": "Thank you!" },
+        { "who": "B", "nl": "Graag gedaan. Tot ziens!", "en": "You're welcome. Goodbye!" }
+      ],
+      "items": [
+        { "type": "listen", "nl": "Waar is het station, alstublieft?", "q": "What does she ask?", "options": ["Where the station is", "Where the bank is", "What time the train leaves"], "answer": 0 },
+        { "type": "listen", "nl": "Bij het stoplicht ga je links.", "q": "Where do you turn?", "options": ["Left at the traffic light", "Right at the traffic light", "Left at the bridge"], "answer": 0 },
+        { "type": "listen", "nl": "Het station is naast de brug.", "q": "Where is the station?", "options": ["Next to the bridge", "Behind the bridge", "Under the bridge"], "answer": 0 },
+        { "type": "listen", "nl": "Ga hier rechtdoor." },
+        { "type": "choice", "q": "Hoe lang is het lopen?", "options": ["Ongeveer tien minuten", "Ongeveer vijf minuten", "Ongeveer een uur"], "answer": 0, "en": "How long is the walk?" },
+        { "type": "choice", "q": "Wat ziet ze na het stoplicht?", "options": ["Een brug", "Een park", "Een winkel"], "answer": 0, "en": "What does she see after the traffic light?" }
+      ],
+      "sources": [
+        { "title": "Taalklas: free Dutch video course", "url": "https://www.taalklas.nl/" }
+      ]
+    },
+    {
+      "id": "a1.t04.l5", "title": "Say it yourself", "kind": "speaking",
+      "dialogue": [
+        { "who": "A", "nl": "Pardon, waar is het station, alstublieft?", "en": "Excuse me, where is the station, please?" },
+        { "who": "B", "nl": "Het station? Dat is niet ver. Ga hier rechtdoor.", "en": "The station? That isn't far. Go straight on from here." },
+        { "who": "A", "nl": "Rechtdoor, en dan?", "en": "Straight on, and then?" },
+        { "who": "B", "nl": "Bij het stoplicht ga je links.", "en": "At the traffic light you go left." },
+        { "who": "A", "nl": "Bij het stoplicht links.", "en": "Left at the traffic light." },
+        { "who": "B", "nl": "Ja. Dan zie je een brug. Het station is naast de brug.", "en": "Yes. Then you see a bridge. The station is next to the bridge." },
+        { "who": "A", "nl": "Is het ver lopen?", "en": "Is it a long walk?" },
+        { "who": "B", "nl": "Nee, ongeveer tien minuten.", "en": "No, about ten minutes." },
+        { "who": "A", "nl": "Dank u wel!", "en": "Thank you!" },
+        { "who": "B", "nl": "Graag gedaan. Tot ziens!", "en": "You're welcome. Goodbye!" }
+      ],
+      "items": [
+        { "type": "speak", "nl": "Pardon, waar is het station, alstublieft?", "en": "Excuse me, where is the station, please?" },
+        { "type": "speak", "nl": "Ga hier rechtdoor.", "en": "Go straight on from here." },
+        {
+          "type": "prompt",
+          "task": "Describe your home: which rooms does it have, and what is in the living room?",
+          "model": "Ik woon in een appartement. Het heeft een woonkamer, een keuken, een slaapkamer en een badkamer. In de woonkamer staan een bank, een tafel en twee stoelen.",
+          "seconds": 40,
+          "points": ["Where you live", "Which rooms you have", "Something in the living room"]
+        },
+        {
+          "type": "prompt",
+          "task": "Tell someone how to get from your home to the nearest shop.",
+          "model": "Ga rechtdoor naar het stoplicht. Ga dan links. De supermarkt is naast de bank. Het is vijf minuten lopen.",
+          "seconds": 30,
+          "points": ["Where to go first", "Where to turn", "Where the shop is", "How far it is"]
+        }
+      ]
+    },
+    {
+      "id": "a1.t04.l6", "title": "Describe your home", "kind": "writing",
+      "explain": [
+        { "type": "p", "text": "Start with where you live, then name the rooms and one or two things in them. Use *heeft* for what the home has and *staan / liggen / hangen* for where things are: *In de woonkamer staan een bank en een tafel.*" },
+        { "type": "ex", "nl": "Ik woon in een klein appartement in Utrecht.", "en": "I live in a small apartment in Utrecht." },
+        { "type": "ex", "nl": "In mijn slaapkamer staan een bed en een kast.", "en": "In my bedroom there are a bed and a wardrobe." },
+        { "type": "tip", "text": "When a place word starts the sentence (*In mijn slaapkamer*), the verb is next: *staan*, then the things. This is the inversion you learned in word order." }
+      ],
+      "items": [
+        {
+          "type": "write",
+          "task": "A friend wants to know where you live. Describe your home.",
+          "points": ["Where you live", "Which rooms you have", "What is in the living room or bedroom", "Whether you like your home and why"],
+          "minWords": 50, "maxWords": 70,
+          "model": "Ik woon in een klein appartement in Utrecht. Het appartement heeft een woonkamer, een keuken, een slaapkamer en een badkamer. De woonkamer is groot en gezellig. Ik heb een bank, een tafel en twee stoelen. In mijn slaapkamer staan een bed en een kast. Ik vind mijn huis erg mooi, want het is dichtbij het station."
+        }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A1", "url": "https://nt2taalmenu.nl/nt2-a1-menu/" }
+      ]
+    }
+  ]
+}

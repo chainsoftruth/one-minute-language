@@ -1,0 +1,126 @@
+{
+  "id": "a1.g01", "level": "A1", "kind": "grammar",
+  "title": "Sounds & spelling",
+  "subtitle": "Long and short vowels, tricky letter pairs and how to read Dutch words",
+  "lessons": [
+    {
+      "id": "a1.g01.l1", "title": "Short and long vowels", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Dutch spelling is quite regular once you know one rule. A vowel can be **short** or **long**, and the spelling shows which. A long vowel in a closed syllable (one that ends in a consonant) is written with **two letters**: *maan*, *boot*, *veer*, *buur*. A short vowel is written with **one letter**: *man*, *bot*, *ver*, *bus*." },
+        { "type": "table", "head": ["short", "long", "meaning"], "rows": [["man", "maan", "man / moon"], ["bot", "boot", "bone / boat"], ["ver", "veer", "far / ferry"], ["bus", "buur", "bus / neighbour"], ["zon", "zoon", "sun / son"]] },
+        { "type": "ex", "nl": "De man kijkt naar de maan.", "en": "The man looks at the moon." },
+        { "type": "p", "text": "When you add an ending, the syllable can open up. *maan* becomes *manen* (ma-nen): the long vowel now stands alone in an open syllable, so one letter is enough. A short vowel stays short, so the consonant is doubled: *man → mannen* (man-nen)." },
+        { "type": "tip", "text": "Short vowel + double consonant (*mannen*), long vowel + single consonant (*manen*). This pattern comes back in plurals and verbs." },
+        { "type": "ex", "nl": "Twee mannen lopen onder de maan.", "en": "Two men walk under the moon." }
+      ],
+      "items": [
+        { "type": "listen", "nl": "man", "q": "Which word do you hear?", "options": ["man", "maan"], "answer": 0 },
+        { "type": "listen", "nl": "maan", "q": "Which word do you hear?", "options": ["man", "maan"], "answer": 1 },
+        { "type": "listen", "nl": "boot", "q": "Which word do you hear?", "options": ["bot", "boot"], "answer": 1 },
+        { "type": "listen", "nl": "zon", "q": "Which word do you hear?", "options": ["zon", "zoon"], "answer": 0 },
+        { "type": "listen", "nl": "veer", "q": "Which word do you hear?", "options": ["ver", "veer"], "answer": 1 },
+        { "type": "listen", "nl": "vel", "q": "Which word do you hear?", "options": ["vel", "veel"], "answer": 0, "explain": "vel = skin or sheet of paper, veel = much / many." },
+        { "type": "listen", "nl": "laat", "q": "Which word do you hear?", "options": ["lat", "laat"], "answer": 1, "explain": "laat = late, lat = slat (a thin strip of wood)." },
+        { "type": "choice", "q": "Which word has a long vowel?", "options": ["bus", "buur", "bot"], "answer": 1 },
+        { "type": "choice", "q": "Which word has a short vowel?", "options": ["zoon", "veer", "zon"], "answer": 2 },
+        { "type": "choice", "q": "Plural of de man", "options": ["manen", "mannen", "mans"], "answer": 1, "explain": "A short vowel needs a double consonant before -en." },
+        { "type": "choice", "q": "Plural of de maan", "options": ["manen", "mannen", "maanen"], "answer": 0, "explain": "A long vowel in an open syllable is written with one letter." },
+        { "type": "transform", "q": "de boot", "instruction": "Write the plural with its article", "answers": ["de boten"], "explain": "The long oo loses one letter in an open syllable: bo-ten." },
+        { "type": "transform", "q": "de bus", "instruction": "Write the plural with its article", "answers": ["de bussen"], "explain": "Short vowel: the consonant is doubled." },
+        { "type": "gap", "text": "Ik zie twee ___ op straat.", "answers": ["mannen"], "hint": "man", "en": "I see two men in the street." },
+        { "type": "gap", "text": "Vanavond schijnt de ___ heel mooi.", "answers": ["maan"], "en": "Tonight the moon shines very beautifully." },
+        { "type": "order", "answer": "De zon schijnt vandaag.", "en": "The sun is shining today." },
+        { "type": "translate", "en": "The boats are big.", "answers": ["De boten zijn groot", "De boten zijn groot."] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: grammar overview (A1)", "url": "https://nt2taalmenu.nl/a1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "a1.g01.l2", "title": "Letter pairs: ui, ij, au, eu, oe", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Some vowel pairs make one sound. Say them out loud: **ui** (*huis, uit*), **ij** and **ei** (both close to the *ay* in *day*, but more open: *prijs, trein*), **au** and **ou** (the same sound: *blauw, koud*), **eu** (*leuk, neus*), **oe** (like *oo* in *food*: *boek, goed*) and **ie** (like *ee* in *see*: *fiets, bier*)." },
+        { "type": "table", "head": ["spelling", "sounds like", "example"], "rows": [["ui", "no English match: say 'ow' with rounded lips", "huis, tuin, uit"], ["ij / ei", "like 'ay' in 'day', but more open", "tijd, prijs, trein, ei"], ["au / ou", "ow in 'now'", "blauw, koud, auto, goud"], ["eu", "like French *peu*", "leuk, neus, keuken"], ["oe", "oo in 'food'", "boek, goed, moeder"], ["ie", "ee in 'see'", "fiets, bier, vriend"]] },
+        { "type": "ex", "nl": "Het huis heeft een groene deur.", "en": "The house has a green door." },
+        { "type": "tip", "text": "*ij* and *ei* sound the same, and so do *au* and *ou*. You have to learn which spelling a word uses: *tijd* and *prijs* with *ij*, but *trein* and *ei* with *ei*. Both spelling pairs are in the dictionary, so check the word when you are not sure." },
+        { "type": "ex", "nl": "Mijn vriend woont in een mooi huis.", "en": "My friend lives in a nice house." }
+      ],
+      "items": [
+        { "type": "listen", "nl": "huis", "q": "Which word do you hear?", "options": ["huis", "haas"], "answer": 0 },
+        { "type": "listen", "nl": "buis", "q": "Which word do you hear?", "options": ["bus", "buis"], "answer": 1, "explain": "buis = tube. bus = bus. The ui sound is different from the short u." },
+        { "type": "listen", "nl": "ze", "q": "Which word do you hear?", "options": ["ze", "zee"], "answer": 0 },
+        { "type": "listen", "nl": "zee", "q": "Which word do you hear?", "options": ["ze", "zee"], "answer": 1, "explain": "zee = sea, a long vowel. ze = she / they, with a weak vowel." },
+        { "type": "listen", "nl": "goed", "q": "Which word do you hear?", "options": ["goed", "goud"], "answer": 0, "explain": "goed = good (oe), goud = gold (ou)." },
+        { "type": "listen", "nl": "leuk", "q": "Which word do you hear?", "options": ["leuk", "look"], "answer": 0 },
+        { "type": "choice", "q": "Which word is spelled correctly?", "options": ["tijt", "tijd", "teid"], "answer": 1 },
+        { "type": "choice", "q": "Which word means 'blue'?", "options": ["blouw", "blauw", "blaauw"], "answer": 1 },
+        { "type": "choice", "q": "Which spelling is right for 'train'?", "options": ["trijn", "trein", "treen"], "answer": 1 },
+        { "type": "choice", "q": "Which spelling is right for 'cold'?", "options": ["koud", "kaud", "kood"], "answer": 0 },
+        { "type": "gap", "text": "Dit is een mooi ___.", "answers": ["huis"], "en": "This is a nice house." },
+        { "type": "gap", "text": "Ik lees een ___.", "answers": ["boek"], "en": "I am reading a book." },
+        { "type": "gap", "text": "De ___ is blauw.", "answers": ["lucht"], "hint": "sky", "en": "The sky is blue." },
+        { "type": "gap", "text": "Het is buiten erg ___.", "answers": ["koud"], "en": "It is very cold outside." },
+        { "type": "order", "answer": "Mijn vriend heeft een leuk huis.", "en": "My friend has a nice house." },
+        { "type": "translate", "en": "The train is late.", "answers": ["De trein is laat", "De trein is te laat"] },
+        { "type": "translate", "en": "The book is good.", "answers": ["Het boek is goed"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: grammar overview (A1)", "url": "https://nt2taalmenu.nl/a1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "a1.g01.l3", "title": "g, ch, sch and endings", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Dutch **g** and **ch** are both a scratchy sound at the back of the throat, a bit like clearing your throat softly: *goed, groot, nacht, lachen*. (In the south of the country the *g* is softer.) In *sch-* at the start of a word you hear **s + ch**: *school, schrijven, schaap*." },
+        { "type": "ex", "nl": "Ik ga vandaag naar school.", "en": "I am going to school today." },
+        { "type": "p", "text": "Two endings are worth learning early. **-ig** is pronounced with a very weak vowel, a bit like *-ugh*: *koning, vijftig, gezellig*. **-lijk** sounds like *-luk*: *natuurlijk, mogelijk, vriendelijk*. The vowel in these endings is short and weak, so don't stress it." },
+        { "type": "table", "head": ["ending", "weak sound", "example"], "rows": [["-ig", "like 'ugh'", "gezellig, vijftig, koning"], ["-lijk", "like 'luk'", "natuurlijk, mogelijk, vriendelijk"], ["-e", "like 'uh'", "de grote tafel, ik werk hier"]] },
+        { "type": "tip", "text": "The letter *e* at the end of a word, and in *de*, *het*, *een*, is a weak 'uh' sound (like the *a* in *about*). Don't say it as 'ay'." },
+        { "type": "ex", "nl": "Het is natuurlijk heel gezellig.", "en": "Of course it is very cosy." }
+      ],
+      "items": [
+        { "type": "listen", "nl": "school", "q": "Which word do you hear?", "options": ["school", "kool"], "answer": 0 },
+        { "type": "listen", "nl": "goed", "q": "Which word do you hear?", "options": ["goed", "hoed"], "answer": 0, "explain": "goed starts with the scratchy g, hoed with a breathy h." },
+        { "type": "listen", "nl": "natuurlijk", "q": "Which word do you hear?", "options": ["natuurlijk", "natuurlijke", "nationaal"], "answer": 0 },
+        { "type": "listen", "nl": "gezellig", "q": "Which word do you hear?", "options": ["gezellig", "gezelligheid", "gezel"], "answer": 0 },
+        { "type": "listen", "nl": "Ik schrijf een brief.", "q": "What do you hear?", "options": ["I write a letter.", "I read a letter.", "I write a book."], "answer": 0 },
+        { "type": "choice", "q": "Which syllable of 'gezellig' is stressed?", "options": ["gezel- (the second)", "-lig (the last)", "ge- (the first)"], "answer": 0, "explain": "The ending -ig is weak and never stressed. The stress is on -zel-." },
+        { "type": "choice", "q": "Which word starts with s + ch?", "options": ["school", "chocolade", "goed"], "answer": 0 },
+        { "type": "choice", "q": "Which word ends in -lijk?", "options": ["vriendelijk", "vriendig", "vriendelig"], "answer": 0 },
+        { "type": "gap", "text": "Het café is erg ___.", "answers": ["gezellig"], "hint": "cosy", "en": "The café is very cosy." },
+        { "type": "gap", "text": "Hij is een ___ man.", "answers": ["vriendelijke"], "hint": "vriendelijk", "en": "He is a friendly man." },
+        { "type": "order", "answer": "Natuurlijk ga ik naar school.", "en": "Of course I am going to school.", "extra": ["niet"] },
+        { "type": "translate", "en": "Of course it is cosy.", "answers": ["Natuurlijk is het gezellig", "Het is natuurlijk gezellig"] },
+        { "type": "translate", "en": "I am writing a letter to my friend.", "answers": ["Ik schrijf een brief aan mijn vriend"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: grammar overview (A1)", "url": "https://nt2taalmenu.nl/a1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "a1.g01.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "listen", "nl": "bot", "q": "Which word do you hear?", "options": ["bot", "boot"], "answer": 0 },
+        { "type": "listen", "nl": "boot", "q": "Which word do you hear?", "options": ["bot", "boot"], "answer": 1 },
+        { "type": "listen", "nl": "bus", "q": "Which word do you hear?", "options": ["bus", "buis"], "answer": 0 },
+        { "type": "listen", "nl": "buis", "q": "Which word do you hear?", "options": ["bus", "buis"], "answer": 1 },
+        { "type": "listen", "nl": "zee", "q": "Which word do you hear?", "options": ["ze", "zee"], "answer": 1 },
+        { "type": "listen", "nl": "veel", "q": "Which word do you hear?", "options": ["vel", "veel"], "answer": 1 },
+        { "type": "listen", "nl": "Het huis is groot." },
+        { "type": "listen", "nl": "De boten liggen in de haven." },
+        { "type": "choice", "q": "Plural of de bus", "options": ["busen", "bussen", "buzen"], "answer": 1, "explain": "Short vowel + double consonant." },
+        { "type": "choice", "q": "Plural of de zoon", "options": ["zonen", "zonnen", "zoonen"], "answer": 0, "explain": "The long vowel loses a letter: zo-nen." },
+        { "type": "choice", "q": "Which is the correct spelling?", "options": ["maanen", "manen", "mannen"], "answer": 1, "explain": "Plural of maan: manen (moons)." },
+        { "type": "transform", "q": "de zon", "instruction": "Write the plural with its article", "answers": ["de zonnen"], "explain": "Short vowel + double consonant." },
+        { "type": "transform", "q": "de boot", "instruction": "Write the plural with its article", "answers": ["de boten"] },
+        { "type": "gap", "text": "Ik ga met de ___ naar het station.", "answers": ["bus"], "en": "I am going to the station by bus." },
+        { "type": "gap", "text": "Zijn ___ heet Tim.", "answers": ["zoon"], "en": "His son is called Tim." },
+        { "type": "gap", "text": "In de zomer schijnt de ___.", "answers": ["zon"], "en": "In summer the sun shines." },
+        { "type": "order", "answer": "De man en de zoon zijn thuis.", "en": "The man and the son are at home." }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: grammar overview (A1)", "url": "https://nt2taalmenu.nl/a1-grammatica-verzamel-pagina/" }
+      ]
+    }
+  ]
+}

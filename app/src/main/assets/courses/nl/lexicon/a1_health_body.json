@@ -61,5 +61,6 @@
   {"id":"genezen","nl":"genezen","en":"to recover","pos":"verb","lvl":"A1","topic":"health_body","pres":"geneest","past":"genas/genazen","pp":"genezen","aux":"is","ex":"Ik geneest snel.","exEn":"I recover quickly."},
   {"id":"ademen","nl":"ademen","en":"to breathe","pos":"verb","lvl":"A1","topic":"health_body","pres":"ademt","past":"ademde/ademden","pp":"geademd","aux":"heeft","ex":"Adem diep in.","exEn":"Breathe in deeply."},
   {"id":"verwonden","nl":"verwonden","en":"to injure","pos":"verb","lvl":"A1","topic":"health_body","pres":"verwondt","past":"verwondde/verwondden","pp":"verwond","aux":"heeft","ex":"Pas op, je kunt je verwonden.","exEn":"Be careful, you could injure yourself."},
-  {"id":"trillen","nl":"trillen","en":"to tremble","pos":"verb","lvl":"A1","topic":"health_body","pres":"trilt","past":"trilde/trilden","pp":"getrild","aux":"heeft","ex":"Mijn handen trillen.","exEn":"My hands are trembling."}
+  {"id":"trillen","nl":"trillen","en":"to tremble","pos":"verb","lvl":"A1","topic":"health_body","pres":"trilt","past":"trilde/trilden","pp":"getrild","aux":"heeft","ex":"Mijn handen trillen.","exEn":"My hands are trembling."},
+  {"id":"praktijk","nl":"praktijk","en":"practice (doctor's)","pos":"noun","lvl":"A1","topic":"health_body","art":"de","pl":"praktijken","ex":"De praktijk is om negen uur open.","exEn":"The practice opens at nine o'clock."}
 ]

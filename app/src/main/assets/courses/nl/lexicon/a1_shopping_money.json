@@ -50,5 +50,6 @@
   {"id":"uitdoen","nl":"uitdoen","en":"to take off","pos":"verb","lvl":"A1","topic":"shopping_money","pres":"doet uit","past":"deed uit/deden uit","pp":"uitgedaan","aux":"heeft","sep":true,"ex":"Doe je schoenen uit.","exEn":"Take off your shoes."},
   {"id":"uitgeven","nl":"uitgeven","en":"to spend","pos":"verb","lvl":"A1","topic":"shopping_money","pres":"geeft uit","past":"gaf uit/gaven uit","pp":"uitgegeven","aux":"heeft","sep":true,"ex":"Ik geef te veel geld uit.","exEn":"I spend too much money."},
   {"id":"sparen","nl":"sparen","en":"to save","pos":"verb","lvl":"A1","topic":"shopping_money","pres":"spaart","past":"spaarde/spaarden","pp":"gespaard","aux":"heeft","ex":"Ik spaar voor een nieuwe fiets.","exEn":"I'm saving for a new bicycle."},
-  {"id":"pinnen","nl":"pinnen","en":"to pay by card","pos":"verb","lvl":"A1","topic":"shopping_money","pres":"pint","past":"pinde/pinden","pp":"gepind","aux":"heeft","ex":"Mag ik hier pinnen?","exEn":"May I pay by card here?"}
+  {"id":"pinnen","nl":"pinnen","en":"to pay by card","pos":"verb","lvl":"A1","topic":"shopping_money","pres":"pint","past":"pinde/pinden","pp":"gepind","aux":"heeft","ex":"Mag ik hier pinnen?","exEn":"May I pay by card here?"},
+  {"id":"kilo","nl":"kilo","en":"kilo","pos":"noun","lvl":"A1","topic":"shopping_money","art":"het","pl":"kilo's","ex":"Ik koop een kilo appels.","exEn":"I am buying a kilo of apples."}
 ]

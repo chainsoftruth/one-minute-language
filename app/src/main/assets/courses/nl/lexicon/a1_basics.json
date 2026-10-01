@@ -128,5 +128,6 @@
   {"id":"rond","nl":"rond","en":"round","pos":"adj","lvl":"A1","topic":"basics","ex":"De tafel is rond.","exEn":"The table is round."},
   {"id":"strak","nl":"strak","en":"tight","pos":"adj","lvl":"A1","topic":"basics","ex":"De broek zit strak.","exEn":"The trousers fit tightly."},
   {"id":"los","nl":"los","en":"loose","pos":"adj","lvl":"A1","topic":"basics","ex":"De knoop is los.","exEn":"The button is loose."},
-  {"id":"gebogen","nl":"gebogen","en":"curved","pos":"adj","lvl":"A1","topic":"basics","ex":"De weg is gebogen.","exEn":"The road is curved."}
+  {"id":"gebogen","nl":"gebogen","en":"curved","pos":"adj","lvl":"A1","topic":"basics","ex":"De weg is gebogen.","exEn":"The road is curved."},
+  {"id":"hoi","nl":"hoi","en":"hi","pos":"intj","lvl":"A1","topic":"basics","ex":"Hoi Sam, hoe gaat het?","exEn":"Hi Sam, how are you?"}
 ]

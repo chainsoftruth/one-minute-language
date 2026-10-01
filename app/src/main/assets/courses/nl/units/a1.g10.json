@@ -1,0 +1,121 @@
+{
+  "id": "a1.g10", "level": "A1", "kind": "grammar",
+  "title": "Separable verbs 1",
+  "subtitle": "opbellen, opstaan, meenemen: verbs that split in two",
+  "lessons": [
+    {
+      "id": "a1.g10.l1", "title": "The prefix goes to the end", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Many Dutch verbs have a **prefix** that is a small word of its own: *op, aan, uit, mee, terug, binnen, thuis*. In the infinitive the verb is one word (*opbellen*), but in a main clause in the present tense it **splits**: the verb takes the second place and the prefix goes to the **end** of the sentence." },
+        { "type": "table", "head": ["infinitive", "present tense, main clause"], "rows": [["opbellen (to phone)", "Ik bel je morgen op."], ["opstaan (to get up)", "Ik sta om zeven uur op."], ["meenemen (to take along)", "Ik neem mijn tas mee."], ["uitgaan (to go out)", "Wij gaan vanavond uit."], ["aankomen (to arrive)", "De trein komt om tien uur aan."]] },
+        { "type": "ex", "nl": "Ik sta elke dag om zeven uur op.", "en": "I get up at seven o'clock every day." },
+        { "type": "p", "text": "The prefix is **stressed** in speech: *OPbellen*, *UITgaan*. This also works in questions and commands: *Bel je morgen op? Zet de televisie aan.* The prefix always stays at the end." },
+        { "type": "tip", "text": "A dictionary shows the infinitive as one word, so you have to know that a verb is separable. Learn it with an example sentence: *opstaan → ik sta op*." },
+        { "type": "ex", "nl": "Neem je je tas mee?", "en": "Are you taking your bag with you?" }
+      ],
+      "items": [
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik opbel je morgen.", "Ik bel je morgen op.", "Ik bel op je morgen."], "answer": 1 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik sta op om zeven uur.", "Ik sta om zeven uur op.", "Ik opsta om zeven uur."], "answer": 1 },
+        { "type": "choice", "q": "In a main clause the prefix goes...", "options": ["to the end", "in front of the verb", "after the subject"], "answer": 0 },
+        { "type": "gap", "text": "Ik bel je morgen ___.", "answers": ["op"], "hint": "opbellen", "en": "I'll call you tomorrow." },
+        { "type": "gap", "text": "Ik neem mijn tas ___.", "answers": ["mee"], "hint": "meenemen", "en": "I'm taking my bag with me." },
+        { "type": "gap", "text": "Wij gaan vanavond ___.", "answers": ["uit"], "hint": "uitgaan", "en": "We are going out tonight." },
+        { "type": "gap", "text": "De trein komt om tien uur ___.", "answers": ["aan"], "hint": "aankomen", "en": "The train arrives at ten o'clock." },
+        { "type": "transform", "q": "Ik sta om zeven uur op.", "instruction": "Turn it into a question with je", "answers": ["Sta je om zeven uur op"] },
+        { "type": "transform", "q": "Zij komt om tien uur aan.", "instruction": "Turn it into a question", "answers": ["Komt zij om tien uur aan", "Komt ze om tien uur aan"] },
+        { "type": "transform", "q": "Hij zet de televisie aan.", "instruction": "Make it a command (jij)", "answers": ["Zet de televisie aan"] },
+        { "type": "order", "answer": "Ik bel je morgen op.", "en": "I'll call you tomorrow." },
+        { "type": "order", "answer": "Wij gaan vanavond uit.", "en": "We are going out tonight." },
+        { "type": "order", "answer": "Zet de televisie aan.", "en": "Turn on the television." },
+        { "type": "translate", "en": "I get up at seven o'clock.", "answers": ["Ik sta om zeven uur op"] },
+        { "type": "translate", "en": "I'll call you tomorrow.", "answers": ["Ik bel je morgen op", "Morgen bel ik je op"] },
+        { "type": "translate", "en": "Do you take your bag with you? (informal)", "answers": ["Neem je je tas mee", "Neem jij je tas mee"] },
+        { "type": "match", "pairs": [["opbellen", "to phone"], ["opstaan", "to get up"], ["meenemen", "to take along"], ["uitgaan", "to go out"], ["aankomen", "to arrive"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: scheidbare werkwoorden", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-scheidbare-werkwoorden/" }
+      ]
+    },
+    {
+      "id": "a1.g10.l2", "title": "With a modal verb", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "With a modal verb (*kunnen, willen, moeten, mogen*) the separable verb is an infinitive at the end of the sentence, so it **stays in one piece**: *Ik wil je opbellen.* *Wij moeten om zeven uur opstaan.*" },
+        { "type": "table", "head": ["no modal (splits)", "with a modal (stays together)"], "rows": [["Ik bel je op.", "Ik wil je opbellen."], ["Hij neemt zijn tas mee.", "Hij moet zijn tas meenemen."], ["Zij staat vroeg op.", "Zij kan vroeg opstaan."], ["Zet je de tv aan?", "Mag ik de tv aanzetten?"]] },
+        { "type": "ex", "nl": "Kun je mijn tas meenemen?", "en": "Can you take my bag with you?" },
+        { "type": "tip", "text": "Remember the rule: **one** conjugated verb in second place, and the infinitive at the very end. The prefix is part of that infinitive, so it is at the end too." },
+        { "type": "ex", "nl": "Morgen moet ik vroeg opstaan.", "en": "Tomorrow I have to get up early." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik wil je opbellen.", "Ik wil je op bellen.", "Ik bel je op willen."], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Hij moet zijn tas meenemen.", "Hij moet mee zijn tas nemen.", "Hij neemt moet zijn tas mee."], "answer": 0 },
+        { "type": "gap", "text": "Ik wil morgen vroeg ___. (opstaan)", "answers": ["opstaan"], "en": "I want to get up early tomorrow." },
+        { "type": "gap", "text": "Kun je de televisie ___? (aanzetten)", "answers": ["aanzetten"], "en": "Can you turn on the television?" },
+        { "type": "gap", "text": "Wij moeten vandaag nog ___. (opruimen)", "answers": ["opruimen"], "en": "We still have to clean up today." },
+        { "type": "transform", "q": "Ik bel je op.", "instruction": "Add willen", "answers": ["Ik wil je opbellen"] },
+        { "type": "transform", "q": "Hij neemt zijn tas mee.", "instruction": "Add moeten", "answers": ["Hij moet zijn tas meenemen"] },
+        { "type": "transform", "q": "Zij staat vroeg op.", "instruction": "Add kunnen", "answers": ["Zij kan vroeg opstaan", "Ze kan vroeg opstaan"] },
+        { "type": "order", "answer": "Ik wil je morgen opbellen.", "en": "I want to call you tomorrow." },
+        { "type": "order", "answer": "Mag ik de televisie aanzetten?", "en": "May I turn on the television?" },
+        { "type": "order", "answer": "Wij moeten vroeg opstaan.", "en": "We have to get up early." },
+        { "type": "translate", "en": "Can you take my bag with you?", "answers": ["Kun je mijn tas meenemen", "Kun jij mijn tas meenemen", "Kan je mijn tas meenemen"] },
+        { "type": "translate", "en": "I have to get up early tomorrow.", "answers": ["Ik moet morgen vroeg opstaan", "Morgen moet ik vroeg opstaan"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: werkwoorden met prefix", "url": "https://nt2taalmenu.nl/b1-nieuw-werkwoorden-met-prefix/" }
+      ]
+    },
+    {
+      "id": "a1.g10.l3", "title": "Verbs that never split", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Some verbs start with an **unstressed** prefix: **be-, ge-, her-, ont-, ver-, er-**. These verbs are **inseparable**: they never split. *beginnen → Ik begin om negen uur*, *vergeten → Ik vergeet mijn sleutel*, *begrijpen → Ik begrijp het*." },
+        { "type": "table", "head": ["inseparable (stress not on the prefix)", "separable (stress on the prefix)"], "rows": [["beGINnen: Ik begin.", "OPbellen: Ik bel op."], ["verGEten: Ik vergeet.", "MEEnemen: Ik neem mee."], ["beGRIJpen: Ik begrijp het.", "UITgaan: Ik ga uit."], ["ontMOEten: Ik ontmoet haar.", "AANkomen: Ik kom aan."]] },
+        { "type": "ex", "nl": "De les begint om negen uur.", "en": "The lesson begins at nine o'clock." },
+        { "type": "tip", "text": "Listen for the stress. If the first syllable is stressed and is a small word like *op, aan, uit, mee*, the verb is separable. If the first syllable is a weak *be-, ver-, ont-, ge-*, it is not." },
+        { "type": "ex", "nl": "Ik vergeet mijn sleutel altijd.", "en": "I always forget my key." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Which verb is separable?", "options": ["beginnen", "opbellen", "vergeten"], "answer": 1 },
+        { "type": "choice", "q": "Which verb is NOT separable?", "options": ["uitgaan", "meenemen", "begrijpen"], "answer": 2 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik begin om negen uur.", "Ik beginnen om negen uur.", "Ik begin negen uur om."], "answer": 0 },
+        { "type": "gap", "text": "Ik ___ om negen uur. (beginnen)", "answers": ["begin"], "en": "I start at nine o'clock." },
+        { "type": "gap", "text": "Ik ___ mijn sleutel altijd. (vergeten)", "answers": ["vergeet"], "en": "I always forget my key." },
+        { "type": "gap", "text": "Ik ___ het niet. (begrijpen)", "answers": ["begrijp"], "en": "I don't understand it." },
+        { "type": "gap", "text": "Zij ___ haar buurman. (ontmoeten)", "answers": ["ontmoet"], "en": "She meets her neighbour." },
+        { "type": "gap", "text": "Hij ___ zijn fiets. (verkopen)", "answers": ["verkoopt"], "en": "He sells his bike." },
+        { "type": "transform", "q": "Ik begin om negen uur.", "instruction": "Turn it into a question with je", "answers": ["Begin je om negen uur"] },
+        { "type": "order", "answer": "Ik begrijp het niet.", "en": "I don't understand it." },
+        { "type": "order", "answer": "De les begint om negen uur.", "en": "The lesson begins at nine o'clock." },
+        { "type": "order", "answer": "Ik vergeet mijn sleutel altijd.", "en": "I always forget my key." },
+        { "type": "translate", "en": "I don't understand.", "answers": ["Ik begrijp het niet", "Ik begrijp het"] },
+        { "type": "translate", "en": "She sells her bike.", "answers": ["Zij verkoopt haar fiets", "Ze verkoopt haar fiets"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: werkwoorden met prefix", "url": "https://nt2taalmenu.nl/b1-nieuw-werkwoorden-met-prefix/" }
+      ]
+    },
+    {
+      "id": "a1.g10.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Wij komen morgen terug.", "Wij terugkomen morgen.", "Wij komen terug morgen."], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik wil morgen terugkomen.", "Ik wil morgen komen terug."], "answer": 0 },
+        { "type": "choice", "q": "Which verb never splits?", "options": ["aankomen", "ontmoeten", "uitgaan"], "answer": 1 },
+        { "type": "gap", "text": "Zij komt om vijf uur ___. (thuiskomen)", "answers": ["thuis"], "en": "She comes home at five o'clock." },
+        { "type": "gap", "text": "Ik zet de lamp ___. (uitzetten)", "answers": ["uit"], "en": "I turn off the lamp." },
+        { "type": "gap", "text": "Ik wil de deur ___. (openmaken)", "answers": ["openmaken"], "en": "I want to open the door." },
+        { "type": "gap", "text": "Hij doet zijn jas ___. (aandoen)", "answers": ["aan"], "en": "He puts on his coat." },
+        { "type": "transform", "q": "Ik ga vanavond uit.", "instruction": "Add willen", "answers": ["Ik wil vanavond uitgaan"] },
+        { "type": "transform", "q": "Wij nemen onze tassen mee.", "instruction": "Turn it into a question", "answers": ["Nemen wij onze tassen mee", "Nemen we onze tassen mee"] },
+        { "type": "transform", "q": "Jij komt binnen.", "instruction": "Make it a command", "answers": ["Kom binnen"] },
+        { "type": "order", "answer": "Ik ruim mijn kamer op.", "en": "I clean up my room." },
+        { "type": "order", "answer": "Wij moeten om acht uur vertrekken.", "en": "We have to leave at eight o'clock." },
+        { "type": "order", "answer": "Zij belt haar moeder op.", "en": "She phones her mother." },
+        { "type": "translate", "en": "I'll come back tomorrow.", "answers": ["Ik kom morgen terug", "Morgen kom ik terug"] },
+        { "type": "translate", "en": "Turn off the lamp, please.", "answers": ["Zet de lamp uit alsjeblieft", "Zet de lamp alsjeblieft uit", "Zet alsjeblieft de lamp uit"] },
+        { "type": "translate", "en": "I forget everything.", "answers": ["Ik vergeet alles"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: werkwoorden met prefix", "url": "https://nt2taalmenu.nl/b1-nieuw-werkwoorden-met-prefix/" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "id": "a1.t03", "level": "A1", "kind": "theme",
+  "title": "Food & shopping",
+  "subtitle": "Name food and drinks, read a leaflet, buy bread and ask what things cost",
+  "lessons": [
+    {
+      "id": "a1.t03.l1", "title": "Food and drink", "kind": "vocab",
+      "vocab": [
+        "brood", "boter", "kaas", "ei", "melk", "koffie", "thee", "water", "sap", "appel", "banaan", "tomaat", "soep", "rijst",
+        "vlees", "vis", "groente", "fruit", "taart", "koekje", "lekker"
+      ]
+    },
+    {
+      "id": "a1.t03.l2", "title": "Shopping", "kind": "vocab",
+      "vocab": [
+        "winkel", "supermarkt", "markt", "bakkerij", "boodschap", "tas", "kassa", "prijs", "euro", "cent", "geld", "betalen",
+        "kosten", "kopen", "duur", "goedkoop", "aanbieding", "korting", "bon", "pinnen", "zakje"
+      ]
+    },
+    {
+      "id": "a1.t03.l3", "title": "This week's offers", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "A leaflet gives short facts: products, prices and times. Look for the numbers and the days. Tap a word you don't know." }
+      ],
+      "text": "Aanbiedingen deze week bij Supermarkt De Linde. Appels: twee euro per kilo. Bananen: een euro per kilo. Brood: twee voor drie euro. Kaas: vier euro per stuk. Melk en sap: drie voor vijf euro. Koekjes zijn goedkoop op vrijdag en zaterdag. De winkel is elke dag open van acht tot acht uur. Betaal met pinpas of met geld. Welkom!",
+      "items": [
+        { "type": "choice", "q": "Hoeveel kosten de appels per kilo?", "options": ["Twee euro", "Een euro", "Drie euro"], "answer": 0, "en": "How much are the apples per kilo?" },
+        { "type": "choice", "q": "Wat kost het brood?", "options": ["Twee voor drie euro", "Een voor drie euro", "Twee voor vijf euro"], "answer": 0, "en": "What does the bread cost?" },
+        { "type": "choice", "q": "Wanneer zijn de koekjes goedkoop?", "options": ["Op vrijdag en zaterdag", "Elke dag", "Op zondag"], "answer": 0, "en": "When are the biscuits cheap?" },
+        { "type": "choice", "q": "Hoe kun je betalen?", "options": ["Met pinpas of met geld", "Alleen met pinpas", "Alleen met geld"], "answer": 0, "en": "How can you pay?" },
+        { "type": "choice", "q": "Hoe laat is de winkel open?", "options": ["Van acht tot acht uur", "Van negen tot vijf uur", "Alleen 's avonds"], "answer": 0, "en": "When is the shop open?" }
+      ],
+      "sources": [
+        { "title": "Oefenen.nl: free practice (account needed)", "url": "https://oefenen.nl/" }
+      ]
+    },
+    {
+      "id": "a1.t03.l4", "title": "At the bakery", "kind": "listening",
+      "dialogue": [
+        { "who": "A", "nl": "Goedemorgen! Zegt u het maar.", "en": "Good morning! What can I get you?" },
+        { "who": "B", "nl": "Goedemorgen. Mag ik twee broden, alstublieft?", "en": "Good morning. May I have two loaves of bread, please?" },
+        { "who": "A", "nl": "Wit of bruin?", "en": "White or brown?" },
+        { "who": "B", "nl": "Eén wit en één bruin.", "en": "One white and one brown." },
+        { "who": "A", "nl": "Anders nog iets?", "en": "Anything else?" },
+        { "who": "B", "nl": "Ja, vier koekjes, alstublieft.", "en": "Yes, four biscuits, please." },
+        { "who": "A", "nl": "Dat is zes euro vijftig.", "en": "That is six euros fifty." },
+        { "who": "B", "nl": "Kan ik pinnen?", "en": "Can I pay by card?" },
+        { "who": "A", "nl": "Ja, dat kan. Alstublieft.", "en": "Yes, that's fine. Here you are." },
+        { "who": "B", "nl": "Dank u wel. Tot ziens!", "en": "Thank you. Goodbye!" }
+      ],
+      "items": [
+        { "type": "listen", "nl": "Mag ik twee broden, alstublieft?", "q": "What does the customer want?", "options": ["Two loaves of bread", "Two cakes", "Two coffees"], "answer": 0 },
+        { "type": "listen", "nl": "Dat is zes euro vijftig.", "q": "How much is it?", "options": ["€6.50", "€5.60", "€16.50"], "answer": 0 },
+        { "type": "listen", "nl": "Kan ik pinnen?", "q": "What does he ask?", "options": ["Can I pay by card?", "Can I pay cash?", "Where is the bank?"], "answer": 0 },
+        { "type": "listen", "nl": "Anders nog iets?" },
+        { "type": "choice", "q": "Wat koopt de klant?", "options": ["Twee broden en vier koekjes", "Twee koekjes en vier broden", "Alleen koekjes"], "answer": 0, "en": "What does the customer buy?" },
+        { "type": "choice", "q": "Hoe betaalt de klant?", "options": ["Met pinpas", "Met geld", "Dat zegt hij niet"], "answer": 0, "en": "How does the customer pay?" }
+      ],
+      "sources": [
+        { "title": "Taalklas: free Dutch video course", "url": "https://www.taalklas.nl/" }
+      ]
+    },
+    {
+      "id": "a1.t03.l5", "title": "Say it yourself", "kind": "speaking",
+      "dialogue": [
+        { "who": "A", "nl": "Goedemorgen! Zegt u het maar.", "en": "Good morning! What can I get you?" },
+        { "who": "B", "nl": "Goedemorgen. Mag ik twee broden, alstublieft?", "en": "Good morning. May I have two loaves of bread, please?" },
+        { "who": "A", "nl": "Wit of bruin?", "en": "White or brown?" },
+        { "who": "B", "nl": "Eén wit en één bruin.", "en": "One white and one brown." },
+        { "who": "A", "nl": "Anders nog iets?", "en": "Anything else?" },
+        { "who": "B", "nl": "Ja, vier koekjes, alstublieft.", "en": "Yes, four biscuits, please." },
+        { "who": "A", "nl": "Dat is zes euro vijftig.", "en": "That is six euros fifty." },
+        { "who": "B", "nl": "Kan ik pinnen?", "en": "Can I pay by card?" },
+        { "who": "A", "nl": "Ja, dat kan. Alstublieft.", "en": "Yes, that's fine. Here you are." },
+        { "who": "B", "nl": "Dank u wel. Tot ziens!", "en": "Thank you. Goodbye!" }
+      ],
+      "items": [
+        { "type": "speak", "nl": "Mag ik twee broden, alstublieft?", "en": "May I have two loaves of bread, please?" },
+        { "type": "speak", "nl": "Kan ik pinnen?", "en": "Can I pay by card?" },
+        {
+          "type": "prompt",
+          "task": "You are at the market. Ask for something, ask the price, pay and say thank you.",
+          "model": "Goedemorgen. Mag ik een kilo appels, alstublieft? Hoeveel kost dat? Twee euro? Alstublieft, hier is het geld. Dank u wel.",
+          "seconds": 30,
+          "points": ["Ask for something", "Ask the price", "Pay", "Say thank you"]
+        }
+      ]
+    },
+    {
+      "id": "a1.t03.l6", "title": "A message to your housemate", "kind": "writing",
+      "explain": [
+        { "type": "p", "text": "A short message to someone you live with is informal. Use *je*, start with *Hoi* and end with *Groetjes* or *Tot straks*. Name the food you buy with *ik koop* and ask a question with the verb first: *Heb je iets nodig?*" },
+        { "type": "ex", "nl": "Hoi Sam, ik ga naar de supermarkt. Heb je iets nodig?", "en": "Hi Sam, I'm going to the supermarket. Do you need anything?" },
+        { "type": "ex", "nl": "Ik koop brood, kaas en melk.", "en": "I'm buying bread, cheese and milk." },
+        { "type": "tip", "text": "Shopping list? Just write the words without sentences: *brood, kaas, melk, appels*. Remember the plural for more than one: *twee broden*." }
+      ],
+      "items": [
+        {
+          "type": "write",
+          "task": "You are going to the supermarket. Write a short message to your housemate: say where you are going, ask what he or she needs, name three things you will buy and say when you will be back.",
+          "points": ["Where you are going", "A question: what does he or she need?", "Three things you will buy", "When you will be back"],
+          "minWords": 30, "maxWords": 50,
+          "model": "Hoi Sam, ik ga naar de supermarkt. Heb jij iets nodig? Ik koop brood, kaas, melk en appels. Wil je ook koffie of thee? Ik ben om vier uur weer thuis. Groetjes, Lisa"
+        }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A1", "url": "https://nt2taalmenu.nl/nt2-a1-menu/" }
+      ]
+    }
+  ]
+}

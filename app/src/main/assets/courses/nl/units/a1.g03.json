@@ -1,0 +1,137 @@
+{
+  "id": "a1.g03", "level": "A1", "kind": "grammar",
+  "title": "Present tense",
+  "subtitle": "Stem + ending, spelling changes, questions and the short verbs",
+  "lessons": [
+    {
+      "id": "a1.g03.l1", "title": "Regular verbs", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Most Dutch verbs are regular. Take the infinitive (the form in the dictionary, ending in **-en**), remove *-en* and you have the **stem**. For *werken* (to work) the stem is *werk*. The present tense is the stem plus an ending." },
+        { "type": "table", "head": ["", "werken (to work)", "ending"], "rows": [["ik", "werk", "-"], ["jij / je", "werkt", "-t"], ["u", "werkt", "-t"], ["hij / zij / het", "werkt", "-t"], ["wij / jullie / zij", "werken", "-en"]] },
+        { "type": "ex", "nl": "Ik werk in een winkel en mijn zus werkt in een school.", "en": "I work in a shop and my sister works in a school." },
+        { "type": "tip", "text": "Only the plural is easy to forget: it is the infinitive. *Wij werken, jullie werken, zij werken.*" },
+        { "type": "p", "text": "Dutch has one present tense for everything English says with two forms. *Ik werk* means both *I work* and *I am working*. Don't try to translate *am* or *do*." },
+        { "type": "ex", "nl": "Wij drinken koffie en kijken naar buiten.", "en": "We drink coffee and look outside." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik ___ in een winkel. (werken)", "options": ["werk", "werkt", "werken"], "answer": 0 },
+        { "type": "choice", "q": "Anna ___ koffie. (drinken)", "options": ["drink", "drinkt", "drinken"], "answer": 1 },
+        { "type": "choice", "q": "Wij ___ een huis. (zoeken)", "options": ["zoek", "zoekt", "zoeken"], "answer": 2 },
+        { "type": "choice", "q": "Which form is correct?", "options": ["Jij werk", "Jij werkt", "Jij werken"], "answer": 1 },
+        { "type": "gap", "text": "Ik ___ naar een film.", "answers": ["kijk"], "hint": "kijken", "en": "I am watching a film." },
+        { "type": "gap", "text": "Jij ___ mij altijd.", "answers": ["helpt"], "hint": "helpen", "en": "You always help me." },
+        { "type": "gap", "text": "De kinderen ___ televisie.", "answers": ["kijken"], "hint": "kijken", "en": "The children are watching television." },
+        { "type": "gap", "text": "U ___ het vast mooi.", "answers": ["vindt"], "hint": "vinden", "en": "You will surely find it beautiful." },
+        { "type": "gap", "text": "Mijn vader ___ in een bank.", "answers": ["werkt"], "hint": "werken", "en": "My father works in a bank." },
+        { "type": "transform", "q": "Ik werk.", "instruction": "Change ik to hij", "answers": ["Hij werkt"] },
+        { "type": "transform", "q": "Hij kijkt.", "instruction": "Change hij to wij", "answers": ["Wij kijken", "We kijken"] },
+        { "type": "order", "answer": "Wij drinken thee.", "en": "We drink tea.", "extra": ["drinkt"] },
+        { "type": "order", "answer": "Hij zoekt een nieuwe baan.", "en": "He is looking for a new job." },
+        { "type": "translate", "en": "I work in a shop.", "answers": ["Ik werk in een winkel"] },
+        { "type": "translate", "en": "She is looking for a key.", "answers": ["Zij zoekt een sleutel", "Ze zoekt een sleutel"] },
+        { "type": "match", "pairs": [["ik werk", "I work"], ["hij werkt", "he works"], ["wij werken", "we work"], ["jij werkt", "you work"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: werkwoorden (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuwerkwoorden/" }
+      ]
+    },
+    {
+      "id": "a1.g03.l2", "title": "Spelling of the stem", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "The stem must keep the sound of the verb. This is the same spelling rule as for plurals. **Open syllable → closed syllable:** a long vowel written with one letter in the infinitive gets two letters in the stem (*lo-pen → loop*). **Double consonant → single:** a short vowel with a double consonant in the infinitive keeps one consonant in the stem (*zit-ten → zit*)." },
+        { "type": "table", "head": ["infinitive", "stem", "what happens"], "rows": [["lopen", "loop", "long vowel: o → oo"], ["maken", "maak", "long vowel: a → aa"], ["zitten", "zit", "double consonant → single"], ["kennen", "ken", "double consonant → single"], ["leven", "leef", "v → f at the end"], ["reizen", "reis", "z → s at the end"], ["lezen", "lees", "long e and z → s"], ["schrijven", "schrijf", "v → f at the end"]] },
+        { "type": "ex", "nl": "Ik loop naar school en mijn zus fietst.", "en": "I walk to school and my sister cycles." },
+        { "type": "p", "text": "One more rule: if the stem already ends in **t**, you do not add another one. *Hij zit* (not *zitt*), *hij eet* (not *eett*), *hij wacht* (he waits)." },
+        { "type": "tip", "text": "If you can pronounce the infinitive, you can find the stem: say the verb, drop the *-en*, and write the vowel the way the sound needs." },
+        { "type": "ex", "nl": "Mijn buurman schrijft een brief en zijn vrouw leest de krant.", "en": "My neighbour is writing a letter and his wife is reading the newspaper." }
+      ],
+      "items": [
+        { "type": "transform", "q": "lopen", "instruction": "Write the ik-form", "answers": ["loop"] },
+        { "type": "transform", "q": "maken", "instruction": "Write the ik-form", "answers": ["maak"] },
+        { "type": "transform", "q": "zitten", "instruction": "Write the ik-form", "answers": ["zit"], "explain": "A double consonant becomes single." },
+        { "type": "transform", "q": "leven", "instruction": "Write the ik-form", "answers": ["leef"], "explain": "A v at the end of a stem becomes f." },
+        { "type": "transform", "q": "lezen", "instruction": "Write the ik-form", "answers": ["lees"] },
+        { "type": "transform", "q": "reizen", "instruction": "Write the ik-form", "answers": ["reis"] },
+        { "type": "transform", "q": "schrijven", "instruction": "Write the ik-form", "answers": ["schrijf"] },
+        { "type": "choice", "q": "Ik ___ in Utrecht. (wonen)", "options": ["won", "woon", "wonen"], "answer": 1 },
+        { "type": "choice", "q": "Hij ___ op de bank. (zitten)", "options": ["zit", "zitt", "zitten"], "answer": 0 },
+        { "type": "choice", "q": "Jij ___ een boek. (lezen)", "options": ["lest", "leest", "lezet"], "answer": 1, "explain": "lezen: stem lees + t." },
+        { "type": "gap", "text": "Ik ___ het avondeten.", "answers": ["maak"], "hint": "maken", "en": "I make dinner." },
+        { "type": "gap", "text": "Anna ___ met haar buurman.", "answers": ["praat"], "hint": "praten", "en": "Anna talks with her neighbour." },
+        { "type": "gap", "text": "Wij ___ naar Spanje.", "answers": ["reizen"], "hint": "reizen", "en": "We are travelling to Spain." },
+        { "type": "gap", "text": "Mijn vader ___ een brief.", "answers": ["schrijft"], "hint": "schrijven", "en": "My father is writing a letter." },
+        { "type": "gap", "text": "Jij ___ een appel.", "answers": ["eet"], "hint": "eten", "en": "You are eating an apple.", "explain": "The stem eet already ends in t, so there is no second t." },
+        { "type": "order", "answer": "Ik woon in een klein huis.", "en": "I live in a small house." },
+        { "type": "order", "answer": "Zij loopt naar school.", "en": "She walks to school." },
+        { "type": "translate", "en": "He reads a newspaper.", "answers": ["Hij leest een krant", "Hij leest de krant"] },
+        { "type": "translate", "en": "She writes a letter.", "answers": ["Zij schrijft een brief", "Ze schrijft een brief"] },
+        { "type": "match", "pairs": [["lopen", "loop"], ["zitten", "zit"], ["leven", "leef"], ["reizen", "reis"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: werkwoorden (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuwerkwoorden/" }
+      ]
+    },
+    {
+      "id": "a1.g03.l3", "title": "Questions and short verbs", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "In a question the verb goes first, before the subject: *Jij werkt → Werk jij?* When **jij** or **je** follows the verb, the **-t is dropped**: *Werk je hier? Woon je in Utrecht?* With *u*, *hij*, *zij* and *het* the t stays: *Werkt u hier? Woont hij hier?*" },
+        { "type": "ex", "nl": "Waar woon je? Woon je in Utrecht?", "en": "Where do you live? Do you live in Utrecht?" },
+        { "type": "p", "text": "A few very common verbs have a one-syllable infinitive: *gaan, staan, doen, zien* (and *slaan*, to hit). Their stem is written with a single vowel letter: *ga, sta, doe, zie, sla*." },
+        { "type": "table", "head": ["", "gaan (to go)", "staan (to stand)", "doen (to do)", "zien (to see)"], "rows": [["ik", "ga", "sta", "doe", "zie"], ["jij / je", "gaat (ga je?)", "staat (sta je?)", "doet (doe je?)", "ziet (zie je?)"], ["hij / zij / het", "gaat", "staat", "doet", "ziet"], ["wij / jullie / zij", "gaan", "staan", "doen", "zien"]] },
+        { "type": "tip", "text": "The stem ends in a long vowel, so the normal endings apply: *ik ga, hij gaat, ga jij?, gaat u?* The plural is still the infinitive: *wij gaan, zij doen*." },
+        { "type": "ex", "nl": "Wat doe je vandaag? Ik ga naar de bibliotheek.", "en": "What are you doing today? I am going to the library." }
+      ],
+      "items": [
+        { "type": "transform", "q": "Jij werkt.", "instruction": "Turn it into a question", "answers": ["Werk jij", "Werk je"], "explain": "After jij or je the t disappears." },
+        { "type": "transform", "q": "Jij woont in Utrecht.", "instruction": "Turn it into a question", "answers": ["Woon jij in Utrecht", "Woon je in Utrecht"] },
+        { "type": "transform", "q": "U werkt hier.", "instruction": "Turn it into a question", "answers": ["Werkt u hier"], "explain": "With u the t stays." },
+        { "type": "transform", "q": "Hij kijkt televisie.", "instruction": "Turn it into a question", "answers": ["Kijkt hij televisie"] },
+        { "type": "choice", "q": "___ je naar huis?", "options": ["Ga", "Gaat", "Gaan"], "answer": 0 },
+        { "type": "choice", "q": "___ u hier? (wonen)", "options": ["Woon", "Woont", "Wonen"], "answer": 1 },
+        { "type": "gap", "text": "Waar ___ je? (werken)", "answers": ["werk"], "en": "Where do you work?" },
+        { "type": "gap", "text": "Wat ___ jij vandaag? (doen)", "answers": ["doe"], "en": "What are you doing today?" },
+        { "type": "gap", "text": "Waar ___ u? (wonen)", "answers": ["woont"], "en": "Where do you live? (formal)" },
+        { "type": "gap", "text": "Ik ___ naar huis. (gaan)", "answers": ["ga"], "en": "I am going home." },
+        { "type": "gap", "text": "Hij ___ bij de deur. (staan)", "answers": ["staat"], "en": "He is standing at the door." },
+        { "type": "gap", "text": "Ik ___ het niet. (zien)", "answers": ["zie"], "en": "I don't see it." },
+        { "type": "gap", "text": "Wat ___ hij? (doen)", "answers": ["doet"], "en": "What is he doing?" },
+        { "type": "order", "answer": "Waar woon je?", "en": "Where do you live?" },
+        { "type": "order", "answer": "Wat doe jij vandaag?", "en": "What are you doing today?" },
+        { "type": "order", "answer": "Gaat hij naar school?", "en": "Is he going to school?" },
+        { "type": "translate", "en": "Where do you work? (informal)", "answers": ["Waar werk je", "Waar werk jij"] },
+        { "type": "translate", "en": "What are you doing? (formal)", "answers": ["Wat doet u"] },
+        { "type": "translate", "en": "Do you see the dog?", "answers": ["Zie je de hond", "Zie jij de hond"] },
+        { "type": "match", "pairs": [["ik ga", "I go"], ["hij gaat", "he goes"], ["wij doen", "we do"], ["zij ziet", "she sees"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: werkwoorden (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuwerkwoorden/" }
+      ]
+    },
+    {
+      "id": "a1.g03.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Wij ___ in Amsterdam. (wonen)", "options": ["woon", "woont", "wonen"], "answer": 2 },
+        { "type": "choice", "q": "Hij ___ een brief. (schrijven)", "options": ["schrijf", "schrijft", "schrijven"], "answer": 1 },
+        { "type": "choice", "q": "___ je Nederlands? (spreken)", "options": ["Spreek", "Spreekt", "Spreken"], "answer": 0 },
+        { "type": "gap", "text": "Ik ___ de krant. (lezen)", "answers": ["lees"], "en": "I read the newspaper." },
+        { "type": "gap", "text": "De kinderen ___ naar het park. (lopen)", "answers": ["lopen"], "en": "The children walk to the park." },
+        { "type": "gap", "text": "Mijn moeder ___ in een ziekenhuis. (werken)", "answers": ["werkt"], "en": "My mother works in a hospital." },
+        { "type": "gap", "text": "___ jullie koffie of thee? (drinken)", "answers": ["drinken"], "en": "Do you drink coffee or tea? (plural)" },
+        { "type": "gap", "text": "Waar ___ jij? (zitten)", "answers": ["zit"], "en": "Where are you sitting?" },
+        { "type": "gap", "text": "Wat ___ u van dit huis? (vinden)", "answers": ["vindt"], "en": "What do you think of this house?" },
+        { "type": "transform", "q": "Jij leest een boek.", "instruction": "Turn it into a question", "answers": ["Lees jij een boek", "Lees je een boek"] },
+        { "type": "transform", "q": "Wij maken het eten.", "instruction": "Change wij to ik", "answers": ["Ik maak het eten"] },
+        { "type": "transform", "q": "Ik ga naar huis.", "instruction": "Change ik to zij (she)", "answers": ["Zij gaat naar huis", "Ze gaat naar huis"] },
+        { "type": "order", "answer": "Ik kijk naar een film.", "en": "I am watching a film." },
+        { "type": "order", "answer": "Woont u in Utrecht?", "en": "Do you live in Utrecht? (formal)" },
+        { "type": "order", "answer": "Zij leest elke dag de krant.", "en": "She reads the newspaper every day." },
+        { "type": "translate", "en": "We live in a small house.", "answers": ["Wij wonen in een klein huis", "We wonen in een klein huis"] },
+        { "type": "translate", "en": "Where is he going?", "answers": ["Waar gaat hij naartoe", "Waar gaat hij heen", "Waar gaat hij naar toe", "Waar gaat hij"] },
+        { "type": "translate", "en": "What are you reading? (informal)", "answers": ["Wat lees je", "Wat lees jij"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: werkwoorden (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuwerkwoorden/" }
+      ]
+    }
+  ]
+}

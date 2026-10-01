@@ -1,0 +1,124 @@
+{
+  "id": "a1.g06", "level": "A1", "kind": "grammar",
+  "title": "Negation 1",
+  "subtitle": "geen or niet, and where niet goes in the sentence",
+  "lessons": [
+    {
+      "id": "a1.g06.l1", "title": "geen: not a, no", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Dutch has two words for *no / not*: **geen** and **niet**. Use **geen** to negate a noun that has *een* or no article at all. It means *not a*, *not any* or *no*. *Geen* never changes: *geen auto, geen kind, geen kinderen, geen tijd*." },
+        { "type": "table", "head": ["positive", "negative"], "rows": [["Ik heb een auto.", "Ik heb geen auto."], ["Zij heeft kinderen.", "Zij heeft geen kinderen."], ["Wij drinken koffie.", "Wij drinken geen koffie."], ["Ik heb tijd.", "Ik heb geen tijd."]] },
+        { "type": "ex", "nl": "Ik heb geen tijd voor koffie.", "en": "I have no time for coffee." },
+        { "type": "tip", "text": "Don't put *een* and *geen* together: *geen* already contains the idea of *een*. Not *Ik heb niet een auto* and not *Ik heb geen een auto*." },
+        { "type": "ex", "nl": "Hij heeft geen broers en geen zussen.", "en": "He has no brothers and no sisters." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik heb ___ auto.", "options": ["geen", "niet", "nooit"], "answer": 0 },
+        { "type": "choice", "q": "Zij heeft ___ kinderen.", "options": ["niet", "geen", "geen een"], "answer": 1 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik heb niet een fiets.", "Ik heb geen fiets.", "Ik heb een geen fiets."], "answer": 1 },
+        { "type": "gap", "text": "Ik heb ___ tijd.", "answers": ["geen"], "en": "I have no time." },
+        { "type": "gap", "text": "Wij hebben ___ auto.", "answers": ["geen"], "en": "We don't have a car." },
+        { "type": "gap", "text": "Hij drinkt ___ koffie.", "answers": ["geen"], "en": "He doesn't drink coffee." },
+        { "type": "transform", "q": "Ik heb een hond.", "instruction": "Make it negative", "answers": ["Ik heb geen hond"] },
+        { "type": "transform", "q": "Zij drinkt thee.", "instruction": "Make it negative", "answers": ["Zij drinkt geen thee", "Ze drinkt geen thee"] },
+        { "type": "transform", "q": "Ik zie een auto.", "instruction": "Make it negative", "answers": ["Ik zie geen auto"] },
+        { "type": "order", "answer": "Ik heb geen tijd.", "en": "I have no time." },
+        { "type": "order", "answer": "Wij hebben geen auto.", "en": "We have no car." },
+        { "type": "order", "answer": "Zij eet geen vlees.", "en": "She does not eat meat." },
+        { "type": "translate", "en": "I have no brother.", "answers": ["Ik heb geen broer"] },
+        { "type": "translate", "en": "She doesn't drink tea.", "answers": ["Zij drinkt geen thee", "Ze drinkt geen thee"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: ontkennen (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuontkennen/" }
+      ]
+    },
+    {
+      "id": "a1.g06.l2", "title": "niet: where does it go?", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Use **niet** for everything else: verbs, adjectives, definite nouns (with *de, het, mijn, dit*), names and place phrases. The position depends on what comes after it." },
+        { "type": "table", "head": ["niet goes...", "example"], "rows": [["at the end of a simple sentence", "Ik werk niet. · Ik ken Anna niet. · Ik heb het boek niet."], ["before an adjective", "Het huis is niet groot."], ["before a place phrase (preposition)", "Hij woont niet in Utrecht."], ["before the second verb (after a modal)", "Ik kan niet komen."]] },
+        { "type": "ex", "nl": "Ik ken je buurman niet.", "en": "I don't know your neighbour." },
+        { "type": "p", "text": "In short: *niet* goes **as far back in the sentence as possible**, but stays in front of an adjective, a prepositional phrase or a second verb part (such as an infinitive: *kan* + *komen*)." },
+        { "type": "ex", "nl": "Wij kunnen morgen niet komen.", "en": "We can't come tomorrow." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik niet werk.", "Ik werk niet.", "Ik werk geen."], "answer": 1 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Het huis niet is groot.", "Het huis is niet groot.", "Het huis is groot niet."], "answer": 1 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Hij woont in Utrecht niet.", "Hij woont niet in Utrecht.", "Hij niet woont in Utrecht."], "answer": 1 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik kan komen niet.", "Ik niet kan komen.", "Ik kan niet komen."], "answer": 2 },
+        { "type": "transform", "q": "Ik ken hem.", "instruction": "Make it negative", "answers": ["Ik ken hem niet"] },
+        { "type": "transform", "q": "Het huis is groot.", "instruction": "Make it negative", "answers": ["Het huis is niet groot"] },
+        { "type": "transform", "q": "Zij woont in Leiden.", "instruction": "Make it negative", "answers": ["Zij woont niet in Leiden", "Ze woont niet in Leiden"] },
+        { "type": "transform", "q": "Wij kunnen komen.", "instruction": "Make it negative", "answers": ["Wij kunnen niet komen", "We kunnen niet komen"] },
+        { "type": "gap", "text": "Ik werk ___.", "answers": ["niet"], "en": "I don't work." },
+        { "type": "gap", "text": "De soep is ___ warm.", "answers": ["niet"], "en": "The soup is not warm." },
+        { "type": "order", "answer": "Ik ken Anna niet.", "en": "I don't know Anna." },
+        { "type": "order", "answer": "Hij woont niet in Utrecht.", "en": "He doesn't live in Utrecht." },
+        { "type": "order", "answer": "Het huis is niet groot.", "en": "The house is not big." },
+        { "type": "order", "answer": "Wij kunnen niet komen.", "en": "We cannot come." },
+        { "type": "translate", "en": "I don't know him.", "answers": ["Ik ken hem niet"] },
+        { "type": "translate", "en": "The house is not big.", "answers": ["Het huis is niet groot"] },
+        { "type": "translate", "en": "He doesn't live in Utrecht.", "answers": ["Hij woont niet in Utrecht"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: ontkennen (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuontkennen/" }
+      ]
+    },
+    {
+      "id": "a1.g06.l3", "title": "geen or niet?", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "To choose, look at the noun. If you could put **een** in front of it (or no article at all), use **geen**. If it has **de, het, dit, mijn, jouw** or it is a name, use **niet**." },
+        { "type": "table", "head": ["geen", "niet"], "rows": [["Ik lees een boek. → Ik lees geen boek.", "Ik lees het boek. → Ik lees het boek niet."], ["Zij heeft een zus. → Zij heeft geen zus.", "Ik ken zijn zus niet."], ["Dat is een goed idee. → Dat is geen goed idee.", "Dat is goed. → Dat is niet goed."], ["Ik heb tijd. → Ik heb geen tijd.", "Ik ken de weg. → Ik ken de weg niet."]] },
+        { "type": "ex", "nl": "Dat is geen goed idee.", "en": "That is not a good idea." },
+        { "type": "tip", "text": "Compare: *Dat is geen goed idee* (a noun, *idee*, with an adjective) and *Dat is niet goed* (just an adjective). An adjective alone is negated with *niet*." },
+        { "type": "ex", "nl": "Hij werkt niet en hij heeft geen geld.", "en": "He is not working and he has no money." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik heb ___ boek.", "options": ["geen", "niet"], "answer": 0 },
+        { "type": "choice", "q": "Ik lees het boek ___.", "options": ["geen", "niet"], "answer": 1 },
+        { "type": "choice", "q": "Hij werkt ___.", "options": ["geen", "niet"], "answer": 1 },
+        { "type": "choice", "q": "Dat is ___ goed idee.", "options": ["geen", "niet"], "answer": 0, "explain": "Idee is a noun with een: een goed idee." },
+        { "type": "choice", "q": "Ik ken mijn buurman ___.", "options": ["geen", "niet"], "answer": 1 },
+        { "type": "gap", "text": "Zij heeft ___ geld.", "answers": ["geen"], "en": "She has no money." },
+        { "type": "gap", "text": "Het is ___ koud vandaag.", "answers": ["niet"], "en": "It is not cold today." },
+        { "type": "gap", "text": "Ik heb de sleutel ___.", "answers": ["niet"], "en": "I don't have the key." },
+        { "type": "transform", "q": "Ik lees een boek.", "instruction": "Make it negative", "answers": ["Ik lees geen boek"] },
+        { "type": "transform", "q": "Ik lees het boek.", "instruction": "Make it negative", "answers": ["Ik lees het boek niet"] },
+        { "type": "transform", "q": "Hij is moe.", "instruction": "Make it negative", "answers": ["Hij is niet moe"] },
+        { "type": "transform", "q": "Dat is een goed idee.", "instruction": "Make it negative", "answers": ["Dat is geen goed idee"] },
+        { "type": "order", "answer": "Hij heeft geen geld.", "en": "He has no money." },
+        { "type": "order", "answer": "Ik zie de bus niet.", "en": "I don't see the bus." },
+        { "type": "translate", "en": "I don't have a bike.", "answers": ["Ik heb geen fiets"] },
+        { "type": "translate", "en": "I don't have my bike.", "answers": ["Ik heb mijn fiets niet"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: ontkennen (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuontkennen/" }
+      ]
+    },
+    {
+      "id": "a1.g06.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Wij hebben ___ kinderen.", "options": ["geen", "niet"], "answer": 0 },
+        { "type": "choice", "q": "Ik begrijp het ___.", "options": ["geen", "niet"], "answer": 1 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik heb niet tijd.", "Ik heb geen tijd.", "Ik heb tijd niet."], "answer": 1 },
+        { "type": "gap", "text": "Zij is ___ ziek.", "answers": ["niet"], "en": "She is not ill." },
+        { "type": "gap", "text": "Ik drink ___ bier.", "answers": ["geen"], "en": "I don't drink beer." },
+        { "type": "gap", "text": "Ik kan het ___ vinden.", "answers": ["niet"], "en": "I can't find it." },
+        { "type": "gap", "text": "Dat is ___ probleem.", "answers": ["geen"], "en": "That is no problem." },
+        { "type": "transform", "q": "Zij heeft een auto.", "instruction": "Make it negative", "answers": ["Zij heeft geen auto", "Ze heeft geen auto"] },
+        { "type": "transform", "q": "Ik ken de dokter.", "instruction": "Make it negative", "answers": ["Ik ken de dokter niet"] },
+        { "type": "transform", "q": "Het is mooi weer.", "instruction": "Make it negative", "answers": ["Het is geen mooi weer", "Het is niet mooi weer"], "explain": "Both are possible. Het is geen mooi weer (not nice weather) is the most common." },
+        { "type": "transform", "q": "Jij kunt komen.", "instruction": "Make it negative", "answers": ["Jij kunt niet komen"] },
+        { "type": "order", "answer": "Ik heb geen honger.", "en": "I am not hungry." },
+        { "type": "order", "answer": "Wij wonen niet in Amsterdam.", "en": "We don't live in Amsterdam." },
+        { "type": "order", "answer": "Zij spreekt geen Frans.", "en": "She doesn't speak French." },
+        { "type": "translate", "en": "I don't understand it.", "answers": ["Ik begrijp het niet", "Ik snap het niet"] },
+        { "type": "translate", "en": "He has no children.", "answers": ["Hij heeft geen kinderen"] },
+        { "type": "translate", "en": "The soup is not hot.", "answers": ["De soep is niet heet", "De soep is niet warm"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: ontkennen (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuontkennen/" }
+      ]
+    }
+  ]
+}

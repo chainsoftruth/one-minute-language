@@ -1,0 +1,140 @@
+{
+  "id": "a1.g11", "level": "A1", "kind": "grammar",
+  "title": "Time, numbers, prepositions",
+  "subtitle": "Count to a hundred, tell the time and say where and when",
+  "lessons": [
+    {
+      "id": "a1.g11.l1", "title": "Numbers 0-100", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Numbers up to twenty are new words. From twenty onward Dutch says the **ones first**, then *en* (and), then the tens: **21 = eenentwintig** (one-and-twenty), **34 = vierendertig**, **99 = negenennegentig**." },
+        { "type": "table", "head": ["numbers", "Dutch"], "rows": [["0-10", "nul · een · twee · drie · vier · vijf · zes · zeven · acht · negen · tien"], ["11-19", "elf · twaalf · dertien · veertien · vijftien · zestien · zeventien · achttien · negentien"], ["20-90", "twintig · dertig · veertig · vijftig · zestig · zeventig · tachtig · negentig"], ["100, 1000, 1 000 000", "honderd · duizend · een miljoen"]] },
+        { "type": "ex", "nl": "Mijn buurman is tweeënzestig jaar.", "en": "My neighbour is sixty-two years old." },
+        { "type": "tip", "text": "After *twee* and *drie* the extra *e* gets two dots to show where the syllable splits: *tweeëntwintig, drieëndertig*. With other numbers there are no dots: *vierendertig*, *vijfenveertig*." },
+        { "type": "p", "text": "Above 100 you say the hundreds first: *honderdeen* (101), *tweehonderd vijftig* (250), *duizend negenhonderd* (1900). Hundreds and thousands are written as one word, *drieduizend*." },
+        { "type": "ex", "nl": "Het kaartje kost vijfentwintig euro.", "en": "The ticket costs twenty-five euros." }
+      ],
+      "items": [
+        { "type": "listen", "nl": "tweeënveertig", "q": "Which number do you hear?", "options": ["24", "42", "44"], "answer": 1, "explain": "tweeënveertig = twee-en-veertig: 2 + 40 = 42." },
+        { "type": "listen", "nl": "vijftien", "q": "Which number do you hear?", "options": ["15", "50", "55"], "answer": 0 },
+        { "type": "listen", "nl": "achtenzestig", "q": "Which number do you hear?", "options": ["86", "68", "78"], "answer": 1 },
+        { "type": "listen", "nl": "Het kost dertig euro.", "q": "How much does it cost?", "options": ["13 euros", "30 euros", "33 euros"], "answer": 1, "explain": "dertien = 13, dertig = 30." },
+        { "type": "choice", "q": "zeventien", "options": ["7", "17", "70"], "answer": 1 },
+        { "type": "choice", "q": "negenentachtig", "options": ["98", "89", "79"], "answer": 1 },
+        { "type": "choice", "q": "80", "options": ["acht", "tachtig", "achtig"], "answer": 1 },
+        { "type": "transform", "q": "21", "instruction": "Write the number in words", "answers": ["eenentwintig"] },
+        { "type": "transform", "q": "34", "instruction": "Write the number in words", "answers": ["vierendertig"] },
+        { "type": "transform", "q": "45", "instruction": "Write the number in words", "answers": ["vijfenveertig"] },
+        { "type": "transform", "q": "58", "instruction": "Write the number in words", "answers": ["achtenvijftig"] },
+        { "type": "transform", "q": "63", "instruction": "Write the number in words", "answers": ["drieënzestig"], "explain": "After drie the e gets two dots: drieën." },
+        { "type": "transform", "q": "72", "instruction": "Write the number in words", "answers": ["tweeënzeventig"] },
+        { "type": "transform", "q": "99", "instruction": "Write the number in words", "answers": ["negenennegentig"] },
+        { "type": "gap", "text": "Mijn moeder is ___ jaar. (50)", "answers": ["vijftig"], "en": "My mother is fifty years old." },
+        { "type": "gap", "text": "Een kaartje kost ___ euro. (12)", "answers": ["twaalf"], "en": "A ticket costs twelve euros." },
+        { "type": "order", "answer": "Het kost vijfentwintig euro.", "en": "It costs twenty-five euros." },
+        { "type": "translate", "en": "I am thirty-three years old.", "answers": ["Ik ben drieëndertig jaar", "Ik ben drieëndertig jaar oud", "Ik ben drieëndertig"] },
+        { "type": "match", "pairs": [["13", "dertien"], ["30", "dertig"], ["14", "veertien"], ["40", "veertig"], ["16", "zestien"], ["60", "zestig"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A1", "url": "https://nt2taalmenu.nl/nt2-a1-menu/" }
+      ]
+    },
+    {
+      "id": "a1.g11.l2", "title": "Telling the time", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Ask: **Hoe laat is het?** Answer: **Het is vijf uur.** For other times Dutch uses **over** (past), **voor** (to), **kwart** (quarter) and **half**. The big surprise is **half**: *half zes* is **5:30**, half way *to* six." },
+        { "type": "table", "head": ["time", "Dutch"], "rows": [["5:00", "vijf uur"], ["5:10", "tien over vijf"], ["5:15", "kwart over vijf"], ["5:20", "tien voor half zes"], ["5:30", "half zes"], ["5:40", "tien over half zes"], ["5:45", "kwart voor zes"], ["5:50", "tien voor zes"]] },
+        { "type": "ex", "nl": "Het is half negen. De les begint om negen uur.", "en": "It is half past eight. The lesson starts at nine o'clock." },
+        { "type": "p", "text": "Use **om** + the time to say *at*: *Ik sta om zeven uur op*. For timetables (trains, TV) people use the 24-hour clock: *De trein vertrekt om negentien uur dertig*." },
+        { "type": "tip", "text": "5:20 and 5:40 use **half** as the anchor: *tien voor half zes* (ten to half six) and *tien over half zes* (ten past half six). It feels strange at first, but you will get used to it." },
+        { "type": "ex", "nl": "Wij eten om kwart over zes.", "en": "We eat at a quarter past six." }
+      ],
+      "items": [
+        { "type": "listen", "nl": "Het is half negen.", "q": "What time is it?", "options": ["8:30", "9:30", "9:00"], "answer": 0, "explain": "half negen = half way to nine = 8:30." },
+        { "type": "listen", "nl": "Het is kwart voor vier.", "q": "What time is it?", "options": ["4:15", "3:45", "4:45"], "answer": 1 },
+        { "type": "listen", "nl": "De les begint om tien over twee.", "q": "When does the lesson start?", "options": ["2:10", "1:50", "2:50"], "answer": 0 },
+        { "type": "choice", "q": "half vier", "options": ["3:30", "4:30", "3:45"], "answer": 0 },
+        { "type": "choice", "q": "kwart over twee", "options": ["1:45", "2:15", "2:45"], "answer": 1 },
+        { "type": "choice", "q": "tien voor half drie", "options": ["2:20", "2:40", "3:10"], "answer": 0 },
+        { "type": "choice", "q": "kwart voor vijf", "options": ["4:45", "5:15", "5:45"], "answer": 0 },
+        { "type": "gap", "text": "Het is kwart ___ drie. (3:15)", "answers": ["over"], "en": "It is a quarter past three." },
+        { "type": "gap", "text": "Het is kwart ___ vier. (3:45)", "answers": ["voor"], "en": "It is a quarter to four." },
+        { "type": "gap", "text": "Ik sta ___ zeven uur op.", "answers": ["om"], "en": "I get up at seven o'clock." },
+        { "type": "transform", "q": "7:30", "instruction": "Write: Het is ...", "answers": ["Het is half acht"] },
+        { "type": "transform", "q": "9:15", "instruction": "Write: Het is ...", "answers": ["Het is kwart over negen"] },
+        { "type": "transform", "q": "4:45", "instruction": "Write: Het is ...", "answers": ["Het is kwart voor vijf"] },
+        { "type": "transform", "q": "10:20", "instruction": "Write: Het is ...", "answers": ["Het is tien voor half elf"] },
+        { "type": "order", "answer": "Het is half drie.", "en": "It is half past two." },
+        { "type": "order", "answer": "Hoe laat begint de les?", "en": "What time does the lesson start?" },
+        { "type": "translate", "en": "What time is it?", "answers": ["Hoe laat is het"] },
+        { "type": "translate", "en": "It is half past three.", "answers": ["Het is half vier"], "explain": "Half past three = half way to four." },
+        { "type": "translate", "en": "I get up at seven o'clock.", "answers": ["Ik sta om zeven uur op", "Ik sta om zeven op"] },
+        { "type": "match", "pairs": [["half vier", "3:30"], ["kwart over vier", "4:15"], ["kwart voor vier", "3:45"], ["tien voor half vier", "3:20"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A1", "url": "https://nt2taalmenu.nl/nt2-a1-menu/" }
+      ]
+    },
+    {
+      "id": "a1.g11.l3", "title": "om, op, in and place words", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Three little words say *when*: **om** for the clock (*om negen uur*), **op** for days and dates (*op maandag, op 1 mei*), **in** for months, seasons and years (*in juli, in de zomer, in 2024*). Parts of the day use *'s*: *'s ochtends, 's middags, 's avonds, 's nachts* (in the morning, afternoon, evening, at night)." },
+        { "type": "table", "head": ["when", "word", "example"], "rows": [["clock time", "om", "om half negen"], ["day, date", "op", "op maandag, op 5 mei"], ["month, season, year", "in", "in juli, in de zomer, in 2024"], ["part of the day", "'s", "'s ochtends, 's avonds"]] },
+        { "type": "ex", "nl": "Op maandag werk ik, en in juli ga ik op vakantie.", "en": "On Monday I work, and in July I go on holiday." },
+        { "type": "p", "text": "Place words say *where* something is. They all take **de / het + noun** after them. Learn them with a picture in your head." },
+        { "type": "table", "head": ["", "Dutch", "example"], "rows": [["in", "in", "De kaas ligt in de koelkast."], ["on", "op", "Het boek ligt op de tafel."], ["under", "onder", "De kat zit onder de stoel."], ["next to", "naast", "Het café is naast de bank."], ["behind", "achter", "De fiets staat achter het huis."], ["in front of", "voor", "De auto staat voor het huis."], ["between", "tussen", "De tas staat tussen de stoel en de tafel."]] },
+        { "type": "ex", "nl": "De kat zit onder de tafel.", "en": "The cat is sitting under the table." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik werk ___ maandag.", "options": ["op", "in", "om"], "answer": 0 },
+        { "type": "choice", "q": "Wij gaan ___ juli naar Spanje.", "options": ["op", "in", "om"], "answer": 1 },
+        { "type": "choice", "q": "De les begint ___ negen uur.", "options": ["op", "in", "om"], "answer": 2 },
+        { "type": "choice", "q": "Het boek ligt ___ de tafel. (on)", "options": ["op", "onder", "naast"], "answer": 0 },
+        { "type": "choice", "q": "De kat zit ___ de stoel. (under)", "options": ["achter", "onder", "tussen"], "answer": 1 },
+        { "type": "gap", "text": "De supermarkt is ___ het station. (next to)", "answers": ["naast"], "en": "The supermarket is next to the station." },
+        { "type": "gap", "text": "De tas staat ___ de stoel en de tafel. (between)", "answers": ["tussen"], "en": "The bag is between the chair and the table." },
+        { "type": "gap", "text": "De fiets staat ___ het huis. (behind)", "answers": ["achter"], "en": "The bike is behind the house." },
+        { "type": "gap", "text": "Wij gaan ___ de zomer naar Spanje.", "answers": ["in"], "en": "We are going to Spain in the summer." },
+        { "type": "transform", "q": "Het boek ligt op de tafel.", "instruction": "Say: under the table", "answers": ["Het boek ligt onder de tafel"] },
+        { "type": "transform", "q": "De auto staat voor het huis.", "instruction": "Say: behind the house", "answers": ["De auto staat achter het huis"] },
+        { "type": "order", "answer": "Het boek ligt op de tafel.", "en": "The book is on the table." },
+        { "type": "order", "answer": "Wij gaan in juli naar Spanje.", "en": "We are going to Spain in July.", "alt": ["In juli gaan wij naar Spanje."] },
+        { "type": "order", "answer": "Op maandag werk ik thuis.", "en": "On Monday I work at home." },
+        { "type": "translate", "en": "The cat is under the table.", "answers": ["De kat zit onder de tafel", "De kat ligt onder de tafel", "De kat is onder de tafel"] },
+        { "type": "translate", "en": "The bank is next to the station.", "answers": ["De bank is naast het station"] },
+        { "type": "translate", "en": "I work on Monday.", "answers": ["Ik werk op maandag", "Op maandag werk ik"] },
+        { "type": "match", "pairs": [["om negen uur", "at nine o'clock"], ["op maandag", "on Monday"], ["in juli", "in July"], ["in de zomer", "in summer"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: voorzetsels (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuvoorzetsels/" },
+        { "title": "NT2 TaalMenu: voorzetsels (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuvoorzetsels/" }
+      ]
+    },
+    {
+      "id": "a1.g11.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "listen", "nl": "Mijn zus is achtentwintig jaar.", "q": "How old is her sister?", "options": ["28", "38", "82"], "answer": 0 },
+        { "type": "listen", "nl": "De trein vertrekt om kwart over negen.", "q": "When does the train leave?", "options": ["9:15", "8:45", "9:45"], "answer": 0 },
+        { "type": "choice", "q": "half twaalf", "options": ["11:30", "12:30", "12:15"], "answer": 0 },
+        { "type": "choice", "q": "Ik werk ___ de zomer in een café.", "options": ["op", "in", "om"], "answer": 1 },
+        { "type": "choice", "q": "De sleutel ligt ___ de tas. (in)", "options": ["in", "op", "onder"], "answer": 0 },
+        { "type": "gap", "text": "Hoe ___ is het?", "answers": ["laat"], "en": "What time is it?" },
+        { "type": "gap", "text": "Het is tien ___ vijf. (5:10)", "answers": ["over"], "en": "It is ten past five." },
+        { "type": "gap", "text": "Wij eten ___ zes uur.", "answers": ["om"], "en": "We eat at six o'clock." },
+        { "type": "gap", "text": "Ik ben ___ zaterdag thuis.", "answers": ["op"], "en": "I am at home on Saturday." },
+        { "type": "transform", "q": "12", "instruction": "Write the number in words", "answers": ["twaalf"] },
+        { "type": "transform", "q": "87", "instruction": "Write the number in words", "answers": ["zevenentachtig"] },
+        { "type": "transform", "q": "6:30", "instruction": "Write: Het is ...", "answers": ["Het is half zeven"] },
+        { "type": "order", "answer": "Ik sta om half zeven op.", "en": "I get up at half past six." },
+        { "type": "order", "answer": "De kat ligt onder de stoel.", "en": "The cat is lying under the chair." },
+        { "type": "order", "answer": "Het café is naast de bank.", "en": "The café is next to the bank." },
+        { "type": "translate", "en": "It is a quarter past two.", "answers": ["Het is kwart over twee"] },
+        { "type": "translate", "en": "The lesson starts at nine o'clock.", "answers": ["De les begint om negen uur", "De les begint om negen"] },
+        { "type": "translate", "en": "The book is on the table.", "answers": ["Het boek ligt op de tafel", "Het boek is op de tafel", "Het boek staat op de tafel"] },
+        { "type": "match", "pairs": [["twintig", "20"], ["vijftig", "50"], ["zestig", "60"], ["negentig", "90"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A1", "url": "https://nt2taalmenu.nl/nt2-a1-menu/" }
+      ]
+    }
+  ]
+}

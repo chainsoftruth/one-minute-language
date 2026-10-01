@@ -1,0 +1,128 @@
+{
+  "id": "a1.g07", "level": "A1", "kind": "grammar",
+  "title": "Possessive, object, demonstrative",
+  "subtitle": "my, me, this: the small words that point to people and things",
+  "lessons": [
+    {
+      "id": "a1.g07.l1", "title": "Possessives: mijn, jouw, zijn...", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "A possessive shows who something belongs to. It stands in front of the noun and replaces the article: *mijn huis*, not *het mijn huis*. Most possessives never change. Only **ons / onze** (our) follows the noun: **ons** with singular *het*-words, **onze** with *de*-words and all plurals." },
+        { "type": "table", "head": ["", "possessive", "example"], "rows": [["ik", "mijn", "mijn fiets"], ["jij", "jouw / je", "jouw fiets, je fiets"], ["u", "uw", "uw fiets"], ["hij", "zijn", "zijn fiets"], ["zij", "haar", "haar fiets"], ["wij", "ons / onze", "ons huis, onze fiets, onze kinderen"], ["jullie", "jullie", "jullie huis"], ["zij (they)", "hun", "hun huis"]] },
+        { "type": "ex", "nl": "Onze buren hebben een hond en ons huis is klein.", "en": "Our neighbours have a dog and our house is small." },
+        { "type": "tip", "text": "Use **je** instead of **jouw** unless you want to stress it: *Waar is je tas?* but *Is dat jouw tas of mijn tas?*" },
+        { "type": "ex", "nl": "Mijn zus woont in Leiden en haar man werkt in Utrecht.", "en": "My sister lives in Leiden and her husband works in Utrecht." }
+      ],
+      "items": [
+        { "type": "choice", "q": "___ vader (his)", "options": ["zijn", "haar", "hun"], "answer": 0 },
+        { "type": "choice", "q": "___ moeder (her)", "options": ["zijn", "haar", "mijn"], "answer": 1 },
+        { "type": "choice", "q": "___ huis (our)", "options": ["ons", "onze"], "answer": 0, "explain": "huis is a het-word, so ons." },
+        { "type": "choice", "q": "___ auto (our)", "options": ["ons", "onze"], "answer": 1, "explain": "auto is a de-word, so onze." },
+        { "type": "choice", "q": "Which possessive do you use for a formal 'your'?", "options": ["jouw", "uw", "jullie"], "answer": 1 },
+        { "type": "gap", "text": "Ik woon met ___ zus.", "answers": ["mijn"], "en": "I live with my sister." },
+        { "type": "gap", "text": "Tim en ___ vrouw wonen hier.", "answers": ["zijn"], "en": "Tim and his wife live here." },
+        { "type": "gap", "text": "___ huis is groot.", "answers": ["Ons"], "hint": "our", "en": "Our house is big." },
+        { "type": "gap", "text": "___ kinderen spelen buiten.", "answers": ["Onze"], "hint": "our", "en": "Our children are playing outside." },
+        { "type": "gap", "text": "Waar is ___ tas? (informal)", "answers": ["je", "jouw"], "en": "Where is your bag?" },
+        { "type": "gap", "text": "Wat is ___ naam? (formal)", "answers": ["uw"], "en": "What is your name?" },
+        { "type": "transform", "q": "Dit is de tas van Anna.", "instruction": "Use a possessive", "answers": ["Dit is haar tas"] },
+        { "type": "transform", "q": "Dit is het huis van Tim.", "instruction": "Use a possessive", "answers": ["Dit is zijn huis"] },
+        { "type": "transform", "q": "Dit is de auto.", "instruction": "Say 'our car' instead of 'the car'", "answers": ["Dit is onze auto"], "explain": "auto is a de-word, so onze." },
+        { "type": "order", "answer": "Mijn zus woont in Leiden.", "en": "My sister lives in Leiden." },
+        { "type": "order", "answer": "Onze buren hebben een hond.", "en": "Our neighbours have a dog." },
+        { "type": "translate", "en": "Her brother lives in Utrecht.", "answers": ["Haar broer woont in Utrecht"] },
+        { "type": "translate", "en": "Our house is small.", "answers": ["Ons huis is klein"] },
+        { "type": "translate", "en": "Their car is new.", "answers": ["Hun auto is nieuw"] },
+        { "type": "match", "pairs": [["my", "mijn"], ["his", "zijn"], ["her", "haar"], ["our (het-word)", "ons"], ["their", "hun"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: bezittelijke voornaamwoorden (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menubezittelijkevoornaamwoorden/" }
+      ]
+    },
+    {
+      "id": "a1.g07.l2", "title": "Object pronouns: me, hem, haar...", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "When a pronoun is the object, or comes after a preposition, it changes form. Most of them are easy to remember. Like the subject pronouns, *mij* and *jou* have a full form and a short form (*me*, *je*): use the short form unless you stress the person." },
+        { "type": "table", "head": ["subject", "object", "example"], "rows": [["ik", "mij / me", "Hij ziet me."], ["jij", "jou / je", "Ik zie je."], ["u", "u", "Ik help u graag."], ["hij", "hem", "Ik ken hem niet."], ["zij", "haar", "Wij kennen haar."], ["het", "het", "Ik zie het niet."], ["wij", "ons", "Zij helpt ons."], ["jullie", "jullie", "Ik bel jullie."], ["zij (they)", "ze / hen", "Ik zie ze."]] },
+        { "type": "ex", "nl": "Ik bel haar morgen en zij belt mij vanavond.", "en": "I'll call her tomorrow and she'll call me tonight." },
+        { "type": "tip", "text": "For *they / them*, people say **ze** all the time: *Ik ken ze niet.* The stressed or formal form for people is **hen**." },
+        { "type": "ex", "nl": "Kun je me helpen? Ik zie het niet.", "en": "Can you help me? I can't see it." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik zie Tim. Ik zie ___.", "options": ["hem", "haar", "hen"], "answer": 0 },
+        { "type": "choice", "q": "Ik ken Anna. Ik ken ___.", "options": ["hem", "haar", "ons"], "answer": 1 },
+        { "type": "choice", "q": "Jij belt mij. = Jij belt ___.", "options": ["me", "ik", "mijn"], "answer": 0 },
+        { "type": "gap", "text": "Ik help ___. (him)", "answers": ["hem"], "en": "I help him." },
+        { "type": "gap", "text": "Zij ziet ___ niet. (me)", "answers": ["me", "mij"], "en": "She doesn't see me." },
+        { "type": "gap", "text": "Ik bel mijn moeder. Ik bel ___ vanavond.", "answers": ["haar"], "en": "I'm calling my mother. I'll call her tonight." },
+        { "type": "gap", "text": "Ik zie de kinderen. Ik zie ___.", "answers": ["ze", "hen"], "en": "I see the children. I see them." },
+        { "type": "gap", "text": "Kun je ___ helpen? (me)", "answers": ["me", "mij"], "en": "Can you help me?" },
+        { "type": "transform", "q": "Ik zie Tim.", "instruction": "Replace Tim with a pronoun", "answers": ["Ik zie hem"] },
+        { "type": "transform", "q": "Wij kennen Anna.", "instruction": "Replace Anna with a pronoun", "answers": ["Wij kennen haar", "We kennen haar"] },
+        { "type": "transform", "q": "Hij helpt de kinderen.", "instruction": "Replace the kinderen with a pronoun", "answers": ["Hij helpt ze", "Hij helpt hen"] },
+        { "type": "order", "answer": "Ik zie hem niet.", "en": "I don't see him." },
+        { "type": "order", "answer": "Hij helpt mij vandaag.", "en": "He helps me today.", "alt": ["Vandaag helpt hij mij."] },
+        { "type": "translate", "en": "I know her.", "answers": ["Ik ken haar"] },
+        { "type": "translate", "en": "She sees us.", "answers": ["Zij ziet ons", "Ze ziet ons"] },
+        { "type": "translate", "en": "Do you see me?", "answers": ["Zie je me", "Zie je mij", "Zie jij mij", "Zie jij me"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: persoonlijke voornaamwoorden (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menupersoonlijkevoornaamwoorden/" }
+      ]
+    },
+    {
+      "id": "a1.g07.l3", "title": "this and that: deze, die, dit, dat", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "To point to something near you use **deze / dit**, for something further away use **die / dat**. They follow the article rule: **deze** and **die** with *de*-words and with all plurals, **dit** and **dat** with singular *het*-words." },
+        { "type": "table", "head": ["", "near", "far"], "rows": [["de-word", "deze stoel", "die stoel"], ["het-word", "dit huis", "dat huis"], ["plural", "deze stoelen, deze huizen", "die stoelen, die huizen"]] },
+        { "type": "ex", "nl": "Hoeveel kost deze jas? En die jas?", "en": "How much does this coat cost? And that coat?" },
+        { "type": "p", "text": "When you introduce or identify someone or something, use **dit** and **dat** alone, without a noun: **Dit is** mijn zus. **Dat is** mijn huis. For plurals use **dit zijn** and **dat zijn**: *Dit zijn mijn kinderen.* Dit/dat doesn't change for gender or number here." },
+        { "type": "ex", "nl": "Dit is mijn buurman en dat zijn zijn kinderen.", "en": "This is my neighbour and those are his children." }
+      ],
+      "items": [
+        { "type": "choice", "q": "___ huis (this)", "options": ["dit", "deze", "die"], "answer": 0 },
+        { "type": "choice", "q": "___ stoel (that)", "options": ["dat", "die", "dit"], "answer": 1 },
+        { "type": "choice", "q": "___ boeken (these)", "options": ["dit", "deze", "dat"], "answer": 1, "explain": "Plurals always take deze or die." },
+        { "type": "choice", "q": "___ is mijn zus. (introducing someone nearby)", "options": ["Dit", "Deze", "Die"], "answer": 0 },
+        { "type": "gap", "text": "Hoeveel kost ___ jas? (this)", "answers": ["deze"], "en": "How much does this coat cost?" },
+        { "type": "gap", "text": "___ boek is van mij. (that)", "answers": ["Dat"], "en": "That book is mine." },
+        { "type": "gap", "text": "___ zijn mijn kinderen. (these)", "answers": ["Dit"], "en": "These are my children." },
+        { "type": "gap", "text": "___ stoelen zijn nieuw. (those)", "answers": ["Die"], "en": "Those chairs are new." },
+        { "type": "order", "answer": "Dit is mijn buurman.", "en": "This is my neighbour." },
+        { "type": "order", "answer": "Hoeveel kost die jas?", "en": "How much does that coat cost?" },
+        { "type": "translate", "en": "This is my sister.", "answers": ["Dit is mijn zus"] },
+        { "type": "translate", "en": "Those are my children.", "answers": ["Dat zijn mijn kinderen"] },
+        { "type": "translate", "en": "I like this bike.", "answers": ["Ik vind deze fiets leuk", "Ik vind deze fiets mooi"] },
+        { "type": "match", "pairs": [["this chair", "deze stoel"], ["this house", "dit huis"], ["that chair", "die stoel"], ["that house", "dat huis"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: aanwijzend voornaamwoord (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuaanwijzendvoornaamwoord/" }
+      ]
+    },
+    {
+      "id": "a1.g07.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "___ fiets (my)", "options": ["mijn", "ons", "uw"], "answer": 0 },
+        { "type": "choice", "q": "Tim heeft een fiets. Dit is ___ fiets.", "options": ["zijn", "haar", "hun"], "answer": 0 },
+        { "type": "choice", "q": "Ik zie ___ niet. (him)", "options": ["hij", "hem", "zijn"], "answer": 1 },
+        { "type": "choice", "q": "___ boek (that)", "options": ["dat", "die", "deze"], "answer": 0 },
+        { "type": "gap", "text": "Zij woont met ___ man in Leiden. (her)", "answers": ["haar"], "en": "She lives with her husband in Leiden." },
+        { "type": "gap", "text": "Mijn buren hebben een hond. ___ hond is groot. (their)", "answers": ["Hun"], "en": "My neighbours have a dog. Their dog is big." },
+        { "type": "gap", "text": "Ik zie ___. Hij staat bij de deur. (him)", "answers": ["hem"], "en": "I see him. He is standing at the door." },
+        { "type": "gap", "text": "___ jas is mooi. (this, de-word)", "answers": ["Deze"], "en": "This coat is beautiful." },
+        { "type": "gap", "text": "Hoe laat belt ___? (she, subject)", "answers": ["zij", "ze"], "en": "What time does she call?" },
+        { "type": "transform", "q": "Ik zie Anna en Tim.", "instruction": "Replace Anna en Tim with a pronoun", "answers": ["Ik zie ze", "Ik zie hen"] },
+        { "type": "transform", "q": "Dit is het huis van mijn ouders.", "instruction": "Use a possessive", "answers": ["Dit is hun huis"] },
+        { "type": "transform", "q": "Dat is de fiets.", "instruction": "Say 'your (plural) bike' instead of 'the bike'", "answers": ["Dat is jullie fiets"] },
+        { "type": "order", "answer": "Zij belt haar moeder elke dag.", "en": "She calls her mother every day." },
+        { "type": "order", "answer": "Waar is onze auto?", "en": "Where is our car?" },
+        { "type": "order", "answer": "Ik ken die man niet.", "en": "I don't know that man." },
+        { "type": "translate", "en": "Where is your bag? (informal)", "answers": ["Waar is je tas", "Waar is jouw tas"] },
+        { "type": "translate", "en": "He calls me every day.", "answers": ["Hij belt mij elke dag", "Hij belt me elke dag", "Elke dag belt hij mij", "Elke dag belt hij me"] },
+        { "type": "translate", "en": "I don't know this woman.", "answers": ["Ik ken deze vrouw niet"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: persoonlijke voornaamwoorden (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menupersoonlijkevoornaamwoorden/" }
+      ]
+    }
+  ]
+}
