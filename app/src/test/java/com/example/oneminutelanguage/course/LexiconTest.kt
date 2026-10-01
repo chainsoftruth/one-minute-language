@@ -2,7 +2,6 @@ package com.example.oneminutelanguage.course
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
-import org.junit.Ignore
 import org.junit.Test
 import java.io.File
 
@@ -115,5 +114,21 @@ class LexiconTest {
         assertTrue("A2 examples: ${a2.count { it.ex != null }}", a2.count { it.ex != null } * 10 >= a2.size * 6)
     }
 
-    @Ignore("Enabled in Stage 9") @Test fun b1HasAtLeast2800WordsCumulative() = assertTrue(cumulative("B1") >= 2800)
+    @Test fun b1HasAtLeast2800WordsCumulative() = assertTrue("B1 has ${cumulative("B1")}", cumulative("B1") >= 2800)
+
+    @Test fun b1LexiconCoversTheStageNineTargets() {
+        val b1 = courseIds().flatMap { entries(it) }.filter { it.lvl == "B1" }
+        fun count(vararg topics: String) = b1.count { it.topic in topics }
+        assertTrue("B1 entries: ${b1.size}", b1.size >= 1150)
+        assertTrue("work + education: ${count("work", "education")}", count("work", "education") >= 250)
+        assertTrue("society: ${count("society")}", count("society") >= 200)
+        assertTrue("health: ${count("health_body")}", count("health_body") >= 120)
+        assertTrue("housing + daily life: ${count("home_housing", "daily_life")}", count("home_housing", "daily_life") >= 150)
+        assertTrue("leisure + social: ${count("leisure_media", "social")}", count("leisure_media", "social") >= 200)
+        assertTrue("travel: ${count("travel")}", count("travel") >= 100)
+        assertTrue("general: ${count("general")}", count("general") >= 130)
+        assertTrue("B1 opinion/discourse phrases: ${b1.count { it.pos == "phrase" }}", b1.count { it.pos == "phrase" } >= 60)
+        assertTrue("Every B1 verb needs an example", b1.filter { it.pos == "verb" }.all { !it.ex.isNullOrBlank() })
+        assertTrue("B1 examples: ${b1.count { it.ex != null }}", b1.count { it.ex != null } * 10 >= b1.size * 6)
+    }
 }

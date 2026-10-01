@@ -17,7 +17,8 @@
     { "id": "social", "title": "Social interaction" },
     { "id": "society", "title": "Society & civic life" },
     { "id": "work", "title": "Work" },
-    { "id": "education", "title": "Education" }
+    { "id": "education", "title": "Education" },
+    { "id": "general", "title": "General & abstract" }
   ],
   "levels": [
     {
