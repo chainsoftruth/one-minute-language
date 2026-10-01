@@ -1,0 +1,115 @@
+{
+  "id": "a2.g12", "level": "A2", "kind": "grammar",
+  "title": "Negation 2",
+  "subtitle": "niet in longer sentences, nog niet, niet meer, nooit, niemand, niets, nergens",
+  "lessons": [
+    {
+      "id": "a2.g12.l1", "title": "Where does niet go?", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "In a **short sentence** *niet* stands at the end: *Ik werk niet.* In a **longer sentence** it goes **before the last verb part**: before a participle (*Ik heb het niet gedaan*), an infinitive (*Ik kan niet komen*) or the particle of a separable verb (*Ik bel je niet op*). It also stands before an adjective, an adverb or a place: *niet groot*, *niet in Amsterdam*." },
+        { "type": "table", "head": ["situation", "example"], "rows": [["short sentence", "Ik werk niet."], ["with a participle", "Ik heb het boek niet gelezen."], ["with a modal", "Ik kan morgen niet komen."], ["separable verb", "Ik bel je niet op."], ["before a place", "Hij woont niet in Utrecht."]] },
+        { "type": "ex", "nl": "Ik heb het niet gedaan.", "en": "I did not do it." },
+        { "type": "ex", "nl": "Ik kan morgen niet komen.", "en": "I cannot come tomorrow." },
+        { "type": "tip", "text": "Time words and definite objects (*het, mijn boek, hem*) come **before** *niet*. Before an **indefinite** noun (*een auto*, or no article) use **geen** instead: *Ik heb geen auto.*" }
+      ],
+      "items": [
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik heb het niet gedaan.", "Ik heb niet het gedaan.", "Ik heb het gedaan niet."], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik kan morgen niet komen.", "Ik kan morgen komen niet.", "Ik niet kan morgen komen."], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik bel je niet op.", "Ik bel je op niet.", "Ik niet bel je op."], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik heb geen auto.", "Ik heb niet een auto.", "Ik heb niet auto."], "answer": 0 },
+        { "type": "gap", "text": "Ik heb het boek ___ gelezen. (not)", "answers": ["niet"], "en": "I have not read the book." },
+        { "type": "gap", "text": "Ik wil ___ komen. (not)", "answers": ["niet"], "en": "I do not want to come." },
+        { "type": "gap", "text": "Zij belt hem ___ op. (not)", "answers": ["niet"], "en": "She is not phoning him." },
+        { "type": "gap", "text": "Ik heb ___ tijd. (no)", "answers": ["geen"], "en": "I have no time." },
+        { "type": "gap", "text": "Hij is ___ moe. (not)", "answers": ["niet"], "en": "He is not tired." },
+        { "type": "gap", "text": "Wij hebben ___ auto. (no)", "answers": ["geen"], "en": "We do not have a car." },
+        { "type": "transform", "q": "Ik heb het gedaan.", "instruction": "Make it negative", "answers": ["Ik heb het niet gedaan"] },
+        { "type": "transform", "q": "Ik bel je op.", "instruction": "Make it negative", "answers": ["Ik bel je niet op"] },
+        { "type": "transform", "q": "Ik kan komen.", "instruction": "Make it negative", "answers": ["Ik kan niet komen"] },
+        { "type": "transform", "q": "Ik heb een auto.", "instruction": "Make it negative", "answers": ["Ik heb geen auto"] },
+        { "type": "transform", "q": "Zij heeft het boek gelezen.", "instruction": "Make it negative", "answers": ["Zij heeft het boek niet gelezen", "Ze heeft het boek niet gelezen"] },
+        { "type": "order", "answer": "Ik heb het niet gedaan.", "en": "I did not do it." },
+        { "type": "order", "answer": "Zij belt hem niet op.", "en": "She is not phoning him." },
+        { "type": "order", "answer": "Ik kan morgen niet komen.", "alt": ["Morgen kan ik niet komen."], "en": "I cannot come tomorrow." },
+        { "type": "translate", "en": "I did not see him.", "answers": ["Ik heb hem niet gezien", "Ik zag hem niet"] },
+        { "type": "translate", "en": "I am not phoning you.", "answers": ["Ik bel je niet op", "Ik bel jou niet op", "Ik bel je niet"] },
+        { "type": "translate", "en": "I cannot come tomorrow.", "answers": ["Ik kan morgen niet komen", "Morgen kan ik niet komen"] },
+        { "type": "match", "pairs": [["Ik heb geen tijd.", "I have no time."], ["Ik werk niet.", "I am not working."], ["Ik kan niet komen.", "I cannot come."], ["Ik heb het niet gedaan.", "I have not done it."]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: ontkennen (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuontkennen/" },
+        { "title": "NT2 TaalMenu: A2 grammar overview", "url": "https://nt2taalmenu.nl/a2-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "a2.g12.l2", "title": "nog niet, niet meer, nooit, niemand, niets, nergens", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Combine *niet* and *geen* with other words: **nog niet** (not yet), **niet meer** (not any more), **geen … meer** (no … left, no more). And learn four negative words: **nooit** (never), **niemand** (nobody), **niets** (nothing), **nergens** (nowhere). They go where an object or an adverb would go." },
+        { "type": "table", "head": ["word", "meaning", "example"], "rows": [["nog niet", "not yet", "Ik heb nog niet gegeten."], ["niet meer", "not any more", "Zij werkt hier niet meer."], ["geen … meer", "no more", "Wij hebben geen brood meer."], ["nooit", "never", "Ik drink nooit koffie."], ["niemand", "nobody", "Ik heb niemand gezien."], ["niets", "nothing", "Zij heeft niets gezegd."], ["nergens", "nowhere", "Ik kan mijn sleutels nergens vinden."]] },
+        { "type": "ex", "nl": "Ik heb niemand gezien.", "en": "I did not see anybody." },
+        { "type": "ex", "nl": "Wij hebben geen brood meer.", "en": "We have no more bread." },
+        { "type": "tip", "text": "Dutch does **not** use a double negative like English *I didn't see nobody*. One negative word is enough: *Ik heb niemand gezien.*" }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik heb ___ gegeten. (not yet)", "options": ["nog niet", "niet meer", "nooit"], "answer": 0 },
+        { "type": "choice", "q": "Ik werk daar ___. (not any more)", "options": ["niet meer", "nog niet", "nooit"], "answer": 0 },
+        { "type": "choice", "q": "Ik heb geen tijd ___.", "options": ["meer", "nog", "niet"], "answer": 0 },
+        { "type": "choice", "q": "Ik zie ___. (nobody)", "options": ["niemand", "niets", "nergens"], "answer": 0 },
+        { "type": "gap", "text": "Ik drink ___ koffie. (never)", "answers": ["nooit"], "en": "I never drink coffee." },
+        { "type": "gap", "text": "Ik zie ___. (nothing)", "answers": ["niets"], "en": "I see nothing." },
+        { "type": "gap", "text": "Zij heeft ___ gezien. (nobody)", "answers": ["niemand"], "en": "She has not seen anybody." },
+        { "type": "gap", "text": "Ik kan mijn sleutels ___ vinden. (nowhere)", "answers": ["nergens"], "en": "I cannot find my keys anywhere." },
+        { "type": "gap", "text": "Hij werkt hier ___ meer. (not)", "answers": ["niet"], "en": "He does not work here any more." },
+        { "type": "gap", "text": "Wij hebben ___ geld meer. (no)", "answers": ["geen"], "en": "We have no money left." },
+        { "type": "gap", "text": "Hij heeft het ___ gedaan. (not yet)", "answers": ["nog niet"], "en": "He has not done it yet." },
+        { "type": "gap", "text": "Zij heeft ___ gezegd. (nothing)", "answers": ["niets"], "en": "She has said nothing." },
+        { "type": "transform", "q": "Ik heb gegeten.", "instruction": "Say: not yet", "answers": ["Ik heb nog niet gegeten"] },
+        { "type": "transform", "q": "Ik werk daar.", "instruction": "Say: not any more", "answers": ["Ik werk daar niet meer"] },
+        { "type": "transform", "q": "Wij hebben tijd.", "instruction": "Say: no time left (geen ... meer)", "answers": ["Wij hebben geen tijd meer", "We hebben geen tijd meer"] },
+        { "type": "transform", "q": "Ik heb iemand gezien.", "instruction": "Say: nobody", "answers": ["Ik heb niemand gezien"] },
+        { "type": "order", "answer": "Ik heb nog niet gegeten.", "en": "I have not eaten yet." },
+        { "type": "order", "answer": "Zij werkt hier niet meer.", "en": "She does not work here any more." },
+        { "type": "order", "answer": "Ik heb niemand gezien.", "en": "I did not see anybody." },
+        { "type": "order", "answer": "Ik kan mijn sleutels nergens vinden.", "en": "I cannot find my keys anywhere." },
+        { "type": "translate", "en": "I never drink coffee.", "answers": ["Ik drink nooit koffie"] },
+        { "type": "translate", "en": "I did not hear anything.", "answers": ["Ik heb niets gehoord", "Ik hoorde niets"] },
+        { "type": "translate", "en": "He is not here any more.", "answers": ["Hij is hier niet meer"] },
+        { "type": "translate", "en": "We have no more bread.", "answers": ["Wij hebben geen brood meer", "We hebben geen brood meer"] },
+        { "type": "match", "pairs": [["nooit", "never"], ["niemand", "nobody"], ["niets", "nothing"], ["nergens", "nowhere"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: ontkennen (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuontkennen/" },
+        { "title": "NT2 TaalMenu: A2 grammar overview", "url": "https://nt2taalmenu.nl/a2-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "a2.g12.l3", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik heb mijn huiswerk niet gemaakt.", "Ik heb niet mijn huiswerk gemaakt.", "Ik heb mijn huiswerk gemaakt niet."], "answer": 0 },
+        { "type": "choice", "q": "Ik heb ___ gezien. (nothing)", "options": ["niets", "niemand", "nergens"], "answer": 0 },
+        { "type": "choice", "q": "Zij heeft ___ koffie. (no)", "options": ["geen", "niet", "nooit"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Hij is nog niet thuis.", "Hij nog niet is thuis.", "Hij is thuis nog niet."], "answer": 0 },
+        { "type": "gap", "text": "Ik heb dat ___ gezegd. (not)", "answers": ["niet"], "en": "I did not say that." },
+        { "type": "gap", "text": "Zij komt ___ meer. (not)", "answers": ["niet"], "en": "She is not coming any more." },
+        { "type": "gap", "text": "Wij zijn ___ in Spanje geweest. (never)", "answers": ["nooit"], "en": "We have never been to Spain." },
+        { "type": "gap", "text": "Er is ___ thuis. (nobody)", "answers": ["niemand"], "en": "Nobody is at home." },
+        { "type": "gap", "text": "Ik heb ___ honger. (no)", "answers": ["geen"], "en": "I am not hungry." },
+        { "type": "gap", "text": "Ik ga ___ naar het feest. (not)", "answers": ["niet"], "en": "I am not going to the party." },
+        { "type": "gap", "text": "Hij heeft ___ geld. (no)", "answers": ["geen"], "en": "He has no money." },
+        { "type": "transform", "q": "Wij hebben melk.", "instruction": "Make it negative (geen)", "answers": ["Wij hebben geen melk", "We hebben geen melk"] },
+        { "type": "transform", "q": "Ik ga naar het feest.", "instruction": "Make it negative", "answers": ["Ik ga niet naar het feest"] },
+        { "type": "transform", "q": "Hij heeft zijn tas meegenomen.", "instruction": "Make it negative", "answers": ["Hij heeft zijn tas niet meegenomen"] },
+        { "type": "transform", "q": "Zij heeft de brief gelezen.", "instruction": "Say: not yet", "answers": ["Zij heeft de brief nog niet gelezen", "Ze heeft de brief nog niet gelezen"] },
+        { "type": "order", "answer": "Wij zijn nooit in Spanje geweest.", "alt": ["Nooit zijn wij in Spanje geweest."], "en": "We have never been to Spain." },
+        { "type": "order", "answer": "Er is niemand thuis.", "en": "Nobody is at home." },
+        { "type": "order", "answer": "Hij heeft zijn tas niet meegenomen.", "en": "He has not taken his bag." },
+        { "type": "translate", "en": "I did not understand it.", "answers": ["Ik heb het niet begrepen", "Ik begreep het niet", "Ik heb het niet verstaan"] },
+        { "type": "translate", "en": "She has no more time.", "answers": ["Zij heeft geen tijd meer", "Ze heeft geen tijd meer"] },
+        { "type": "translate", "en": "I have not been to Utrecht yet.", "answers": ["Ik ben nog niet in Utrecht geweest"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: ontkennen (A1)", "url": "https://nt2taalmenu.nl/nt2-a1-grammatica-menuontkennen/" }
+      ]
+    }
+  ]
+}

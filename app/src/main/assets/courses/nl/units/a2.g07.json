@@ -1,0 +1,141 @@
+{
+  "id": "a2.g07", "level": "A2", "kind": "grammar",
+  "title": "Subordinate clauses 1",
+  "subtitle": "dat, omdat, als, toen, terwijl, hoewel: the verb goes to the end",
+  "lessons": [
+    {
+      "id": "a2.g07.l1", "title": "dat, omdat, of: verb at the end", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "A **subordinate clause** cannot stand alone. It starts with a word like **dat** (that), **omdat** (because) or **of** (whether), and **all verbs go to the end** of the clause. The subject comes right after the conjunction: *Ik denk **dat hij morgen komt**.* *Ik blijf thuis, **omdat het koud is**.*" },
+        { "type": "table", "head": ["main clause", "subordinate clause (verb last)"], "rows": [["Ik denk", "dat hij morgen komt."], ["Ik weet niet", "of zij thuis is."], ["Ik blijf thuis,", "omdat het koud is."]] },
+        { "type": "p", "text": "A **separable verb** becomes one word again at the end of the clause: *Ik bel je op* → *Ik weet dat zij morgen **opbelt**.*" },
+        { "type": "ex", "nl": "Ik weet dat zij morgen opbelt.", "en": "I know that she is going to phone tomorrow." },
+        { "type": "ex", "nl": "Weet jij of de winkel open is?", "en": "Do you know whether the shop is open?" },
+        { "type": "tip", "text": "Check the verb: *dat hij komt*, never *dat hij komt morgen*. The conjugated verb is the very last word." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik denk ___ hij morgen komt.", "options": ["dat", "omdat", "of"], "answer": 0 },
+        { "type": "choice", "q": "Ik weet niet ___ hij komt. (whether)", "options": ["of", "dat", "als"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik blijf thuis, omdat het koud is.", "Ik blijf thuis, omdat het is koud.", "Ik blijf thuis, omdat is het koud."], "answer": 0 },
+        { "type": "choice", "q": "Ik weet dat zij morgen ___. (opbellen)", "options": ["opbelt", "belt op", "op belt"], "answer": 0, "explain": "A separable verb rejoins at the end of a subordinate clause." },
+        { "type": "gap", "text": "Ik weet ___ hij ziek is.", "answers": ["dat"], "en": "I know that he is ill." },
+        { "type": "gap", "text": "Zij is blij, omdat zij een nieuwe baan ___. (hebben)", "answers": ["heeft"], "en": "She is happy because she has a new job." },
+        { "type": "gap", "text": "Ik weet niet of hij vandaag ___. (komen)", "answers": ["komt"], "en": "I do not know whether he is coming today." },
+        { "type": "gap", "text": "Hij zegt dat hij moe ___. (zijn)", "answers": ["is"], "en": "He says that he is tired." },
+        { "type": "gap", "text": "Wij weten dat jij graag ___. (koken)", "answers": ["kookt"], "en": "We know that you like cooking.", "explain": "After dat the jij-form keeps its t." },
+        { "type": "gap", "text": "Weet jij ___ de winkel open is?", "answers": ["of"], "en": "Do you know whether the shop is open?" },
+        { "type": "transform", "q": "Hij komt morgen.", "instruction": "Start with: Ik denk dat ...", "answers": ["Ik denk dat hij morgen komt"] },
+        { "type": "transform", "q": "Zij werkt in Utrecht.", "instruction": "Start with: Ik weet dat ...", "answers": ["Ik weet dat zij in Utrecht werkt", "Ik weet dat ze in Utrecht werkt"] },
+        { "type": "transform", "q": "Het is koud. Ik blijf thuis.", "instruction": "Join: Ik blijf thuis omdat ...", "answers": ["Ik blijf thuis omdat het koud is"] },
+        { "type": "order", "answer": "Ik denk dat hij morgen komt.", "en": "I think that he is coming tomorrow." },
+        { "type": "order", "answer": "Ik weet niet of zij thuis is.", "en": "I do not know whether she is at home." },
+        { "type": "order", "answer": "Ik blijf thuis, omdat het koud is.", "en": "I am staying at home because it is cold." },
+        { "type": "translate", "en": "I think that he is coming tomorrow.", "answers": ["Ik denk dat hij morgen komt"] },
+        { "type": "translate", "en": "I do not know whether she is at home.", "answers": ["Ik weet niet of zij thuis is", "Ik weet niet of ze thuis is"] },
+        { "type": "match", "pairs": [["dat", "that"], ["omdat", "because"], ["of", "whether"], ["als", "if"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: zinnen met omdat (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuzinnenmetomdat/" },
+        { "title": "NT2 TaalMenu: voegwoorden (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuvoegwoorden/" }
+      ]
+    },
+    {
+      "id": "a2.g07.l2", "title": "als, toen, terwijl, hoewel, zodat", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "More subordinating words, all with the verb at the end. **Als** = *if* or *whenever* (present, future or a habit). **Toen** = *when*, for **one moment in the past**. **Wanneer** = *when* in questions and formal speech." },
+        { "type": "table", "head": ["word", "meaning", "example"], "rows": [["als", "if / whenever", "Als het regent, blijf ik thuis."], ["toen", "when (once, past)", "Ik was moe, toen ik thuiskwam."], ["terwijl", "while", "Ik kijk televisie, terwijl ik eet."], ["voordat", "before", "Ik eet, voordat ik naar huis ga."], ["nadat", "after", "Nadat ik gegeten heb, ga ik naar bed."], ["totdat", "until", "Zij wacht, totdat de bus komt."], ["sinds", "since", "Ik woon hier, sinds ik in Utrecht werk."], ["hoewel", "although", "Hoewel het regent, gaan wij wandelen."], ["zodat", "so that", "Ik spreek langzaam, zodat jij mij verstaat."]] },
+        { "type": "ex", "nl": "Toen ik jong was, woonde ik in Rotterdam.", "en": "When I was young, I lived in Rotterdam." },
+        { "type": "ex", "nl": "Hoewel het regent, gaan wij wandelen.", "en": "Although it is raining, we are going for a walk." },
+        { "type": "tip", "text": "**Toen** is only for the past. For the present or the future, and for habits, use **als**: *Als ik moe ben, ga ik slapen.*" }
+      ],
+      "items": [
+        { "type": "choice", "q": "___ ik jong was, woonde ik in Spanje. (once, in the past)", "options": ["Toen", "Als", "Terwijl"], "answer": 0 },
+        { "type": "choice", "q": "___ het regent, blijf ik thuis. (whenever)", "options": ["Als", "Toen", "Terwijl"], "answer": 0 },
+        { "type": "choice", "q": "Ik kijk televisie ___ ik eet. (while)", "options": ["terwijl", "voordat", "hoewel"], "answer": 0 },
+        { "type": "choice", "q": "Hij is blij, ___ hij weinig geld heeft. (although)", "options": ["hoewel", "zodat", "omdat"], "answer": 0 },
+        { "type": "gap", "text": "Ik was moe ___ ik thuiskwam. (when, once)", "answers": ["toen"], "en": "I was tired when I came home." },
+        { "type": "gap", "text": "Ik ga eten ___ ik naar huis ga. (before)", "answers": ["voordat"], "en": "I am going to eat before I go home." },
+        { "type": "gap", "text": "Zij wacht, ___ de bus komt. (until)", "answers": ["totdat", "tot"], "en": "She waits until the bus comes." },
+        { "type": "gap", "text": "Ik woon hier ___ ik in Utrecht werk. (since)", "answers": ["sinds"], "en": "I have lived here since I started working in Utrecht." },
+        { "type": "gap", "text": "Ik spreek langzaam, ___ jij mij goed verstaat. (so that)", "answers": ["zodat"], "en": "I speak slowly so that you understand me well." },
+        { "type": "gap", "text": "___ het regent, gaan wij wandelen. (although)", "answers": ["Hoewel"], "en": "Although it is raining, we are going for a walk." },
+        { "type": "transform", "q": "Ik eet. Ik kijk televisie.", "instruction": "Join: Ik kijk televisie terwijl ...", "answers": ["Ik kijk televisie terwijl ik eet"] },
+        { "type": "transform", "q": "Het regent. Wij gaan wandelen.", "instruction": "Start with Hoewel", "answers": ["Hoewel het regent, gaan wij wandelen", "Hoewel het regent, gaan we wandelen"] },
+        { "type": "transform", "q": "Ik spreek langzaam. Jij verstaat mij.", "instruction": "Join with zodat", "answers": ["Ik spreek langzaam zodat jij mij verstaat", "Ik spreek langzaam zodat jij me verstaat"] },
+        { "type": "order", "answer": "Toen ik jong was, woonde ik in Rotterdam.", "en": "When I was young, I lived in Rotterdam." },
+        { "type": "order", "answer": "Ik kijk televisie terwijl ik eet.", "en": "I watch television while I eat." },
+        { "type": "order", "answer": "Zij wacht totdat de bus komt.", "en": "She waits until the bus comes." },
+        { "type": "translate", "en": "When I came home, I was tired.", "answers": ["Toen ik thuiskwam, was ik moe"] },
+        { "type": "translate", "en": "Although it is raining, we are going for a walk.", "answers": ["Hoewel het regent, gaan wij wandelen", "Hoewel het regent, gaan we wandelen"] },
+        { "type": "match", "pairs": [["toen", "when (once, past)"], ["als", "if / whenever"], ["terwijl", "while"], ["hoewel", "although"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: zinnen met als (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuzinnenmetals/" },
+        { "title": "NT2 TaalMenu: voegwoorden (B1 overview)", "url": "https://nt2taalmenu.nl/b1-nieuw-voeg-woorden/" }
+      ]
+    },
+    {
+      "id": "a2.g07.l3", "title": "Subordinate clause first", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "A subordinate clause can also come **first**. Then the whole clause counts as the first element of the sentence, so the **main clause starts with its verb** (inversion): *Als het regent, **blijf ik** thuis.* The two verbs meet at the comma." },
+        { "type": "table", "head": ["main clause first", "subordinate clause first"], "rows": [["Ik blijf thuis, als het regent.", "Als het regent, blijf ik thuis."], ["Ik ga naar bed, omdat ik moe ben.", "Omdat ik moe ben, ga ik naar bed."], ["Ik was moe, toen ik thuiskwam.", "Toen ik thuiskwam, was ik moe."]] },
+        { "type": "ex", "nl": "Omdat ik ziek ben, blijf ik thuis.", "en": "Because I am ill, I am staying at home." },
+        { "type": "ex", "nl": "Als hij belt, neem ik op.", "en": "If he calls, I will answer." },
+        { "type": "tip", "text": "The pattern is **verb at the end, comma, verb first**: *Als het regent, blijf ik thuis.* Never *Als het regent, ik blijf thuis.*" }
+      ],
+      "items": [
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Als het regent, blijf ik thuis.", "Als het regent, ik blijf thuis.", "Als het regent, ik thuis blijf."], "answer": 0 },
+        { "type": "choice", "q": "Toen ik thuiskwam, ___ moe.", "options": ["was ik", "ik was", "ik ben"], "answer": 0 },
+        { "type": "choice", "q": "Omdat ik ziek ben, ___ ik thuis.", "options": ["blijf", "blijft", "ik blijf"], "answer": 0 },
+        { "type": "gap", "text": "Als het regent, ___ ik thuis. (blijven)", "answers": ["blijf"], "en": "If it rains, I stay at home." },
+        { "type": "gap", "text": "Omdat ik ziek ben, ___ ik thuis. (blijven)", "answers": ["blijf"], "en": "Because I am ill, I stay at home." },
+        { "type": "gap", "text": "Als jij komt, ___ wij samen eten. (gaan)", "answers": ["gaan"], "en": "If you come, we will eat together." },
+        { "type": "gap", "text": "Hoewel hij moe is, ___ hij nog werken. (willen)", "answers": ["wil"], "en": "Although he is tired, he still wants to work." },
+        { "type": "gap", "text": "Voordat ik naar bed ga, ___ ik een boek. (lezen)", "answers": ["lees"], "en": "Before I go to bed, I read a book." },
+        { "type": "gap", "text": "Als hij ___, neem ik op. (bellen)", "answers": ["belt"], "en": "If he calls, I will answer." },
+        { "type": "transform", "q": "Ik blijf thuis als het regent.", "instruction": "Start with Als", "answers": ["Als het regent, blijf ik thuis"] },
+        { "type": "transform", "q": "Ik ga naar bed nadat ik gegeten heb.", "instruction": "Start with Nadat", "answers": ["Nadat ik gegeten heb, ga ik naar bed", "Nadat ik heb gegeten, ga ik naar bed"] },
+        { "type": "transform", "q": "Wij gaan wandelen, hoewel het regent.", "instruction": "Start with Hoewel", "answers": ["Hoewel het regent, gaan wij wandelen", "Hoewel het regent, gaan we wandelen"] },
+        { "type": "order", "answer": "Als het regent, blijf ik thuis.", "en": "If it rains, I stay at home." },
+        { "type": "order", "answer": "Omdat ik ziek ben, blijf ik thuis.", "en": "Because I am ill, I stay at home." },
+        { "type": "order", "answer": "Als jij komt, gaan wij samen eten.", "en": "If you come, we will eat together." },
+        { "type": "translate", "en": "If it rains, I will stay at home.", "answers": ["Als het regent, blijf ik thuis"] },
+        { "type": "translate", "en": "Because I am tired, I am going to bed.", "answers": ["Omdat ik moe ben, ga ik naar bed"] },
+        { "type": "translate", "en": "When you arrive, call me.", "answers": ["Als je aankomt, bel me", "Als je aankomt, bel mij", "Bel me als je aankomt", "Bel mij als je aankomt", "Wanneer je aankomt, bel me", "Wanneer je aankomt, bel mij"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: zinnen met als (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuzinnenmetals/" },
+        { "title": "NT2 TaalMenu: zinnen met omdat (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuzinnenmetomdat/" }
+      ]
+    },
+    {
+      "id": "a2.g07.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Ik wil weten ___ je morgen komt.", "options": ["of", "omdat", "toen"], "answer": 0 },
+        { "type": "choice", "q": "Ik ben moe ___ ik slecht geslapen heb. (because)", "options": ["omdat", "hoewel", "terwijl"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik weet dat hij morgen opbelt.", "Ik weet dat hij belt morgen op.", "Ik weet dat hij morgen belt op."], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Omdat het koud is, draag ik een jas.", "Omdat het koud is, ik draag een jas.", "Omdat het is koud, draag ik een jas."], "answer": 0 },
+        { "type": "gap", "text": "Hij vertelt dat hij een nieuwe baan ___. (hebben)", "answers": ["heeft"], "en": "He says that he has a new job." },
+        { "type": "gap", "text": "Ik weet niet ___ zij vandaag werkt. (whether)", "answers": ["of"], "en": "I do not know whether she works today." },
+        { "type": "gap", "text": "Ik blijf thuis, ___ ik ziek ben. (because)", "answers": ["omdat"], "en": "I stay at home because I am ill." },
+        { "type": "gap", "text": "___ ik klein was, woonde ik in een dorp. (when, once)", "answers": ["Toen"], "en": "When I was small, I lived in a village." },
+        { "type": "gap", "text": "Ik luister naar muziek, ___ ik werk. (while)", "answers": ["terwijl"], "en": "I listen to music while I work." },
+        { "type": "gap", "text": "Zij blijft thuis, ___ zij ziek is. (because)", "answers": ["omdat"], "en": "She stays at home because she is ill." },
+        { "type": "gap", "text": "Ik hoop ___ jij ook komt. (that)", "answers": ["dat"], "en": "I hope that you are coming too." },
+        { "type": "transform", "q": "Hij komt te laat.", "instruction": "Start with: Ik denk dat ...", "answers": ["Ik denk dat hij te laat komt"] },
+        { "type": "transform", "q": "Ik drink koffie als ik moe ben.", "instruction": "Start with Als", "answers": ["Als ik moe ben, drink ik koffie"] },
+        { "type": "transform", "q": "Ik leer Nederlands omdat ik hier woon.", "instruction": "Start with Omdat", "answers": ["Omdat ik hier woon, leer ik Nederlands"] },
+        { "type": "transform", "q": "Zij stopt met werken. Zij is oud.", "instruction": "Join with omdat: Zij stopt met werken omdat ...", "answers": ["Zij stopt met werken omdat zij oud is", "Ze stopt met werken omdat ze oud is"] },
+        { "type": "order", "answer": "Ik weet niet of hij thuis is.", "en": "I do not know whether he is at home." },
+        { "type": "order", "answer": "Hoewel hij moe is, gaat hij werken.", "en": "Although he is tired, he is going to work." },
+        { "type": "order", "answer": "Ik bel je als ik thuis ben.", "alt": ["Als ik thuis ben, bel ik je."], "en": "I will call you when I am home." },
+        { "type": "translate", "en": "I think that she lives in Amsterdam.", "answers": ["Ik denk dat zij in Amsterdam woont", "Ik denk dat ze in Amsterdam woont"] },
+        { "type": "translate", "en": "We are staying at home because it is raining.", "answers": ["Wij blijven thuis omdat het regent", "We blijven thuis omdat het regent"] },
+        { "type": "translate", "en": "While I cook, you can set the table.", "answers": ["Terwijl ik kook, kun jij de tafel dekken", "Terwijl ik kook, kun je de tafel dekken", "Terwijl ik kook, kan jij de tafel dekken", "Terwijl ik kook, kan je de tafel dekken", "Jij kunt de tafel dekken terwijl ik kook", "Je kunt de tafel dekken terwijl ik kook"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: voegwoorden (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuvoegwoorden/" }
+      ]
+    }
+  ]
+}

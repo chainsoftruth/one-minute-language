@@ -1,0 +1,105 @@
+{
+  "id": "a2.g10", "level": "A2", "kind": "grammar",
+  "title": "Reference words",
+  "subtitle": "hij, het, ze, hem, die, dat: pointing back at things",
+  "lessons": [
+    {
+      "id": "a2.g10.l1", "title": "hij, het or ze for things", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "When you talk about a **thing** you have just mentioned, Dutch does not say *it*. It follows the article: a **de-word** is **hij**, a **het-word** is **het**, and a **plural** is **ze**." },
+        { "type": "table", "head": ["thing", "pronoun", "example"], "rows": [["de pen", "hij", "Waar is de pen? Hij ligt op tafel."], ["het boek", "het", "Waar is het boek? Het ligt op tafel."], ["de sleutels", "ze", "Waar zijn de sleutels? Ze liggen op tafel."]] },
+        { "type": "ex", "nl": "De bus is laat, maar hij komt zo.", "en": "The bus is late, but it is coming soon." },
+        { "type": "ex", "nl": "Wat kost het brood? Het kost twee euro.", "en": "How much is the bread? It costs two euros." },
+        { "type": "tip", "text": "So a **chair** is *hij* in Dutch (*Hij is oud*), even though English says *it*. That is why you need to learn every noun with its article." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Waar is de pen? ___ ligt op tafel.", "options": ["Hij", "Het", "Zij"], "answer": 0 },
+        { "type": "choice", "q": "Waar is het boek? ___ ligt op tafel.", "options": ["Het", "Hij", "Ze"], "answer": 0 },
+        { "type": "choice", "q": "Waar zijn de sleutels? ___ liggen op tafel.", "options": ["Ze", "Hij", "Het"], "answer": 0 },
+        { "type": "choice", "q": "Hoe vind je de nieuwe stoel? ___ is erg mooi.", "options": ["Hij", "Het", "Zij"], "answer": 0 },
+        { "type": "gap", "text": "Waar is de bus? ___ komt over vijf minuten.", "answers": ["Hij"], "en": "Where is the bus? It is coming in five minutes." },
+        { "type": "gap", "text": "Wat kost het brood? ___ kost twee euro.", "answers": ["Het"], "en": "How much is the bread? It costs two euros." },
+        { "type": "gap", "text": "Waar is mijn telefoon? ___ ligt in de keuken.", "answers": ["Hij"], "en": "Where is my phone? It is in the kitchen.", "explain": "Telefoon is a de-word, so hij." },
+        { "type": "gap", "text": "Is het huis groot? Ja, ___ is erg groot.", "answers": ["het"], "en": "Is the house big? Yes, it is very big." },
+        { "type": "gap", "text": "Waar zijn de kinderen? ___ spelen buiten.", "answers": ["Ze", "Zij"], "en": "Where are the children? They are playing outside." },
+        { "type": "gap", "text": "De fiets is oud, maar ___ is nog goed.", "answers": ["hij"], "en": "The bicycle is old, but it is still good." },
+        { "type": "transform", "q": "De stoel is oud en de stoel is kapot.", "instruction": "Replace the second de stoel with a pronoun", "answers": ["De stoel is oud en hij is kapot"] },
+        { "type": "transform", "q": "De sleutels liggen op tafel en de sleutels zijn van mij.", "instruction": "Replace the second de sleutels with a pronoun", "answers": ["De sleutels liggen op tafel en ze zijn van mij", "De sleutels liggen op tafel en zij zijn van mij"] },
+        { "type": "order", "answer": "Hij ligt op tafel.", "en": "It (the pen) is on the table." },
+        { "type": "order", "answer": "Het ligt op de tafel.", "en": "It (the book) is on the table." },
+        { "type": "order", "answer": "Ze liggen op de tafel.", "en": "They (the keys) are on the table." },
+        { "type": "translate", "en": "It (the bus) is coming in five minutes.", "answers": ["Hij komt over vijf minuten"] },
+        { "type": "translate", "en": "It (the book) is on the table.", "answers": ["Het ligt op tafel", "Het ligt op de tafel"] },
+        { "type": "translate", "en": "They (the keys) are on the table.", "answers": ["Ze liggen op tafel", "Ze liggen op de tafel", "Zij liggen op tafel", "Zij liggen op de tafel"] },
+        { "type": "match", "pairs": [["de tafel", "hij"], ["het huis", "het"], ["de sleutels", "ze"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: verwijswoorden (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuverwijswoorden/" },
+        { "title": "NT2 TaalMenu: verwijswoorden (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-verwijswoorden/" }
+      ]
+    },
+    {
+      "id": "a2.g10.l2", "title": "hem, het, ze and die, dat", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "When the thing is the **object**, the same logic applies: **hem** for a de-word, **het** for a het-word, **ze** for a plural. *Ik zie de fiets* → *Ik zie **hem**.* *Ik zie het huis* → *Ik zie **het**.* *Ik zie de sleutels* → *Ik zie **ze**.*" },
+        { "type": "p", "text": "In speech people often point at things with **die** (de-words and plurals) and **dat** (het-words): *Welke jas wil je? **Die.*** *Welk boek? **Dat.*** *Die is mooi.* *Dat kost twee euro.* It sounds a bit more emphatic than *hij* or *het*." },
+        { "type": "table", "head": ["", "de-word", "het-word", "plural"], "rows": [["subject", "hij / die", "het / dat", "ze / die"], ["object", "hem / die", "het / dat", "ze / die"]] },
+        { "type": "ex", "nl": "Ik kan mijn pen niet vinden. Heb jij hem gezien?", "en": "I cannot find my pen. Have you seen it?" },
+        { "type": "ex", "nl": "Welke jas vind je mooi? Die daar.", "en": "Which coat do you like? That one there." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Heb je mijn pen gezien? Ik kan ___ niet vinden.", "options": ["hem", "het", "ze"], "answer": 0 },
+        { "type": "choice", "q": "Waar is het boek? Ik zie ___ niet.", "options": ["het", "hem", "ze"], "answer": 0 },
+        { "type": "choice", "q": "Waar zijn de sleutels? Ik kan ___ niet vinden.", "options": ["ze", "hem", "het"], "answer": 0 },
+        { "type": "choice", "q": "Welke jas vind je mooi? ___ daar.", "options": ["Die", "Dat", "Hij"], "answer": 0 },
+        { "type": "choice", "q": "Welk boek wil je? ___ daar.", "options": ["Dat", "Die", "Hem"], "answer": 0 },
+        { "type": "gap", "text": "Ik heb een nieuwe fiets. Ik vind ___ erg mooi.", "answers": ["hem"], "en": "I have a new bicycle. I think it is very nice." },
+        { "type": "gap", "text": "Ik heb een nieuw huis. Ik vind ___ erg mooi.", "answers": ["het"], "en": "I have a new house. I think it is very nice." },
+        { "type": "gap", "text": "Ik zie de bus niet. Ik zie ___ niet.", "answers": ["hem"], "en": "I don't see the bus. I don't see it." },
+        { "type": "gap", "text": "Hoeveel kost de jas? ___ kost vijftig euro.", "answers": ["Die", "Hij"], "en": "How much is the coat? It costs fifty euros." },
+        { "type": "gap", "text": "Wat kost het brood? ___ kost twee euro.", "answers": ["Dat", "Het"], "en": "How much is the bread? It costs two euros." },
+        { "type": "transform", "q": "Ik zie de fiets.", "instruction": "Replace the object with a pronoun", "answers": ["Ik zie hem"] },
+        { "type": "transform", "q": "Ik zie het huis.", "instruction": "Replace the object with a pronoun", "answers": ["Ik zie het"] },
+        { "type": "transform", "q": "Ik zie de sleutels.", "instruction": "Replace the object with a pronoun", "answers": ["Ik zie ze"] },
+        { "type": "order", "answer": "Ik kan hem niet vinden.", "en": "I cannot find it. (the pen)" },
+        { "type": "order", "answer": "Dat kost twee euro.", "en": "That costs two euros." },
+        { "type": "order", "answer": "Ik zie ze niet.", "en": "I don't see them." },
+        { "type": "translate", "en": "I cannot find it. (the phone)", "answers": ["Ik kan hem niet vinden", "Ik kan 'm niet vinden"] },
+        { "type": "translate", "en": "I cannot find them. (the keys)", "answers": ["Ik kan ze niet vinden"] },
+        { "type": "translate", "en": "That one is nice. (the coat)", "answers": ["Die is mooi", "Die is leuk"] },
+        { "type": "match", "pairs": [["Welke tafel?", "Die."], ["Welk huis?", "Dat."], ["Ik zie de bus.", "Ik zie hem."], ["Ik zie het huis.", "Ik zie het."]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: verwijswoorden (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuverwijswoorden/" },
+        { "title": "NT2 TaalMenu: aanwijzend voornaamwoord (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuaanwijzendvoornaamwoord/" }
+      ]
+    },
+    {
+      "id": "a2.g10.l3", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Waar is mijn tas? ___ staat in de gang.", "options": ["Hij", "Het", "Ze"], "answer": 0 },
+        { "type": "choice", "q": "Waar is het formulier? Ik zie ___ niet.", "options": ["het", "hem", "ze"], "answer": 0 },
+        { "type": "choice", "q": "Waar zijn mijn schoenen? ___ staan bij de deur.", "options": ["Ze", "Hij", "Het"], "answer": 0 },
+        { "type": "choice", "q": "Welke trein neem je? ___ van half drie.", "options": ["Die", "Dat", "Het"], "answer": 0 },
+        { "type": "gap", "text": "De winkel is dicht, maar ___ gaat morgen weer open.", "answers": ["hij"], "en": "The shop is closed, but it opens again tomorrow." },
+        { "type": "gap", "text": "Het eten is klaar. ___ staat op tafel.", "answers": ["Het"], "en": "The food is ready. It is on the table." },
+        { "type": "gap", "text": "Mijn buren hebben een hond. Ik vind ___ erg lief.", "answers": ["hem"], "en": "My neighbours have a dog. I think he is very sweet." },
+        { "type": "gap", "text": "Heb je het boek gelezen? Ja, ik heb ___ gisteren gelezen.", "answers": ["het"], "en": "Have you read the book? Yes, I read it yesterday." },
+        { "type": "gap", "text": "Waar zijn de kaartjes? Ik heb ___ in mijn tas gedaan.", "answers": ["ze"], "en": "Where are the tickets? I put them in my bag." },
+        { "type": "gap", "text": "Welk huis is van jou? ___ met de rode deur.", "answers": ["Dat"], "en": "Which house is yours? The one with the red door." },
+        { "type": "transform", "q": "Ik heb de rekening betaald.", "instruction": "Replace de rekening with a pronoun", "answers": ["Ik heb hem betaald"] },
+        { "type": "transform", "q": "Ik heb het boek gelezen.", "instruction": "Replace het boek with a pronoun", "answers": ["Ik heb het gelezen"] },
+        { "type": "transform", "q": "Ik heb de kaartjes gekocht.", "instruction": "Replace de kaartjes with a pronoun", "answers": ["Ik heb ze gekocht"] },
+        { "type": "order", "answer": "Waar is de bus? Hij komt zo.", "en": "Where is the bus? It is coming soon." },
+        { "type": "order", "answer": "Ik heb het gisteren gelezen.", "alt": ["Gisteren heb ik het gelezen."], "en": "I read it yesterday." },
+        { "type": "order", "answer": "Die tas is erg mooi.", "en": "That bag is very nice." },
+        { "type": "translate", "en": "The coat is expensive, but it is beautiful.", "answers": ["De jas is duur, maar hij is mooi"] },
+        { "type": "translate", "en": "I do not know it. (the word)", "answers": ["Ik ken het niet", "Ik weet het niet"] },
+        { "type": "translate", "en": "I bought them yesterday. (the shoes)", "answers": ["Ik heb ze gisteren gekocht", "Gisteren heb ik ze gekocht"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: verwijswoorden (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuverwijswoorden/" }
+      ]
+    }
+  ]
+}

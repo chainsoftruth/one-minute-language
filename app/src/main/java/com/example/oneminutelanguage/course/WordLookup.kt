@@ -22,9 +22,9 @@ private const val MAX_RESULTS = 3
 // ponytail: the lexicon keeps only the 3rd person singular in `pres`. The regular ik / jij forms come from dropping
 // the final -t; these are the irregular ones that dropping can't give. Upgrade path: a `forms` list on LexEntry.
 private val IRREGULAR_PRESENT = mapOf(
-    "zijn" to listOf("ben", "bent"), "hebben" to listOf("heb", "hebt"), "kunnen" to listOf("kunt"),
+    "zijn" to listOf("ben", "bent"), "hebben" to listOf("heb", "hebt"), "kunnen" to listOf("kunt", "kun"),
     "willen" to listOf("wil", "wilt"), "moeten" to listOf("moet"), "mogen" to listOf("mag"),
-    "zullen" to listOf("zal", "zult"), "gaan" to listOf("ga"), "staan" to listOf("sta"), "slaan" to listOf("sla")
+    "zullen" to listOf("zal", "zult", "zul"), "gaan" to listOf("ga"), "staan" to listOf("sta"), "slaan" to listOf("sla")
 )
 
 private val SUFFIXES = listOf("'s", "etje", "tje", "pje", "kje", "je", "en", "e", "s", "t")

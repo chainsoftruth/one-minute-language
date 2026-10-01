@@ -1,0 +1,103 @@
+{
+  "id": "a2.g04", "level": "A2", "kind": "grammar",
+  "title": "Future",
+  "subtitle": "gaan + infinitive, zullen and the present tense with a time word",
+  "lessons": [
+    {
+      "id": "a2.g04.l1", "title": "gaan + infinitive", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Dutch has no real future tense. For **plans and things that are about to happen** use **gaan + infinitive**. *Gaan* is the conjugated verb (second place) and the infinitive goes to the **end**: *Ik ga morgen koken.* *Wij gaan volgend jaar verhuizen.*" },
+        { "type": "table", "head": ["person", "gaan", "example"], "rows": [["ik", "ga", "Ik ga koken."], ["jij / je", "gaat (ga je?)", "Ga je morgen werken?"], ["u", "gaat", "Gaat u morgen werken?"], ["hij / zij / het", "gaat", "Hij gaat bellen."], ["wij / jullie / zij", "gaan", "Wij gaan reizen."]] },
+        { "type": "ex", "nl": "Wat ga je dit weekend doen?", "en": "What are you going to do this weekend?" },
+        { "type": "ex", "nl": "Ik ga morgen mijn oma bezoeken.", "en": "Tomorrow I am going to visit my grandmother." },
+        { "type": "tip", "text": "*Gaan* alone means *to go*: *Ik ga naar huis.* With a second verb it means *going to*: *Ik ga eten.*" }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik ___ morgen werken.", "options": ["ga", "gaat", "gaan"], "answer": 0 },
+        { "type": "choice", "q": "Wij ___ volgend jaar verhuizen.", "options": ["gaan", "gaat", "ga"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik ga morgen koken.", "Ik ga koken morgen.", "Ik koken ga morgen."], "answer": 0 },
+        { "type": "gap", "text": "Ik ___ vanavond koken. (gaan)", "answers": ["ga"], "en": "I am going to cook tonight." },
+        { "type": "gap", "text": "Anna ___ volgende week haar oma bezoeken. (gaan)", "answers": ["gaat"], "en": "Anna is going to visit her grandmother next week." },
+        { "type": "gap", "text": "___ jij morgen werken? (gaan)", "answers": ["Ga"], "en": "Are you going to work tomorrow?", "explain": "After jij the t of gaat disappears." },
+        { "type": "gap", "text": "Wij gaan een huis ___. (kopen)", "answers": ["kopen"], "en": "We are going to buy a house." },
+        { "type": "gap", "text": "Ik ga mijn zus ___. (bellen)", "answers": ["bellen"], "en": "I am going to call my sister." },
+        { "type": "gap", "text": "Wat ___ je dit weekend doen? (gaan)", "answers": ["ga"], "en": "What are you going to do this weekend?" },
+        { "type": "transform", "q": "Ik koop een auto.", "instruction": "Make it a plan with gaan", "answers": ["Ik ga een auto kopen"] },
+        { "type": "transform", "q": "Wij verhuizen volgend jaar.", "instruction": "Make it a plan with gaan", "answers": ["Wij gaan volgend jaar verhuizen", "We gaan volgend jaar verhuizen", "Volgend jaar gaan wij verhuizen", "Volgend jaar gaan we verhuizen"] },
+        { "type": "transform", "q": "Hij belt zijn moeder.", "instruction": "Make it a plan with gaan", "answers": ["Hij gaat zijn moeder bellen"] },
+        { "type": "order", "answer": "Ik ga morgen mijn oma bezoeken.", "alt": ["Morgen ga ik mijn oma bezoeken."], "en": "Tomorrow I am going to visit my grandmother." },
+        { "type": "order", "answer": "Wat ga je dit weekend doen?", "en": "What are you going to do this weekend?" },
+        { "type": "order", "answer": "Wij gaan volgend jaar een huis kopen.", "alt": ["Volgend jaar gaan wij een huis kopen."], "en": "Next year we are going to buy a house." },
+        { "type": "translate", "en": "I am going to cook tonight.", "answers": ["Ik ga vanavond koken", "Vanavond ga ik koken"] },
+        { "type": "translate", "en": "What are you going to do tomorrow?", "answers": ["Wat ga je morgen doen", "Wat ga jij morgen doen", "Wat gaat u morgen doen"] },
+        { "type": "match", "pairs": [["Ik ga koken", "I'm going to cook"], ["Wij gaan reizen", "We're going to travel"], ["Hij gaat bellen", "He's going to call"], ["Gaan jullie eten?", "Are you going to eat?"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A2 grammar overview", "url": "https://nt2taalmenu.nl/a2-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "a2.g04.l2", "title": "zullen and the present tense", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "**Zullen** is used for **promises** (*Ik zal je helpen*), **predictions** (*Het zal morgen regenen*) and **formal** announcements (*Wij zullen u zo snel mogelijk bellen*). With **we** it makes a **suggestion**: *Zullen we gaan?* (Shall we go?)" },
+        { "type": "table", "head": ["person", "zullen"], "rows": [["ik", "zal"], ["jij / je", "zult (zul je?)"], ["u", "zult"], ["hij / zij / het", "zal"], ["wij / jullie / zij", "zullen"]] },
+        { "type": "ex", "nl": "Ik zal je morgen bellen.", "en": "I will call you tomorrow." },
+        { "type": "ex", "nl": "Zullen we vanavond samen koken?", "en": "Shall we cook together tonight?" },
+        { "type": "p", "text": "In everyday speech people often just use the **present tense with a time word**: *Morgen werk ik de hele dag.* *Volgende week gaan wij naar Spanje.* The time word tells you it is the future." },
+        { "type": "tip", "text": "When a time word comes first, the verb follows it: *Morgen werk ik*, not *Morgen ik werk*." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Zullen we koffie drinken?", "options": ["Shall we have coffee?", "We will have coffee.", "We had coffee."], "answer": 0 },
+        { "type": "choice", "q": "Ik ___ je morgen bellen. (promise)", "options": ["zal", "zult", "zullen"], "answer": 0 },
+        { "type": "choice", "q": "Wij ___ u zo snel mogelijk bellen.", "options": ["zullen", "zal", "zult"], "answer": 0 },
+        { "type": "gap", "text": "___ we vanavond samen eten?", "answers": ["Zullen"], "en": "Shall we eat together tonight?" },
+        { "type": "gap", "text": "Ik ___ je zeker helpen. (zullen)", "answers": ["zal"], "en": "I will certainly help you." },
+        { "type": "gap", "text": "Morgen ___ het regenen. (zullen)", "answers": ["zal"], "en": "Tomorrow it will rain." },
+        { "type": "gap", "text": "___ je morgen komen? (zullen)", "answers": ["Zul", "Zal"], "en": "Will you come tomorrow?" },
+        { "type": "gap", "text": "Volgende week ___ wij naar Spanje. (gaan)", "answers": ["gaan"], "en": "Next week we are going to Spain." },
+        { "type": "gap", "text": "Morgen ___ ik de hele dag. (werken)", "answers": ["werk"], "en": "Tomorrow I will work all day.", "explain": "The time word is first, so the verb follows it and ik comes after." },
+        { "type": "transform", "q": "Ik help je.", "instruction": "Make it a promise with zullen", "answers": ["Ik zal je helpen"] },
+        { "type": "transform", "q": "Wij gaan eten.", "instruction": "Make it a suggestion: Zullen we ...?", "answers": ["Zullen we gaan eten", "Zullen wij gaan eten"] },
+        { "type": "transform", "q": "Ik werk morgen.", "instruction": "Put the time word first", "answers": ["Morgen werk ik"] },
+        { "type": "order", "answer": "Zullen we vanavond samen koken?", "en": "Shall we cook together tonight?" },
+        { "type": "order", "answer": "Ik zal je morgen bellen.", "alt": ["Morgen zal ik je bellen."], "en": "I will call you tomorrow." },
+        { "type": "order", "answer": "Morgen werk ik de hele dag.", "en": "Tomorrow I will work all day." },
+        { "type": "translate", "en": "I will help you.", "answers": ["Ik zal je helpen", "Ik zal u helpen", "Ik zal jou helpen"] },
+        { "type": "translate", "en": "Shall we go?", "answers": ["Zullen we gaan", "Zullen wij gaan"] },
+        { "type": "translate", "en": "Next week we are going to Spain.", "answers": ["Volgende week gaan wij naar Spanje", "Volgende week gaan we naar Spanje"] },
+        { "type": "match", "pairs": [["Ik zal je helpen", "I will help you"], ["Zullen we gaan?", "Shall we go?"], ["Het zal regenen", "It will rain"], ["Morgen werk ik", "Tomorrow I work"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A2 grammar overview", "url": "https://nt2taalmenu.nl/a2-grammatica-verzamel-pagina/" },
+        { "title": "NT2 TaalMenu: zullen en zouden (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-zullen-en-zouden/" }
+      ]
+    },
+    {
+      "id": "a2.g04.l3", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Which is the best way to say: We are going to travel next year?", "options": ["Wij gaan volgend jaar reizen.", "Wij gaan reizen volgend jaar.", "Wij reizen gaan volgend jaar."], "answer": 0 },
+        { "type": "choice", "q": "A suggestion: ___ we een kop koffie drinken?", "options": ["Zullen", "Zal", "Zult"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is a promise?", "options": ["Ik zal het zeker doen.", "Ik doe het morgen.", "Ik ga het doen."], "answer": 0 },
+        { "type": "choice", "q": "Morgen ___ ik thuis. (blijven)", "options": ["blijf", "blijft", "blijven"], "answer": 0 },
+        { "type": "gap", "text": "Wij ___ dit weekend naar het strand. (gaan)", "answers": ["gaan"], "en": "We are going to the beach this weekend." },
+        { "type": "gap", "text": "Mijn zus ___ volgend jaar trouwen. (gaan)", "answers": ["gaat"], "en": "My sister is going to get married next year." },
+        { "type": "gap", "text": "Ik ga een nieuwe baan ___. (zoeken)", "answers": ["zoeken"], "en": "I am going to look for a new job." },
+        { "type": "gap", "text": "___ ik de deur openen? (zullen)", "answers": ["Zal"], "en": "Shall I open the door?" },
+        { "type": "gap", "text": "Ik denk dat het morgen ___ regenen. (zullen)", "answers": ["zal"], "en": "I think it will rain tomorrow." },
+        { "type": "gap", "text": "Volgende maand ___ hij twintig. (worden)", "answers": ["wordt"], "en": "Next month he turns twenty." },
+        { "type": "transform", "q": "Ik bel je vanavond.", "instruction": "Make it a plan with gaan", "answers": ["Ik ga je vanavond bellen", "Vanavond ga ik je bellen"] },
+        { "type": "transform", "q": "Wij gaan wandelen.", "instruction": "Make it a suggestion: Zullen we ...?", "answers": ["Zullen we gaan wandelen", "Zullen wij gaan wandelen"] },
+        { "type": "transform", "q": "Ik werk volgende week.", "instruction": "Put the time word first", "answers": ["Volgende week werk ik"] },
+        { "type": "order", "answer": "Wat gaan jullie morgen doen?", "en": "What are you going to do tomorrow?" },
+        { "type": "order", "answer": "Zal ik de deur openen?", "en": "Shall I open the door?" },
+        { "type": "order", "answer": "Volgende week gaan wij naar Amsterdam.", "en": "Next week we are going to Amsterdam." },
+        { "type": "translate", "en": "I am going to learn Dutch.", "answers": ["Ik ga Nederlands leren"] },
+        { "type": "translate", "en": "Shall we have lunch together tomorrow?", "answers": ["Zullen we morgen samen lunchen", "Zullen wij morgen samen lunchen", "Zullen we morgen samen lunch eten", "Zullen we morgen samen gaan lunchen"] },
+        { "type": "translate", "en": "She is going to call you tomorrow.", "answers": ["Zij gaat je morgen bellen", "Ze gaat je morgen bellen", "Morgen gaat zij je bellen", "Morgen gaat ze je bellen"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A2 grammar overview", "url": "https://nt2taalmenu.nl/a2-grammatica-verzamel-pagina/" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "id": "a2.g09", "level": "A2", "kind": "grammar",
+  "title": "Ongoing actions",
+  "subtitle": "aan het + infinitive, and zitten / staan / liggen / lopen + te",
+  "lessons": [
+    {
+      "id": "a2.g09.l1", "title": "aan het + infinitive", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "To say that something is **happening right now** use **zijn + aan het + infinitive**: *Ik ben aan het koken.* (I am cooking.) The infinitive stands at the end. An object comes before *aan het*: *Ik ben een brief aan het schrijven.*" },
+        { "type": "table", "head": ["tense", "example"], "rows": [["present", "Wij zijn aan het eten."], ["with object", "Zij is een boek aan het lezen."], ["past", "Gisteren was ik de hele dag aan het werken."], ["question", "Wat ben je aan het doen?"]] },
+        { "type": "ex", "nl": "Wat ben je aan het doen?", "en": "What are you doing?" },
+        { "type": "ex", "nl": "De kinderen zijn buiten aan het spelen.", "en": "The children are playing outside." },
+        { "type": "tip", "text": "Dutch does not need this form: *Ik kook* also means *I am cooking*. Use **aan het** when you want to stress that the action is going on at this moment." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik ben aan het ___. (koken)", "options": ["koken", "kook", "gekookt"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik ben aan het werken.", "Ik ben aan werken het.", "Ik ben aan het werkt."], "answer": 0 },
+        { "type": "choice", "q": "Ik ben een brief aan het ___. (schrijven)", "options": ["schrijven", "schrijf", "geschreven"], "answer": 0 },
+        { "type": "gap", "text": "Zij is een boek aan het ___. (lezen)", "answers": ["lezen"], "en": "She is reading a book." },
+        { "type": "gap", "text": "Wij zijn aan het ___. (eten)", "answers": ["eten"], "en": "We are eating." },
+        { "type": "gap", "text": "De kinderen zijn buiten aan het ___. (spelen)", "answers": ["spelen"], "en": "The children are playing outside." },
+        { "type": "gap", "text": "Ik ___ aan het koken. (zijn)", "answers": ["ben"], "en": "I am cooking." },
+        { "type": "gap", "text": "Wat ___ je aan het doen? (zijn)", "answers": ["ben"], "en": "What are you doing?" },
+        { "type": "gap", "text": "Gisteren ___ ik de hele dag aan het werken. (zijn)", "answers": ["was"], "en": "Yesterday I was working all day." },
+        { "type": "transform", "q": "Ik kook.", "instruction": "Stress that it is happening now (aan het)", "answers": ["Ik ben aan het koken"] },
+        { "type": "transform", "q": "Zij leest een boek.", "instruction": "Stress that it is happening now (aan het)", "answers": ["Zij is een boek aan het lezen", "Ze is een boek aan het lezen"] },
+        { "type": "transform", "q": "Wij werken in de tuin.", "instruction": "Stress that it is happening now (aan het)", "answers": ["Wij zijn in de tuin aan het werken", "We zijn in de tuin aan het werken"] },
+        { "type": "order", "answer": "Ik ben aan het koken.", "en": "I am cooking." },
+        { "type": "order", "answer": "Wat ben je aan het doen?", "en": "What are you doing?" },
+        { "type": "order", "answer": "Zij is een brief aan het schrijven.", "en": "She is writing a letter." },
+        { "type": "translate", "en": "I am cooking right now.", "answers": ["Ik ben aan het koken", "Ik ben nu aan het koken"] },
+        { "type": "translate", "en": "What are you doing?", "answers": ["Wat ben je aan het doen", "Wat ben jij aan het doen", "Wat bent u aan het doen", "Wat doe je", "Wat doe jij", "Wat doet u"] },
+        { "type": "translate", "en": "They were playing outside.", "answers": ["Zij waren buiten aan het spelen", "Ze waren buiten aan het spelen"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: positie-werkwoorden en aan het (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuwwvpos/" }
+      ]
+    },
+    {
+      "id": "a2.g09.l2", "title": "zitten, staan, liggen, lopen + te", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Another way to show an ongoing action is a **position verb** + **te** + infinitive. The verb tells you the posture: **zitten** (sitting), **staan** (standing), **liggen** (lying), **lopen** (walking). *Hij zit te lezen.* *Zij staat te wachten.* *De baby ligt te slapen.* *Het kind loopt te zingen.*" },
+        { "type": "table", "head": ["position verb", "example"], "rows": [["zitten + te", "Hij zit in de tuin te lezen."], ["staan + te", "Zij staat al een uur te wachten."], ["liggen + te", "De baby ligt te slapen."], ["lopen + te", "Het kind loopt te zingen."]] },
+        { "type": "ex", "nl": "Mijn vader staat in de keuken te koken.", "en": "My father is standing in the kitchen cooking." },
+        { "type": "ex", "nl": "Hij zit een boek te lezen.", "en": "He is sitting reading a book." },
+        { "type": "tip", "text": "Choose the verb that matches what the person is really doing: someone in bed *ligt te slapen*, someone on a chair *zit te werken*. The infinitive with **te** goes to the end of the sentence." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Hij ___ te lezen. (he is sitting reading)", "options": ["zit", "is", "heeft"], "answer": 0 },
+        { "type": "choice", "q": "Zij ___ te wachten. (she is standing waiting)", "options": ["staat", "zit", "ligt"], "answer": 0 },
+        { "type": "choice", "q": "Het kind ___ te slapen. (the child is lying asleep)", "options": ["ligt", "staat", "loopt"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Hij zit te lezen.", "Hij zit lezen.", "Hij zit te leest."], "answer": 0 },
+        { "type": "gap", "text": "Hij ___ in de tuin te lezen. (zitten)", "answers": ["zit"], "en": "He is sitting in the garden reading." },
+        { "type": "gap", "text": "Zij ___ al een uur te wachten. (staan)", "answers": ["staat"], "en": "She has been standing waiting for an hour." },
+        { "type": "gap", "text": "De baby ___ te slapen. (liggen)", "answers": ["ligt"], "en": "The baby is lying asleep." },
+        { "type": "gap", "text": "Het kind ___ te zingen. (lopen)", "answers": ["loopt"], "en": "The child is walking along singing." },
+        { "type": "gap", "text": "Hij zit ___ lezen.", "answers": ["te"], "en": "He is sitting reading." },
+        { "type": "gap", "text": "Zij staat te ___. (wachten)", "answers": ["wachten"], "en": "She is standing waiting." },
+        { "type": "gap", "text": "Mijn vader ___ in de keuken te koken. (staan)", "answers": ["staat"], "en": "My father is standing in the kitchen cooking." },
+        { "type": "transform", "q": "Hij leest in de tuin.", "instruction": "Say he is sitting reading (zit te)", "answers": ["Hij zit in de tuin te lezen"] },
+        { "type": "transform", "q": "Zij wacht al een uur.", "instruction": "Use staan + te", "answers": ["Zij staat al een uur te wachten", "Ze staat al een uur te wachten"] },
+        { "type": "transform", "q": "De baby slaapt.", "instruction": "Use liggen + te", "answers": ["De baby ligt te slapen"] },
+        { "type": "order", "answer": "Hij zit in de tuin te lezen.", "en": "He is sitting in the garden reading." },
+        { "type": "order", "answer": "De baby ligt te slapen.", "en": "The baby is lying asleep." },
+        { "type": "order", "answer": "Zij staat al een uur te wachten.", "en": "She has been standing waiting for an hour." },
+        { "type": "translate", "en": "He is sitting reading a book.", "answers": ["Hij zit een boek te lezen"] },
+        { "type": "translate", "en": "She is standing outside waiting.", "answers": ["Zij staat buiten te wachten", "Ze staat buiten te wachten"] },
+        { "type": "match", "pairs": [["zit te lezen", "is sitting reading"], ["staat te wachten", "is standing waiting"], ["ligt te slapen", "is lying asleep"], ["loopt te zingen", "is walking singing"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: positie-werkwoorden en aan het (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuwwvpos/" }
+      ]
+    },
+    {
+      "id": "a2.g09.l3", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Wij ___ aan het eten.", "options": ["zijn", "hebben", "worden"], "answer": 0 },
+        { "type": "choice", "q": "De man ___ in de rij te wachten. (standing)", "options": ["staat", "zit", "ligt"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik ben mijn huiswerk aan het maken.", "Ik ben aan het mijn huiswerk maken.", "Ik ben mijn huiswerk aan maken het."], "answer": 0 },
+        { "type": "choice", "q": "Zij ___ op de bank tv te kijken. (sitting)", "options": ["zit", "staat", "loopt"], "answer": 0 },
+        { "type": "gap", "text": "Mijn moeder is een taart aan het ___. (bakken)", "answers": ["bakken"], "en": "My mother is baking a cake." },
+        { "type": "gap", "text": "Wat ___ jullie aan het doen? (zijn)", "answers": ["zijn"], "en": "What are you (plural) doing?" },
+        { "type": "gap", "text": "De hond ___ in de mand te slapen. (liggen)", "answers": ["ligt"], "en": "The dog is lying asleep in its basket." },
+        { "type": "gap", "text": "Zij ___ te praten met de buurman. (staan)", "answers": ["staat"], "en": "She is standing talking with the neighbour." },
+        { "type": "gap", "text": "Hij zit de hele dag te ___. (werken)", "answers": ["werken"], "en": "He sits working all day." },
+        { "type": "gap", "text": "Toen ik belde, ___ ik aan het koken. (zijn)", "answers": ["was"], "en": "When you called, I was cooking." },
+        { "type": "transform", "q": "Ik maak mijn huiswerk.", "instruction": "Stress that it is happening now (aan het)", "answers": ["Ik ben mijn huiswerk aan het maken"] },
+        { "type": "transform", "q": "Zij kijkt televisie.", "instruction": "Use zitten + te", "answers": ["Zij zit televisie te kijken", "Ze zit televisie te kijken", "Zij zit tv te kijken", "Ze zit tv te kijken"] },
+        { "type": "transform", "q": "De kinderen spelen buiten.", "instruction": "Stress that it is happening now (aan het)", "answers": ["De kinderen zijn buiten aan het spelen"] },
+        { "type": "order", "answer": "Mijn moeder is een taart aan het bakken.", "en": "My mother is baking a cake." },
+        { "type": "order", "answer": "De hond ligt in de mand te slapen.", "en": "The dog is lying asleep in its basket." },
+        { "type": "order", "answer": "Wat zijn jullie aan het doen?", "en": "What are you doing?" },
+        { "type": "translate", "en": "I am doing my homework.", "answers": ["Ik ben mijn huiswerk aan het maken", "Ik maak mijn huiswerk"] },
+        { "type": "translate", "en": "He is sitting at the table working.", "answers": ["Hij zit aan tafel te werken", "Hij zit aan de tafel te werken"] },
+        { "type": "translate", "en": "We were eating when he came.", "answers": ["Wij waren aan het eten toen hij kwam", "We waren aan het eten toen hij kwam", "Toen hij kwam, waren wij aan het eten", "Toen hij kwam, waren we aan het eten"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: positie-werkwoorden en aan het (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuwwvpos/" }
+      ]
+    }
+  ]
+}

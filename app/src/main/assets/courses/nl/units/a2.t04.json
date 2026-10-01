@@ -1,0 +1,138 @@
+{
+  "id": "a2.t04", "level": "A2", "kind": "theme",
+  "title": "Errands & services",
+  "subtitle": "Prepare for a town-hall appointment, collect a parcel, return an item and write a complaint",
+  "lessons": [
+    {
+      "id": "a2.t04.l1", "title": "At the town hall", "kind": "vocab",
+      "vocab": [
+        "gemeentehuis", "balie", "identiteitsbewijs", "id_kaart", "legitimatie", "burgerservicenummer", "handtekening", "aanvraag",
+        "vergunning", "bewijs", "uittreksel", "inschrijving", "bevestiging", "wijziging", "verzoek", "toestemming", "aanvragen",
+        "invullen", "inleveren", "zich_inschrijven", "zich_aanmelden"
+      ]
+    },
+    {
+      "id": "a2.t04.l2", "title": "Shops, post and money", "kind": "vocab",
+      "vocab": [
+        "postkantoor", "postzegel", "envelop", "postbode", "bezorger", "pakketpunt", "afhalen", "afleveren", "klacht", "klantenservice",
+        "garantie", "kassabon", "ruilen", "winkelcentrum", "warenhuis", "drogisterij", "factuur", "betaling", "bedrag", "rekeningnummer",
+        "pincode", "geldautomaat", "saldo", "tegoed"
+      ]
+    },
+    {
+      "id": "a2.t04.l3", "title": "An appointment at the town hall", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "An appointment letter tells you what, when and where, and what to bring. Find the date, the time and the documents you must take. Tap a word you don't know." }
+      ],
+      "text": "Bevestiging van uw afspraak. Geachte mevrouw Bakker, u hebt een afspraak bij de gemeente Utrecht. Wat: een nieuw paspoort aanvragen. Wanneer: donderdag 9 oktober om 10.20 uur. Waar: gemeentehuis, balie 4. Neem de volgende dingen mee: uw oude paspoort, een pasfoto, uw burgerservicenummer en deze brief. U moet altijd een legitimatie meenemen. Zonder legitimatie kunnen wij u niet helpen. Kunt u niet komen? Zeg uw afspraak dan op tijd af, op de website of per telefoon. Een nieuwe afspraak maakt u daar ook. Komt u met de auto? Parkeer dan in de parkeergarage naast het gemeentehuis. Wacht daarna in de wachtkamer, tot uw nummer op het scherm staat. Hebt u een vraag over uw afspraak? Bel dan het nummer op deze brief. Wij zijn open van acht tot vijf uur. Met vriendelijke groet, Gemeente Utrecht",
+      "items": [
+        { "type": "choice", "q": "Waarom heeft mevrouw Bakker een afspraak?", "options": ["Ze wil een nieuw paspoort aanvragen", "Ze wil verhuizen", "Ze wil een boete betalen"], "answer": 0, "en": "Why does Ms Bakker have an appointment?" },
+        { "type": "choice", "q": "Wanneer is de afspraak?", "options": ["Donderdag om 10.20 uur", "Dinsdag om 9.00 uur", "Vrijdag om 10.20 uur"], "answer": 0, "en": "When is the appointment?" },
+        { "type": "choice", "q": "Wat moet ze altijd meenemen?", "options": ["Een legitimatie", "Haar huurcontract", "Haar fiets"], "answer": 0, "en": "What must she always bring?" },
+        { "type": "choice", "q": "Wat moet ze doen als ze niet kan komen?", "options": ["De afspraak op tijd afzeggen", "Gewoon thuisblijven", "Een boete betalen"], "answer": 0, "en": "What must she do if she cannot come?" },
+        { "type": "choice", "q": "Waar kan ze parkeren?", "options": ["In de parkeergarage naast het gemeentehuis", "Voor de deur", "Op het plein"], "answer": 0, "en": "Where can she park?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A2 menu (reading texts)", "url": "https://nt2taalmenu.nl/nt2-a2-menu/" }
+      ]
+    },
+    {
+      "id": "a2.t04.l4", "title": "A parcel notice", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "A delivery notice says what happened and what you must do now. Look for the pick-up place, the deadline and what to bring. Tap a word you don't know." }
+      ],
+      "text": "Wij hebben u gemist! Vandaag om kwart over twee wilde onze bezorger een pakket bij u afleveren, maar er was niemand thuis. Daarom hebben wij het pakket naar een pakketpunt gebracht: Supermarkt De Linde, Kerkstraat 14. U kunt het pakket daar vanaf morgen afhalen. Het pakketpunt is open van maandag tot en met zaterdag, van acht tot acht uur. Neem uw legitimatie en deze melding mee. U hebt zeven dagen de tijd. Haalt u het pakket niet op? Dan sturen wij het terug naar de winkel. Wilt u dat niet? Bel dan de klantenservice op 088 123 4567 en maak een nieuwe afspraak. Wilt u dat wij het pakket morgen opnieuw bezorgen? Dat kan ook, maar dan moet u zeggen wanneer u thuis bent. Wij hopen dat het de volgende keer lukt!",
+      "items": [
+        { "type": "choice", "q": "Waarom is het pakket niet bezorgd?", "options": ["Er was niemand thuis", "De bezorger was ziek", "Het adres was fout"], "answer": 0, "en": "Why was the parcel not delivered?" },
+        { "type": "choice", "q": "Waar ligt het pakket nu?", "options": ["Bij Supermarkt De Linde", "Op het postkantoor", "Bij de buren"], "answer": 0, "en": "Where is the parcel now?" },
+        { "type": "choice", "q": "Hoe lang kun je het pakket afhalen?", "options": ["Zeven dagen", "Twee dagen", "Een maand"], "answer": 0, "en": "How long can you collect the parcel?" },
+        { "type": "choice", "q": "Wat moet je meenemen?", "options": ["Je legitimatie en deze melding", "Alleen geld", "Je pincode"], "answer": 0, "en": "What must you bring?" },
+        { "type": "choice", "q": "Wat gebeurt er als je het pakket niet ophaalt?", "options": ["Het gaat terug naar de winkel", "De buren krijgen het", "Je moet betalen"], "answer": 0, "en": "What happens if you do not collect the parcel?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A2 menu (reading texts)", "url": "https://nt2taalmenu.nl/nt2-a2-menu/" }
+      ]
+    },
+    {
+      "id": "a2.t04.l5", "title": "Returning a jacket", "kind": "listening",
+      "dialogue": [
+        { "who": "A", "nl": "Goedemiddag. Kan ik u helpen?", "en": "Good afternoon. Can I help you?" },
+        { "who": "B", "nl": "Goedemiddag. Ik heb gisteren deze jas gekocht, maar hij is te klein. Kan ik hem ruilen?", "en": "Good afternoon. I bought this coat yesterday, but it is too small. Can I exchange it?" },
+        { "who": "A", "nl": "Dat kan. Hebt u de bon nog?", "en": "That's possible. Do you still have the receipt?" },
+        { "who": "B", "nl": "Ja, hier is hij.", "en": "Yes, here it is." },
+        { "who": "A", "nl": "Dank u wel. Welke maat hebt u nodig?", "en": "Thank you. Which size do you need?" },
+        { "who": "B", "nl": "Een maat groter, alstublieft. Hebt u deze jas ook in het blauw?", "en": "A size bigger, please. Do you also have this coat in blue?" },
+        { "who": "A", "nl": "Het spijt me, blauw is uitverkocht. Wilt u liever uw geld terug?", "en": "I'm sorry, blue is sold out. Would you rather have your money back?" },
+        { "who": "B", "nl": "Ja, dat is goed. Hoe lang duurt dat?", "en": "Yes, that's fine. How long does that take?" },
+        { "who": "A", "nl": "Het geld staat binnen drie dagen op uw rekening.", "en": "The money will be in your account within three days." },
+        { "who": "B", "nl": "Dank u wel. Fijne dag nog!", "en": "Thank you. Have a nice day!" }
+      ],
+      "items": [
+        { "type": "listen", "nl": "Ik heb gisteren deze jas gekocht, maar hij is te klein.", "q": "What is the problem?", "options": ["The coat is too small", "The coat is too expensive", "The coat is broken"], "answer": 0 },
+        { "type": "listen", "nl": "Hebt u de bon nog?", "q": "What does the shop assistant ask for?", "options": ["The receipt", "His passport", "His bank card"], "answer": 0 },
+        { "type": "listen", "nl": "Het spijt me, blauw is uitverkocht.", "q": "What is the problem with blue?", "options": ["It is sold out", "It is too expensive", "It is too big"], "answer": 0 },
+        { "type": "listen", "nl": "Het geld staat binnen drie dagen op uw rekening.", "q": "When will the money arrive?", "options": ["Within three days", "Tomorrow", "Next week"], "answer": 0 },
+        { "type": "listen", "nl": "Kan ik hem ruilen?" },
+        { "type": "choice", "q": "Wat besluit de klant?", "options": ["Hij neemt zijn geld terug", "Hij koopt een blauwe jas", "Hij houdt de jas"], "answer": 0, "en": "What does the customer decide?" },
+        { "type": "choice", "q": "Wanneer heeft de klant de jas gekocht?", "options": ["Gisteren", "Vorige week", "Vanochtend"], "answer": 0, "en": "When did the customer buy the coat?" }
+      ],
+      "sources": [
+        { "title": "Taalklas: free Dutch video course", "url": "https://www.taalklas.nl/" }
+      ]
+    },
+    {
+      "id": "a2.t04.l6", "title": "Say it yourself", "kind": "speaking",
+      "dialogue": [
+        { "who": "A", "nl": "Goedemorgen. Kan ik u helpen?", "en": "Good morning. Can I help you?" },
+        { "who": "B", "nl": "Goedemorgen. Ik heb een afspraak om half elf voor een nieuw paspoort.", "en": "Good morning. I have an appointment at half past ten for a new passport." },
+        { "who": "A", "nl": "Hebt u uw legitimatie bij u?", "en": "Do you have your ID with you?" },
+        { "who": "B", "nl": "Ja, hier is mijn oude paspoort. En ik heb ook een pasfoto meegenomen.", "en": "Yes, here is my old passport. And I also brought a passport photo." },
+        { "who": "A", "nl": "Mooi. Wat is uw burgerservicenummer?", "en": "Good. What is your citizen service number?" },
+        { "who": "B", "nl": "Dat staat op deze brief.", "en": "That is on this letter." },
+        { "who": "A", "nl": "Prima. U moet hier nog uw handtekening zetten.", "en": "Fine. You still have to sign here." },
+        { "who": "B", "nl": "Natuurlijk. Wanneer is mijn paspoort klaar?", "en": "Of course. When will my passport be ready?" },
+        { "who": "A", "nl": "Over een week. U krijgt een bericht.", "en": "In a week. You will get a message." },
+        { "who": "B", "nl": "Dank u wel. Tot ziens!", "en": "Thank you. Goodbye!" }
+      ],
+      "items": [
+        { "type": "speak", "nl": "Ik heb een afspraak om half elf voor een nieuw paspoort.", "en": "I have an appointment at half past ten for a new passport." },
+        { "type": "speak", "nl": "Wanneer is mijn paspoort klaar?", "en": "When will my passport be ready?" },
+        {
+          "type": "prompt",
+          "task": "You bought a pair of shoes that are too small. Go back to the shop: say what you bought and when, what is wrong, and ask if you can exchange them or get your money back.",
+          "model": "Goedemiddag. Ik heb gisteren deze schoenen gekocht, maar ze zijn te klein. Kan ik ze ruilen? Of kan ik mijn geld terugkrijgen? Ik heb de bon bij me.",
+          "seconds": 40,
+          "points": ["What you bought and when", "What is wrong", "Ask to exchange or get your money back", "Say you have the receipt"]
+        },
+        {
+          "type": "prompt",
+          "task": "Your parcel was not delivered. Phone the customer service: say who you are, that nobody was at home, and ask for a new delivery.",
+          "model": "Goedemorgen, met Tom Jansen. Gisteren was er niemand thuis, maar ik heb geen briefje gekregen. Kunt u het pakket morgen opnieuw bezorgen? Ik ben dan na vier uur thuis.",
+          "seconds": 40,
+          "points": ["Say who you are", "Nobody was at home", "Ask for a new delivery", "Say when you are at home"]
+        }
+      ]
+    },
+    {
+      "id": "a2.t04.l7", "title": "A short complaint", "kind": "writing",
+      "explain": [
+        { "type": "p", "text": "A **complaint** (*klacht*) is short and polite. Say what you ordered and when, what is wrong, and what you want (*Ik wil mijn geld terug* or *Ik wil een nieuwe*). Use *u* and keep to the facts." },
+        { "type": "ex", "nl": "Ik heb op 3 oktober een jas besteld, maar ik heb hem nog niet gekregen.", "en": "I ordered a coat on 3 October, but I have not received it yet." },
+        { "type": "ex", "nl": "Wilt u mij mijn geld terugbetalen?", "en": "Will you please refund my money?" },
+        { "type": "tip", "text": "Useful phrases: *Helaas is …*, *Ik ben niet tevreden over …*, *Ik verwacht een reactie binnen een week.* Add the order number and your name." }
+      ],
+      "items": [
+        {
+          "type": "write",
+          "task": "You ordered a jacket online, but you received the wrong size. Write a short complaint to the customer service: say what you ordered and when, what is wrong, what you want and when you expect an answer.",
+          "points": ["What you ordered and when", "What is wrong (wrong size)", "What you want", "When you expect an answer"],
+          "minWords": 50, "maxWords": 90,
+          "model": "Geachte heer of mevrouw, op 3 oktober heb ik een jas besteld, maar ik heb de verkeerde maat gekregen. Ik had maat M besteld en ik heb maat S ontvangen. Wilt u mij de goede jas sturen? Ik wil de jas ook niet nog een keer betalen. Ik verwacht een reactie binnen een week. Met vriendelijke groet, Tom Jansen"
+        }
+      ],
+      "sources": [
+        { "title": "Oefenen.nl: free practice (account needed)", "url": "https://oefenen.nl/" }
+      ]
+    }
+  ]
+}

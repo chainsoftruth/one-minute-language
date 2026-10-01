@@ -10,10 +10,10 @@ fun normalize(s: String): String =
         .lowercase()
         .replace('’', '\'').replace('‘', '\'')
         .replace('“', '"').replace('”', '"')
+        .replace(Regex("[,;]"), " ")   // commas are not graded (A2 sentences with clauses would otherwise need two answers)
         .trim()
         .replace(Regex("\\s+"), " ")
         .replace(Regex("[.!?]+$"), "")
-        .replace(Regex("\\s+([,;])"), "$1")
         .trim()
 
 fun stripDiacritics(s: String): String =

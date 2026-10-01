@@ -1,0 +1,138 @@
+{
+  "id": "a2.t03", "level": "A2", "kind": "theme",
+  "title": "Travel & directions",
+  "subtitle": "Understand a travel disruption, ask the way, buy a ticket and book a hotel",
+  "lessons": [
+    {
+      "id": "a2.t03.l1", "title": "Public transport", "kind": "vocab",
+      "vocab": [
+        "spoor", "vertraging", "dienstregeling", "overstap", "aansluiting", "conducteur", "machinist", "enkele_reis", "retour", "abonnement",
+        "ov_chipkaart", "kaartautomaat", "openbaar_vervoer", "vertraagd", "instapkaart", "vlucht", "douane", "reiziger", "gesloten",
+        "geopend", "bezet", "volgende"
+      ]
+    },
+    {
+      "id": "a2.t03.l2", "title": "Directions and holidays", "kind": "vocab",
+      "vocab": [
+        "snelweg", "rotonde", "route", "afslag", "parkeerplaats", "parkeergarage", "tankstation", "rijbewijs", "fietspad", "voetganger",
+        "fietsenstalling", "overnachting", "reservering", "receptie", "camping", "tent", "bezienswaardigheid", "buitenland", "grens",
+        "souvenir", "gids", "toeristeninformatie", "rugzak", "onderweg"
+      ]
+    },
+    {
+      "id": "a2.t03.l3", "title": "Disruption on the railway", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "A disruption notice tells you what is wrong, how long it takes and what you can do instead. Find the delay, the alternative and where to get more information. Tap a word you don't know." }
+      ],
+      "text": "Storing op het spoor: let op uw reis! Tussen Utrecht en Amersfoort rijden er vandaag geen treinen. Er is een storing aan het spoor. Reizigers moeten rekenen op ongeveer dertig minuten vertraging. Er rijden meer bussen tussen de twee stations. De bussen vertrekken elke tien minuten bij de uitgang aan de voorkant van het station. Hebt u een abonnement? Dan kunt u gratis met de bus mee. Wilt u weten wanneer uw trein vertrekt? Kijk dan op de website of in de app. Ook bij de balie krijgt u hulp. Hebt u haast? Neem dan de bus. Die rijdt van het ene station naar het andere. Hebt u een afspraak? Bel dan en zeg dat u later komt. Hebt u hulp nodig met uw bagage? Vraag het dan bij de balie. Het spijt ons. Wij hopen dat u toch op tijd bent.",
+      "items": [
+        { "type": "choice", "q": "Wat is er vandaag aan de hand?", "options": ["Er rijden geen treinen tussen Utrecht en Amersfoort", "Alle bussen rijden niet", "Het station is dicht"], "answer": 0, "en": "What is going on today?" },
+        { "type": "choice", "q": "Hoeveel vertraging moeten reizigers verwachten?", "options": ["Ongeveer dertig minuten", "Tien minuten", "Een hele dag"], "answer": 0, "en": "How much delay should travellers expect?" },
+        { "type": "choice", "q": "Hoe vaak rijdt de bus?", "options": ["Elke tien minuten", "Elk uur", "Elke dag"], "answer": 0, "en": "How often does the bus run?" },
+        { "type": "choice", "q": "Waar vertrekt de bus?", "options": ["Bij de uitgang aan de voorkant van het station", "Op het perron", "Naast de fietsenstalling"], "answer": 0, "en": "Where does the bus leave from?" },
+        { "type": "choice", "q": "Wat kun je doen om te weten wanneer je trein vertrekt?", "options": ["Op de website of in de app kijken", "De machinist bellen", "Naar de bushalte lopen"], "answer": 0, "en": "What can you do to find out when your train leaves?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A2 menu (reading texts)", "url": "https://nt2taalmenu.nl/nt2-a2-menu/" }
+      ]
+    },
+    {
+      "id": "a2.t03.l4", "title": "A day out in Delft", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "A tourist leaflet gives times, prices and tips. Look for the numbers and for what is open or closed. Tap a word you don't know." }
+      ],
+      "text": "Welkom in Delft! Het is een mooie stad voor een dag uit. Vanaf het station loopt u in tien minuten naar het centrum. U kunt ook met de bus of de tram gaan. Een enkele reis kost twee euro vijftig en een dagkaart kost zes euro. Bij de toeristeninformatie op de markt krijgt u gratis een kaart van de stad. U kunt daar ook een gids reserveren voor een wandeling van twee uur. Wilt u liever fietsen? Huur dan een fiets bij de fietsenstalling naast het station. Let op: op zondag zijn veel winkels gesloten, maar de musea en de restaurants zijn open. De bezienswaardigheden zijn elke dag open van tien tot vijf uur. Wilt u een souvenir kopen? Dat kan in de winkel naast de toeristeninformatie. Veel plezier!",
+      "items": [
+        { "type": "choice", "q": "Hoe lang loop je van het station naar het centrum?", "options": ["Tien minuten", "Een uur", "Twee minuten"], "answer": 0, "en": "How long is the walk from the station to the centre?" },
+        { "type": "choice", "q": "Wat kost een enkele reis?", "options": ["Twee euro vijftig", "Zes euro", "Niets"], "answer": 0, "en": "What does a single trip cost?" },
+        { "type": "choice", "q": "Waar krijg je een gratis kaart van de stad?", "options": ["Bij de toeristeninformatie", "In de bus", "Bij de fietsenstalling"], "answer": 0, "en": "Where do you get a free map of the city?" },
+        { "type": "choice", "q": "Wat is er op zondag gesloten?", "options": ["Veel winkels", "De musea", "De restaurants"], "answer": 0, "en": "What is closed on Sundays?" },
+        { "type": "choice", "q": "Wanneer zijn de bezienswaardigheden open?", "options": ["Elke dag van tien tot vijf uur", "Alleen in het weekend", "Elke avond"], "answer": 0, "en": "When are the sights open?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A2 menu (reading texts)", "url": "https://nt2taalmenu.nl/nt2-a2-menu/" }
+      ]
+    },
+    {
+      "id": "a2.t03.l5", "title": "Asking the way", "kind": "listening",
+      "dialogue": [
+        { "who": "A", "nl": "Pardon, weet u waar het station is?", "en": "Excuse me, do you know where the station is?" },
+        { "who": "B", "nl": "Ja hoor. Loop hier rechtdoor tot het stoplicht.", "en": "Yes, sure. Walk straight on from here to the traffic light." },
+        { "who": "A", "nl": "En dan?", "en": "And then?" },
+        { "who": "B", "nl": "Bij het stoplicht gaat u linksaf. Dan ziet u een groot plein.", "en": "At the traffic light you turn left. Then you see a big square." },
+        { "who": "A", "nl": "Is het ver?", "en": "Is it far?" },
+        { "who": "B", "nl": "Nee, het is ongeveer tien minuten lopen. U kunt ook de bus nemen.", "en": "No, it is about ten minutes' walk. You can also take the bus." },
+        { "who": "A", "nl": "Waar is de bushalte?", "en": "Where is the bus stop?" },
+        { "who": "B", "nl": "Aan het einde van deze straat, naast de apotheek.", "en": "At the end of this street, next to the pharmacy." },
+        { "who": "A", "nl": "Hartelijk dank voor uw hulp.", "en": "Thank you very much for your help." },
+        { "who": "B", "nl": "Graag gedaan. Goede reis!", "en": "You're welcome. Have a good trip!" }
+      ],
+      "items": [
+        { "type": "listen", "nl": "Loop hier rechtdoor tot het stoplicht.", "q": "Where do you go first?", "options": ["Straight ahead to the traffic light", "Left at the bank", "Back to the square"], "answer": 0 },
+        { "type": "listen", "nl": "Bij het stoplicht gaat u linksaf.", "q": "What do you do at the traffic light?", "options": ["Turn left", "Turn right", "Go straight on"], "answer": 0 },
+        { "type": "listen", "nl": "Het is ongeveer tien minuten lopen.", "q": "How far is the station on foot?", "options": ["About ten minutes", "About an hour", "Two minutes"], "answer": 0 },
+        { "type": "listen", "nl": "Aan het einde van deze straat, naast de apotheek.", "q": "Where is the bus stop?", "options": ["At the end of the street, next to the pharmacy", "Behind the station", "Next to the square"], "answer": 0 },
+        { "type": "listen", "nl": "De trein naar Amsterdam vertrekt van spoor drie.", "q": "Station announcement: where does the train to Amsterdam leave from?", "options": ["Platform three", "Platform five", "Platform one"], "answer": 0 },
+        { "type": "listen", "nl": "De trein naar Rotterdam heeft tien minuten vertraging.", "q": "Station announcement: what is the problem?", "options": ["The train is ten minutes late", "The train is cancelled", "The train leaves early"], "answer": 0 },
+        { "type": "listen", "nl": "Goede reis!" }
+      ],
+      "sources": [
+        { "title": "Taalklas: free Dutch video course", "url": "https://www.taalklas.nl/" }
+      ]
+    },
+    {
+      "id": "a2.t03.l6", "title": "Say it yourself", "kind": "speaking",
+      "dialogue": [
+        { "who": "A", "nl": "Goedemiddag. Kan ik u helpen?", "en": "Good afternoon. Can I help you?" },
+        { "who": "B", "nl": "Goedemiddag. Ik wil graag een kaartje naar Rotterdam.", "en": "Good afternoon. I would like a ticket to Rotterdam." },
+        { "who": "A", "nl": "Enkele reis of retour?", "en": "Single or return?" },
+        { "who": "B", "nl": "Retour, alstublieft. Wat kost dat?", "en": "Return, please. How much is that?" },
+        { "who": "A", "nl": "Dat is vijftien euro twintig.", "en": "That is fifteen euros twenty." },
+        { "who": "B", "nl": "Hoe laat vertrekt de volgende trein?", "en": "What time does the next train leave?" },
+        { "who": "A", "nl": "Om tien over drie, van spoor vier.", "en": "At ten past three, from platform four." },
+        { "who": "B", "nl": "Moet ik overstappen?", "en": "Do I have to change?" },
+        { "who": "A", "nl": "Nee, u kunt blijven zitten.", "en": "No, you can stay seated." },
+        { "who": "B", "nl": "Dank u wel. Fijne dag!", "en": "Thank you. Have a nice day!" }
+      ],
+      "items": [
+        { "type": "speak", "nl": "Ik wil graag een kaartje naar Rotterdam.", "en": "I would like a ticket to Rotterdam." },
+        { "type": "speak", "nl": "Hoe laat vertrekt de volgende trein?", "en": "What time does the next train leave?" },
+        {
+          "type": "prompt",
+          "task": "Ask a stranger for directions to the station. Say excuse me, ask where it is, ask if it is far and thank them.",
+          "model": "Pardon, weet u waar het station is? Is het ver? Kan ik lopen? Dank u wel voor uw hulp.",
+          "seconds": 30,
+          "points": ["Say excuse me", "Ask where the station is", "Ask if it is far", "Say thank you"]
+        },
+        {
+          "type": "prompt",
+          "task": "Describe how you travel to work or school: which transport you use, how long it takes and what you think of it.",
+          "model": "Ik ga met de bus naar mijn werk. De reis duurt twintig minuten. Soms heeft de bus vertraging, maar meestal is het prima.",
+          "seconds": 30,
+          "points": ["Which transport", "How long it takes", "Your opinion"]
+        }
+      ]
+    },
+    {
+      "id": "a2.t03.l7", "title": "A hotel booking email", "kind": "writing",
+      "explain": [
+        { "type": "p", "text": "A booking email is formal and clear. Start with *Geachte heer/mevrouw,* when you do not know the name. Say what you want to book, for whom and **when** (arrival and departure). Then ask your questions with *Kunt u …?*, *Is …?* or *Heeft u …?* and finish with *Met vriendelijke groet,*." },
+        { "type": "ex", "nl": "Ik wil graag een kamer reserveren voor twee personen.", "en": "I would like to book a room for two people." },
+        { "type": "ex", "nl": "Heeft u ook een parkeerplaats?", "en": "Do you also have a parking space?" },
+        { "type": "tip", "text": "Dates: *op vrijdag 12 augustus* (arrival), *tot maandag 15 augustus* (until). Ask for a confirmation: *Wilt u mij een bevestiging sturen?*" }
+      ],
+      "items": [
+        {
+          "type": "write",
+          "task": "You want to spend a weekend in a hotel in Delft. Write an email to the hotel: say that you want to book a double room, give the dates, ask the price and whether breakfast is included, ask if there is parking and ask for a confirmation.",
+          "points": ["Book a room for two", "The dates", "Price and breakfast", "Parking and a confirmation"],
+          "minWords": 50, "maxWords": 90,
+          "model": "Geachte heer of mevrouw, ik wil graag een kamer reserveren voor twee personen. Wij komen op vrijdag 12 augustus en gaan op maandag 15 augustus weer weg. Wat kost de kamer per nacht? Is het ontbijt erbij? Heeft u ook een parkeerplaats? Wilt u mij een bevestiging sturen? Alvast hartelijk dank. Met vriendelijke groet, Jan de Boer"
+        }
+      ],
+      "sources": [
+        { "title": "Oefenen.nl: free practice (account needed)", "url": "https://oefenen.nl/" }
+      ]
+    }
+  ]
+}

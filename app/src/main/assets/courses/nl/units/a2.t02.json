@@ -1,0 +1,138 @@
+{
+  "id": "a2.t02", "level": "A2", "kind": "theme",
+  "title": "Health & body",
+  "subtitle": "Make a GP appointment, understand a medicine leaflet, describe symptoms and report in sick",
+  "lessons": [
+    {
+      "id": "a2.t02.l1", "title": "At the doctor's", "kind": "vocab",
+      "vocab": [
+        "huisartsenpost", "doktersassistente", "spreekuur", "wachtkamer", "apotheker", "specialist", "verpleegster", "pil", "tablet",
+        "zalf", "verband", "thermometer", "hoest", "keelpijn", "rugpijn", "tandpijn", "allergie", "infectie", "wond", "operatie",
+        "bloeddruk", "spoedeisende_hulp", "zorgverzekering", "verzekering"
+      ]
+    },
+    {
+      "id": "a2.t02.l2", "title": "Feeling ill", "kind": "vocab",
+      "vocab": [
+        "misselijk", "duizelig", "verkouden", "pijnlijk", "besmettelijk", "ernstig", "gebroken", "zwanger", "slap", "fit", "niezen",
+        "jeuken", "ademhalen", "flauwvallen", "innemen", "slikken", "onderzoeken", "behandelen", "beterschap", "zich_ziek_melden",
+        "zich_voelen", "gewicht"
+      ]
+    },
+    {
+      "id": "a2.t02.l3", "title": "A letter from the GP practice", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "A practice letter explains the rules: when you can call, who you talk to first, and what to do in an emergency. Find the times and the telephone numbers. Tap a word you don't know." }
+      ],
+      "text": "Huisartsenpraktijk De Linde: belangrijke informatie. Onze praktijk is open van maandag tot en met vrijdag, van acht tot half zes. Wilt u een afspraak maken? Bel dan tussen acht en tien uur in de ochtend. Een doktersassistente vraagt wat er is en kijkt dan wanneer u kunt komen. Hebt u veel pijn of een ernstig probleem? Dan kunt u vandaag nog komen. Een afspraak duurt tien minuten, dus praat over één klacht per afspraak. Kunt u niet komen? Zeg uw afspraak dan op tijd af. In de avond, in de nacht en in het weekend belt u met de huisartsenpost. Gaat het om een ongeluk of is het heel erg? Bel dan meteen 112. Neem uw zorgverzekering en een legitimatie mee naar de praktijk. Wij wensen u beterschap!",
+      "items": [
+        { "type": "choice", "q": "Wanneer kun je bellen voor een afspraak?", "options": ["Tussen acht en tien uur in de ochtend", "Na zes uur 's avonds", "Alleen op vrijdag"], "answer": 0, "en": "When can you call for an appointment?" },
+        { "type": "choice", "q": "Wie vraagt eerst wat er is?", "options": ["De doktersassistente", "De huisarts", "De apotheker"], "answer": 0, "en": "Who asks first what is wrong?" },
+        { "type": "choice", "q": "Hoe lang duurt een afspraak?", "options": ["Tien minuten", "Een uur", "Twintig minuten"], "answer": 0, "en": "How long does an appointment last?" },
+        { "type": "choice", "q": "Wat doe je 's nachts met een probleem?", "options": ["Je belt de huisartsenpost", "Je wacht tot de ochtend", "Je gaat naar de apotheek"], "answer": 0, "en": "What do you do at night with a problem?" },
+        { "type": "choice", "q": "Wat neem je mee naar de praktijk?", "options": ["Je zorgverzekering en een legitimatie", "Alleen geld", "Een recept"], "answer": 0, "en": "What do you take to the practice?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A2 menu (reading texts)", "url": "https://nt2taalmenu.nl/nt2-a2-menu/" }
+      ]
+    },
+    {
+      "id": "a2.t02.l4", "title": "Information with your medicine", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "A medicine leaflet uses commands (*Neem …, Slik …*) and conditions (*Hebt u …? Dan …*). Look for how often, when, and when you must call a doctor." }
+      ],
+      "text": "Informatie bij uw medicijn. Neem drie keer per dag één tablet, na het eten. Slik de tablet door met een glas water. Gebruik dit medicijn niet langer dan een week. Vergeet u een tablet? Neem dan niet twee tabletten tegelijk. Hebt u na drie dagen nog koorts of hoest? Bel dan uw huisarts. Bent u allergisch voor een medicijn? Zeg dat dan altijd tegen de apotheker. Gebruikt u nog andere medicijnen, of bent u zwanger? Vraag dan eerst advies aan uw huisarts. Bewaar de tabletten op een koele plaats, ver weg van kinderen. Voelt u zich duizelig of misselijk? Rijd dan niet met de auto en blijf rustig zitten. Hebt u vragen over uw medicijn? U kunt de apotheek altijd bellen. Wij wensen u snel beterschap!",
+      "items": [
+        { "type": "choice", "q": "Hoeveel tabletten neem je per dag?", "options": ["Drie", "Eén", "Zes"], "answer": 0, "en": "How many tablets do you take per day?" },
+        { "type": "choice", "q": "Wanneer neem je een tablet?", "options": ["Na het eten", "Voor het slapen", "In de ochtend"], "answer": 0, "en": "When do you take a tablet?" },
+        { "type": "choice", "q": "Wat doe je bij koorts na drie dagen?", "options": ["Je belt de huisarts", "Je neemt meer tabletten", "Je wacht een week"], "answer": 0, "en": "What do you do if you still have a fever after three days?" },
+        { "type": "choice", "q": "Wat moet je niet doen als je duizelig bent?", "options": ["Met de auto rijden", "Water drinken", "Rustig zitten"], "answer": 0, "en": "What must you not do if you feel dizzy?" },
+        { "type": "choice", "q": "Waar bewaar je de tabletten?", "options": ["Op een koele plaats, ver weg van kinderen", "In de keuken naast de magnetron", "In de auto"], "answer": 0, "en": "Where do you keep the tablets?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A2 menu (reading texts)", "url": "https://nt2taalmenu.nl/nt2-a2-menu/" }
+      ]
+    },
+    {
+      "id": "a2.t02.l5", "title": "An appointment with the GP", "kind": "listening",
+      "dialogue": [
+        { "who": "A", "nl": "Huisartsenpraktijk De Linde, goedemorgen.", "en": "De Linde GP practice, good morning." },
+        { "who": "B", "nl": "Goedemorgen, met Tom Jansen. Ik wil graag een afspraak maken.", "en": "Good morning, this is Tom Jansen. I would like to make an appointment." },
+        { "who": "A", "nl": "Wat is het probleem?", "en": "What is the problem?" },
+        { "who": "B", "nl": "Ik heb al vijf dagen hoofdpijn en ik heb koorts. Ik ben ook erg moe.", "en": "I have had a headache for five days and I have a fever. I am also very tired." },
+        { "who": "A", "nl": "Hebt u ook last van een hoest of keelpijn?", "en": "Do you also have a cough or a sore throat?" },
+        { "who": "B", "nl": "Ja, ik hoest veel en mijn keel doet pijn.", "en": "Yes, I cough a lot and my throat hurts." },
+        { "who": "A", "nl": "Dat klinkt als griep. Kunt u vanmiddag om twee uur komen?", "en": "That sounds like the flu. Can you come this afternoon at two?" },
+        { "who": "B", "nl": "Ja, dat kan. Moet ik iets meenemen?", "en": "Yes, that's fine. Do I need to bring anything?" },
+        { "who": "A", "nl": "Uw zorgverzekering en uw legitimatie, alstublieft.", "en": "Your health insurance and your ID, please." },
+        { "who": "B", "nl": "Dank u wel. Tot vanmiddag!", "en": "Thank you. See you this afternoon!" }
+      ],
+      "items": [
+        { "type": "listen", "nl": "Ik heb al vijf dagen hoofdpijn.", "q": "How long has he had a headache?", "options": ["Five days", "Two days", "A week"], "answer": 0 },
+        { "type": "listen", "nl": "Hebt u ook last van een hoest of keelpijn?", "q": "What does the assistant ask about?", "options": ["A cough or a sore throat", "A fever", "His work"], "answer": 0 },
+        { "type": "listen", "nl": "Kunt u vanmiddag om twee uur komen?", "q": "When is the appointment?", "options": ["This afternoon at two", "Tomorrow at two", "This morning at ten"], "answer": 0 },
+        { "type": "listen", "nl": "Uw zorgverzekering en uw legitimatie, alstublieft.", "q": "What must he bring?", "options": ["His health insurance and ID", "His medicine", "A letter from work"], "answer": 0 },
+        { "type": "listen", "nl": "Ik wil graag een afspraak maken." },
+        { "type": "choice", "q": "Welke klachten heeft Tom?", "options": ["Hoofdpijn, koorts, hoest en keelpijn", "Rugpijn en tandpijn", "Alleen een verkoudheid"], "answer": 0, "en": "What are Tom's symptoms?" },
+        { "type": "choice", "q": "Wat denkt de assistente?", "options": ["Dat het griep is", "Dat hij een gebroken been heeft", "Dat hij niets heeft"], "answer": 0, "en": "What does the assistant think?" }
+      ],
+      "sources": [
+        { "title": "Taalklas: free Dutch video course", "url": "https://www.taalklas.nl/" }
+      ]
+    },
+    {
+      "id": "a2.t02.l6", "title": "Say it yourself", "kind": "speaking",
+      "dialogue": [
+        { "who": "A", "nl": "Goedemiddag. Kan ik u helpen?", "en": "Good afternoon. Can I help you?" },
+        { "who": "B", "nl": "Goedemiddag. Ik heb last van keelpijn en hoest. Hebt u iets voor mij?", "en": "Good afternoon. I have a sore throat and a cough. Do you have something for me?" },
+        { "who": "A", "nl": "Hebt u ook koorts?", "en": "Do you also have a fever?" },
+        { "who": "B", "nl": "Nee, geen koorts, maar ik ben wel erg moe.", "en": "No, no fever, but I am very tired." },
+        { "who": "A", "nl": "Dan geef ik u deze tabletten. Neem er drie per dag.", "en": "Then I'll give you these tablets. Take three a day." },
+        { "who": "B", "nl": "Moet ik ze voor of na het eten nemen?", "en": "Do I take them before or after eating?" },
+        { "who": "A", "nl": "Na het eten. En drink veel water.", "en": "After eating. And drink a lot of water." },
+        { "who": "B", "nl": "Hoeveel kost het?", "en": "How much does it cost?" },
+        { "who": "A", "nl": "Dat is zeven euro vijftig.", "en": "That is seven euros fifty." },
+        { "who": "B", "nl": "Dank u wel. Tot ziens!", "en": "Thank you. Goodbye!" }
+      ],
+      "items": [
+        { "type": "speak", "nl": "Ik heb last van keelpijn en hoest.", "en": "I have a sore throat and a cough." },
+        { "type": "speak", "nl": "Moet ik ze voor of na het eten nemen?", "en": "Do I take them before or after eating?" },
+        {
+          "type": "prompt",
+          "task": "Describe how you feel when you are ill: what hurts, since when, and what you do about it.",
+          "model": "Ik heb hoofdpijn en ik ben misselijk. Het begon gisteren. Ik heb ook een beetje koorts. Ik blijf vandaag in bed en ik drink veel thee.",
+          "seconds": 30,
+          "points": ["What hurts", "Since when", "What you do about it"]
+        },
+        {
+          "type": "prompt",
+          "task": "Phone the GP practice: say who you are, what is wrong, since when, and when you can come.",
+          "model": "Goedemorgen, met Anna Smit. Ik heb al twee dagen rugpijn. Kan ik vandaag nog komen? Ik ben vrij na twee uur.",
+          "seconds": 30,
+          "points": ["Say who you are", "What is wrong", "Since when", "When you can come"]
+        }
+      ]
+    },
+    {
+      "id": "a2.t02.l7", "title": "A message to your manager", "kind": "writing",
+      "explain": [
+        { "type": "p", "text": "When you are ill, tell your manager **early** and **briefly**. Say that you are ill (*Ik ben ziek*), what is wrong, what you will do (*Ik ga naar de huisarts*), and when you will let them know more. A message to a manager you know can be friendly: *Hoi Marieke,* and *Groeten,*." },
+        { "type": "ex", "nl": "Ik ben vandaag ziek en ik blijf thuis.", "en": "I am ill today and I am staying at home." },
+        { "type": "ex", "nl": "Ik bel je morgen weer.", "en": "I'll call you again tomorrow." },
+        { "type": "tip", "text": "Use **ziek zijn** or **me ziek melden**: *Ik meld me ziek.* Give the reason in one short sentence and do not apologise too much." }
+      ],
+      "items": [
+        {
+          "type": "write",
+          "task": "You have a fever and a headache. Write a short message to your manager, Marieke: say you are ill, say what is wrong, say that you are going to the doctor, and ask her to tell a colleague that your afternoon meeting is cancelled.",
+          "points": ["You are ill", "What is wrong", "You are going to the doctor", "Ask her to cancel the meeting"],
+          "minWords": 40, "maxWords": 80,
+          "model": "Hoi Marieke, ik ben vandaag ziek. Ik heb koorts en hoofdpijn en ik blijf thuis. Ik ga morgen naar de huisarts. Kun je mijn afspraak van twee uur afzeggen? Ik bel je morgen weer en laat weten wanneer ik terugkom. Groeten, Tom"
+        }
+      ],
+      "sources": [
+        { "title": "Oefenen.nl: free practice (account needed)", "url": "https://oefenen.nl/" }
+      ]
+    }
+  ]
+}

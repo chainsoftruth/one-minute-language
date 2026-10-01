@@ -1,0 +1,108 @@
+{
+  "id": "a2.g05", "level": "A2", "kind": "grammar",
+  "title": "Comparison",
+  "subtitle": "groter dan, even groot als, het grootst",
+  "lessons": [
+    {
+      "id": "a2.g05.l1", "title": "Comparative: groter dan", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "To compare two things add **-er** to the adjective and use **dan**: *Mijn huis is groter dan jouw huis.* The spelling rules are the same as for the plural: *groot → groter* (a long vowel keeps one letter), *dik → dikker* (a short vowel doubles the consonant)." },
+        { "type": "p", "text": "If the adjective ends in **-r**, add **-der**: *duur → duurder*, *lekker → lekkerder*, *ver → verder*. Four common ones are irregular." },
+        { "type": "table", "head": ["adjective", "comparative", "adjective", "comparative"], "rows": [["groot", "groter", "duur", "duurder"], ["klein", "kleiner", "lekker", "lekkerder"], ["oud", "ouder", "mooi", "mooier"], ["snel", "sneller", "leuk", "leuker"], ["goed", "beter", "veel", "meer"], ["weinig", "minder", "graag", "liever"]] },
+        { "type": "ex", "nl": "De trein is sneller dan de bus.", "en": "The train is faster than the bus." },
+        { "type": "ex", "nl": "Ik drink liever thee dan koffie.", "en": "I would rather drink tea than coffee." }
+      ],
+      "items": [
+        { "type": "choice", "q": "groot → ___", "options": ["groter", "grootter", "grotter"], "answer": 0, "explain": "A long vowel keeps one letter in the open syllable: groter." },
+        { "type": "choice", "q": "duur → ___", "options": ["duurder", "duurer", "duurter"], "answer": 0, "explain": "After -r the comparative ends in -der." },
+        { "type": "choice", "q": "mooi → ___", "options": ["mooier", "mooijer", "mooiër"], "answer": 0 },
+        { "type": "choice", "q": "goed → ___", "options": ["beter", "gooder", "better"], "answer": 0 },
+        { "type": "gap", "text": "Mijn huis is ___ dan jouw huis. (groot)", "answers": ["groter"], "en": "My house is bigger than your house." },
+        { "type": "gap", "text": "Deze jas is ___ dan die jas. (duur)", "answers": ["duurder"], "en": "This coat is more expensive than that coat." },
+        { "type": "gap", "text": "Dit boek is ___ dan dat boek. (leuk)", "answers": ["leuker"], "en": "This book is nicer than that book." },
+        { "type": "gap", "text": "Ik vind koffie ___ dan thee. (lekker)", "answers": ["lekkerder"], "en": "I think coffee is tastier than tea." },
+        { "type": "gap", "text": "Hij is ___ dan zijn broer. (oud)", "answers": ["ouder"], "en": "He is older than his brother." },
+        { "type": "gap", "text": "Zij spreekt ___ Nederlands dan ik. (goed)", "answers": ["beter"], "en": "She speaks Dutch better than I do." },
+        { "type": "gap", "text": "Ik heb ___ tijd dan jij. (weinig)", "answers": ["minder"], "en": "I have less time than you." },
+        { "type": "gap", "text": "Wij hebben ___ werk dan vorig jaar. (veel)", "answers": ["meer"], "en": "We have more work than last year." },
+        { "type": "gap", "text": "Ik drink ___ thee dan koffie. (graag)", "answers": ["liever"], "en": "I would rather drink tea than coffee." },
+        { "type": "transform", "q": "Mijn fiets is oud.", "instruction": "Compare with: jouw fiets", "answers": ["Mijn fiets is ouder dan jouw fiets"] },
+        { "type": "transform", "q": "Het appartement is klein.", "instruction": "Compare with: het huis", "answers": ["Het appartement is kleiner dan het huis"] },
+        { "type": "transform", "q": "De trein is snel.", "instruction": "Compare with: de bus", "answers": ["De trein is sneller dan de bus"] },
+        { "type": "order", "answer": "Mijn broer is groter dan ik.", "en": "My brother is taller than I am." },
+        { "type": "order", "answer": "Deze jas is duurder dan die jas.", "en": "This coat is more expensive than that coat." },
+        { "type": "order", "answer": "Zij spreekt beter Nederlands dan ik.", "en": "She speaks Dutch better than I do." },
+        { "type": "translate", "en": "The train is faster than the bus.", "answers": ["De trein is sneller dan de bus"] },
+        { "type": "translate", "en": "I would rather drink tea than coffee.", "answers": ["Ik drink liever thee dan koffie"] },
+        { "type": "match", "pairs": [["groot", "groter"], ["duur", "duurder"], ["goed", "beter"], ["graag", "liever"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: trappen van vergelijking (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menutrappenvanvergelijking/" }
+      ]
+    },
+    {
+      "id": "a2.g05.l2", "title": "Superlative and equality", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "The **superlative** adds **-st** (or **-ste** before a noun): *Dit is het grootste huis van de straat.* *Zij is de beste leraar.* Without a noun use **het + -st**: *Wie is het snelst?* The irregular ones: **goed – beter – best**, **veel – meer – meest**, **weinig – minder – minst**, **graag – liever – liefst**." },
+        { "type": "p", "text": "Adjectives ending in **-isch, -ief** and some long adjectives use **meer** and **meest**: *Dit antwoord is het meest logisch.*" },
+        { "type": "table", "head": ["", "form", "example"], "rows": [["different", "-er + dan", "Amsterdam is groter dan Utrecht."], ["equal", "even / net zo / zo + als", "Zij is even oud als ik."], ["not equal", "niet zo + als", "Mijn auto is niet zo groot als jouw auto."], ["highest", "-ste / het -st", "Dit is de goedkoopste winkel."]] },
+        { "type": "ex", "nl": "Zij is net zo oud als ik.", "en": "She is just as old as I am." },
+        { "type": "ex", "nl": "Dit is de goedkoopste winkel van de stad.", "en": "This is the cheapest shop in the city." },
+        { "type": "tip", "text": "Use **dan** when things are different (*groter dan*). Use **als** when things are equal (*even groot als*). Mixing them up is a very common mistake." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Dit is de ___ fiets. (mooi)", "options": ["mooiste", "mooist", "mooier"], "answer": 0 },
+        { "type": "choice", "q": "Amsterdam is groter ___ Utrecht.", "options": ["dan", "als", "van"], "answer": 0 },
+        { "type": "choice", "q": "Zij is even oud ___ ik.", "options": ["als", "dan", "van"], "answer": 0 },
+        { "type": "gap", "text": "Dit is het ___ huis van de straat. (groot)", "answers": ["grootste"], "en": "This is the biggest house in the street." },
+        { "type": "gap", "text": "Dit is de ___ winkel. (goedkoop)", "answers": ["goedkoopste"], "en": "This is the cheapest shop." },
+        { "type": "gap", "text": "Hij is de ___ leraar van de school. (goed)", "answers": ["beste"], "en": "He is the best teacher at the school." },
+        { "type": "gap", "text": "Wie is het ___? (snel)", "answers": ["snelst", "snelste"], "en": "Who is the fastest?" },
+        { "type": "gap", "text": "Zij is ___ oud als ik. (even)", "answers": ["even", "net zo", "zo"], "en": "She is as old as I am." },
+        { "type": "gap", "text": "Mijn auto is niet zo groot ___ jouw auto.", "answers": ["als"], "en": "My car is not as big as your car." },
+        { "type": "gap", "text": "Dit antwoord is het ___ logisch. (meest)", "answers": ["meest"], "en": "This answer is the most logical." },
+        { "type": "transform", "q": "Anna is twintig. Piet is twintig.", "instruction": "Say they are equally old: Anna is ... als Piet", "answers": ["Anna is even oud als Piet", "Anna is net zo oud als Piet", "Anna is zo oud als Piet"] },
+        { "type": "transform", "q": "Mijn tas is zwaar. Jouw tas is nog zwaarder.", "instruction": "Say: Mijn tas is niet ... als jouw tas", "answers": ["Mijn tas is niet zo zwaar als jouw tas"] },
+        { "type": "order", "answer": "Dit is het grootste huis van de straat.", "en": "This is the biggest house in the street." },
+        { "type": "order", "answer": "Zij is net zo oud als ik.", "en": "She is just as old as I am." },
+        { "type": "order", "answer": "Hij is de beste leraar van de school.", "en": "He is the best teacher at the school." },
+        { "type": "translate", "en": "This is the cheapest shop.", "answers": ["Dit is de goedkoopste winkel"] },
+        { "type": "translate", "en": "She is as tall as her brother.", "answers": ["Zij is even lang als haar broer", "Zij is net zo lang als haar broer", "Zij is zo lang als haar broer", "Ze is even lang als haar broer", "Ze is net zo lang als haar broer", "Ze is zo lang als haar broer"] },
+        { "type": "translate", "en": "Utrecht is smaller than Amsterdam.", "answers": ["Utrecht is kleiner dan Amsterdam"] },
+        { "type": "match", "pairs": [["de beste", "the best"], ["het meest", "the most"], ["minder", "less"], ["liever", "rather"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: trappen van vergelijking (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menutrappenvanvergelijking/" },
+        { "title": "Taaladvies.net: als of dan", "url": "https://taaladvies.net/" }
+      ]
+    },
+    {
+      "id": "a2.g05.l3", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Deze tas is ___ dan die tas. (zwaar)", "options": ["zwaarder", "zwaarer", "zwaarst"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik ben ouder dan jij.", "Ik ben ouder als jij.", "Ik ben oud dan jij."], "answer": 0 },
+        { "type": "choice", "q": "Dit is de ___ stad van Nederland. (groot)", "options": ["grootste", "grootst", "groter"], "answer": 0 },
+        { "type": "choice", "q": "Mijn zus is ___ lang als mijn broer. (the same height)", "options": ["even", "dan", "meer"], "answer": 0 },
+        { "type": "gap", "text": "Vandaag is het ___ dan gisteren. (warm)", "answers": ["warmer"], "en": "Today it is warmer than yesterday." },
+        { "type": "gap", "text": "De les van vandaag was ___ dan de les van gisteren. (moeilijk)", "answers": ["moeilijker"], "en": "Today's lesson was harder than yesterday's." },
+        { "type": "gap", "text": "Het hotel is ___ dan het hostel. (duur)", "answers": ["duurder"], "en": "The hotel is more expensive than the hostel." },
+        { "type": "gap", "text": "Wat is het ___ boek dat je gelezen hebt? (leuk)", "answers": ["leukste"], "en": "What is the nicest book you have read?" },
+        { "type": "gap", "text": "Zij werkt ___ dan ik. (veel)", "answers": ["meer"], "en": "She works more than I do." },
+        { "type": "gap", "text": "Ik eet ___ vis dan vlees. (graag)", "answers": ["liever"], "en": "I would rather eat fish than meat." },
+        { "type": "gap", "text": "Hij is het ___ van de klas. (oud)", "answers": ["oudst", "oudste"], "en": "He is the oldest in the class." },
+        { "type": "gap", "text": "Het eten hier is niet zo lekker ___ thuis. (als)", "answers": ["als"], "en": "The food here is not as tasty as at home." },
+        { "type": "transform", "q": "Het is koud.", "instruction": "Compare with: gisteren (add dan)", "answers": ["Het is kouder dan gisteren"] },
+        { "type": "transform", "q": "De fiets is goedkoop.", "instruction": "Compare with: de auto", "answers": ["De fiets is goedkoper dan de auto"] },
+        { "type": "order", "answer": "Het is vandaag warmer dan gisteren.", "alt": ["Vandaag is het warmer dan gisteren."], "en": "It is warmer today than yesterday." },
+        { "type": "order", "answer": "Zij werkt meer dan ik.", "en": "She works more than I do." },
+        { "type": "order", "answer": "Dit is de mooiste stad van Nederland.", "en": "This is the most beautiful city in the Netherlands." },
+        { "type": "translate", "en": "My brother is older than me.", "answers": ["Mijn broer is ouder dan ik", "Mijn broer is ouder dan mij"] },
+        { "type": "translate", "en": "This is the best restaurant in the city.", "answers": ["Dit is het beste restaurant van de stad", "Dit is het beste restaurant in de stad"] },
+        { "type": "translate", "en": "The bus is not as fast as the train.", "answers": ["De bus is niet zo snel als de trein"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: trappen van vergelijking (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menutrappenvanvergelijking/" }
+      ]
+    }
+  ]
+}

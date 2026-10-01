@@ -1,0 +1,101 @@
+{
+  "id": "a2.g06", "level": "A2", "kind": "grammar",
+  "title": "Coordinating conjunctions",
+  "subtitle": "en, maar, of, want, dus: join two sentences without changing the word order",
+  "lessons": [
+    {
+      "id": "a2.g06.l1", "title": "en, maar, of", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Five little words join two **main clauses**: **en** (and), **maar** (but), **of** (or), **want** (because) and **dus** (so). They do **not** change the word order. Each clause keeps its normal order, with the verb in second place: *Ik werk, maar jij speelt.*" },
+        { "type": "table", "head": ["word", "meaning", "example"], "rows": [["en", "and", "Ik drink koffie en jij drinkt thee."], ["maar", "but", "Ik wil komen, maar ik heb geen tijd."], ["of", "or", "Wil je thee of wil je koffie?"], ["want", "because", "Ik blijf thuis, want ik ben ziek."], ["dus", "so", "Het regent, dus ik neem een paraplu mee."]] },
+        { "type": "ex", "nl": "Ik wil komen, maar ik heb geen tijd.", "en": "I want to come, but I have no time." },
+        { "type": "ex", "nl": "Zij heeft een hond en hij heeft een kat.", "en": "She has a dog and he has a cat." },
+        { "type": "tip", "text": "Put a **comma** before **maar**, **want** and **dus**. Before **en** and **of** a comma is usually not needed." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik hou van koffie, ___ ik hou niet van thee.", "options": ["maar", "en", "of"], "answer": 0 },
+        { "type": "choice", "q": "Wil je thee ___ koffie?", "options": ["of", "en", "maar"], "answer": 0 },
+        { "type": "choice", "q": "Zij heeft een hond ___ een kat.", "options": ["en", "maar", "of"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik werk, maar jij speelt.", "Ik werk, maar speelt jij.", "Ik werk, jij maar speelt."], "answer": 0, "explain": "After maar the word order stays normal." },
+        { "type": "gap", "text": "Ik werk, ___ jij speelt. (but)", "answers": ["maar"], "en": "I am working, but you are playing." },
+        { "type": "gap", "text": "Gaan we met de bus ___ met de trein? (or)", "answers": ["of"], "en": "Shall we take the bus or the train?" },
+        { "type": "gap", "text": "Hij woont in Utrecht ___ werkt in Amsterdam. (and)", "answers": ["en"], "en": "He lives in Utrecht and works in Amsterdam." },
+        { "type": "gap", "text": "Ik wil komen, ___ ik heb geen tijd. (but)", "answers": ["maar"], "en": "I want to come, but I have no time." },
+        { "type": "gap", "text": "Wij blijven thuis, ___ het is koud. (because)", "answers": ["want"], "en": "We are staying at home, because it is cold." },
+        { "type": "transform", "q": "Ik drink koffie. Jij drinkt thee.", "instruction": "Join with en", "answers": ["Ik drink koffie en jij drinkt thee"] },
+        { "type": "transform", "q": "Ik wil komen. Ik heb geen tijd.", "instruction": "Join with maar", "answers": ["Ik wil komen, maar ik heb geen tijd"] },
+        { "type": "transform", "q": "Wij blijven thuis. Het is koud.", "instruction": "Join with want", "answers": ["Wij blijven thuis, want het is koud", "We blijven thuis, want het is koud"] },
+        { "type": "order", "answer": "Ik wil komen, maar ik heb geen tijd.", "en": "I want to come, but I have no time." },
+        { "type": "order", "answer": "Wij drinken koffie en zij drinkt thee.", "en": "We drink coffee and she drinks tea." },
+        { "type": "order", "answer": "Gaan we met de bus of met de trein?", "en": "Shall we take the bus or the train?" },
+        { "type": "translate", "en": "I like coffee, but I don't like tea.", "answers": ["Ik hou van koffie, maar ik hou niet van thee", "Ik houd van koffie, maar ik houd niet van thee", "Ik vind koffie lekker, maar ik vind thee niet lekker"] },
+        { "type": "translate", "en": "Do you want tea or coffee?", "answers": ["Wil je thee of koffie", "Wil jij thee of koffie", "Wilt u thee of koffie"] },
+        { "type": "match", "pairs": [["en", "and"], ["maar", "but"], ["of", "or"], ["want", "because"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: voegwoorden (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuvoegwoorden/" },
+        { "title": "NT2 TaalMenu: zinnen met maar (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuzinnenmetmaar/" }
+      ]
+    },
+    {
+      "id": "a2.g06.l2", "title": "dus, and want or omdat?", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "**Dus** (so) can be followed by normal order or by inversion. Both are correct: *Ik ben ziek, dus ik blijf thuis.* or *Ik ben ziek, dus blijf ik thuis.*" },
+        { "type": "p", "text": "**Want** and **omdat** both mean *because*, but they work differently. **Want** is a coordinating word: the word order stays normal. **Omdat** sends the verb to the **end** of its clause. Compare:" },
+        { "type": "table", "head": ["want (normal order)", "omdat (verb at the end)"], "rows": [["Ik blijf thuis, want ik ben ziek.", "Ik blijf thuis, omdat ik ziek ben."], ["Hij is moe, want hij heeft slecht geslapen.", "Hij is moe, omdat hij slecht heeft geslapen."]] },
+        { "type": "ex", "nl": "Het regent, dus ik neem een paraplu mee.", "en": "It is raining, so I am taking an umbrella." },
+        { "type": "ex", "nl": "Ik ben moe, dus ga ik naar bed.", "en": "I am tired, so I am going to bed." },
+        { "type": "tip", "text": "Never write *want ik ziek ben* or *omdat ik ben ziek*. That is the most common mistake with these words. You will practise *omdat* and the other subordinating words in the next unit." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik blijf thuis, want ik ben ziek.", "Ik blijf thuis, want ik ziek ben.", "Ik blijf thuis, omdat ik ben ziek."], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik blijf thuis, omdat ik ziek ben.", "Ik blijf thuis, omdat ik ben ziek.", "Ik blijf thuis, omdat ben ik ziek."], "answer": 0 },
+        { "type": "choice", "q": "Het regent, ___ ik neem een paraplu mee. (so)", "options": ["dus", "want", "maar"], "answer": 0 },
+        { "type": "gap", "text": "Het regent, ___ ik blijf thuis. (so)", "answers": ["dus"], "en": "It is raining, so I am staying at home." },
+        { "type": "gap", "text": "Ik ben moe, dus ___ ik naar bed. (gaan)", "answers": ["ga"], "en": "I am tired, so I am going to bed.", "explain": "With inversion the verb comes before ik." },
+        { "type": "gap", "text": "Ik blijf thuis, want ik ___ ziek. (zijn)", "answers": ["ben"], "en": "I am staying at home, because I am ill." },
+        { "type": "gap", "text": "Ik blijf thuis, omdat ik ziek ___. (zijn)", "answers": ["ben"], "en": "I am staying at home, because I am ill.", "explain": "After omdat the verb goes to the end." },
+        { "type": "transform", "q": "Ik ben moe. Ik ga naar bed.", "instruction": "Join with dus (keep the word order)", "answers": ["Ik ben moe, dus ik ga naar bed"] },
+        { "type": "transform", "q": "Ik ben moe. Ik ga naar bed.", "instruction": "Join with dus (use inversion)", "answers": ["Ik ben moe, dus ga ik naar bed"] },
+        { "type": "transform", "q": "Ik blijf thuis. Ik ben ziek.", "instruction": "Say why with want", "answers": ["Ik blijf thuis, want ik ben ziek"] },
+        { "type": "order", "answer": "Ik blijf thuis, want ik ben ziek.", "en": "I am staying at home, because I am ill." },
+        { "type": "order", "answer": "Het regent, dus ik neem een paraplu mee.", "alt": ["Het regent, dus neem ik een paraplu mee."], "en": "It is raining, so I take an umbrella." },
+        { "type": "order", "answer": "Hij is moe, want hij heeft slecht geslapen.", "en": "He is tired, because he slept badly." },
+        { "type": "translate", "en": "I am staying at home, because I am ill.", "answers": ["Ik blijf thuis, want ik ben ziek", "Ik blijf thuis, omdat ik ziek ben"] },
+        { "type": "translate", "en": "It is raining, so I am taking an umbrella.", "answers": ["Het regent, dus ik neem een paraplu mee", "Het regent, dus neem ik een paraplu mee"] },
+        { "type": "match", "pairs": [["want", "because (normal order)"], ["omdat", "because (verb at the end)"], ["dus", "so"], ["maar", "but"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: zinnen met omdat (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuzinnenmetomdat/" },
+        { "title": "NT2 TaalMenu: voegwoorden (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuvoegwoorden/" }
+      ]
+    },
+    {
+      "id": "a2.g06.l3", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Ik wil naar het strand, ___ het regent.", "options": ["maar", "en", "dus"], "answer": 0 },
+        { "type": "choice", "q": "Wij zijn moe, ___ wij gaan naar huis.", "options": ["dus", "want", "of"], "answer": 0 },
+        { "type": "choice", "q": "Ik neem een jas mee, ___ het is koud.", "options": ["want", "dus", "maar"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Hij blijft thuis, want hij is ziek.", "Hij blijft thuis, want hij ziek is.", "Hij blijft thuis, want is hij ziek."], "answer": 0 },
+        { "type": "gap", "text": "Ik hou van fietsen, ___ ik hou niet van regen. (but)", "answers": ["maar"], "en": "I like cycling, but I do not like rain." },
+        { "type": "gap", "text": "Wil je naar de film ___ blijf je thuis? (or)", "answers": ["of"], "en": "Do you want to go to the cinema or are you staying at home?" },
+        { "type": "gap", "text": "Wij hebben honger, ___ wij gaan eten. (so)", "answers": ["dus"], "en": "We are hungry, so we are going to eat." },
+        { "type": "gap", "text": "Hij komt niet, ___ hij is ziek. (because)", "answers": ["want"], "en": "He is not coming, because he is ill." },
+        { "type": "gap", "text": "Ik ga naar huis, omdat ik moe ___. (zijn)", "answers": ["ben"], "en": "I am going home because I am tired." },
+        { "type": "gap", "text": "Zij werkt in een winkel ___ zij studeert ook. (and)", "answers": ["en"], "en": "She works in a shop and she also studies." },
+        { "type": "transform", "q": "Ik wil slapen. Ik ben moe.", "instruction": "Join with want", "answers": ["Ik wil slapen, want ik ben moe"] },
+        { "type": "transform", "q": "Het is warm. Wij gaan zwemmen.", "instruction": "Join with dus", "answers": ["Het is warm, dus wij gaan zwemmen", "Het is warm, dus we gaan zwemmen", "Het is warm, dus gaan wij zwemmen", "Het is warm, dus gaan we zwemmen"] },
+        { "type": "transform", "q": "Ik wil komen. Ik heb een afspraak.", "instruction": "Join with maar", "answers": ["Ik wil komen, maar ik heb een afspraak"] },
+        { "type": "order", "answer": "Ik hou van fietsen, maar ik hou niet van regen.", "en": "I like cycling, but I do not like rain." },
+        { "type": "order", "answer": "Wij hebben honger, dus wij gaan eten.", "alt": ["Wij hebben honger, dus gaan wij eten."], "en": "We are hungry, so we are going to eat." },
+        { "type": "order", "answer": "Hij komt niet, want hij is ziek.", "en": "He is not coming, because he is ill." },
+        { "type": "translate", "en": "She works in a shop and she studies too.", "answers": ["Zij werkt in een winkel en zij studeert ook", "Ze werkt in een winkel en ze studeert ook", "Zij werkt in een winkel en studeert ook", "Ze werkt in een winkel en studeert ook"] },
+        { "type": "translate", "en": "I would like to come, but I am busy.", "answers": ["Ik wil graag komen, maar ik heb het druk", "Ik zou graag komen, maar ik heb het druk"] },
+        { "type": "translate", "en": "We are tired, so we are going home.", "answers": ["Wij zijn moe, dus wij gaan naar huis", "We zijn moe, dus we gaan naar huis", "Wij zijn moe, dus gaan wij naar huis", "We zijn moe, dus gaan we naar huis"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: voegwoorden (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuvoegwoorden/" }
+      ]
+    }
+  ]
+}

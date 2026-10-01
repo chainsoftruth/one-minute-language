@@ -53,5 +53,7 @@
   {"id":"kapot","nl":"kapot","en":"broken","pos":"adj","lvl":"A2","topic":"home_housing","ex":"De wasmachine is kapot.","exEn":"The washing machine is broken."},
   {"id":"gemeubileerd","nl":"gemeubileerd","en":"furnished","pos":"adj","lvl":"A2","topic":"home_housing","ex":"De kamer is gemeubileerd.","exEn":"The room is furnished."},
   {"id":"verwarmd","nl":"verwarmd","en":"heated","pos":"adj","lvl":"A2","topic":"home_housing","ex":"Het zwembad is verwarmd.","exEn":"The swimming pool is heated."},
-  {"id":"verhuurd","nl":"verhuurd","en":"rented out","pos":"adj","lvl":"A2","topic":"home_housing","ex":"Het huis is al verhuurd.","exEn":"The house has already been rented out."}
+  {"id":"verhuurd","nl":"verhuurd","en":"rented out","pos":"adj","lvl":"A2","topic":"home_housing","ex":"Het huis is al verhuurd.","exEn":"The house has already been rented out."},
+  {"id":"berging","nl":"berging","en":"storage room","pos":"noun","lvl":"A2","topic":"home_housing","art":"de","pl":"bergingen","ex":"Mijn fiets staat in de berging.","exEn":"My bike is in the storage room."},
+  {"id":"huisdier","nl":"huisdier","en":"pet","pos":"noun","lvl":"A2","topic":"home_housing","art":"het","pl":"huisdieren","ex":"Een hond is een leuk huisdier.","exEn":"A dog is a nice pet."}
 ]

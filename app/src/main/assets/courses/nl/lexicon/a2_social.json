@@ -56,5 +56,8 @@
   {"id":"vrolijk","nl":"vrolijk","en":"cheerful","pos":"adj","lvl":"A2","topic":"social","ex":"Het kind is vrolijk.","exEn":"The child is cheerful."},
   {"id":"verlegen","nl":"verlegen","en":"shy","pos":"adj","lvl":"A2","topic":"social","ex":"Mijn zoon is verlegen.","exEn":"My son is shy."},
   {"id":"ongeduldig","nl":"ongeduldig","en":"impatient","pos":"adj","lvl":"A2","topic":"social","ex":"Wees niet zo ongeduldig.","exEn":"Don't be so impatient."},
-  {"id":"geduldig","nl":"geduldig","en":"patient","pos":"adj","lvl":"A2","topic":"social","ex":"Zij is geduldig met kinderen.","exEn":"She is patient with children."}
+  {"id":"geduldig","nl":"geduldig","en":"patient","pos":"adj","lvl":"A2","topic":"social","ex":"Zij is geduldig met kinderen.","exEn":"She is patient with children."},
+  {"id":"geachte","nl":"geachte","en":"dear (formal letter)","pos":"adj","lvl":"A2","topic":"social","ex":"Geachte mevrouw Bakker,","exEn":"Dear Mrs Bakker,"},
+  {"id":"hartelijk","nl":"hartelijk","en":"warm, cordial","pos":"adj","lvl":"A2","topic":"social","ex":"Hartelijk dank voor uw hulp.","exEn":"Many thanks for your help."},
+  {"id":"het_spijt_me","nl":"het spijt me","en":"I'm sorry","pos":"phrase","lvl":"A2","topic":"social","ex":"Het spijt me, ik ben te laat.","exEn":"I'm sorry, I'm late."}
 ]

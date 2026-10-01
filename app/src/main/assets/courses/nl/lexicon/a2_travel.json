@@ -54,5 +54,12 @@
   {"id":"via","nl":"via","en":"via","pos":"prep","lvl":"A2","topic":"travel","ex":"De trein rijdt via Utrecht.","exEn":"The train goes via Utrecht."},
   {"id":"richting_2","nl":"richting","en":"towards","pos":"prep","lvl":"A2","topic":"travel","ex":"Hij rijdt richting Amsterdam.","exEn":"He drives towards Amsterdam."},
   {"id":"goede_reis","nl":"goede reis","en":"have a good trip","pos":"phrase","lvl":"A2","topic":"travel","ex":"Goede reis en tot ziens!","exEn":"Have a good trip and goodbye!"},
-  {"id":"aan_boord","nl":"aan boord","en":"on board","pos":"phrase","lvl":"A2","topic":"travel","ex":"Welkom aan boord van deze trein.","exEn":"Welcome on board this train."}
+  {"id":"aan_boord","nl":"aan boord","en":"on board","pos":"phrase","lvl":"A2","topic":"travel","ex":"Welkom aan boord van deze trein.","exEn":"Welcome on board this train."},
+  {"id":"centrum","nl":"centrum","en":"centre","pos":"noun","lvl":"A2","topic":"travel","art":"het","pl":"centra","ex":"Het centrum van de stad is mooi.","exEn":"The centre of the city is beautiful."},
+  {"id":"plein","nl":"plein","en":"square","pos":"noun","lvl":"A2","topic":"travel","art":"het","pl":"pleinen","ex":"Op het plein is een markt.","exEn":"There is a market on the square."},
+  {"id":"bushalte","nl":"bushalte","en":"bus stop","pos":"noun","lvl":"A2","topic":"travel","art":"de","pl":"bushaltes","ex":"De bushalte is naast het station.","exEn":"The bus stop is next to the station."},
+  {"id":"voorkant","nl":"voorkant","en":"front","pos":"noun","lvl":"A2","topic":"travel","art":"de","pl":"voorkanten","ex":"De ingang is aan de voorkant.","exEn":"The entrance is at the front."},
+  {"id":"dagkaart","nl":"dagkaart","en":"day ticket","pos":"noun","lvl":"A2","topic":"travel","art":"de","pl":"dagkaarten","ex":"Een dagkaart is voor de hele dag.","exEn":"A day ticket is for the whole day."},
+  {"id":"linksaf","nl":"linksaf","en":"to the left","pos":"adv","lvl":"A2","topic":"travel","ex":"Bij het stoplicht gaat u linksaf.","exEn":"At the traffic light you turn left."},
+  {"id":"rechtsaf","nl":"rechtsaf","en":"to the right","pos":"adv","lvl":"A2","topic":"travel","ex":"Daarna gaat u rechtsaf.","exEn":"After that you turn right."}
 ]

@@ -60,5 +60,7 @@
   {"id":"zwanger","nl":"zwanger","en":"pregnant","pos":"adj","lvl":"A2","topic":"health_body","ex":"Mijn zus is zwanger.","exEn":"My sister is pregnant."},
   {"id":"nuchter","nl":"nuchter","en":"fasting / sober","pos":"adj","lvl":"A2","topic":"health_body","ex":"U moet nuchter zijn voor het bloedonderzoek.","exEn":"You have to be fasting for the blood test."},
   {"id":"fit","nl":"fit","en":"fit","pos":"adj","lvl":"A2","topic":"health_body","ex":"Ik voel me fit na het sporten.","exEn":"I feel fit after exercising."},
-  {"id":"slap","nl":"slap","en":"weak / limp","pos":"adj","lvl":"A2","topic":"health_body","ex":"Ik voel me slap.","exEn":"I feel weak."}
+  {"id":"slap","nl":"slap","en":"weak / limp","pos":"adj","lvl":"A2","topic":"health_body","ex":"Ik voel me slap.","exEn":"I feel weak."},
+  {"id":"huisartsenpraktijk","nl":"huisartsenpraktijk","en":"GP practice","pos":"noun","lvl":"A2","topic":"health_body","art":"de","pl":"huisartsenpraktijken","ex":"De huisartsenpraktijk is om acht uur open.","exEn":"The GP practice opens at eight."},
+  {"id":"allergisch","nl":"allergisch","en":"allergic","pos":"adj","lvl":"A2","topic":"health_body","ex":"Ik ben allergisch voor noten.","exEn":"I am allergic to nuts."}
 ]

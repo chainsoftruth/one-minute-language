@@ -24,5 +24,6 @@
   {"id":"ongerust","nl":"ongerust","en":"anxious","pos":"adj","lvl":"A2","topic":"feelings","ex":"Ik ben ongerust.","exEn":"I'm anxious."},
   {"id":"kwaad","nl":"kwaad","en":"angry","pos":"adj","lvl":"A2","topic":"feelings","ex":"Zij is kwaad op hem.","exEn":"She is angry with him."},
   {"id":"ontevreden","nl":"ontevreden","en":"dissatisfied","pos":"adj","lvl":"A2","topic":"feelings","ex":"Hij is ontevreden over het eten.","exEn":"He is dissatisfied with the food."},
-  {"id":"bedroefd","nl":"bedroefd","en":"sad","pos":"adj","lvl":"A2","topic":"feelings","ex":"Hij is bedroefd om het nieuws.","exEn":"He is sad about the news."}
+  {"id":"bedroefd","nl":"bedroefd","en":"sad","pos":"adj","lvl":"A2","topic":"feelings","ex":"Hij is bedroefd om het nieuws.","exEn":"He is sad about the news."},
+  {"id":"fijn","nl":"fijn","en":"nice, fine","pos":"adj","lvl":"A2","topic":"feelings","ex":"Wat fijn dat je er bent!","exEn":"How nice that you are here!"}
 ]

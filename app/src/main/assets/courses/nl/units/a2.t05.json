@@ -1,0 +1,503 @@
+{
+  "id": "a2.t05",
+  "level": "A2",
+  "kind": "theme",
+  "title": "Free time & plans",
+  "subtitle": "Read a club newsletter and a group chat, invite a friend, join a club and reply to an invitation",
+  "lessons": [
+    {
+      "id": "a2.t05.l1",
+      "title": "Sport and hobbies",
+      "kind": "vocab",
+      "vocab": [
+        "sportclub",
+        "training",
+        "wedstrijd",
+        "voetbal",
+        "voetballer",
+        "doelpunt",
+        "hockey",
+        "tennis",
+        "zwemles",
+        "sportschool",
+        "schaats",
+        "wandeling",
+        "fietstocht",
+        "uitje",
+        "concert",
+        "zanger",
+        "gitaar",
+        "piano",
+        "tentoonstelling",
+        "voorstelling",
+        "bioscoopkaartje",
+        "serie"
+      ]
+    },
+    {
+      "id": "a2.t05.l2",
+      "title": "Plans and social life",
+      "kind": "vocab",
+      "vocab": [
+        "feestje",
+        "bruiloft",
+        "uitnodiging",
+        "bezoek",
+        "gesprek",
+        "afspraakje",
+        "excuus",
+        "compliment",
+        "felicitatie",
+        "cadeautje",
+        "buurtfeest",
+        "vrije_tijd",
+        "knutselen",
+        "breien",
+        "tuinieren",
+        "kamp",
+        "barbecue",
+        "speeltuin",
+        "pretpark",
+        "dierentuin",
+        "recensie",
+        "spannend",
+        "grappig",
+        "uitverkocht"
+      ]
+    },
+    {
+      "id": "a2.t05.l3",
+      "title": "A newsletter from the sports club",
+      "kind": "reading",
+      "explain": [
+        {
+          "type": "tip",
+          "text": "A club newsletter has news, times, prices and a request for help. Find the days and times of the training, the price and what you can do to help. Tap a word you don't know."
+        }
+      ],
+      "text": "Nieuwsbrief van sportclub De Meeuw. Beste leden, het nieuwe seizoen begint op maandag 1 september. Dit zijn de trainingen: de volwassenen trainen op dinsdag en donderdag van zeven tot half negen. De kinderen trainen op woensdag van drie tot vier uur. Heb je zin om mee te doen? Kom dan een keer gratis meedoen. Je hoeft geen ervaring te hebben. Je kunt je opgeven bij de trainer of op de website. Het lidmaatschap kost veertig euro per maand. Voor kinderen is het goedkoper. Op zaterdag 20 september is er een groot feest voor alle leden, met muziek, een barbecue en spelletjes voor de kinderen. Wij zoeken nog mensen die willen helpen met het eten. Heb je tijd? Stuur dan een e-mail naar de club. Sportieve groeten van de trainers",
+      "items": [
+        {
+          "type": "choice",
+          "q": "Wanneer begint het nieuwe seizoen?",
+          "options": [
+            "Op 1 september",
+            "Op 20 september",
+            "Op 1 oktober"
+          ],
+          "answer": 0,
+          "en": "When does the new season start?"
+        },
+        {
+          "type": "choice",
+          "q": "Wanneer trainen de volwassenen?",
+          "options": [
+            "Op dinsdag en donderdag",
+            "Op woensdagmiddag",
+            "Op zaterdag"
+          ],
+          "answer": 0,
+          "en": "When do the adults train?"
+        },
+        {
+          "type": "choice",
+          "q": "Hoeveel kost het lidmaatschap?",
+          "options": [
+            "Veertig euro per maand",
+            "Tien euro per maand",
+            "Het is gratis"
+          ],
+          "answer": 0,
+          "en": "How much does membership cost?"
+        },
+        {
+          "type": "choice",
+          "q": "Wat gebeurt er op 20 september?",
+          "options": [
+            "Een feest voor alle leden",
+            "De eerste training",
+            "Een wedstrijd"
+          ],
+          "answer": 0,
+          "en": "What happens on 20 September?"
+        },
+        {
+          "type": "choice",
+          "q": "Wat kun je doen als je wilt helpen?",
+          "options": [
+            "Een e-mail sturen",
+            "Naar de training komen",
+            "De kinderen trainen"
+          ],
+          "answer": 0,
+          "en": "What can you do if you want to help?"
+        }
+      ],
+      "sources": [
+        {
+          "title": "NT2 TaalMenu: A2 menu (reading texts)",
+          "url": "https://nt2taalmenu.nl/nt2-a2-menu/"
+        }
+      ]
+    },
+    {
+      "id": "a2.t05.l4",
+      "title": "A message to friends",
+      "kind": "reading",
+      "explain": [
+        {
+          "type": "tip",
+          "text": "This is an informal message to a group of friends. It uses *je* and *jullie* and short sentences. Find the plan, the time, what everyone brings and where to meet. Tap a word you don't know."
+        }
+      ],
+      "text": "Hoi allemaal! Zaterdag wordt het mooi weer, dus ik wil een barbecue houden in het park. Hebben jullie zin om te komen? We beginnen rond vijf uur. Ik neem de barbecue mee. Willen jullie zelf iets te drinken meenemen en iets voor op de barbecue? Denk aan vlees, vis of groente. Anna werkt tot vijf uur en komt dus pas om zes uur, maar dat is geen probleem. We spreken af bij de ingang van het park, naast de speeltuin. Als het regent, doen we het bij mij thuis. Dan moeten jullie wel zeggen of je komt, want mijn keuken is klein. Laat het me vandaag nog weten, dan weet ik hoeveel mensen er komen. Alvast bedankt en tot zaterdag! Liefs, Lisa",
+      "items": [
+        {
+          "type": "choice",
+          "q": "Wat wil Lisa doen?",
+          "options": [
+            "Een barbecue houden in het park",
+            "Naar de bioscoop gaan",
+            "Gaan wandelen"
+          ],
+          "answer": 0,
+          "en": "What does Lisa want to do?"
+        },
+        {
+          "type": "choice",
+          "q": "Hoe laat beginnen ze ongeveer?",
+          "options": [
+            "Rond vijf uur",
+            "Om zes uur",
+            "Om acht uur"
+          ],
+          "answer": 0,
+          "en": "About what time do they start?"
+        },
+        {
+          "type": "choice",
+          "q": "Waarom komt Anna later?",
+          "options": [
+            "Ze werkt tot vijf uur",
+            "Ze is ziek",
+            "Ze heeft geen tijd"
+          ],
+          "answer": 0,
+          "en": "Why does Anna come later?"
+        },
+        {
+          "type": "choice",
+          "q": "Wat moeten de vrienden meenemen?",
+          "options": [
+            "Iets te drinken en iets voor op de barbecue",
+            "Alleen een stoel",
+            "Niets"
+          ],
+          "answer": 0,
+          "en": "What must the friends bring?"
+        },
+        {
+          "type": "choice",
+          "q": "Waar spreken ze af?",
+          "options": [
+            "Bij de ingang van het park",
+            "Bij Lisa thuis",
+            "Op het station"
+          ],
+          "answer": 0,
+          "en": "Where do they meet?"
+        },
+        {
+          "type": "choice",
+          "q": "Wat doen ze als het regent?",
+          "options": [
+            "Ze gaan naar Lisa thuis",
+            "Ze blijven in het park",
+            "Ze gaan naar huis"
+          ],
+          "answer": 0,
+          "en": "What do they do if it rains?"
+        }
+      ],
+      "sources": [
+        {
+          "title": "NT2 TaalMenu: A2 menu (reading texts)",
+          "url": "https://nt2taalmenu.nl/nt2-a2-menu/"
+        }
+      ]
+    },
+    {
+      "id": "a2.t05.l5",
+      "title": "Inviting a friend",
+      "kind": "listening",
+      "dialogue": [
+        {
+          "who": "A",
+          "nl": "Hoi Daan, met Lisa. Heb je zaterdag tijd?",
+          "en": "Hi Daan, it's Lisa. Do you have time on Saturday?"
+        },
+        {
+          "who": "B",
+          "nl": "Hoi Lisa! Wat ga je doen?",
+          "en": "Hi Lisa! What are you going to do?"
+        },
+        {
+          "who": "A",
+          "nl": "Ik wil naar de film gaan. Heb je zin om mee te gaan?",
+          "en": "I want to go to the cinema. Do you feel like coming along?"
+        },
+        {
+          "who": "B",
+          "nl": "Leuk! Welke film?",
+          "en": "Nice! Which film?"
+        },
+        {
+          "who": "A",
+          "nl": "Een grappige film. Hij begint om acht uur in de bioscoop in het centrum.",
+          "en": "A funny film. It starts at eight o'clock at the cinema in the centre."
+        },
+        {
+          "who": "B",
+          "nl": "Helaas kan ik zaterdag niet. Ik moet dan werken.",
+          "en": "Unfortunately I can't on Saturday. I have to work then."
+        },
+        {
+          "who": "A",
+          "nl": "Oh, jammer. En zondag? Dan gaan we misschien wandelen.",
+          "en": "Oh, too bad. And Sunday? Then we might go for a walk."
+        },
+        {
+          "who": "B",
+          "nl": "Zondag kan ik wel. Hoe laat spreken we af?",
+          "en": "Sunday is fine. What time shall we meet?"
+        },
+        {
+          "who": "A",
+          "nl": "Om twee uur bij het station?",
+          "en": "At two at the station?"
+        },
+        {
+          "who": "B",
+          "nl": "Prima, ik ben er. Tot zondag!",
+          "en": "Fine, I'll be there. See you on Sunday!"
+        }
+      ],
+      "items": [
+        {
+          "type": "listen",
+          "nl": "Heb je zin om mee te gaan?",
+          "q": "What does Lisa ask?",
+          "options": [
+            "If he wants to come along",
+            "If he has a car",
+            "If he is hungry"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "listen",
+          "nl": "Ik moet dan werken.",
+          "q": "Why can't Daan come on Saturday?",
+          "options": [
+            "He has to work",
+            "He is ill",
+            "He has a party"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "listen",
+          "nl": "Hij begint om acht uur in de bioscoop in het centrum.",
+          "q": "When does the film start?",
+          "options": [
+            "At eight o'clock",
+            "At six o'clock",
+            "At ten o'clock"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "listen",
+          "nl": "Om twee uur bij het station?",
+          "q": "When and where do they meet on Sunday?",
+          "options": [
+            "At two at the station",
+            "At eight at the cinema",
+            "At four at the park"
+          ],
+          "answer": 0
+        },
+        {
+          "type": "listen",
+          "nl": "Tot zondag!"
+        },
+        {
+          "type": "choice",
+          "q": "Wat gaan ze zondag doen?",
+          "options": [
+            "Wandelen",
+            "Naar de film gaan",
+            "Werken"
+          ],
+          "answer": 0,
+          "en": "What are they going to do on Sunday?"
+        },
+        {
+          "type": "choice",
+          "q": "Welke dag kan Daan niet?",
+          "options": [
+            "Zaterdag",
+            "Zondag",
+            "Vrijdag"
+          ],
+          "answer": 0,
+          "en": "Which day can't Daan do?"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Taalklas: free Dutch video course",
+          "url": "https://www.taalklas.nl/"
+        }
+      ]
+    },
+    {
+      "id": "a2.t05.l6",
+      "title": "Say it yourself",
+      "kind": "speaking",
+      "dialogue": [
+        {
+          "who": "A",
+          "nl": "Goedemiddag, kan ik u helpen?",
+          "en": "Good afternoon, can I help you?"
+        },
+        {
+          "who": "B",
+          "nl": "Goedemiddag. Ik wil graag lid worden van de sportclub.",
+          "en": "Good afternoon. I would like to become a member of the sports club."
+        },
+        {
+          "who": "A",
+          "nl": "Wat leuk! Welke sport wilt u doen?",
+          "en": "How nice! Which sport do you want to do?"
+        },
+        {
+          "who": "B",
+          "nl": "Ik wil graag zwemmen. Wanneer kan dat?",
+          "en": "I would like to swim. When can I do that?"
+        },
+        {
+          "who": "A",
+          "nl": "Op dinsdag en donderdag, van zeven tot acht uur.",
+          "en": "On Tuesdays and Thursdays, from seven to eight."
+        },
+        {
+          "who": "B",
+          "nl": "Kan ik eerst een keer meedoen?",
+          "en": "Can I join in once first?"
+        },
+        {
+          "who": "A",
+          "nl": "Natuurlijk, de eerste les is gratis.",
+          "en": "Of course, the first lesson is free."
+        },
+        {
+          "who": "B",
+          "nl": "Wat kost het lidmaatschap?",
+          "en": "How much does the membership cost?"
+        },
+        {
+          "who": "A",
+          "nl": "Dat is veertig euro per maand.",
+          "en": "That is forty euros per month."
+        },
+        {
+          "who": "B",
+          "nl": "Prima, dan kom ik dinsdag. Dank u wel!",
+          "en": "Fine, then I'll come on Tuesday. Thank you!"
+        }
+      ],
+      "items": [
+        {
+          "type": "speak",
+          "nl": "Ik wil graag lid worden van de sportclub.",
+          "en": "I would like to become a member of the sports club."
+        },
+        {
+          "type": "speak",
+          "nl": "Heb je zin om mee te gaan?",
+          "en": "Do you feel like coming along?"
+        },
+        {
+          "type": "prompt",
+          "task": "Invite a friend to do something this weekend: say what you want to do, when and where, and ask if he or she wants to come.",
+          "model": "Hoi Daan, heb je zin om zaterdag te gaan zwemmen? We spreken om twee uur af bij het zwembad. Kom je ook?",
+          "seconds": 30,
+          "points": [
+            "What you want to do",
+            "When",
+            "Where",
+            "Ask if he or she comes"
+          ]
+        },
+        {
+          "type": "prompt",
+          "task": "Say no to an invitation politely: say you cannot come, give a reason and suggest another day.",
+          "model": "Helaas kan ik zaterdag niet, want ik moet werken. Maar zondag kan ik wel. Zullen we dan afspreken?",
+          "seconds": 30,
+          "points": [
+            "Say you cannot come",
+            "Give a reason",
+            "Suggest another day"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a2.t05.l7",
+      "title": "Reply to an invitation",
+      "kind": "writing",
+      "explain": [
+        {
+          "type": "p",
+          "text": "When you get an invitation, answer quickly and **thank** the person. Say **yes** (*Ik kom graag*) or **no** (*Helaas kan ik niet komen*) and, when you say no, give a short reason. You can also ask what you can bring. To a friend use *je* and end with *Groetjes* or *Tot zaterdag!*"
+        },
+        {
+          "type": "ex",
+          "nl": "Bedankt voor de uitnodiging! Ik kom heel graag.",
+          "en": "Thanks for the invitation! I would love to come."
+        },
+        {
+          "type": "ex",
+          "nl": "Wat kan ik meenemen?",
+          "en": "What can I bring?"
+        },
+        {
+          "type": "tip",
+          "text": "Polite questions: *Mag ik iemand meenemen?* (May I bring someone?) and *Zal ik iets te drinken meenemen?* (Shall I bring something to drink?)"
+        }
+      ],
+      "items": [
+        {
+          "type": "write",
+          "task": "Your colleague Eva invites you to her birthday party on Saturday at eight o'clock. Write a reply: thank her, say that you will come, ask what you can bring, ask if you may bring a friend and say when you will be there.",
+          "points": [
+            "Thank her",
+            "Say you will come",
+            "Ask what to bring and whether a friend may come",
+            "Say when you will be there"
+          ],
+          "minWords": 40,
+          "maxWords": 80,
+          "model": "Hoi Eva, bedankt voor de uitnodiging! Ik kom heel graag naar je feestje op zaterdag. Wat kan ik meenemen? Zal ik iets te drinken meenemen of een taart? Mag ik mijn vriend ook meenemen? Ik ben er om acht uur. Tot zaterdag! Groetjes, Tom"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Oefenen.nl: free practice (account needed)",
+          "url": "https://oefenen.nl/"
+        }
+      ]
+    }
+  ]
+}

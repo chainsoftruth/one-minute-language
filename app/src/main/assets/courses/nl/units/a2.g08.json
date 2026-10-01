@@ -1,0 +1,104 @@
+{
+  "id": "a2.g08", "level": "A2", "kind": "grammar",
+  "title": "Reflexive verbs",
+  "subtitle": "me, je, zich, ons: ik voel me, hij schaamt zich",
+  "lessons": [
+    {
+      "id": "a2.g08.l1", "title": "Reflexive pronouns", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "With a **reflexive verb** the action goes back to the subject: *Ik was **me**.* (I wash myself.) The pronoun must match the subject. Many verbs are **always reflexive** and are listed with **zich**: *zich voelen, zich haasten, zich vergissen, zich schamen, zich herinneren*." },
+        { "type": "table", "head": ["subject", "pronoun", "zich wassen"], "rows": [["ik", "me", "Ik was me."], ["jij / je", "je", "Jij wast je."], ["u", "zich (or u)", "U wast zich."], ["hij / zij / het", "zich", "Hij wast zich."], ["wij", "ons", "Wij wassen ons."], ["jullie", "je", "Jullie wassen je."], ["zij (plural)", "zich", "Zij wassen zich."]] },
+        { "type": "ex", "nl": "Ik voel me vandaag niet goed.", "en": "I do not feel well today." },
+        { "type": "ex", "nl": "Wij haasten ons elke ochtend.", "en": "We rush every morning." },
+        { "type": "tip", "text": "Only **zich** is used for all third persons, singular and plural. Use **me** and **je** in normal speech; **mij** and **jou** are only for emphasis." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik voel ___ goed.", "options": ["me", "je", "zich"], "answer": 0 },
+        { "type": "choice", "q": "Hij schaamt ___.", "options": ["zich", "hem", "me"], "answer": 0 },
+        { "type": "choice", "q": "Wij haasten ___.", "options": ["ons", "zich", "we"], "answer": 0 },
+        { "type": "choice", "q": "Jij vergist ___.", "options": ["je", "jou", "zich"], "answer": 0 },
+        { "type": "gap", "text": "Ik voel ___ vandaag niet goed. (zich voelen)", "answers": ["me"], "en": "I do not feel well today." },
+        { "type": "gap", "text": "Mijn zus haast ___ elke ochtend. (zich haasten)", "answers": ["zich"], "en": "My sister rushes every morning." },
+        { "type": "gap", "text": "Wij herinneren ___ die dag nog goed. (zich herinneren)", "answers": ["ons"], "en": "We remember that day well." },
+        { "type": "gap", "text": "Jullie vergissen ___. (zich vergissen)", "answers": ["je"], "en": "You (plural) are mistaken." },
+        { "type": "gap", "text": "De kinderen wassen ___ voor het eten. (zich wassen)", "answers": ["zich"], "en": "The children wash before the meal." },
+        { "type": "gap", "text": "Ik schaam ___ voor mijn fout. (zich schamen)", "answers": ["me"], "en": "I am ashamed of my mistake." },
+        { "type": "transform", "q": "Hij wast.", "instruction": "Make it reflexive", "answers": ["Hij wast zich"] },
+        { "type": "transform", "q": "Wij haasten.", "instruction": "Make it reflexive", "answers": ["Wij haasten ons", "We haasten ons"] },
+        { "type": "transform", "q": "Jij vergist.", "instruction": "Make it reflexive", "answers": ["Jij vergist je"] },
+        { "type": "order", "answer": "Ik voel me vandaag niet goed.", "alt": ["Vandaag voel ik me niet goed."], "en": "I do not feel well today." },
+        { "type": "order", "answer": "Hij herinnert zich de naam niet.", "en": "He does not remember the name." },
+        { "type": "order", "answer": "Wij haasten ons elke ochtend.", "alt": ["Elke ochtend haasten wij ons."], "en": "We rush every morning." },
+        { "type": "translate", "en": "I feel good.", "answers": ["Ik voel me goed"] },
+        { "type": "translate", "en": "He is ashamed.", "answers": ["Hij schaamt zich"] },
+        { "type": "translate", "en": "We are in a hurry.", "answers": ["Wij haasten ons", "We haasten ons"] },
+        { "type": "match", "pairs": [["ik", "me"], ["jij", "je"], ["hij", "zich"], ["wij", "ons"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: reflexieve werkwoorden (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-reflexieve-werkwoorden/" }
+      ]
+    },
+    {
+      "id": "a2.g08.l2", "title": "Word order and more verbs", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "The reflexive pronoun usually stands **right after the verb**: *Ik herinner me die dag.* In a **question** the subject comes first: *Herinner je je die dag nog?* In a **subordinate clause** the pronoun follows the subject: *Ik weet dat hij zich schaamt.* With a **modal** the pronoun stays before the infinitive: *Ik wil me inschrijven.*" },
+        { "type": "table", "head": ["verb", "example"], "rows": [["zich aankleden", "Ik kleed me elke ochtend om zeven uur aan."], ["zich inschrijven", "Ik schrijf me in voor de cursus."], ["zich ziek melden", "Hij meldt zich ziek."], ["zich afvragen", "Ik vraag me af of hij komt."], ["zich voorstellen", "Mag ik me even voorstellen?"], ["zich ergeren", "Zij ergert zich aan het lawaai."]] },
+        { "type": "ex", "nl": "Herinner je je die dag nog?", "en": "Do you still remember that day?" },
+        { "type": "ex", "nl": "Ik heb me vergist.", "en": "I made a mistake." },
+        { "type": "tip", "text": "In the **perfect tense** the reflexive verb uses **hebben**: *Ik heb me gehaast*, *Hij heeft zich ziek gemeld*. Separable ones keep the pronoun in front: *Ik heb me ingeschreven.*" }
+      ],
+      "items": [
+        { "type": "choice", "q": "Voel je ___ goed?", "options": ["je", "me", "zich"], "answer": 0 },
+        { "type": "choice", "q": "Ik weet dat hij ___ schaamt.", "options": ["zich", "me", "hem"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik vraag me af of hij komt.", "Ik vraag af me of hij komt.", "Ik afvraag me of hij komt."], "answer": 0 },
+        { "type": "choice", "q": "Ik wil ___ inschrijven voor de cursus.", "options": ["me", "mij", "zich"], "answer": 0 },
+        { "type": "gap", "text": "___ je je die dag nog? (herinneren)", "answers": ["Herinner"], "en": "Do you still remember that day?" },
+        { "type": "gap", "text": "Ik ___ me in voor de cursus. (zich inschrijven)", "answers": ["schrijf"], "en": "I am registering for the course." },
+        { "type": "gap", "text": "Hij ___ zich ziek. (zich ziek melden)", "answers": ["meldt"], "en": "He reports in sick." },
+        { "type": "gap", "text": "Ik ___ me elke ochtend om zeven uur aan. (aankleden)", "answers": ["kleed"], "en": "I get dressed every morning at seven." },
+        { "type": "gap", "text": "Hij moet ___ haasten. (zich)", "answers": ["zich"], "en": "He has to hurry." },
+        { "type": "gap", "text": "Ik heb ___ vergist. (zich vergissen)", "answers": ["me"], "en": "I made a mistake." },
+        { "type": "transform", "q": "Hij haast zich.", "instruction": "Add: Hij moet ...", "answers": ["Hij moet zich haasten"] },
+        { "type": "transform", "q": "Ik vergis me.", "instruction": "Make it perfect tense", "answers": ["Ik heb me vergist"] },
+        { "type": "transform", "q": "Jij herinnert je de naam.", "instruction": "Make it a question", "answers": ["Herinner jij je de naam", "Herinner je je de naam"] },
+        { "type": "order", "answer": "Herinner je je die dag nog?", "en": "Do you still remember that day?" },
+        { "type": "order", "answer": "Ik schrijf me in voor de cursus.", "en": "I am registering for the course." },
+        { "type": "order", "answer": "Ik wil me inschrijven voor een cursus.", "en": "I want to register for a course." },
+        { "type": "order", "answer": "Hij heeft zich ziek gemeld.", "en": "He has reported in sick." },
+        { "type": "translate", "en": "I wonder if he is coming.", "answers": ["Ik vraag me af of hij komt"] },
+        { "type": "translate", "en": "She got dressed.", "answers": ["Zij heeft zich aangekleed", "Ze heeft zich aangekleed", "Zij kleedde zich aan", "Ze kleedde zich aan"] },
+        { "type": "translate", "en": "Do you remember that day?", "answers": ["Herinner je je die dag", "Herinner jij je die dag", "Herinnert u zich die dag", "Herinner je je die dag nog", "Herinner jij je die dag nog", "Herinnert u zich die dag nog"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: reflexieve werkwoorden (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-reflexieve-werkwoorden/" }
+      ]
+    },
+    {
+      "id": "a2.g08.l3", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Zij schaamt ___.", "options": ["zich", "haar", "me"], "answer": 0 },
+        { "type": "choice", "q": "Wij voelen ___ thuis in Nederland.", "options": ["ons", "zich", "we"], "answer": 0 },
+        { "type": "choice", "q": "Ik herinner ___ de naam niet.", "options": ["me", "mij", "zich"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Wij hebben ons gehaast.", "Wij zijn ons gehaast.", "Wij hebben gehaast ons."], "answer": 0 },
+        { "type": "gap", "text": "Jij moet ___ niet ergeren. (zich)", "answers": ["je"], "en": "You should not get annoyed." },
+        { "type": "gap", "text": "Ik wil ___ even voorstellen. (zich)", "answers": ["me"], "en": "I would like to introduce myself." },
+        { "type": "gap", "text": "Zij ergert ___ aan het lawaai. (zich)", "answers": ["zich"], "en": "She is annoyed by the noise." },
+        { "type": "gap", "text": "Ik vraag me ___ of het waar is. (afvragen)", "answers": ["af"], "en": "I wonder whether it is true." },
+        { "type": "gap", "text": "Hebben jullie ___ al ingeschreven? (zich)", "answers": ["je"], "en": "Have you registered yet?" },
+        { "type": "gap", "text": "De kinderen kleden ___ aan. (zich aankleden)", "answers": ["zich"], "en": "The children are getting dressed." },
+        { "type": "transform", "q": "Wij voelen ons thuis.", "instruction": "Make it a question: Voelen ...?", "answers": ["Voelen wij ons thuis", "Voelen we ons thuis"] },
+        { "type": "transform", "q": "Zij schaamt zich.", "instruction": "Start with Ik weet dat ...", "answers": ["Ik weet dat zij zich schaamt", "Ik weet dat ze zich schaamt"] },
+        { "type": "transform", "q": "Ik haast me.", "instruction": "Make it perfect tense", "answers": ["Ik heb me gehaast"] },
+        { "type": "order", "answer": "Ik voel me hier thuis.", "alt": ["Hier voel ik me thuis."], "en": "I feel at home here." },
+        { "type": "order", "answer": "Wij hebben ons gehaast.", "en": "We hurried." },
+        { "type": "order", "answer": "Hij schaamt zich voor zijn fout.", "en": "He is ashamed of his mistake." },
+        { "type": "translate", "en": "I made a mistake.", "answers": ["Ik heb me vergist"] },
+        { "type": "translate", "en": "Do you feel at home here?", "answers": ["Voel je je hier thuis", "Voel jij je hier thuis", "Voelt u zich hier thuis"] },
+        { "type": "translate", "en": "He registered for the course.", "answers": ["Hij heeft zich ingeschreven voor de cursus", "Hij schreef zich in voor de cursus"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: reflexieve werkwoorden (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-reflexieve-werkwoorden/" }
+      ]
+    }
+  ]
+}

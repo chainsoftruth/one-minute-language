@@ -1,0 +1,103 @@
+{
+  "id": "a2.g01", "level": "A2", "kind": "grammar",
+  "title": "Perfect tense 1",
+  "subtitle": "Talk about the past with hebben + a regular participle",
+  "lessons": [
+    {
+      "id": "a2.g01.l1", "title": "hebben + participle", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "The **perfect tense** (*voltooid tegenwoordige tijd*) is the normal way to say what happened. It has two parts: a form of **hebben** in second place and the **participle** at the **end** of the sentence. *Ik heb gisteren gewerkt.* *Wij hebben pizza gegeten.*" },
+        { "type": "p", "text": "A regular participle is **ge- + stem + t or d**. The stem is the verb without *-en* (*werken → werk*)." },
+        { "type": "table", "head": ["infinitive", "stem", "participle"], "rows": [["werken", "werk", "gewerkt"], ["maken", "maak", "gemaakt"], ["koken", "kook", "gekookt"], ["wonen", "woon", "gewoond"], ["spelen", "speel", "gespeeld"], ["leren", "leer", "geleerd"]] },
+        { "type": "ex", "nl": "Ik heb gisteren in de tuin gewerkt.", "en": "Yesterday I worked in the garden." },
+        { "type": "ex", "nl": "Wij hebben vorig jaar in Utrecht gewoond.", "en": "We lived in Utrecht last year." },
+        { "type": "tip", "text": "Questions put **hebben** first: *Heb je al gekookt?* The participle still stays at the end." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik heb gisteren gewerkt.", "Ik gewerkt heb gisteren.", "Ik heb gewerkt gisteren."], "answer": 0 },
+        { "type": "choice", "q": "Wij hebben soep ___. (koken)", "options": ["gekookt", "gekoked", "kookt"], "answer": 0 },
+        { "type": "choice", "q": "Zij heeft in Delft ___. (wonen)", "options": ["gewoond", "gewoont", "gewonen"], "answer": 0 },
+        { "type": "gap", "text": "Zij heeft de hele dag ___. (werken)", "answers": ["gewerkt"], "en": "She worked all day." },
+        { "type": "gap", "text": "Ik heb gisteren soep ___. (koken)", "answers": ["gekookt"], "en": "Yesterday I cooked soup." },
+        { "type": "gap", "text": "Wij hebben vorig jaar in Utrecht ___. (wonen)", "answers": ["gewoond"], "en": "We lived in Utrecht last year." },
+        { "type": "gap", "text": "De kinderen hebben buiten ___. (spelen)", "answers": ["gespeeld"], "en": "The children played outside." },
+        { "type": "gap", "text": "Heb je Nederlands ___? (leren)", "answers": ["geleerd"], "en": "Did you learn Dutch?" },
+        { "type": "gap", "text": "Zij heeft een taart ___. (maken)", "answers": ["gemaakt"], "en": "She made a cake." },
+        { "type": "transform", "q": "Ik werk vandaag.", "instruction": "Make it perfect tense", "answers": ["Ik heb vandaag gewerkt", "Vandaag heb ik gewerkt"] },
+        { "type": "transform", "q": "Wij wonen in Delft.", "instruction": "Make it perfect tense", "answers": ["Wij hebben in Delft gewoond", "We hebben in Delft gewoond"] },
+        { "type": "transform", "q": "Zij speelt buiten.", "instruction": "Make it perfect tense", "answers": ["Zij heeft buiten gespeeld", "Ze heeft buiten gespeeld"] },
+        { "type": "order", "answer": "Ik heb gisteren in de tuin gewerkt.", "alt": ["Gisteren heb ik in de tuin gewerkt."], "en": "Yesterday I worked in the garden." },
+        { "type": "order", "answer": "Wij hebben een taart gemaakt.", "en": "We made a cake." },
+        { "type": "order", "answer": "Heb je al gekookt?", "en": "Have you cooked yet?" },
+        { "type": "translate", "en": "I lived in Rotterdam for two years.", "answers": ["Ik heb twee jaar in Rotterdam gewoond"] },
+        { "type": "translate", "en": "We cooked soup yesterday.", "answers": ["Wij hebben gisteren soep gekookt", "We hebben gisteren soep gekookt", "Gisteren hebben wij soep gekookt", "Gisteren hebben we soep gekookt"] },
+        { "type": "match", "pairs": [["werken", "gewerkt"], ["wonen", "gewoond"], ["spelen", "gespeeld"], ["leren", "geleerd"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: voltooide tijd (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuvoltooidetijd/" }
+      ]
+    },
+    {
+      "id": "a2.g01.l2", "title": "-t or -d? The 't kofschip", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Does the participle end in **-t** or **-d**? Look at the letter before *-en* in the **infinitive**. If it is one of **t, k, f, s, ch, p** (remember: **'t kofschip**), add **-t**. For every other letter add **-d**." },
+        { "type": "table", "head": ["infinitive", "letter", "participle"], "rows": [["werken", "k", "gewerkt"], ["fietsen", "s", "gefietst"], ["stoppen", "p", "gestopt"], ["leven", "v", "geleefd"], ["reizen", "z", "gereisd"], ["wonen", "n", "gewoond"]] },
+        { "type": "tip", "text": "Use the **infinitive**, not the stem. The stem of *leven* is *leef*, but the *v* is not in 't kofschip, so the participle is *geleefd*. Same for *reizen*: *gereisd*." },
+        { "type": "p", "text": "If the stem already ends in **t** or **d**, you do not add another one: *wachten → gewacht*, *praten → gepraat*, *antwoorden → geantwoord*." },
+        { "type": "ex", "nl": "Ik heb lang op de bus gewacht.", "en": "I waited a long time for the bus." },
+        { "type": "ex", "nl": "Zij hebben veel gereisd.", "en": "They have travelled a lot." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Participle of leven?", "options": ["geleefd", "geleeft", "geleven"], "answer": 0, "explain": "The v of leven is not in 't kofschip, so the participle ends in -d." },
+        { "type": "choice", "q": "Participle of reizen?", "options": ["gereisd", "gereist", "gereizen"], "answer": 0, "explain": "Look at the z of reizen: not in 't kofschip, so -d." },
+        { "type": "choice", "q": "Participle of werken?", "options": ["gewerkt", "gewerkd", "gewerken"], "answer": 0 },
+        { "type": "choice", "q": "Participle of wachten?", "options": ["gewacht", "gewachtt", "gewachtd"], "answer": 0, "explain": "The stem already ends in t, so there is no extra t." },
+        { "type": "gap", "text": "Ik heb lang op de bus ___. (wachten)", "answers": ["gewacht"], "en": "I waited a long time for the bus." },
+        { "type": "gap", "text": "Zij hebben veel ___. (reizen)", "answers": ["gereisd"], "en": "They have travelled a lot." },
+        { "type": "gap", "text": "Zij heeft een mooi leven ___. (leven)", "answers": ["geleefd"], "en": "She has lived a good life." },
+        { "type": "gap", "text": "Wij hebben de hele avond ___. (praten)", "answers": ["gepraat"], "en": "We talked all evening." },
+        { "type": "gap", "text": "Ik heb niet ___. (antwoorden)", "answers": ["geantwoord"], "en": "I did not answer." },
+        { "type": "gap", "text": "De bus heeft hier ___. (stoppen)", "answers": ["gestopt"], "en": "The bus has stopped here.", "explain": "Stoppen: the p is in 't kofschip, so -t." },
+        { "type": "gap", "text": "Heb jij mijn tas ___? (pakken)", "answers": ["gepakt"], "en": "Did you take my bag?" },
+        { "type": "transform", "q": "Wij reizen veel.", "instruction": "Make it perfect tense", "answers": ["Wij hebben veel gereisd", "We hebben veel gereisd"] },
+        { "type": "transform", "q": "Hij woont in Breda.", "instruction": "Make it perfect tense", "answers": ["Hij heeft in Breda gewoond"] },
+        { "type": "transform", "q": "Ik wacht op jou.", "instruction": "Make it perfect tense", "answers": ["Ik heb op jou gewacht"] },
+        { "type": "order", "answer": "Zij heeft de hele dag gewerkt.", "alt": ["De hele dag heeft zij gewerkt."], "en": "She worked all day." },
+        { "type": "order", "answer": "Wij hebben lang op de trein gewacht.", "en": "We waited a long time for the train." },
+        { "type": "translate", "en": "I waited for the bus.", "answers": ["Ik heb op de bus gewacht"] },
+        { "type": "translate", "en": "She has travelled a lot.", "answers": ["Zij heeft veel gereisd", "Ze heeft veel gereisd"] },
+        { "type": "match", "pairs": [["leven", "geleefd"], ["reizen", "gereisd"], ["wachten", "gewacht"], ["stoppen", "gestopt"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: voltooide tijd (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuvoltooidetijd/" }
+      ]
+    },
+    {
+      "id": "a2.g01.l3", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Ik heb gisteren lang ___. (bellen)", "options": ["gebeld", "gebelt", "gebellen"], "answer": 0 },
+        { "type": "choice", "q": "Wij hebben op het feest ___. (dansen)", "options": ["gedanst", "gedansd", "gedansen"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Heb je al gekookt?", "Heb je gekookt al?", "Je heb al gekookt?"], "answer": 0 },
+        { "type": "choice", "q": "Participle of leren?", "options": ["geleerd", "geleert", "gelerd"], "answer": 0 },
+        { "type": "gap", "text": "Ik heb vanochtend ___. (douchen)", "answers": ["gedoucht"], "en": "I had a shower this morning.", "explain": "The ch of douchen is in 't kofschip." },
+        { "type": "gap", "text": "Zij heeft haar vriend ___. (bellen)", "answers": ["gebeld"], "en": "She called her boyfriend." },
+        { "type": "gap", "text": "Wij hebben lekker ___. (fietsen)", "answers": ["gefietst"], "en": "We had a nice bike ride." },
+        { "type": "gap", "text": "De kinderen hebben veel ___. (leren)", "answers": ["geleerd"], "en": "The children learned a lot." },
+        { "type": "gap", "text": "Ik heb de hele nacht ___. (werken)", "answers": ["gewerkt"], "en": "I worked all night." },
+        { "type": "gap", "text": "Hij heeft in Amsterdam ___. (wonen)", "answers": ["gewoond"], "en": "He lived in Amsterdam." },
+        { "type": "transform", "q": "Zij dansen op het feest.", "instruction": "Make it perfect tense", "answers": ["Zij hebben op het feest gedanst", "Ze hebben op het feest gedanst"] },
+        { "type": "transform", "q": "Ik bel mijn moeder.", "instruction": "Make it perfect tense", "answers": ["Ik heb mijn moeder gebeld"] },
+        { "type": "transform", "q": "Hij praat met de buren.", "instruction": "Make it perfect tense", "answers": ["Hij heeft met de buren gepraat"] },
+        { "type": "order", "answer": "Wij hebben gisteren soep gekookt.", "alt": ["Gisteren hebben wij soep gekookt."], "en": "Yesterday we cooked soup." },
+        { "type": "order", "answer": "Ik heb mijn moeder gebeld.", "en": "I called my mother." },
+        { "type": "order", "answer": "Heb je lang gewacht?", "en": "Did you wait long?" },
+        { "type": "translate", "en": "The children played outside.", "answers": ["De kinderen hebben buiten gespeeld"] },
+        { "type": "translate", "en": "Did you work yesterday?", "answers": ["Heb je gisteren gewerkt", "Heb jij gisteren gewerkt", "Hebt u gisteren gewerkt", "Heeft u gisteren gewerkt"] },
+        { "type": "translate", "en": "We lived here for three years.", "answers": ["Wij hebben hier drie jaar gewoond", "We hebben hier drie jaar gewoond"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: voltooide tijd (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuvoltooidetijd/" }
+      ]
+    }
+  ]
+}

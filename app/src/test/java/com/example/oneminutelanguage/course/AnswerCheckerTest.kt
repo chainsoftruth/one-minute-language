@@ -11,6 +11,12 @@ class AnswerCheckerTest {
         assertEquals(Verdict.CORRECT, check("ja , graag", listOf("ja, graag"), false))
     }
 
+    @Test fun commasAreNotGraded() {
+        assertEquals(Verdict.CORRECT, check("Als het regent blijf ik thuis", listOf("Als het regent, blijf ik thuis"), false))
+        assertEquals(Verdict.CORRECT, check("Als het regent,blijf ik thuis.", listOf("Als het regent, blijf ik thuis"), false))
+        assertEquals(Verdict.WRONG, check("Als het regent blijf thuis ik", listOf("Als het regent, blijf ik thuis"), false))
+    }
+
     @Test fun curlyApostrophesMatch() {
         assertEquals(Verdict.CORRECT, check("auto’s", listOf("auto's"), false))
     }

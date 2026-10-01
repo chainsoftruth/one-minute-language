@@ -1,0 +1,181 @@
+{
+  "id": "a2.g02", "level": "A2", "kind": "grammar",
+  "title": "Perfect tense 2",
+  "subtitle": "hebben or zijn, irregular participles and verbs with prefixes",
+  "lessons": [
+    {
+      "id": "a2.g02.l1", "title": "hebben or zijn?", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Most verbs use **hebben** in the perfect tense. Use **zijn** when the verb means **going somewhere** (a direction or goal) or **a change of state**. Typical **zijn** verbs: *gaan, komen, blijven, worden, zijn, beginnen, vertrekken, gebeuren, sterven*." },
+        { "type": "table", "head": ["infinitive", "perfect with zijn"], "rows": [["gaan", "is gegaan"], ["komen", "is gekomen"], ["blijven", "is gebleven"], ["worden", "is geworden"], ["zijn", "is geweest"], ["beginnen", "is begonnen"], ["vertrekken", "is vertrokken"], ["gebeuren", "is gebeurd"]] },
+        { "type": "ex", "nl": "Ik ben gisteren naar Utrecht gegaan.", "en": "Yesterday I went to Utrecht." },
+        { "type": "p", "text": "Some verbs can take both. The activity itself uses **hebben**; movement towards a **goal** uses **zijn**. Compare: *Ik heb een uur gefietst* (an activity) and *Ik ben naar mijn werk gefietst* (to a place)." },
+        { "type": "ex", "nl": "Zij is ziek geweest.", "en": "She has been ill." },
+        { "type": "tip", "text": "Not sure? Ask yourself: is there a **place I am going to** or a **change**? If so, take **zijn**. For everything else take **hebben**." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik ___ gisteren naar Utrecht gegaan.", "options": ["ben", "heb", "is"], "answer": 0 },
+        { "type": "choice", "q": "Zij ___ hier drie jaar gewoond.", "options": ["heeft", "is", "ben"], "answer": 0 },
+        { "type": "choice", "q": "De trein ___ al vertrokken.", "options": ["is", "heeft", "hebben"], "answer": 0 },
+        { "type": "choice", "q": "Ik ___ een uur gefietst.", "options": ["heb", "ben", "is"], "answer": 0, "explain": "There is no goal here, only an activity: hebben." },
+        { "type": "choice", "q": "Ik ___ naar mijn werk gefietst.", "options": ["ben", "heb", "heeft"], "answer": 0, "explain": "There is a goal (naar mijn werk): zijn." },
+        { "type": "gap", "text": "Ik ___ gisteren in Rotterdam geweest.", "answers": ["ben"], "en": "Yesterday I was in Rotterdam." },
+        { "type": "gap", "text": "De les ___ om negen uur begonnen.", "answers": ["is"], "en": "The lesson started at nine o'clock." },
+        { "type": "gap", "text": "Wij ___ zaterdag thuis gebleven.", "answers": ["zijn"], "en": "We stayed at home on Saturday." },
+        { "type": "gap", "text": "Hij ___ vorig jaar ziek geworden.", "answers": ["is"], "en": "He became ill last year." },
+        { "type": "gap", "text": "Wij ___ gisteren pasta gegeten.", "answers": ["hebben"], "en": "We ate pasta yesterday.", "explain": "Eten is not about going somewhere: hebben." },
+        { "type": "transform", "q": "Ik ga naar huis.", "instruction": "Make it perfect tense", "answers": ["Ik ben naar huis gegaan"] },
+        { "type": "transform", "q": "Hij komt te laat.", "instruction": "Make it perfect tense", "answers": ["Hij is te laat gekomen"] },
+        { "type": "transform", "q": "Wij blijven thuis.", "instruction": "Make it perfect tense", "answers": ["Wij zijn thuis gebleven", "We zijn thuis gebleven"] },
+        { "type": "order", "answer": "Ik ben gisteren naar Utrecht gegaan.", "alt": ["Gisteren ben ik naar Utrecht gegaan."], "en": "Yesterday I went to Utrecht." },
+        { "type": "order", "answer": "De trein is net vertrokken.", "en": "The train has just left." },
+        { "type": "translate", "en": "I went to Amsterdam yesterday.", "answers": ["Ik ben gisteren naar Amsterdam gegaan", "Gisteren ben ik naar Amsterdam gegaan"] },
+        { "type": "translate", "en": "She has been ill.", "answers": ["Zij is ziek geweest", "Ze is ziek geweest"] },
+        { "type": "match", "pairs": [["gaan", "is gegaan"], ["komen", "is gekomen"], ["blijven", "is gebleven"], ["worden", "is geworden"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: voltooide tijd (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuvoltooidetijd/" },
+        { "title": "NT2 TaalMenu: hebben of zijn in de v.t.t. (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-hebben-of-zijn-v-v-t/" }
+      ]
+    },
+    {
+      "id": "a2.g02.l2", "title": "Irregular participles: daily life", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Many common verbs have an **irregular participle**. You cannot predict it from the stem, so learn each one together with the infinitive. Most end in **-en** (*gegeten*), some are short (*gedaan, gehad*), and a few end in **-d** or **-t** (*gezegd, gedacht*)." },
+        { "type": "table", "head": ["infinitive", "participle", "infinitive", "participle"], "rows": [["eten", "gegeten", "lezen", "gelezen"], ["drinken", "gedronken", "schrijven", "geschreven"], ["zien", "gezien", "nemen", "genomen"], ["doen", "gedaan", "geven", "gegeven"], ["hebben", "gehad", "helpen", "geholpen"], ["slapen", "geslapen", "spreken", "gesproken"], ["zitten", "gezeten", "kijken", "gekeken"]] },
+        { "type": "ex", "nl": "Wij hebben pizza gegeten en cola gedronken.", "en": "We ate pizza and drank cola." },
+        { "type": "ex", "nl": "Heb je goed geslapen?", "en": "Did you sleep well?" },
+        { "type": "tip", "text": "These verbs all use **hebben**. Learn the participle as a pair: *eten – gegeten*. Your lexicon shows the forms of every verb." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Wij hebben pizza ___. (eten)", "options": ["gegeten", "geeten", "gegeeten"], "answer": 0 },
+        { "type": "choice", "q": "Ik heb een brief ___. (schrijven)", "options": ["geschreven", "geschreef", "geschrijfd"], "answer": 0 },
+        { "type": "choice", "q": "Participle of zitten?", "options": ["gezeten", "gezit", "gezitten"], "answer": 0 },
+        { "type": "gap", "text": "Ik heb koffie ___. (drinken)", "answers": ["gedronken"], "en": "I drank coffee." },
+        { "type": "gap", "text": "Heb je die film ___? (zien)", "answers": ["gezien"], "en": "Have you seen that film?" },
+        { "type": "gap", "text": "Wat heb je gisteren ___? (doen)", "answers": ["gedaan"], "en": "What did you do yesterday?" },
+        { "type": "gap", "text": "Zij heeft de hele nacht ___. (slapen)", "answers": ["geslapen"], "en": "She slept all night." },
+        { "type": "gap", "text": "Hij heeft de krant ___. (lezen)", "answers": ["gelezen"], "en": "He read the newspaper." },
+        { "type": "gap", "text": "Mijn buurman heeft mij ___. (helpen)", "answers": ["geholpen"], "en": "My neighbour helped me." },
+        { "type": "gap", "text": "Wij hebben lang op het terras ___. (zitten)", "answers": ["gezeten"], "en": "We sat on the terrace for a long time." },
+        { "type": "gap", "text": "Ik heb vandaag geen tijd ___. (hebben)", "answers": ["gehad"], "en": "I had no time today." },
+        { "type": "transform", "q": "Ik eet een broodje.", "instruction": "Make it perfect tense", "answers": ["Ik heb een broodje gegeten"] },
+        { "type": "transform", "q": "Zij leest een boek.", "instruction": "Make it perfect tense", "answers": ["Zij heeft een boek gelezen", "Ze heeft een boek gelezen"] },
+        { "type": "transform", "q": "Wij zien Anna.", "instruction": "Make it perfect tense", "answers": ["Wij hebben Anna gezien", "We hebben Anna gezien"] },
+        { "type": "order", "answer": "Ik heb gisteren een brief geschreven.", "alt": ["Gisteren heb ik een brief geschreven."], "en": "Yesterday I wrote a letter." },
+        { "type": "order", "answer": "Heb je goed geslapen?", "en": "Did you sleep well?" },
+        { "type": "translate", "en": "I drank a lot of water.", "answers": ["Ik heb veel water gedronken"] },
+        { "type": "translate", "en": "Did you see Tom?", "answers": ["Heb je Tom gezien", "Heb jij Tom gezien", "Hebt u Tom gezien", "Heeft u Tom gezien"] },
+        { "type": "match", "pairs": [["eten", "gegeten"], ["nemen", "genomen"], ["geven", "gegeven"], ["spreken", "gesproken"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: voltooide tijd (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuvoltooidetijd/" },
+        { "title": "Woordenlijst Nederlandse Taal: check any verb form", "url": "https://woordenlijst.org/" }
+      ]
+    },
+    {
+      "id": "a2.g02.l3", "title": "Irregular participles: thinking and moving", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Here are more irregular participles. A few end in **-cht** (*gekocht, gebracht, gedacht, gezocht*). Remember that **gaan, komen, blijven, worden, beginnen, vertrekken** and **vallen** use **zijn**." },
+        { "type": "table", "head": ["infinitive", "participle", "infinitive", "participle"], "rows": [["vinden", "gevonden", "kopen", "gekocht"], ["brengen", "gebracht", "denken", "gedacht"], ["zoeken", "gezocht", "zeggen", "gezegd"], ["weten", "geweten", "krijgen", "gekregen"], ["houden", "gehouden", "lopen", "gelopen"], ["rijden", "gereden", "vliegen", "gevlogen"], ["kiezen", "gekozen", "winnen", "gewonnen"], ["laten", "gelaten", "trekken", "getrokken"]] },
+        { "type": "ex", "nl": "Ik heb een nieuwe fiets gekocht.", "en": "I bought a new bicycle." },
+        { "type": "ex", "nl": "De trein is net vertrokken.", "en": "The train has just left." },
+        { "type": "tip", "text": "*Lopen* and *rijden* are like *fietsen*: **hebben** for the activity (*Ik heb een uur gelopen*), **zijn** when there is a goal (*Ik ben naar huis gelopen*)." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik heb een nieuwe fiets ___. (kopen)", "options": ["gekocht", "gekoopt", "gekoopd"], "answer": 0 },
+        { "type": "choice", "q": "Participle of denken?", "options": ["gedacht", "gedenkt", "gedenkd"], "answer": 0 },
+        { "type": "choice", "q": "Participle of vinden?", "options": ["gevonden", "gevind", "gevinden"], "answer": 0 },
+        { "type": "gap", "text": "Heb je mijn sleutels ___? (vinden)", "answers": ["gevonden"], "en": "Did you find my keys?" },
+        { "type": "gap", "text": "Zij heeft een nieuwe baan ___. (krijgen)", "answers": ["gekregen"], "en": "She got a new job." },
+        { "type": "gap", "text": "Wij hebben de kinderen naar school ___. (brengen)", "answers": ["gebracht"], "en": "We took the children to school." },
+        { "type": "gap", "text": "Wat heb je ___? (zeggen)", "answers": ["gezegd"], "en": "What did you say?" },
+        { "type": "gap", "text": "Wij hebben een uur ___. (lopen)", "answers": ["gelopen"], "en": "We walked for an hour." },
+        { "type": "gap", "text": "Ik heb mijn bril overal ___. (zoeken)", "answers": ["gezocht"], "en": "I looked for my glasses everywhere." },
+        { "type": "gap", "text": "Wij ___ gisteren naar Arnhem gereden. (rijden)", "answers": ["zijn"], "en": "Yesterday we drove to Arnhem.", "explain": "There is a goal (naar Arnhem), so zijn." },
+        { "type": "gap", "text": "Hij is van de trap ___. (vallen)", "answers": ["gevallen"], "en": "He fell down the stairs." },
+        { "type": "gap", "text": "De les is om negen uur ___. (beginnen)", "answers": ["begonnen"], "en": "The lesson started at nine." },
+        { "type": "transform", "q": "Ik koop een jas.", "instruction": "Make it perfect tense", "answers": ["Ik heb een jas gekocht"] },
+        { "type": "transform", "q": "Hij weet het niet.", "instruction": "Make it perfect tense", "answers": ["Hij heeft het niet geweten"] },
+        { "type": "transform", "q": "De trein vertrekt.", "instruction": "Make it perfect tense", "answers": ["De trein is vertrokken"] },
+        { "type": "order", "answer": "Wij zijn gisteren naar Arnhem gereden.", "alt": ["Gisteren zijn wij naar Arnhem gereden."], "en": "Yesterday we drove to Arnhem." },
+        { "type": "order", "answer": "Ik heb mijn sleutels niet gevonden.", "en": "I did not find my keys." },
+        { "type": "translate", "en": "I bought a bicycle.", "answers": ["Ik heb een fiets gekocht"] },
+        { "type": "translate", "en": "What did you say?", "answers": ["Wat heb je gezegd", "Wat heb jij gezegd", "Wat hebt u gezegd", "Wat heeft u gezegd"] },
+        { "type": "match", "pairs": [["kopen", "gekocht"], ["brengen", "gebracht"], ["denken", "gedacht"], ["zoeken", "gezocht"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: voltooide tijd (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuvoltooidetijd/" },
+        { "title": "Woordenlijst Nederlandse Taal: check any verb form", "url": "https://woordenlijst.org/" }
+      ]
+    },
+    {
+      "id": "a2.g02.l4", "title": "Prefixes: ge- or not?", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Verbs with an **unstressed prefix** (**be-, ge-, her-, ont-, ver-, er-**) get **no ge-** in the participle: *betalen → betaald*, *vertellen → verteld*, *ontmoeten → ontmoet*, *bezoeken → bezocht*. The same -t/-d rule applies." },
+        { "type": "p", "text": "A **separable verb** puts **ge-** between the prefix and the verb: *opbellen → opgebeld*, *meenemen → meegenomen*, *uitnodigen → uitgenodigd*. Verbs ending in **-eren** do take ge-: *studeren → gestudeerd*." },
+        { "type": "table", "head": ["infinitive", "participle", "type"], "rows": [["betalen", "betaald", "be-"], ["vertellen", "verteld", "ver-"], ["ontmoeten", "ontmoet", "ont-"], ["opbellen", "opgebeld", "separable"], ["meenemen", "meegenomen", "separable"], ["opstaan", "opgestaan (is)", "separable"], ["studeren", "gestudeerd", "-eren"]] },
+        { "type": "ex", "nl": "Ik heb de rekening betaald.", "en": "I paid the bill." },
+        { "type": "ex", "nl": "Zij heeft ons uitgenodigd.", "en": "She invited us." },
+        { "type": "tip", "text": "In the sentence the separable verb is one word again at the end: *Ik heb mijn zus opgebeld.*" }
+      ],
+      "items": [
+        { "type": "choice", "q": "Participle of betalen?", "options": ["betaald", "gebetaald", "betaalt"], "answer": 0 },
+        { "type": "choice", "q": "Participle of vertellen?", "options": ["verteld", "geverteld", "vertelt"], "answer": 0 },
+        { "type": "choice", "q": "Participle of opbellen?", "options": ["opgebeld", "gebeld op", "geopbeld"], "answer": 0 },
+        { "type": "choice", "q": "Participle of studeren?", "options": ["gestudeerd", "studeerd", "gestudeert"], "answer": 0 },
+        { "type": "gap", "text": "Ik heb de rekening ___. (betalen)", "answers": ["betaald"], "en": "I paid the bill." },
+        { "type": "gap", "text": "Zij heeft de tekst ___. (vertalen)", "answers": ["vertaald"], "en": "She translated the text." },
+        { "type": "gap", "text": "Ik heb mijn vrienden gisteren ___. (ontmoeten)", "answers": ["ontmoet"], "en": "I met my friends yesterday." },
+        { "type": "gap", "text": "Hij heeft mij alles ___. (vertellen)", "answers": ["verteld"], "en": "He told me everything." },
+        { "type": "gap", "text": "Ik heb mijn oma ___. (opbellen)", "answers": ["opgebeld"], "en": "I phoned my grandmother." },
+        { "type": "gap", "text": "Zij hebben ons ___. (uitnodigen)", "answers": ["uitgenodigd"], "en": "They invited us." },
+        { "type": "gap", "text": "Wij hebben veel boeken ___. (meenemen)", "answers": ["meegenomen"], "en": "We brought a lot of books." },
+        { "type": "gap", "text": "Ik ben vroeg ___. (opstaan)", "answers": ["opgestaan"], "en": "I got up early." },
+        { "type": "gap", "text": "Zij heeft een jaar in Leiden ___. (studeren)", "answers": ["gestudeerd"], "en": "She studied in Leiden for a year." },
+        { "type": "transform", "q": "Ik bel mijn zus op.", "instruction": "Make it perfect tense", "answers": ["Ik heb mijn zus opgebeld"] },
+        { "type": "transform", "q": "Wij nemen een boek mee.", "instruction": "Make it perfect tense", "answers": ["Wij hebben een boek meegenomen", "We hebben een boek meegenomen"] },
+        { "type": "transform", "q": "Zij betaalt de rekening.", "instruction": "Make it perfect tense", "answers": ["Zij heeft de rekening betaald", "Ze heeft de rekening betaald"] },
+        { "type": "order", "answer": "Ik heb mijn zus opgebeld.", "en": "I phoned my sister." },
+        { "type": "order", "answer": "Zij heeft een jaar in Leiden gestudeerd.", "alt": ["Een jaar heeft zij in Leiden gestudeerd."], "en": "She studied in Leiden for a year." },
+        { "type": "translate", "en": "I paid the bill.", "answers": ["Ik heb de rekening betaald"] },
+        { "type": "translate", "en": "He invited us.", "answers": ["Hij heeft ons uitgenodigd"] },
+        { "type": "match", "pairs": [["betalen", "betaald"], ["vertellen", "verteld"], ["bezoeken", "bezocht"], ["begrijpen", "begrepen"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: voltooide tijd (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuvoltooidetijd/" },
+        { "title": "NT2 TaalMenu: werkwoorden met prefix (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-werkwoorden-met-prefix/" }
+      ]
+    },
+    {
+      "id": "a2.g02.l5", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Wij ___ gisteren naar het strand gegaan.", "options": ["zijn", "hebben", "heeft"], "answer": 0 },
+        { "type": "choice", "q": "Ik ___ gisteren een boek gelezen.", "options": ["heb", "ben", "is"], "answer": 0 },
+        { "type": "choice", "q": "Which participle is correct?", "options": ["Ik heb mijn moeder gebeld.", "Ik heb mijn moeder gebelt.", "Ik heb mijn moeder gebellen."], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Hij is te laat gekomen.", "Hij heeft te laat gekomen.", "Hij is gekomen te laat."], "answer": 0 },
+        { "type": "gap", "text": "Wat ___ je gisteren gedaan?", "answers": ["heb"], "en": "What did you do yesterday?" },
+        { "type": "gap", "text": "Zij ___ ziek geworden.", "answers": ["is"], "en": "She became ill." },
+        { "type": "gap", "text": "Ik heb een brief ___. (ontvangen)", "answers": ["ontvangen"], "en": "I received a letter.", "explain": "No ge- after the prefix ont-." },
+        { "type": "gap", "text": "Hij heeft het antwoord ___. (weten)", "answers": ["geweten"], "en": "He knew the answer." },
+        { "type": "gap", "text": "Wij hebben de hele avond ___. (praten)", "answers": ["gepraat"], "en": "We talked all evening." },
+        { "type": "gap", "text": "Zij is vorige week naar Spanje ___. (vliegen)", "answers": ["gevlogen"], "en": "She flew to Spain last week." },
+        { "type": "gap", "text": "Hebben jullie het museum ___? (bezoeken)", "answers": ["bezocht"], "en": "Did you visit the museum?" },
+        { "type": "gap", "text": "Ik heb een kaartje ___. (kopen)", "answers": ["gekocht"], "en": "I bought a ticket." },
+        { "type": "transform", "q": "Ik ga naar school.", "instruction": "Make it perfect tense", "answers": ["Ik ben naar school gegaan"] },
+        { "type": "transform", "q": "Wij drinken thee.", "instruction": "Make it perfect tense", "answers": ["Wij hebben thee gedronken", "We hebben thee gedronken"] },
+        { "type": "transform", "q": "Zij nodigt ons uit.", "instruction": "Make it perfect tense", "answers": ["Zij heeft ons uitgenodigd", "Ze heeft ons uitgenodigd"] },
+        { "type": "transform", "q": "Hij blijft thuis.", "instruction": "Make it perfect tense", "answers": ["Hij is thuis gebleven"] },
+        { "type": "order", "answer": "Wij zijn gisteren naar het strand gegaan.", "alt": ["Gisteren zijn wij naar het strand gegaan."], "en": "Yesterday we went to the beach." },
+        { "type": "order", "answer": "Ik heb vandaag nog niets gegeten.", "en": "I have not eaten anything yet today." },
+        { "type": "order", "answer": "Heb je mijn brief gekregen?", "en": "Did you get my letter?" },
+        { "type": "translate", "en": "She has bought a new coat.", "answers": ["Zij heeft een nieuwe jas gekocht", "Ze heeft een nieuwe jas gekocht"] },
+        { "type": "translate", "en": "We saw the film last night.", "answers": ["Wij hebben gisteravond de film gezien", "We hebben gisteravond de film gezien", "Gisteravond hebben wij de film gezien", "Gisteravond hebben we de film gezien"] },
+        { "type": "translate", "en": "He came to our house.", "answers": ["Hij is naar ons huis gekomen", "Hij is bij ons thuis gekomen", "Hij is bij ons gekomen"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: voltooide tijd (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuvoltooidetijd/" }
+      ]
+    }
+  ]
+}

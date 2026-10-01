@@ -64,5 +64,10 @@
   {"id":"sportief","nl":"sportief","en":"sporty","pos":"adj","lvl":"A2","topic":"leisure_media","ex":"Zij is heel sportief.","exEn":"She is very sporty."},
   {"id":"uitverkocht","nl":"uitverkocht","en":"sold out","pos":"adj","lvl":"A2","topic":"leisure_media","ex":"De wedstrijd is uitverkocht.","exEn":"The match is sold out."},
   {"id":"digitaal","nl":"digitaal","en":"digital","pos":"adj","lvl":"A2","topic":"leisure_media","ex":"Ik heb een digitaal abonnement.","exEn":"I have a digital subscription."},
-  {"id":"populair","nl":"populair","en":"popular","pos":"adj","lvl":"A2","topic":"leisure_media","ex":"Dit liedje is populair.","exEn":"This song is popular."}
+  {"id":"populair","nl":"populair","en":"popular","pos":"adj","lvl":"A2","topic":"leisure_media","ex":"Dit liedje is populair.","exEn":"This song is popular."},
+  {"id":"plezier","nl":"plezier","en":"fun, pleasure","pos":"noun","lvl":"A2","topic":"leisure_media","art":"het","pl":"-","ex":"Veel plezier op het feest!","exEn":"Have fun at the party!"},
+  {"id":"lid","nl":"lid","en":"member","pos":"noun","lvl":"A2","topic":"leisure_media","art":"het","pl":"leden","ex":"Ik ben lid van een sportclub.","exEn":"I am a member of a sports club."},
+  {"id":"trainer","nl":"trainer","en":"coach, trainer","pos":"noun","lvl":"A2","topic":"leisure_media","art":"de","pl":"trainers","ex":"De trainer legt de oefening uit.","exEn":"The coach explains the exercise."},
+  {"id":"spelletje","nl":"spelletje","en":"(little) game","pos":"noun","lvl":"A2","topic":"leisure_media","art":"het","pl":"spelletjes","ex":"De kinderen spelen een spelletje.","exEn":"The children play a game."},
+  {"id":"opening","nl":"opening","en":"opening","pos":"noun","lvl":"A2","topic":"leisure_media","art":"de","pl":"openingen","ex":"De opening van het museum is zaterdag.","exEn":"The opening of the museum is on Saturday."}
 ]

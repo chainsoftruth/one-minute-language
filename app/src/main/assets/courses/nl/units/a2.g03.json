@@ -1,0 +1,173 @@
+{
+  "id": "a2.g03", "level": "A2", "kind": "grammar",
+  "title": "Simple past",
+  "subtitle": "werkte, woonde, liep, was, had, kon: stories and descriptions in the past",
+  "lessons": [
+    {
+      "id": "a2.g03.l1", "title": "Regular verbs: -te and -de", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "The **simple past** (*verleden tijd*) of a regular verb is the **stem + -te** or **stem + -de**. Use the same 't kofschip rule as for the participle: the letter before *-en* is t, k, f, s, ch or p → **-te**; any other letter → **-de**." },
+        { "type": "table", "head": ["infinitive", "singular (ik, jij, hij)", "plural (wij, jullie, zij)"], "rows": [["werken", "werkte", "werkten"], ["koken", "kookte", "kookten"], ["wonen", "woonde", "woonden"], ["spelen", "speelde", "speelden"], ["leven", "leefde", "leefden"], ["reizen", "reisde", "reisden"]] },
+        { "type": "ex", "nl": "Ik werkte vroeger in een restaurant.", "en": "I used to work in a restaurant." },
+        { "type": "ex", "nl": "Wij woonden drie jaar in Delft.", "en": "We lived in Delft for three years." },
+        { "type": "tip", "text": "In the **singular** all persons have the same form (*ik, jij, hij werkte*). In the **plural** add **-n** (*wij werkten*). If the stem already ends in **t** or **d**: *wachten → wachtte(n)*, *antwoorden → antwoordde(n)*." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik ___ gisteren de hele dag. (werken)", "options": ["werkte", "werkde", "werkten"], "answer": 0, "explain": "The k of werken is in 't kofschip: -te." },
+        { "type": "choice", "q": "Wij ___ vroeger in Utrecht. (wonen)", "options": ["woonden", "woonde", "woonten"], "answer": 0 },
+        { "type": "choice", "q": "Hij ___ lang op de trein. (wachten)", "options": ["wachtte", "wachtde", "wachte"], "answer": 0, "explain": "The stem wacht ends in t, so add -te." },
+        { "type": "gap", "text": "Mijn moeder ___ gisteren soep. (koken)", "answers": ["kookte"], "en": "My mother cooked soup yesterday." },
+        { "type": "gap", "text": "Wij ___ elke dag in de tuin. (werken)", "answers": ["werkten"], "en": "We worked in the garden every day." },
+        { "type": "gap", "text": "Ik ___ als kind in Rotterdam. (wonen)", "answers": ["woonde"], "en": "As a child I lived in Rotterdam." },
+        { "type": "gap", "text": "De kinderen ___ buiten. (spelen)", "answers": ["speelden"], "en": "The children played outside." },
+        { "type": "gap", "text": "Hij ___ vroeger veel. (reizen)", "answers": ["reisde"], "en": "He used to travel a lot." },
+        { "type": "gap", "text": "Ik ___ niet. (antwoorden)", "answers": ["antwoordde"], "en": "I did not answer." },
+        { "type": "gap", "text": "Wij ___ op de bus. (wachten)", "answers": ["wachtten"], "en": "We waited for the bus." },
+        { "type": "transform", "q": "Ik werk in een winkel.", "instruction": "Make it past tense", "answers": ["Ik werkte in een winkel"] },
+        { "type": "transform", "q": "Wij wonen in Delft.", "instruction": "Make it past tense", "answers": ["Wij woonden in Delft", "We woonden in Delft"] },
+        { "type": "transform", "q": "Zij speelt buiten.", "instruction": "Make it past tense", "answers": ["Zij speelde buiten", "Ze speelde buiten"] },
+        { "type": "order", "answer": "Ik werkte vroeger in een restaurant.", "alt": ["Vroeger werkte ik in een restaurant."], "en": "I used to work in a restaurant." },
+        { "type": "order", "answer": "De kinderen speelden de hele middag buiten.", "en": "The children played outside all afternoon." },
+        { "type": "order", "answer": "Wij woonden drie jaar in Delft.", "en": "We lived in Delft for three years." },
+        { "type": "translate", "en": "I lived in Rotterdam as a child.", "answers": ["Ik woonde als kind in Rotterdam", "Als kind woonde ik in Rotterdam"] },
+        { "type": "translate", "en": "We waited for the bus.", "answers": ["Wij wachtten op de bus", "We wachtten op de bus"] },
+        { "type": "match", "pairs": [["werken", "werkte"], ["wonen", "woonde"], ["spelen", "speelde"], ["leven", "leefde"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: verleden tijd (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuverledentijd/" }
+      ]
+    },
+    {
+      "id": "a2.g03.l2", "title": "Strong verbs: liep, at, dronk", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "**Strong verbs** change their vowel in the past: *lopen → liep*. There are no endings in the singular (*ik liep, hij liep*). In the plural add **-en** (*wij liepen*). Often the vowel also changes between singular and plural: *ik at, wij aten*; *ik las, wij lazen*." },
+        { "type": "table", "head": ["infinitive", "singular", "plural", "infinitive", "singular", "plural"], "rows": [["eten", "at", "aten", "lezen", "las", "lazen"], ["drinken", "dronk", "dronken", "schrijven", "schreef", "schreven"], ["zien", "zag", "zagen", "nemen", "nam", "namen"], ["geven", "gaf", "gaven", "slapen", "sliep", "sliepen"], ["zitten", "zat", "zaten", "staan", "stond", "stonden"], ["lopen", "liep", "liepen", "vinden", "vond", "vonden"]] },
+        { "type": "ex", "nl": "Gisteren at ik een broodje met kaas.", "en": "Yesterday I ate a cheese sandwich." },
+        { "type": "ex", "nl": "Wij aten laat en wij dronken thee.", "en": "We ate late and drank tea." },
+        { "type": "tip", "text": "Some verbs have a mix: *kopen → kocht(en)*, *denken → dacht(en)*, *brengen → bracht(en)*, *weten → wist(en)*. They look regular but have a different vowel or consonant. Learn them as pairs." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Gisteren ___ ik een broodje. (eten)", "options": ["at", "eette", "aten"], "answer": 0 },
+        { "type": "choice", "q": "Wij ___ gisteren thee. (drinken)", "options": ["dronken", "dronk", "dronkten"], "answer": 0, "explain": "The plural ends in -en." },
+        { "type": "choice", "q": "Past tense of zien (ik)?", "options": ["zag", "zeeg", "zien"], "answer": 0 },
+        { "type": "gap", "text": "Hij ___ zijn vriend op het station. (zien)", "answers": ["zag"], "en": "He saw his friend at the station." },
+        { "type": "gap", "text": "Ik ___ een brief aan mijn oma. (schrijven)", "answers": ["schreef"], "en": "I wrote a letter to my grandmother." },
+        { "type": "gap", "text": "Mijn zus ___ een nieuwe jas. (kopen)", "answers": ["kocht"], "en": "My sister bought a new coat." },
+        { "type": "gap", "text": "Wij ___ lang in de rij. (staan)", "answers": ["stonden"], "en": "We stood in the queue for a long time." },
+        { "type": "gap", "text": "De baby ___ de hele nacht. (slapen)", "answers": ["sliep"], "en": "The baby slept all night." },
+        { "type": "gap", "text": "Ik ___ het antwoord niet. (weten)", "answers": ["wist"], "en": "I did not know the answer." },
+        { "type": "gap", "text": "Wij ___ naar huis. (lopen)", "answers": ["liepen"], "en": "We walked home." },
+        { "type": "gap", "text": "Hij ___ een brief van de gemeente. (krijgen)", "answers": ["kreeg"], "en": "He got a letter from the council." },
+        { "type": "transform", "q": "Ik eet een appel.", "instruction": "Make it past tense", "answers": ["Ik at een appel"] },
+        { "type": "transform", "q": "Wij drinken koffie.", "instruction": "Make it past tense", "answers": ["Wij dronken koffie", "We dronken koffie"] },
+        { "type": "transform", "q": "Zij leest een boek.", "instruction": "Make it past tense", "answers": ["Zij las een boek", "Ze las een boek"] },
+        { "type": "order", "answer": "Gisteren at ik een broodje met kaas.", "alt": ["Ik at gisteren een broodje met kaas."], "en": "Yesterday I ate a cheese sandwich." },
+        { "type": "order", "answer": "Wij dronken koffie in de tuin.", "en": "We drank coffee in the garden." },
+        { "type": "order", "answer": "Hij gaf mij een mooi cadeau.", "en": "He gave me a nice present." },
+        { "type": "translate", "en": "My sister bought a new bicycle.", "answers": ["Mijn zus kocht een nieuwe fiets"] },
+        { "type": "translate", "en": "We saw a nice film.", "answers": ["Wij zagen een leuke film", "We zagen een leuke film", "Wij zagen een mooie film", "We zagen een mooie film"] },
+        { "type": "match", "pairs": [["eten", "at"], ["zien", "zag"], ["lezen", "las"], ["geven", "gaf"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: verleden tijd (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuverledentijd/" },
+        { "title": "Woordenlijst Nederlandse Taal: check any verb form", "url": "https://woordenlijst.org/" }
+      ]
+    },
+    {
+      "id": "a2.g03.l3", "title": "was, had, kon, moest", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "These very common verbs are almost always used in the simple past, even in speech: **zijn → was/waren**, **hebben → had/hadden**, and the modals **kunnen → kon/konden**, **moeten → moest/moesten**, **willen → wilde(n) / wou(den)**, **mogen → mocht(en)**. Also **gaan → ging/gingen**, **komen → kwam/kwamen**, **doen → deed/deden**, **zeggen → zei/zeiden**." },
+        { "type": "table", "head": ["infinitive", "singular", "plural"], "rows": [["zijn", "was", "waren"], ["hebben", "had", "hadden"], ["kunnen", "kon", "konden"], ["moeten", "moest", "moesten"], ["willen", "wilde / wou", "wilden / wouden"], ["mogen", "mocht", "mochten"], ["gaan", "ging", "gingen"], ["komen", "kwam", "kwamen"]] },
+        { "type": "ex", "nl": "Gisteren was ik ziek en ik kon niet werken.", "en": "Yesterday I was ill and could not work." },
+        { "type": "ex", "nl": "Wij hadden vroeger een grote tuin.", "en": "We used to have a big garden." },
+        { "type": "tip", "text": "A modal stays in the second place and the infinitive goes to the end: *Ik moest gisteren werken.*" }
+      ],
+      "items": [
+        { "type": "choice", "q": "Gisteren ___ ik ziek. (zijn)", "options": ["was", "waren", "ben"], "answer": 0 },
+        { "type": "choice", "q": "Wij ___ vroeger een hond. (hebben)", "options": ["hadden", "had", "hebben"], "answer": 0 },
+        { "type": "choice", "q": "De kinderen ___ gisteren naar school. (gaan)", "options": ["gingen", "ging", "gegaan"], "answer": 0 },
+        { "type": "gap", "text": "Ik ___ gisteren niet komen. (kunnen)", "answers": ["kon"], "en": "Yesterday I could not come." },
+        { "type": "gap", "text": "Wij ___ vorige week thuis blijven. (moeten)", "answers": ["moesten"], "en": "Last week we had to stay at home." },
+        { "type": "gap", "text": "Ik ___ naar de markt gaan, maar het regende. (willen)", "answers": ["wilde", "wou"], "en": "I wanted to go to the market, but it was raining.", "explain": "Wilde and wou are both correct." },
+        { "type": "gap", "text": "Hij ___ vroeger niet roken in huis. (mogen)", "answers": ["mocht"], "en": "He was not allowed to smoke in the house." },
+        { "type": "gap", "text": "Ze ___ dat ze moe was. (zeggen)", "answers": ["zei"], "en": "She said that she was tired." },
+        { "type": "gap", "text": "Wij ___ om zeven uur thuis. (komen)", "answers": ["kwamen"], "en": "We came home at seven o'clock." },
+        { "type": "gap", "text": "Het ___ koud. (zijn)", "answers": ["was"], "en": "It was cold." },
+        { "type": "transform", "q": "Ik heb geen tijd.", "instruction": "Make it past tense", "answers": ["Ik had geen tijd"] },
+        { "type": "transform", "q": "Wij kunnen niet komen.", "instruction": "Make it past tense", "answers": ["Wij konden niet komen", "We konden niet komen"] },
+        { "type": "transform", "q": "Hij moet werken.", "instruction": "Make it past tense", "answers": ["Hij moest werken"] },
+        { "type": "order", "answer": "Ik was gisteren ziek.", "alt": ["Gisteren was ik ziek."], "en": "I was ill yesterday." },
+        { "type": "order", "answer": "Wij hadden vroeger een grote tuin.", "alt": ["Vroeger hadden wij een grote tuin."], "en": "We used to have a big garden." },
+        { "type": "order", "answer": "De kinderen konden niet slapen.", "en": "The children could not sleep." },
+        { "type": "translate", "en": "I had no time.", "answers": ["Ik had geen tijd"] },
+        { "type": "translate", "en": "We could not come.", "answers": ["Wij konden niet komen", "We konden niet komen"] },
+        { "type": "translate", "en": "They were at home.", "answers": ["Zij waren thuis", "Ze waren thuis", "Zij waren thuis"] },
+        { "type": "match", "pairs": [["zijn", "was"], ["hebben", "had"], ["kunnen", "kon"], ["moeten", "moest"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: verleden tijd (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuverledentijd/" }
+      ]
+    },
+    {
+      "id": "a2.g03.l4", "title": "Past or perfect?", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Dutch uses both tenses and the difference is small. A simple rule that works: use the **perfect** for a **single finished event** in conversation (*Gisteren heb ik gewerkt*). Use the **simple past** to **describe** a situation, to tell a **story**, for **habits** in the past, and for **was, had** and the **modals**." },
+        { "type": "table", "head": ["", "perfect", "simple past"], "rows": [["one event", "Ik heb gisteren een boek gelezen.", ""], ["description", "", "Het was koud en het regende."], ["habit", "", "Vroeger fietste ik elke dag."], ["was / had / modals", "", "Ik had geen tijd. Ik kon niet komen."]] },
+        { "type": "ex", "nl": "Vroeger gingen wij elke zomer naar Spanje.", "en": "We used to go to Spain every summer." },
+        { "type": "ex", "nl": "Gisteren ben ik naar de markt gegaan. Het was druk.", "en": "Yesterday I went to the market. It was busy." },
+        { "type": "tip", "text": "Do not mix tenses without a reason. In a short story keep one tense: *Ik stond op, ik ontbeet en ik ging naar mijn werk.*" }
+      ],
+      "items": [
+        { "type": "choice", "q": "Vroeger ___ wij elke zomer naar Spanje. (gaan)", "options": ["gingen", "zijn gegaan", "ging"], "answer": 0, "explain": "A habit in the past uses the simple past." },
+        { "type": "choice", "q": "A single finished event, in conversation:", "options": ["Ik heb gisteren een boek gelezen.", "Ik las gisteren een boek gelezen.", "Ik heb gisteren een boek las."], "answer": 0 },
+        { "type": "choice", "q": "A description: Het ___ koud. (zijn)", "options": ["was", "is geweest", "heeft"], "answer": 0 },
+        { "type": "gap", "text": "Toen ik jong was, ___ ik veel. (lezen)", "answers": ["las"], "en": "When I was young, I read a lot." },
+        { "type": "gap", "text": "Gisteren ___ ik geen tijd. (hebben)", "answers": ["had"], "en": "Yesterday I had no time." },
+        { "type": "gap", "text": "Wij ___ vroeger in een klein dorp. (wonen)", "answers": ["woonden"], "en": "We used to live in a small village." },
+        { "type": "gap", "text": "Gisteren ___ ik naar de bakker gegaan. (zijn)", "answers": ["ben"], "en": "Yesterday I went to the baker." },
+        { "type": "gap", "text": "Het was druk en ik ___ geen plaats vinden. (kunnen)", "answers": ["kon"], "en": "It was busy and I could not find a seat." },
+        { "type": "transform", "q": "Ik heb geen tijd.", "instruction": "Describe it in the past", "answers": ["Ik had geen tijd"] },
+        { "type": "transform", "q": "Ik fiets elke dag.", "instruction": "Say: In the past I did this every day", "answers": ["Vroeger fietste ik elke dag", "Ik fietste vroeger elke dag"] },
+        { "type": "transform", "q": "Ik lees een boek.", "instruction": "One finished event: perfect tense", "answers": ["Ik heb een boek gelezen"] },
+        { "type": "order", "answer": "Het was koud en het regende.", "en": "It was cold and it was raining." },
+        { "type": "order", "answer": "Vroeger fietste ik elke dag naar school.", "alt": ["Ik fietste vroeger elke dag naar school."], "en": "I used to cycle to school every day." },
+        { "type": "order", "answer": "Gisteren heb ik de hele dag gewerkt.", "alt": ["Ik heb gisteren de hele dag gewerkt."], "en": "I worked all day yesterday." },
+        { "type": "translate", "en": "When I was a child, we lived in a small house.", "answers": ["Toen ik een kind was, woonden wij in een klein huis", "Toen ik een kind was, woonden we in een klein huis", "Toen ik klein was, woonden wij in een klein huis", "Toen ik klein was, woonden we in een klein huis", "Als kind woonden wij in een klein huis", "Als kind woonden we in een klein huis"] },
+        { "type": "translate", "en": "Yesterday I was tired and I could not sleep.", "answers": ["Gisteren was ik moe en ik kon niet slapen", "Gisteren was ik moe en kon ik niet slapen"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: verleden tijd (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuverledentijd/" }
+      ]
+    },
+    {
+      "id": "a2.g03.l5", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Mijn vader ___ in een fabriek. (werken)", "options": ["werkte", "werkde", "werkten"], "answer": 0 },
+        { "type": "choice", "q": "Wij ___ een film. (zien)", "options": ["zagen", "zag", "zeegen"], "answer": 0 },
+        { "type": "choice", "q": "De buren ___ lawaai. (maken)", "options": ["maakten", "maakte", "maakden"], "answer": 0 },
+        { "type": "choice", "q": "Ik ___ geen geld. (hebben)", "options": ["had", "hadden", "heb"], "answer": 0 },
+        { "type": "gap", "text": "Mijn moeder ___ lang op de bus. (wachten)", "answers": ["wachtte"], "en": "My mother waited a long time for the bus." },
+        { "type": "gap", "text": "Wij ___ gisteren naar het museum. (gaan)", "answers": ["gingen"], "en": "We went to the museum yesterday." },
+        { "type": "gap", "text": "De kinderen ___ om acht uur naar bed. (gaan)", "answers": ["gingen"], "en": "The children went to bed at eight." },
+        { "type": "gap", "text": "Ik ___ gisteren te laat. (komen)", "answers": ["kwam"], "en": "I came late yesterday." },
+        { "type": "gap", "text": "Hij ___ niet naar de les komen. (willen)", "answers": ["wilde", "wou"], "en": "He did not want to come to the lesson." },
+        { "type": "gap", "text": "Wat ___ je daar? (doen)", "answers": ["deed"], "en": "What were you doing there?" },
+        { "type": "gap", "text": "Ik ___ mijn sleutels niet vinden. (kunnen)", "answers": ["kon"], "en": "I could not find my keys." },
+        { "type": "gap", "text": "Zij ___ elke zomer in Frankrijk. (zijn)", "answers": ["waren"], "en": "They were in France every summer.", "explain": "Zij is plural here, so waren." },
+        { "type": "transform", "q": "Ik ben ziek.", "instruction": "Make it past tense", "answers": ["Ik was ziek"] },
+        { "type": "transform", "q": "Zij wonen in Eindhoven.", "instruction": "Make it past tense", "answers": ["Zij woonden in Eindhoven", "Ze woonden in Eindhoven"] },
+        { "type": "transform", "q": "Wij moeten vroeg opstaan.", "instruction": "Make it past tense", "answers": ["Wij moesten vroeg opstaan", "We moesten vroeg opstaan"] },
+        { "type": "transform", "q": "Hij schrijft een lange brief.", "instruction": "Make it past tense", "answers": ["Hij schreef een lange brief"] },
+        { "type": "order", "answer": "Wij gingen gisteren naar het museum.", "alt": ["Gisteren gingen wij naar het museum."], "en": "We went to the museum yesterday." },
+        { "type": "order", "answer": "Ik kon mijn sleutels niet vinden.", "en": "I could not find my keys." },
+        { "type": "order", "answer": "De buren maakten veel lawaai.", "en": "The neighbours made a lot of noise." },
+        { "type": "translate", "en": "He read the newspaper every morning.", "answers": ["Hij las elke ochtend de krant", "Hij las elke morgen de krant", "Elke ochtend las hij de krant"] },
+        { "type": "translate", "en": "We were at home and we watched television.", "answers": ["Wij waren thuis en keken televisie", "Wij waren thuis en wij keken televisie", "We waren thuis en we keken televisie", "We waren thuis en keken televisie", "Wij waren thuis en we keken televisie"] },
+        { "type": "translate", "en": "I wanted to call you, but I had no time.", "answers": ["Ik wilde je bellen, maar ik had geen tijd", "Ik wou je bellen, maar ik had geen tijd", "Ik wilde je opbellen, maar ik had geen tijd", "Ik wilde jou bellen, maar ik had geen tijd"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: verleden tijd (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuverledentijd/" }
+      ]
+    }
+  ]
+}

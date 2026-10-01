@@ -1,0 +1,136 @@
+{
+  "id": "a2.t01", "level": "A2", "kind": "theme",
+  "title": "Housing & neighbours",
+  "subtitle": "Read an advert and a letter from your landlord, report a problem and write an email",
+  "lessons": [
+    {
+      "id": "a2.t01.l1", "title": "Renting a home", "kind": "vocab",
+      "vocab": [
+        "huurcontract", "borg", "huurwoning", "koopwoning", "rijtjeshuis", "schuur", "hal", "wijk", "postcode", "verhuiswagen", "doos",
+        "huisbaas", "kamergenoot", "huisgenoot", "inrichting", "meubel", "gemeubileerd", "verhuurd", "verwarmd", "brievenbus",
+        "deurbel", "energierekening", "gas", "elektriciteit"
+      ]
+    },
+    {
+      "id": "a2.t01.l2", "title": "Repairs and problems", "kind": "vocab",
+      "vocab": [
+        "kraan", "radiator", "verwarming", "cv_ketel", "stopcontact", "storing", "lekkage", "schimmel", "reparatie", "klus", "onderhoud",
+        "kapot", "overlast", "lawaai", "afval", "vuilnisbak", "stofzuiger", "droger", "vaatwasser", "magnetron", "vriezer", "repareren"
+      ]
+    },
+    {
+      "id": "a2.t01.l3", "title": "A flat to rent", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "A rental advert lists facts: where, how big, what is included and the rules. Look for the price, the deposit and what you have to do to see the flat. Tap a word you don't know." }
+      ],
+      "text": "Te huur: ruim appartement in Utrecht. Het appartement ligt in een rustige wijk, vlak bij het station en de supermarkt. Het is gemeubileerd en heeft twee slaapkamers, een grote woonkamer en een keuken met een vaatwasser en een magnetron. Er is ook een balkon en er is een kleine berging in de kelder. De huur is 1150 euro per maand, met gas, water en elektriciteit erbij. U betaalt één maand borg. Het huurcontract is voor één jaar. Huisdieren zijn niet toegestaan en roken mag niet in de woning. Wilt u het appartement bekijken? Bel dan de huisbaas, meneer De Vries, na zes uur in de avond. U kunt ook een e-mail sturen. Neem een kopie van uw identiteitsbewijs mee. Wij hopen snel een leuke huurder te vinden!",
+      "items": [
+        { "type": "choice", "q": "Waar ligt het appartement?", "options": ["In een rustige wijk bij het station", "In het centrum van Amsterdam", "Naast een school"], "answer": 0, "en": "Where is the flat?" },
+        { "type": "choice", "q": "Wat staat er in de keuken?", "options": ["Een vaatwasser en een magnetron", "Een wasmachine en een droger", "Een vriezer en een kraan"], "answer": 0, "en": "What is in the kitchen?" },
+        { "type": "choice", "q": "Hoeveel kost de huur?", "options": ["1150 euro per maand, met gas, water en elektriciteit", "1150 euro per maand, zonder gas en water", "1050 euro per jaar"], "answer": 0, "en": "How much is the rent?" },
+        { "type": "choice", "q": "Wat is niet toegestaan?", "options": ["Een huisdier hebben", "Bezoek ontvangen", "Het balkon gebruiken"], "answer": 0, "en": "What is not allowed?" },
+        { "type": "choice", "q": "Wat moet je meenemen als je het appartement komt bekijken?", "options": ["Een kopie van je identiteitsbewijs", "De borg", "Een huurcontract"], "answer": 0, "en": "What must you bring to view the flat?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A2 menu (reading texts)", "url": "https://nt2taalmenu.nl/nt2-a2-menu/" }
+      ]
+    },
+    {
+      "id": "a2.t01.l4", "title": "A letter from the landlord", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "This is a formal letter. It uses *u* and ends with *Met vriendelijke groet*. Find out what is going to happen, when, and what the tenants must do." }
+      ],
+      "text": "Beste huurders, volgende week doet een monteur het onderhoud van de verwarming. Hij komt op dinsdag tussen negen en twaalf uur en hij moet in elk appartement kijken. Bent u dan niet thuis? Geef de sleutel dan aan de buren of breng hem naar mij. Zet geen spullen voor de radiator, zodat de monteur goed kan werken. Daarna is er twee uur geen warm water en de verwarming is dan ook uit. Hebt u een probleem met de verwarming, de kraan of het licht? Laat het mij dan snel weten. U kunt mij bellen of een e-mail sturen. Let ook op het afval: zet het in de vuilnisbak achter het huis en niet in de gang. Hartelijk dank voor uw hulp. Met vriendelijke groet, Peter de Vries",
+      "items": [
+        { "type": "choice", "q": "Wat doet de monteur volgende week?", "options": ["Hij controleert de verwarming", "Hij maakt de keuken schoon", "Hij repareert de deur"], "answer": 0, "en": "What does the repairman do next week?" },
+        { "type": "choice", "q": "Wanneer komt de monteur?", "options": ["Op dinsdagochtend", "Op dinsdagavond", "Op woensdag"], "answer": 0, "en": "When does the repairman come?" },
+        { "type": "choice", "q": "Wat moet je doen als je niet thuis bent?", "options": ["De sleutel aan de buren geven", "Een briefje op de deur hangen", "De huisbaas bellen"], "answer": 0, "en": "What must you do if you are not at home?" },
+        { "type": "choice", "q": "Hoe lang is er geen warm water?", "options": ["Twee uur", "Een hele dag", "Tien minuten"], "answer": 0, "en": "How long is there no hot water?" },
+        { "type": "choice", "q": "Waar moet het afval naartoe?", "options": ["In de vuilnisbak achter het huis", "In de gang", "Voor de deur"], "answer": 0, "en": "Where does the rubbish go?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: A2 menu (reading texts)", "url": "https://nt2taalmenu.nl/nt2-a2-menu/" }
+      ]
+    },
+    {
+      "id": "a2.t01.l5", "title": "A broken heater", "kind": "listening",
+      "dialogue": [
+        { "who": "A", "nl": "Met Peter de Vries.", "en": "Peter de Vries speaking." },
+        { "who": "B", "nl": "Goedemiddag, meneer De Vries. U spreekt met Sanne Bakker, van de Kerkstraat.", "en": "Good afternoon, Mr De Vries. This is Sanne Bakker, from Kerkstraat." },
+        { "who": "A", "nl": "Dag mevrouw Bakker. Wat kan ik voor u doen?", "en": "Hello Ms Bakker. What can I do for you?" },
+        { "who": "B", "nl": "De verwarming in mijn woonkamer is kapot. Het is al drie dagen koud in huis.", "en": "The heating in my living room is broken. It has been cold in the house for three days." },
+        { "who": "A", "nl": "Dat is vervelend. Hoort u een geluid of is de radiator gewoon koud?", "en": "That is annoying. Do you hear a noise, or is the radiator just cold?" },
+        { "who": "B", "nl": "Hij is helemaal koud. En de kraan in de keuken lekt ook een beetje.", "en": "It is completely cold. And the tap in the kitchen is also leaking a little." },
+        { "who": "A", "nl": "Ik stuur morgen een monteur. Bent u thuis?", "en": "I'll send a repairman tomorrow. Will you be at home?" },
+        { "who": "B", "nl": "Morgen werk ik tot vijf uur. Kan hij daarna komen?", "en": "Tomorrow I work until five. Can he come after that?" },
+        { "who": "A", "nl": "Prima, hij komt tussen vijf en zes uur.", "en": "Fine, he will come between five and six." },
+        { "who": "B", "nl": "Dank u wel. Tot morgen!", "en": "Thank you. See you tomorrow!" }
+      ],
+      "items": [
+        { "type": "listen", "nl": "De verwarming in mijn woonkamer is kapot.", "q": "What is broken?", "options": ["The heating", "The tap", "The light"], "answer": 0 },
+        { "type": "listen", "nl": "Het is al drie dagen koud in huis.", "q": "How long has it been cold?", "options": ["Three days", "Two days", "A week"], "answer": 0 },
+        { "type": "listen", "nl": "Ik stuur morgen een monteur.", "q": "What will the landlord do?", "options": ["Send a repairman tomorrow", "Come himself today", "Call back next week"], "answer": 0 },
+        { "type": "listen", "nl": "Morgen werk ik tot vijf uur.", "q": "What does she say about tomorrow?", "options": ["She works until five", "She is ill", "She is on holiday"], "answer": 0 },
+        { "type": "listen", "nl": "Bent u thuis?" },
+        { "type": "choice", "q": "Wat is het probleem?", "options": ["De verwarming is kapot en de kraan lekt", "De deur is kapot", "Het is te warm"], "answer": 0, "en": "What is the problem?" },
+        { "type": "choice", "q": "Wanneer komt de monteur?", "options": ["Morgen tussen vijf en zes uur", "Vandaag om twee uur", "Volgende week"], "answer": 0, "en": "When does the repairman come?" }
+      ],
+      "sources": [
+        { "title": "Taalklas: free Dutch video course", "url": "https://www.taalklas.nl/" }
+      ]
+    },
+    {
+      "id": "a2.t01.l6", "title": "Say it yourself", "kind": "speaking",
+      "dialogue": [
+        { "who": "A", "nl": "Goedemorgen! Bent u de nieuwe buurvrouw?", "en": "Good morning! Are you the new neighbour?" },
+        { "who": "B", "nl": "Ja, ik woon sinds vorige week in nummer acht. Ik ben Sanne.", "en": "Yes, I have lived at number eight since last week. I'm Sanne." },
+        { "who": "A", "nl": "Welkom in de straat! Ik ben Karin. Kan ik u ergens mee helpen?", "en": "Welcome to the street! I'm Karin. Can I help you with anything?" },
+        { "who": "B", "nl": "Ja, graag. Waar kan ik het afval neerzetten?", "en": "Yes, please. Where can I put the rubbish?" },
+        { "who": "A", "nl": "Achter het huis staat een grote vuilnisbak. Op dinsdag halen ze het afval op.", "en": "There is a big bin behind the house. They collect the rubbish on Tuesdays." },
+        { "who": "B", "nl": "En waar kan ik mijn fiets laten staan?", "en": "And where can I leave my bike?" },
+        { "who": "A", "nl": "In de schuur naast het huis. Hier is de sleutel.", "en": "In the shed next to the house. Here is the key." },
+        { "who": "B", "nl": "Dank u wel, dat is heel aardig.", "en": "Thank you, that is very kind." },
+        { "who": "A", "nl": "Graag gedaan. Als u iets nodig hebt, komt u maar langs.", "en": "You're welcome. If you need anything, just drop by." }
+      ],
+      "items": [
+        { "type": "speak", "nl": "Ik woon sinds vorige week in nummer acht.", "en": "I have lived at number eight since last week." },
+        { "type": "speak", "nl": "Waar kan ik mijn fiets laten staan?", "en": "Where can I leave my bike?" },
+        {
+          "type": "prompt",
+          "task": "Your heating is broken. Phone your landlord: say who you are, what is broken, how long it has been broken and when you are at home.",
+          "model": "Goedemiddag, met Sanne Bakker. De verwarming in mijn woonkamer is kapot. Het is al drie dagen koud in huis. Ik ben morgen na vijf uur thuis. Kunt u een monteur sturen?",
+          "seconds": 40,
+          "points": ["Say who you are", "Say what is broken", "Say how long it has been broken", "Say when you are at home"]
+        },
+        {
+          "type": "prompt",
+          "task": "Describe your home: how many rooms it has, one thing you like and one problem.",
+          "model": "Ik woon in een klein appartement met twee kamers. Ik vind de keuken mooi, want hij is groot. Het probleem is de kraan, want hij lekt.",
+          "seconds": 30,
+          "points": ["The number of rooms", "Something you like", "A problem"]
+        }
+      ]
+    },
+    {
+      "id": "a2.t01.l7", "title": "An email to the landlord", "kind": "writing",
+      "explain": [
+        { "type": "p", "text": "An email to a landlord is **formal**. Start with *Beste meneer De Vries,* (or *Geachte mevrouw …,*), use **u** and **uw**, and finish with *Met vriendelijke groet,* and your name. Keep it short: say what the problem is, since when, and what you want." },
+        { "type": "ex", "nl": "Sinds maandag lekt de kraan in mijn keuken.", "en": "Since Monday the tap in my kitchen has been leaking." },
+        { "type": "ex", "nl": "Kunt u een monteur sturen?", "en": "Can you send a repairman?" },
+        { "type": "tip", "text": "Polite requests start with the verb: *Kunt u …?* *Wilt u …?* End with *Alvast bedankt voor uw hulp.*" }
+      ],
+      "items": [
+        {
+          "type": "write",
+          "task": "The tap in your kitchen leaks. Write an email to your landlord, Mr De Vries: greet him, say what the problem is and since when, ask him to send a repairman and say when you are at home.",
+          "points": ["A polite greeting", "The problem and since when", "Ask for a repairman", "When you are at home"],
+          "minWords": 60, "maxWords": 90,
+          "model": "Beste meneer De Vries, sinds maandag lekt de kraan in mijn keuken. Het water loopt de hele dag en er staat al een emmer onder de kraan. Kunt u een monteur sturen? Ik ben op woensdag en donderdag na vijf uur thuis. Als dat niet kan, belt u mij dan even op 06 1234 5678. Alvast bedankt voor uw hulp. Met vriendelijke groet, Sanne Bakker"
+        }
+      ],
+      "sources": [
+        { "title": "Oefenen.nl: free practice (account needed)", "url": "https://oefenen.nl/" }
+      ]
+    }
+  ]
+}

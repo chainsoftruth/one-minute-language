@@ -76,5 +76,13 @@
   {"id":"zomaar","nl":"zomaar","en":"just like that","pos":"adv","lvl":"A2","topic":"function_words","ex":"Je kunt hier niet zomaar parkeren.","exEn":"You can't just park here."},
   {"id":"nauwelijks","nl":"nauwelijks","en":"hardly","pos":"adv","lvl":"A2","topic":"function_words","ex":"Ik heb nauwelijks geslapen.","exEn":"I've hardly slept."},
   {"id":"vrijwel","nl":"vrijwel","en":"almost / practically","pos":"adv","lvl":"A2","topic":"function_words","ex":"Vrijwel iedereen fietst.","exEn":"Practically everybody cycles."},
-  {"id":"ten_slotte","nl":"ten slotte","en":"finally / lastly","pos":"adv","lvl":"A2","topic":"function_words","ex":"Ten slotte bedank ik iedereen.","exEn":"Finally, I thank everyone."}
+  {"id":"ten_slotte","nl":"ten slotte","en":"finally / lastly","pos":"adv","lvl":"A2","topic":"function_words","ex":"Ten slotte bedank ik iedereen.","exEn":"Finally, I thank everyone."},
+  {"id":"af","nl":"af","en":"off; finished (separable particle)","pos":"adv","lvl":"A2","topic":"function_words","ex":"Ik zeg de afspraak af.","exEn":"I'm cancelling the appointment."},
+  {"id":"terug","nl":"terug","en":"back","pos":"adv","lvl":"A2","topic":"function_words","ex":"Ik kom morgen terug.","exEn":"I'll be back tomorrow."},
+  {"id":"vanmiddag","nl":"vanmiddag","en":"this afternoon","pos":"adv","lvl":"A2","topic":"function_words","ex":"Ik ben vanmiddag thuis.","exEn":"I'm at home this afternoon."},
+  {"id":"meteen","nl":"meteen","en":"immediately","pos":"adv","lvl":"A2","topic":"function_words","ex":"Bel meteen 112.","exEn":"Call 112 immediately."},
+  {"id":"tegelijk","nl":"tegelijk","en":"at the same time","pos":"adv","lvl":"A2","topic":"function_words","ex":"Zij praten allebei tegelijk.","exEn":"They both talk at the same time."},
+  {"id":"allemaal","nl":"allemaal","en":"all, everyone","pos":"pron","lvl":"A2","topic":"function_words","ex":"Hoi allemaal!","exEn":"Hi everyone!"},
+  {"id":"oh","nl":"oh","en":"oh","pos":"intj","lvl":"A2","topic":"function_words","ex":"Oh, wat jammer!","exEn":"Oh, what a pity!"},
+  {"id":"allebei","nl":"allebei","en":"both","pos":"pron","lvl":"A2","topic":"function_words","ex":"Wij komen allebei uit Spanje.","exEn":"We both come from Spain."}
 ]

@@ -1,0 +1,152 @@
+{
+  "id": "a2.g11", "level": "A2", "kind": "grammar",
+  "title": "Verbs with fixed prepositions",
+  "subtitle": "wachten op, denken aan, houden van: learn the verb and its preposition together",
+  "lessons": [
+    {
+      "id": "a2.g11.l1", "title": "Ten very common pairs", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Many Dutch verbs always go with **one particular preposition**. The preposition is part of the verb and you cannot translate it word by word: *wachten **op*** is *to wait for*, *denken **aan*** is *to think of*. Learn them as a pair, like a vocabulary item." },
+        { "type": "table", "head": ["verb + preposition", "example"], "rows": [["wachten op", "Ik wacht op de bus."], ["denken aan", "Zij denkt aan haar familie."], ["houden van", "Ik hou van chocola."], ["praten over", "Wij praten over het weer."], ["zorgen voor", "Hij zorgt voor zijn moeder."], ["kijken naar", "Kijk naar de film."], ["luisteren naar", "Wij luisteren naar muziek."], ["vragen om", "Ik vraag om een glas water."], ["beginnen met", "Zij begint met een nieuwe cursus."], ["stoppen met", "Hij stopt met roken."]] },
+        { "type": "ex", "nl": "Ik wacht op de bus.", "en": "I am waiting for the bus." },
+        { "type": "ex", "nl": "Wij luisteren naar muziek.", "en": "We are listening to music." },
+        { "type": "tip", "text": "Before a person the preposition stays: *Ik wacht op **hem**.* *Ik denk aan **haar**.* *Ik hou van **jou**.* The preposition stands before its object, never at the end of the sentence like in English." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik wacht ___ de bus.", "options": ["op", "voor", "aan"], "answer": 0 },
+        { "type": "choice", "q": "Zij denkt ___ haar familie.", "options": ["aan", "op", "over"], "answer": 0 },
+        { "type": "choice", "q": "Ik hou ___ chocola.", "options": ["van", "om", "voor"], "answer": 0 },
+        { "type": "choice", "q": "Wij praten ___ het weer.", "options": ["over", "van", "aan"], "answer": 0 },
+        { "type": "choice", "q": "Hij zorgt ___ zijn moeder.", "options": ["voor", "op", "aan"], "answer": 0 },
+        { "type": "gap", "text": "Wij luisteren ___ muziek.", "answers": ["naar"], "en": "We are listening to music." },
+        { "type": "gap", "text": "Ik vraag ___ een glas water.", "answers": ["om"], "en": "I am asking for a glass of water." },
+        { "type": "gap", "text": "Zij begint ___ een nieuwe cursus.", "answers": ["met"], "en": "She is starting a new course." },
+        { "type": "gap", "text": "Hij stopt ___ roken.", "answers": ["met"], "en": "He is quitting smoking." },
+        { "type": "gap", "text": "Ik wacht ___ jou.", "answers": ["op"], "en": "I am waiting for you." },
+        { "type": "gap", "text": "Ik denk vaak ___ mijn vrienden.", "answers": ["aan"], "en": "I often think of my friends." },
+        { "type": "transform", "q": "Ik luister de radio.", "instruction": "Fix the sentence", "answers": ["Ik luister naar de radio"] },
+        { "type": "transform", "q": "Wij praten het weer.", "instruction": "Fix the sentence", "answers": ["Wij praten over het weer", "We praten over het weer"] },
+        { "type": "transform", "q": "Zij zorgt haar zus.", "instruction": "Fix the sentence", "answers": ["Zij zorgt voor haar zus", "Ze zorgt voor haar zus"] },
+        { "type": "order", "answer": "Ik wacht op de bus.", "en": "I am waiting for the bus." },
+        { "type": "order", "answer": "Wij praten over het weer.", "en": "We are talking about the weather." },
+        { "type": "order", "answer": "Hij zorgt voor zijn moeder.", "en": "He takes care of his mother." },
+        { "type": "translate", "en": "I am waiting for the bus.", "answers": ["Ik wacht op de bus"] },
+        { "type": "translate", "en": "She is thinking about her family.", "answers": ["Zij denkt aan haar familie", "Ze denkt aan haar familie"] },
+        { "type": "translate", "en": "We are listening to music.", "answers": ["Wij luisteren naar muziek", "We luisteren naar muziek"] },
+        { "type": "match", "pairs": [["wachten", "op"], ["denken", "aan"], ["houden", "van"], ["zorgen", "voor"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: werkwoorden met vast voorzetsel", "url": "https://nt2taalmenu.nl/b1-nieuw-werkwoorden-met-vast-voorzetsel/" },
+        { "title": "NT2 TaalMenu: voorzetsels (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuvoorzetsels/" }
+      ]
+    },
+    {
+      "id": "a2.g11.l2", "title": "Feelings, plans and work", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Adjectives and reflexive verbs also take a fixed preposition: *bang zijn **voor***, *trots zijn **op***, *blij zijn **met***, *zich interesseren **voor***, *zich voorbereiden **op***." },
+        { "type": "table", "head": ["verb + preposition", "example"], "rows": [["hopen op", "Ik hoop op goed weer."], ["geloven in", "Ik geloof in een goede toekomst."], ["bang zijn voor", "Hij is bang voor honden."], ["trots zijn op", "Zij is trots op haar zoon."], ["blij zijn met", "Zij is blij met haar nieuwe baan."], ["zich interesseren voor", "Ik interesseer me voor geschiedenis."], ["zich voorbereiden op", "Zij bereidt zich op het examen voor."], ["deelnemen aan", "Hij neemt aan de cursus deel."], ["solliciteren naar", "Ik solliciteer naar een baan als kok."], ["klagen over", "Zij klaagt over het lawaai."], ["rekenen op", "Je kunt op mij rekenen."], ["lijken op", "Zij lijkt op haar moeder."]] },
+        { "type": "ex", "nl": "Zij is trots op haar zoon.", "en": "She is proud of her son." },
+        { "type": "ex", "nl": "Je kunt op mij rekenen.", "en": "You can count on me." },
+        { "type": "tip", "text": "**Separable verbs** split as usual and the preposition phrase goes in the middle: *Hij neemt **aan de cursus** deel.* *Zij bereidt zich **op het examen** voor.*" }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik hoop ___ goed weer.", "options": ["op", "aan", "voor"], "answer": 0 },
+        { "type": "choice", "q": "Zij is trots ___ haar zoon.", "options": ["op", "van", "aan"], "answer": 0 },
+        { "type": "choice", "q": "Hij is bang ___ honden.", "options": ["voor", "van", "op"], "answer": 0 },
+        { "type": "choice", "q": "Ik geloof ___ een goede toekomst.", "options": ["in", "aan", "op"], "answer": 0 },
+        { "type": "choice", "q": "Zij is blij ___ haar nieuwe baan.", "options": ["met", "op", "van"], "answer": 0 },
+        { "type": "gap", "text": "Ik interesseer me ___ geschiedenis.", "answers": ["voor"], "en": "I am interested in history." },
+        { "type": "gap", "text": "Zij bereidt zich ___ het examen voor.", "answers": ["op"], "en": "She is preparing for the exam." },
+        { "type": "gap", "text": "Hij neemt ___ de cursus deel.", "answers": ["aan"], "en": "He is taking part in the course." },
+        { "type": "gap", "text": "Ik solliciteer ___ een baan als kok.", "answers": ["naar"], "en": "I am applying for a job as a cook." },
+        { "type": "gap", "text": "Zij klaagt ___ het lawaai.", "answers": ["over"], "en": "She complains about the noise." },
+        { "type": "gap", "text": "Je kunt ___ mij rekenen.", "answers": ["op"], "en": "You can count on me." },
+        { "type": "gap", "text": "Zij lijkt ___ haar moeder.", "answers": ["op"], "en": "She looks like her mother." },
+        { "type": "transform", "q": "Zij is trots haar zoon.", "instruction": "Fix the sentence", "answers": ["Zij is trots op haar zoon", "Ze is trots op haar zoon"] },
+        { "type": "transform", "q": "Hij klaagt het lawaai.", "instruction": "Fix the sentence", "answers": ["Hij klaagt over het lawaai"] },
+        { "type": "transform", "q": "Zij lijkt haar moeder.", "instruction": "Fix the sentence", "answers": ["Zij lijkt op haar moeder", "Ze lijkt op haar moeder"] },
+        { "type": "order", "answer": "Zij is trots op haar zoon.", "en": "She is proud of her son." },
+        { "type": "order", "answer": "Ik hoop op goed weer.", "en": "I hope for good weather." },
+        { "type": "order", "answer": "Hij is bang voor honden.", "en": "He is afraid of dogs." },
+        { "type": "translate", "en": "I am proud of you.", "answers": ["Ik ben trots op jou", "Ik ben trots op je"] },
+        { "type": "translate", "en": "She is happy with her new job.", "answers": ["Zij is blij met haar nieuwe baan", "Ze is blij met haar nieuwe baan"] },
+        { "type": "translate", "en": "You can count on me.", "answers": ["Je kunt op mij rekenen", "Je kan op mij rekenen", "Je kunt op me rekenen", "Je kan op me rekenen", "U kunt op mij rekenen", "U kunt op me rekenen"] },
+        { "type": "match", "pairs": [["hopen", "op"], ["bang zijn", "voor"], ["blij zijn", "met"], ["klagen", "over"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: werkwoorden met vast voorzetsel", "url": "https://nt2taalmenu.nl/b1-nieuw-werkwoorden-met-vast-voorzetsel/" }
+      ]
+    },
+    {
+      "id": "a2.g11.l3", "title": "More pairs for daily life", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Sixteen more pairs that you will meet every day. Put the object (a noun or pronoun) after the preposition and keep the pair together in your memory." },
+        { "type": "table", "head": ["verb + preposition", "example"], "rows": [["lachen om", "Wij lachen om de grap."], ["werken aan", "Hij werkt aan een boek."], ["zoeken naar", "Ik zoek naar mijn sleutels."], ["vragen naar", "Hij vraagt naar de weg."], ["vertellen over", "Zij vertelt over haar vakantie."], ["spreken over", "Wij spreken over het probleem."], ["nadenken over", "Ik denk na over het probleem."], ["betalen voor", "Wij betalen veel voor de huur."], ["sparen voor", "Wij sparen voor een nieuwe auto."], ["leven van", "Hij leeft van zijn salaris."], ["afhangen van", "Het hangt van het weer af."], ["helpen met", "Kun je me helpen met mijn huiswerk?"], ["trouwen met", "Zij trouwt met haar vriend."], ["zich ergeren aan", "Wij ergeren ons aan het lawaai."], ["zich verheugen op", "Ik verheug me op de vakantie."], ["boos zijn op", "Zij is boos op haar broer."]] },
+        { "type": "ex", "nl": "Het hangt van het weer af.", "en": "It depends on the weather." },
+        { "type": "ex", "nl": "Ik verheug me op de vakantie.", "en": "I am looking forward to the holiday." },
+        { "type": "tip", "text": "A few verbs have **two** prepositions with different meanings: *vragen om* (ask for something) but *vragen naar* (ask about, ask where something is), *spreken over* (talk about) but *spreken met* (talk to a person)." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik denk na ___ het probleem.", "options": ["over", "aan", "op"], "answer": 0 },
+        { "type": "choice", "q": "Het hangt ___ het weer af.", "options": ["van", "op", "aan"], "answer": 0 },
+        { "type": "choice", "q": "Wij sparen ___ een nieuwe auto.", "options": ["voor", "op", "aan"], "answer": 0 },
+        { "type": "choice", "q": "Zij is boos ___ haar broer.", "options": ["op", "voor", "over"], "answer": 0 },
+        { "type": "choice", "q": "Hij vertelt ___ zijn vakantie.", "options": ["over", "aan", "op"], "answer": 0 },
+        { "type": "gap", "text": "Zij trouwt ___ haar vriend.", "answers": ["met"], "en": "She is marrying her boyfriend." },
+        { "type": "gap", "text": "Kun je me ___ mijn huiswerk helpen?", "answers": ["met"], "en": "Can you help me with my homework?" },
+        { "type": "gap", "text": "Wij betalen veel ___ de huur.", "answers": ["voor"], "en": "We pay a lot for the rent." },
+        { "type": "gap", "text": "Hij leeft ___ zijn salaris.", "answers": ["van"], "en": "He lives on his salary." },
+        { "type": "gap", "text": "Ik verheug me ___ de vakantie.", "answers": ["op"], "en": "I am looking forward to the holiday." },
+        { "type": "gap", "text": "Wij ergeren ons ___ het lawaai.", "answers": ["aan"], "en": "We are annoyed by the noise." },
+        { "type": "gap", "text": "Zij lacht ___ de grap.", "answers": ["om"], "en": "She laughs at the joke." },
+        { "type": "gap", "text": "Hij werkt ___ een boek.", "answers": ["aan"], "en": "He is working on a book." },
+        { "type": "gap", "text": "Ik zoek ___ mijn sleutels.", "answers": ["naar"], "en": "I am looking for my keys." },
+        { "type": "gap", "text": "Hij vraagt ___ de weg.", "answers": ["naar"], "en": "He asks the way." },
+        { "type": "transform", "q": "Wij spreken het probleem.", "instruction": "Fix the sentence", "answers": ["Wij spreken over het probleem", "We spreken over het probleem"] },
+        { "type": "transform", "q": "Ik verheug me mijn vakantie.", "instruction": "Fix the sentence", "answers": ["Ik verheug me op mijn vakantie"] },
+        { "type": "transform", "q": "Wij sparen een nieuwe auto.", "instruction": "Fix the sentence", "answers": ["Wij sparen voor een nieuwe auto", "We sparen voor een nieuwe auto"] },
+        { "type": "order", "answer": "Ik verheug me op mijn vakantie.", "en": "I am looking forward to my holiday." },
+        { "type": "order", "answer": "Het hangt van het weer af.", "en": "It depends on the weather." },
+        { "type": "order", "answer": "Wij sparen voor een nieuwe auto.", "en": "We are saving for a new car." },
+        { "type": "translate", "en": "I am looking forward to the holiday.", "answers": ["Ik verheug me op de vakantie", "Ik kijk uit naar de vakantie"] },
+        { "type": "translate", "en": "It depends on the weather.", "answers": ["Het hangt van het weer af"] },
+        { "type": "translate", "en": "She is angry with her brother.", "answers": ["Zij is boos op haar broer", "Ze is boos op haar broer"] },
+        { "type": "match", "pairs": [["lachen", "om"], ["werken", "aan"], ["sparen", "voor"], ["afhangen", "van"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: werkwoorden met vast voorzetsel", "url": "https://nt2taalmenu.nl/b1-nieuw-werkwoorden-met-vast-voorzetsel/" },
+        { "title": "Woordenlijst Nederlandse Taal: check a verb", "url": "https://woordenlijst.org/" }
+      ]
+    },
+    {
+      "id": "a2.g11.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Ik wacht ___ hem.", "options": ["op", "voor", "aan"], "answer": 0 },
+        { "type": "choice", "q": "Hij denkt vaak ___ haar.", "options": ["aan", "op", "over"], "answer": 0 },
+        { "type": "choice", "q": "Zij houdt ___ koffie.", "options": ["van", "op", "met"], "answer": 0 },
+        { "type": "choice", "q": "Wij kijken ___ een film.", "options": ["naar", "op", "aan"], "answer": 0 },
+        { "type": "gap", "text": "Ik hoop ___ een nieuwe baan.", "answers": ["op"], "en": "I hope for a new job." },
+        { "type": "gap", "text": "Zij praat ___ haar buurman.", "answers": ["met"], "en": "She is talking to her neighbour.", "explain": "To talk to a person is praten met. Talking about a subject is praten over." },
+        { "type": "gap", "text": "De kinderen zijn bang ___ de donkere kamer.", "answers": ["voor"], "en": "The children are afraid of the dark room." },
+        { "type": "gap", "text": "Hij neemt ___ de wedstrijd deel.", "answers": ["aan"], "en": "He takes part in the match." },
+        { "type": "gap", "text": "Ik ben blij ___ het cadeau.", "answers": ["met"], "en": "I am happy with the present." },
+        { "type": "gap", "text": "Wij zorgen ___ de kinderen van onze buren.", "answers": ["voor"], "en": "We look after our neighbours' children." },
+        { "type": "gap", "text": "Zij stopt ___ haar werk.", "answers": ["met"], "en": "She stops working." },
+        { "type": "gap", "text": "Ik klaag niet ___ het eten.", "answers": ["over"], "en": "I do not complain about the food." },
+        { "type": "transform", "q": "Ik wacht de trein.", "instruction": "Fix the sentence", "answers": ["Ik wacht op de trein"] },
+        { "type": "transform", "q": "Hij luistert zijn leraar.", "instruction": "Fix the sentence", "answers": ["Hij luistert naar zijn leraar"] },
+        { "type": "transform", "q": "Zij houdt haar kat.", "instruction": "Fix the sentence", "answers": ["Zij houdt van haar kat", "Ze houdt van haar kat"] },
+        { "type": "order", "answer": "Ik wacht op hem.", "en": "I am waiting for him." },
+        { "type": "order", "answer": "Zij is blij met haar nieuwe baan.", "en": "She is happy with her new job." },
+        { "type": "order", "answer": "Wij praten over onze vakantie.", "en": "We are talking about our holiday." },
+        { "type": "translate", "en": "I am thinking about you.", "answers": ["Ik denk aan jou", "Ik denk aan je"] },
+        { "type": "translate", "en": "He is afraid of the dog.", "answers": ["Hij is bang voor de hond"] },
+        { "type": "translate", "en": "Are you looking forward to the weekend?", "answers": ["Verheug je je op het weekend", "Verheug jij je op het weekend", "Verheugt u zich op het weekend"] },
+        { "type": "translate", "en": "We are looking for a new house.", "answers": ["Wij zoeken naar een nieuw huis", "We zoeken naar een nieuw huis", "Wij zoeken een nieuw huis", "We zoeken een nieuw huis"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: werkwoorden met vast voorzetsel", "url": "https://nt2taalmenu.nl/b1-nieuw-werkwoorden-met-vast-voorzetsel/" }
+      ]
+    }
+  ]
+}
