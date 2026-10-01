@@ -1,0 +1,157 @@
+{
+  "id": "b1.g05", "level": "B1", "kind": "grammar",
+  "title": "te + infinitive",
+  "subtitle": "proberen te, om … te, zonder … te, in plaats van … te",
+  "lessons": [
+    {
+      "id": "b1.g05.l1", "title": "Verbs with te, verbs without te", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Many verbs are followed by **te + infinitive**, and the infinitive group goes to the **end of the clause**: *Ik probeer vroeg **te komen**.* Typical verbs with *te*: **proberen, beginnen, vergeten, hopen, besluiten, durven, weigeren, beloven**, and expressions like **van plan zijn, bang zijn, zin hebben**." },
+        { "type": "p", "text": "No *te* after **modals** (*kunnen, moeten, willen, mogen, zullen*) and after **gaan, komen, laten, blijven, zien, horen, helpen**: *Ik wil vroeg komen.* *Ik laat hem komen.* The verb **hoeven** is only used in negative sentences, with *te*: *Je **hoeft niet te komen**.* (You do not have to come.)" },
+        { "type": "table", "head": ["with te", "without te"], "rows": [["Ik probeer te slapen.", "Ik kan slapen."], ["Het begint te regenen.", "Ik ga slapen."], ["Hij is vergeten te bellen.", "Ik laat hem bellen."], ["Zij hoopt te slagen.", "Wij zien haar komen."], ["Je hoeft niet te komen.", "Je moet komen."]] },
+        { "type": "ex", "nl": "Ik hoop je snel te zien.", "en": "I hope to see you soon." },
+        { "type": "ex", "nl": "Zij weigert ons te helpen.", "en": "She refuses to help us." },
+        { "type": "tip", "text": "After many *te*-verbs you may add **om**: *Ik probeer **om** vroeg te komen.* Both are correct. After *proberen, beginnen, vergeten* the short form is the most common." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik probeer vroeg ___.", "options": ["te komen", "komen", "gekomen"], "answer": 0 },
+        { "type": "choice", "q": "Ik wil vroeg ___.", "options": ["komen", "te komen", "gekomen te"], "answer": 0, "explain": "Modals are never followed by te." },
+        { "type": "choice", "q": "Which verb needs te?", "options": ["proberen", "kunnen", "willen"], "answer": 0 },
+        { "type": "choice", "q": "Hij is vergeten ___.", "options": ["te bellen", "bellen", "gebeld"], "answer": 0 },
+        { "type": "choice", "q": "Je ___ niet te komen. (you do not have to)", "options": ["hoeft", "moet", "kunt"], "answer": 0 },
+        { "type": "gap", "text": "Het begint ___ regenen.", "answers": ["te"], "en": "It is starting to rain." },
+        { "type": "gap", "text": "Ik ben van plan morgen naar Utrecht ___ gaan.", "answers": ["te"], "en": "I am planning to go to Utrecht tomorrow." },
+        { "type": "gap", "text": "Hij weigert ons ___ helpen.", "answers": ["te"], "en": "He refuses to help us." },
+        { "type": "gap", "text": "Zij durft niet ___ spreken.", "answers": ["te"], "en": "She does not dare to speak." },
+        { "type": "gap", "text": "Ik hoop je snel ___ zien.", "answers": ["te"], "en": "I hope to see you soon." },
+        { "type": "gap", "text": "Je ___ niet te wachten. (hoeven)", "answers": ["hoeft"], "en": "You do not have to wait." },
+        { "type": "gap", "text": "Wij besloten ___ verhuizen.", "answers": ["te"], "en": "We decided to move." },
+        { "type": "transform", "q": "Ik wil vroeg komen.", "instruction": "Use proberen instead of willen: Ik probeer ...", "answers": ["Ik probeer vroeg te komen", "Ik probeer om vroeg te komen"] },
+        { "type": "transform", "q": "Ik heb haar gebeld.", "instruction": "Start with: Ik ben vergeten haar ...", "answers": ["Ik ben vergeten haar te bellen"] },
+        { "type": "transform", "q": "Wij gaan verhuizen.", "instruction": "Start with: Wij besluiten ...", "answers": ["Wij besluiten te verhuizen", "We besluiten te verhuizen"] },
+        { "type": "transform", "q": "Hij wil niet helpen.", "instruction": "Use weigeren: Hij weigert ...", "answers": ["Hij weigert te helpen"] },
+        { "type": "order", "answer": "Ik probeer vroeg te komen.", "en": "I am trying to come early." },
+        { "type": "order", "answer": "Hij is vergeten ons te bellen.", "en": "He forgot to call us." },
+        { "type": "order", "answer": "Wij hebben besloten te verhuizen.", "en": "We have decided to move." },
+        { "type": "order", "answer": "Je hoeft niet te wachten.", "en": "You do not have to wait." },
+        { "type": "translate", "en": "I am trying to learn Dutch.", "answers": ["Ik probeer Nederlands te leren", "Ik probeer om Nederlands te leren"] },
+        { "type": "translate", "en": "She has begun to work.", "answers": ["Zij is begonnen te werken", "Ze is begonnen te werken"] },
+        { "type": "translate", "en": "You do not have to come.", "answers": ["Je hoeft niet te komen", "U hoeft niet te komen", "Jij hoeft niet te komen"] },
+        { "type": "translate", "en": "I hope to see you soon.", "answers": ["Ik hoop je snel te zien", "Ik hoop u snel te zien", "Ik hoop jou snel te zien"] },
+        { "type": "match", "pairs": [["proberen te", "to try to"], ["beginnen te", "to begin to"], ["vergeten te", "to forget to"], ["niet hoeven te", "not to have to"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: te en prefix (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-te-prefix/" },
+        { "title": "NT2 TaalMenu: zinnen met om … te (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuzinnenmetomte/" }
+      ]
+    },
+    {
+      "id": "b1.g05.l2", "title": "om … te, zonder … te, in plaats van … te", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "**Om … te** gives a **purpose** (*in order to*). The part between *om* and *te* holds the objects, and the infinitive comes last: *Ik ga naar de winkel **om brood te kopen**.* It is also used after nouns and adjectives: *Ik heb geen tijd **om te koken**.* *Het is moeilijk **om Nederlands te leren**.* And with **te + adjective**: *Ik ben **te moe om te werken**.*" },
+        { "type": "p", "text": "**Zonder … te** = *without …ing*. **In plaats van … te** = *instead of …ing*. After *zonder* you say **iets** (something), not *niets*: *Hij ging weg **zonder iets te zeggen**.*" },
+        { "type": "table", "head": ["pattern", "example"], "rows": [["om … te", "Ik ga naar de bank om geld op te nemen."], ["zonder … te", "Zij vertrok zonder gedag te zeggen."], ["in plaats van … te", "In plaats van te slapen, las zij een boek."], ["te + adj. + om … te", "Het is te koud om te zwemmen."]] },
+        { "type": "ex", "nl": "Hij ging weg zonder iets te zeggen.", "en": "He left without saying anything." },
+        { "type": "ex", "nl": "In plaats van te slapen, las zij een boek.", "en": "Instead of sleeping, she read a book." },
+        { "type": "tip", "text": "The comma is optional: *In plaats van te slapen(,) las zij een boek.*" }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik ga naar de winkel ___ brood te kopen.", "options": ["om", "voor", "van"], "answer": 0 },
+        { "type": "choice", "q": "Hij ging weg ___ iets te zeggen.", "options": ["zonder", "om", "in plaats van"], "answer": 0 },
+        { "type": "choice", "q": "___ te slapen, las zij een boek.", "options": ["In plaats van", "Zonder", "Om"], "answer": 0 },
+        { "type": "choice", "q": "Ik heb geen tijd ___ te koken.", "options": ["om", "voor", "zonder"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik ga naar de bank om geld op te nemen.", "Ik ga naar de bank om op te nemen geld.", "Ik ga naar de bank om te geld opnemen."], "answer": 0 },
+        { "type": "gap", "text": "Ik ga naar de winkel ___ brood te kopen.", "answers": ["om"], "en": "I am going to the shop to buy bread." },
+        { "type": "gap", "text": "Hij ging weg ___ iets te zeggen.", "answers": ["zonder"], "en": "He left without saying anything." },
+        { "type": "gap", "text": "___ te slapen, las zij een boek.", "answers": ["In plaats van"], "en": "Instead of sleeping, she read a book." },
+        { "type": "gap", "text": "Het is moeilijk ___ Nederlands te leren.", "answers": ["om"], "en": "It is difficult to learn Dutch." },
+        { "type": "gap", "text": "Ik ben te moe ___ te werken.", "answers": ["om"], "en": "I am too tired to work." },
+        { "type": "gap", "text": "Zij nam de bus om op tijd ___ zijn.", "answers": ["te"], "en": "She took the bus to be on time." },
+        { "type": "transform", "q": "Ik ga naar de winkel. Ik koop brood.", "instruction": "Join with om ... te", "answers": ["Ik ga naar de winkel om brood te kopen"] },
+        { "type": "transform", "q": "Hij ging weg. Hij zei niets.", "instruction": "Join with zonder ... te: Hij ging weg zonder ...", "answers": ["Hij ging weg zonder iets te zeggen"] },
+        { "type": "transform", "q": "Zij sliep niet. Zij las een boek.", "instruction": "Use in plaats van ... te", "answers": ["In plaats van te slapen, las zij een boek", "Zij las een boek in plaats van te slapen", "In plaats van te slapen las zij een boek", "Ze las een boek in plaats van te slapen"] },
+        { "type": "transform", "q": "Ik ben moe. Ik kan niet werken.", "instruction": "Start with: Ik ben te moe ...", "answers": ["Ik ben te moe om te werken"] },
+        { "type": "order", "answer": "Ik ga naar de bank om geld op te nemen.", "en": "I am going to the bank to withdraw money." },
+        { "type": "order", "answer": "Hij ging weg zonder iets te zeggen.", "en": "He left without saying anything." },
+        { "type": "order", "answer": "Ik heb geen tijd om te koken.", "en": "I have no time to cook." },
+        { "type": "order", "answer": "In plaats van te slapen, las zij een boek.", "alt": ["Zij las een boek in plaats van te slapen."], "en": "Instead of sleeping, she read a book." },
+        { "type": "translate", "en": "I am going to the bank to withdraw money.", "answers": ["Ik ga naar de bank om geld op te nemen"] },
+        { "type": "translate", "en": "She left without saying goodbye.", "answers": ["Zij ging weg zonder gedag te zeggen", "Ze ging weg zonder gedag te zeggen", "Zij vertrok zonder gedag te zeggen", "Ze vertrok zonder gedag te zeggen"] },
+        { "type": "translate", "en": "It is difficult to find a house.", "answers": ["Het is moeilijk om een huis te vinden", "Het is moeilijk een huis te vinden"] },
+        { "type": "translate", "en": "I am too tired to cook.", "answers": ["Ik ben te moe om te koken"] },
+        { "type": "match", "pairs": [["om … te", "in order to"], ["zonder … te", "without …ing"], ["in plaats van … te", "instead of …ing"], ["te + adjective + om … te", "too … to …"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: zinnen met om … te (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuzinnenmetomte/" },
+        { "title": "NT2 TaalMenu: om … te (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-om-te/" }
+      ]
+    },
+    {
+      "id": "b1.g05.l3", "title": "te with separable verbs and in the perfect", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "With a **separable verb**, *te* goes **between the prefix and the verb**: *opbellen → **op te bellen***, *meenemen → **mee te nemen***, *uitleggen → **uit te leggen***. With an inseparable verb it stands in front: *vertellen → **te vertellen***, *bezoeken → **te bezoeken***." },
+        { "type": "table", "head": ["verb", "with te", "example"], "rows": [["opbellen", "op te bellen", "Ik probeer je op te bellen."], ["meenemen", "mee te nemen", "Ik vergeet mijn tas mee te nemen."], ["uitleggen", "uit te leggen", "Hij probeert het ons uit te leggen."], ["vertellen", "te vertellen", "Zij begint haar verhaal te vertellen."]] },
+        { "type": "p", "text": "In the **perfect** the *te*-group stays at the end: *Ik heb geprobeerd je te bellen.* *Zij is vergeten haar tas mee te nemen.* Verbs like **laten, zien, horen, blijven** do not take *te*: *Ik laat hem komen.*" },
+        { "type": "ex", "nl": "Ik heb geprobeerd je te bellen.", "en": "I have tried to call you." },
+        { "type": "ex", "nl": "Wij hebben besloten een nieuw huis te zoeken.", "en": "We have decided to look for a new house." },
+        { "type": "tip", "text": "Think of *op te bellen* as one block: the prefix, *te*, and the verb. They are written as three words." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik heb geprobeerd je ___.", "options": ["te bellen", "bellen", "gebeld te"], "answer": 0 },
+        { "type": "choice", "q": "Hij vergat zijn tas ___.", "options": ["mee te nemen", "te meenemen", "meete nemen"], "answer": 0 },
+        { "type": "choice", "q": "Wij hebben besloten een nieuw huis ___.", "options": ["te zoeken", "zoeken te", "gezocht"], "answer": 0 },
+        { "type": "choice", "q": "Ik laat hem ___.", "options": ["komen", "te komen", "gekomen"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Zij blijft hier wonen.", "Zij blijft hier te wonen.", "Zij blijft hier woont."], "answer": 0 },
+        { "type": "gap", "text": "Ik heb geprobeerd je ___ bellen.", "answers": ["te"], "en": "I have tried to call you." },
+        { "type": "gap", "text": "Zij is begonnen Nederlands ___ leren.", "answers": ["te"], "en": "She has begun to learn Dutch." },
+        { "type": "gap", "text": "Ik vergeet altijd de deur ___ te doen. (dichtdoen)", "answers": ["dicht"], "en": "I always forget to close the door." },
+        { "type": "gap", "text": "Ik probeer het je uit ___ leggen. (uitleggen)", "answers": ["te"], "en": "I am trying to explain it to you." },
+        { "type": "gap", "text": "Hij is bang ___ vallen.", "answers": ["te"], "en": "He is afraid of falling." },
+        { "type": "gap", "text": "Wij hebben besloten ___ blijven.", "answers": ["te"], "en": "We have decided to stay." },
+        { "type": "transform", "q": "Ik bel je op.", "instruction": "Start with: Ik probeer ...", "answers": ["Ik probeer je op te bellen", "Ik probeer om je op te bellen"] },
+        { "type": "transform", "q": "Ik neem mijn paraplu mee.", "instruction": "Start with: Ik vergeet niet ...", "answers": ["Ik vergeet niet mijn paraplu mee te nemen"] },
+        { "type": "transform", "q": "Zij leert Nederlands.", "instruction": "Start with: Zij is begonnen ...", "answers": ["Zij is begonnen Nederlands te leren", "Ze is begonnen Nederlands te leren"] },
+        { "type": "transform", "q": "Hij kookt vandaag.", "instruction": "Start with: Hij weigert vandaag ...", "answers": ["Hij weigert vandaag te koken"] },
+        { "type": "order", "answer": "Ik heb geprobeerd je te bellen.", "en": "I have tried to call you." },
+        { "type": "order", "answer": "Zij is vergeten haar tas mee te nemen.", "en": "She forgot to take her bag with her." },
+        { "type": "order", "answer": "Wij hebben besloten een nieuw huis te zoeken.", "en": "We have decided to look for a new house." },
+        { "type": "order", "answer": "Hij probeert het ons uit te leggen.", "en": "He is trying to explain it to us." },
+        { "type": "translate", "en": "I forgot to take my umbrella with me.", "answers": ["Ik ben vergeten mijn paraplu mee te nemen"] },
+        { "type": "translate", "en": "She has decided to look for a new job.", "answers": ["Zij heeft besloten een nieuwe baan te zoeken", "Ze heeft besloten een nieuwe baan te zoeken", "Zij heeft besloten om een nieuwe baan te zoeken", "Ze heeft besloten om een nieuwe baan te zoeken"] },
+        { "type": "translate", "en": "He is trying to explain it to us.", "answers": ["Hij probeert het ons uit te leggen", "Hij probeert het aan ons uit te leggen", "Hij probeert om het ons uit te leggen"] },
+        { "type": "match", "pairs": [["op te bellen", "to phone (separable)"], ["mee te nemen", "to take along"], ["uit te leggen", "to explain"], ["te vertellen", "to tell (inseparable)"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: te en prefix (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-te-prefix/" },
+        { "title": "NT2 TaalMenu: werkwoorden met prefix (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-werkwoorden-met-prefix/" }
+      ]
+    },
+    {
+      "id": "b1.g05.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Which verb takes NO te?", "options": ["kunnen", "proberen", "beginnen"], "answer": 0 },
+        { "type": "choice", "q": "Ik ga naar het station ___ de trein te nemen.", "options": ["om", "voor", "zonder"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Hij heeft besloten te verhuizen.", "Hij heeft besloten verhuizen te.", "Hij heeft te verhuizen besloten."], "answer": 0 },
+        { "type": "choice", "q": "Je ___ morgen niet te komen.", "options": ["hoeft", "moet", "hebt"], "answer": 0 },
+        { "type": "gap", "text": "Het is niet makkelijk ___ een huis te vinden.", "answers": ["om"], "en": "It is not easy to find a house." },
+        { "type": "gap", "text": "Zij gaat weg ___ ons te groeten.", "answers": ["zonder"], "en": "She leaves without greeting us." },
+        { "type": "gap", "text": "Hij beloofde ons morgen ___ bellen.", "answers": ["te"], "en": "He promised to call us tomorrow." },
+        { "type": "gap", "text": "Ik heb geprobeerd het raam ___ te maken. (dichtmaken)", "answers": ["dicht"], "en": "I tried to close the window." },
+        { "type": "gap", "text": "Zijn jullie van plan ___ blijven?", "answers": ["te"], "en": "Are you planning to stay?" },
+        { "type": "gap", "text": "In ___ van te wachten, ging hij naar huis.", "answers": ["plaats"], "en": "Instead of waiting, he went home." },
+        { "type": "transform", "q": "Ik ga naar de bakker. Ik koop brood.", "instruction": "Join with om ... te", "answers": ["Ik ga naar de bakker om brood te kopen"] },
+        { "type": "transform", "q": "Zij belt haar moeder.", "instruction": "Start with: Zij vergeet niet ...", "answers": ["Zij vergeet niet haar moeder te bellen", "Zij vergeet niet haar moeder op te bellen", "Ze vergeet niet haar moeder te bellen", "Ze vergeet niet haar moeder op te bellen"] },
+        { "type": "transform", "q": "Hij is te moe. Hij kan niet leren.", "instruction": "Start with: Hij is te moe ...", "answers": ["Hij is te moe om te leren"] },
+        { "type": "order", "answer": "Ik ga naar de bakker om brood te kopen.", "en": "I am going to the baker to buy bread." },
+        { "type": "order", "answer": "Hij is begonnen een boek te schrijven.", "en": "He has begun to write a book." },
+        { "type": "order", "answer": "Zij vertrok zonder gedag te zeggen.", "en": "She left without saying goodbye." },
+        { "type": "translate", "en": "I am trying to come early.", "answers": ["Ik probeer vroeg te komen", "Ik probeer om vroeg te komen"] },
+        { "type": "translate", "en": "We have no time to wait.", "answers": ["Wij hebben geen tijd om te wachten", "We hebben geen tijd om te wachten"] },
+        { "type": "translate", "en": "Instead of working, he watched television.", "answers": ["In plaats van te werken, keek hij televisie", "In plaats van te werken keek hij televisie", "Hij keek televisie in plaats van te werken", "Hij keek tv in plaats van te werken", "In plaats van te werken, keek hij tv"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: te en prefix (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-te-prefix/" }
+      ]
+    }
+  ]
+}

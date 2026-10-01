@@ -1,0 +1,156 @@
+{
+  "id": "b1.g04", "level": "B1", "kind": "grammar",
+  "title": "Verb clusters",
+  "subtitle": "All verbs at the end of a subordinate clause, and in which order",
+  "lessons": [
+    {
+      "id": "b1.g04.l1", "title": "Participle + auxiliary", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "In a subordinate clause all verbs go to the end, together in a **verb cluster**. With a perfect tense (participle + *hebben/zijn*) **two orders are correct**: *dat hij het **gedaan heeft*** and *dat hij het **heeft gedaan***. Both are normal Dutch. The same goes for the pluperfect: *gedaan had / had gedaan*." },
+        { "type": "table", "head": ["main clause", "subordinate clause (both orders)"], "rows": [["Hij heeft het gedaan.", "Ik weet dat hij het gedaan heeft. / … heeft gedaan."], ["Zij is vertrokken.", "Ik denk dat zij vertrokken is. / … is vertrokken."], ["Hij had het gedaan.", "Ik wist dat hij het gedaan had. / … had gedaan."]] },
+        { "type": "p", "text": "Everything else (objects, adverbs, *niet*) stays **before** the cluster: *dat zij de brief **niet** gelezen heeft*. What is not possible is putting the auxiliary right after the subject: *dat hij heeft het gedaan*." },
+        { "type": "ex", "nl": "Ik denk dat zij gisteren vertrokken is.", "en": "I think that she left yesterday." },
+        { "type": "ex", "nl": "Zij zegt dat zij het boek heeft gelezen.", "en": "She says that she has read the book." },
+        { "type": "tip", "text": "In the exercises both orders are accepted. Listen to which one sounds natural to you; native speakers use both." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik weet dat hij het ___.", "options": ["gedaan heeft", "gedaan is", "doet gedaan"], "answer": 0, "explain": "Doen takes hebben. Heeft gedaan is correct too." },
+        { "type": "choice", "q": "Zij zegt dat zij het boek ___ gelezen.", "options": ["heeft", "is", "wordt"], "answer": 0 },
+        { "type": "choice", "q": "Which clause is correct?", "options": ["…omdat hij vroeg is vertrokken.", "…omdat hij vroeg vertrokken heeft.", "…omdat hij heeft vroeg vertrokken."], "answer": 0, "explain": "Vertrekken takes zijn, and the verbs stay at the end." },
+        { "type": "choice", "q": "Which clause is correct?", "options": ["…dat zij gekomen is.", "…dat zij komen is.", "…dat is zij gekomen."], "answer": 0 },
+        { "type": "choice", "q": "Which clause is NOT possible?", "options": ["…dat hij het heeft gedaan.", "…dat hij het gedaan heeft.", "…dat hij heeft het gedaan."], "answer": 2 },
+        { "type": "gap", "text": "Ik weet dat hij gisteren ___ gewerkt. (hebben)", "answers": ["heeft"], "en": "I know that he worked yesterday." },
+        { "type": "gap", "text": "Zij zegt dat zij al ___ vertrokken. (zijn)", "answers": ["is"], "en": "She says that she has already left." },
+        { "type": "gap", "text": "Ik denk dat wij het ___ gezien. (hebben)", "answers": ["hebben"], "en": "I think that we have seen it." },
+        { "type": "gap", "text": "Hij vertelde dat hij lang in Parijs ___ gewoond. (hebben, past)", "answers": ["had"], "en": "He told us that he had lived in Paris for a long time." },
+        { "type": "gap", "text": "Ik weet niet of jullie al ___ gegeten. (hebben)", "answers": ["hebben"], "en": "I do not know whether you have eaten yet." },
+        { "type": "gap", "text": "Zij was blij, omdat de trein op tijd ___ aangekomen. (zijn, past)", "answers": ["was"], "en": "She was glad because the train had arrived on time." },
+        { "type": "transform", "q": "Hij heeft het gedaan.", "instruction": "Start with: Ik weet dat ...", "answers": ["Ik weet dat hij het gedaan heeft", "Ik weet dat hij het heeft gedaan"] },
+        { "type": "transform", "q": "Zij is gisteren vertrokken.", "instruction": "Start with: Ik denk dat ...", "answers": ["Ik denk dat zij gisteren vertrokken is", "Ik denk dat zij gisteren is vertrokken", "Ik denk dat ze gisteren vertrokken is", "Ik denk dat ze gisteren is vertrokken"] },
+        { "type": "transform", "q": "Zij heeft de brief niet gelezen.", "instruction": "Start with: Ik weet dat ...", "answers": ["Ik weet dat zij de brief niet gelezen heeft", "Ik weet dat zij de brief niet heeft gelezen", "Ik weet dat ze de brief niet gelezen heeft", "Ik weet dat ze de brief niet heeft gelezen"] },
+        { "type": "transform", "q": "Hij had het gedaan.", "instruction": "Start with: Ik wist dat ...", "answers": ["Ik wist dat hij het gedaan had", "Ik wist dat hij het had gedaan"] },
+        { "type": "order", "answer": "Ik weet dat hij het gedaan heeft.", "alt": ["Ik weet dat hij het heeft gedaan."], "en": "I know that he has done it." },
+        { "type": "order", "answer": "Ik denk dat zij gisteren is vertrokken.", "alt": ["Ik denk dat zij gisteren vertrokken is."], "en": "I think that she left yesterday." },
+        { "type": "order", "answer": "Zij zegt dat zij het boek gelezen heeft.", "alt": ["Zij zegt dat zij het boek heeft gelezen."], "en": "She says that she has read the book." },
+        { "type": "order", "answer": "Ik blijf thuis, omdat ik niet heb geslapen.", "alt": ["Ik blijf thuis, omdat ik niet geslapen heb."], "en": "I am staying home because I have not slept." },
+        { "type": "order", "answer": "Ik wist dat hij het gedaan had.", "alt": ["Ik wist dat hij het had gedaan."], "en": "I knew that he had done it." },
+        { "type": "translate", "en": "I know that she has called.", "answers": ["Ik weet dat zij gebeld heeft", "Ik weet dat zij heeft gebeld", "Ik weet dat ze gebeld heeft", "Ik weet dat ze heeft gebeld"] },
+        { "type": "translate", "en": "I think that he has left.", "answers": ["Ik denk dat hij vertrokken is", "Ik denk dat hij is vertrokken"] },
+        { "type": "translate", "en": "He said that he had slept well.", "answers": ["Hij zei dat hij goed geslapen had", "Hij zei dat hij goed had geslapen"] },
+        { "type": "match", "pairs": [["dat hij het gedaan heeft", "that he has done it"], ["dat zij vertrokken is", "that she has left"], ["omdat ik niet geslapen heb", "because I have not slept"], ["of jullie al gegeten hebben", "whether you have eaten already"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: bijzinnen (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-bijzin/" },
+        { "title": "NT2 TaalMenu: voegwoorden (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-voeg-woorden/" }
+      ]
+    },
+    {
+      "id": "b1.g04.l2", "title": "Modals in the cluster", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "With a **modal verb** the finite verb comes **first** in the cluster, then the infinitive: *…omdat ik morgen niet **kan komen***. In the perfect, the cluster has three verbs: auxiliary, modal, infinitive. Here the order is fixed: **hebben + modal + infinitive**, *…dat hij **heeft moeten werken***." },
+        { "type": "table", "head": ["main clause", "subordinate clause"], "rows": [["Hij kan morgen niet komen.", "Ik weet dat hij morgen niet kan komen."], ["Hij heeft moeten werken.", "Ik weet dat hij heeft moeten werken."], ["Zij had willen komen.", "Ik wist dat zij had willen komen."], ["Ik heb het niet kunnen vinden.", "Hij zegt dat ik het niet heb kunnen vinden."]] },
+        { "type": "p", "text": "So with a modal there is **no choice** of order: *dat hij moeten werken heeft* and *dat hij gemoeten werken heeft* are wrong. The auxiliary stands directly before the two infinitives." },
+        { "type": "ex", "nl": "Zij is boos, omdat zij zo lang heeft moeten wachten.", "en": "She is angry because she has had to wait so long." },
+        { "type": "ex", "nl": "Ik hoop dat ik je morgen kan helpen.", "en": "I hope that I can help you tomorrow." },
+        { "type": "tip", "text": "Think of the cluster as a small block that is never split: **heeft moeten werken**, **kan komen**, **had willen komen**." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik weet dat hij morgen niet ___.", "options": ["kan komen", "komen kan", "kan gekomen"], "answer": 0 },
+        { "type": "choice", "q": "Which clause is correct?", "options": ["…omdat ik heb moeten werken.", "…omdat ik moeten werken heb.", "…omdat ik heb gemoeten werken."], "answer": 0 },
+        { "type": "choice", "q": "Which clause is correct?", "options": ["…dat zij had willen komen.", "…dat zij willen komen had.", "…dat zij had gewild komen."], "answer": 0 },
+        { "type": "choice", "q": "Ik hoop dat ik je morgen ___.", "options": ["kan helpen", "helpen kan", "help kan"], "answer": 0 },
+        { "type": "choice", "q": "Hij zegt dat hij het niet ___.", "options": ["heeft kunnen vinden", "kunnen vinden heeft", "gekund vinden heeft"], "answer": 0 },
+        { "type": "gap", "text": "Ik weet dat hij morgen niet ___ komen. (kunnen)", "answers": ["kan"], "en": "I know that he cannot come tomorrow." },
+        { "type": "gap", "text": "Zij is boos, omdat zij zo lang ___ moeten wachten. (hebben)", "answers": ["heeft"], "en": "She is angry because she has had to wait so long." },
+        { "type": "gap", "text": "Ik denk dat wij vandaag niet ___ komen. (kunnen)", "answers": ["kunnen"], "en": "I think that we cannot come today." },
+        { "type": "gap", "text": "Ik wist dat zij graag ___ willen komen. (hebben, past)", "answers": ["had"], "en": "I knew that she had wanted to come." },
+        { "type": "gap", "text": "Omdat ik ziek ben, ___ ik niet komen. (kunnen)", "answers": ["kan"], "en": "Because I am ill, I cannot come." },
+        { "type": "gap", "text": "Zij vertelde dat zij gisteren ___ moeten werken. (hebben)", "answers": ["had", "heeft"], "en": "She said that she had had to work yesterday." },
+        { "type": "transform", "q": "Hij kan morgen niet komen.", "instruction": "Start with: Ik weet dat ...", "answers": ["Ik weet dat hij morgen niet kan komen"] },
+        { "type": "transform", "q": "Zij heeft moeten werken.", "instruction": "Start with: Ik weet dat ...", "answers": ["Ik weet dat zij heeft moeten werken", "Ik weet dat ze heeft moeten werken"] },
+        { "type": "transform", "q": "Ik heb het niet kunnen vinden.", "instruction": "Start with: Hij zegt dat ik ...", "answers": ["Hij zegt dat ik het niet heb kunnen vinden"] },
+        { "type": "transform", "q": "Wij willen het huis kopen.", "instruction": "Start with: Zij weten dat wij ...", "answers": ["Zij weten dat wij het huis willen kopen"] },
+        { "type": "order", "answer": "Ik weet dat hij morgen niet kan komen.", "en": "I know that he cannot come tomorrow." },
+        { "type": "order", "answer": "Zij is boos, omdat zij lang heeft moeten wachten.", "en": "She is angry because she has had to wait long." },
+        { "type": "order", "answer": "Ik denk dat wij vandaag niet kunnen komen.", "en": "I think that we cannot come today." },
+        { "type": "order", "answer": "Hij zei dat hij het niet had kunnen vinden.", "en": "He said that he had not been able to find it." },
+        { "type": "translate", "en": "I think that she cannot come.", "answers": ["Ik denk dat zij niet kan komen", "Ik denk dat ze niet kan komen"] },
+        { "type": "translate", "en": "She was angry because she had had to wait so long.", "answers": ["Zij was boos omdat zij zo lang had moeten wachten", "Ze was boos omdat ze zo lang had moeten wachten"] },
+        { "type": "translate", "en": "I know that he could not find it.", "answers": ["Ik weet dat hij het niet heeft kunnen vinden", "Ik weet dat hij het niet kon vinden"] },
+        { "type": "match", "pairs": [["dat hij moet werken", "that he has to work"], ["dat hij heeft moeten werken", "that he has had to work"], ["dat hij wil komen", "that he wants to come"], ["dat hij had willen komen", "that he had wanted to come"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: bijzinnen (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-bijzin/" },
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "b1.g04.l3", "title": "Separable verbs and te in the cluster", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "A **separable verb** rejoins in a subordinate clause: *dat zij je morgen **opbelt***. With a modal it normally stays together too: *dat ik je morgen **wil opbellen***. In speech you also hear it split (*op wil bellen*), and that is accepted. In the perfect the participle has *ge* inside: *dat hij haar **opgebeld heeft*** or *dat hij haar **heeft opgebeld***." },
+        { "type": "p", "text": "With **te** the little word goes between the prefix and the verb: *Hij probeert je **op te bellen**.* With a normal verb it goes in front: *Hij probeert **te komen**.* The whole *te*-group stands at the end of the clause (more in unit b1.g05)." },
+        { "type": "table", "head": ["form", "example"], "rows": [["present", "…dat zij je morgen opbelt."], ["with modal", "…dat ik je wil opbellen."], ["perfect", "…dat hij haar opgebeld heeft."], ["with te", "…dat hij probeert op te bellen."], ["te, normal verb", "…dat hij probeert te komen."]] },
+        { "type": "ex", "nl": "Ik ben vergeten het raam dicht te doen.", "en": "I forgot to close the window." },
+        { "type": "ex", "nl": "Hij probeert je morgen op te bellen.", "en": "He is trying to call you tomorrow." },
+        { "type": "tip", "text": "**te** never stands in front of the prefix: *op te bellen*, not *te opbellen*." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik weet dat hij je morgen ___.", "options": ["opbelt", "belt op", "op belt"], "answer": 0 },
+        { "type": "choice", "q": "Ik hoop dat ik je morgen ___.", "options": ["kan opbellen", "opbellen kan", "kan belt op"], "answer": 0 },
+        { "type": "choice", "q": "Hij probeert je morgen ___.", "options": ["op te bellen", "te opbellen", "opte bellen"], "answer": 0 },
+        { "type": "choice", "q": "Ik weet dat zij je gisteren ___ heeft.", "options": ["opgebeld", "opbellen", "belde op"], "answer": 0 },
+        { "type": "choice", "q": "Which clause is correct?", "options": ["…dat hij probeert te komen.", "…dat hij probeert komen te.", "…dat hij te probeert komen."], "answer": 0 },
+        { "type": "gap", "text": "Ik weet dat zij morgen ___. (opbellen)", "answers": ["opbelt"], "en": "I know that she will phone tomorrow." },
+        { "type": "gap", "text": "Ik hoop dat ik je morgen ___ opbellen. (kunnen)", "answers": ["kan"], "en": "I hope that I can phone you tomorrow." },
+        { "type": "gap", "text": "Hij probeert je morgen ___ te bellen. (opbellen)", "answers": ["op"], "en": "He is trying to phone you tomorrow." },
+        { "type": "gap", "text": "Ik ben vergeten het raam ___ te doen. (dichtdoen)", "answers": ["dicht"], "en": "I forgot to close the window." },
+        { "type": "gap", "text": "Zij zegt dat zij je gisteren ___ heeft. (opbellen)", "answers": ["opgebeld"], "en": "She says that she phoned you yesterday." },
+        { "type": "transform", "q": "Zij belt je morgen op.", "instruction": "Start with: Ik denk dat ...", "answers": ["Ik denk dat zij je morgen opbelt", "Ik denk dat ze je morgen opbelt"] },
+        { "type": "transform", "q": "Hij wil je opbellen.", "instruction": "Start with: Ik denk dat ...", "answers": ["Ik denk dat hij je wil opbellen", "Ik denk dat hij je op wil bellen"] },
+        { "type": "transform", "q": "Zij probeert te komen.", "instruction": "Start with: Ik weet dat ...", "answers": ["Ik weet dat zij probeert te komen", "Ik weet dat ze probeert te komen"] },
+        { "type": "transform", "q": "Hij heeft haar opgebeld.", "instruction": "Start with: Ik denk dat ...", "answers": ["Ik denk dat hij haar opgebeld heeft", "Ik denk dat hij haar heeft opgebeld"] },
+        { "type": "order", "answer": "Ik weet dat zij je morgen opbelt.", "en": "I know that she will phone you tomorrow." },
+        { "type": "order", "answer": "Ik hoop dat ik je morgen kan opbellen.", "en": "I hope that I can phone you tomorrow." },
+        { "type": "order", "answer": "Hij probeert je morgen op te bellen.", "en": "He is trying to phone you tomorrow." },
+        { "type": "order", "answer": "Ik ben vergeten het raam dicht te doen.", "en": "I forgot to close the window." },
+        { "type": "order", "answer": "Ik denk dat hij haar gisteren opgebeld heeft.", "alt": ["Ik denk dat hij haar gisteren heeft opgebeld."], "en": "I think that he phoned her yesterday." },
+        { "type": "translate", "en": "I hope that I can phone you tomorrow.", "answers": ["Ik hoop dat ik je morgen kan opbellen", "Ik hoop dat ik je morgen op kan bellen", "Ik hoop dat ik je morgen kan bellen"] },
+        { "type": "translate", "en": "He is trying to call her.", "answers": ["Hij probeert haar op te bellen", "Hij probeert haar te bellen"] },
+        { "type": "translate", "en": "She forgot to close the door.", "answers": ["Zij is vergeten de deur dicht te doen", "Ze is vergeten de deur dicht te doen", "Zij is vergeten de deur te sluiten", "Ze is vergeten de deur te sluiten"] },
+        { "type": "match", "pairs": [["dat hij opbelt", "that he phones"], ["dat hij wil opbellen", "that he wants to phone"], ["dat hij probeert op te bellen", "that he tries to phone"], ["dat hij opgebeld heeft", "that he has phoned"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: werkwoorden met prefix (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-werkwoorden-met-prefix/" },
+        { "title": "NT2 TaalMenu: te en prefix (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-te-prefix/" }
+      ]
+    },
+    {
+      "id": "b1.g04.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Which clause is NOT correct?", "options": ["…dat hij het gedaan heeft.", "…dat hij het heeft gedaan.", "…dat hij heeft het gedaan."], "answer": 2 },
+        { "type": "choice", "q": "…omdat ik morgen niet ___.", "options": ["kan komen", "komen kan", "kom kan"], "answer": 0 },
+        { "type": "choice", "q": "Ik weet dat zij zondag ___.", "options": ["heeft moeten werken", "moeten werken heeft", "gemoeten werken heeft"], "answer": 0 },
+        { "type": "choice", "q": "Which clause is correct?", "options": ["…dat hij probeert op te bellen.", "…dat hij probeert opte bellen.", "…dat hij op probeert te bellen."], "answer": 0 },
+        { "type": "gap", "text": "Ik denk dat hij het niet ___ gezien. (hebben)", "answers": ["heeft"], "en": "I think that he has not seen it." },
+        { "type": "gap", "text": "Ik weet dat zij ziek ___ geweest. (zijn)", "answers": ["is"], "en": "I know that she has been ill." },
+        { "type": "gap", "text": "Zij vertelt dat zij morgen vroeg ___ opstaan. (moeten)", "answers": ["moet"], "en": "She says that she has to get up early tomorrow." },
+        { "type": "gap", "text": "Ik hoop dat ik je morgen ___ helpen. (kunnen)", "answers": ["kan"], "en": "I hope that I can help you tomorrow." },
+        { "type": "gap", "text": "Wij waren blij, omdat wij het huis ___ kunnen kopen. (hebben, past)", "answers": ["hadden"], "en": "We were glad because we had been able to buy the house." },
+        { "type": "gap", "text": "Hij vergat zijn tas ___ te nemen. (meenemen)", "answers": ["mee"], "en": "He forgot to take his bag with him." },
+        { "type": "transform", "q": "Hij heeft de film gezien.", "instruction": "Start with: Ik denk dat ...", "answers": ["Ik denk dat hij de film gezien heeft", "Ik denk dat hij de film heeft gezien"] },
+        { "type": "transform", "q": "Zij moet morgen werken.", "instruction": "Start with: Ik weet dat ...", "answers": ["Ik weet dat zij morgen moet werken", "Ik weet dat ze morgen moet werken"] },
+        { "type": "transform", "q": "Hij is vroeg opgestaan.", "instruction": "Start with: Ik weet dat ...", "answers": ["Ik weet dat hij vroeg opgestaan is", "Ik weet dat hij vroeg is opgestaan"] },
+        { "type": "transform", "q": "Zij heeft kunnen komen.", "instruction": "Start with: Ik ben blij dat ...", "answers": ["Ik ben blij dat zij heeft kunnen komen", "Ik ben blij dat ze heeft kunnen komen"] },
+        { "type": "order", "answer": "Ik weet dat hij vroeg is opgestaan.", "alt": ["Ik weet dat hij vroeg opgestaan is."], "en": "I know that he got up early." },
+        { "type": "order", "answer": "Ik ben blij dat zij heeft kunnen komen.", "en": "I am glad that she was able to come." },
+        { "type": "order", "answer": "Ik denk dat hij het niet gezien heeft.", "alt": ["Ik denk dat hij het niet heeft gezien."], "en": "I think that he has not seen it." },
+        { "type": "translate", "en": "I know that she has had to work.", "answers": ["Ik weet dat zij heeft moeten werken", "Ik weet dat ze heeft moeten werken"] },
+        { "type": "translate", "en": "I think that they have already eaten.", "answers": ["Ik denk dat zij al gegeten hebben", "Ik denk dat zij al hebben gegeten", "Ik denk dat ze al gegeten hebben", "Ik denk dat ze al hebben gegeten"] },
+        { "type": "translate", "en": "He is trying to come tomorrow.", "answers": ["Hij probeert morgen te komen"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: bijzinnen (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-bijzin/" }
+      ]
+    }
+  ]
+}

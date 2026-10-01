@@ -1,0 +1,150 @@
+{
+  "id": "b1.g03", "level": "B1", "kind": "grammar",
+  "title": "Modal perfect (double infinitive)",
+  "subtitle": "Ik heb moeten werken: two infinitives instead of a participle",
+  "lessons": [
+    {
+      "id": "b1.g03.l1", "title": "kunnen, moeten, willen, mogen in the perfect", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "In the perfect, a modal verb that is followed by another verb does **not** get a participle. You use **hebben** and put **two infinitives** at the end (the *double infinitive*): *Ik heb gisteren **moeten werken**.* Not *gemoeten*." },
+        { "type": "table", "head": ["present", "perfect"], "rows": [["Ik moet werken.", "Ik heb moeten werken."], ["Zij kan komen.", "Zij heeft kunnen komen."], ["Wij willen blijven.", "Wij hebben willen blijven."], ["Hij mag niet gaan.", "Hij heeft niet mogen gaan."]] },
+        { "type": "p", "text": "The auxiliary is **always hebben** with a modal, even if the second verb normally takes *zijn*: *Ik heb naar huis moeten gaan.* The participles *gemoeten, gekund, gewild, gemogen* only appear when there is **no** second verb: *Dat heb ik niet gewild.* *Zij heeft het niet gekund.*" },
+        { "type": "ex", "nl": "Wij hebben lang moeten wachten.", "en": "We had to wait for a long time." },
+        { "type": "ex", "nl": "Hij heeft het niet kunnen vinden.", "en": "He was not able to find it." },
+        { "type": "tip", "text": "In everyday speech the **simple past** (*Ik moest werken, Zij kon niet komen*) is just as common. The double infinitive is important because it is the correct form whenever you do use the perfect." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik heb gisteren ___ werken.", "options": ["moeten", "gemoeten", "moest"], "answer": 0 },
+        { "type": "choice", "q": "Hij heeft het boek niet ___ vinden.", "options": ["kunnen", "gekund", "kan"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Zij heeft willen blijven.", "Zij heeft gewild blijven.", "Zij is willen blijven."], "answer": 0 },
+        { "type": "choice", "q": "Perfect of: Wij moeten wachten.", "options": ["Wij hebben moeten wachten.", "Wij hebben gemoeten wachten.", "Wij zijn moeten wachten."], "answer": 0 },
+        { "type": "gap", "text": "Ik heb vroeg ___ opstaan. (moeten)", "answers": ["moeten"], "en": "I had to get up early." },
+        { "type": "gap", "text": "Zij heeft niet ___ komen. (kunnen)", "answers": ["kunnen"], "en": "She has not been able to come." },
+        { "type": "gap", "text": "Wij hebben lang ___ wachten. (moeten)", "answers": ["moeten"], "en": "We had to wait a long time." },
+        { "type": "gap", "text": "Hij heeft niet naar het feest ___ gaan. (mogen)", "answers": ["mogen"], "en": "He was not allowed to go to the party." },
+        { "type": "gap", "text": "Ik heb altijd arts ___ worden. (willen)", "answers": ["willen"], "en": "I have always wanted to become a doctor." },
+        { "type": "gap", "text": "Dat heb ik niet ___. (willen, no second verb)", "answers": ["gewild"], "en": "I did not want that.", "explain": "Without a second verb the modal has a normal participle: gewild." },
+        { "type": "gap", "text": "Zij heeft het niet ___. (kunnen, no second verb)", "answers": ["gekund"], "en": "She was not able to.", "explain": "Without a second verb the participle is gekund." },
+        { "type": "transform", "q": "Ik moet werken.", "instruction": "Put it in the perfect: Ik heb ...", "answers": ["Ik heb moeten werken"] },
+        { "type": "transform", "q": "Zij kan niet komen.", "instruction": "Put it in the perfect.", "answers": ["Zij heeft niet kunnen komen", "Ze heeft niet kunnen komen"] },
+        { "type": "transform", "q": "Wij willen blijven.", "instruction": "Put it in the perfect.", "answers": ["Wij hebben willen blijven", "We hebben willen blijven"] },
+        { "type": "transform", "q": "Hij mag niet meedoen.", "instruction": "Put it in the perfect.", "answers": ["Hij heeft niet mogen meedoen"] },
+        { "type": "order", "answer": "Ik heb gisteren moeten werken.", "en": "I had to work yesterday." },
+        { "type": "order", "answer": "Zij heeft het niet kunnen vinden.", "en": "She was not able to find it." },
+        { "type": "order", "answer": "Wij hebben lang moeten wachten.", "en": "We had to wait a long time." },
+        { "type": "translate", "en": "I had to work yesterday.", "answers": ["Ik heb gisteren moeten werken", "Gisteren heb ik moeten werken", "Ik moest gisteren werken", "Gisteren moest ik werken"] },
+        { "type": "translate", "en": "She has not been able to come.", "answers": ["Zij heeft niet kunnen komen", "Ze heeft niet kunnen komen", "Zij kon niet komen", "Ze kon niet komen"] },
+        { "type": "translate", "en": "He has not been allowed to play.", "answers": ["Hij heeft niet mogen spelen", "Hij mocht niet spelen"] },
+        { "type": "match", "pairs": [["Ik heb moeten werken", "I had to work"], ["Zij heeft kunnen komen", "She was able to come"], ["Wij hebben willen blijven", "We wanted to stay"], ["Hij heeft niet mogen gaan", "He was not allowed to go"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: hebben of zijn in de voltooide tijd (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-hebben-of-zijn-v-v-t/" },
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "b1.g03.l2", "title": "laten, zien, horen, gaan, komen, blijven", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "A few more verbs work the same way when they are followed by an infinitive: **laten, zien, horen, helpen** take **hebben**, and **gaan, komen, blijven** take **zijn**. The participle is replaced by the infinitive: *Ik **heb** hem **zien komen**.* *Ik **ben** gaan zwemmen.*" },
+        { "type": "table", "head": ["verb", "perfect example"], "rows": [["laten (have something done)", "Ik heb mijn haar laten knippen."], ["zien (see)", "Ik heb hem zien komen."], ["horen (hear)", "Wij hebben haar horen zingen."], ["gaan (go and …)", "Ik ben gaan zwemmen."], ["komen (come and …)", "Zij is komen eten."], ["blijven (stay / keep …ing)", "Hij is blijven slapen."]] },
+        { "type": "p", "text": "The same happens in the pluperfect: *Ik **had** mijn haar **laten knippen**.* *Zij **was** komen eten.*" },
+        { "type": "ex", "nl": "Wij hebben onze auto laten repareren.", "en": "We had our car repaired." },
+        { "type": "ex", "nl": "Zij is gisteren bij ons komen eten.", "en": "She came to eat with us yesterday." },
+        { "type": "tip", "text": "With a real object only (no second verb) these verbs have normal participles: *Ik heb hem gezien*, *Ik ben gebleven*, *Ik heb het gehoord*." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik heb hem ___ komen.", "options": ["zien", "gezien", "zag"], "answer": 0 },
+        { "type": "choice", "q": "Ik ___ gisteren gaan zwemmen.", "options": ["ben", "heb", "had"], "answer": 0, "explain": "Gaan takes zijn." },
+        { "type": "choice", "q": "Wij hebben onze auto ___ repareren.", "options": ["laten", "gelaten", "lieten"], "answer": 0 },
+        { "type": "choice", "q": "Hij is nog even ___ zitten.", "options": ["blijven", "gebleven", "bleef"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Zij heeft de kinderen horen lachen.", "Zij heeft de kinderen gehoord lachen.", "Zij is de kinderen horen lachen."], "answer": 0 },
+        { "type": "gap", "text": "Ik heb mijn haar ___ knippen. (laten)", "answers": ["laten"], "en": "I have had my hair cut." },
+        { "type": "gap", "text": "Wij hebben haar ___ zingen. (horen)", "answers": ["horen"], "en": "We heard her sing." },
+        { "type": "gap", "text": "Ik ___ gisteren gaan zwemmen. (zijn)", "answers": ["ben"], "en": "I went swimming yesterday." },
+        { "type": "gap", "text": "Zij ___ gisteren bij ons komen eten. (zijn)", "answers": ["is"], "en": "She came to eat with us yesterday." },
+        { "type": "gap", "text": "Hij ___ de hele dag blijven slapen. (zijn)", "answers": ["is"], "en": "He stayed asleep all day." },
+        { "type": "gap", "text": "Ik heb de postbode ___ komen. (zien)", "answers": ["zien"], "en": "I saw the postman come." },
+        { "type": "transform", "q": "Ik laat mijn fiets repareren.", "instruction": "Put it in the perfect.", "answers": ["Ik heb mijn fiets laten repareren"] },
+        { "type": "transform", "q": "Wij zien hem komen.", "instruction": "Put it in the perfect.", "answers": ["Wij hebben hem zien komen", "We hebben hem zien komen"] },
+        { "type": "transform", "q": "Zij gaat zwemmen.", "instruction": "Put it in the perfect.", "answers": ["Zij is gaan zwemmen", "Ze is gaan zwemmen"] },
+        { "type": "transform", "q": "Ik hoor de kinderen lachen.", "instruction": "Put it in the perfect.", "answers": ["Ik heb de kinderen horen lachen"] },
+        { "type": "order", "answer": "Ik heb mijn haar laten knippen.", "en": "I have had my hair cut." },
+        { "type": "order", "answer": "Wij zijn gisteren gaan wandelen.", "en": "We went for a walk yesterday." },
+        { "type": "order", "answer": "Hij heeft haar zien aankomen.", "en": "He saw her arrive." },
+        { "type": "translate", "en": "I had my bike repaired.", "answers": ["Ik heb mijn fiets laten repareren", "Ik heb mijn fiets laten maken"] },
+        { "type": "translate", "en": "We heard the neighbours sing.", "answers": ["Wij hebben de buren horen zingen", "We hebben de buren horen zingen"] },
+        { "type": "translate", "en": "She came to eat yesterday.", "answers": ["Zij is gisteren komen eten", "Ze is gisteren komen eten", "Gisteren is zij komen eten", "Gisteren is ze komen eten"] },
+        { "type": "match", "pairs": [["laten", "to have something done / to let"], ["zien", "to see"], ["horen", "to hear"], ["blijven", "to stay / to keep on"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: hebben of zijn in de voltooide tijd (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-hebben-of-zijn-v-v-t/" },
+        { "title": "NT2 TaalMenu: B1 menu", "url": "https://nt2taalmenu.nl/nt2-b1-menu/" }
+      ]
+    },
+    {
+      "id": "b1.g03.l3", "title": "Pluperfect with modals: had moeten, had kunnen", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "With **had + modal infinitive** you say what you **should have** or **could have** done. It is very common to express regret or a mild reproach: *Ik **had** het **moeten weten**.* (I should have known.) *Je **had** eerder **kunnen bellen**.* (You could have called earlier.)" },
+        { "type": "table", "head": ["pattern", "meaning", "example"], "rows": [["had + moeten", "should have", "Ik had eerder moeten bellen."], ["had + kunnen", "could have", "Je had het kunnen zeggen."], ["had + willen", "had wanted to", "Zij had willen komen."], ["heeft + moeten", "had to (perfect)", "Ik heb moeten werken."]] },
+        { "type": "p", "text": "In questions the auxiliary comes first: *Heb je lang moeten wachten?* The infinitives stay together at the end." },
+        { "type": "ex", "nl": "Zij had willen komen, maar zij was ziek.", "en": "She had wanted to come, but she was ill." },
+        { "type": "ex", "nl": "Dat had je eerder kunnen zeggen!", "en": "You could have said that earlier!" },
+        { "type": "tip", "text": "*Hij heeft kunnen komen* = he was able to come. *Hij had kunnen komen* = he could have come (but did not)." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Je ___ eerder moeten bellen. (you should have called earlier)", "options": ["had", "heb", "wordt"], "answer": 0 },
+        { "type": "choice", "q": "Zij ___ willen komen, maar zij was ziek.", "options": ["had", "was", "zou"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence means: I should have known that?", "options": ["Ik had dat moeten weten.", "Ik heb dat gemoeten weten.", "Ik had dat weten moeten."], "answer": 0 },
+        { "type": "choice", "q": "Heb je lang ___?", "options": ["moeten wachten", "gemoeten wachten", "wachten moeten"], "answer": 0 },
+        { "type": "gap", "text": "Je ___ het kunnen weten! (you could have known)", "answers": ["had"], "en": "You could have known it!" },
+        { "type": "gap", "text": "Ik ___ gisteren moeten werken, dus ik kon niet komen. (hebben)", "answers": ["heb"], "en": "I had to work yesterday, so I could not come." },
+        { "type": "gap", "text": "Zij ___ het willen doen, maar zij had geen tijd. (hebben, pluperfect)", "answers": ["had"], "en": "She had wanted to do it, but she had no time." },
+        { "type": "gap", "text": "___ jij gisteren moeten werken? (hebben)", "answers": ["Heb"], "en": "Did you have to work yesterday?" },
+        { "type": "gap", "text": "Wij ___ langer kunnen blijven, maar we gingen toch weg. (could have)", "answers": ["hadden"], "en": "We could have stayed longer, but we left anyway." },
+        { "type": "transform", "q": "Ik moet het weten.", "instruction": "Say \"I should have known\": Ik had het ...", "answers": ["Ik had het moeten weten"] },
+        { "type": "transform", "q": "Je kunt eerder bellen.", "instruction": "Say \"you could have called earlier\": Je had ...", "answers": ["Je had eerder kunnen bellen"] },
+        { "type": "transform", "q": "Zij wil komen.", "instruction": "Pluperfect: Zij had ...", "answers": ["Zij had willen komen", "Ze had willen komen"] },
+        { "type": "transform", "q": "Moet je lang wachten?", "instruction": "Put it in the perfect.", "answers": ["Heb je lang moeten wachten"] },
+        { "type": "order", "answer": "Ik had het moeten weten.", "en": "I should have known." },
+        { "type": "order", "answer": "Je had eerder kunnen bellen.", "en": "You could have called earlier." },
+        { "type": "order", "answer": "Zij had willen komen, maar zij was ziek.", "en": "She had wanted to come, but she was ill." },
+        { "type": "order", "answer": "Heb je lang moeten wachten?", "en": "Did you have to wait long?" },
+        { "type": "translate", "en": "I should have known that.", "answers": ["Ik had dat moeten weten", "Dat had ik moeten weten", "Ik had het moeten weten", "Het had ik moeten weten"] },
+        { "type": "translate", "en": "You could have said that earlier.", "answers": ["Je had dat eerder kunnen zeggen", "Dat had je eerder kunnen zeggen", "Je had het eerder kunnen zeggen", "Het had je eerder kunnen zeggen", "U had dat eerder kunnen zeggen", "Dat had u eerder kunnen zeggen"] },
+        { "type": "translate", "en": "Did you have to wait long?", "answers": ["Heb je lang moeten wachten", "Heb jij lang moeten wachten", "Hebt u lang moeten wachten", "Heeft u lang moeten wachten"] },
+        { "type": "match", "pairs": [["had moeten", "should have"], ["had kunnen", "could have"], ["had willen", "had wanted to"], ["heeft moeten", "had to (perfect)"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" },
+        { "title": "NT2 TaalMenu: B1 menu", "url": "https://nt2taalmenu.nl/nt2-b1-menu/" }
+      ]
+    },
+    {
+      "id": "b1.g03.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik heb moeten werken.", "Ik heb gemoeten werken.", "Ik ben moeten werken."], "answer": 0 },
+        { "type": "choice", "q": "Wij ___ de buren horen zingen. (perfect)", "options": ["hebben", "zijn", "worden"], "answer": 0 },
+        { "type": "choice", "q": "Zij ___ gisteren gaan winkelen.", "options": ["is", "heeft", "had"], "answer": 0 },
+        { "type": "choice", "q": "How do you say \"We had to wait\" in the perfect?", "options": ["We hebben moeten wachten.", "We hebben gemoeten wachten.", "We moesten gewacht."], "answer": 0 },
+        { "type": "gap", "text": "Ik heb mijn tas ___ staan. (laten)", "answers": ["laten"], "en": "I left my bag (standing) there." },
+        { "type": "gap", "text": "Dat heb ik nooit ___. (willen, no second verb)", "answers": ["gewild"], "en": "I never wanted that." },
+        { "type": "gap", "text": "Hij ___ niet kunnen slapen. (hebben)", "answers": ["heeft"], "en": "He has not been able to sleep." },
+        { "type": "gap", "text": "Je ___ het moeten weten. (you should have known)", "answers": ["had"], "en": "You should have known." },
+        { "type": "gap", "text": "Zij ___ naar de dokter moeten gaan. (she should have gone)", "answers": ["had"], "en": "She should have gone to the doctor." },
+        { "type": "gap", "text": "Wij hebben de trein ___ vertrekken. (zien)", "answers": ["zien"], "en": "We saw the train leave." },
+        { "type": "transform", "q": "Ik kan niet komen.", "instruction": "Put it in the perfect.", "answers": ["Ik heb niet kunnen komen"] },
+        { "type": "transform", "q": "Wij laten het huis schilderen.", "instruction": "Put it in the perfect.", "answers": ["Wij hebben het huis laten schilderen", "We hebben het huis laten schilderen"] },
+        { "type": "transform", "q": "Hij komt eten.", "instruction": "Put it in the perfect.", "answers": ["Hij is komen eten"] },
+        { "type": "order", "answer": "Ik heb het niet kunnen vinden.", "en": "I have not been able to find it." },
+        { "type": "order", "answer": "Zij had eerder moeten bellen.", "en": "She should have called earlier." },
+        { "type": "order", "answer": "Hij is gisteren gaan zwemmen.", "en": "He went swimming yesterday." },
+        { "type": "translate", "en": "I have not been able to sleep.", "answers": ["Ik heb niet kunnen slapen"] },
+        { "type": "translate", "en": "She has had her hair cut.", "answers": ["Zij heeft haar haar laten knippen", "Ze heeft haar haar laten knippen", "Zij heeft haar haren laten knippen", "Ze heeft haar haren laten knippen"] },
+        { "type": "translate", "en": "We could have stayed longer.", "answers": ["Wij hadden langer kunnen blijven", "We hadden langer kunnen blijven"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    }
+  ]
+}

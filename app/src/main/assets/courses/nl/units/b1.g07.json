@@ -1,0 +1,167 @@
+{
+  "id": "b1.g07", "level": "B1", "kind": "grammar",
+  "title": "Pronominal adverbs",
+  "subtitle": "eraan, erover, ermee, daarover, waarop: preposition + it",
+  "lessons": [
+    {
+      "id": "b1.g07.l1", "title": "er + preposition (things, never people)", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "When a preposition refers to a **thing** (not a person), Dutch does not say *aan het*, *met het*. It joins **er / hier / daar / waar** and the preposition into one word: *Ik denk **aan** het examen → Ik denk **eraan**.* This is a **pronominal adverb**." },
+        { "type": "table", "head": ["preposition", "er-form", "example"], "rows": [["aan", "eraan", "Ik denk eraan."], ["op", "erop", "Ik wacht erop."], ["over", "erover", "Wij praten erover."], ["naar", "ernaar", "Zij kijkt ernaar."], ["van", "ervan", "Ik hou ervan."], ["voor", "ervoor", "Hij zorgt ervoor."], ["om", "erom", "Ik lach erom."], ["met", "ermee", "Hij speelt ermee."], ["tot", "ertoe", "Dat leidt ertoe."]] },
+        { "type": "p", "text": "Watch **met → mee** and **tot → toe**. For **people** you keep the normal form: *Ik denk aan **hem**.* *Ik praat met **haar**.* Never *eraan* for a person. Use **daar-** when you want to stress the word (*Daarmee ben ik het niet eens*) and **hier-** for something close (*Hierover praten we later*)." },
+        { "type": "ex", "nl": "Ik heb ervan genoten.", "en": "I enjoyed it." },
+        { "type": "ex", "nl": "Hij is erover begonnen.", "en": "He started talking about it." },
+        { "type": "tip", "text": "A few prepositions do not combine: *zonder, volgens, tijdens, sinds*. Say *zonder dat*, *tijdens het eten*." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik denk aan het examen. → Ik denk ___.", "options": ["eraan", "aan het", "ermee"], "answer": 0 },
+        { "type": "choice", "q": "How do you say: I am talking about him?", "options": ["Ik praat over hem.", "Ik praat erover.", "Ik praat hierover hem."], "answer": 0, "explain": "For a person you keep the preposition: over hem." },
+        { "type": "choice", "q": "Ik speel met de bal. → Ik speel ___.", "options": ["ermee", "ermet", "met het"], "answer": 0 },
+        { "type": "choice", "q": "Ik wacht op de bus. → Ik wacht ___.", "options": ["erop", "eraan", "erover"], "answer": 0 },
+        { "type": "choice", "q": "Ik praat met mijn zus. How do you refer to her?", "options": ["Ik praat met haar.", "Ik praat ermee.", "Ik praat er met."], "answer": 0 },
+        { "type": "gap", "text": "Ik denk aan mijn vakantie. Ik denk ___.", "answers": ["eraan"], "en": "I am thinking of my holiday. I am thinking of it." },
+        { "type": "gap", "text": "Zij praat over het werk. Zij praat ___.", "answers": ["erover"], "en": "She talks about it." },
+        { "type": "gap", "text": "Hij speelt met de kat. Hij speelt ___.", "answers": ["ermee"], "en": "He plays with it." },
+        { "type": "gap", "text": "Ik kijk naar de film. Ik kijk ___.", "answers": ["ernaar"], "en": "I am watching it." },
+        { "type": "gap", "text": "Ik hou van chocola. Ik hou ___.", "answers": ["ervan"], "en": "I love it." },
+        { "type": "gap", "text": "Ik lach om die grap. Ik lach ___.", "answers": ["erom"], "en": "I laugh at it." },
+        { "type": "gap", "text": "Ik betaal met mijn pas. Ik betaal ___.", "answers": ["ermee"], "en": "I pay with it." },
+        { "type": "gap", "text": "Ik luister naar de muziek. Ik luister ___.", "answers": ["ernaar"], "en": "I listen to it." },
+        { "type": "transform", "q": "Ik denk aan het examen.", "instruction": "Replace aan het examen with a pronominal adverb: Ik denk ...", "answers": ["Ik denk eraan"] },
+        { "type": "transform", "q": "Wij praten over het weer.", "instruction": "Replace over het weer: Wij praten ...", "answers": ["Wij praten erover", "We praten erover"] },
+        { "type": "transform", "q": "Zij wacht op de bus.", "instruction": "Replace op de bus: Zij wacht ...", "answers": ["Zij wacht erop", "Ze wacht erop"] },
+        { "type": "transform", "q": "Hij speelt met de bal.", "instruction": "Replace met de bal: Hij speelt ...", "answers": ["Hij speelt ermee"] },
+        { "type": "order", "answer": "Ik heb ervan genoten.", "en": "I enjoyed it." },
+        { "type": "order", "answer": "Hij is erover begonnen.", "en": "He started talking about it." },
+        { "type": "order", "answer": "Zij heeft erom gelachen.", "en": "She laughed at it." },
+        { "type": "order", "answer": "Wij hebben erover gepraat.", "en": "We have talked about it." },
+        { "type": "translate", "en": "I am waiting for it.", "answers": ["Ik wacht erop"] },
+        { "type": "translate", "en": "We talked about it.", "answers": ["Wij hebben erover gepraat", "Wij praatten erover", "We hebben erover gepraat", "We praatten erover"] },
+        { "type": "translate", "en": "I love it.", "answers": ["Ik hou ervan", "Ik houd ervan"] },
+        { "type": "translate", "en": "She is looking at it.", "answers": ["Zij kijkt ernaar", "Ze kijkt ernaar"] },
+        { "type": "match", "pairs": [["erop", "on it / for it (op)"], ["ermee", "with it (met)"], ["ernaar", "to it / at it (naar)"], ["ervan", "of it / from it (van)"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: er (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-er/" },
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "b1.g07.l2", "title": "Split forms and questions with waar", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "The pronominal adverb is often **split**. **Er** moves forward (after the verb and subject, before most other words), and the **preposition stays at the end** of the clause, before a participle: *Ik heb **er** niet **over** nagedacht.* *Wij praten **er** morgen **over**.* *Zij is **er** trots **op**.*" },
+        { "type": "p", "text": "In **questions** use **waar** + preposition. The two parts are usually split in speech: *Waar wacht je **op**?* *Waar denk je **aan**?* *Waar schrijf je **mee**?* In formal language they stay together: *Waarop wacht u?* *Waarmee schrijft u?* **Daar** and **hier** split in the same way: *Daar ben ik het niet **mee** eens.* *Hier heb ik niets **aan**.*" },
+        { "type": "table", "head": ["split form", "joined form"], "rows": [["Ik denk er elke dag aan.", "Ik denk elke dag eraan."], ["Waar wacht je op?", "Waarop wacht je?"], ["Daar ben ik het niet mee eens.", "Daarmee ben ik het niet eens."], ["Wij praten er morgen over.", "Wij praten morgen erover."]] },
+        { "type": "ex", "nl": "Ik heb er niet over nagedacht.", "en": "I have not thought about it." },
+        { "type": "ex", "nl": "Waar praten jullie over?", "en": "What are you talking about?" },
+        { "type": "tip", "text": "The **split form** is the most natural in everyday Dutch. *Waar … op?* is correct and common, even if the joined form *waarop* looks more \"proper\"." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik heb ___ niet over nagedacht.", "options": ["er", "het", "eraan"], "answer": 0 },
+        { "type": "choice", "q": "Waar denk je ___?", "options": ["aan", "over", "op"], "answer": 0 },
+        { "type": "choice", "q": "Which question is correct?", "options": ["Waar wacht je op?", "Wat wacht je op?", "Waar op wacht je?"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Wij praten er morgen over.", "Wij er praten morgen over.", "Wij praten over er morgen."], "answer": 0 },
+        { "type": "choice", "q": "Daar ben ik het niet ___ eens.", "options": ["mee", "met", "tot"], "answer": 0 },
+        { "type": "gap", "text": "Ik denk er elke dag ___. (aan)", "answers": ["aan"], "en": "I think about it every day." },
+        { "type": "gap", "text": "Wij hebben er lang ___ gepraat. (over)", "answers": ["over"], "en": "We talked about it for a long time." },
+        { "type": "gap", "text": "Waar wacht je ___? (op)", "answers": ["op"], "en": "What are you waiting for?" },
+        { "type": "gap", "text": "Ik ben er niet blij ___. (met)", "answers": ["mee"], "en": "I am not happy about it." },
+        { "type": "gap", "text": "Zij is er trots ___. (op)", "answers": ["op"], "en": "She is proud of it." },
+        { "type": "gap", "text": "Hier heb ik niets ___. (aan)", "answers": ["aan"], "en": "This is of no use to me." },
+        { "type": "gap", "text": "Waar schrijf je ___? (met)", "answers": ["mee"], "en": "What are you writing with?" },
+        { "type": "gap", "text": "___ heb ik niets over gehoord. (daar)", "answers": ["Daar"], "en": "I have heard nothing about that." },
+        { "type": "transform", "q": "Je denkt aan iets.", "instruction": "Make a question with waar: Waar ...?", "answers": ["Waar denk je aan", "Waaraan denk je"] },
+        { "type": "transform", "q": "Je wacht op de bus.", "instruction": "Make a question with waar: Waar ...?", "answers": ["Waar wacht je op", "Waarop wacht je"] },
+        { "type": "transform", "q": "Je schrijft met een pen.", "instruction": "Make a question with waar: Waar ...?", "answers": ["Waar schrijf je mee", "Waarmee schrijf je"] },
+        { "type": "transform", "q": "Ik heb niet over het plan nagedacht.", "instruction": "Replace over het plan with er ... over.", "answers": ["Ik heb er niet over nagedacht"] },
+        { "type": "transform", "q": "Wij praten morgen over het probleem.", "instruction": "Replace over het probleem with er ... over.", "answers": ["Wij praten er morgen over", "We praten er morgen over"] },
+        { "type": "order", "answer": "Ik heb er niet over nagedacht.", "en": "I have not thought about it." },
+        { "type": "order", "answer": "Waar wacht je op?", "en": "What are you waiting for?" },
+        { "type": "order", "answer": "Daar ben ik het niet mee eens.", "en": "I do not agree with that." },
+        { "type": "order", "answer": "Wij hebben er lang over gepraat.", "en": "We have talked about it for a long time." },
+        { "type": "order", "answer": "Zij is er heel trots op.", "en": "She is very proud of it." },
+        { "type": "translate", "en": "I have not thought about it.", "answers": ["Ik heb er niet over nagedacht"] },
+        { "type": "translate", "en": "What are you waiting for?", "answers": ["Waar wacht je op", "Waarop wacht je", "Waar wacht u op", "Waarop wacht u", "Waar wachten jullie op"] },
+        { "type": "translate", "en": "I do not agree with that.", "answers": ["Daar ben ik het niet mee eens", "Ik ben het daar niet mee eens", "Ik ben het er niet mee eens"] },
+        { "type": "translate", "en": "What are you talking about?", "answers": ["Waar praat je over", "Waarover praat je", "Waar praten jullie over", "Waarover praten jullie", "Waar praat u over", "Waarover praat u"] },
+        { "type": "match", "pairs": [["Waar denk je aan?", "What are you thinking of?"], ["Ik heb er niet over nagedacht", "I have not thought about it"], ["Daar ben ik het niet mee eens", "I do not agree with that"], ["Hier heb ik niets aan", "This is of no use to me"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: er (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-er/" },
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "b1.g07.l3", "title": "Announcing a clause: Ik wacht erop dat …", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Many verbs have a **fixed preposition** (*wachten op, rekenen op, zorgen voor, denken aan, houden van, praten over*). When a whole **clause** follows (*dat …* or *te* + infinitive), the clause cannot stand right after the preposition. So the main clause contains **er + preposition**, which \"announces\" the clause: *Ik wacht **erop** dat de trein komt.*" },
+        { "type": "table", "head": ["verb", "with a clause"], "rows": [["wachten op", "Ik wacht erop dat de trein komt."], ["rekenen op", "Ik reken erop dat jij morgen komt."], ["zorgen voor", "Zorg ervoor dat je op tijd bent."], ["denken aan", "Denk eraan dat de winkel dicht is."], ["houden van", "Ik hou ervan dat je lacht."]] },
+        { "type": "p", "text": "The clause itself is a normal subordinate clause (verb at the end). You can also split the announcing word: *Ik reken **er** vast **op** dat je komt.* And without a clause the preposition has an ordinary noun: *Ik wacht op de trein.*" },
+        { "type": "ex", "nl": "Ik reken erop dat jij morgen komt.", "en": "I am counting on you to come tomorrow." },
+        { "type": "ex", "nl": "Zorg ervoor dat je op tijd bent.", "en": "Make sure that you are on time." },
+        { "type": "tip", "text": "Never *Ik wacht op dat de trein komt*. A preposition cannot be followed directly by *dat*: use **erop dat**." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik wacht ___ dat je belt.", "options": ["erop", "op", "eraan"], "answer": 0 },
+        { "type": "choice", "q": "Ik reken ___ dat je komt.", "options": ["erop", "op", "eraan"], "answer": 0 },
+        { "type": "choice", "q": "Zorg ___ dat je op tijd bent.", "options": ["ervoor", "eraan", "erop"], "answer": 0 },
+        { "type": "choice", "q": "Denk ___ dat de winkel dicht is.", "options": ["eraan", "erop", "ermee"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik hou ervan dat je lacht.", "Ik hou dat je lacht.", "Ik hou van dat je lacht."], "answer": 0 },
+        { "type": "gap", "text": "Ik wacht ___ dat de trein komt. (op)", "answers": ["erop"], "en": "I am waiting for the train to come." },
+        { "type": "gap", "text": "Ik reken ___ dat jij morgen komt. (op)", "answers": ["erop"], "en": "I am counting on you to come tomorrow." },
+        { "type": "gap", "text": "Zij zorgt ___ dat alles klaar is. (voor)", "answers": ["ervoor"], "en": "She makes sure that everything is ready." },
+        { "type": "gap", "text": "Denk ___ dat je je sleutels meeneemt. (aan)", "answers": ["eraan"], "en": "Remember to take your keys." },
+        { "type": "gap", "text": "Ik hou ___ dat jij altijd lacht. (van)", "answers": ["ervan"], "en": "I love it that you always laugh." },
+        { "type": "gap", "text": "Wij praten ___ dat wij gaan verhuizen. (over)", "answers": ["erover"], "en": "We are talking about the fact that we are going to move." },
+        { "type": "gap", "text": "Ik hoop ___ dat het morgen mooi weer is. (op)", "answers": ["erop"], "en": "I hope that the weather will be nice tomorrow." },
+        { "type": "transform", "q": "Jij komt morgen. Ik reken daarop.", "instruction": "Join: Ik reken erop dat ...", "answers": ["Ik reken erop dat jij morgen komt", "Ik reken erop dat je morgen komt"] },
+        { "type": "transform", "q": "De trein komt. Ik wacht erop.", "instruction": "Join: Ik wacht erop dat ...", "answers": ["Ik wacht erop dat de trein komt"] },
+        { "type": "transform", "q": "Je neemt je sleutels mee. Denk eraan.", "instruction": "Join: Denk eraan dat ...", "answers": ["Denk eraan dat je je sleutels meeneemt", "Denk eraan dat jij je sleutels meeneemt"] },
+        { "type": "transform", "q": "Alles is klaar. Zij zorgt ervoor.", "instruction": "Join: Zij zorgt ervoor dat ...", "answers": ["Zij zorgt ervoor dat alles klaar is", "Ze zorgt ervoor dat alles klaar is"] },
+        { "type": "order", "answer": "Ik wacht erop dat de trein komt.", "en": "I am waiting for the train to come." },
+        { "type": "order", "answer": "Ik reken erop dat jij morgen komt.", "en": "I am counting on you to come tomorrow." },
+        { "type": "order", "answer": "Zorg ervoor dat je op tijd bent.", "en": "Make sure that you are on time." },
+        { "type": "order", "answer": "Denk eraan dat de winkel dicht is.", "en": "Remember that the shop is closed." },
+        { "type": "translate", "en": "I am counting on you coming tomorrow.", "answers": ["Ik reken erop dat je morgen komt", "Ik reken erop dat jij morgen komt", "Ik reken erop dat u morgen komt"] },
+        { "type": "translate", "en": "Make sure that you are on time.", "answers": ["Zorg ervoor dat je op tijd bent", "Zorg ervoor dat jij op tijd bent", "Zorg dat je op tijd bent"] },
+        { "type": "translate", "en": "I am waiting for the bus to come.", "answers": ["Ik wacht erop dat de bus komt"] },
+        { "type": "translate", "en": "Remember that the shop is closed.", "answers": ["Denk eraan dat de winkel dicht is", "Denk eraan dat de winkel gesloten is"] },
+        { "type": "match", "pairs": [["wachten op", "Ik wacht erop dat …"], ["rekenen op", "Ik reken erop dat …"], ["zorgen voor", "Ik zorg ervoor dat …"], ["denken aan", "Denk eraan dat …"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: er (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-er/" },
+        { "title": "NT2 TaalMenu: werkwoorden met vast voorzetsel (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-werkwoorden-met-vast-voorzetsel/" }
+      ]
+    },
+    {
+      "id": "b1.g07.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Ik praat met mijn zus. How do you refer to her?", "options": ["Ik praat met haar.", "Ik praat ermee.", "Ik praat er met."], "answer": 0 },
+        { "type": "choice", "q": "Which question is correct?", "options": ["Waarover praten jullie?", "Wat over praten jullie?", "Waar praten over jullie?"], "answer": 0 },
+        { "type": "choice", "q": "Ik reken ___ dat je komt.", "options": ["erop", "eraan", "ervan"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik heb er geen zin in.", "Ik heb geen zin erin.", "Ik heb er geen zin."], "answer": 0 },
+        { "type": "gap", "text": "Ik heb er veel ___ geleerd. (van)", "answers": ["van"], "en": "I have learned a lot from it." },
+        { "type": "gap", "text": "Wij wachten er al lang ___. (op)", "answers": ["op"], "en": "We have been waiting for it for a long time." },
+        { "type": "gap", "text": "Waar ben je bang ___? (voor)", "answers": ["voor"], "en": "What are you afraid of?" },
+        { "type": "gap", "text": "Hier kan ik niets ___ doen. (aan)", "answers": ["aan"], "en": "I cannot do anything about this." },
+        { "type": "gap", "text": "Ik ben er zeker ___ dat hij komt. (van)", "answers": ["van"], "en": "I am sure that he is coming." },
+        { "type": "gap", "text": "Zij is er erg trots ___. (op)", "answers": ["op"], "en": "She is very proud of it." },
+        { "type": "transform", "q": "Je bent bang voor iets.", "instruction": "Make a question with waar: Waar ...?", "answers": ["Waar ben je bang voor", "Waarvoor ben je bang"] },
+        { "type": "transform", "q": "Ik heb veel van de cursus geleerd.", "instruction": "Replace van de cursus: Ik heb er ...", "answers": ["Ik heb er veel van geleerd"] },
+        { "type": "transform", "q": "Wij hebben lang over het plan gepraat.", "instruction": "Replace over het plan: Wij hebben er ...", "answers": ["Wij hebben er lang over gepraat", "We hebben er lang over gepraat"] },
+        { "type": "transform", "q": "Alles is klaar. Ik zorg ervoor.", "instruction": "Join: Ik zorg ervoor dat ...", "answers": ["Ik zorg ervoor dat alles klaar is"] },
+        { "type": "order", "answer": "Waar ben je bang voor?", "en": "What are you afraid of?" },
+        { "type": "order", "answer": "Ik heb er veel van geleerd.", "en": "I have learned a lot from it." },
+        { "type": "order", "answer": "Ik ben er zeker van dat hij komt.", "en": "I am sure that he is coming." },
+        { "type": "order", "answer": "Wij wachten er al lang op.", "en": "We have been waiting for it for a long time." },
+        { "type": "translate", "en": "I am afraid of it.", "answers": ["Ik ben er bang voor"] },
+        { "type": "translate", "en": "What are you afraid of?", "answers": ["Waar ben je bang voor", "Waarvoor ben je bang", "Waar bent u bang voor", "Waarvoor bent u bang"] },
+        { "type": "translate", "en": "I have learned a lot from it.", "answers": ["Ik heb er veel van geleerd"] },
+        { "type": "translate", "en": "We are counting on it.", "answers": ["Wij rekenen erop", "We rekenen erop"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: er (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-er/" }
+      ]
+    }
+  ]
+}

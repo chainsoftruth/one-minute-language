@@ -1,0 +1,142 @@
+{
+  "id": "b1.g01", "level": "B1", "kind": "grammar",
+  "title": "Pluperfect + tenses",
+  "subtitle": "had/was + participle: what happened before another past moment",
+  "lessons": [
+    {
+      "id": "b1.g01.l1", "title": "Forming the pluperfect", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "The **pluperfect** (*voltooid verleden tijd*) tells you about something that was already finished **before another moment in the past**. You build it like the perfect, but the auxiliary is in the past: **had / hadden** or **was / waren**, plus the participle at the end." },
+        { "type": "table", "head": ["perfect (now)", "pluperfect (earlier in the past)"], "rows": [["ik heb gewerkt", "ik had gewerkt"], ["zij is gegaan", "zij was gegaan"], ["wij hebben gegeten", "wij hadden gegeten"], ["jullie zijn vertrokken", "jullie waren vertrokken"]] },
+        { "type": "p", "text": "The choice between *hebben* and *zijn* is **the same as in the perfect**: *zijn* for verbs of change of place or state (*gaan, komen, vertrekken, worden*), *hebben* for the rest." },
+        { "type": "ex", "nl": "Toen ik aankwam, was de trein al vertrokken.", "en": "When I arrived, the train had already left." },
+        { "type": "ex", "nl": "Ik had mijn sleutels vergeten, dus ik kon niet naar binnen.", "en": "I had forgotten my keys, so I could not get in." },
+        { "type": "tip", "text": "Only use the pluperfect when there is a second, later moment in the past. For one single past event, use the simple past or the perfect." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Toen ik op het station aankwam, ___ de trein al vertrokken.", "options": ["was", "had", "is"], "answer": 0, "explain": "Vertrekken is a verb of change of place, so it takes zijn: was vertrokken." },
+        { "type": "choice", "q": "Ik ___ mijn sleutels vergeten, dus ik kon niet naar binnen.", "options": ["had", "was", "heb"], "answer": 0 },
+        { "type": "choice", "q": "What is the pluperfect of: Zij is naar huis gegaan.", "options": ["Zij was naar huis gegaan.", "Zij had naar huis gegaan.", "Zij ging naar huis."], "answer": 0 },
+        { "type": "choice", "q": "Wij ___ al gegeten toen hij belde.", "options": ["hadden", "waren", "hebben"], "answer": 0 },
+        { "type": "gap", "text": "Toen ik thuiskwam, ___ mijn zus al naar bed gegaan. (zijn)", "answers": ["was"], "en": "When I came home, my sister had already gone to bed." },
+        { "type": "gap", "text": "Ik ___ de krant al gelezen, voordat jij kwam. (hebben)", "answers": ["had"], "en": "I had already read the paper before you came." },
+        { "type": "gap", "text": "Zij ___ lang in Spanje gewoond, voordat zij naar Nederland verhuisde. (hebben)", "answers": ["had"], "en": "She had lived in Spain for a long time before she moved to the Netherlands." },
+        { "type": "gap", "text": "De kinderen ___ al gespeeld, toen het begon te regenen. (hebben)", "answers": ["hadden"], "en": "The children had already played when it started to rain." },
+        { "type": "gap", "text": "Wij ___ te laat vertrokken, dus wij misten de trein. (zijn)", "answers": ["waren"], "en": "We had left too late, so we missed the train." },
+        { "type": "gap", "text": "Hij zei dat hij zijn huiswerk ___ gemaakt. (hebben)", "answers": ["had"], "en": "He said that he had done his homework." },
+        { "type": "transform", "q": "Ik heb mijn paraplu vergeten.", "instruction": "Put it in the pluperfect (had/was + participle).", "answers": ["Ik had mijn paraplu vergeten"] },
+        { "type": "transform", "q": "Zij is al vertrokken.", "instruction": "Put it in the pluperfect.", "answers": ["Zij was al vertrokken", "Ze was al vertrokken"] },
+        { "type": "transform", "q": "Wij hebben gegeten.", "instruction": "Put it in the pluperfect.", "answers": ["Wij hadden gegeten", "We hadden gegeten"] },
+        { "type": "transform", "q": "De trein is aangekomen.", "instruction": "Put it in the pluperfect.", "answers": ["De trein was aangekomen"], "explain": "Aankomen is separable: the participle is aangekomen, with ge inside." },
+        { "type": "order", "answer": "Toen ik aankwam, was de trein al vertrokken.", "alt": ["De trein was al vertrokken, toen ik aankwam."], "en": "When I arrived, the train had already left." },
+        { "type": "order", "answer": "Ik had mijn sleutels vergeten.", "en": "I had forgotten my keys." },
+        { "type": "translate", "en": "I had already eaten when she called.", "answers": ["Ik had al gegeten toen zij belde", "Ik had al gegeten toen ze belde", "Toen zij belde, had ik al gegeten", "Toen ze belde, had ik al gegeten"] },
+        { "type": "translate", "en": "We had left too late.", "answers": ["Wij waren te laat vertrokken", "We waren te laat vertrokken"] },
+        { "type": "match", "pairs": [["ik heb gelezen", "ik had gelezen"], ["zij is gekomen", "zij was gekomen"], ["wij hebben gegeten", "wij hadden gegeten"], ["jullie zijn gegaan", "jullie waren gegaan"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: verleden tijd (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuverledentijd/" },
+        { "title": "NT2 TaalMenu: hebben of zijn in de voltooide tijd (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-hebben-of-zijn-v-v-t/" }
+      ]
+    },
+    {
+      "id": "b1.g01.l2", "title": "Earlier and later: signal words", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "In a story you usually tell the main events in the **simple past**, and you go one step back with the **pluperfect**. Words like **nadat** (after), **voordat** (before), **toen** (when), **al** (already), **nog niet** (not yet), **inmiddels** (by then) and **daarvoor** (before that) help the listener to place the events." },
+        { "type": "table", "head": ["word", "meaning", "example"], "rows": [["nadat", "after", "Nadat ik had gegeten, ging ik naar bed."], ["al", "already", "De winkel was al gesloten."], ["nog niet", "not yet", "Ik had nog niet gegeten."], ["inmiddels", "by then", "Inmiddels was het donker geworden."], ["daarvoor", "before that", "Daarvoor had ik nooit gevlogen."]] },
+        { "type": "p", "text": "In a subordinate clause the verbs go to the end. With the pluperfect both orders are correct: *Nadat ik **had gegeten**, …* and *Nadat ik **gegeten had**, …*." },
+        { "type": "ex", "nl": "Nadat zij de brief had gelezen, belde zij haar zus.", "en": "After she had read the letter, she called her sister." },
+        { "type": "ex", "nl": "Ik had nog niet gegeten, toen hij belde.", "en": "I had not eaten yet when he called." },
+        { "type": "tip", "text": "The event with **had/was + participle** happened first. The event in the simple past (*belde, kwam, ging*) happened later." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Nadat ik ___ had, ging ik naar bed.", "options": ["gegeten", "eten", "at"], "answer": 0 },
+        { "type": "choice", "q": "Toen wij aankwamen, ___ de film al begonnen.", "options": ["was", "had", "werd"], "answer": 0 },
+        { "type": "choice", "q": "Ik ___ nog niet gegeten, toen hij belde.", "options": ["had", "was", "heb"], "answer": 0 },
+        { "type": "choice", "q": "Voordat de les begon, ___ ik koffie gedronken.", "options": ["had", "was", "heb"], "answer": 0 },
+        { "type": "choice", "q": "In \"Toen ik thuiskwam, had mijn broer al gekookt\", what happened first?", "options": ["My brother cooked.", "I came home."], "answer": 0 },
+        { "type": "gap", "text": "___ ik had gegeten, ging ik naar bed. (after)", "answers": ["Nadat"], "en": "After I had eaten, I went to bed." },
+        { "type": "gap", "text": "Toen ik op kantoor kwam, ___ mijn collega's al vertrokken. (zijn)", "answers": ["waren"], "en": "When I got to the office, my colleagues had already left." },
+        { "type": "gap", "text": "Ik had mijn huiswerk ___ niet gemaakt, toen de les begon. (not yet)", "answers": ["nog"], "en": "I had not yet done my homework when the lesson started.", "explain": "Nog niet = not yet." },
+        { "type": "gap", "text": "Toen de politie kwam, ___ de dief al weggelopen. (zijn)", "answers": ["was"], "en": "When the police came, the thief had already run away." },
+        { "type": "gap", "text": "Nadat zij de brief ___ gelezen, belde zij haar zus. (hebben)", "answers": ["had"], "en": "After she had read the letter, she called her sister.", "explain": "Both had gelezen and gelezen had are correct in a subordinate clause." },
+        { "type": "gap", "text": "Ik ___ al drie jaar in Utrecht gewoond, toen ik verhuisde. (hebben)", "answers": ["had"], "en": "I had lived in Utrecht for three years when I moved." },
+        { "type": "transform", "q": "Eerst at ik. Daarna ging ik naar bed.", "instruction": "Join with nadat: Nadat ik ...", "answers": ["Nadat ik had gegeten, ging ik naar bed", "Nadat ik gegeten had, ging ik naar bed"] },
+        { "type": "transform", "q": "Ik at. Toen belde hij.", "instruction": "Say that you had already eaten when he called (use al and toen).", "answers": ["Ik had al gegeten, toen hij belde", "Toen hij belde, had ik al gegeten"] },
+        { "type": "transform", "q": "De film is al begonnen.", "instruction": "Start with: Toen wij aankwamen, ... (pluperfect)", "answers": ["Toen wij aankwamen, was de film al begonnen", "Toen we aankwamen, was de film al begonnen"] },
+        { "type": "transform", "q": "Zij heeft nog niet gebeld.", "instruction": "Put it in the pluperfect.", "answers": ["Zij had nog niet gebeld", "Ze had nog niet gebeld"] },
+        { "type": "order", "answer": "Nadat ik had gegeten, ging ik naar bed.", "alt": ["Nadat ik gegeten had, ging ik naar bed."], "en": "After I had eaten, I went to bed." },
+        { "type": "order", "answer": "Toen wij aankwamen, was de winkel al gesloten.", "alt": ["De winkel was al gesloten, toen wij aankwamen."], "en": "When we arrived, the shop had already closed." },
+        { "type": "order", "answer": "Ik had nog niet gegeten, toen hij belde.", "alt": ["Toen hij belde, had ik nog niet gegeten."], "en": "I had not eaten yet when he called." },
+        { "type": "translate", "en": "When I arrived, the shop had already closed.", "answers": ["Toen ik aankwam, was de winkel al gesloten", "De winkel was al gesloten, toen ik aankwam", "De winkel was al gesloten toen ik aankwam"] },
+        { "type": "translate", "en": "After she had read the letter, she called her sister.", "answers": ["Nadat zij de brief had gelezen, belde zij haar zus", "Nadat zij de brief gelezen had, belde zij haar zus", "Nadat ze de brief had gelezen, belde ze haar zus", "Nadat ze de brief gelezen had, belde ze haar zus"] },
+        { "type": "match", "pairs": [["al", "already"], ["nog niet", "not yet"], ["inmiddels", "by then / meanwhile"], ["daarvoor", "before that"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: signaalwoorden (B1)", "url": "https://nt2taalmenu.nl/b1-verzamel-signaal-woorden/" },
+        { "title": "NT2 TaalMenu: onvoltooid verleden tijd (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-ovt/" }
+      ]
+    },
+    {
+      "id": "b1.g01.l3", "title": "Perfect, simple past or pluperfect?", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Three past tenses, three jobs. The **perfect** reports a finished fact with a link to now. The **simple past** tells a story or describes a situation. The **pluperfect** looks back from a past moment to something that happened before it." },
+        { "type": "table", "head": ["tense", "use", "example"], "rows": [["perfect", "finished fact, link to now", "Ik heb gisteren gewerkt."], ["simple past", "story, events in order", "Ik stond op, at en ging weg."], ["pluperfect", "before another past moment", "Toen ik vertrok, had ik al gegeten."]] },
+        { "type": "p", "text": "The pluperfect is also the tense for **reasons and background** in a past story: *Zij was boos, omdat hij niet had gebeld.* And with **nog nooit** (never before): *Ik had nog nooit sneeuw gezien.*" },
+        { "type": "ex", "nl": "Toen ik wakker werd, had het gesneeuwd.", "en": "When I woke up, it had snowed." },
+        { "type": "ex", "nl": "Ik had nog nooit sneeuw gezien.", "en": "I had never seen snow before." },
+        { "type": "tip", "text": "*Ik had gisteren gewerkt* sounds unfinished: the listener waits for \"…toen er iets gebeurde\". With only one past event, use *Ik heb gisteren gewerkt* or *Ik werkte gisteren*." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Which sentence is natural? (one finished event yesterday)", "options": ["Ik heb gisteren gewerkt.", "Ik had gisteren gewerkt.", "Ik ben gisteren gewerkt."], "answer": 0, "explain": "One past event: perfect. Werken takes hebben, and had needs a second past moment." },
+        { "type": "choice", "q": "Toen hij belde, ___ ik al naar bed gegaan.", "options": ["was", "had", "werd"], "answer": 0 },
+        { "type": "choice", "q": "Eerst ___ ik koffie, toen ging ik naar mijn werk. (events in order)", "options": ["dronk", "had gedronken", "heb gedronken"], "answer": 0 },
+        { "type": "choice", "q": "Ik was blij, want mijn vader ___ mij een cadeau gegeven.", "options": ["had", "was", "heeft"], "answer": 0 },
+        { "type": "choice", "q": "Which verb form gives the earlier event? \"Zij had gewerkt, voordat zij naar huis ging.\"", "options": ["had gewerkt", "ging"], "answer": 0 },
+        { "type": "gap", "text": "Ik stond op, ik at een boterham en toen ___ ik naar mijn werk. (gaan, simple past)", "answers": ["ging"], "en": "I got up, ate a sandwich and then went to work." },
+        { "type": "gap", "text": "Toen ik wakker werd, ___ het gesneeuwd. (hebben)", "answers": ["had"], "en": "When I woke up, it had snowed." },
+        { "type": "gap", "text": "Toen wij het station bereikten, ___ de trein al vertrokken. (zijn)", "answers": ["was"], "en": "When we reached the station, the train had already left." },
+        { "type": "gap", "text": "Zij was boos, omdat hij haar niet ___ gebeld. (hebben)", "answers": ["had"], "en": "She was angry because he had not called her." },
+        { "type": "transform", "q": "Ik heb mijn huiswerk gemaakt. Toen kwam mijn vriend.", "instruction": "One sentence: Toen mijn vriend kwam, ... (pluperfect)", "answers": ["Toen mijn vriend kwam, had ik mijn huiswerk gemaakt", "Toen mijn vriend kwam, had ik mijn huiswerk al gemaakt"] },
+        { "type": "transform", "q": "Zij heeft gestudeerd. Daarna zocht zij werk.", "instruction": "Start with Nadat", "answers": ["Nadat zij had gestudeerd, zocht zij werk", "Nadat zij gestudeerd had, zocht zij werk", "Nadat ze had gestudeerd, zocht ze werk", "Nadat ze gestudeerd had, zocht ze werk"] },
+        { "type": "order", "answer": "Ik was boos, omdat hij niet had gebeld.", "alt": ["Ik was boos, omdat hij niet gebeld had."], "en": "I was angry because he had not called." },
+        { "type": "order", "answer": "Toen ik wakker werd, had het gesneeuwd.", "alt": ["Het had gesneeuwd, toen ik wakker werd."], "en": "When I woke up, it had snowed." },
+        { "type": "order", "answer": "Hij zei dat hij al had gegeten.", "alt": ["Hij zei dat hij al gegeten had."], "en": "He said that he had already eaten." },
+        { "type": "translate", "en": "I had never seen snow before.", "answers": ["Ik had nog nooit sneeuw gezien", "Ik had nooit eerder sneeuw gezien", "Ik had eerder nooit sneeuw gezien"] },
+        { "type": "translate", "en": "I was tired because I had slept badly.", "answers": ["Ik was moe omdat ik slecht had geslapen", "Ik was moe omdat ik slecht geslapen had"] },
+        { "type": "match", "pairs": [["perfect", "finished fact, link to now"], ["simple past", "events of a story in order"], ["pluperfect", "before another past moment"], ["nog nooit", "never before"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: voltooide tijd (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuvoltooidetijd/" },
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "b1.g01.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Toen ik thuiskwam, had mijn man al gekookt.", "Toen ik thuiskwam, was mijn man al gekookt.", "Toen ik thuiskwam, heeft mijn man al gekookt."], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Wij waren al vertrokken.", "Wij hadden al vertrokken.", "Wij werden al vertrokken."], "answer": 0 },
+        { "type": "choice", "q": "Hij ___ al twee jaar in Nederland gewoond, toen hij zijn eerste baan vond.", "options": ["had", "was", "heeft"], "answer": 0 },
+        { "type": "choice", "q": "Nadat hij was ___, ging hij naar zijn werk.", "options": ["opgestaan", "opstaan", "opstond"], "answer": 0 },
+        { "type": "gap", "text": "Ik wist niet dat jij al ___ weggegaan. (zijn)", "answers": ["was"], "en": "I did not know that you had already left." },
+        { "type": "gap", "text": "Toen ik haar zag, ___ zij een nieuwe jas gekocht. (hebben)", "answers": ["had"], "en": "When I saw her, she had bought a new coat." },
+        { "type": "gap", "text": "De kinderen ___ al gegeten, voordat wij thuiskwamen. (hebben)", "answers": ["hadden"], "en": "The children had already eaten before we got home." },
+        { "type": "gap", "text": "Wij ___ nog nooit in Duitsland geweest, voordat wij naar Berlijn gingen. (zijn)", "answers": ["waren"], "en": "We had never been to Germany before we went to Berlin." },
+        { "type": "gap", "text": "Nadat ik had betaald, ___ ik de winkel uit. (gaan, simple past)", "answers": ["ging"], "en": "After I had paid, I left the shop." },
+        { "type": "gap", "text": "Zij ___ haar sleutel vergeten, dus zij moest wachten. (hebben)", "answers": ["had"], "en": "She had forgotten her key, so she had to wait." },
+        { "type": "transform", "q": "Ik heb de brief gelezen. Daarna schreef ik terug.", "instruction": "Start with Nadat", "answers": ["Nadat ik de brief had gelezen, schreef ik terug", "Nadat ik de brief gelezen had, schreef ik terug"] },
+        { "type": "transform", "q": "Hij is al naar huis gegaan. Toen kwam ik aan.", "instruction": "Start with: Toen ik aankwam, ...", "answers": ["Toen ik aankwam, was hij al naar huis gegaan"] },
+        { "type": "transform", "q": "Wij hebben niets gegeten.", "instruction": "Put it in the pluperfect.", "answers": ["Wij hadden niets gegeten", "We hadden niets gegeten"] },
+        { "type": "order", "answer": "Toen ik terugkwam, was mijn vriend al vertrokken.", "alt": ["Mijn vriend was al vertrokken, toen ik terugkwam."], "en": "When I came back, my friend had already left." },
+        { "type": "order", "answer": "Hij had nog nooit een kat gehad.", "en": "He had never had a cat." },
+        { "type": "order", "answer": "Zij hadden lang gewacht, voordat de bus kwam.", "alt": ["Voordat de bus kwam, hadden zij lang gewacht."], "en": "They had waited a long time before the bus came." },
+        { "type": "translate", "en": "Before I went to bed, I had called my mother.", "answers": ["Voordat ik naar bed ging, had ik mijn moeder gebeld", "Ik had mijn moeder gebeld, voordat ik naar bed ging", "Ik had mijn moeder gebeld voordat ik naar bed ging"] },
+        { "type": "translate", "en": "She had not slept, so she was tired.", "answers": ["Zij had niet geslapen, dus zij was moe", "Ze had niet geslapen, dus ze was moe", "Zij had niet geslapen, dus was zij moe", "Ze had niet geslapen, dus was ze moe"] },
+        { "type": "translate", "en": "When we got home, the children had already gone to bed.", "answers": ["Toen wij thuiskwamen, waren de kinderen al naar bed gegaan", "Toen we thuiskwamen, waren de kinderen al naar bed gegaan", "De kinderen waren al naar bed gegaan, toen wij thuiskwamen", "De kinderen waren al naar bed gegaan, toen we thuiskwamen"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    }
+  ]
+}

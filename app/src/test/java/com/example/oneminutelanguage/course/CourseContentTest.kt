@@ -131,6 +131,36 @@ class CourseContentTest {
         }
     }
 
+    @Test fun b1GrammarUnitsAreDenseEnough() {
+        for (unit in units("nl").filter { it.level == "B1" && it.kind == UnitKind.GRAMMAR }) {
+            val items = unit.lessons.flatMap { it.items }
+            val production = items.count { it is Item.Gap || it is Item.Order || it is Item.Transform || it is Item.Translate }
+            assertTrue("${unit.id}: at least 3 lessons plus practice", unit.lessons.size >= 4)
+            assertTrue("${unit.id}: at least 60 items, has ${items.size}", items.size >= 60)
+            assertTrue("${unit.id}: at least 40% production items, has $production of ${items.size}", production * 10 >= items.size * 4)
+        }
+    }
+
+    /** In b1.g04 a participle + auxiliary pair at the end of a clause can be written in two orders, so the item must list both. */
+    @Test fun clusterOrderItemsListBothOrders() {
+        val aux = setOf("heeft", "heb", "hebt", "hebben", "had", "hadden", "is", "ben", "bent", "zijn", "was", "waren")
+        val participle = Regex("^(ge\\w{3,}|\\w+ge\\w+(d|t|en)|(be|ver|ont|her|er)\\w+(d|t|en))$")
+        val unit = units("nl").firstOrNull { it.id == "b1.g04" } ?: return
+        for (lesson in unit.lessons) lesson.items.filterIsInstance<Item.Order>().forEach { item ->
+            for (clause in item.answer.lowercase().split(',')) {
+                val w = words(clause)
+                if (w.size < 3) continue
+                val (a, b) = w[w.size - 2] to w.last()
+                val auxFirst = a in aux && participle.matches(b)
+                val auxLast = b in aux && participle.matches(a)
+                val auxIndex = if (auxFirst) w.size - 2 else w.size - 1
+                if ((auxFirst || auxLast) && auxIndex >= 2) {
+                    assertTrue("${lesson.id}: '${item.answer}' needs the other cluster order in alt", item.alt.isNotEmpty())
+                }
+            }
+        }
+    }
+
     @Test fun grammarLessonsFollowTheAuthoringStandard() {
         for (course in courseDirs()) for (unit in units(course.name)) {
             for (lesson in unit.lessons) {

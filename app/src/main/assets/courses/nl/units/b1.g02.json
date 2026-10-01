@@ -1,0 +1,144 @@
+{
+  "id": "b1.g02", "level": "B1", "kind": "grammar",
+  "title": "zou / zouden",
+  "subtitle": "Polite requests, advice, imagined situations and \"would\" in the past",
+  "lessons": [
+    {
+      "id": "b1.g02.l1", "title": "Polite requests and advice", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "**Zou / zouden** is the past tense of *zullen*, but it mostly works like English *would* and *could*. It makes a request or a wish softer. The infinitive goes to the **end** of the clause." },
+        { "type": "table", "head": ["use", "pattern", "example"], "rows": [["polite request", "Zou u … kunnen / willen …?", "Zou u mij kunnen helpen?"], ["wish", "Ik zou graag …", "Ik zou graag een afspraak maken."], ["advice", "Je zou … moeten …", "Je zou meer moeten slapen."], ["advice", "Als ik jou was, zou ik …", "Als ik jou was, zou ik naar de dokter gaan."]] },
+        { "type": "p", "text": "In a question the subject comes right after *zou*: *Zou **u** …?* *Zouden **jullie** …?* Use *zou* for **ik, jij, u, hij, zij, het** and *zouden* for **wij, jullie, zij** (plural)." },
+        { "type": "ex", "nl": "Zou u de deur even open kunnen houden?", "en": "Could you hold the door open for a moment?" },
+        { "type": "ex", "nl": "Als ik jou was, zou ik niet te laat gaan slapen.", "en": "If I were you, I would not go to bed too late." },
+        { "type": "tip", "text": "Note **Als ik jou was**: Dutch uses the simple past *was* here, also for *ik*. Never *als ik jou zou zijn*." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Which request is the most polite?", "options": ["Zou u mij kunnen helpen?", "Kunt u mij helpen?", "Help mij!"], "answer": 0 },
+        { "type": "choice", "q": "Je ___ meer water moeten drinken. (advice)", "options": ["zou", "zal", "wilt"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Ik zou graag een afspraak maken.", "Ik zou graag een afspraak gemaakt.", "Ik zou graag een afspraak te maken."], "answer": 0 },
+        { "type": "choice", "q": "Zouden jullie zachter ___?", "options": ["kunnen praten", "te praten", "gepraat"], "answer": 0 },
+        { "type": "gap", "text": "___ u mij kunnen helpen?", "answers": ["Zou"], "en": "Could you help me?" },
+        { "type": "gap", "text": "Ik ___ graag een afspraak maken. (zouden)", "answers": ["zou"], "en": "I would like to make an appointment." },
+        { "type": "gap", "text": "Je ___ eens naar de dokter moeten gaan. (zouden)", "answers": ["zou"], "en": "You should go and see the doctor." },
+        { "type": "gap", "text": "Als ik jou ___, zou ik dat niet doen. (zijn)", "answers": ["was"], "en": "If I were you, I would not do that." },
+        { "type": "gap", "text": "___ jullie wat zachter kunnen praten?", "answers": ["Zouden"], "en": "Could you talk a bit more quietly?" },
+        { "type": "gap", "text": "Wij ___ u graag willen uitnodigen. (zouden)", "answers": ["zouden"], "en": "We would like to invite you." },
+        { "type": "transform", "q": "Kunt u mij helpen?", "instruction": "Make it more polite with zou.", "answers": ["Zou u mij kunnen helpen", "Zou u me kunnen helpen"] },
+        { "type": "transform", "q": "Doe het raam open.", "instruction": "Make it a polite request: Zou je het raam ...?", "answers": ["Zou je het raam open kunnen doen", "Zou je het raam kunnen openen", "Zou je het raam open willen doen", "Zou je het raam willen openen"] },
+        { "type": "transform", "q": "Je moet meer slapen.", "instruction": "Give it as advice with zou.", "answers": ["Je zou meer moeten slapen"] },
+        { "type": "transform", "q": "Jij moet gezonder eten.", "instruction": "Start with: Als ik jou was, ...", "answers": ["Als ik jou was, zou ik gezonder eten"] },
+        { "type": "order", "answer": "Zou u mij kunnen helpen?", "en": "Could you help me?" },
+        { "type": "order", "answer": "Je zou vaker moeten sporten.", "en": "You should exercise more often." },
+        { "type": "order", "answer": "Als ik jou was, zou ik niet gaan.", "en": "If I were you, I would not go." },
+        { "type": "order", "answer": "Zouden jullie wat zachter kunnen praten?", "en": "Could you talk a bit more quietly?" },
+        { "type": "translate", "en": "Could you open the door for me?", "answers": ["Zou u de deur voor mij kunnen openen", "Zou u de deur voor me kunnen openen", "Zou je de deur voor mij kunnen openen", "Zou je de deur voor me kunnen openen"] },
+        { "type": "translate", "en": "I would like to make an appointment.", "answers": ["Ik zou graag een afspraak willen maken", "Ik zou graag een afspraak maken"] },
+        { "type": "translate", "en": "You should go to the doctor.", "answers": ["Je zou naar de dokter moeten gaan", "U zou naar de dokter moeten gaan", "Je zou eens naar de dokter moeten gaan", "Jij zou naar de dokter moeten gaan"] },
+        { "type": "match", "pairs": [["Zou u … kunnen?", "Could you …?"], ["Ik zou graag …", "I would like …"], ["Je zou … moeten", "You should …"], ["Als ik jou was, …", "If I were you, …"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: zullen en zouden (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-zullen-en-zouden/" }
+      ]
+    },
+    {
+      "id": "b1.g02.l2", "title": "Imagined situations: als ik … had, zou ik …", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "To talk about something **unreal or unlikely** in the present, use the **simple past** in the *als*-clause and **zou + infinitive** in the main clause: *Als ik meer tijd **had**, **zou ik** vaker **sporten**.* (I do not have more time, so I do not exercise more.)" },
+        { "type": "table", "head": ["situation", "als-clause", "main clause"], "rows": [["real, possible", "Als ik tijd heb,", "ga ik sporten."], ["unreal, imagined", "Als ik tijd had,", "zou ik gaan sporten."]] },
+        { "type": "p", "text": "The verb in the *als*-clause stands at the end, and the main clause starts with its verb. Many people say *Als ik meer tijd **zou hebben**, …* in speech, but the standard form is the simple past: *had, was, kon, woonde, wilde*." },
+        { "type": "ex", "nl": "Als ik rijk was, zou ik een wereldreis maken.", "en": "If I were rich, I would travel the world." },
+        { "type": "ex", "nl": "Wat zou jij doen, als je de loterij won?", "en": "What would you do if you won the lottery?" },
+        { "type": "tip", "text": "Only one clause gets **zou**. Say *Als ik tijd had, zou ik komen*, not *Als ik tijd zou hebben, zou ik komen*." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Als ik meer tijd ___, zou ik vaker sporten.", "options": ["had", "heb", "zou hebben"], "answer": 0 },
+        { "type": "choice", "q": "Als ik rijk was, ___ ik een groot huis kopen.", "options": ["zou", "zal", "ga"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is about an unreal situation?", "options": ["Als ik meer geld had, zou ik een auto kopen.", "Als ik geld heb, koop ik een auto."], "answer": 0 },
+        { "type": "choice", "q": "Als hij hier ___, zouden wij samen koken.", "options": ["woonde", "woont", "wonen"], "answer": 0 },
+        { "type": "gap", "text": "Als ik meer tijd ___, zou ik vaker sporten. (hebben)", "answers": ["had"], "en": "If I had more time, I would exercise more often." },
+        { "type": "gap", "text": "Als jij hier ___, zou ik je vaker zien. (wonen)", "answers": ["woonde"], "en": "If you lived here, I would see you more often." },
+        { "type": "gap", "text": "Wat ___ jij doen, als je de loterij won? (zouden)", "answers": ["zou"], "en": "What would you do if you won the lottery?" },
+        { "type": "gap", "text": "Als wij een tuin ___, zouden wij een hond nemen. (hebben)", "answers": ["hadden"], "en": "If we had a garden, we would get a dog." },
+        { "type": "gap", "text": "Ik ___ een wereldreis maken, als ik genoeg geld had. (zouden)", "answers": ["zou"], "en": "I would take a trip around the world if I had enough money." },
+        { "type": "gap", "text": "Als het niet zo duur ___, zou ik die jas kopen. (zijn)", "answers": ["was"], "en": "If it were not so expensive, I would buy that coat." },
+        { "type": "transform", "q": "Ik heb geen tijd. Ik ga niet sporten.", "instruction": "Start with: Als ik tijd had, ...", "answers": ["Als ik tijd had, zou ik gaan sporten", "Als ik tijd had, zou ik sporten"] },
+        { "type": "transform", "q": "Ik ben niet rijk. Ik koop geen huis.", "instruction": "Start with: Als ik rijk was, ...", "answers": ["Als ik rijk was, zou ik een huis kopen"] },
+        { "type": "transform", "q": "Ik kan niet zingen. Ik word geen zanger.", "instruction": "Start with: Als ik kon zingen, ...", "answers": ["Als ik kon zingen, zou ik zanger worden"] },
+        { "type": "order", "answer": "Als ik meer tijd had, zou ik vaker sporten.", "alt": ["Ik zou vaker sporten, als ik meer tijd had."], "en": "If I had more time, I would exercise more often." },
+        { "type": "order", "answer": "Als hij hier woonde, zouden wij samen koken.", "alt": ["Wij zouden samen koken, als hij hier woonde."], "en": "If he lived here, we would cook together." },
+        { "type": "order", "answer": "Wat zou jij doen als je rijk was?", "en": "What would you do if you were rich?" },
+        { "type": "translate", "en": "If I had a car, I would drive to the sea.", "answers": ["Als ik een auto had, zou ik naar zee rijden", "Als ik een auto had, zou ik naar de zee rijden", "Ik zou naar zee rijden, als ik een auto had"] },
+        { "type": "translate", "en": "If she lived here, we would see each other more often.", "answers": ["Als zij hier woonde, zouden wij elkaar vaker zien", "Als ze hier woonde, zouden we elkaar vaker zien", "Als zij hier woonde, zouden we elkaar vaker zien", "Als ze hier woonde, zouden wij elkaar vaker zien"] },
+        { "type": "match", "pairs": [["als + present", "real, possible"], ["als + simple past", "unreal, imagined"], ["zou + infinitive", "result in the main clause"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: zullen en zouden (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-zullen-en-zouden/" },
+        { "title": "NT2 TaalMenu: zinnen met als (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menuzinnenmetals/" }
+      ]
+    },
+    {
+      "id": "b1.g02.l3", "title": "Would in the past, and what did not happen", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "**Zou** also means *would* when you report a plan or an expectation from the past (the \"future in the past\"): *Hij zei dat hij **zou komen**.* *Ik dacht dat het **zou regenen**.*" },
+        { "type": "p", "text": "To say what would have happened if something **had** been different, use the **pluperfect** in the *als*-clause. The main clause takes the pluperfect too (most common), or *zou* + *hebben/zijn* + participle: *Als ik dat **had geweten**, **was ik** niet **gekomen**.* Both *had geweten* and *geweten had* are correct." },
+        { "type": "table", "head": ["meaning", "example"], "rows": [["would, reported plan", "Hij zei dat hij zou bellen."], ["past unreal, pluperfect", "Als ik het had geweten, was ik gekomen."], ["past unreal, with zou", "Als ik het had geweten, zou ik zijn gekomen."]] },
+        { "type": "ex", "nl": "Zij zei dat zij het zou doen.", "en": "She said that she would do it." },
+        { "type": "ex", "nl": "Als wij op tijd waren vertrokken, hadden wij de trein gehaald.", "en": "If we had left on time, we would have caught the train." },
+        { "type": "tip", "text": "Past unreal = **had/was + participle** in the *als*-clause. Do not use the simple past there: *Als ik het wist, was ik gekomen* is not standard." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Ik dacht dat het ___ regenen.", "options": ["zou", "zal", "had"], "answer": 0 },
+        { "type": "choice", "q": "Als ik dat ___ geweten, was ik niet gekomen.", "options": ["had", "zou", "heb"], "answer": 0 },
+        { "type": "choice", "q": "Als zij eerder ___ vertrokken, waren zij op tijd geweest.", "options": ["waren", "hadden", "zouden"], "answer": 0, "explain": "Vertrekken takes zijn: waren vertrokken." },
+        { "type": "choice", "q": "Which sentence is about the past (it did not happen)?", "options": ["Als ik het had geweten, was ik gekomen.", "Als ik het wist, zou ik komen.", "Als ik het weet, kom ik."], "answer": 0 },
+        { "type": "gap", "text": "Hij zei dat hij ___ komen. (would)", "answers": ["zou"], "en": "He said that he would come." },
+        { "type": "gap", "text": "Wij dachten dat het ___ regenen. (zouden)", "answers": ["zou"], "en": "We thought that it would rain." },
+        { "type": "gap", "text": "Als ik dat ___ geweten, was ik niet gekomen. (hebben)", "answers": ["had"], "en": "If I had known that, I would not have come." },
+        { "type": "gap", "text": "Als jij eerder ___ gebeld, had ik je kunnen helpen. (hebben)", "answers": ["had"], "en": "If you had called earlier, I could have helped you." },
+        { "type": "gap", "text": "Als wij op tijd ___ vertrokken, hadden wij de trein gehaald. (zijn)", "answers": ["waren"], "en": "If we had left on time, we would have caught the train." },
+        { "type": "gap", "text": "Zij zei dat zij het ___ doen. (would)", "answers": ["zou"], "en": "She said that she would do it." },
+        { "type": "transform", "q": "Hij zegt: \"Ik kom morgen.\"", "instruction": "Report it in the past. Start with: Hij zei dat hij morgen ...", "answers": ["Hij zei dat hij morgen zou komen"] },
+        { "type": "transform", "q": "Ik was niet op tijd. Ik heb de trein gemist.", "instruction": "Start with: Als ik op tijd was geweest, ... (catch the train)", "answers": ["Als ik op tijd was geweest, had ik de trein gehaald", "Als ik op tijd was geweest, zou ik de trein hebben gehaald", "Als ik op tijd was geweest, zou ik de trein gehaald hebben"] },
+        { "type": "transform", "q": "Zij heeft niet gebeld. Ik kon haar niet helpen.", "instruction": "Start with: Als zij had gebeld, ... (could help)", "answers": ["Als zij had gebeld, had ik haar kunnen helpen", "Als zij gebeld had, had ik haar kunnen helpen", "Als ze had gebeld, had ik haar kunnen helpen", "Als ze gebeld had, had ik haar kunnen helpen"] },
+        { "type": "order", "answer": "Hij zei dat hij morgen zou komen.", "en": "He said that he would come tomorrow." },
+        { "type": "order", "answer": "Als ik dat had geweten, was ik niet gekomen.", "alt": ["Als ik dat geweten had, was ik niet gekomen.", "Ik was niet gekomen, als ik dat had geweten."], "en": "If I had known that, I would not have come." },
+        { "type": "order", "answer": "Als wij op tijd waren vertrokken, hadden wij de trein gehaald.", "alt": ["Als wij op tijd vertrokken waren, hadden wij de trein gehaald."], "en": "If we had left on time, we would have caught the train." },
+        { "type": "translate", "en": "He said that he would call.", "answers": ["Hij zei dat hij zou bellen"] },
+        { "type": "translate", "en": "If I had known that, I would not have come.", "answers": ["Als ik dat had geweten, was ik niet gekomen", "Als ik dat geweten had, was ik niet gekomen", "Als ik dat had geweten, zou ik niet zijn gekomen", "Als ik dat had geweten, zou ik niet gekomen zijn", "Als ik dat geweten had, zou ik niet zijn gekomen", "Als ik dat geweten had, zou ik niet gekomen zijn", "Ik was niet gekomen, als ik dat had geweten", "Ik was niet gekomen, als ik dat geweten had"] },
+        { "type": "translate", "en": "She thought that it would be fun.", "answers": ["Zij dacht dat het leuk zou zijn", "Ze dacht dat het leuk zou zijn", "Zij dacht dat het gezellig zou zijn", "Ze dacht dat het gezellig zou zijn"] },
+        { "type": "match", "pairs": [["Hij zei dat hij zou komen", "would: a plan reported in the past"], ["Als ik het had geweten, was ik gekomen", "past unreal: it did not happen"], ["Als ik tijd had, zou ik komen", "present unreal"], ["Zou u kunnen helpen?", "polite request"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: zullen en zouden (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-zullen-en-zouden/" },
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "b1.g02.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "Which request is polite?", "options": ["Zou u even kunnen wachten?", "Wacht even.", "U wacht even?"], "answer": 0 },
+        { "type": "choice", "q": "Als ik ___ was, zou ik dat niet doen.", "options": ["jou", "jouw", "jij"], "answer": 0 },
+        { "type": "choice", "q": "Als het gisteren ___ geregend, waren wij thuisgebleven.", "options": ["had", "zou", "was"], "answer": 0 },
+        { "type": "choice", "q": "Which sentence is the standard form?", "options": ["Als ik meer tijd had, zou ik komen.", "Als ik meer tijd zou hebben, zou ik komen.", "Als ik meer tijd had, ik zou komen."], "answer": 0 },
+        { "type": "gap", "text": "___ je mij even kunnen helpen?", "answers": ["Zou"], "en": "Could you help me for a moment?" },
+        { "type": "gap", "text": "Als ik jou ___, zou ik meer slapen. (zijn)", "answers": ["was"], "en": "If I were you, I would sleep more." },
+        { "type": "gap", "text": "Hij zei dat hij ons ___ bellen. (would)", "answers": ["zou"], "en": "He said that he would call us." },
+        { "type": "gap", "text": "Als ik dat ___ gezien, had ik iets gezegd. (hebben)", "answers": ["had"], "en": "If I had seen that, I would have said something." },
+        { "type": "gap", "text": "Je ___ eens moeten uitrusten. (zouden)", "answers": ["zou"], "en": "You should take a rest for once." },
+        { "type": "gap", "text": "Als wij meer geld ___, zouden wij verhuizen. (hebben)", "answers": ["hadden"], "en": "If we had more money, we would move." },
+        { "type": "transform", "q": "Kun je me helpen?", "instruction": "Make it more polite with zou.", "answers": ["Zou je me kunnen helpen", "Zou je mij kunnen helpen"] },
+        { "type": "transform", "q": "Ik heb geen tijd. Ik kom niet.", "instruction": "Start with: Als ik tijd had, ...", "answers": ["Als ik tijd had, zou ik komen"] },
+        { "type": "transform", "q": "Ik wist het niet. Ik ben niet gekomen.", "instruction": "Start with: Als ik het had geweten, ...", "answers": ["Als ik het had geweten, was ik gekomen", "Als ik het geweten had, was ik gekomen"] },
+        { "type": "order", "answer": "Zou u het raam kunnen sluiten?", "en": "Could you close the window?" },
+        { "type": "order", "answer": "Als ik rijk was, zou ik veel reizen.", "alt": ["Ik zou veel reizen, als ik rijk was."], "en": "If I were rich, I would travel a lot." },
+        { "type": "order", "answer": "Zij zei dat zij zou komen.", "en": "She said that she would come." },
+        { "type": "translate", "en": "If I were you, I would call him.", "answers": ["Als ik jou was, zou ik hem bellen", "Ik zou hem bellen, als ik jou was", "Ik zou hem bellen als ik jou was"] },
+        { "type": "translate", "en": "If we had left earlier, we would have been on time.", "answers": ["Als wij eerder waren vertrokken, waren wij op tijd geweest", "Als we eerder waren vertrokken, waren we op tijd geweest", "Als wij eerder vertrokken waren, waren wij op tijd geweest", "Als we eerder vertrokken waren, waren we op tijd geweest"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: zullen en zouden (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-zullen-en-zouden/" }
+      ]
+    }
+  ]
+}

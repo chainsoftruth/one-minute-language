@@ -1,0 +1,158 @@
+{
+  "id": "b1.g06", "level": "B1", "kind": "grammar",
+  "title": "Relative clauses",
+  "subtitle": "die, dat, wat, waar and preposition + wie / waar…",
+  "lessons": [
+    {
+      "id": "b1.g06.l1", "title": "die and dat", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "A **relative clause** gives more information about a noun: *de man **die hier woont***. It starts with **die** after a **de-word or a plural**, and with **dat** after a **het-word**. It is a subordinate clause, so the **verb goes to the end**." },
+        { "type": "table", "head": ["noun", "pronoun", "example"], "rows": [["de man", "die", "De man die naast mij woont, is aardig."], ["het boek", "dat", "Het boek dat ik lees, is spannend."], ["de kinderen (plural)", "die", "De kinderen die buiten spelen, zijn mijn neven."], ["het meisje", "dat", "Het meisje dat ik ken, heet Eva."]] },
+        { "type": "p", "text": "The pronoun can be the **subject** (*de man die hier woont*) or the **object** (*het boek dat ik lees*). In both cases the form depends on the **noun it refers to**, not on its function. A clause that interrupts the main sentence is placed between **commas**." },
+        { "type": "ex", "nl": "Ik ken de vrouw die hier werkt.", "en": "I know the woman who works here." },
+        { "type": "ex", "nl": "Het huis dat wij gekocht hebben, is oud.", "en": "The house that we have bought is old." },
+        { "type": "tip", "text": "Diminutives are **het**-words, even for people: *het meisje **dat***, *het kindje **dat***." }
+      ],
+      "items": [
+        { "type": "choice", "q": "De man ___ hier woont, is mijn buurman.", "options": ["die", "dat", "wat"], "answer": 0 },
+        { "type": "choice", "q": "Het huis ___ ik koop, is groot.", "options": ["dat", "die", "wat"], "answer": 0 },
+        { "type": "choice", "q": "De kinderen ___ buiten spelen, zijn mijn neven.", "options": ["die", "dat", "wie"], "answer": 0 },
+        { "type": "choice", "q": "Het meisje ___ naast mij woont, heet Eva.", "options": ["dat", "die", "wat"], "answer": 0, "explain": "Meisje is a diminutive, so it is a het-word." },
+        { "type": "choice", "q": "Which sentence is correct?", "options": ["Het boek dat ik lees, is mooi.", "Het boek dat ik lees is, mooi.", "Het boek dat lees ik, is mooi."], "answer": 0 },
+        { "type": "gap", "text": "De man ___ naast mij woont, is aardig.", "answers": ["die"], "en": "The man who lives next to me is kind." },
+        { "type": "gap", "text": "Het boek ___ ik lees, is spannend.", "answers": ["dat"], "en": "The book that I am reading is exciting." },
+        { "type": "gap", "text": "De tassen ___ ik gekocht heb, zijn nieuw.", "answers": ["die"], "en": "The bags that I bought are new." },
+        { "type": "gap", "text": "Het kind ___ daar speelt, is mijn zoon.", "answers": ["dat"], "en": "The child who is playing there is my son." },
+        { "type": "gap", "text": "Ik ken de vrouw ___ hier werkt.", "answers": ["die"], "en": "I know the woman who works here." },
+        { "type": "gap", "text": "Dit is het huis ___ ik wil kopen.", "answers": ["dat"], "en": "This is the house that I want to buy." },
+        { "type": "transform", "q": "De man woont naast mij. De man is aardig.", "instruction": "Make one sentence: De man die ...", "answers": ["De man die naast mij woont, is aardig"] },
+        { "type": "transform", "q": "Ik lees een boek. Het boek is spannend.", "instruction": "Make one sentence: Het boek dat ...", "answers": ["Het boek dat ik lees, is spannend"] },
+        { "type": "transform", "q": "Ik ken een vrouw. Zij werkt hier.", "instruction": "Make one sentence: Ik ken een vrouw die ...", "answers": ["Ik ken een vrouw die hier werkt"] },
+        { "type": "transform", "q": "Wij hebben een huis gekocht. Het huis is oud.", "instruction": "Make one sentence: Het huis dat ...", "answers": ["Het huis dat wij gekocht hebben, is oud", "Het huis dat wij hebben gekocht, is oud", "Het huis dat we gekocht hebben, is oud", "Het huis dat we hebben gekocht, is oud"] },
+        { "type": "order", "answer": "De man die naast mij woont, is aardig.", "en": "The man who lives next to me is kind." },
+        { "type": "order", "answer": "Het boek dat ik lees, is spannend.", "en": "The book that I am reading is exciting." },
+        { "type": "order", "answer": "Ik ken de vrouw die hier werkt.", "en": "I know the woman who works here." },
+        { "type": "order", "answer": "De tassen die ik gekocht heb, zijn nieuw.", "alt": ["De tassen die ik heb gekocht, zijn nieuw."], "en": "The bags that I bought are new." },
+        { "type": "translate", "en": "The woman who lives here is my teacher.", "answers": ["De vrouw die hier woont, is mijn lerares", "De vrouw die hier woont, is mijn leraar", "De vrouw die hier woont, is mijn docente", "De vrouw die hier woont, is mijn juf"] },
+        { "type": "translate", "en": "The book that I am reading is exciting.", "answers": ["Het boek dat ik lees, is spannend", "Het boek dat ik aan het lezen ben, is spannend"] },
+        { "type": "translate", "en": "I know the people who live here.", "answers": ["Ik ken de mensen die hier wonen"] },
+        { "type": "match", "pairs": [["die", "after a de-word or a plural"], ["dat", "after a het-word"], ["verb last", "in the relative clause"], ["commas", "around a clause that interrupts the sentence"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: bijzinnen (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-bijzin/" },
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "b1.g06.l2", "title": "With a preposition: met wie, waarin, waarmee", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "When the noun is connected to the clause by a **preposition**, you choose by what the noun is. For **people**: preposition + **wie**: *de man **met wie** ik praat*. For **things**: **waar + preposition** written as one word: *het huis **waarin** ik woon*, *de pen **waarmee** ik schrijf*." },
+        { "type": "table", "head": ["people", "things"], "rows": [["de man met wie ik praat", "de pen waarmee ik schrijf"], ["de vrouw op wie ik wacht", "de bus waarop ik wacht"], ["de collega naar wie ik luister", "het onderwerp waarover wij praten"], ["de vriend voor wie ik koop", "het cadeau waarvoor ik betaal"]] },
+        { "type": "p", "text": "Watch the spelling: **met → mee** (*waarmee*) and **tot → toe** (*waartoe*), but *waarin, waarop, waarover, waarvoor, waaraan, waarvan, waardoor*. In speech people often say *de pen waar ik mee schrijf*; in writing and exams use *waarmee*." },
+        { "type": "ex", "nl": "De collega met wie ik samenwerk, is ziek.", "en": "The colleague I work together with is ill." },
+        { "type": "ex", "nl": "Het onderwerp waarover wij praten, is moeilijk.", "en": "The subject we are talking about is difficult." },
+        { "type": "tip", "text": "Never *waar* + preposition for a **person**: say *de man met wie*, not *de man waarmee*." }
+      ],
+      "items": [
+        { "type": "choice", "q": "De man met ___ ik praat, is mijn baas.", "options": ["wie", "die", "wat"], "answer": 0 },
+        { "type": "choice", "q": "Het huis ___ ik woon, is oud.", "options": ["waarin", "waarmee", "waarvoor"], "answer": 0 },
+        { "type": "choice", "q": "De pen ___ ik schrijf, is nieuw.", "options": ["waarmee", "waarin", "waarover"], "answer": 0 },
+        { "type": "choice", "q": "De vrouw op ___ ik wacht, komt niet.", "options": ["wie", "wat", "waar"], "answer": 0 },
+        { "type": "choice", "q": "Het onderwerp ___ wij praten, is moeilijk.", "options": ["waarover", "over wie", "waarmee"], "answer": 0 },
+        { "type": "gap", "text": "De man met ___ ik werk, is aardig.", "answers": ["wie"], "en": "The man I work with is kind." },
+        { "type": "gap", "text": "Het huis ___ ik woon, is oud. (in)", "answers": ["waarin"], "en": "The house I live in is old." },
+        { "type": "gap", "text": "De fiets ___ ik naar mijn werk ga, is stuk. (met)", "answers": ["waarmee"], "en": "The bike I go to work on is broken." },
+        { "type": "gap", "text": "Het onderwerp ___ wij praten, is interessant. (over)", "answers": ["waarover"], "en": "The subject we are talking about is interesting." },
+        { "type": "gap", "text": "De collega naar ___ ik luister, heet Tom.", "answers": ["wie"], "en": "The colleague I listen to is called Tom." },
+        { "type": "gap", "text": "Dit is het boek ___ ik je vertelde. (over)", "answers": ["waarover"], "en": "This is the book I told you about." },
+        { "type": "transform", "q": "Ik praat met de man. De man is mijn baas.", "instruction": "Start with: De man met wie ...", "answers": ["De man met wie ik praat, is mijn baas"] },
+        { "type": "transform", "q": "Ik woon in het huis. Het huis is oud.", "instruction": "Start with: Het huis waarin ...", "answers": ["Het huis waarin ik woon, is oud"] },
+        { "type": "transform", "q": "Ik schrijf met de pen. De pen is nieuw.", "instruction": "Start with: De pen waarmee ...", "answers": ["De pen waarmee ik schrijf, is nieuw"] },
+        { "type": "transform", "q": "Wij wachten op de bus. De bus is te laat.", "instruction": "Start with: De bus waarop ...", "answers": ["De bus waarop wij wachten, is te laat", "De bus waarop we wachten, is te laat"] },
+        { "type": "order", "answer": "De man met wie ik werk, is aardig.", "en": "The man I work with is kind." },
+        { "type": "order", "answer": "Het huis waarin ik woon, is oud.", "en": "The house I live in is old." },
+        { "type": "order", "answer": "De pen waarmee ik schrijf, is nieuw.", "en": "The pen I write with is new." },
+        { "type": "order", "answer": "Dit is het onderwerp waarover wij praten.", "en": "This is the subject we are talking about." },
+        { "type": "translate", "en": "The woman I work with is nice.", "answers": ["De vrouw met wie ik werk, is aardig", "De vrouw met wie ik werk, is leuk", "De vrouw met wie ik samenwerk, is aardig", "De vrouw met wie ik samenwerk, is leuk"] },
+        { "type": "translate", "en": "The house I live in is old.", "answers": ["Het huis waarin ik woon, is oud"] },
+        { "type": "translate", "en": "The pen I write with is blue.", "answers": ["De pen waarmee ik schrijf, is blauw"] },
+        { "type": "match", "pairs": [["waarin", "in which"], ["waarmee", "with which"], ["waarover", "about which"], ["waarop", "on which"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: bijzinnen (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-bijzin/" },
+        { "title": "NT2 TaalMenu: er en waar- (B1)", "url": "https://nt2taalmenu.nl/nt2-b1-grammatica-menu-er/" }
+      ]
+    },
+    {
+      "id": "b1.g06.l3", "title": "wat, waar and degene die", "kind": "grammar",
+      "explain": [
+        { "type": "p", "text": "Use **wat** after **alles, iets, niets, veel, weinig, het enige** and after a **superlative** that stands alone (*het mooiste*), and also to refer to a **whole clause**: *Alles **wat** hij zegt, is waar.* *Hij komt te laat, **wat** vervelend is.*" },
+        { "type": "p", "text": "For a **place**, use **waar**: *de stad **waar** ik woon*. For a person you did not name, use **degene die** (*the one who*): *Degene **die** dit gedaan heeft, moet zich melden.* You will also read **wiens** (whose) and **wier**: *de man **wiens** fiets gestolen is*. Recognise them; you do not need to use them." },
+        { "type": "table", "head": ["after", "pronoun", "example"], "rows": [["alles / iets / niets", "wat", "Er is niets wat ik kan doen."], ["het enige, het mooiste", "wat", "Het mooiste wat ik zag, was de zee."], ["a whole clause", "wat", "Hij is ziek, wat jammer is."], ["a place", "waar", "het café waar wij elkaar ontmoeten"], ["the one who", "degene die", "Degene die belt, moet wachten."]] },
+        { "type": "ex", "nl": "Alles wat zij zegt, is waar.", "en": "Everything she says is true." },
+        { "type": "ex", "nl": "De stad waar ik woon, is klein.", "en": "The town where I live is small." },
+        { "type": "tip", "text": "In careful writing *het enige dat* and *iets dat* also occur. In this course use **wat**." }
+      ],
+      "items": [
+        { "type": "choice", "q": "Alles ___ hij zegt, is waar.", "options": ["wat", "die", "wie"], "answer": 0 },
+        { "type": "choice", "q": "Er is niets ___ ik kan doen.", "options": ["wat", "die", "wie"], "answer": 0 },
+        { "type": "choice", "q": "Hij is ziek geworden, ___ jammer is.", "options": ["wat", "die", "wie"], "answer": 0 },
+        { "type": "choice", "q": "Het café ___ wij elkaar ontmoeten, is gezellig.", "options": ["waar", "waarin", "wie"], "answer": 0 },
+        { "type": "choice", "q": "Degene ___ dit gedaan heeft, moet zich melden.", "options": ["die", "wat", "waar"], "answer": 0 },
+        { "type": "choice", "q": "Which word do you only need to recognise, not use?", "options": ["wiens", "die", "waarin"], "answer": 0 },
+        { "type": "gap", "text": "Alles ___ hij zegt, is waar.", "answers": ["wat"], "en": "Everything he says is true." },
+        { "type": "gap", "text": "Er is niets ___ ik kan doen.", "answers": ["wat", "dat"], "en": "There is nothing I can do." },
+        { "type": "gap", "text": "Het mooiste ___ ik gezien heb, was de zonsondergang.", "answers": ["wat", "dat"], "en": "The most beautiful thing I have seen was the sunset." },
+        { "type": "gap", "text": "Hij is ziek geworden, ___ jammer is.", "answers": ["wat"], "en": "He has fallen ill, which is a pity." },
+        { "type": "gap", "text": "Het café ___ wij elkaar ontmoeten, is gezellig.", "answers": ["waar"], "en": "The café where we meet is cosy." },
+        { "type": "gap", "text": "Degene ___ dit gedaan heeft, moet zich melden.", "answers": ["die"], "en": "Whoever did this must report to us." },
+        { "type": "gap", "text": "Dit is iets ___ ik nooit vergeet.", "answers": ["wat", "dat"], "en": "This is something I will never forget." },
+        { "type": "transform", "q": "Hij zegt alles. Alles is waar.", "instruction": "Start with: Alles wat ...", "answers": ["Alles wat hij zegt, is waar"] },
+        { "type": "transform", "q": "Hij komt te laat. Dat is vervelend.", "instruction": "Join with wat: Hij komt te laat, wat ...", "answers": ["Hij komt te laat, wat vervelend is"] },
+        { "type": "transform", "q": "Wij wonen in een stad. De stad is klein.", "instruction": "Start with: De stad waar ...", "answers": ["De stad waar wij wonen, is klein", "De stad waar we wonen, is klein"] },
+        { "type": "transform", "q": "Iemand heeft dit gedaan. Hij moet zich melden.", "instruction": "Start with: Degene die ...", "answers": ["Degene die dit gedaan heeft, moet zich melden", "Degene die dit heeft gedaan, moet zich melden"] },
+        { "type": "order", "answer": "Alles wat hij zegt, is waar.", "en": "Everything he says is true." },
+        { "type": "order", "answer": "Hij komt te laat, wat vervelend is.", "en": "He is late, which is annoying." },
+        { "type": "order", "answer": "De stad waar wij wonen, is klein.", "en": "The town where we live is small." },
+        { "type": "order", "answer": "Degene die dit gedaan heeft, moet zich melden.", "alt": ["Degene die dit heeft gedaan, moet zich melden."], "en": "Whoever did this must report to us." },
+        { "type": "translate", "en": "Everything that she says is true.", "answers": ["Alles wat zij zegt, is waar", "Alles wat ze zegt, is waar"] },
+        { "type": "translate", "en": "He is late, which is annoying.", "answers": ["Hij is te laat, wat vervelend is", "Hij komt te laat, wat vervelend is", "Hij is laat, wat vervelend is"] },
+        { "type": "translate", "en": "The town where I live is small.", "answers": ["De stad waar ik woon, is klein", "Het stadje waar ik woon, is klein", "Het dorp waar ik woon, is klein"] },
+        { "type": "match", "pairs": [["alles ___ hij zegt", "wat"], ["de stad ___ ik woon", "waar"], ["de man met ___ ik praat", "wie"], ["het huis ___ ik woon (in)", "waarin"]] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: bijzinnen (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-bijzin/" },
+        { "title": "NT2 TaalMenu: B1 grammatica overzicht", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/" }
+      ]
+    },
+    {
+      "id": "b1.g06.l4", "title": "Practice", "kind": "grammar",
+      "items": [
+        { "type": "choice", "q": "De vrouw ___ naast mij zit, is mijn tante.", "options": ["die", "dat", "wat"], "answer": 0 },
+        { "type": "choice", "q": "Het meisje ___ ik ken, is ziek.", "options": ["dat", "die", "wie"], "answer": 0 },
+        { "type": "choice", "q": "De mensen met ___ ik werk, zijn aardig.", "options": ["wie", "die", "wat"], "answer": 0 },
+        { "type": "choice", "q": "Het huis ___ wij gekocht hebben, is groot.", "options": ["dat", "die", "waar"], "answer": 0 },
+        { "type": "choice", "q": "Alles ___ ik heb, is van jou.", "options": ["wat", "dat", "die"], "answer": 0 },
+        { "type": "gap", "text": "De trein ___ ik neem, vertrekt om acht uur.", "answers": ["die"], "en": "The train I take leaves at eight." },
+        { "type": "gap", "text": "Het onderwerp ___ ik wil praten, is lastig. (over)", "answers": ["waarover"], "en": "The subject I want to talk about is difficult." },
+        { "type": "gap", "text": "De stad ___ ik geboren ben, ligt in het zuiden.", "answers": ["waar"], "en": "The town where I was born is in the south." },
+        { "type": "gap", "text": "De collega met ___ ik samenwerk, is ziek.", "answers": ["wie"], "en": "The colleague I work with is ill." },
+        { "type": "gap", "text": "Hij heeft gewonnen, ___ iedereen blij maakte.", "answers": ["wat"], "en": "He won, which made everybody happy." },
+        { "type": "gap", "text": "Het huis ___ ik van droom, is groot. (van)", "answers": ["waarvan"], "en": "The house I dream of is big." },
+        { "type": "transform", "q": "Ik ken de man. De man woont hier.", "instruction": "Join with die: Ik ken de man die ...", "answers": ["Ik ken de man die hier woont"] },
+        { "type": "transform", "q": "Ik lees een boek. Het boek is van mijn zus.", "instruction": "Start with: Het boek dat ...", "answers": ["Het boek dat ik lees, is van mijn zus"] },
+        { "type": "transform", "q": "Ik werk met een vrouw. De vrouw is aardig.", "instruction": "Start with: De vrouw met wie ...", "answers": ["De vrouw met wie ik werk, is aardig"] },
+        { "type": "transform", "q": "Ik schrijf met een pen. De pen is stuk.", "instruction": "Start with: De pen waarmee ...", "answers": ["De pen waarmee ik schrijf, is stuk"] },
+        { "type": "order", "answer": "De trein die ik neem, vertrekt om acht uur.", "en": "The train I take leaves at eight." },
+        { "type": "order", "answer": "Alles wat ik heb, is van jou.", "en": "Everything I have is yours." },
+        { "type": "order", "answer": "De collega met wie ik samenwerk, is ziek.", "en": "The colleague I work with is ill." },
+        { "type": "translate", "en": "The car that he bought is red.", "answers": ["De auto die hij gekocht heeft, is rood", "De auto die hij heeft gekocht, is rood"] },
+        { "type": "translate", "en": "The man I am talking to is my boss.", "answers": ["De man met wie ik praat, is mijn baas", "De man met wie ik spreek, is mijn baas", "De man tegen wie ik praat, is mijn baas"] },
+        { "type": "translate", "en": "That is the town where I was born.", "answers": ["Dat is de stad waar ik geboren ben", "Dat is het dorp waar ik geboren ben"] }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: bijzinnen (B1)", "url": "https://nt2taalmenu.nl/b1-nieuw-bijzin/" }
+      ]
+    }
+  ]
+}
