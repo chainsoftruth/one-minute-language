@@ -21,11 +21,25 @@
             android:gravity="center">
 
             <TextView
+                android:id="@+id/article_a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="2dp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="1dp"
+                android:text=""
+                android:textColor="@color/widget_tag_text"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
                 android:id="@+id/primary_text_a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Het woord"
-                android:textColor="#000000"
+                android:textColor="@color/widget_text"
                 android:textSize="28sp"
                 android:gravity="center"
                 android:textAlignment="center"
@@ -40,7 +54,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
                 android:text="The word"
-                android:textColor="#000000"
+                android:textColor="@color/widget_text"
                 android:textSize="18sp"
                 android:gravity="center"
                 android:textAlignment="center"
@@ -57,11 +71,25 @@
             android:gravity="center">
 
             <TextView
+                android:id="@+id/article_b"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="2dp"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="1dp"
+                android:text=""
+                android:textColor="@color/widget_tag_text"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
                 android:id="@+id/primary_text_b"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text=""
-                android:textColor="#000000"
+                android:textColor="@color/widget_text"
                 android:textSize="28sp"
                 android:gravity="center"
                 android:textAlignment="center"
@@ -76,7 +104,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
                 android:text=""
-                android:textColor="#000000"
+                android:textColor="@color/widget_text"
                 android:textSize="18sp"
                 android:gravity="center"
                 android:textAlignment="center"
@@ -95,7 +123,7 @@
         android:paddingTop="0dp"
         android:paddingEnd="6dp"
         android:text="+"
-        android:textColor="#000000"
+        android:textColor="@color/widget_text"
         android:textSize="26sp" />
 
 </FrameLayout>

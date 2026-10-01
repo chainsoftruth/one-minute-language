@@ -9,6 +9,7 @@ import android.os.Build
 import android.text.TextPaint
 import android.util.SizeF
 import android.util.TypedValue
+import android.view.View
 import android.widget.RemoteViews
 import androidx.core.os.BundleCompat
 import com.example.oneminutelanguage.MainActivity
@@ -17,7 +18,9 @@ import com.example.oneminutelanguage.speech.SpeakWordActivity
 import com.example.oneminutelanguage.data.DatabaseProvider
 import com.example.oneminutelanguage.data.WordDao
 import com.example.oneminutelanguage.data.WordEntity
+import com.example.oneminutelanguage.translation.LanguageSettingsStore
 import com.example.oneminutelanguage.translation.withoutHints
+import com.google.mlkit.nl.translate.TranslateLanguage
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlin.math.ceil
@@ -33,6 +36,9 @@ object WidgetRenderer {
     private const val SECONDARY_MAX_SP = 18
     private const val SECONDARY_MIN_SP = 12
     private const val MAX_LINES = 2
+    private const val ARTICLE_TAG_SP = 12
+    /** The tag's vertical padding (2 x 1dp) and its bottom margin (2dp), as in widget_layout.xml. */
+    private const val ARTICLE_TAG_EXTRA_DP = 4f
     private const val DEFAULT_WIDTH_DP = 180f
     private const val DEFAULT_HEIGHT_DP = 110f
 
@@ -88,13 +94,18 @@ object WidgetRenderer {
         val (widthDp, heightDp) = widgetSizeDp(appWidgetManager, appWidgetId)
         val rootPaddingPx = dpToPx(context, ROOT_PADDING_DP)
         val textWidth = dpToPx(context, widthDp) - 2 * rootPaddingPx - 2 * chipPx
-        val textHeight = dpToPx(context, heightDp) - 2 * rootPaddingPx - dpToPx(context, SECONDARY_MARGIN_DP)
+        // Dutch nouns: the article becomes a small tag above the word, and the noun alone gets the width.
+        val (article, primaryText) =
+            if (LanguageSettingsStore.getTargetLanguage(context) == TranslateLanguage.DUTCH) splitArticle(data.language2Word)
+            else null to data.language2Word
+        val tagHeight = if (article == null) 0f else lineHeight(ARTICLE_TAG_SP) + dpToPx(context, ARTICLE_TAG_EXTRA_DP)
+        val textHeight = dpToPx(context, heightDp) - 2 * rootPaddingPx - dpToPx(context, SECONDARY_MARGIN_DP) - tagHeight
 
         val primarySp = fitSp(
-            data.language2Word, textWidth, textHeight - lineHeight(SECONDARY_MIN_SP),
+            primaryText, textWidth, textHeight - lineHeight(SECONDARY_MIN_SP),
             PRIMARY_MAX_SP, PRIMARY_MIN_SP, MAX_LINES, lineHeight, measure
         )
-        val primaryLines = minOf(lineCount(data.language2Word, textWidth, primarySp, measure), MAX_LINES)
+        val primaryLines = minOf(lineCount(primaryText, textWidth, primarySp, measure), MAX_LINES)
         val secondarySp = minOf(
             fitSp(
                 data.language1Word, textWidth, textHeight - primaryLines * lineHeight(primarySp),
@@ -105,8 +116,8 @@ object WidgetRenderer {
 
         val views = RemoteViews(context.packageName, R.layout.widget_layout)
 
-        val childA = R.id.primary_text_a to R.id.secondary_text_a
-        val childB = R.id.primary_text_b to R.id.secondary_text_b
+        val childA = Triple(R.id.primary_text_a, R.id.secondary_text_a, R.id.article_a)
+        val childB = Triple(R.id.primary_text_b, R.id.secondary_text_b, R.id.article_b)
         val showingChildA = WidgetPrefs.isChildAVisible(context, appWidgetId)
         // A new word slides in on the hidden child. A re-render updates both children without flipping.
         val targets = when {
@@ -115,8 +126,13 @@ object WidgetRenderer {
             else -> listOf(childA)
         }
 
-        for ((primaryId, secondaryId) in targets) {
-            views.setTextViewText(primaryId, data.language2Word)
+        for ((primaryId, secondaryId, articleId) in targets) {
+            views.setTextViewText(primaryId, primaryText)
+            views.setViewVisibility(articleId, if (article == null) View.GONE else View.VISIBLE)
+            if (article != null) {
+                views.setTextViewText(articleId, article)
+                views.setInt(articleId, "setBackgroundResource", if (article == "de") R.drawable.widget_tag_de else R.drawable.widget_tag_het)
+            }
             views.setTextViewText(secondaryId, data.language1Word)
             views.setTextViewTextSize(primaryId, TypedValue.COMPLEX_UNIT_SP, primarySp.toFloat())
             views.setTextViewTextSize(secondaryId, TypedValue.COMPLEX_UNIT_SP, secondarySp.toFloat())
@@ -201,6 +217,16 @@ object WidgetRenderer {
         val offset = Random.nextInt(count)
         return wordDao.getWordAtOffsetExcluding(excludeId, offset)
     }
+}
+
+/**
+ * "De fiets" / "het huis" -> ("de", "fiets") / ("het", "huis"); anything else -> (null, word).
+ * The noun loses its capital when the article had one (words added by the user are stored title-cased).
+ */
+internal fun splitArticle(word: String): Pair<String?, String> {
+    val match = Regex("""^(de|het)\s+(\S.*)$""",RegexOption.IGNORE_CASE).find(word.trim()) ?: return null to word
+    val noun = match.groupValues[2]
+    return match.groupValues[1].lowercase() to noun.replaceFirstChar { it.lowercase() }
 }
 
 internal const val FOCUS_SET_SIZE = 20

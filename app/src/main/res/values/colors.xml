@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- Widget: light values here, dark ones in values-night. -->
+    <color name="widget_background">#CCFFFFFF</color>
+    <color name="widget_text">#FF000000</color>
+    <color name="widget_tag_de">#FF00897B</color>
+    <color name="widget_tag_het">#FFE65100</color>
+    <color name="widget_tag_text">#FFFFFFFF</color>
 </resources>
