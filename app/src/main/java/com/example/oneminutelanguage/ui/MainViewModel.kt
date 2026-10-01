@@ -7,6 +7,7 @@ import com.example.oneminutelanguage.course.STREAK_MIN_EXERCISES
 import com.example.oneminutelanguage.course.streak
 import com.example.oneminutelanguage.data.DatabaseProvider
 import com.example.oneminutelanguage.ui.learn.LearnState
+import com.example.oneminutelanguage.ui.learn.dueCountFlow
 import com.example.oneminutelanguage.ui.learn.learnStateFlow
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharingStarted
@@ -27,6 +28,9 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     val learnState: StateFlow<LearnState> = learnStateFlow(application)
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), LearnState.Loading)
+
+    val dueCount: StateFlow<Int> = dueCountFlow(application)
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), 0)
 
     /** Exercises done today and the current streak; re-emits on every answered exercise. */
     val exercisesAndStreak: StateFlow<Pair<Int, Int>> = statsDao.getExercisesForDate(LocalDate.now().toString())

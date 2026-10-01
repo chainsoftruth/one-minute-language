@@ -8,6 +8,9 @@ import com.example.oneminutelanguage.course.CourseInfo
 import com.example.oneminutelanguage.course.CoursePrefs
 import com.example.oneminutelanguage.course.CourseRepository
 import com.example.oneminutelanguage.course.CourseUnit
+import com.example.oneminutelanguage.course.LessonKind
+import com.example.oneminutelanguage.course.canSendToWidget
+import com.example.oneminutelanguage.course.sendToWidget
 import com.example.oneminutelanguage.course.PathLevel
 import com.example.oneminutelanguage.data.DatabaseProvider
 import com.example.oneminutelanguage.data.LessonProgressEntity
@@ -65,4 +68,16 @@ class UnitViewModel(application: Application, savedStateHandle: SavedStateHandle
             if (learn is LearnState.Ready && unit != null) UnitState.Ready(unit, learn.progress) else UnitState.Missing
         }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), UnitState.Loading)
+
+    /** Course words only fit "My words" when the app's pair is English -> Dutch. */
+    val canSendToWidget: Boolean = canSendToWidget(application)
+
+    /** Adds every word of the unit's vocab lessons to "My words". Returns (added, already there). */
+    suspend fun sendWordsToWidget(unit: CourseUnit): Pair<Int, Int> {
+        val app = getApplication<Application>()
+        val courseId = CoursePrefs.selectedCourse(app) ?: return 0 to 0
+        val lexicon = CourseRepository.lexicon(app, courseId)
+        val entries = unit.lessons.filter { it.kind == LessonKind.VOCAB }.flatMap { it.vocab }.distinct().mapNotNull { lexicon[it] }
+        return sendToWidget(app, entries)
+    }
 }

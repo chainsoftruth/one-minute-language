@@ -13,6 +13,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.Quiz
+import androidx.compose.material.icons.filled.Replay
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Spellcheck
 import androidx.compose.material.icons.filled.Visibility
@@ -48,6 +49,7 @@ fun TodayScreen(
     onChooseCourse: () -> Unit,
     onLessonClick: (lessonId: String) -> Unit,
     onLearnClick: () -> Unit,
+    onReviewClick: () -> Unit,
     viewModel: MainViewModel = viewModel()
 ) {
     val context = LocalContext.current
@@ -55,6 +57,7 @@ fun TodayScreen(
     val viewsToday by viewModel.todayViewCount.collectAsState(initial = 0)
     val isDutch = rememberIsDutchTarget()
     val learnState by viewModel.learnState.collectAsState()
+    val dueReviews by viewModel.dueCount.collectAsState()
     val (exercisesDone, streakDays) = viewModel.exercisesAndStreak.collectAsState().value
     val dailyGoal = remember { CoursePrefs.dailyGoal(context) }
 
@@ -95,6 +98,15 @@ fun TodayScreen(
             onLessonClick = onLessonClick,
             onLearnClick = onLearnClick
         )
+
+        if (dueReviews > 0) {
+            ActionCard(
+                icon = Icons.Default.Replay,
+                title = if (dueReviews == 1) "1 review due" else "$dueReviews reviews due",
+                subtitle = "Keep your words fresh",
+                onClick = onReviewClick
+            )
+        }
 
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             StatTile(

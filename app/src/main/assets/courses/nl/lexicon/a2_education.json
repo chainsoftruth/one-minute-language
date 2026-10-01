@@ -1,0 +1,7 @@
+[
+  {"id":"wetenschap","nl":"wetenschap","en":"science","pos":"noun","lvl":"A2","topic":"education","art":"de","pl":"wetenschappen","ex":"Zij werkt in de wetenschap.","exEn":"She works in science."},
+  {"id":"werkwoord","nl":"werkwoord","en":"verb","pos":"noun","lvl":"A2","topic":"education","art":"het","pl":"werkwoorden","ex":"Lopen is een werkwoord.","exEn":"Lopen is a verb."},
+  {"id":"klinker","nl":"klinker","en":"vowel","pos":"noun","lvl":"A2","topic":"education","art":"de","pl":"klinkers","ex":"De a is een klinker.","exEn":"The a is a vowel."},
+  {"id":"medeklinker","nl":"medeklinker","en":"consonant","pos":"noun","lvl":"A2","topic":"education","art":"de","pl":"medeklinkers","ex":"De b is een medeklinker.","exEn":"The b is a consonant."},
+  {"id":"kunst","nl":"kunst","en":"art","pos":"noun","lvl":"A2","topic":"education","art":"de","pl":"kunsten","ex":"Ik hou van kunst.","exEn":"I love art."}
+]

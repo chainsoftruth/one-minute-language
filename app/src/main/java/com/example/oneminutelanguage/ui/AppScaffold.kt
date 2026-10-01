@@ -29,8 +29,10 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.oneminutelanguage.ui.learn.CourseSelectScreen
+import com.example.oneminutelanguage.ui.learn.DictionaryScreen
 import com.example.oneminutelanguage.ui.learn.LearnScreen
 import com.example.oneminutelanguage.ui.learn.LessonScreen
+import com.example.oneminutelanguage.ui.learn.ReviewScreen
 import com.example.oneminutelanguage.ui.learn.UnitScreen
 
 private class Tab(val route: String, val label: String, val icon: ImageVector)
@@ -84,13 +86,15 @@ fun AppScaffold(startAtAddWord: Boolean) {
                     onQuizClick = { mode -> navController.navigate(if (mode == null) "quiz" else "quiz?mode=$mode") },
                     onChooseCourse = { navController.navigate("course_select") },
                     onLessonClick = { navController.navigate("lesson/$it") },
-                    onLearnClick = { navController.switchTab("learn") }
+                    onLearnClick = { navController.switchTab("learn") },
+                    onReviewClick = { navController.navigate("review") }
                 )
             }
             composable("learn") {
                 LearnScreen(
                     onChooseCourse = { navController.navigate("course_select") },
-                    onUnitClick = { navController.navigate("unit/$it") }
+                    onUnitClick = { navController.navigate("unit/$it") },
+                    onDictionaryClick = { navController.navigate("dictionary") }
                 )
             }
             composable("course_select") {
@@ -114,11 +118,19 @@ fun AppScaffold(startAtAddWord: Boolean) {
                 )
             }
             composable("practice") {
-                PracticeScreen(onQuizClick = { mode -> navController.navigate("quiz?mode=$mode") })
+                PracticeScreen(
+                    onQuizClick = { mode -> navController.navigate("quiz?mode=$mode") },
+                    onReviewClick = { navController.navigate("review") }
+                )
             }
             composable("words") {
-                DatabaseScreen(onAddWordClick = { navController.navigate("add_word") })
+                DatabaseScreen(
+                    onAddWordClick = { navController.navigate("add_word") },
+                    onDictionaryClick = { navController.navigate("dictionary") }
+                )
             }
+            composable("review") { ReviewScreen(onClose = { navController.popBackStack() }) }
+            composable("dictionary") { DictionaryScreen(onBack = { navController.popBackStack() }) }
             composable("add_word") { AddWordScreen(onWordSaved = leave, onBack = leave) }
             composable("settings") {
                 SettingsScreen(

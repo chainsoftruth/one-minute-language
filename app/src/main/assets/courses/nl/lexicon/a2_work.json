@@ -1,0 +1,11 @@
+[
+  {"id":"contract","nl":"contract","en":"contract","pos":"noun","lvl":"A2","topic":"work","art":"het","pl":"contracten","ex":"Ik teken het contract morgen.","exEn":"I'm signing the contract tomorrow."},
+  {"id":"manager","nl":"manager","en":"manager","pos":"noun","lvl":"A2","topic":"work","art":"de","pl":"managers","ex":"De manager heeft een vergadering.","exEn":"The manager has a meeting."},
+  {"id":"secretaresse","nl":"secretaresse","en":"secretary","pos":"noun","lvl":"A2","topic":"work","art":"de","pl":"secretaresses","ex":"De secretaresse neemt de telefoon op.","exEn":"The secretary answers the phone."},
+  {"id":"verslaggever","nl":"verslaggever","en":"reporter","pos":"noun","lvl":"A2","topic":"work","art":"de","pl":"verslaggevers","ex":"De verslaggever stelt een vraag.","exEn":"The reporter asks a question."},
+  {"id":"netwerk","nl":"netwerk","en":"network","pos":"noun","lvl":"A2","topic":"work","art":"het","pl":"netwerken","ex":"Het netwerk werkt niet.","exEn":"The network isn't working."},
+  {"id":"technologie","nl":"technologie","en":"technology","pos":"noun","lvl":"A2","topic":"work","art":"de","pl":"technologieën","ex":"Nieuwe technologie is spannend.","exEn":"New technology is exciting."},
+  {"id":"energie","nl":"energie","en":"energy","pos":"noun","lvl":"A2","topic":"work","art":"de","pl":"-","ex":"Ik heb veel energie vandaag.","exEn":"I have a lot of energy today."},
+  {"id":"elektronica","nl":"elektronica","en":"electronics","pos":"noun","lvl":"A2","topic":"work","art":"de","pl":"-","ex":"Hij werkt in de elektronica.","exEn":"He works in electronics."},
+  {"id":"programma","nl":"programma","en":"programme","pos":"noun","lvl":"A2","topic":"work","art":"het","pl":"programma's","ex":"Dit programma is leuk.","exEn":"This programme is fun."}
+]

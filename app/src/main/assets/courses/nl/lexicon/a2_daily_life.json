@@ -1,0 +1,11 @@
+[
+  {"id":"metaal","nl":"metaal","en":"metal","pos":"noun","lvl":"A2","topic":"daily_life","art":"het","pl":"metalen","ex":"Ijzer is een metaal.","exEn":"Iron is a metal."},
+  {"id":"goud","nl":"goud","en":"gold","pos":"noun","lvl":"A2","topic":"daily_life","art":"het","pl":"-","ex":"De ring is van goud.","exEn":"The ring is made of gold."},
+  {"id":"zilver","nl":"zilver","en":"silver","pos":"noun","lvl":"A2","topic":"daily_life","art":"het","pl":"-","ex":"De lepel is van zilver.","exEn":"The spoon is made of silver."},
+  {"id":"plastic","nl":"plastic","en":"plastic","pos":"noun","lvl":"A2","topic":"daily_life","art":"het","pl":"-","ex":"Deze tas is van plastic.","exEn":"This bag is made of plastic."},
+  {"id":"hout","nl":"hout","en":"wood","pos":"noun","lvl":"A2","topic":"daily_life","art":"het","pl":"-","ex":"De tafel is van hout.","exEn":"The table is made of wood."},
+  {"id":"diamant","nl":"diamant","en":"diamond","pos":"noun","lvl":"A2","topic":"daily_life","art":"de","pl":"diamanten","ex":"De ring heeft een diamant.","exEn":"The ring has a diamond."},
+  {"id":"materiaal","nl":"materiaal","en":"material","pos":"noun","lvl":"A2","topic":"daily_life","art":"het","pl":"materialen","ex":"Dit materiaal is sterk.","exEn":"This material is strong."},
+  {"id":"patroon","nl":"patroon","en":"pattern","pos":"noun","lvl":"A2","topic":"daily_life","art":"het","pl":"patronen","ex":"De jurk heeft een mooi patroon.","exEn":"The dress has a pretty pattern."},
+  {"id":"instrument","nl":"instrument","en":"instrument","pos":"noun","lvl":"A2","topic":"daily_life","art":"het","pl":"instrumenten","ex":"Een gitaar is een instrument.","exEn":"A guitar is an instrument."}
+]

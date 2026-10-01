@@ -21,6 +21,24 @@ fun gradeChoice(item: Item.Choice, picked: Int): ItemResult =
 fun gradeMatch(item: Item.Match, mistakes: Int): ItemResult =
     ItemResult(mistakes <= 1, if (mistakes <= 1) Verdict.CORRECT else Verdict.WRONG, item.pairs.joinToString("  ·  ") { it.joinToString(" = ") })
 
+/** The answer shown when an item is wrong or given up (empty for items without one). */
+fun expectedAnswer(item: Item): String = when (item) {
+    is Item.Choice -> item.options[item.answer]
+    is Item.Gap -> item.text.replace("___", item.answers.first())
+    is Item.Order -> item.answer
+    is Item.Transform -> item.answers.first()
+    is Item.Translate -> item.answers.first()
+    is Item.Match -> item.pairs.joinToString("  ·  ") { it.joinToString(" = ") }
+    else -> ""
+}
+
+/** Review grade for a result: right = GOOD, almost (typo, missing article) = HARD, wrong = AGAIN. */
+fun gradeFor(result: ItemResult): Grade = when (result.verdict) {
+    Verdict.CORRECT, Verdict.ACCENT -> Grade.GOOD
+    Verdict.ALMOST -> Grade.HARD
+    Verdict.WRONG -> Grade.AGAIN
+}
+
 /** Typed items: gap, order (tiles joined by spaces), transform strict; translate lenient. */
 fun gradeText(item: Item, input: String): ItemResult {
     val accepted = when (item) {
@@ -30,9 +48,10 @@ fun gradeText(item: Item, input: String): ItemResult {
         is Item.Translate -> item.answers
         else -> error("Not a typed item: $item")
     }
-    val shown = when (item) {
-        is Item.Gap -> item.text.replace("___", item.answers.first())
-        else -> accepted.first()
+    val shown = expectedAnswer(item)
+    // A noun typed without its article (vocab exercises): counts, but the learner is told.
+    if (item is Item.Translate && missingArticle(input, accepted)) {
+        return ItemResult(true, Verdict.ALMOST, shown, "Don't forget the article: $shown", diffWords(input, shown))
     }
     val verdict = check(input, accepted, lenient = item is Item.Translate)
     val note = when (verdict) {

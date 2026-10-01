@@ -1,6 +1,5 @@
 package com.example.oneminutelanguage.ui.learn
 
-import android.os.Build
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -27,6 +26,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.safeDrawing
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.windowInsetsPadding
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
@@ -52,22 +53,26 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.platform.LocalUriHandler
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import kotlinx.coroutines.launch
 import com.example.oneminutelanguage.course.Block
 import com.example.oneminutelanguage.course.Item
+import com.example.oneminutelanguage.course.LexEntry
+import com.example.oneminutelanguage.course.display
+import com.example.oneminutelanguage.course.formsLine
 import com.example.oneminutelanguage.course.Source
 import com.example.oneminutelanguage.speech.WordSpeaker
+import com.example.oneminutelanguage.ui.components.ArticleTag
 import com.example.oneminutelanguage.ui.components.FeedbackPanel
 import com.example.oneminutelanguage.ui.components.ProgressRing
 import com.example.oneminutelanguage.ui.components.appCardColors
@@ -91,6 +96,7 @@ fun LessonScreen(
                 Text(phase.message, modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.bodyLarge)
             }
             LessonPhase.Explain -> ExplainPhase(viewModel, onClose)
+            LessonPhase.Intro -> IntroPhase(viewModel, onClose)
             LessonPhase.Items -> ItemsPhase(viewModel, onClose)
             LessonPhase.Done -> DonePhase(viewModel, onNextLesson, onBackToUnit)
         }
@@ -98,7 +104,7 @@ fun LessonScreen(
 }
 
 @Composable
-private fun CloseRow(title: String, progress: Float?, onClose: () -> Unit, trailing: String? = null) {
+internal fun CloseRow(title: String, progress: Float?, onClose: () -> Unit, trailing: String? = null) {
     Row(
         modifier = Modifier.padding(horizontal = 8.dp),
         verticalAlignment = Alignment.CenterVertically
@@ -193,24 +199,69 @@ private fun SourceChips(sources: List<Source>) {
     }
 }
 
+// ---- Intro (vocab lessons) ----
+
+/** Swipeable word cards. The word is spoken whenever a card comes into view. */
+@Composable
+private fun ColumnScope.IntroPhase(viewModel: LessonViewModel, onClose: () -> Unit) {
+    val entries = viewModel.introEntries
+    val context = LocalContext.current
+    val pager = rememberPagerState(pageCount = { entries.size })
+    val scope = rememberCoroutineScope()
+    val speak: (LexEntry) -> Unit = { WordSpeaker.speak(context, it.display(), viewModel.ttsLocale) }
+
+    LaunchedEffect(pager.currentPage) { entries.getOrNull(pager.currentPage)?.let(speak) }
+
+    CloseRow(
+        title = viewModel.lesson?.title.orEmpty(),
+        progress = null,
+        trailing = "${pager.currentPage + 1} / ${entries.size}",
+        onClose = onClose
+    )
+    HorizontalPager(state = pager, modifier = Modifier.weight(1f), contentPadding = androidx.compose.foundation.layout.PaddingValues(horizontal = 16.dp), pageSpacing = 12.dp) { page ->
+        WordCard(entries[page], onSpeak = { speak(entries[page]) })
+    }
+    val last = pager.currentPage == entries.lastIndex
+    Button(
+        onClick = { if (last) viewModel.startItems() else scope.launch { pager.animateScrollToPage(pager.currentPage + 1) } },
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 8.dp)
+    ) { Text(if (last) "Start practice" else "Next word") }
+    TextButton(onClick = viewModel::startItems, modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp)) { Text("I know these") }
+}
+
+@Composable
+private fun WordCard(entry: LexEntry, onSpeak: () -> Unit) {
+    Card(modifier = Modifier.fillMaxSize().padding(vertical = 8.dp), shape = MaterialTheme.shapes.large, colors = appCardColors()) {
+        Column(
+            modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(24.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.Center
+        ) {
+            entry.art?.let { ArticleTag(it) }
+            Text(entry.nl, style = MaterialTheme.typography.displaySmall, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 8.dp))
+            entry.formsLine().takeIf { it.isNotEmpty() }?.let {
+                Text(it, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant, textAlign = TextAlign.Center)
+            }
+            Text(entry.en, style = MaterialTheme.typography.titleLarge, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 16.dp))
+            if (entry.ex != null) {
+                Spacer(Modifier.height(24.dp))
+                Text(entry.ex, style = MaterialTheme.typography.bodyLarge, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
+                entry.exEn?.let { Text(it, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant, textAlign = TextAlign.Center) }
+            }
+            IconButton(onClick = onSpeak, modifier = Modifier.padding(top = 16.dp)) {
+                Icon(Icons.AutoMirrored.Filled.VolumeUp, contentDescription = "Play: ${entry.display()}", tint = MaterialTheme.colorScheme.primary)
+            }
+        }
+    }
+}
+
 // ---- Items ----
 
 @Composable
 private fun ColumnScope.ItemsPhase(viewModel: LessonViewModel, onClose: () -> Unit) {
     var confirmClose by remember { mutableStateOf(false) }
-    val haptics = LocalHapticFeedback.current
     val result = viewModel.result
-
-    LaunchedEffect(result) {
-        if (result != null) {
-            val type = when {
-                Build.VERSION.SDK_INT < 30 -> HapticFeedbackType.LongPress
-                result.correct -> HapticFeedbackType.Confirm
-                else -> HapticFeedbackType.Reject
-            }
-            haptics.performHapticFeedback(type)
-        }
-    }
+    ResultHaptics(result)
 
     CloseRow(
         title = "",

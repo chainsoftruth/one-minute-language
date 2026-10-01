@@ -1,0 +1,15 @@
+[
+  {"id":"verkiezing","nl":"verkiezing","en":"election","pos":"noun","lvl":"A2","topic":"society","art":"de","pl":"verkiezingen","ex":"De verkiezingen zijn in maart.","exEn":"The elections are in March."},
+  {"id":"rechtbank","nl":"rechtbank","en":"court","pos":"noun","lvl":"A2","topic":"society","art":"de","pl":"rechtbanken","ex":"De zaak is bij de rechtbank.","exEn":"The case is at the court."},
+  {"id":"gevangenis","nl":"gevangenis","en":"prison","pos":"noun","lvl":"A2","topic":"society","art":"de","pl":"gevangenissen","ex":"De man zit in de gevangenis.","exEn":"The man is in prison."},
+  {"id":"maatschappij","nl":"maatschappij","en":"society","pos":"noun","lvl":"A2","topic":"society","art":"de","pl":"maatschappijen","ex":"Wij leven in een open maatschappij.","exEn":"We live in an open society."},
+  {"id":"soldaat","nl":"soldaat","en":"soldier","pos":"noun","lvl":"A2","topic":"society","art":"de","pl":"soldaten","ex":"De soldaat staat bij de poort.","exEn":"The soldier stands at the gate."},
+  {"id":"oorlog","nl":"oorlog","en":"war","pos":"noun","lvl":"A2","topic":"society","art":"de","pl":"oorlogen","ex":"De oorlog is voorbij.","exEn":"The war is over."},
+  {"id":"vrede","nl":"vrede","en":"peace","pos":"noun","lvl":"A2","topic":"society","art":"de","pl":"-","ex":"Iedereen wil vrede.","exEn":"Everyone wants peace."},
+  {"id":"religie","nl":"religie","en":"religion","pos":"noun","lvl":"A2","topic":"society","art":"de","pl":"religies","ex":"Religie is voor veel mensen belangrijk.","exEn":"Religion is important to many people."},
+  {"id":"president","nl":"president","en":"president","pos":"noun","lvl":"A2","topic":"society","art":"de","pl":"presidenten","ex":"De president houdt een toespraak.","exEn":"The president gives a speech."},
+  {"id":"advocaat","nl":"advocaat","en":"lawyer","pos":"noun","lvl":"A2","topic":"society","art":"de","pl":"advocaten","ex":"De advocaat helpt zijn klant.","exEn":"The lawyer helps his client."},
+  {"id":"slachtoffer","nl":"slachtoffer","en":"victim","pos":"noun","lvl":"A2","topic":"society","art":"het","pl":"slachtoffers","ex":"Het slachtoffer krijgt hulp.","exEn":"The victim gets help."},
+  {"id":"gemeente","nl":"gemeente","en":"municipality","pos":"noun","lvl":"A2","topic":"society","art":"de","pl":"gemeenten","ex":"Ik moet naar de gemeente.","exEn":"I have to go to the municipality."},
+  {"id":"politie","nl":"politie","en":"police","pos":"noun","lvl":"A2","topic":"society","art":"de","pl":"-","ex":"Bel de politie.","exEn":"Call the police."}
+]

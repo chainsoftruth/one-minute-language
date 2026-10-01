@@ -21,6 +21,10 @@ interface ReviewCardDao {
     @Query("SELECT COUNT(*) FROM review_cards WHERE courseId = :courseId AND dueAt <= :now")
     fun dueCount(courseId: String, now: Long): Flow<Int>
 
+    /** When the next card falls due (null = no cards at all). */
+    @Query("SELECT MIN(dueAt) FROM review_cards WHERE courseId = :courseId")
+    suspend fun nextDueAt(courseId: String): Long?
+
     @Query("SELECT COUNT(*) FROM review_cards WHERE courseId = :courseId AND intervalDays >= 21")
     fun masteredCount(courseId: String): Flow<Int>
 

@@ -1,5 +1,6 @@
 package com.example.oneminutelanguage.ui.learn
 
+import android.os.Build
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
@@ -28,6 +29,8 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.unit.dp
@@ -41,6 +44,23 @@ import kotlinx.coroutines.delay
 
 // One composable per item type. Typed and tile answers are reported upward with onInput (null = nothing yet);
 // the lesson screen's "Check" button then grades them. Local state is keyed by `step` so each item starts fresh.
+
+/** A short buzz when an answer is graded: confirm for right, reject for wrong (long press below API 30). */
+@Composable
+fun ResultHaptics(result: ItemResult?) {
+    val haptics = LocalHapticFeedback.current
+    LaunchedEffect(result) {
+        if (result != null) {
+            haptics.performHapticFeedback(
+                when {
+                    Build.VERSION.SDK_INT < 30 -> HapticFeedbackType.LongPress
+                    result.correct -> HapticFeedbackType.Confirm
+                    else -> HapticFeedbackType.Reject
+                }
+            )
+        }
+    }
+}
 
 @Composable
 fun ChoiceExercise(item: Item.Choice, step: Int, selected: Int?, result: ItemResult?, onSelect: (Int) -> Unit) {

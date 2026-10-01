@@ -119,6 +119,10 @@
       "sources": [
         { "title": "NT2 TaalMenu: lidwoord (A2)", "url": "https://nt2taalmenu.nl/nt2-a2-grammatica-menulidwoord/" }
       ]
+    },
+    {
+      "id": "a1.g04.l5", "title": "Words with de and het", "kind": "vocab",
+      "vocab": ["huis", "stoel", "tafel", "bed", "lamp", "deur", "raam", "kamer", "boek", "tas", "fiets", "auto", "kind", "meisje", "kat", "hond"]
     }
   ]
 }

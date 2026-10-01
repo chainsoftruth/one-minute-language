@@ -15,6 +15,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Book
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.AlertDialog
@@ -62,7 +63,8 @@ import kotlinx.coroutines.launch
 @Composable
 fun DatabaseScreen(
     viewModel: DatabaseViewModel = viewModel(),
-    onAddWordClick: () -> Unit = {}
+    onAddWordClick: () -> Unit = {},
+    onDictionaryClick: () -> Unit = {}
 ) {
     val query by viewModel.searchQuery.collectAsState()
     val words by viewModel.words.collectAsState()
@@ -124,6 +126,9 @@ fun DatabaseScreen(
         topBar = {
             LargeTopAppBar(
                 title = { Text("My words") },
+                actions = {
+                    IconButton(onClick = onDictionaryClick) { Icon(Icons.Default.Book, contentDescription = "Dictionary") }
+                },
                 scrollBehavior = scrollBehavior,
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = Color.Transparent,

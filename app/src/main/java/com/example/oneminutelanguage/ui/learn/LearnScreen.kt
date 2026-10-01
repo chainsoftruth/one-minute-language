@@ -17,12 +17,14 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.MenuBook
+import androidx.compose.material.icons.filled.Book
 import androidx.compose.material.icons.filled.Flag
 import androidx.compose.material.icons.filled.Forum
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -60,6 +62,7 @@ private fun kindFromId(id: String) = when {
 fun LearnScreen(
     onChooseCourse: () -> Unit,
     onUnitClick: (String) -> Unit,
+    onDictionaryClick: () -> Unit,
     viewModel: LearnViewModel = viewModel()
 ) {
     when (val state = viewModel.state.collectAsState().value) {
@@ -77,6 +80,7 @@ fun LearnScreen(
                 item {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Text("Learn", style = MaterialTheme.typography.headlineSmall, modifier = Modifier.weight(1f))
+                        IconButton(onClick = onDictionaryClick) { Icon(Icons.Default.Book, contentDescription = "Dictionary") }
                         AssistChip(
                             onClick = onChooseCourse,
                             label = { Text("${state.course.flag} ${state.course.name} ▾") }

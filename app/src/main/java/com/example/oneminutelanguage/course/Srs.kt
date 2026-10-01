@@ -19,3 +19,23 @@ fun dueAt(now: Long, s: CardState): Long =
 
 /** Mastered = interval of at least 21 days. */
 fun CardState.isMastered() = intervalDays >= 21
+
+/** "now", "25 min", "6 h" or "3 days": how long until [due], for "next review in …". */
+fun etaText(now: Long, due: Long): String {
+    val minutes = (due - now) / 60_000
+    return when {
+        minutes <= 0 -> "now"
+        minutes < 60 -> "$minutes min"
+        minutes < 48 * 60 -> "${minutes / 60} h"
+        else -> "${minutes / (24 * 60)} days"
+    }
+}
+
+private const val DAY_MS = 86_400_000L
+
+/**
+ * Review cards to create when a vocab lesson ends, as (cardId, dueAt): words answered wrong come back in
+ * 10 minutes, all others tomorrow. Every word of the lesson appears exactly once.
+ */
+fun vocabCardSchedule(vocab: List<String>, wrongIds: Set<String>, now: Long): List<Pair<String, Long>> =
+    vocab.distinct().map { id -> "lex:$id" to if (id in wrongIds) dueAt(now, NEW_CARD) else now + DAY_MS }
