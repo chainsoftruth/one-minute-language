@@ -5,6 +5,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.viewModelScope
 import com.example.oneminutelanguage.data.DatabaseProvider
 import com.example.oneminutelanguage.data.WordEntity
@@ -33,14 +34,20 @@ sealed interface QuizPhase {
     object Finished : QuizPhase
 }
 
-class QuizViewModel(application: Application) : AndroidViewModel(application) {
+class QuizViewModel(application: Application, savedStateHandle: SavedStateHandle) : AndroidViewModel(application) {
     private val wordDao = DatabaseProvider.getDatabase(application).wordDao()
     private val isDutch = LanguageSettingsStore.getTargetLanguage(application) == TranslateLanguage.DUTCH
 
     var phase by mutableStateOf<QuizPhase>(QuizPhase.Setup(0, null))
         private set
 
-    var mode by mutableStateOf(QuizMode.MEANING)
+    // The route's optional "mode" argument preselects a mode; de / het needs a Dutch target.
+    var mode by mutableStateOf(
+        savedStateHandle.get<String>("mode")
+            ?.let { name -> QuizMode.entries.firstOrNull { it.name == name } }
+            ?.takeIf { it != QuizMode.ARTICLE || isDutch }
+            ?: QuizMode.MEANING
+    )
         private set
 
     var questions by mutableStateOf<List<QuizQuestion>>(emptyList())

@@ -1,10 +1,11 @@
 package com.example.oneminutelanguage.ui
 
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -17,11 +18,17 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.LargeTopAppBar
+import androidx.compose.material3.ListItem
+import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
 import androidx.compose.material3.SnackbarHostState
@@ -29,6 +36,7 @@ import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -38,14 +46,19 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.oneminutelanguage.data.WordEntity
 import com.example.oneminutelanguage.translation.LanguageSettingsStore
 import com.example.oneminutelanguage.translation.SupportedLanguages
+import com.example.oneminutelanguage.ui.components.ArticleTag
 import kotlinx.coroutines.launch
 
+/** The Words tab. */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DatabaseScreen(
     viewModel: DatabaseViewModel = viewModel(),
@@ -101,40 +114,47 @@ fun DatabaseScreen(
         )
     }
 
-    Box(modifier = Modifier.fillMaxSize()) {
+    val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
+
+    Scaffold(
+        modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
+        containerColor = Color.Transparent,
+        // The app scaffold already pads for the bottom bar.
+        contentWindowInsets = WindowInsets(0),
+        topBar = {
+            LargeTopAppBar(
+                title = { Text("My words") },
+                scrollBehavior = scrollBehavior,
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = Color.Transparent,
+                    scrolledContainerColor = MaterialTheme.colorScheme.surfaceContainer
+                )
+            )
+        },
+        snackbarHost = { SnackbarHost(snackbarHostState) },
+        floatingActionButton = {
+            FloatingActionButton(onClick = onAddWordClick) {
+                Icon(imageVector = Icons.Default.Add, contentDescription = "Add word")
+            }
+        }
+    ) { innerPadding ->
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(16.dp)
+                .padding(innerPadding)
+                .padding(horizontal = 16.dp)
         ) {
-            Text(
-                text = "Word Database",
-                style = MaterialTheme.typography.headlineSmall
+            OutlinedTextField(
+                value = query,
+                onValueChange = viewModel::onSearchQueryChange,
+                placeholder = { Text("Search") },
+                leadingIcon = {
+                    Icon(imageVector = Icons.Default.Search, contentDescription = null)
+                },
+                singleLine = true,
+                shape = MaterialTheme.shapes.large,
+                modifier = Modifier.fillMaxWidth()
             )
-
-            Spacer(modifier = Modifier.height(12.dp))
-
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                OutlinedTextField(
-                    value = query,
-                    onValueChange = viewModel::onSearchQueryChange,
-                    label = { Text("Search") },
-                    leadingIcon = {
-                        Icon(imageVector = Icons.Default.Search, contentDescription = null)
-                    },
-                    singleLine = true,
-                    modifier = Modifier.weight(1f)
-                )
-
-                Spacer(modifier = Modifier.width(8.dp))
-
-                IconButton(onClick = onAddWordClick) {
-                    Icon(imageVector = Icons.Default.Add, contentDescription = "Add word")
-                }
-            }
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
@@ -149,15 +169,18 @@ fun DatabaseScreen(
                 }
             }
 
-            Spacer(modifier = Modifier.height(4.dp))
-
             if (words.isEmpty()) {
                 Text(
                     text = if (query.isBlank()) "No words yet. Tap + to add one." else "No matches for \"$query\".",
-                    style = MaterialTheme.typography.bodyMedium
+                    style = MaterialTheme.typography.bodyMedium,
+                    modifier = Modifier.padding(top = 8.dp)
                 )
             } else {
-                LazyColumn(modifier = Modifier.fillMaxSize()) {
+                // Bottom padding keeps the last row clear of the FAB.
+                LazyColumn(
+                    modifier = Modifier.fillMaxSize(),
+                    contentPadding = PaddingValues(bottom = 88.dp)
+                ) {
                     items(words, key = { it.id }) { word ->
                         WordRow(
                             word = word,
@@ -178,16 +201,11 @@ fun DatabaseScreen(
                                 }
                             }
                         )
-                        HorizontalDivider()
+                        HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant)
                     }
                 }
             }
         }
-
-        SnackbarHost(
-            hostState = snackbarHostState,
-            modifier = Modifier.align(Alignment.BottomCenter)
-        )
     }
 }
 
@@ -248,16 +266,16 @@ private fun WordRow(
     onEnabledChange: (Boolean) -> Unit,
     onDelete: () -> Unit
 ) {
-    Row(
-        modifier = Modifier
-            .fillMaxWidth()
-            .clickable(onClick = onClick)
-            .padding(vertical = 8.dp),
-        verticalAlignment = Alignment.CenterVertically
-    ) {
-        Column(modifier = Modifier.weight(1f)) {
+    val article = articleOf(word.language2Word)
+    val headline = if (article != null) word.language2Word.drop(article.length).trim() else word.language2Word
+
+    ListItem(
+        modifier = Modifier.clickable(onClick = onClick),
+        colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+        leadingContent = article?.let { { ArticleTag(it) } },
+        headlineContent = {
             Text(
-                text = word.language2Word,
+                text = headline,
                 style = MaterialTheme.typography.titleMedium,
                 color = if (word.isEnabled) {
                     MaterialTheme.colorScheme.onSurface
@@ -265,27 +283,31 @@ private fun WordRow(
                     MaterialTheme.colorScheme.onSurfaceVariant
                 }
             )
-
+        },
+        supportingContent = {
             Text(
                 text = word.language1Word,
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant
             )
+        },
+        trailingContent = {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Switch(
+                    checked = word.isEnabled,
+                    onCheckedChange = onEnabledChange
+                )
+
+                Spacer(modifier = Modifier.width(4.dp))
+
+                IconButton(onClick = onDelete) {
+                    Icon(
+                        imageVector = Icons.Default.Delete,
+                        contentDescription = "Delete word",
+                        tint = MaterialTheme.colorScheme.error
+                    )
+                }
+            }
         }
-
-        Switch(
-            checked = word.isEnabled,
-            onCheckedChange = onEnabledChange
-        )
-
-        Spacer(modifier = Modifier.width(4.dp))
-
-        IconButton(onClick = onDelete) {
-            Icon(
-                imageVector = Icons.Default.Delete,
-                contentDescription = "Delete word",
-                tint = MaterialTheme.colorScheme.error
-            )
-        }
-    }
+    )
 }

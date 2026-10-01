@@ -1,8 +1,10 @@
 package com.example.oneminutelanguage.ui
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,20 +13,30 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.SwapVert
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
+import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.DropdownMenu
 import androidx.compose.material3.DropdownMenuItem
-import androidx.compose.material3.HorizontalDivider
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.ListItem
+import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -33,15 +45,19 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.oneminutelanguage.translation.SupportedLanguages
+import com.example.oneminutelanguage.ui.components.appCardColors
 import com.example.oneminutelanguage.widget.FOCUS_SET_SIZE
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun SettingsScreen(
     viewModel: SettingsViewModel = viewModel(),
-    onSettingsUpdated: () -> Unit = {}
+    onSettingsUpdated: () -> Unit = {},
+    onBack: () -> Unit = {}
 ) {
     LaunchedEffect(viewModel.applyState) {
         if (viewModel.applyState is SettingsApplyState.Success) {
@@ -49,205 +65,140 @@ fun SettingsScreen(
         }
     }
 
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp)
-    ) {
-        Text(
-            text = "Settings",
-            style = MaterialTheme.typography.headlineSmall
-        )
-
-        Spacer(modifier = Modifier.height(24.dp))
-
-        LanguageDropdown(
-            label = "Source language (what you type)",
-            selectedCode = viewModel.sourceLanguage,
-            onSelect = viewModel::selectSourceLanguage
-        )
-
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.Center
-        ) {
-            TextButton(onClick = viewModel::swapLanguages) {
-                Text("⇅ Swap languages")
-            }
-        }
-
-        LanguageDropdown(
-            label = "Language you're learning",
-            selectedCode = viewModel.targetLanguage,
-            onSelect = viewModel::selectTargetLanguage
-        )
-
-        if (viewModel.sourceLanguage == viewModel.targetLanguage) {
-            Spacer(modifier = Modifier.height(12.dp))
-            Text(
-                text = "Source and target are the same language — pick two different ones.",
-                color = MaterialTheme.colorScheme.error,
-                style = MaterialTheme.typography.bodySmall
+    Scaffold(
+        containerColor = Color.Transparent,
+        topBar = {
+            TopAppBar(
+                title = { Text("Settings") },
+                navigationIcon = {
+                    IconButton(onClick = onBack) {
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
+                    }
+                },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.Transparent)
             )
         }
-
-        Spacer(modifier = Modifier.height(24.dp))
-
-        val applyState = viewModel.applyState
-        val isBusy = applyState is SettingsApplyState.DownloadingModels ||
-            applyState is SettingsApplyState.Translating
-
-        Button(
-            onClick = viewModel::applyChanges,
-            enabled = !isBusy && viewModel.sourceLanguage != viewModel.targetLanguage,
-            modifier = Modifier.fillMaxWidth()
+    ) { innerPadding ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = 16.dp, vertical = 8.dp),
+            verticalArrangement = Arrangement.spacedBy(20.dp)
         ) {
-            Text("Update Settings")
-        }
+            val applyState = viewModel.applyState
+            val isBusy = applyState is SettingsApplyState.DownloadingModels ||
+                applyState is SettingsApplyState.Translating
 
-        Spacer(modifier = Modifier.height(12.dp))
+            SettingsGroup("Languages") {
+                LanguageRow(
+                    label = "Source language (what you type)",
+                    selectedCode = viewModel.sourceLanguage,
+                    onSelect = viewModel::selectSourceLanguage
+                )
 
-        when (applyState) {
-            is SettingsApplyState.Idle -> Unit
+                ListItem(
+                    modifier = Modifier.clickable(onClick = viewModel::swapLanguages),
+                    colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+                    leadingContent = { Icon(Icons.Default.SwapVert, contentDescription = null) },
+                    headlineContent = { Text("Swap languages") }
+                )
 
-            is SettingsApplyState.DownloadingModels -> {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    CircularProgressIndicator(modifier = Modifier.size(20.dp))
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text("Downloading language model…")
+                LanguageRow(
+                    label = "Language you're learning",
+                    selectedCode = viewModel.targetLanguage,
+                    onSelect = viewModel::selectTargetLanguage
+                )
+
+                Column(modifier = Modifier.padding(16.dp)) {
+                    if (viewModel.sourceLanguage == viewModel.targetLanguage) {
+                        Text(
+                            text = "Source and target are the same language — pick two different ones.",
+                            color = MaterialTheme.colorScheme.error,
+                            style = MaterialTheme.typography.bodySmall,
+                            modifier = Modifier.padding(bottom = 12.dp)
+                        )
+                    }
+
+                    Button(
+                        onClick = viewModel::applyChanges,
+                        enabled = !isBusy && viewModel.sourceLanguage != viewModel.targetLanguage,
+                        shape = MaterialTheme.shapes.small,
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text("Update Settings")
+                    }
+
+                    when (applyState) {
+                        is SettingsApplyState.Idle -> Unit
+
+                        is SettingsApplyState.DownloadingModels -> BusyRow("Downloading language model…")
+
+                        is SettingsApplyState.Translating ->
+                            BusyRow("Translating existing words… (${applyState.current}/${applyState.total})")
+
+                        is SettingsApplyState.Success -> StatusText("Settings updated.")
+
+                        is SettingsApplyState.Error -> StatusText("Error: ${applyState.message}", isError = true)
+                    }
                 }
             }
 
-            is SettingsApplyState.Translating -> {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    CircularProgressIndicator(modifier = Modifier.size(20.dp))
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text("Translating existing words… (${applyState.current}/${applyState.total})")
+            val defaultWordsState = viewModel.defaultWordsState
+            val defaultWordsBusy = defaultWordsState is DefaultWordsState.DownloadingModels ||
+                defaultWordsState is DefaultWordsState.Importing ||
+                defaultWordsState is DefaultWordsState.Removing
+
+            SettingsGroup("Starter words") {
+                ListItem(
+                    colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+                    headlineContent = { Text("Include default word list") },
+                    supportingContent = {
+                        Text("Adds a bundled starter vocabulary, translated into your current languages.")
+                    },
+                    trailingContent = {
+                        Switch(
+                            checked = viewModel.defaultWordsEnabled,
+                            onCheckedChange = viewModel::onToggleDefaultWords,
+                            enabled = !defaultWordsBusy
+                        )
+                    }
+                )
+
+                val status: (@Composable ColumnScope.() -> Unit)? = when (defaultWordsState) {
+                    is DefaultWordsState.Idle -> null
+                    is DefaultWordsState.DownloadingModels -> { { BusyRow("Downloading language model…") } }
+                    is DefaultWordsState.Importing -> {
+                        { BusyRow("Adding default words… (${defaultWordsState.current}/${defaultWordsState.total})") }
+                    }
+                    is DefaultWordsState.Removing -> { { BusyRow("Removing default words…") } }
+                    is DefaultWordsState.Done -> {
+                        { StatusText(if (viewModel.defaultWordsEnabled) "Default words added." else "Default words removed.") }
+                    }
+                    is DefaultWordsState.Error -> { { StatusText("Error: ${defaultWordsState.message}", isError = true) } }
+                }
+                if (status != null) {
+                    Column(modifier = Modifier.padding(start = 16.dp, end = 16.dp, bottom = 16.dp)) { status() }
                 }
             }
 
-            is SettingsApplyState.Success -> {
-                Text(
-                    text = "Settings updated.",
-                    style = MaterialTheme.typography.bodyMedium
-                )
-            }
-
-            is SettingsApplyState.Error -> {
-                Text(
-                    text = "Error: ${applyState.message}",
-                    color = MaterialTheme.colorScheme.error,
-                    style = MaterialTheme.typography.bodyMedium
-                )
-            }
-        }
-
-        Spacer(modifier = Modifier.height(24.dp))
-        HorizontalDivider()
-        Spacer(modifier = Modifier.height(16.dp))
-
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = "Focus mode",
-                    style = MaterialTheme.typography.labelLarge
-                )
-                Text(
-                    text = "The widget repeats a set of $FOCUS_SET_SIZE words. A word you answer correctly " +
-                        "in a quiz makes room for the next one. Off shows a random word each time.",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-
-            Spacer(modifier = Modifier.width(12.dp))
-
-            Switch(
-                checked = viewModel.focusMode,
-                onCheckedChange = viewModel::onToggleFocusMode
-            )
-        }
-
-        Spacer(modifier = Modifier.height(16.dp))
-        HorizontalDivider()
-        Spacer(modifier = Modifier.height(16.dp))
-
-        val defaultWordsState = viewModel.defaultWordsState
-        val defaultWordsBusy = defaultWordsState is DefaultWordsState.DownloadingModels ||
-            defaultWordsState is DefaultWordsState.Importing ||
-            defaultWordsState is DefaultWordsState.Removing
-
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Column(modifier = Modifier.weight(1f)) {
-                Text(
-                    text = "Include default word list",
-                    style = MaterialTheme.typography.labelLarge
-                )
-                Text(
-                    text = "Adds a bundled starter vocabulary, translated into your current languages.",
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant
-                )
-            }
-
-            Spacer(modifier = Modifier.width(12.dp))
-
-            Switch(
-                checked = viewModel.defaultWordsEnabled,
-                onCheckedChange = viewModel::onToggleDefaultWords,
-                enabled = !defaultWordsBusy
-            )
-        }
-
-        Spacer(modifier = Modifier.height(8.dp))
-
-        when (defaultWordsState) {
-            is DefaultWordsState.Idle -> Unit
-
-            is DefaultWordsState.DownloadingModels -> {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    CircularProgressIndicator(modifier = Modifier.size(20.dp))
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text("Downloading language model…")
-                }
-            }
-
-            is DefaultWordsState.Importing -> {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    CircularProgressIndicator(modifier = Modifier.size(20.dp))
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text("Adding default words… (${defaultWordsState.current}/${defaultWordsState.total})")
-                }
-            }
-
-            is DefaultWordsState.Removing -> {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    CircularProgressIndicator(modifier = Modifier.size(20.dp))
-                    Spacer(modifier = Modifier.width(8.dp))
-                    Text("Removing default words…")
-                }
-            }
-
-            is DefaultWordsState.Done -> {
-                Text(
-                    text = if (viewModel.defaultWordsEnabled) "Default words added." else "Default words removed.",
-                    style = MaterialTheme.typography.bodyMedium
-                )
-            }
-
-            is DefaultWordsState.Error -> {
-                Text(
-                    text = "Error: ${defaultWordsState.message}",
-                    color = MaterialTheme.colorScheme.error,
-                    style = MaterialTheme.typography.bodyMedium
+            SettingsGroup("Widget") {
+                ListItem(
+                    colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+                    headlineContent = { Text("Focus mode") },
+                    supportingContent = {
+                        Text(
+                            "The widget repeats a set of $FOCUS_SET_SIZE words. A word you answer correctly " +
+                                "in a quiz makes room for the next one. Off shows a random word each time."
+                        )
+                    },
+                    trailingContent = {
+                        Switch(
+                            checked = viewModel.focusMode,
+                            onCheckedChange = viewModel::onToggleFocusMode
+                        )
+                    }
                 )
             }
         }
@@ -278,47 +229,74 @@ fun SettingsScreen(
 }
 
 @Composable
-private fun LanguageDropdown(
+private fun SettingsGroup(title: String, content: @Composable ColumnScope.() -> Unit) {
+    Column {
+        Text(
+            text = title,
+            style = MaterialTheme.typography.titleSmall,
+            color = MaterialTheme.colorScheme.primary,
+            modifier = Modifier.padding(start = 4.dp, bottom = 8.dp)
+        )
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            shape = MaterialTheme.shapes.medium,
+            colors = appCardColors(),
+            content = content
+        )
+    }
+}
+
+@Composable
+private fun BusyRow(text: String) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier.padding(top = 12.dp)
+    ) {
+        CircularProgressIndicator(modifier = Modifier.size(20.dp))
+        Spacer(modifier = Modifier.width(8.dp))
+        Text(text)
+    }
+}
+
+@Composable
+private fun StatusText(text: String, isError: Boolean = false) {
+    Text(
+        text = text,
+        color = if (isError) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.onSurface,
+        style = MaterialTheme.typography.bodyMedium,
+        modifier = Modifier.padding(top = 12.dp)
+    )
+}
+
+@Composable
+private fun LanguageRow(
     label: String,
     selectedCode: String,
     onSelect: (String) -> Unit
 ) {
     var expanded by remember { mutableStateOf(false) }
-    val selectedName = SupportedLanguages.displayNameFor(selectedCode)
 
-    Column {
-        Text(text = label, style = MaterialTheme.typography.labelLarge)
-        Spacer(modifier = Modifier.height(4.dp))
+    Box {
+        ListItem(
+            modifier = Modifier.clickable { expanded = true },
+            colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+            headlineContent = { Text(label) },
+            supportingContent = { Text(SupportedLanguages.displayNameFor(selectedCode)) },
+            trailingContent = { Icon(imageVector = Icons.Default.ArrowDropDown, contentDescription = null) }
+        )
 
-        Box {
-            OutlinedButton(
-                onClick = { expanded = true },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.SpaceBetween,
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Text(selectedName)
-                    Icon(imageVector = Icons.Default.ArrowDropDown, contentDescription = null)
-                }
-            }
-
-            DropdownMenu(
-                expanded = expanded,
-                onDismissRequest = { expanded = false },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                SupportedLanguages.all.forEach { option ->
-                    DropdownMenuItem(
-                        text = { Text(option.displayName) },
-                        onClick = {
-                            onSelect(option.code)
-                            expanded = false
-                        }
-                    )
-                }
+        DropdownMenu(
+            expanded = expanded,
+            onDismissRequest = { expanded = false }
+        ) {
+            SupportedLanguages.all.forEach { option ->
+                DropdownMenuItem(
+                    text = { Text(option.displayName) },
+                    onClick = {
+                        onSelect(option.code)
+                        expanded = false
+                    }
+                )
             }
         }
     }
