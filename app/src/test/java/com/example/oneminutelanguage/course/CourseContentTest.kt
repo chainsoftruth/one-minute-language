@@ -111,6 +111,26 @@ class CourseContentTest {
         }
     }
 
+    @Test fun readingTextsBelongToReadingLessons() {
+        for (course in courseDirs()) for (unit in units(course.name)) for (lesson in unit.lessons) {
+            assertEquals("${lesson.id}: only reading lessons have a text, and every one has it", lesson.kind == LessonKind.READING, lesson.text != null)
+            lesson.text?.let { assertTrue("${lesson.id}: reading text of 40+ words", words(it).size >= 40) }
+        }
+    }
+
+    @Test fun resourcesAreHttpsWithoutDuplicatesAndKnownSkills() {
+        for (course in courseDirs()) {
+            val resources = parseResources(File(course, "resources.json").readText(), "${course.name}/resources.json")
+            val skills = RESOURCE_SKILLS.map { it.first }.toSet()
+            assertTrue("${course.name}: resource URLs use https", resources.all { it.url.startsWith("https://") })
+            assertEquals("${course.name}: duplicate resource URLs", resources.size, resources.map { it.url }.toSet().size)
+            assertTrue("${course.name}: unknown skill", resources.all { it.skill in skills })
+            assertTrue("${course.name}: lang is nl or en", resources.all { it.lang == "nl" || it.lang == "en" })
+            assertTrue("${course.name}: verified is curl or browser", resources.all { it.verified == "curl" || it.verified == "browser" })
+            assertTrue("${course.name}: levels are A1, A2 or B1", resources.all { r -> r.levels.all { it == "A1" || it == "A2" || it == "B1" } })
+        }
+    }
+
     @Test fun grammarLessonsFollowTheAuthoringStandard() {
         for (course in courseDirs()) for (unit in units(course.name)) {
             for (lesson in unit.lessons) {

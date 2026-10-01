@@ -67,6 +67,9 @@ object CourseRepository {
             context.assets.list("$ROOT/$courseId/units").orEmpty().toSet()
         }
 
+    suspend fun resources(context: Context, courseId: String): List<Resource> =
+        cached("resources:$courseId") { parseResources(context.readAsset("$ROOT/$courseId/resources.json"), "$courseId/resources.json") }
+
     /** Lexicon id -> entry, from every file in `lexicon/`. */
     suspend fun lexicon(context: Context, courseId: String): Map<String, LexEntry> =
         cached("lexicon:$courseId") {

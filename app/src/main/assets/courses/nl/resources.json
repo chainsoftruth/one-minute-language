@@ -1,0 +1,34 @@
+[
+  { "title": "NT2 TaalMenu: A1 grammar", "url": "https://nt2taalmenu.nl/a1-grammatica-verzamel-pagina/", "skill": "grammar", "levels": ["A1"], "lang": "nl", "note": "Free grammar pages with exercises, all A1 topics in one list." },
+  { "title": "NT2 TaalMenu: A2 grammar", "url": "https://nt2taalmenu.nl/a2-grammatica-verzamel-pagina/", "skill": "grammar", "levels": ["A2"], "lang": "nl", "note": "Free grammar pages with exercises, all A2 topics in one list." },
+  { "title": "NT2 TaalMenu: B1 grammar", "url": "https://nt2taalmenu.nl/b1-grammatica-verzamel-pagina/", "skill": "grammar", "levels": ["B1"], "lang": "nl", "note": "Free grammar pages with exercises, all B1 topics in one list." },
+  { "title": "Dutchgrammar.com", "url": "https://www.dutchgrammar.com/en/", "skill": "grammar", "levels": ["A1", "A2", "B1"], "lang": "en", "note": "Grammar explained in English. Some phones are refused; open it in a browser.", "verified": "browser" },
+  { "title": "Taaladvies.net", "url": "https://taaladvies.net/", "skill": "grammar", "levels": ["B1"], "lang": "nl", "note": "Answers on tricky usage, such as als or dan and hun or hen." },
+  { "title": "E-ANS", "url": "https://e-ans.ivdnt.org/", "skill": "grammar", "levels": ["B1"], "lang": "nl", "note": "The full reference grammar of Dutch. Heavy, but complete." },
+
+  { "title": "NT2 TaalMenu: A1 menu", "url": "https://nt2taalmenu.nl/nt2-a1-menu/", "skill": "reading", "levels": ["A1"], "lang": "nl", "note": "Reading, listening, speaking and writing practice for A1." },
+  { "title": "NT2 TaalMenu: A2 menu", "url": "https://nt2taalmenu.nl/nt2-a2-menu/", "skill": "reading", "levels": ["A2"], "lang": "nl", "note": "Reading, listening, speaking and writing practice for A2." },
+  { "title": "NT2 TaalMenu: B1 menu", "url": "https://nt2taalmenu.nl/nt2-b1-menu/", "skill": "reading", "levels": ["B1"], "lang": "nl", "note": "Reading, listening, speaking and writing practice for B1." },
+  { "title": "NOS Jeugdjournaal", "url": "https://jeugdjournaal.nl/", "skill": "reading", "levels": ["A2", "B1"], "lang": "nl", "note": "News for young people: short items in plain language." },
+  { "title": "Wablieft", "url": "https://www.wablieft.be/", "skill": "reading", "levels": ["A2", "B1"], "lang": "nl", "note": "Easy news from Flanders. The spelling is standard, some words are Belgian." },
+  { "title": "NOS news", "url": "https://nos.nl/", "skill": "reading", "levels": ["B1"], "lang": "nl", "note": "Regular Dutch news. Start with short articles." },
+
+  { "title": "NOS Journaal in Makkelijke Taal: about", "url": "https://over.nos.nl/nieuws/nieuw-nos-journaal-in-makkelijke-taal/", "skill": "listening", "levels": ["A2", "B1"], "lang": "nl", "note": "About the daily news in easy language, slow and clear." },
+  { "title": "NPO Start", "url": "https://www.npostart.nl/", "skill": "listening", "levels": ["A2", "B1"], "lang": "nl", "note": "Where you watch the NOS Journaal in Makkelijke Taal (weekdays, about 10 minutes)." },
+  { "title": "Taalklas.nl", "url": "https://www.taalklas.nl/", "skill": "listening", "levels": ["A1", "A2"], "lang": "nl", "note": "Free video course for beginners." },
+  { "title": "Easy Dutch (YouTube)", "url": "https://www.youtube.com/@EasyDutch", "skill": "listening", "levels": ["A2", "B1"], "lang": "nl", "note": "Street interviews with Dutch subtitles." },
+  { "title": "Bart de Pau (YouTube)", "url": "https://www.youtube.com/@bartdepau", "skill": "listening", "levels": ["A1", "A2", "B1"], "lang": "en", "note": "Grammar and vocabulary videos in clear Dutch." },
+  { "title": "Dutchies to be (YouTube)", "url": "https://www.youtube.com/@dutchiestobe", "skill": "listening", "levels": ["A1", "A2", "B1"], "lang": "en", "note": "Short grammar and vocabulary videos." },
+
+  { "title": "Oefenen.nl", "url": "https://oefenen.nl/", "skill": "speaking", "levels": ["A1", "A2", "B1"], "lang": "nl", "note": "Free account. Practice with other learners and volunteers, also by talking." },
+
+  { "title": "LanguageTool", "url": "https://languagetool.org/", "skill": "writing", "levels": ["A2", "B1"], "lang": "en", "note": "The free spelling and grammar checker behind the check in writing tasks. Works for Dutch." },
+
+  { "title": "DUO Inburgeren", "url": "https://www.inburgeren.nl/", "skill": "exam", "levels": ["A2", "B1"], "lang": "nl", "note": "The official site for the civic integration exam, with example tasks." },
+  { "title": "Staatsexamens NT2", "url": "https://www.staatsexamensnt2.nl/", "skill": "exam", "levels": ["B1"], "lang": "nl", "note": "The state exam Dutch as a second language, programme I (B1)." },
+  { "title": "Oefenexamens NT2", "url": "https://oefenexamensnt2.nl/", "skill": "exam", "levels": ["B1"], "lang": "nl", "note": "Free practice exams for the state exam." },
+  { "title": "Inburgering.nl: B1 practice exams", "url": "https://www.inburgering.nl/oefenexamens-b1", "skill": "exam", "levels": ["B1"], "lang": "nl", "note": "Free practice exams for the B1 integration exam." },
+
+  { "title": "Woordenlijst Nederlandse Taal", "url": "https://woordenlijst.org/", "skill": "dictionary", "levels": [], "lang": "nl", "note": "The official spelling list: article, plural and spelling of every word." },
+  { "title": "Wiktionary", "url": "https://en.wiktionary.org/wiki/Wiktionary:Main_Page", "skill": "dictionary", "levels": [], "lang": "en", "note": "Look up a Dutch word and see its forms." }
+]

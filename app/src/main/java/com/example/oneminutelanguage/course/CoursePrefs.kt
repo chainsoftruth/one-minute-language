@@ -37,11 +37,18 @@ object CoursePrefs {
     fun ttsRate(context: Context): Float = prefs(context).getFloat(KEY_TTS_RATE, 1.0f)
     fun setTtsRate(context: Context, rate: Float) = prefs(context).edit().putFloat(KEY_TTS_RATE, rate).apply()
 
-    /** Used from Stage 5. */
+    /** Opt-in: the writing check sends the text to languagetool.org. */
     fun languageToolEnabled(context: Context): Boolean = prefs(context).getBoolean(KEY_LT_ENABLED, false)
     fun setLanguageToolEnabled(context: Context, on: Boolean) = prefs(context).edit().putBoolean(KEY_LT_ENABLED, on).apply()
 
-    /** Used from Stage 5: "<lessonId>|<itemIndex>|<type>|<text>". */
+    /** Problems the learner reported: "<lessonId>|<itemIndex>|<type>|<text>". */
     fun flags(context: Context): Set<String> = prefs(context).getStringSet(KEY_FLAGS, emptySet()).orEmpty()
-    fun setFlags(context: Context, flags: Set<String>) = prefs(context).edit().putStringSet(KEY_FLAGS, flags).apply()
+    fun addFlag(context: Context, line: String) =
+        prefs(context).edit().putStringSet(KEY_FLAGS, flags(context) + line).apply() // a new set: the stored one must not be changed
+    fun clearFlags(context: Context) = prefs(context).edit().remove(KEY_FLAGS).apply()
+
+    /** The unfinished text of a writing task, so leaving the lesson doesn't lose it. */
+    fun writingDraft(context: Context, lessonId: String): String = prefs(context).getString("writing_draft_$lessonId", "").orEmpty()
+    fun setWritingDraft(context: Context, lessonId: String, text: String) =
+        prefs(context).edit().putString("writing_draft_$lessonId", text).apply()
 }

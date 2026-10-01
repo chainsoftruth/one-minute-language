@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
+import android.content.Intent
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -55,6 +56,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.oneminutelanguage.course.CoursePrefs
+import com.example.oneminutelanguage.course.flagsExport
 import com.example.oneminutelanguage.speech.WordSpeaker
 import com.example.oneminutelanguage.translation.SupportedLanguages
 import com.example.oneminutelanguage.ui.components.appCardColors
@@ -192,6 +194,7 @@ fun SettingsScreen(
             }
 
             SpeechSettings()
+            CourseSettings()
 
             SettingsGroup("Widget") {
                 ListItem(
@@ -276,6 +279,64 @@ private fun SpeechSettings() {
             trailingContent = {
                 if (voiceMissing) TextButton(onClick = { WordSpeaker.installVoiceData(context) }) { Text("Install") }
             }
+        )
+    }
+}
+
+/** The opt-in writing check, and the problems reported from lessons (shared as text, then fixed in the next content run). */
+@Composable
+private fun CourseSettings() {
+    val context = LocalContext.current
+    var languageTool by remember { mutableStateOf(CoursePrefs.languageToolEnabled(context)) }
+    var flags by remember { mutableStateOf(CoursePrefs.flags(context)) }
+    var confirmClear by remember { mutableStateOf(false) }
+
+    SettingsGroup("Course") {
+        ListItem(
+            colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+            headlineContent = { Text("Writing check") },
+            supportingContent = { Text("Check writing tasks with LanguageTool. Your text is sent to languagetool.org.") },
+            trailingContent = {
+                Switch(checked = languageTool, onCheckedChange = {
+                    languageTool = it
+                    CoursePrefs.setLanguageToolEnabled(context, it)
+                })
+            }
+        )
+        ListItem(
+            colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+            headlineContent = { Text("Reported problems (${flags.size})") },
+            supportingContent = {
+                Column {
+                    Text("Problems you flagged in lessons. Share the list to get them fixed.")
+                    Row {
+                        TextButton(
+                            enabled = flags.isNotEmpty(),
+                            onClick = {
+                                val send = Intent(Intent.ACTION_SEND).setType("text/plain").putExtra(Intent.EXTRA_TEXT, flagsExport(flags))
+                                context.startActivity(Intent.createChooser(send, "Share reported problems"))
+                            }
+                        ) { Text("Share") }
+                        TextButton(enabled = flags.isNotEmpty(), onClick = { confirmClear = true }) { Text("Clear") }
+                    }
+                }
+            }
+        )
+    }
+
+    if (confirmClear) {
+        AlertDialog(
+            onDismissRequest = { confirmClear = false },
+            title = { Text("Clear reported problems?") },
+            text = { Text("Share them first if you want to keep them.") },
+            confirmButton = {
+                TextButton(onClick = {
+                    CoursePrefs.clearFlags(context)
+                    flags = emptySet()
+                    confirmClear = false
+                }) { Text("Clear") }
+            },
+            dismissButton = { TextButton(onClick = { confirmClear = false }) { Text("Cancel") } }
         )
     }
 }

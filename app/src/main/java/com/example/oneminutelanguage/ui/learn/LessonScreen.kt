@@ -33,6 +33,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Flag
 import androidx.compose.material.icons.filled.Lightbulb
 import androidx.compose.material.icons.filled.OpenInBrowser
 import androidx.compose.material3.AlertDialog
@@ -41,6 +42,8 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.FilterChip
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -50,6 +53,8 @@ import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -65,7 +70,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import kotlinx.coroutines.launch
+import android.widget.Toast
 import com.example.oneminutelanguage.course.Block
+import com.example.oneminutelanguage.course.FlagType
 import com.example.oneminutelanguage.course.Item
 import com.example.oneminutelanguage.course.LexEntry
 import com.example.oneminutelanguage.course.display
@@ -84,25 +91,78 @@ fun LessonScreen(
     onBackToUnit: (String) -> Unit,
     viewModel: LessonViewModel = viewModel()
 ) {
-    Column(
-        modifier = Modifier
-            .fillMaxSize()
-            .windowInsetsPadding(WindowInsets.safeDrawing)
-    ) {
-        when (val phase = viewModel.phase) {
-            LessonPhase.Loading -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
-            is LessonPhase.Failed -> {
-                CloseRow(title = "Lesson", progress = null, onClose = onClose)
-                Text(phase.message, modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.bodyLarge)
+    val context = LocalContext.current
+    var flagging by remember { mutableStateOf(false) }
+    val phase = viewModel.phase
+    // The flag button is on every screen of a lesson except loading, failure and the result.
+    val onFlag: (() -> Unit)? =
+        if (phase == LessonPhase.Loading || phase == LessonPhase.Done || phase is LessonPhase.Failed) null else { { flagging = true } }
+
+    CompositionLocalProvider(LocalOnFlag provides onFlag) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .windowInsetsPadding(WindowInsets.safeDrawing)
+        ) {
+            when (phase) {
+                LessonPhase.Loading -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
+                is LessonPhase.Failed -> {
+                    CloseRow(title = "Lesson", progress = null, onClose = onClose)
+                    Text(phase.message, modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.bodyLarge)
+                }
+                LessonPhase.Explain -> ExplainPhase(viewModel, onClose)
+                LessonPhase.Intro -> IntroPhase(viewModel, onClose)
+                LessonPhase.Dialogue -> DialoguePhase(viewModel, onClose)
+                LessonPhase.Roleplay -> RoleplayPhase(viewModel, onClose)
+                LessonPhase.Reading -> ReadingPhase(viewModel, onClose)
+                LessonPhase.Items -> ItemsPhase(viewModel, onClose)
+                LessonPhase.Done -> DonePhase(viewModel, onClose, onNextLesson, onBackToUnit)
             }
-            LessonPhase.Explain -> ExplainPhase(viewModel, onClose)
-            LessonPhase.Intro -> IntroPhase(viewModel, onClose)
-            LessonPhase.Dialogue -> DialoguePhase(viewModel, onClose)
-            LessonPhase.Roleplay -> RoleplayPhase(viewModel, onClose)
-            LessonPhase.Items -> ItemsPhase(viewModel, onClose)
-            LessonPhase.Done -> DonePhase(viewModel, onClose, onNextLesson, onBackToUnit)
         }
     }
+
+    if (flagging) {
+        FlagDialog(
+            onDismiss = { flagging = false },
+            onSend = { type, text ->
+                viewModel.flag(type, text)
+                flagging = false
+                Toast.makeText(context, "Saved. Share it from Settings > Reported problems.", Toast.LENGTH_LONG).show()
+            }
+        )
+    }
+}
+
+/** Set by [LessonScreen] when the current screen can be reported; [CloseRow] then shows the flag button. */
+internal val LocalOnFlag = staticCompositionLocalOf<(() -> Unit)?> { null }
+
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun FlagDialog(onDismiss: () -> Unit, onSend: (FlagType, String) -> Unit) {
+    var type by remember { mutableStateOf<FlagType?>(null) }
+    var text by remember { mutableStateOf("") }
+    AlertDialog(
+        onDismissRequest = onDismiss,
+        title = { Text("What's wrong?") },
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    FlagType.entries.forEach { t ->
+                        FilterChip(selected = type == t, onClick = { type = t }, label = { Text(t.label) })
+                    }
+                }
+                OutlinedTextField(
+                    value = text,
+                    onValueChange = { text = it },
+                    modifier = Modifier.fillMaxWidth(),
+                    minLines = 2,
+                    label = { Text("Details (optional)") }
+                )
+            }
+        },
+        confirmButton = { TextButton(onClick = { type?.let { onSend(it, text) } }, enabled = type != null) { Text("Save") } },
+        dismissButton = { TextButton(onClick = onDismiss) { Text("Cancel") } }
+    )
 }
 
 @Composable
@@ -119,6 +179,9 @@ internal fun CloseRow(title: String, progress: Float?, onClose: () -> Unit, trai
         }
         if (trailing != null) {
             Text(trailing, style = MaterialTheme.typography.labelLarge, modifier = Modifier.padding(horizontal = 12.dp))
+        }
+        LocalOnFlag.current?.let { flag ->
+            IconButton(onClick = flag) { Icon(Icons.Default.Flag, contentDescription = "Report a problem") }
         }
     }
 }
@@ -295,7 +358,7 @@ private fun ColumnScope.ItemsPhase(viewModel: LessonViewModel, onClose: () -> Un
     if (item is Item.Choice || item is Item.Gap || item is Item.Order || item is Item.Transform || item is Item.Translate || item is Item.Listen) {
         CheckBar(viewModel, item)
     } else if ((item is Item.Match || item is Item.Speak) && result != null) {
-        FeedbackPanel(result, item.explain, onContinue = viewModel::continueNext)
+        FeedbackPanel(result, item.explain, onContinue = viewModel::continueNext, onReport = LocalOnFlag.current)
     }
 
     if (confirmClose) {
@@ -327,9 +390,8 @@ private fun ExerciseView(item: Item, step: Int, vm: LessonViewModel) {
             item, step, vm.ttsLocale, vm.speechTries, vm.speechTry, vm.result,
             onHeard = vm::submitSpeech, onSelfGrade = vm::selfGrade, onSkip = vm::skip
         )
-        is Item.OpenPrompt -> PromptExercise(item, step, vm.ttsLocale, onDone = { vm.finishOpenPrompt() })
-        // Writing arrives in Stage 5.
-        is Item.Write -> ComingSoonExercise(onSkip = vm::skip)
+        is Item.OpenPrompt -> PromptExercise(item, step, vm.ttsLocale, onDone = { vm.finishUnscored() })
+        is Item.Write -> WriteExercise(item, step, vm.draftKey, vm.ttsLocale, onDone = vm::finishUnscored)
     }
 }
 
@@ -381,7 +443,7 @@ private fun CheckBar(viewModel: LessonViewModel, item: Item) {
             ) { Text("Check") }
         }
         AnimatedVisibility(visible = result != null, enter = slideInVertically { it }) {
-            if (result != null) FeedbackPanel(result, item.explain, onContinue = viewModel::continueNext)
+            if (result != null) FeedbackPanel(result, item.explain, onContinue = viewModel::continueNext, onReport = LocalOnFlag.current)
         }
     }
 }

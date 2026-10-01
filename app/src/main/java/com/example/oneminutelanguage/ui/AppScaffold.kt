@@ -32,6 +32,7 @@ import com.example.oneminutelanguage.ui.learn.CourseSelectScreen
 import com.example.oneminutelanguage.ui.learn.DictionaryScreen
 import com.example.oneminutelanguage.ui.learn.LearnScreen
 import com.example.oneminutelanguage.ui.learn.LessonScreen
+import com.example.oneminutelanguage.ui.learn.ResourcesScreen
 import com.example.oneminutelanguage.ui.learn.ReviewScreen
 import com.example.oneminutelanguage.ui.learn.UnitScreen
 
@@ -94,7 +95,8 @@ fun AppScaffold(startAtAddWord: Boolean) {
                 LearnScreen(
                     onChooseCourse = { navController.navigate("course_select") },
                     onUnitClick = { navController.navigate("unit/$it") },
-                    onDictionaryClick = { navController.navigate("dictionary") }
+                    onDictionaryClick = { navController.navigate("dictionary") },
+                    onResourcesClick = { navController.navigate("resources") }
                 )
             }
             composable("course_select") {
@@ -121,7 +123,8 @@ fun AppScaffold(startAtAddWord: Boolean) {
                 PracticeScreen(
                     onQuizClick = { mode -> navController.navigate("quiz?mode=$mode") },
                     onReviewClick = { navController.navigate("review") },
-                    onDrillClick = { navController.navigate("drill/$it") }
+                    onDrillClick = { navController.navigate("drill/$it") },
+                    onResourcesClick = { navController.navigate("resources") }
                 )
             }
             // A drill is a lesson made of generated items; it reuses the lesson player.
@@ -140,6 +143,7 @@ fun AppScaffold(startAtAddWord: Boolean) {
             }
             composable("review") { ReviewScreen(onClose = { navController.popBackStack() }) }
             composable("dictionary") { DictionaryScreen(onBack = { navController.popBackStack() }) }
+            composable("resources") { ResourcesScreen(onBack = { navController.popBackStack() }) }
             composable("add_word") { AddWordScreen(onWordSaved = leave, onBack = leave) }
             composable("settings") {
                 SettingsScreen(

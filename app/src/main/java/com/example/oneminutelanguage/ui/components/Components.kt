@@ -35,6 +35,7 @@ import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -270,7 +271,7 @@ fun HeroCard(
 
 /** Shown under an exercise after "Check". Correct / wrong is spelled out and has an icon, never colour alone. */
 @Composable
-fun FeedbackPanel(result: ItemResult, explain: String?, onContinue: () -> Unit, modifier: Modifier = Modifier) {
+fun FeedbackPanel(result: ItemResult, explain: String?, onContinue: () -> Unit, modifier: Modifier = Modifier, onReport: (() -> Unit)? = null) {
     val scheme = MaterialTheme.colorScheme
     val good = result.correct
     Surface(
@@ -308,6 +309,7 @@ fun FeedbackPanel(result: ItemResult, explain: String?, onContinue: () -> Unit, 
             }
             explain?.let { Text(it, style = MaterialTheme.typography.bodyMedium) }
             Button(onClick = onContinue, modifier = Modifier.fillMaxWidth().padding(top = 4.dp)) { Text("Continue") }
+            onReport?.let { TextButton(onClick = it, modifier = Modifier.fillMaxWidth()) { Text("Report a problem with this item") } }
         }
     }
 }

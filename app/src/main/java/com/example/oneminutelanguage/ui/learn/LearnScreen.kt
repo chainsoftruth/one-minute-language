@@ -20,6 +20,7 @@ import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.Book
 import androidx.compose.material.icons.filled.Flag
 import androidx.compose.material.icons.filled.Forum
+import androidx.compose.material.icons.filled.Public
 import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
@@ -63,6 +64,7 @@ fun LearnScreen(
     onChooseCourse: () -> Unit,
     onUnitClick: (String) -> Unit,
     onDictionaryClick: () -> Unit,
+    onResourcesClick: () -> Unit,
     viewModel: LearnViewModel = viewModel()
 ) {
     when (val state = viewModel.state.collectAsState().value) {
@@ -81,6 +83,7 @@ fun LearnScreen(
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Text("Learn", style = MaterialTheme.typography.headlineSmall, modifier = Modifier.weight(1f))
                         IconButton(onClick = onDictionaryClick) { Icon(Icons.Default.Book, contentDescription = "Dictionary") }
+                        IconButton(onClick = onResourcesClick) { Icon(Icons.Default.Public, contentDescription = "Resources") }
                         AssistChip(
                             onClick = onChooseCourse,
                             label = { Text("${state.course.flag} ${state.course.name} ▾") }

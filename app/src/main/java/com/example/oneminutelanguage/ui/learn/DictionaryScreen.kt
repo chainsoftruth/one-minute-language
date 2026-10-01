@@ -5,6 +5,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
@@ -166,42 +167,51 @@ private fun LevelChip(level: String) {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun WordSheet(entry: LexEntry, ttsLocale: String, canAdd: Boolean, onAdd: () -> Unit, onDismiss: () -> Unit) {
-    val context = LocalContext.current
-    val uri = LocalUriHandler.current
     ModalBottomSheet(onDismissRequest = onDismiss) {
         Column(
             modifier = Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).navigationBarsPadding().padding(horizontal = 24.dp, vertical = 8.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Column(modifier = Modifier.weight(1f)) {
-                    if (entry.hasSingleArticle()) ArticleTag(entry.art.orEmpty())
-                    Text(entry.nl, style = MaterialTheme.typography.displaySmall)
-                }
-                IconButton(onClick = { WordSpeaker.speak(context, entry.display(), ttsLocale) }) {
-                    Icon(Icons.AutoMirrored.Filled.VolumeUp, contentDescription = "Play: ${entry.display()}", tint = MaterialTheme.colorScheme.primary)
-                }
-            }
-            Text(entry.en, style = MaterialTheme.typography.titleLarge)
-            Text(
-                "${entry.pos} · ${entry.lvl}",
-                style = MaterialTheme.typography.labelLarge,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-            entry.formsLine().takeIf { it.isNotEmpty() }?.let { Text(it, style = MaterialTheme.typography.bodyLarge) }
-            entry.prep?.let { Text("Used with: $it", style = MaterialTheme.typography.bodyMedium) }
-            if (entry.ex != null) {
-                Text(entry.ex, style = MaterialTheme.typography.bodyLarge, fontWeight = FontWeight.Bold)
-                entry.exEn?.let { Text(it, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant) }
-            }
-            OutlinedButton(
-                onClick = { uri.openUri("https://woordenlijst.org/zoeken/?q=${Uri.encode(entry.nl)}") },
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Icon(Icons.Default.OpenInBrowser, contentDescription = null)
-                Text("Check on woordenlijst.org", modifier = Modifier.padding(start = 8.dp))
-            }
-            if (canAdd) Button(onClick = onAdd, modifier = Modifier.fillMaxWidth()) { Text("Add to my words") }
+        ) { WordDetails(entry, ttsLocale, canAdd, onAdd) }
+    }
+}
+
+/** Everything about one word: forms, example, speaker, the woordenlijst link and "Add to my words". Shared with the reading view. */
+@Composable
+internal fun ColumnScope.WordDetails(entry: LexEntry, ttsLocale: String, canAdd: Boolean, onAdd: () -> Unit) {
+    val context = LocalContext.current
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Column(modifier = Modifier.weight(1f)) {
+            if (entry.hasSingleArticle()) ArticleTag(entry.art.orEmpty())
+            Text(entry.nl, style = MaterialTheme.typography.displaySmall)
         }
+        IconButton(onClick = { WordSpeaker.speak(context, entry.display(), ttsLocale) }) {
+            Icon(Icons.AutoMirrored.Filled.VolumeUp, contentDescription = "Play: ${entry.display()}", tint = MaterialTheme.colorScheme.primary)
+        }
+    }
+    Text(entry.en, style = MaterialTheme.typography.titleLarge)
+    Text(
+        "${entry.pos} · ${entry.lvl}",
+        style = MaterialTheme.typography.labelLarge,
+        color = MaterialTheme.colorScheme.onSurfaceVariant
+    )
+    entry.formsLine().takeIf { it.isNotEmpty() }?.let { Text(it, style = MaterialTheme.typography.bodyLarge) }
+    entry.prep?.let { Text("Used with: $it", style = MaterialTheme.typography.bodyMedium) }
+    if (entry.ex != null) {
+        Text(entry.ex, style = MaterialTheme.typography.bodyLarge, fontWeight = FontWeight.Bold)
+        entry.exEn?.let { Text(it, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant) }
+    }
+    WoordenlijstButton(entry.nl)
+    if (canAdd) Button(onClick = onAdd, modifier = Modifier.fillMaxWidth()) { Text("Add to my words") }
+}
+
+@Composable
+internal fun WoordenlijstButton(word: String) {
+    val uri = LocalUriHandler.current
+    OutlinedButton(
+        onClick = { uri.openUri("https://woordenlijst.org/zoeken/?q=${Uri.encode(word)}") },
+        modifier = Modifier.fillMaxWidth()
+    ) {
+        Icon(Icons.Default.OpenInBrowser, contentDescription = null)
+        Text("Check on woordenlijst.org", modifier = Modifier.padding(start = 8.dp))
     }
 }

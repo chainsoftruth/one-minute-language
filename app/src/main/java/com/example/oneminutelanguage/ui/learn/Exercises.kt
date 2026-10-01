@@ -245,20 +245,3 @@ fun MatchExercise(item: Item.Match, step: Int, onDone: (mistakes: Int) -> Unit) 
     }
 }
 
-/** Writing tasks arrive in Stage 5. */
-@Composable
-fun ComingSoonExercise(onSkip: () -> Unit) {
-    Card(modifier = Modifier.fillMaxWidth(), shape = MaterialTheme.shapes.large, colors = appCardColors()) {
-        Column(modifier = Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            Text("Coming in a later update", style = MaterialTheme.typography.titleMedium)
-            Text(
-                "Writing exercises are on their way.",
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-            Spacer(Modifier.height(4.dp))
-            TextButton(onClick = onSkip) { Text("Skip") }
-        }
-    }
-}
-

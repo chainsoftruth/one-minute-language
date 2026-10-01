@@ -21,6 +21,12 @@ import com.example.oneminutelanguage.course.gradeSpeech
 import com.example.oneminutelanguage.course.listeningDrill
 import com.example.oneminutelanguage.course.speakingDrill
 import com.example.oneminutelanguage.course.CourseRepository
+import com.example.oneminutelanguage.course.FlagType
+import com.example.oneminutelanguage.course.WordLookup
+import com.example.oneminutelanguage.course.canSendToWidget
+import com.example.oneminutelanguage.course.expectedAnswer
+import com.example.oneminutelanguage.course.flagLine
+import com.example.oneminutelanguage.course.sendToWidget
 import com.example.oneminutelanguage.course.ItemResult
 import com.example.oneminutelanguage.course.Item
 import com.example.oneminutelanguage.course.Lesson
@@ -57,6 +63,9 @@ sealed interface LessonPhase {
 
     /** Speaking lessons with a dialogue: the learner plays speaker B. */
     data object Roleplay : LessonPhase
+
+    /** Reading lessons: the text with tap-to-translate, before the questions. */
+    data object Reading : LessonPhase
     data object Items : LessonPhase
     data object Done : LessonPhase
 }
@@ -65,7 +74,7 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
     /** "listening" or "speaking" for a practice drill (route drill/{kind}); null for a normal lesson. */
     private val drillKind: String? = savedStateHandle["kind"]
     val isDrill = drillKind != null
-    private val lessonId: String = savedStateHandle["lessonId"] ?: "drill.$drillKind"
+    val lessonId: String = savedStateHandle["lessonId"] ?: "drill.$drillKind"
     private val db = DatabaseProvider.getDatabase(application)
 
     var phase by mutableStateOf<LessonPhase>(LessonPhase.Loading); private set
@@ -76,9 +85,14 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
     /** The words of a vocab lesson, for the intro cards. */
     var introEntries by mutableStateOf<List<LexEntry>>(emptyList()); private set
 
+    /** Reading lessons: finds the lexicon entry behind a tapped word. */
+    private var wordLookup: WordLookup? = null
+    val canSend: Boolean = canSendToWidget(application)
+
     private var courseId = ""
     private var introDone = false
     private var dialogueDone = false
+    private var readingDone = false
     /** Generated vocab items -> the words they test, so a wrong answer schedules the right review cards. */
     private var lexOf: Map<Item, List<String>> = emptyMap()
     private lateinit var queue: LessonQueue
@@ -86,6 +100,9 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
     /** Changes every time an item is shown (a re-queued item shows twice), so the views reset their state. */
     var step by mutableIntStateOf(0); private set
     var currentItem by mutableStateOf<Item?>(null); private set
+
+    /** Where the current item sits in the lesson file (-1 outside the exercises); reported with a flag. */
+    private var itemIndex = -1
 
     /** What the learner has picked or typed, not checked yet. A choice is its option index as text. */
     var pending by mutableStateOf<String?>(null)
@@ -126,6 +143,9 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
                 lesson = found.copy(items = built.map { it.item })
             } else {
                 lesson = found
+                if (found.kind == LessonKind.READING && found.text != null) {
+                    wordLookup = WordLookup(CourseRepository.lexicon(application, id).values)
+                }
             }
             if (found.explain.isEmpty()) startItems() else phase = LessonPhase.Explain
         }
@@ -166,6 +186,11 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
             phase = if (l.kind == LessonKind.LISTENING) LessonPhase.Dialogue else LessonPhase.Roleplay
             return
         }
+        if (l.kind == LessonKind.READING && l.text != null && !readingDone) {
+            readingDone = true
+            phase = LessonPhase.Reading
+            return
+        }
         if (l.items.isEmpty()) return finish()
         // Checkpoints (test lessons) give no feedback until the end and no second chance.
         queue = LessonQueue(l.items, requeue = l.kind != LessonKind.TEST)
@@ -177,6 +202,7 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
         val index = queue.currentIndex
         if (index == null) return finish()
         currentItem = lesson!!.items[index]
+        itemIndex = index
         step++
         pending = null
         result = null
@@ -225,9 +251,9 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
         record(gradeSelf(good, item.nl))
     }
 
-    /** An open speaking prompt is finished, not graded: it counts as done and the next item shows. */
-    fun finishOpenPrompt() {
-        if (currentItem !is Item.OpenPrompt) return
+    /** An open speaking prompt or a writing task is finished, not graded: it counts as done and the next item shows. */
+    fun finishUnscored() {
+        if (currentItem !is Item.OpenPrompt && currentItem !is Item.Write) return
         queue.answer(true)
         progressDone = queue.progressDone
         progressTotal = queue.progressTotal
@@ -245,6 +271,25 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
     }
 
     fun continueNext() = showNext()
+
+    /** One draft per writing task: the lesson id, plus the item position when a lesson has several tasks. */
+    val draftKey: String get() = if ((lesson?.items?.count { it is Item.Write } ?: 0) > 1) "$lessonId#$itemIndex" else lessonId
+
+    fun lookup(token: String) = wordLookup?.lookup(token).orEmpty()
+
+    /** Returns (added, already there), like the dictionary. */
+    suspend fun addToWords(entry: LexEntry) = sendToWidget(getApplication(), listOf(entry))
+
+    /**
+     * Saves a reported problem for Settings -> Reported problems. Items of vocab lessons and drills are made on the
+     * spot, so their position means nothing later: the expected answer goes into the text instead.
+     */
+    fun flag(type: FlagType, text: String) {
+        val item = currentItem.takeIf { phase == LessonPhase.Items }
+        val generated = isDrill || lesson?.kind == LessonKind.VOCAB
+        val detail = if (generated && item != null) "[${expectedAnswer(item)}] " else ""
+        CoursePrefs.addFlag(getApplication(), flagLine(lessonId, if (item == null) -1 else itemIndex, type, detail + text))
+    }
 
     /** Skips an item (speaking in a quiet place, or an item type that arrives in a later stage); it counts neither way. */
     fun skip() {

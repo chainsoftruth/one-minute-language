@@ -11,6 +11,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Headphones
 import androidx.compose.material.icons.filled.Mic
+import androidx.compose.material.icons.filled.Public
 import androidx.compose.material.icons.filled.Quiz
 import androidx.compose.material.icons.filled.Replay
 import androidx.compose.material.icons.filled.Spellcheck
@@ -52,6 +53,7 @@ fun PracticeScreen(
     onQuizClick: (mode: String) -> Unit,
     onReviewClick: () -> Unit,
     onDrillClick: (kind: String) -> Unit,
+    onResourcesClick: () -> Unit,
     viewModel: PracticeViewModel = viewModel()
 ) {
     val isDutch = rememberIsDutchTarget()
@@ -108,5 +110,12 @@ fun PracticeScreen(
                 onClick = { onQuizClick(QuizMode.ARTICLE.name) }
             )
         }
+
+        ActionCard(
+            icon = Icons.Default.Public,
+            title = "Resources",
+            subtitle = "Free sites for reading, listening and exams",
+            onClick = onResourcesClick
+        )
     }
 }
