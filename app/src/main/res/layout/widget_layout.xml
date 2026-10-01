@@ -24,30 +24,30 @@
                 android:id="@+id/primary_text_a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text=""
+                android:text="Het woord"
                 android:textColor="#000000"
                 android:textSize="28sp"
                 android:gravity="center"
                 android:textAlignment="center"
                 android:maxLines="2"
-                android:ellipsize="end" />
+                android:ellipsize="end"
+                android:breakStrategy="simple"
+                android:hyphenationFrequency="none" />
 
             <TextView
                 android:id="@+id/secondary_text_a"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
-                android:text=""
+                android:text="The word"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:singleLine="true"
-                android:ellipsize="marquee"
-                android:marqueeRepeatLimit="marquee_forever"
-                android:scrollHorizontally="true"
-                android:focusable="true"
-                android:focusableInTouchMode="true" />
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:breakStrategy="simple"
+                android:hyphenationFrequency="none" />
         </LinearLayout>
 
         <LinearLayout
@@ -66,7 +66,9 @@
                 android:gravity="center"
                 android:textAlignment="center"
                 android:maxLines="2"
-                android:ellipsize="end" />
+                android:ellipsize="end"
+                android:breakStrategy="simple"
+                android:hyphenationFrequency="none" />
 
             <TextView
                 android:id="@+id/secondary_text_b"
@@ -78,12 +80,10 @@
                 android:textSize="18sp"
                 android:gravity="center"
                 android:textAlignment="center"
-                android:singleLine="true"
-                android:ellipsize="marquee"
-                android:marqueeRepeatLimit="marquee_forever"
-                android:scrollHorizontally="true"
-                android:focusable="true"
-                android:focusableInTouchMode="true" />
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:breakStrategy="simple"
+                android:hyphenationFrequency="none" />
         </LinearLayout>
     </ViewFlipper>
 

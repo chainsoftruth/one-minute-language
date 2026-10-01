@@ -11,7 +11,7 @@ A home-screen widget that quietly teaches you one word at a time — every time 
 ![Min SDK](https://img.shields.io/badge/minSdk-24-blue)
 ![Jetpack Compose](https://img.shields.io/badge/UI-Jetpack%20Compose-4285F4?logo=jetpackcompose&logoColor=white)
 ![ML Kit](https://img.shields.io/badge/translation-ML%20Kit-EA4335?logo=googletranslate&logoColor=white)
-![Version](https://img.shields.io/badge/version-1.2-success)
+![Version](https://img.shields.io/badge/version-1.5-success)
 
 </div>
 
@@ -24,13 +24,42 @@ No lessons, no streaks, no notifications to dismiss. Just a word, sitting quietl
 | | |
 |---|---|
 | 🖼️ **Widget-first** | Your learning language shown large, its translation just below — refreshes instantly on every screen unlock |
+| 🎯 **Focus mode** | The widget repeats a set of 20 words until you know them; each word you get right in a quiz makes room for a new one |
 | 🔊 **Tap to hear it** | Tap the widget to hear the word spoken aloud with on-device text-to-speech, fully offline |
-| 🧪 **Check Progress quiz** | Pick 15 / 30 / 60 / all words and test yourself, multiple-choice, with a repeat-audio button and an honest "I don't know" |
-| ⚡ **Zero-friction adding** | Tap **+** on the widget to add a new word straight from your home screen — translated automatically, editable before you save |
+| 🧪 **Check Progress quiz** | Three modes (meaning, reverse, and de / het for Dutch nouns), 15 / 30 / 60 / all words, with a repeat-audio button and an honest "I don't know" |
+| ⚡ **Zero-friction adding** | Tap **+** on the widget to add a new word straight from your home screen — in either direction, translated automatically, editable before you save |
 | 🧠 **On-device translation** | Powered by Google ML Kit — no network round-trip, works offline once models are downloaded |
 | 🗂️ **Full word database** | Search, review, delete, and toggle any word on or off for the widget rotation |
 | 🔁 **Instant language swap** | Flip your language pair in Settings — reverse pairs swap instantly, no re-translation or model download needed |
-| 📚 **Starter pack** | 623 hand-checked starter words across all supported languages, one tap to import, one tap to cleanly remove later |
+| 📚 **Starter pack** | 679 hand-checked starter words for English–Dutch (583–590 for the other languages), one tap to import, one tap to cleanly remove later |
+
+## 🆕 What's new in v1.5
+
+"Actually learn": the widget stops being a random word generator and starts drilling the words you don't know yet.
+
+### Highlights
+
+- 🎯 **Focus mode** — instead of a random pick from ~680 words (each one back roughly once every 680 unlocks), the widget rotates through a set of 20. Answer a word correctly in any quiz and it leaves the set; the next word takes its place. Your own added words come first. On by default; switch it off in Settings to get the old random pick.
+
+- 🔄 **Reverse quiz** — see the word in your native language and pick the one in the language you're learning. The correct answer is spoken after you answer.
+
+- 🇳🇱 **de / het quiz** — for Dutch: see the noun without its article (*ziekenhuis*) and pick **de** or **het**. Uses the ~370 nouns in your list, no extra data.
+
+- ⇄ **Add words in either direction** — heard a Dutch word? Flip the Add Word screen and type it Dutch-first to get the translation. Duplicates are caught on both sides.
+
+- 🖼️ **Polish** — a proper monochrome status-bar icon for the widget service, and a preview and description in the widget picker (Android 12+).
+
+### Upgrade notes
+
+- Install over your current version: the database upgrades automatically (adds one column for "learned" words) and keeps every word and its on/off switch.
+- Changing the language pair re-imports the starter words, so their "learned" state starts over; your own words keep it.
+
+## 🆕 What's new in v1.3 and v1.4
+
+- 👁️ **The widget always fits** — text size is computed per word and widget size, so long words shrink instead of breaking mid-word; hints like *(in het ziekenhuis)* stay on the native side only.
+- 🔁 **Steadier widget** — the word only changes on unlock (not on resize or settings changes), and the widget keeps refreshing after a reboot or app update.
+- 📚 **Word base v2** — one keyed word file for all languages, synonym collisions fixed (no more "big" vs "large" both being *groot* in the quiz), ~90 high-frequency Dutch words added (*zijn, hebben, wat, waarom, misschien…*), US units replaced by euro / kilometer / liter / gram.
+- ✏️ **Edit and undo** — tap a word in the Database screen to edit it; deleting shows an Undo.
 
 ## 🆕 What's new in v1.2
 
@@ -38,7 +67,7 @@ Two focused fixes: translations you can trust, and the last word on what actuall
 
 ### Highlights
 
-- 🗂️ **Default words now translate from hand-written files, not the on-device translator** — all 623 starter words for every supported language (Dutch, Ukrainian, French, German, Italian, Spanish, Portuguese, Polish, Romanian) are pulled from curated, hand-translated word lists at import time instead of Google ML Kit. No more awkward machine-translated phrasing in the starter pack — quality no longer depends on how well ML Kit handles a given language pair.
+- 🗂️ **Default words now translate from hand-written files, not the on-device translator** — all starter words for every supported language (Dutch, Ukrainian, French, German, Italian, Spanish, Portuguese, Polish, Romanian) are pulled from curated, hand-translated word lists at import time instead of Google ML Kit. No more awkward machine-translated phrasing in the starter pack — quality no longer depends on how well ML Kit handles a given language pair.
 
 - ✏️ **Adjust the translation before you save** — adding a new word still translates it automatically, but the suggested translation now lands in an editable field instead of plain text, so you can correct it before it's saved to your database.
 
@@ -53,7 +82,7 @@ Smarter translations, a pronunciation feature, and your first progress quiz — 
 
 ### Highlights
 
-- 🎯 **Massively improved translation quality** — all 623 starter words rewritten as self-disambiguating phrases: verbs as *to teach*, nouns with articles (*the house* → *het huis*, so you learn noun gender for free), and ~50 ambiguous words clarified (*light (not heavy)*, *May (the month)*, *the mouse (animal)*). Low-resource languages like Ukrainian benefit the most.
+- 🎯 **Massively improved translation quality** — all starter words rewritten as self-disambiguating phrases: verbs as *to teach*, nouns with articles (*the house* → *het huis*, so you learn noun gender for free), and ~50 ambiguous words clarified (*light (not heavy)*, *May (the month)*, *the mouse (animal)*). Low-resource languages like Ukrainian benefit the most.
 
 - 🔊 **Tap the widget to hear the word** — on-device text-to-speech pronounces the currently shown word in the language you're learning. Works offline with installed voice packs.
 
@@ -81,7 +110,7 @@ Smarter translations, a pronunciation feature, and your first progress quiz — 
 
 English · German · French · Italian · Spanish · Polish · Romanian · Portuguese · Dutch · Ukrainian
 
-All 623 starter words are hand-translated per language (not machine-translated) so the default list is accurate from the very first import.
+All starter words are hand-translated per language (not machine-translated) so the default list is accurate from the very first import. English and Dutch have 679 words; the other languages have 583–590, because the newest high-frequency words ship in Dutch first.
 
 ## 🛠️ Tech stack
 

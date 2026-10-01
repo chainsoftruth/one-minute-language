@@ -2,6 +2,7 @@ package com.example.oneminutelanguage.ui
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -9,6 +10,7 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
@@ -57,7 +59,7 @@ fun QuizScreen(
                 Button(onClick = onDone) { Text("Back") }
             }
 
-            is QuizPhase.Setup -> SetupPhase(availableWords = phase.availableWords, viewModel = viewModel)
+            is QuizPhase.Setup -> SetupPhase(phase = phase, viewModel = viewModel)
 
             is QuizPhase.Running -> RunningPhase(viewModel = viewModel)
 
@@ -67,7 +69,35 @@ fun QuizScreen(
 }
 
 @Composable
-private fun SetupPhase(availableWords: Int, viewModel: QuizViewModel) {
+private fun SetupPhase(phase: QuizPhase.Setup, viewModel: QuizViewModel) {
+    val modes = buildList {
+        add(QuizMode.MEANING to "Meaning")
+        add(QuizMode.REVERSE to "Reverse")
+        if (phase.articleWords != null) add(QuizMode.ARTICLE to "de / het")
+    }
+    Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        modes.forEach { (mode, label) ->
+            FilterChip(
+                selected = viewModel.mode == mode,
+                onClick = { viewModel.selectMode(mode) },
+                label = { Text(label) }
+            )
+        }
+    }
+    Text(
+        text = when (viewModel.mode) {
+            QuizMode.MEANING -> "See the word, pick its meaning"
+            QuizMode.REVERSE -> "See the meaning, pick the word"
+            QuizMode.ARTICLE -> "Pick the article for each noun"
+        },
+        style = MaterialTheme.typography.bodySmall,
+        color = MaterialTheme.colorScheme.onSurfaceVariant
+    )
+
+    Spacer(modifier = Modifier.height(24.dp))
+
+    val availableWords = if (viewModel.mode == QuizMode.ARTICLE) phase.articleWords ?: 0 else phase.availableWords
+
     Text(
         text = "How many words to check?",
         style = MaterialTheme.typography.titleMedium
@@ -94,6 +124,7 @@ private fun SetupPhase(availableWords: Int, viewModel: QuizViewModel) {
 
     Button(
         onClick = { viewModel.startQuiz(null) },
+        enabled = availableWords > 0,
         modifier = Modifier
             .fillMaxWidth(0.8f)
             .padding(vertical = 6.dp)
@@ -107,8 +138,10 @@ private fun RunningPhase(viewModel: QuizViewModel) {
     val question = viewModel.questions[viewModel.currentIndex]
     val selected = viewModel.selectedOption
 
+    // Reverse and de / het speak the answer after it's given (see QuizViewModel.selectAnswer).
+    val speaksPrompt = viewModel.mode == QuizMode.MEANING
     LaunchedEffect(viewModel.currentIndex) {
-        viewModel.speakCurrentWord()
+        if (speaksPrompt) viewModel.speakCurrentWord()
     }
 
     Text(
@@ -127,7 +160,7 @@ private fun RunningPhase(viewModel: QuizViewModel) {
 
     Spacer(modifier = Modifier.height(8.dp))
 
-    TextButton(onClick = viewModel::speakCurrentWord) {
+    TextButton(onClick = viewModel::speakCurrentWord, enabled = speaksPrompt || selected != null) {
         Text("🔊 Repeat")
     }
 

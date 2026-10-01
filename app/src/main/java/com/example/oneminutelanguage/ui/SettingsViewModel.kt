@@ -12,6 +12,7 @@ import com.example.oneminutelanguage.translation.DefaultWordsImporter
 import com.example.oneminutelanguage.translation.DefaultWordsPrefs
 import com.example.oneminutelanguage.translation.LanguageSettingsStore
 import com.example.oneminutelanguage.translation.TranslationHelper
+import com.example.oneminutelanguage.widget.WidgetPrefs
 import com.example.oneminutelanguage.widget.WidgetUpdater
 import kotlinx.coroutines.launch
 
@@ -36,6 +37,14 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
 
     var showDisableDefaultWordsConfirmation by mutableStateOf(false)
         private set
+
+    var focusMode by mutableStateOf(WidgetPrefs.isFocusMode(application))
+        private set
+
+    fun onToggleFocusMode(enabled: Boolean) {
+        WidgetPrefs.setFocusMode(getApplication(), enabled)
+        focusMode = enabled
+    }
 
     fun selectSourceLanguage(code: String) {
         sourceLanguage = code
@@ -88,47 +97,55 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
             try {
                 applyState = SettingsApplyState.DownloadingModels
 
-                if (previousSource != newSource) {
-                    sourceMigrator = TranslationHelper(
-                        sourceLanguage = previousSource,
-                        targetLanguage = newSource
-                    )
-                    sourceMigrator.ensureModelDownloaded()
-                }
+                // Starter words are re-imported from words.json below; only the user's own words go through ML Kit.
+                val userWords = wordDao.getAllWordsOnce().filterNot { it.isDefault }
 
-                if (previousTarget != newTarget) {
-                    targetMigrator = TranslationHelper(
-                        sourceLanguage = previousTarget,
-                        targetLanguage = newTarget
-                    )
-                    targetMigrator.ensureModelDownloaded()
-                }
-
-                if (sourceMigrator != null || targetMigrator != null) {
-                    val words = wordDao.getAllWordsOnce()
-
-                    if (words.isNotEmpty()) {
-                        val updatedWords = words.mapIndexed { index, word ->
-                            applyState = SettingsApplyState.Translating(index + 1, words.size)
-
-                            var updated = word
-                            sourceMigrator?.let {
-                                updated = updated.copy(language1Word = it.translate(word.language1Word))
-                            }
-                            targetMigrator?.let {
-                                updated = updated.copy(language2Word = it.translate(word.language2Word))
-                            }
-                            updated
-                        }
-
-                        database.withTransaction {
-                            updatedWords.forEach { wordDao.updateWord(it) }
-                        }
+                if (userWords.isNotEmpty()) {
+                    if (previousSource != newSource) {
+                        sourceMigrator = TranslationHelper(
+                            sourceLanguage = previousSource,
+                            targetLanguage = newSource
+                        )
+                        sourceMigrator.ensureModelDownloaded()
                     }
+
+                    // The new target comes from what the user typed (language1Word), not from the old translation.
+                    if (previousTarget != newTarget && previousSource != newTarget) {
+                        targetMigrator = TranslationHelper(
+                            sourceLanguage = previousSource,
+                            targetLanguage = newTarget
+                        )
+                        targetMigrator.ensureModelDownloaded()
+                    }
+                }
+
+                val updatedWords = userWords.mapIndexed { index, word ->
+                    applyState = SettingsApplyState.Translating(index + 1, userWords.size)
+
+                    word.copy(
+                        language1Word = sourceMigrator?.translate(word.language1Word) ?: word.language1Word,
+                        language2Word = if (previousTarget == newTarget) {
+                            word.language2Word
+                        } else {
+                            targetMigrator?.translate(word.language1Word) ?: word.language1Word
+                        }
+                    )
+                }
+
+                database.withTransaction {
+                    wordDao.deleteAllDefaultWords()
+                    updatedWords.forEach { wordDao.updateWord(it) }
                 }
 
                 LanguageSettingsStore.setSourceLanguage(context, newSource)
                 LanguageSettingsStore.setTargetLanguage(context, newTarget)
+
+                if (DefaultWordsPrefs.isEnabled(context)) {
+                    DefaultWordsImporter.importDefaultWords(context) { current, total ->
+                        defaultWordsState = DefaultWordsState.Importing(current, total)
+                    }
+                    defaultWordsState = DefaultWordsState.Done
+                }
 
                 WidgetUpdater.refreshWidget(context)
 

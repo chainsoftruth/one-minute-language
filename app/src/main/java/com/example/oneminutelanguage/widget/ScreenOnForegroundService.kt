@@ -26,7 +26,7 @@ class ScreenOnForegroundService : Service() {
         override fun onReceive(context: Context, intent: Intent) {
             if (intent.action == Intent.ACTION_SCREEN_ON) {
                 serviceScope.launch {
-                    WidgetUpdater.refreshWidget(applicationContext)
+                    WidgetUpdater.refreshWidget(applicationContext, advance = true)
                 }
             }
         }
@@ -75,7 +75,7 @@ class ScreenOnForegroundService : Service() {
         return NotificationCompat.Builder(this, CHANNEL_ID)
             .setContentTitle("OneMinute Language")
             .setContentText("Watching for screen-on to refresh your widget")
-            .setSmallIcon(R.mipmap.ic_launcher)
+            .setSmallIcon(R.drawable.ic_stat_translate)
             .setPriority(NotificationCompat.PRIORITY_MIN)
             .setOngoing(true)
             .setSilent(true)

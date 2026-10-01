@@ -17,5 +17,8 @@ data class WordEntity(
     val isDefault: Boolean = false,
 
     @ColumnInfo(defaultValue = "1")
-    val isEnabled: Boolean = true
+    val isEnabled: Boolean = true,
+
+    /** First correct quiz answer; set = the word has left the widget's focus set. */
+    val learnedAt: Long? = null
 )

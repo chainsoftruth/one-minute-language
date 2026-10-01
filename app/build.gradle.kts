@@ -33,6 +33,8 @@ android {
     buildFeatures {
         compose = true
     }
+    // WordAssetsTest reads words.json from disk; without this a data-only change leaves the test UP-TO-DATE.
+    testOptions.unitTests.all { it.inputs.dir("src/main/assets") }
 }
 
 dependencies {
@@ -60,4 +62,8 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.test.manifest)
     debugImplementation(libs.androidx.compose.ui.tooling)
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.2")
+}
+ksp {
+    // Room writes each schema version here; keep the JSON in git for migration tests.
+    arg("room.schemaLocation", "$projectDir/schemas")
 }

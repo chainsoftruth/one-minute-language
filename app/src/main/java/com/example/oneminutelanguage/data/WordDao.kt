@@ -27,6 +27,9 @@ interface WordDao {
     @Query("UPDATE words SET isEnabled = 0 WHERE id IN (:ids)")
     suspend fun disableWords(ids: List<Long>)
 
+    @Query("UPDATE words SET learnedAt = :time WHERE id = :id AND learnedAt IS NULL")
+    suspend fun markLearned(id: Long, time: Long)
+
     @Query("SELECT * FROM words ORDER BY dateAdded DESC")
     fun getAllWords(): Flow<List<WordEntity>>
 
@@ -60,8 +63,12 @@ interface WordDao {
     @Query("UPDATE words SET language1Word = language2Word, language2Word = language1Word")
     suspend fun swapLanguageColumns()
 
-    @Query("SELECT EXISTS(SELECT 1 FROM words WHERE LOWER(language1Word) = LOWER(:word))")
-    suspend fun wordExists(word: String): Boolean
+    @Query(
+        "SELECT * FROM words " +
+            "WHERE LOWER(language1Word) = LOWER(:language1Word) OR LOWER(language2Word) = LOWER(:language2Word) " +
+            "LIMIT 1"
+    )
+    suspend fun findDuplicate(language1Word: String, language2Word: String): WordEntity?
 
     @Query("SELECT * FROM words WHERE LOWER(language1Word) = LOWER(:word) LIMIT 1")
     suspend fun findByLanguage1Word(word: String): WordEntity?

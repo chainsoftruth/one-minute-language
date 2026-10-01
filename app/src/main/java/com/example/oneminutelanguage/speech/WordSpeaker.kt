@@ -2,6 +2,7 @@ package com.example.oneminutelanguage.speech
 
 import android.content.Context
 import android.speech.tts.TextToSpeech
+import com.example.oneminutelanguage.translation.withoutHints
 import java.util.Locale
 
 object WordSpeaker {
@@ -14,11 +15,9 @@ object WordSpeaker {
     private var pendingText: String? = null
     private var pendingLocale: Locale? = null
 
-    private val parenthetical = Regex("""\s*\([^)]*\)""")
-
     @Synchronized
     fun speak(context: Context, text: String, languageCode: String) {
-        val clean = parenthetical.replace(text, "").trim()
+        val clean = text.withoutHints()
         if (clean.isEmpty()) return
         val locale = Locale.forLanguageTag(languageCode)
 

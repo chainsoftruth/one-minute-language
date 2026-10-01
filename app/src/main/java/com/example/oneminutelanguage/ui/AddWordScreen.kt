@@ -16,6 +16,7 @@ import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
@@ -54,12 +55,18 @@ fun AddWordScreen(
             style = MaterialTheme.typography.headlineSmall
         )
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(8.dp))
+
+        TextButton(onClick = viewModel::toggleDirection) {
+            Text("⇄ ${viewModel.inputLanguageName} → ${viewModel.outputLanguageName}")
+        }
+
+        Spacer(modifier = Modifier.height(8.dp))
 
         OutlinedTextField(
             value = inputText,
             onValueChange = { inputText = it },
-            label = { Text("Word (${viewModel.sourceLanguageName})") },
+            label = { Text("Word (${viewModel.inputLanguageName})") },
             modifier = Modifier.fillMaxWidth()
         )
 
@@ -115,7 +122,7 @@ fun AddWordScreen(
                 OutlinedTextField(
                     value = editedTranslation,
                     onValueChange = { editedTranslation = it },
-                    label = { Text("Translation (${viewModel.targetLanguageName})") },
+                    label = { Text("Translation (${viewModel.outputLanguageName})") },
                     modifier = Modifier.fillMaxWidth()
                 )
             }

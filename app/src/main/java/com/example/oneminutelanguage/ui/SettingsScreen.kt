@@ -36,6 +36,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.oneminutelanguage.translation.SupportedLanguages
+import com.example.oneminutelanguage.widget.FOCUS_SET_SIZE
 
 @Composable
 fun SettingsScreen(
@@ -142,6 +143,36 @@ fun SettingsScreen(
         }
 
         Spacer(modifier = Modifier.height(24.dp))
+        HorizontalDivider()
+        Spacer(modifier = Modifier.height(16.dp))
+
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    text = "Focus mode",
+                    style = MaterialTheme.typography.labelLarge
+                )
+                Text(
+                    text = "The widget repeats a set of $FOCUS_SET_SIZE words. A word you answer correctly " +
+                        "in a quiz makes room for the next one. Off shows a random word each time.",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            }
+
+            Spacer(modifier = Modifier.width(12.dp))
+
+            Switch(
+                checked = viewModel.focusMode,
+                onCheckedChange = viewModel::onToggleFocusMode
+            )
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
         HorizontalDivider()
         Spacer(modifier = Modifier.height(16.dp))
 

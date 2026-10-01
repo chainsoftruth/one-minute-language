@@ -20,24 +20,42 @@ class AddWordViewModel(application: Application) : AndroidViewModel(application)
         targetLanguage = targetLanguageCode
     )
 
-    val sourceLanguageName: String = SupportedLanguages.displayNameFor(sourceLanguageCode)
-    val targetLanguageName: String = SupportedLanguages.displayNameFor(targetLanguageCode)
+    // For a word you heard: type it in the learning language, get the native translation.
+    private val reverseTranslationHelper = TranslationHelper(
+        sourceLanguage = targetLanguageCode,
+        targetLanguage = sourceLanguageCode
+    )
+
+    private val sourceName = SupportedLanguages.displayNameFor(sourceLanguageCode)
+    private val targetName = SupportedLanguages.displayNameFor(targetLanguageCode)
 
     private val wordDao = DatabaseProvider.getDatabase(application).wordDao()
+
+    var targetFirst by mutableStateOf(false)
+        private set
+
+    val inputLanguageName: String get() = if (targetFirst) targetName else sourceName
+    val outputLanguageName: String get() = if (targetFirst) sourceName else targetName
 
     var translationState by mutableStateOf<TranslationState>(TranslationState.Idle)
         private set
 
+    fun toggleDirection() {
+        targetFirst = !targetFirst
+        translationState = TranslationState.Idle
+    }
+
     fun translateWord(input: String) {
         if (input.isBlank()) return
+        val helper = if (targetFirst) reverseTranslationHelper else translationHelper
 
         viewModelScope.launch {
             try {
                 translationState = TranslationState.DownloadingModel
-                translationHelper.ensureModelDownloaded()
+                helper.ensureModelDownloaded()
 
                 translationState = TranslationState.Translating
-                val result = translationHelper.translate(input)
+                val result = helper.translate(input)
 
                 translationState = TranslationState.Success(result)
             } catch (e: Exception) {
@@ -52,17 +70,22 @@ class AddWordViewModel(application: Application) : AndroidViewModel(application)
 
         val capitalizedOriginal = originalWord.trim().replaceFirstChar { it.titlecase() }
         val capitalizedTranslation = translatedWord.trim().replaceFirstChar { it.titlecase() }
+        val language1Word = if (targetFirst) capitalizedTranslation else capitalizedOriginal
+        val language2Word = if (targetFirst) capitalizedOriginal else capitalizedTranslation
 
         viewModelScope.launch {
-            if (wordDao.wordExists(capitalizedOriginal)) {
-                translationState = TranslationState.Error("\"$capitalizedOriginal\" is already in your list.")
+            val duplicate = wordDao.findDuplicate(language1Word, language2Word)
+            if (duplicate != null) {
+                translationState = TranslationState.Error(
+                    "\"${duplicate.language2Word} – ${duplicate.language1Word}\" is already in your list."
+                )
                 return@launch
             }
 
             wordDao.insertWord(
                 WordEntity(
-                    language1Word = capitalizedOriginal,
-                    language2Word = capitalizedTranslation,
+                    language1Word = language1Word,
+                    language2Word = language2Word,
                     dateAdded = System.currentTimeMillis()
                 )
             )
@@ -76,5 +99,6 @@ class AddWordViewModel(application: Application) : AndroidViewModel(application)
     override fun onCleared() {
         super.onCleared()
         translationHelper.close()
+        reverseTranslationHelper.close()
     }
 }

@@ -37,6 +37,23 @@ class DatabaseViewModel(application: Application) : AndroidViewModel(application
         }
     }
 
+    /** Undo for [deleteWord]: re-inserts the entity with its original id. */
+    fun restoreWord(word: WordEntity) {
+        viewModelScope.launch {
+            wordDao.insertWord(word)
+
+            WidgetUpdater.refreshWidget(getApplication())
+        }
+    }
+
+    fun updateWord(word: WordEntity) {
+        viewModelScope.launch {
+            wordDao.updateWord(word)
+
+            WidgetUpdater.refreshWidget(getApplication())
+        }
+    }
+
     fun setWordEnabled(word: WordEntity, enabled: Boolean) {
         viewModelScope.launch {
             wordDao.setWordEnabled(word.id, enabled)

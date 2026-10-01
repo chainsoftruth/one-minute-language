@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">OneMinute Language</string>
+    <string name="widget_description">A new word every time you unlock your phone</string>
 </resources>
