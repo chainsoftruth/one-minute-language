@@ -32,6 +32,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.VolumeUp
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Flag
 import androidx.compose.material.icons.filled.Lightbulb
@@ -75,6 +76,9 @@ import com.example.oneminutelanguage.course.Block
 import com.example.oneminutelanguage.course.FlagType
 import com.example.oneminutelanguage.course.Item
 import com.example.oneminutelanguage.course.LexEntry
+import com.example.oneminutelanguage.course.PLACEMENT_PASS
+import com.example.oneminutelanguage.course.PLACEMENT_PER_LEVEL
+import com.example.oneminutelanguage.course.PlacementResult
 import com.example.oneminutelanguage.course.display
 import com.example.oneminutelanguage.course.formsLine
 import com.example.oneminutelanguage.course.Source
@@ -94,9 +98,9 @@ fun LessonScreen(
     val context = LocalContext.current
     var flagging by remember { mutableStateOf(false) }
     val phase = viewModel.phase
-    // The flag button is on every screen of a lesson except loading, failure and the result.
+    // The flag button is on every screen of a lesson except loading and the result (a lesson that failed to load can be reported too).
     val onFlag: (() -> Unit)? =
-        if (phase == LessonPhase.Loading || phase == LessonPhase.Done || phase is LessonPhase.Failed) null else { { flagging = true } }
+        if (phase == LessonPhase.Loading || phase == LessonPhase.Done) null else { { flagging = true } }
 
     CompositionLocalProvider(LocalOnFlag provides onFlag) {
         Column(
@@ -399,6 +403,7 @@ private fun ExerciseView(item: Item, step: Int, vm: LessonViewModel) {
 
 @Composable
 private fun DonePhase(viewModel: LessonViewModel, onClose: () -> Unit, onNextLesson: (String) -> Unit, onBackToUnit: (String) -> Unit) {
+    viewModel.placement?.let { return PlacementDone(viewModel, it, onClose) }
     Column(
         modifier = Modifier.fillMaxSize().padding(24.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -442,6 +447,42 @@ private fun DonePhase(viewModel: LessonViewModel, onClose: () -> Unit, onNextLes
             Button(onClick = onClose, modifier = Modifier.fillMaxWidth()) { Text("Done") }
         } else {
             OutlinedButton(onClick = { onBackToUnit(viewModel.unitId) }, modifier = Modifier.fillMaxWidth()) { Text("Back to unit") }
+        }
+    }
+}
+
+/** Placement result: points per level (✓ / ✗ next to the number, never colour alone) and where to start. */
+@Composable
+private fun PlacementDone(viewModel: LessonViewModel, result: PlacementResult, onClose: () -> Unit) {
+    Column(
+        modifier = Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text("Your placement", style = MaterialTheme.typography.headlineSmall)
+        Spacer(Modifier.height(16.dp))
+        result.scores.forEach { (level, points) ->
+            val passed = points >= PLACEMENT_PASS
+            Row(modifier = Modifier.fillMaxWidth().padding(vertical = 6.dp), verticalAlignment = Alignment.CenterVertically) {
+                Icon(if (passed) Icons.Default.Check else Icons.Default.Close, contentDescription = if (passed) "Passed" else "Not passed")
+                Text(level, style = MaterialTheme.typography.titleMedium, modifier = Modifier.weight(1f).padding(start = 12.dp))
+                Text("$points / $PLACEMENT_PER_LEVEL", style = MaterialTheme.typography.titleMedium)
+            }
+        }
+        Spacer(Modifier.height(16.dp))
+        Text(
+            if (result.start == "A1") "We suggest you start at the beginning of the course."
+            else "We suggest you start at ${result.start}. The earlier lessons will be marked as skipped; you can still open them.",
+            style = MaterialTheme.typography.bodyLarge,
+            textAlign = TextAlign.Center
+        )
+        Spacer(Modifier.height(24.dp))
+        if (result.start != "A1") {
+            Button(onClick = { viewModel.startPlacementHere(onClose) }, modifier = Modifier.fillMaxWidth()) { Text("Start at ${result.start}") }
+            Spacer(Modifier.height(8.dp))
+        }
+        OutlinedButton(onClick = onClose, modifier = Modifier.fillMaxWidth()) {
+            Text(if (result.start == "A1") "Start the course" else "Start from the beginning")
         }
     }
 }

@@ -109,6 +109,7 @@ fun DictionaryScreen(onBack: () -> Unit, viewModel: DictionaryViewModel = viewMo
             }
             when {
                 viewModel.loading -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
+                viewModel.failed -> Text("Something's wrong with the course files, so the dictionary can't load.", modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.bodyLarge)
                 results.isEmpty() -> Text("No words found.", modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.bodyLarge)
                 else -> LazyColumn(modifier = Modifier.fillMaxSize()) {
                     items(results, key = { it.id }) { entry ->

@@ -46,6 +46,7 @@ import com.example.oneminutelanguage.course.RESOURCE_SKILLS
 import com.example.oneminutelanguage.course.Resource
 import com.example.oneminutelanguage.course.CourseRepository
 import com.example.oneminutelanguage.course.resourcesFor
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
 
 class ResourcesViewModel(application: Application) : AndroidViewModel(application) {
@@ -54,7 +55,13 @@ class ResourcesViewModel(application: Application) : AndroidViewModel(applicatio
     init {
         viewModelScope.launch {
             // Like the dictionary, the hub is reachable before a course is picked: default to Dutch.
-            resources = CourseRepository.resources(application, CoursePrefs.selectedCourse(application) ?: "nl")
+            resources = try {
+                CourseRepository.resources(application, CoursePrefs.selectedCourse(application) ?: "nl")
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                emptyList() // the screen says the list could not be loaded
+            }
         }
     }
 }
@@ -80,6 +87,10 @@ fun ResourcesScreen(onBack: () -> Unit, viewModel: ResourcesViewModel = viewMode
         val all = viewModel.resources
         if (all == null) {
             Box(Modifier.fillMaxSize().padding(padding), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
+            return@Scaffold
+        }
+        if (all.isEmpty()) {
+            Text("The resources list could not be loaded.", modifier = Modifier.padding(padding).padding(16.dp), style = MaterialTheme.typography.bodyLarge)
             return@Scaffold
         }
         LazyColumn(modifier = Modifier.fillMaxSize().padding(padding)) {

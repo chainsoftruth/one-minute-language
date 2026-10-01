@@ -42,4 +42,8 @@ interface DailyStatsDao {
 
     @Query("SELECT date FROM daily_stats WHERE exercisesDone >= :minExercises ORDER BY date DESC LIMIT 400")
     suspend fun activeDays(minExercises: Int): List<String>
+
+    /** Days from [from] (an ISO date) on, for the activity grid on the Progress screen. */
+    @Query("SELECT * FROM daily_stats WHERE date >= :from")
+    suspend fun since(from: String): List<DailyStatsEntity>
 }

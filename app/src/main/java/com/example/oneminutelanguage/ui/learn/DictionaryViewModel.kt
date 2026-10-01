@@ -12,12 +12,14 @@ import com.example.oneminutelanguage.course.LexEntry
 import com.example.oneminutelanguage.course.Topic
 import com.example.oneminutelanguage.course.canSendToWidget
 import com.example.oneminutelanguage.course.sendToWidget
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.launch
 
 class DictionaryViewModel(application: Application) : AndroidViewModel(application) {
     var entries by mutableStateOf<List<LexEntry>>(emptyList()); private set
     var topics by mutableStateOf<List<Topic>>(emptyList()); private set
     var loading by mutableStateOf(true); private set
+    var failed by mutableStateOf(false); private set
     var ttsLocale = "nl-NL"; private set
 
     var query by mutableStateOf("")
@@ -29,10 +31,16 @@ class DictionaryViewModel(application: Application) : AndroidViewModel(applicati
     init {
         viewModelScope.launch {
             // The dictionary is also reachable from the Words tab before a course is picked: default to Dutch.
-            val id = CoursePrefs.selectedCourse(application) ?: "nl"
-            ttsLocale = CourseRepository.courses(application).firstOrNull { it.id == id }?.ttsLocale ?: ttsLocale
-            topics = CourseRepository.outline(application, id).topics
-            entries = CourseRepository.lexicon(application, id).values.toList()
+            try {
+                val id = CoursePrefs.selectedCourse(application) ?: "nl"
+                ttsLocale = CourseRepository.courses(application).firstOrNull { it.id == id }?.ttsLocale ?: ttsLocale
+                topics = CourseRepository.outline(application, id).topics
+                entries = CourseRepository.lexicon(application, id).values.toList()
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                failed = true
+            }
             loading = false
         }
     }

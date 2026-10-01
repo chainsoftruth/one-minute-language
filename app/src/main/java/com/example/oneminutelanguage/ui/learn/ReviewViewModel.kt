@@ -25,6 +25,7 @@ import com.example.oneminutelanguage.course.gradeText
 import com.example.oneminutelanguage.course.schedule
 import com.example.oneminutelanguage.data.DatabaseProvider
 import com.example.oneminutelanguage.data.ReviewCardEntity
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
@@ -53,6 +54,8 @@ fun dueCountFlow(app: Application): Flow<Int> {
 sealed interface ReviewPhase {
     data object Loading : ReviewPhase
     data object NoCourse : ReviewPhase
+    /** A course file could not be read; the cards themselves are untouched. */
+    data object Failed : ReviewPhase
     /** Nothing is due; [next] says when the next card is due. */
     data class Empty(val next: String?) : ReviewPhase
     data object Question : ReviewPhase
@@ -90,30 +93,40 @@ class ReviewViewModel(application: Application) : AndroidViewModel(application) 
                 return@launch
             }
             courseId = id
-            ttsLocale = CourseRepository.courses(application).firstOrNull { it.id == id }?.ttsLocale ?: ttsLocale
-            val lexicon = CourseRepository.lexicon(application, id)
-            val pool = lexicon.values.toList()
-            for (card in cards.due(id, System.currentTimeMillis(), SESSION_SIZE)) {
-                val item = when {
-                    card.cardId.startsWith("lex:") ->
-                        lexicon[card.cardId.removePrefix("lex:")]?.let { buildReviewItem(it, pool, card.reps, Random) }
-                    card.cardId.startsWith("item:") -> {
-                        val lessonId = card.cardId.removePrefix("item:").substringBefore('#')
-                        val hash = card.cardId.substringAfter('#').toIntOrNull()
-                        CourseRepository.lesson(application, id, lessonId)?.items?.firstOrNull { it.hashCode() == hash }
-                    }
-                    else -> null
+            try {
+                loadCards(application, id)
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                phase = ReviewPhase.Failed
+            }
+        }
+    }
+
+    private suspend fun loadCards(application: Application, id: String) {
+        ttsLocale = CourseRepository.courses(application).firstOrNull { it.id == id }?.ttsLocale ?: ttsLocale
+        val lexicon = CourseRepository.lexicon(application, id)
+        val pool = lexicon.values.toList()
+        for (card in cards.due(id, System.currentTimeMillis(), SESSION_SIZE)) {
+            val item = when {
+                card.cardId.startsWith("lex:") ->
+                    lexicon[card.cardId.removePrefix("lex:")]?.let { buildReviewItem(it, pool, card.reps, Random) }
+                card.cardId.startsWith("item:") -> {
+                    val lessonId = card.cardId.removePrefix("item:").substringBefore('#')
+                    val hash = card.cardId.substringAfter('#').toIntOrNull()
+                    CourseRepository.lesson(application, id, lessonId)?.items?.firstOrNull { it.hashCode() == hash }
                 }
-                // The word or the item no longer exists (content was edited): drop the card.
-                if (item == null) cards.delete(card.cardId)
-                else if (item.isShownHere()) queue += Question(card, item)
+                else -> null
             }
-            total = queue.size
-            if (queue.isEmpty()) phase = ReviewPhase.Empty(nextText())
-            else {
-                phase = ReviewPhase.Question
-                showNext()
-            }
+            // The word or the item no longer exists (content was edited): drop the card.
+            if (item == null) cards.delete(card.cardId)
+            else if (item.isShownHere()) queue += Question(card, item)
+        }
+        total = queue.size
+        if (queue.isEmpty()) phase = ReviewPhase.Empty(nextText())
+        else {
+            phase = ReviewPhase.Question
+            showNext()
         }
     }
 

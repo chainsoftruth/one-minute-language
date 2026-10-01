@@ -50,6 +50,7 @@ fun TodayScreen(
     onLessonClick: (lessonId: String) -> Unit,
     onLearnClick: () -> Unit,
     onReviewClick: () -> Unit,
+    onProgressClick: () -> Unit,
     viewModel: MainViewModel = viewModel()
 ) {
     val context = LocalContext.current
@@ -96,7 +97,8 @@ fun TodayScreen(
             streakDays = streakDays,
             onChooseCourse = onChooseCourse,
             onLessonClick = onLessonClick,
-            onLearnClick = onLearnClick
+            onLearnClick = onLearnClick,
+            onProgressClick = onProgressClick
         )
 
         if (dueReviews > 0) {
@@ -157,10 +159,12 @@ private fun ContinueSection(
     streakDays: Int,
     onChooseCourse: () -> Unit,
     onLessonClick: (String) -> Unit,
-    onLearnClick: () -> Unit
+    onLearnClick: () -> Unit,
+    onProgressClick: () -> Unit
 ) {
     when (learnState) {
         LearnState.Loading -> Unit
+        is LearnState.Failed -> Unit // the Learn tab explains what is wrong
         LearnState.NoCourse -> HeroCard(
             title = "Deep learning",
             subtitle = "Choose a language",
@@ -184,7 +188,8 @@ private fun ContinueSection(
         }
     }
 
-    Card(modifier = Modifier.fillMaxWidth(), shape = MaterialTheme.shapes.medium, colors = appCardColors()) {
+    // The goal card opens the Progress screen.
+    Card(onClick = onProgressClick, modifier = Modifier.fillMaxWidth(), shape = MaterialTheme.shapes.medium, colors = appCardColors()) {
         Row(modifier = Modifier.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
             ProgressRing(progress = exercisesDone.toFloat() / dailyGoal, size = 88.dp, strokeWidth = 10.dp) {
                 Text("$exercisesDone", style = MaterialTheme.typography.titleLarge)

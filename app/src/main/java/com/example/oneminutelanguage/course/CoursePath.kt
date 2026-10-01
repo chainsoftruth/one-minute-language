@@ -15,6 +15,10 @@ fun firstUnfinished(path: List<PathLevel>, completed: Set<String>): Pair<CourseU
     return null
 }
 
+/** Ids of every lesson in the levels before [level] (what "Start here" in the placement test marks as skipped). */
+fun lessonsBefore(path: List<PathLevel>, level: String): List<String> =
+    path.takeWhile { it.outline.level != level }.flatMap { it.units }.mapNotNull { it.unit }.flatMap { it.lessons }.map { it.id }
+
 /** The lesson after [lessonId] in course order, skipping units without content. */
 fun lessonAfter(path: List<PathLevel>, lessonId: String): Lesson? {
     val lessons = path.flatMap { it.units }.mapNotNull { it.unit }.flatMap { it.lessons }

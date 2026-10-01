@@ -20,8 +20,11 @@ import androidx.compose.material.icons.automirrored.filled.MenuBook
 import androidx.compose.material.icons.filled.Book
 import androidx.compose.material.icons.filled.Flag
 import androidx.compose.material.icons.filled.Forum
+import androidx.compose.material.icons.filled.Insights
 import androidx.compose.material.icons.filled.Public
 import androidx.compose.material3.AssistChip
+import androidx.compose.material3.Button
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.Card
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
@@ -32,12 +35,18 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.oneminutelanguage.course.CourseInfo
+import com.example.oneminutelanguage.course.CoursePrefs
 import com.example.oneminutelanguage.course.PathLevel
 import com.example.oneminutelanguage.course.PathUnit
 import com.example.oneminutelanguage.course.UnitKind
@@ -65,12 +74,19 @@ fun LearnScreen(
     onUnitClick: (String) -> Unit,
     onDictionaryClick: () -> Unit,
     onResourcesClick: () -> Unit,
+    onProgressClick: () -> Unit,
+    onPlacementClick: () -> Unit,
     viewModel: LearnViewModel = viewModel()
 ) {
     when (val state = viewModel.state.collectAsState().value) {
         LearnState.Loading -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
         // Nothing selected yet: the selector is the Learn tab. Picking a course flips the state to Ready.
         LearnState.NoCourse -> CourseSelectScreen(onSelected = {})
+        is LearnState.Failed -> Text(
+            state.message,
+            modifier = Modifier.statusBarsPadding().padding(16.dp),
+            style = MaterialTheme.typography.bodyLarge
+        )
         is LearnState.Ready -> {
             val completed = state.progress.keys
             val nextUnitId = firstUnfinished(state.path, completed)?.first?.id
@@ -80,16 +96,20 @@ fun LearnScreen(
                 verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
                 item {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Text("Learn", style = MaterialTheme.typography.headlineSmall, modifier = Modifier.weight(1f))
-                        IconButton(onClick = onDictionaryClick) { Icon(Icons.Default.Book, contentDescription = "Dictionary") }
-                        IconButton(onClick = onResourcesClick) { Icon(Icons.Default.Public, contentDescription = "Resources") }
+                    Column {
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Text("Learn", style = MaterialTheme.typography.headlineSmall, modifier = Modifier.weight(1f))
+                            IconButton(onClick = onProgressClick) { Icon(Icons.Default.Insights, contentDescription = "Your progress") }
+                            IconButton(onClick = onDictionaryClick) { Icon(Icons.Default.Book, contentDescription = "Dictionary") }
+                            IconButton(onClick = onResourcesClick) { Icon(Icons.Default.Public, contentDescription = "Resources") }
+                        }
                         AssistChip(
                             onClick = onChooseCourse,
                             label = { Text("${state.course.flag} ${state.course.name} ▾") }
                         )
                     }
                 }
+                item { PlacementOffer(state.course, onPlacementClick) }
                 state.path.forEach { level ->
                     stickyHeader { LevelHeader(level, completed) }
                     items(level.units, key = { it.id }) { entry ->
@@ -101,6 +121,29 @@ fun LearnScreen(
                         )
                     }
                 }
+            }
+        }
+    }
+}
+
+/** Shown once after choosing a course: a way in for learners who already know some of it. */
+@Composable
+private fun PlacementOffer(course: CourseInfo, onTake: () -> Unit) {
+    val context = LocalContext.current
+    var offered by remember(course.id) { mutableStateOf(CoursePrefs.placementOffered(context, course.id)) }
+    if (offered) return
+    val close = { CoursePrefs.setPlacementOffered(context, course.id); offered = true }
+    Card(modifier = Modifier.fillMaxWidth(), shape = MaterialTheme.shapes.medium, colors = appCardColors()) {
+        Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Text("Already know some ${course.name}?", style = MaterialTheme.typography.titleMedium)
+            Text(
+                "Take a 10-minute test and we suggest where to start. You can skip the rest.",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant
+            )
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Button(onClick = { close(); onTake() }) { Text("Take the test") }
+                TextButton(onClick = { close() }) { Text("Not now") }
             }
         }
     }

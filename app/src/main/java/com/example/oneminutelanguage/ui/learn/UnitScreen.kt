@@ -100,12 +100,13 @@ fun UnitScreen(onBack: () -> Unit, onLessonClick: (String) -> Unit, viewModel: U
                             ) { Text("Add these words to my widget") }
                         }
                         state.unit.lessons.forEach { lesson ->
-                            val best = state.progress[lesson.id]?.bestScore
+                            val done = state.progress[lesson.id]
                             ActionCard(
                                 icon = lessonKindIcon(lesson.kind),
                                 title = lesson.title,
                                 subtitle = lesson.kind.label(),
-                                badge = best?.let { "✓ $it%" },
+                                // attempts = 0: marked as skipped by the placement test, still openable.
+                                badge = done?.let { if (it.attempts == 0) "↷ skipped" else "✓ ${it.bestScore}%" },
                                 onClick = { onLessonClick(lesson.id) }
                             )
                         }

@@ -29,6 +29,7 @@ import com.example.oneminutelanguage.course.flagLine
 import com.example.oneminutelanguage.course.sendToWidget
 import com.example.oneminutelanguage.course.ItemResult
 import com.example.oneminutelanguage.course.Item
+import com.example.oneminutelanguage.course.CourseUnit
 import com.example.oneminutelanguage.course.Lesson
 import com.example.oneminutelanguage.course.LessonKind
 import com.example.oneminutelanguage.course.LessonQueue
@@ -46,6 +47,13 @@ import com.example.oneminutelanguage.course.vocabCardSchedule
 import com.example.oneminutelanguage.data.DatabaseProvider
 import com.example.oneminutelanguage.data.LessonProgressEntity
 import com.example.oneminutelanguage.data.ReviewCardEntity
+import com.example.oneminutelanguage.course.PlacementItem
+import com.example.oneminutelanguage.course.PlacementResult
+import com.example.oneminutelanguage.course.lessonsBefore
+import com.example.oneminutelanguage.course.placementScores
+import com.example.oneminutelanguage.course.placementStart
+import com.example.oneminutelanguage.course.placementTest
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import java.time.LocalDate
@@ -118,46 +126,62 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
     var wrongSummary by mutableStateOf<List<Pair<String, String>>>(emptyList()); private set
     var nextLesson by mutableStateOf<Lesson?>(null); private set
 
+    /** Placement test (route drill/placement): the result once all 30 items are answered. */
+    var placement by mutableStateOf<PlacementResult?>(null); private set
+    private var placementItems: List<PlacementItem> = emptyList()
+
     /** Speaking items: tries used so far and the last close-but-not-good guess (shown so the learner can retry). */
     var speechTries by mutableIntStateOf(0); private set
     var speechTry by mutableStateOf<Match?>(null); private set
 
     init {
         viewModelScope.launch {
-            val id = CoursePrefs.selectedCourse(application)
-            val found = if (drillKind != null) null else id?.let { CourseRepository.lesson(application, it, lessonId) }
-            if (id == null || (found == null && drillKind == null)) {
-                phase = LessonPhase.Failed("This lesson isn't available.")
-                return@launch
+            try {
+                load(application)
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                // A lesson file that doesn't parse must never crash the app: say so and let the learner report it.
+                phase = LessonPhase.Failed("Something's wrong with this lesson. Tap the flag to report it.")
             }
-            courseId = id
-            ttsLocale = CourseRepository.courses(application).firstOrNull { it.id == id }?.ttsLocale ?: ttsLocale
-            if (drillKind != null) return@launch startDrill(drillKind)
-            if (found == null) return@launch
-            if (found.kind == LessonKind.VOCAB) {
-                val lexicon = CourseRepository.lexicon(application, id)
-                val entries = found.vocab.mapNotNull { lexicon[it] }
-                if (entries.isEmpty()) {
-                    phase = LessonPhase.Failed("This lesson has no words yet.")
-                    return@launch
-                }
-                val built = buildVocabLesson(entries, lexicon.values.toList(), Random)
-                lexOf = built.associate { it.item to it.lexIds }
-                introEntries = entries
-                lesson = found.copy(items = built.map { it.item })
-            } else {
-                lesson = found
-                if (found.text != null) {
-                    wordLookup = WordLookup(CourseRepository.lexicon(application, id).values)
-                }
-            }
-            if (found.explain.isEmpty()) startItems() else phase = LessonPhase.Explain
         }
+    }
+
+    private suspend fun load(application: Application) {
+        val id = CoursePrefs.selectedCourse(application)
+        val found = if (drillKind != null) null else id?.let { CourseRepository.lesson(application, it, lessonId) }
+        if (id == null || (found == null && drillKind == null)) {
+            phase = LessonPhase.Failed("This lesson isn't available.")
+            return
+        }
+        courseId = id
+        ttsLocale = CourseRepository.courses(application).firstOrNull { it.id == id }?.ttsLocale ?: ttsLocale
+        if (drillKind != null) return startDrill(drillKind)
+        if (found == null) return
+        if (found.kind == LessonKind.VOCAB) {
+            val lexicon = CourseRepository.lexicon(application, id)
+            val entries = found.vocab.mapNotNull { lexicon[it] }
+            if (entries.isEmpty()) {
+                phase = LessonPhase.Failed("This lesson has no words yet.")
+                return
+            }
+            val built = buildVocabLesson(entries, lexicon.values.toList(), Random)
+            lexOf = built.associate { it.item to it.lexIds }
+            introEntries = entries
+            lesson = found.copy(items = built.map { it.item })
+        } else {
+            lesson = found
+            if (found.text != null) {
+                wordLookup = WordLookup(CourseRepository.lexicon(application, id).values)
+            }
+        }
+        if (found.explain.isEmpty()) startItems() else phase = LessonPhase.Explain
     }
 
     /** Ten listening or speaking items from finished lessons, topped up with the example sentences of known words. */
     private suspend fun startDrill(kind: String) {
         val app = getApplication<Application>()
+        if (kind == "placement") return startPlacement(CourseRepository.path(app, courseId).flatMap { it.units }.mapNotNull { it.unit })
         val lexicon = CourseRepository.lexicon(app, courseId)
         val done = db.lessonProgressDao().getAll(courseId).first().mapNotNull { CourseRepository.lesson(app, courseId, it.lessonId) }
         val lessonItems = done.flatMap { it.items }
@@ -176,6 +200,28 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
             kind = if (kind == "listening") LessonKind.LISTENING else LessonKind.SPEAKING, items = items.take(DRILL_SIZE)
         )
         startItems()
+    }
+
+    /** 30 items, 10 per level, graded like a checkpoint: no feedback until the result. */
+    private fun startPlacement(units: List<CourseUnit>) {
+        placementItems = placementTest(units)
+        if (placementItems.isEmpty()) {
+            phase = LessonPhase.Failed("The placement test isn't available.")
+            return
+        }
+        lesson = Lesson(id = lessonId, title = "Placement test", kind = LessonKind.TEST, items = placementItems.map { it.item })
+        startItems()
+    }
+
+    /** "Start here": the lessons before the recommended level count as skipped (attempts 0), real results stay. */
+    fun startPlacementHere(onDone: () -> Unit) {
+        val start = placement?.start ?: return
+        viewModelScope.launch {
+            val ids = lessonsBefore(CourseRepository.path(getApplication(), courseId), start)
+            val now = System.currentTimeMillis()
+            db.lessonProgressDao().insertAllIfAbsent(ids.map { LessonProgressEntity(it, courseId, now, 0, 0) })
+            onDone()
+        }
     }
 
     fun startItems() {
@@ -310,7 +356,10 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
         val hasItems = lesson?.items?.isNotEmpty() == true
         score = if (hasItems) queue.score else 100
         mistakes = if (hasItems) queue.mistakes else 0
-        if (hasItems && lesson?.kind == LessonKind.TEST) {
+        if (placementItems.isNotEmpty()) {
+            val scores = placementScores(placementItems, queue.wrongItems)
+            placement = PlacementResult(scores, placementStart(scores))
+        } else if (hasItems && lesson?.kind == LessonKind.TEST) {
             wrongSummary = queue.wrongItems.map { itemPrompt(it) to expectedAnswer(it) }
         }
         phase = LessonPhase.Done

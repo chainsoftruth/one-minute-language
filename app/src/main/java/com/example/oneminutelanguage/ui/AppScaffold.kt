@@ -32,6 +32,7 @@ import com.example.oneminutelanguage.ui.learn.CourseSelectScreen
 import com.example.oneminutelanguage.ui.learn.DictionaryScreen
 import com.example.oneminutelanguage.ui.learn.LearnScreen
 import com.example.oneminutelanguage.ui.learn.LessonScreen
+import com.example.oneminutelanguage.ui.learn.ProgressScreen
 import com.example.oneminutelanguage.ui.learn.ResourcesScreen
 import com.example.oneminutelanguage.ui.learn.ReviewScreen
 import com.example.oneminutelanguage.ui.learn.UnitScreen
@@ -88,7 +89,8 @@ fun AppScaffold(startAtAddWord: Boolean) {
                     onChooseCourse = { navController.navigate("course_select") },
                     onLessonClick = { navController.navigate("lesson/$it") },
                     onLearnClick = { navController.switchTab("learn") },
-                    onReviewClick = { navController.navigate("review") }
+                    onReviewClick = { navController.navigate("review") },
+                    onProgressClick = { navController.navigate("progress") }
                 )
             }
             composable("learn") {
@@ -96,7 +98,9 @@ fun AppScaffold(startAtAddWord: Boolean) {
                     onChooseCourse = { navController.navigate("course_select") },
                     onUnitClick = { navController.navigate("unit/$it") },
                     onDictionaryClick = { navController.navigate("dictionary") },
-                    onResourcesClick = { navController.navigate("resources") }
+                    onResourcesClick = { navController.navigate("resources") },
+                    onProgressClick = { navController.navigate("progress") },
+                    onPlacementClick = { navController.navigate("drill/placement") }
                 )
             }
             composable("course_select") {
@@ -139,6 +143,13 @@ fun AppScaffold(startAtAddWord: Boolean) {
                 DatabaseScreen(
                     onAddWordClick = { navController.navigate("add_word") },
                     onDictionaryClick = { navController.navigate("dictionary") }
+                )
+            }
+            composable("progress") {
+                ProgressScreen(
+                    onBack = { navController.popBackStack() },
+                    onUnitClick = { navController.navigate("unit/$it") },
+                    onPlacementClick = { navController.navigate("drill/placement") }
                 )
             }
             composable("review") { ReviewScreen(onClose = { navController.popBackStack() }) }

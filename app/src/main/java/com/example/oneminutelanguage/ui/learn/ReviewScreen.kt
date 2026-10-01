@@ -45,8 +45,9 @@ fun ReviewScreen(onClose: () -> Unit, viewModel: ReviewViewModel = viewModel()) 
         when (val phase = viewModel.phase) {
             ReviewPhase.Loading -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
             ReviewPhase.NoCourse -> Message("Review", "Pick a course in the Learn tab first. Your words and mistakes will show up here.", "Close", onClose)
+            ReviewPhase.Failed -> Message("Review", "Something's wrong with the course files, so the review can't start. Your review cards are safe.", "Close", onClose)
             is ReviewPhase.Empty -> Message(
-                "All caught up",
+                "All caught up 🎉",
                 phase.next?.let { "Nothing to review right now. The next review is in $it." }
                     ?: "Nothing to review yet. Finish a vocabulary lesson and its words will show up here tomorrow.",
                 "Close", onClose

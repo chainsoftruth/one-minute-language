@@ -2,16 +2,16 @@
 
 # 🌍 OneMinute Language
 
-**Learn a language without opening an app.**
+**Learn a language without opening an app, or sit down and learn it properly.**
 
-A home-screen widget that quietly teaches you one word at a time — every time you unlock your phone.
+A home-screen widget that quietly teaches you one word at a time, plus a full Dutch course from A1 to B1 when you want to go deeper.
 
 ![Platform](https://img.shields.io/badge/platform-Android-3DDC84?logo=android&logoColor=white)
 ![Kotlin](https://img.shields.io/badge/kotlin-2.4-7F52FF?logo=kotlin&logoColor=white)
 ![Min SDK](https://img.shields.io/badge/minSdk-24-blue)
 ![Jetpack Compose](https://img.shields.io/badge/UI-Jetpack%20Compose-4285F4?logo=jetpackcompose&logoColor=white)
 ![ML Kit](https://img.shields.io/badge/translation-ML%20Kit-EA4335?logo=googletranslate&logoColor=white)
-![Version](https://img.shields.io/badge/version-1.5-success)
+![Version](https://img.shields.io/badge/version-2.0-success)
 
 </div>
 
@@ -19,7 +19,7 @@ A home-screen widget that quietly teaches you one word at a time — every time 
 
 ## ✨ What it does
 
-No lessons, no streaks, no notifications to dismiss. Just a word, sitting quietly on your home screen, changing every time you glance at your phone.
+Two modes in one app. **Quick** is the widget: a word sitting quietly on your home screen, changing every time you glance at your phone. **Deep learning** is a structured Dutch course (A1 → B1) with lessons, spaced-repetition review, listening, speaking, reading and writing.
 
 | | |
 |---|---|
@@ -31,7 +31,33 @@ No lessons, no streaks, no notifications to dismiss. Just a word, sitting quietl
 | 🧠 **On-device translation** | Powered by Google ML Kit — no network round-trip, works offline once models are downloaded |
 | 🗂️ **Full word database** | Search, review, delete, and toggle any word on or off for the widget rotation |
 | 🔁 **Instant language swap** | Flip your language pair in Settings — reverse pairs swap instantly, no re-translation or model download needed |
+| 🎓 **Dutch course A1 → B1** | 37 grammar units, 16 theme units and 3 checkpoints, about 4,100 words, every B1 grammar point, plus reading, listening, speaking and writing practice. Works offline |
+| 🔁 **Spaced-repetition review** | Words and mistakes come back at the right time; a daily goal, streak and activity grid keep you going |
+| 🧭 **Placement test** | 30 questions suggest where to start, so you can skip what you already know |
+| 📊 **Progress and can-do list** | Level and skill meters, words mastered, and a B1 "I can…" checklist linked to the units that train each skill |
 | 📚 **Starter pack** | 679 hand-checked starter words for English–Dutch (583–590 for the other languages), one tap to import, one tap to cleanly remove later |
+
+## 🆕 What's new in v2.0
+
+"Dutch": the widget stays, and a complete course joins it.
+
+### Highlights
+
+- 🎓 **Deep learning** — the new **Learn** tab holds a Dutch course for English speakers, from A1 to the B1 level of the *inburgeringsexamen* and *Staatsexamen NT2 programma I*. Grammar units explain a rule in plain English, then practise it with choice, gap, word-order, transformation, translation and matching exercises. Theme units (work, health, housing, travel and more) add vocabulary, a reading text, a dialogue, speaking practice and a writing task. Each level ends with a checkpoint; B1 has a practice exam in the official format.
+- 📖 **About 4,100 words** — every noun with its article and plural, every verb with its forms, an example sentence for each. Search them in the new dictionary by any inflected form.
+- 🔁 **Review** — spaced repetition for words and for the exercises you got wrong.
+- 🎧 **Listening and speaking** — dialogues with two voices, dictation, repeat-after-me with speech recognition, and role-play where you play one of the speakers.
+- 📰 **Reading and writing** — tap any word in a text for its meaning; writing tasks have a word counter, a model answer and an optional LanguageTool check.
+- 🧭 **Placement test, progress and can-do list** — see where you stand and what to do next.
+- 🔗 **Resources** — a hub of free outside material (news in easy Dutch, grammar sites, official practice exams).
+- 🎨 **A modern interface** — bottom navigation (Today, Learn, Practice, Words), a Today dashboard with a daily goal and streak, light and dark themes.
+- 🌐 **Mobile data prompt** — if a translation model has to be downloaded and you are not on Wi-Fi, Add Word now asks before using mobile data.
+
+### Upgrade notes
+
+- Your words, their enabled flags and learned state are kept; the database upgrades itself.
+- The course works offline. Only the translation model download, links you tap and the opt-in LanguageTool check use the network. The LanguageTool check sends your text to languagetool.org, so it is off until you turn it on.
+- For audio you need the Google text-to-speech Dutch voice; for speaking exercises a speech recogniser. Settings → Speech shows what is missing.
 
 ## 🆕 What's new in v1.5
 
@@ -115,6 +141,9 @@ All starter words are hand-translated per language (not machine-translated) so t
 ## 🛠️ Tech stack
 
 - **UI** — Jetpack Compose + Material3, Navigation Compose
+- **Course content** — JSON files in `assets/courses/`, parsed with kotlinx.serialization; checked by unit tests that read the files from disk
+- **Review** — a small SM-2-style spaced-repetition scheduler (plain Kotlin, unit tested)
+- **Writing check** — optional, via the free LanguageTool API (`HttpURLConnection`)
 - **Widget** — classic `AppWidgetProvider` + `RemoteViews` with `ViewFlipper` for smooth slide animations (chosen over Glance for reliable cross-launcher rendering)
 - **Instant refresh** — a lightweight foreground service listening for `ACTION_SCREEN_ON`
 - **Pronunciation** — Android `TextToSpeech`, fully on-device, graceful no-op when a voice pack is missing
@@ -142,13 +171,30 @@ For a signed, optimized release build, use **Build → Generate Signed Bundle / 
 ## 📁 Project structure
 
 ```
+app/src/main/assets/courses/   # the Dutch course: units, lexicon, resources (JSON)
 app/src/main/java/com/example/oneminutelanguage/
+├── course/       # Course model, content loading, answer checking, review scheduling, placement (plain Kotlin)
 ├── data/         # Room entities, DAOs, database
 ├── speech/       # Text-to-speech wrapper and the widget's "speak on tap" activity
 ├── translation/  # ML Kit wrapper, language settings, default word list import
-├── ui/           # Compose screens (Add Word, Database, Quiz, Settings) and theme
+├── ui/           # Compose screens (Today, Practice, Words, Quiz, Settings) and theme
+│   └── learn/    # Learn tab: course path, lessons, review, dictionary, progress, resources
 └── widget/       # AppWidgetProvider, RemoteViews rendering, foreground service
 ```
+
+## 🔗 Attribution & sources
+
+The course text, examples, exercises, readings and dialogues are original. External sites were used to decide which topics to teach and to check rules, and the app links to them; nothing is copied from them. All of them are free to use:
+
+- **NT2 TaalMenu** (nt2taalmenu.nl): free grammar and practice pages, linked from every grammar lesson
+- **Woordenlijst Nederlandse Taal** (woordenlijst.org) and **Taaladvies.net**, both from the Taalunie: official spelling and usage
+- **E-ANS** (e-ans.ivdnt.org): the reference grammar of Dutch
+- **Dutchgrammar.com** and **Wiktionary**: grammar explained in English, forms checked
+- **NOS Journaal in Makkelijke Taal**, **NOS Jeugdjournaal**, **NOS** and **Wablieft**: news to read and listen to
+- **Taalklas.nl**, **Oefenen.nl** and YouTube channels **Easy Dutch**, **Bart de Pau** and **Dutchies to be**: courses and videos
+- **DUO Inburgeren** (inburgeren.nl), **Staatsexamens NT2** and **Oefenexamens NT2**, **Inburgering.nl**: official exam information and free practice exams
+- **LanguageTool** (languagetool.org): the optional grammar and spelling check for writing tasks
+- **Google ML Kit** (translation) and Android text-to-speech and speech recognition
 
 ---
 

@@ -14,6 +14,7 @@ import com.example.oneminutelanguage.course.sendToWidget
 import com.example.oneminutelanguage.course.PathLevel
 import com.example.oneminutelanguage.data.DatabaseProvider
 import com.example.oneminutelanguage.data.LessonProgressEntity
+import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.SharingStarted
@@ -26,6 +27,9 @@ import kotlinx.coroutines.flow.stateIn
 sealed interface LearnState {
     data object Loading : LearnState
     data object NoCourse : LearnState
+
+    /** course.json or a unit file could not be read. */
+    class Failed(val message: String) : LearnState
     class Ready(
         val course: CourseInfo,
         val path: List<PathLevel>,
@@ -41,9 +45,16 @@ fun learnStateFlow(app: Application): Flow<LearnState> {
     return CoursePrefs.selectedCourseFlow(app).flatMapLatest { id ->
         if (id == null) flowOf(LearnState.NoCourse)
         else progressDao.getAll(id).map { rows ->
-            val course = CourseRepository.courses(app).firstOrNull { it.id == id && it.available }
-            if (course == null) LearnState.NoCourse
-            else LearnState.Ready(course, CourseRepository.path(app, id), rows.associateBy { it.lessonId })
+            try {
+                val course = CourseRepository.courses(app).firstOrNull { it.id == id && it.available }
+                if (course == null) LearnState.NoCourse
+                else LearnState.Ready(course, CourseRepository.path(app, id), rows.associateBy { it.lessonId })
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                // A content file that doesn't parse must not crash the app.
+                LearnState.Failed("Something's wrong with the course files: ${e.message}")
+            }
         }
     }
 }

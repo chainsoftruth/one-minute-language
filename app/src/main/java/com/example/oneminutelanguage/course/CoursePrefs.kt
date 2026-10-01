@@ -13,6 +13,7 @@ object CoursePrefs {
     private const val KEY_TTS_RATE = "tts_rate"
     private const val KEY_LT_ENABLED = "language_tool_enabled"
     private const val KEY_FLAGS = "flags"
+    private const val KEY_CAN_DO = "can_do"
 
     private fun prefs(context: Context) = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
 
@@ -46,6 +47,15 @@ object CoursePrefs {
     fun addFlag(context: Context, line: String) =
         prefs(context).edit().putStringSet(KEY_FLAGS, flags(context) + line).apply() // a new set: the stored one must not be changed
     fun clearFlags(context: Context) = prefs(context).edit().remove(KEY_FLAGS).apply()
+
+    /** The placement test is offered once per course. */
+    fun placementOffered(context: Context, courseId: String): Boolean = prefs(context).getBoolean("placement_offered_$courseId", false)
+    fun setPlacementOffered(context: Context, courseId: String) = prefs(context).edit().putBoolean("placement_offered_$courseId", true).apply()
+
+    /** Ids of the B1 "I can…" statements the learner ticked. */
+    fun canDo(context: Context): Set<String> = prefs(context).getStringSet(KEY_CAN_DO, emptySet()).orEmpty()
+    fun setCanDo(context: Context, id: String, on: Boolean) =
+        prefs(context).edit().putStringSet(KEY_CAN_DO, if (on) canDo(context) + id else canDo(context) - id).apply()
 
     /** The unfinished text of a writing task, so leaving the lesson doesn't lose it. */
     fun writingDraft(context: Context, lessonId: String): String = prefs(context).getString("writing_draft_$lessonId", "").orEmpty()

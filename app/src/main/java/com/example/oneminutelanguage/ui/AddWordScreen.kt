@@ -22,6 +22,7 @@ import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SegmentedButton
@@ -150,6 +151,15 @@ fun AddWordScreen(
                         CircularProgressIndicator(modifier = Modifier.size(20.dp))
                         Spacer(modifier = Modifier.width(8.dp))
                         Text("Downloading language model…")
+                    }
+                }
+
+                is TranslationState.NeedsWifi -> {
+                    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Text("Connect to Wi-Fi to download the ${state.languageName} model (~30 MB).")
+                        OutlinedButton(onClick = { viewModel.translateWord(inputText, allowMobileData = true) }) {
+                            Text("Download on mobile data")
+                        }
                     }
                 }
 

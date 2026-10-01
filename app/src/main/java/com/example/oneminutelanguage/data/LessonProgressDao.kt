@@ -1,6 +1,8 @@
 package com.example.oneminutelanguage.data
 
 import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import androidx.room.Upsert
 import kotlinx.coroutines.flow.Flow
@@ -9,6 +11,10 @@ import kotlinx.coroutines.flow.Flow
 interface LessonProgressDao {
     @Upsert
     suspend fun upsert(entity: LessonProgressEntity)
+
+    /** The placement test marks lessons as skipped without touching lessons that were really done. */
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insertAllIfAbsent(entities: List<LessonProgressEntity>)
 
     @Query("SELECT * FROM lesson_progress WHERE courseId = :courseId")
     fun getAll(courseId: String): Flow<List<LessonProgressEntity>>
