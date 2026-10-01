@@ -1,0 +1,153 @@
+{
+  "id": "b1.t06", "level": "B1", "kind": "theme",
+  "title": "Opinions, advice, complaints",
+  "subtitle": "Read forum posts and an opinion piece, follow a discussion, give advice and complaints and write to a web shop",
+  "lessons": [
+    {
+      "id": "b1.t06.l1", "title": "Giving your opinion", "kind": "vocab",
+      "vocab": [
+        "volgens_mij", "ik_vind_dat", "naar_mijn_idee", "wat_mij_betreft", "ik_ben_het_met_je_eens", "ik_ben_het_niet_met_je_eens",
+        "daar_ben_ik_het_mee_eens", "het_hangt_ervan_af", "aan_de_ene_kant", "aan_de_andere_kant", "enerzijds", "anderzijds", "in_ieder_geval",
+        "in_principe", "over_het_algemeen", "ten_eerste", "ten_tweede", "daarnaast", "tot_slot", "eerlijk_gezegd", "je_hebt_gelijk",
+        "dat_is_een_goed_punt", "standpunt", "argument"
+      ]
+    },
+    {
+      "id": "b1.t06.l2", "title": "Advice, complaints and compromise", "kind": "vocab",
+      "vocab": [
+        "als_ik_jou_was", "je_kunt_beter", "waarom_probeer_je_niet", "ik_raad_je_aan_om", "ik_wil_graag_een_klacht_indienen",
+        "ik_ben_niet_tevreden_over", "klachtenformulier", "klachtenprocedure", "schadevergoeding", "misverstand", "conflict", "verwijt",
+        "kritiek", "compromis", "laten_we_een_compromis_sluiten", "mijn_excuses", "afraden", "suggereren", "overtuigen", "toelichten",
+        "reageren_op", "zich_verontschuldigen", "verontwaardigd", "vervelend"
+      ]
+    },
+    {
+      "id": "b1.t06.l3", "title": "A forum discussion", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "In a forum thread people react to each other. Find out who agrees, who disagrees and who says *it depends*. Opinion phrases like *Ik ben het niet met je eens* or *Het hangt ervan af* show the position. Tap a word you don't know." }
+      ],
+      "text": "Forum: online boodschappen doen, wel of niet? Bericht van Marjolein: Ik ben net begonnen met online boodschappen doen en ik ben er erg blij mee. Ik bespaar veel tijd, want ik hoef niet meer in de rij te staan. Bovendien koop ik minder dingen die ik niet nodig heb, omdat ik alleen bestel wat op mijn lijst staat. Bericht van Henk: Ik ben het niet met je eens. Ik wil mijn groente en fruit zelf kiezen. Vorige week kreeg ik bananen die al bruin waren en de bezorger was bijna een uur te laat. Bovendien zijn de bezorgkosten hoog. Bericht van Sanne: Het hangt ervan af. Voor de grote boodschappen vind ik het handig, maar voor verse producten ga ik liever naar de markt. Mijn advies: begin met een kleine bestelling en kijk of het bij je past. Bericht van Marjolein: Dat is een goed punt, Sanne. Ik koop mijn brood en mijn vlees ook nog steeds bij de bakker en de slager. Aan de ene kant is online bestellen gemakkelijk, aan de andere kant mis je het contact met mensen. Bericht van Henk: Daar ben ik het mee eens. Misschien probeer ik het toch nog een keer, maar dan kies ik een andere winkel. Bericht van Sanne: Succes, Henk! Vergelijk eerst even de bezorgkosten en de leveringstijden van de verschillende winkels.",
+      "items": [
+        { "type": "choice", "q": "Waarom is Marjolein blij met online boodschappen doen?", "options": ["Ze bespaart tijd en koopt minder dingen die ze niet nodig heeft", "Het is goedkoper dan de supermarkt", "De bezorger is altijd op tijd"], "answer": 0, "en": "Why is Marjolein happy with online grocery shopping?" },
+        { "type": "choice", "q": "Wat is het probleem van Henk?", "options": ["De bananen waren bruin, de bezorger was te laat en de bezorgkosten zijn hoog", "Hij heeft geen internet", "Hij wil geen boodschappen doen"], "answer": 0, "en": "What is Henk's problem?" },
+        { "type": "choice", "q": "Wat vindt Sanne?", "options": ["Het hangt ervan af: grote boodschappen online, verse producten op de markt", "Online boodschappen doen is altijd beter", "Ze is tegen online boodschappen"], "answer": 0, "en": "What does Sanne think?" },
+        { "type": "choice", "q": "Wat bedoelt Marjolein met: aan de ene kant is het gemakkelijk, aan de andere kant mis je het contact?", "options": ["Er zijn voordelen en nadelen", "Ze is er nu tegen", "Ze doet het niet meer"], "answer": 0, "en": "What does Marjolein mean?" },
+        { "type": "choice", "q": "Wat adviseert Sanne aan het einde aan Henk?", "options": ["De bezorgkosten en leveringstijden van verschillende winkels vergelijken", "Alleen nog naar de markt gaan", "Zijn bestelling annuleren"], "answer": 0, "en": "What does Sanne advise Henk at the end?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: B1 menu (reading texts)", "url": "https://nt2taalmenu.nl/nt2-b1-menu/" }
+      ]
+    },
+    {
+      "id": "b1.t06.l4", "title": "Phones out of the classroom?", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "An opinion piece gives arguments for and against and then a conclusion. Look for the signal words *ten eerste*, *daarnaast*, *aan de andere kant* and *tot slot*. Tap a word you don't know." }
+      ],
+      "text": "Telefoons uit de klas: een goed idee? Steeds meer scholen verbieden mobiele telefoons in de les. Is dat een goed idee? Daarover zijn de meningen verdeeld. Voorstanders noemen drie argumenten. Ten eerste kunnen leerlingen zich beter concentreren als hun telefoon in de kluis ligt. Ten tweede wordt er tijdens de lessen minder gepest via sociale media. Ten derde praten kinderen in de pauze meer met elkaar. Tegenstanders vinden een verbod te streng. Volgens hen moeten leerlingen juist leren om verstandig met hun telefoon om te gaan. Daarnaast gebruiken sommige leraren de telefoon voor opdrachten, bijvoorbeeld om iets op te zoeken. Ook ouders hebben een mening. Sommigen willen hun kind altijd kunnen bereiken, vooral als hun kind ver van school woont. Uit onderzoek blijkt dat de resultaten in veel klassen na een verbod iets beter worden, maar het effect is niet overal even groot. Mijn conclusie is dat een verbod in de les verstandig is. Aan de andere kant vind ik dat leerlingen in de pauze gewoon hun telefoon mogen gebruiken. Zo leren ze op een goede manier met hun telefoon om te gaan, zonder dat het ten koste gaat van de les. Wat vindt u? Stuur uw reactie naar de redactie van onze krant.",
+      "items": [
+        { "type": "choice", "q": "Waarover gaat de tekst?", "options": ["Een verbod op mobiele telefoons in de les", "Het gebruik van sociale media door ouders", "Nieuwe computers op school"], "answer": 0, "en": "What is the text about?" },
+        { "type": "choice", "q": "Welk argument noemen voorstanders?", "options": ["Leerlingen kunnen zich beter concentreren", "Telefoons zijn te duur", "Leraren hebben minder werk"], "answer": 0, "en": "Which argument do supporters give?" },
+        { "type": "choice", "q": "Waarom zijn sommige tegenstanders tegen een verbod?", "options": ["Leerlingen moeten leren om verstandig met hun telefoon om te gaan", "Ouders betalen de telefoon", "Er zijn te weinig kluisjes"], "answer": 0, "en": "Why are some opponents against a ban?" },
+        { "type": "choice", "q": "Wat blijkt uit onderzoek?", "options": ["De resultaten worden vaak iets beter, maar niet overal even veel", "De resultaten worden altijd veel slechter", "Er is geen enkel verschil"], "answer": 0, "en": "What does research show?" },
+        { "type": "choice", "q": "Wat is de conclusie van de schrijver?", "options": ["Een verbod in de les is verstandig, maar in de pauze mag de telefoon wel", "Telefoons moeten helemaal verboden worden", "Er moet geen verbod komen"], "answer": 0, "en": "What is the writer's conclusion?" }
+      ],
+      "sources": [
+        { "title": "NOS: Dutch news (for reading practice)", "url": "https://nos.nl/" }
+      ]
+    },
+    {
+      "id": "b1.t06.l5", "title": "A discussion between friends", "kind": "listening",
+      "dialogue": [
+        { "who": "A", "nl": "Ik denk erover om een auto te kopen. Wat vind jij?", "en": "I am thinking of buying a car. What do you think?" },
+        { "who": "B", "nl": "Hmm, dat hangt ervan af. Hoe vaak zou je hem gebruiken?", "en": "Hmm, that depends. How often would you use it?" },
+        { "who": "A", "nl": "Voor mijn werk niet, want dat is vlak bij het station. Maar in het weekend zou ik graag naar mijn ouders kunnen rijden.", "en": "Not for work, because that is right next to the station. But at the weekend I would like to be able to drive to my parents." },
+        { "who": "B", "nl": "Als ik jou was, zou ik een deelauto proberen. Dan betaal je alleen als je rijdt.", "en": "If I were you, I would try a shared car. Then you only pay when you drive." },
+        { "who": "A", "nl": "Dat is een goed punt, maar bij een deelauto moet je vaak ver lopen. Ik vind het ook prettig om een eigen auto te hebben.", "en": "That is a good point, but with a shared car you often have to walk far. I also like having my own car." },
+        { "who": "B", "nl": "Aan de ene kant heb je gelijk, een eigen auto is gemakkelijk. Aan de andere kant is hij duur: verzekering, benzine, parkeren.", "en": "On the one hand you are right, your own car is convenient. On the other hand it is expensive: insurance, petrol, parking." },
+        { "who": "A", "nl": "Daar had ik nog niet zo over nagedacht. Wat zou jij doen?", "en": "I hadn't thought about that so much. What would you do?" },
+        { "who": "B", "nl": "Ik zou eerst een paar maanden een deelauto proberen. Daarna kun je altijd nog besluiten om een auto te kopen.", "en": "I would first try a shared car for a few months. After that you can always still decide to buy a car." },
+        { "who": "A", "nl": "Goed idee. Ik ga het proberen.", "en": "Good idea. I'll try it." }
+      ],
+      "items": [
+        { "type": "listen", "nl": "Als ik jou was, zou ik een deelauto proberen.", "q": "What does B advise?", "options": ["Try a shared car", "Buy a new car", "Take the train"], "answer": 0 },
+        { "type": "listen", "nl": "Bij een deelauto moet je vaak ver lopen.", "q": "What is a disadvantage of a shared car, according to A?", "options": ["You often have to walk far", "It is expensive", "It is hard to book"], "answer": 0 },
+        { "type": "listen", "nl": "Aan de andere kant is hij duur: verzekering, benzine, parkeren.", "q": "What disadvantage of owning a car does B mention?", "options": ["It is expensive", "It is slow", "It is bad for the environment"], "answer": 0 },
+        { "type": "listen", "nl": "Ik zou eerst een paar maanden een deelauto proberen.", "q": "What would B do first?", "options": ["Try a shared car for a few months", "Look at second-hand cars", "Ask his parents"], "answer": 0 },
+        { "type": "listen", "nl": "Daarna kun je altijd nog besluiten." },
+        { "type": "choice", "q": "Waarom wil A graag een auto?", "options": ["Om in het weekend naar zijn ouders te rijden", "Om naar zijn werk te rijden", "Omdat hij veel verhuist"], "answer": 0, "en": "Why does A want a car?" },
+        { "type": "choice", "q": "Hoe eindigt het gesprek?", "options": ["A gaat een deelauto proberen", "A koopt meteen een auto", "A besluit de trein te nemen"], "answer": 0, "en": "How does the conversation end?" }
+      ],
+      "sources": [
+        { "title": "Easy Dutch (YouTube): street interviews with Dutch subtitles", "url": "https://www.youtube.com/@EasyDutch" }
+      ]
+    },
+    {
+      "id": "b1.t06.l6", "title": "Advice and compromise", "kind": "speaking",
+      "dialogue": [
+        { "who": "A", "nl": "Ik weet niet wat ik met mijn vakantie moet doen. Ik wil naar zee, maar mijn vriend wil de bergen in.", "en": "I don't know what to do for my holiday. I want to go to the sea, but my boyfriend wants to go to the mountains." },
+        { "who": "B", "nl": "Dat is lastig. Wat vind je zelf belangrijk aan een vakantie?", "en": "That is difficult. What do you yourself find important about a holiday?" },
+        { "who": "A", "nl": "Ik wil vooral rust en lekker eten. Hij houdt van wandelen.", "en": "I mainly want rest and good food. He likes hiking." },
+        { "who": "B", "nl": "Waarom gaan jullie niet naar een kust met heuvels, bijvoorbeeld in het noorden van Spanje? Daar kunnen jullie wandelen en op het strand liggen.", "en": "Why don't you go to a coast with hills, for example in the north of Spain? There you can hike and lie on the beach." },
+        { "who": "A", "nl": "Dat klinkt goed. Maar is het niet te duur?", "en": "That sounds good. But isn't it too expensive?" },
+        { "who": "B", "nl": "Dat hangt ervan af wanneer je gaat. Als ik jou was, zou ik in september gaan, want dan is het goedkoper en minder druk.", "en": "That depends on when you go. If I were you, I would go in September, because then it is cheaper and less busy." },
+        { "who": "A", "nl": "Daar ben ik het mee eens. Laten we een compromis sluiten: de eerste week wandelen, de tweede week rusten.", "en": "I agree with that. Let's make a compromise: hiking the first week, resting the second week." },
+        { "who": "B", "nl": "Een goed plan. Ik hoop dat jullie een fijne vakantie hebben.", "en": "A good plan. I hope you have a nice holiday." },
+        { "who": "A", "nl": "Dank je wel voor je advies.", "en": "Thank you for your advice." }
+      ],
+      "items": [
+        { "type": "speak", "nl": "Als ik jou was, zou ik in september gaan.", "en": "If I were you, I would go in September." },
+        { "type": "speak", "nl": "Laten we een compromis sluiten.", "en": "Let's make a compromise." },
+        {
+          "type": "prompt",
+          "task": "Some people say that working from home is better than working in the office. Give your opinion with at least two reasons and mention one disadvantage.",
+          "model": "Volgens mij is thuiswerken een goed idee. Ten eerste bespaar je reistijd en ten tweede kun je thuis rustiger werken. Aan de andere kant mis je het contact met je collega's. Over het algemeen vind ik een combinatie het beste: twee dagen thuis en drie dagen op kantoor.",
+          "seconds": 60,
+          "points": ["Your opinion", "A first reason", "A second reason", "A disadvantage"]
+        },
+        {
+          "type": "prompt",
+          "task": "A friend finds it hard to sleep. Give your friend advice: use at least two of these phrases: Als ik jou was, ... / Je kunt beter ... / Waarom probeer je niet ...?",
+          "model": "Als ik jou was, zou ik 's avonds geen koffie meer drinken. Je kunt ook beter een uur voor het slapen je telefoon weglegen. Waarom probeer je niet elke dag om dezelfde tijd naar bed te gaan?",
+          "seconds": 50,
+          "points": ["Advice with Als ik jou was", "Advice with Je kunt beter", "A question with Waarom probeer je niet"]
+        },
+        {
+          "type": "prompt",
+          "task": "Phone a web shop. Your order arrived a week late and one item is broken. Say who you are, what the problem is, that you are not satisfied and what you want.",
+          "model": "Goedemiddag, met Sanne Bakker. Ik heb vorige week een bestelling gedaan, maar het pakket kwam een week te laat. Bovendien is de lamp kapot. Ik ben niet tevreden over de service. Ik wil graag een nieuwe lamp of mijn geld terug.",
+          "seconds": 60,
+          "points": ["Who you are", "The problems", "That you are not satisfied", "What you want"]
+        }
+      ]
+    },
+    {
+      "id": "b1.t06.l7", "title": "A complaint to a web shop", "kind": "writing",
+      "explain": [
+        { "type": "p", "text": "A good complaint is **polite, clear and complete**. Give your order number, say exactly what is wrong, say what you have already done and say what you expect (a refund, a new product or an apology). You may also give a date by which you want an answer." },
+        { "type": "table", "head": ["Part", "Example"], "rows": [["Betreft", "Betreft: klacht over bestelling 456789"], ["Situation", "Op 3 maart heb ik een lamp besteld."], ["Problem", "Het pakket is een week te laat bezorgd en de lamp is kapot."], ["Request", "Ik wil graag een nieuwe lamp of mijn geld terug."], ["Deadline", "Ik hoor graag binnen veertien dagen van u."]] },
+        { "type": "ex", "nl": "Ik ben niet tevreden over de levering van mijn bestelling.", "en": "I am not satisfied with the delivery of my order." },
+        { "type": "ex", "nl": "Ik hoop dat u dit probleem snel kunt oplossen.", "en": "I hope you can solve this problem quickly." },
+        { "type": "tip", "text": "Stay calm in writing. *Ik ben boos* is weaker than *Ik ben teleurgesteld* and *Ik verwacht dat u …*. Facts first, feelings second." }
+      ],
+      "items": [
+        {
+          "type": "write",
+          "task": "You ordered a coat from a web shop (order number 456789). It arrived a week late and it is the wrong size. Write a formal complaint: use a subject line, describe the problem, say what you have already done, say what you want and give a deadline.",
+          "points": ["A subject line with the order number", "What you ordered and what is wrong", "What you have already done", "What you want", "A deadline and a formal closing"],
+          "minWords": 100, "maxWords": 150,
+          "model": "Betreft: klacht over bestelling 456789. Geachte heer/mevrouw, op 3 maart heb ik een winterjas besteld bij uw webwinkel. Het pakket is pas een week later dan afgesproken bezorgd. Bovendien is de jas niet in de maat die ik heb besteld: ik had maat M besteld, maar ik heb maat XL gekregen. Ik heb vorige week al een e-mail gestuurd naar uw klantenservice, maar ik heb geen antwoord gekregen. Ik ben niet tevreden over de service. Ik wil graag de juiste jas in maat M ontvangen. Als dat niet kan, wil ik mijn geld terug. Ik hoor graag binnen veertien dagen van u. Met vriendelijke groet, Sanne Bakker"
+        },
+        {
+          "type": "write",
+          "task": "A forum asks: Should shops be open on Sundays? Write a short post with your opinion: give your position, two arguments and one disadvantage, and end with a conclusion.",
+          "points": ["Your opinion", "Two arguments", "A disadvantage", "A conclusion"],
+          "minWords": 60, "maxWords": 100,
+          "model": "Volgens mij moeten winkels op zondag open zijn. Ten eerste werken veel mensen in de week en hebben zij alleen in het weekend tijd voor boodschappen. Ten tweede is het gezellig om op zondag door de stad te lopen. Aan de andere kant moeten de medewerkers dan ook op zondag werken. Ik vind dat zij daarvoor extra geld moeten krijgen. Over het algemeen ben ik dus voor, als de medewerkers daar goed voor betaald worden."
+        }
+      ],
+      "sources": [
+        { "title": "Oefenen.nl: free practice (account needed)", "url": "https://oefenen.nl/" }
+      ]
+    }
+  ]
+}

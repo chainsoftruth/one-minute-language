@@ -1,0 +1,153 @@
+{
+  "id": "b1.t02", "level": "B1", "kind": "theme",
+  "title": "Education",
+  "subtitle": "Read a letter from school, learn how Dutch education works, talk to a teacher and write about absence",
+  "lessons": [
+    {
+      "id": "b1.t02.l1", "title": "School and levels", "kind": "vocab",
+      "vocab": [
+        "basisonderwijs", "voortgezet_onderwijs", "beroepsonderwijs", "hoger_onderwijs", "schooladvies", "eindtoets", "brugklas", "vmbo",
+        "havo", "vwo", "mbo", "hbo", "wo", "leerplicht", "leerplichtambtenaar", "mentor", "schooljaar", "schoolvakantie", "oudergesprek",
+        "afwezigheid", "verzuim", "schoolgids", "ouderbijdrage", "kleuter"
+      ]
+    },
+    {
+      "id": "b1.t02.l2", "title": "Studying and learning", "kind": "vocab",
+      "vocab": [
+        "tentamen", "herkansing", "studiepunt", "studiefinanciering", "studiekeuze", "opleidingsniveau", "taalles", "taalcoach",
+        "inburgeringscursus", "huiswerkbegeleiding", "bijles", "stageplek", "stageverslag", "onderzoek", "werkstuk", "afstuderen",
+        "inschrijven", "slagen_voor", "zakken_voor", "doubleren", "spijbelen", "samenvatten", "motivatie", "concentratie"
+      ]
+    },
+    {
+      "id": "b1.t02.l3", "title": "A letter from school", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "A school letter tells parents what is going to happen and what they must do. Look for the date and time, the rules and any deadline. Tap a word you don't know." }
+      ],
+      "text": "Beste ouders en verzorgers, het nieuwe schooljaar begint over twee weken. Wij nodigen u graag uit voor de ouderavond van de brugklassen. De avond is op donderdag 5 september om 19.30 uur in de aula van onze school. U ontmoet de mentor van uw kind en u hoort hoe de lessen verlopen. Ook kunt u vragen stellen over het rooster, het huiswerk en de gymlessen. Verder willen wij u iets vertellen over onze regels voor afwezigheid. Is uw kind ziek? Bel dan vóór half negen naar school. Moet uw kind naar de dokter of de tandarts? Probeer de afspraak dan buiten schooltijd te maken. Lukt dat echt niet, geef het dan minstens een dag van tevoren door aan de mentor. Wilt u een vrije dag buiten de schoolvakanties, bijvoorbeeld voor een bruiloft of een verhuizing? Dan moet u schriftelijk toestemming vragen aan de directeur. In Nederland geldt de leerplicht: kinderen moeten naar school tot hun zestiende jaar. Is een leerling vaak zonder reden afwezig, dan moeten wij dat melden aan de leerplichtambtenaar van de gemeente. Tot slot vragen wij u de ouderbijdrage van 60 euro vóór 1 oktober over te maken. Daarvan betalen wij de schoolreisjes en de feesten. Kunt u dat bedrag niet betalen? Neem dan contact op met de mentor. Wij zoeken dan samen naar een oplossing. Met vriendelijke groet, mevrouw Hendriks, directeur",
+      "items": [
+        { "type": "choice", "q": "Waarvoor nodigt de school de ouders uit?", "options": ["Voor een ouderavond van de brugklassen", "Voor een schoolreisje", "Voor een gesprek met de directeur"], "answer": 0, "en": "What does the school invite the parents to?" },
+        { "type": "choice", "q": "Wat moet je doen als je kind ziek is?", "options": ["Vóór half negen naar school bellen", "Een briefje meegeven als het weer beter is", "Een dag van tevoren een bericht sturen"], "answer": 0, "en": "What must you do if your child is ill?" },
+        { "type": "choice", "q": "Je gaat met je kind naar een bruiloft op een schooldag. Wat moet je doen?", "options": ["Schriftelijk toestemming vragen aan de directeur", "Het aan de mentor vertellen", "Niets, want het is een feest"], "answer": 0, "en": "You are taking your child to a wedding on a school day. What must you do?" },
+        { "type": "choice", "q": "Wanneer meldt de school een leerling bij de leerplichtambtenaar?", "options": ["Als de leerling vaak zonder reden afwezig is", "Als de leerling zestien jaar wordt", "Als de ouderbijdrage te laat is betaald"], "answer": 0, "en": "When does the school report a pupil to the truancy officer?" },
+        { "type": "choice", "q": "Je kunt de ouderbijdrage niet betalen. Wat staat er in de brief?", "options": ["Je neemt contact op met de mentor en samen zoeken jullie een oplossing", "Je kind mag niet mee op schoolreisje", "Je betaalt het in het volgende schooljaar"], "answer": 0, "en": "You cannot pay the parents' contribution. What does the letter say?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: B1 menu (reading texts)", "url": "https://nt2taalmenu.nl/nt2-b1-menu/" }
+      ]
+    },
+    {
+      "id": "b1.t02.l4", "title": "Education in the Netherlands", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "This text explains a system. Make a mental picture of the steps: primary school, secondary school (three levels), then vocational or higher education. Tap a word you don't know." }
+      ],
+      "text": "Het onderwijs in Nederland. Kinderen mogen vanaf vier jaar naar de basisschool, maar de leerplicht begint pas op vijfjarige leeftijd. De basisschool duurt acht jaar, van groep 1 tot en met groep 8. In groep 8 krijgen de leerlingen een schooladvies van hun leraar. Dat advies hangt af van de resultaten, de motivatie en de eindtoets van het kind. Daarna gaan de kinderen naar het voortgezet onderwijs. Er zijn drie hoofdniveaus: het vmbo duurt vier jaar, de havo vijf jaar en het vwo zes jaar. Met een havo-diploma kun je naar het hbo, met een vwo-diploma naar de universiteit. Na het vmbo kun je naar het mbo, een beroepsopleiding. In het mbo leer je een vak, bijvoorbeeld verzorgende of automonteur. Veel mbo-studenten werken en leren tegelijk, want ze lopen stage bij een bedrijf. Het hbo en de universiteit kennen een bachelor en daarna een master. Studenten betalen collegegeld, maar zij kunnen ook studiefinanciering krijgen. Je hoeft niet na elk niveau te stoppen: veel mensen stromen door naar een hogere opleiding. Ook volwassenen kunnen weer gaan leren, bijvoorbeeld op een taalschool of in een avondopleiding. Op de basisschool en de middelbare school betaal je als ouder bijna niets, behalve soms een kleine ouderbijdrage. Onderwijs is belangrijk, want wie een diploma heeft, vindt gemakkelijker werk.",
+      "items": [
+        { "type": "choice", "q": "Vanaf welke leeftijd moeten kinderen in Nederland naar school?", "options": ["Vanaf vijf jaar", "Vanaf vier jaar", "Vanaf zes jaar"], "answer": 0, "en": "From what age must children go to school in the Netherlands?" },
+        { "type": "choice", "q": "Waarvan hangt het schooladvies af?", "options": ["Van de resultaten, de motivatie en de eindtoets", "Alleen van de eindtoets", "Van de keuze van de ouders"], "answer": 0, "en": "What does the school advice depend on?" },
+        { "type": "choice", "q": "Welk diploma heb je nodig om naar de universiteit te gaan?", "options": ["Een vwo-diploma", "Een vmbo-diploma", "Een mbo-diploma"], "answer": 0, "en": "Which diploma do you need to go to university?" },
+        { "type": "choice", "q": "Wat is het mbo?", "options": ["Een beroepsopleiding waar je een vak leert", "Een school voor kleine kinderen", "Een opleiding op de universiteit"], "answer": 0, "en": "What is the mbo?" },
+        { "type": "choice", "q": "Wat zegt de tekst over het onderwijssysteem?", "options": ["Je kunt na een niveau doorstromen naar een hogere opleiding", "Je moet na elk niveau stoppen met leren", "Volwassenen mogen niet meer naar school"], "answer": 0, "en": "What does the text say about the education system?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: B1 menu (reading texts)", "url": "https://nt2taalmenu.nl/nt2-b1-menu/" }
+      ]
+    },
+    {
+      "id": "b1.t02.l5", "title": "A talk with the teacher", "kind": "listening",
+      "dialogue": [
+        { "who": "A", "nl": "Goedemiddag, meneer Yilmaz. Kom binnen. Ik wil graag met u praten over de vorderingen van Emre.", "en": "Good afternoon, Mr Yilmaz. Come in. I would like to talk to you about Emre's progress." },
+        { "who": "B", "nl": "Goedemiddag, mevrouw De Boer. Is er iets aan de hand?", "en": "Good afternoon, Ms De Boer. Is something wrong?" },
+        { "who": "A", "nl": "Nee hoor. Hij werkt hard en hij is erg gemotiveerd. Alleen met taal heeft hij soms moeite. Lezen en schrijven gaan niet altijd even goed.", "en": "No. He works hard and is very motivated. Only language is sometimes difficult for him. Reading and writing don't always go so well." },
+        { "who": "B", "nl": "Dat dacht ik al. Thuis spreken wij veel Turks, dus Nederlands oefent hij vooral op school.", "en": "I thought so. At home we speak a lot of Turkish, so he mostly practises Dutch at school." },
+        { "who": "A", "nl": "Dat is begrijpelijk. Ik raad u aan om elke dag twintig minuten met hem te lezen. Dan wordt zijn woordenschat snel groter.", "en": "That is understandable. I advise you to read with him for twenty minutes every day. Then his vocabulary will grow quickly." },
+        { "who": "B", "nl": "Dat kunnen we doen. Is er ook huiswerkbegeleiding op school?", "en": "We can do that. Is there also homework supervision at school?" },
+        { "who": "A", "nl": "Ja, op dinsdag en donderdag na schooltijd. Het is gratis, maar u moet hem wel aanmelden.", "en": "Yes, on Tuesdays and Thursdays after school. It is free, but you do have to register him." },
+        { "who": "B", "nl": "Prima. Hoe kan ik dat doen?", "en": "Fine. How can I do that?" },
+        { "who": "A", "nl": "Vul het formulier in dat ik u meegeef en lever het volgende week in bij de conciërge.", "en": "Fill in the form that I give you and hand it in next week at the caretaker's office." },
+        { "who": "B", "nl": "Dank u wel. Dan doen wij dat.", "en": "Thank you. We will do that." }
+      ],
+      "items": [
+        { "type": "listen", "nl": "Hij werkt hard en hij is erg gemotiveerd.", "q": "What does the teacher say about Emre?", "options": ["He works hard and is motivated", "He is often absent", "He is always late"], "answer": 0 },
+        { "type": "listen", "nl": "Lezen en schrijven gaan niet altijd even goed.", "q": "What is sometimes difficult for him?", "options": ["Reading and writing", "Maths", "Sports"], "answer": 0 },
+        { "type": "listen", "nl": "Ik raad u aan om elke dag twintig minuten met hem te lezen.", "q": "What does the teacher advise?", "options": ["Read with him for twenty minutes every day", "Send him to a language school", "Speak only Dutch at home"], "answer": 0 },
+        { "type": "listen", "nl": "Het is gratis, maar u moet hem wel aanmelden.", "q": "What is said about the homework supervision?", "options": ["It is free, but you must register him", "It costs money", "You don't have to register"], "answer": 0 },
+        { "type": "listen", "nl": "Vul het formulier in." },
+        { "type": "choice", "q": "Wanneer is er huiswerkbegeleiding?", "options": ["Op dinsdag en donderdag na schooltijd", "Elke dag voor schooltijd", "Alleen in de vakantie"], "answer": 0, "en": "When is there homework supervision?" },
+        { "type": "choice", "q": "Wat doet de vader met het formulier?", "options": ["Hij levert het volgende week in bij de conciërge", "Hij stuurt het naar de gemeente", "Hij geeft het aan Emre mee"], "answer": 0, "en": "What does the father do with the form?" }
+      ],
+      "sources": [
+        { "title": "Taalklas: free Dutch video course", "url": "https://www.taalklas.nl/" }
+      ]
+    },
+    {
+      "id": "b1.t02.l6", "title": "Calling the school", "kind": "speaking",
+      "dialogue": [
+        { "who": "A", "nl": "Basisschool De Regenboog, met Sanne. Waarmee kan ik u helpen?", "en": "De Regenboog primary school, Sanne speaking. How can I help you?" },
+        { "who": "B", "nl": "Goedemorgen. Ik bel over mijn zoon Emre. Hij is vandaag ziek en kan niet naar school komen.", "en": "Good morning. I am calling about my son Emre. He is ill today and cannot come to school." },
+        { "who": "A", "nl": "Dat is vervelend. Wat heeft hij?", "en": "That is unfortunate. What is wrong with him?" },
+        { "who": "B", "nl": "Hij heeft koorts en keelpijn. Ik denk dat hij een paar dagen thuis moet blijven.", "en": "He has a fever and a sore throat. I think he has to stay at home for a few days." },
+        { "who": "A", "nl": "Dank u voor het bericht. Wilt u het ook aan de mentor doorgeven?", "en": "Thank you for letting us know. Would you also pass it on to the mentor?" },
+        { "who": "B", "nl": "Ja, graag. Kan hij zijn huiswerk thuis maken? Kunt u het naar mij sturen?", "en": "Yes, please. Can he do his homework at home? Can you send it to me?" },
+        { "who": "A", "nl": "Dat regelen wij. De mentor stuurt het huiswerk vanmiddag naar u toe.", "en": "We will arrange that. The mentor will send the homework to you this afternoon." },
+        { "who": "B", "nl": "Dat is heel fijn. Moet ik een briefje meegeven als hij weer beter is?", "en": "That is very kind. Do I have to give him a note when he is better again?" },
+        { "who": "A", "nl": "Nee, dat is niet nodig. U hebt hem vandaag al afgemeld.", "en": "No, that is not necessary. You have already reported him absent today." },
+        { "who": "B", "nl": "Dank u wel. Tot ziens.", "en": "Thank you. Goodbye." },
+        { "who": "A", "nl": "Beterschap voor Emre!", "en": "Get well soon, Emre!" }
+      ],
+      "items": [
+        { "type": "speak", "nl": "Mijn zoon is vandaag ziek en kan niet naar school komen.", "en": "My son is ill today and cannot come to school." },
+        { "type": "speak", "nl": "Kunt u het huiswerk naar mij sturen?", "en": "Can you send the homework to me?" },
+        {
+          "type": "prompt",
+          "task": "Phone the school. Say who you are, which child is ill, what is wrong and for how long he or she will stay at home.",
+          "model": "Goedemorgen, met Peter de Wit. Mijn dochter Lisa zit in groep zes. Zij is ziek en heeft koorts. Ze blijft waarschijnlijk twee dagen thuis. Wilt u dat aan de mentor doorgeven?",
+          "seconds": 40,
+          "points": ["Who you are", "Which child is ill", "What is wrong", "How long the child stays at home"]
+        },
+        {
+          "type": "prompt",
+          "task": "You are at the parents' evening. Introduce yourself to the mentor of your child and ask two questions: one about homework and one about the rules for absence.",
+          "model": "Goedenavond, ik ben de vader van Lisa. Hoeveel huiswerk krijgt zij per week? En wat moet ik doen als zij ziek is?",
+          "seconds": 30,
+          "points": ["Introduce yourself", "A question about homework", "A question about absence"]
+        },
+        {
+          "type": "prompt",
+          "task": "Tell about your own education: how long you went to school, what level you reached and what you liked most.",
+          "model": "Ik ben twaalf jaar naar school gegaan. Daarna heb ik drie jaar op de universiteit gestudeerd. Ik vond de lessen over geschiedenis het leukst, want de leraar vertelde mooie verhalen.",
+          "seconds": 50,
+          "points": ["How long you went to school", "The level you reached", "What you liked most"]
+        }
+      ]
+    },
+    {
+      "id": "b1.t02.l7", "title": "Writing to a teacher", "kind": "writing",
+      "explain": [
+        { "type": "p", "text": "A message to a teacher or a school is polite and short. Say **who** you are (your child's name and class), **what** the situation is and **what you ask**. Use *u* and finish with *Met vriendelijke groet*." },
+        { "type": "ex", "nl": "Mijn zoon Emre uit groep 6 is vandaag niet op school.", "en": "My son Emre from group 6 is not at school today." },
+        { "type": "ex", "nl": "Kunt u mij laten weten wat hij moet inhalen?", "en": "Can you let me know what he has to catch up on?" },
+        { "type": "tip", "text": "Useful: *Ik schrijf u, omdat …*, *Met het oog op …*, *Alvast bedankt voor uw begrip*." }
+      ],
+      "items": [
+        {
+          "type": "write",
+          "task": "Your son Emre (group 6) was ill and could not go to school on Monday and Tuesday. Write an email to his teacher, Ms De Boer: say who you are, what was wrong, when he will be back and ask what homework he must catch up on.",
+          "points": ["A formal greeting", "Who you are and the reason for your email", "What was wrong and since when", "When he will be back", "A question about the homework"],
+          "minWords": 60, "maxWords": 100,
+          "model": "Geachte mevrouw De Boer, ik ben de vader van Emre uit groep 6. Hij was maandag en dinsdag ziek en kon niet naar school komen. Hij had koorts en keelpijn. Gelukkig gaat het nu beter. Woensdag is hij weer op school. Kunt u mij laten weten welk huiswerk hij moet inhalen? Dan maakt hij dat deze week thuis. Alvast hartelijk dank voor uw begrip. Met vriendelijke groet, Mehmet Yilmaz"
+        },
+        {
+          "type": "write",
+          "task": "You follow a Dutch course and you find reading difficult. Write an email to your teacher: say what is difficult, ask if there is extra help (for example a language coach or extra lessons) and say when you are free.",
+          "points": ["A greeting", "What is difficult for you", "A question about extra help", "When you are free"],
+          "minWords": 60, "maxWords": 100,
+          "model": "Beste meneer Smit, ik volg sinds september uw cursus Nederlands en ik vind de les erg leuk. Alleen het lezen vind ik nog moeilijk, want de teksten zijn lang en er staan veel nieuwe woorden in. Is er extra hulp, bijvoorbeeld een taalcoach of een extra les? Ik heb tijd op dinsdag en donderdag na vier uur. Ik hoor graag van u wat de mogelijkheden zijn. Alvast bedankt. Met vriendelijke groet, Amira Said"
+        }
+      ],
+      "sources": [
+        { "title": "Oefenen.nl: free practice (account needed)", "url": "https://oefenen.nl/" }
+      ]
+    }
+  ]
+}

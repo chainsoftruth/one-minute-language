@@ -34,6 +34,20 @@ fun expectedAnswer(item: Item): String = when (item) {
     is Item.OpenPrompt, is Item.Write -> ""
 }
 
+/** A short line that says which item it was, for the list of wrong answers at the end of a test lesson. */
+fun itemPrompt(item: Item): String = when (item) {
+    is Item.Choice -> item.q
+    is Item.Gap -> item.text
+    is Item.Order -> item.en ?: "Put the words in order"
+    is Item.Transform -> "${item.instruction}: ${item.q}"
+    is Item.Translate -> item.en
+    is Item.Match -> "Match the pairs"
+    is Item.Listen -> item.q ?: "Listening"
+    is Item.Speak -> item.en
+    is Item.OpenPrompt -> item.task
+    is Item.Write -> item.task
+}
+
 /** Listen items: a picked option, or (no options) a dictation checked strictly, accents forgiven. */
 fun gradeListen(item: Item.Listen, input: String): ItemResult =
     if (item.options.isEmpty()) gradeText(item, input) else gradeChoice(Item.Choice(item.nl, item.options, item.answer), input.toInt())

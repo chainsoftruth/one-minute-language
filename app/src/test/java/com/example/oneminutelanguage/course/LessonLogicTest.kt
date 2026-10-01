@@ -71,6 +71,14 @@ class LessonLogicTest {
         assertTrue(q.isDone)
     }
 
+    @Test fun wrongItemsOfATestAreListedWithTheirRightAnswer() {
+        val q = LessonQueue(listOf(choice, gap), requeue = false)
+        q.answer(true)
+        q.answer(false)
+        assertEquals(listOf(itemPrompt(gap) to expectedAnswer(gap)), q.wrongItems.map { itemPrompt(it) to expectedAnswer(it) })
+        assertEquals("Wat is dit?", itemPrompt(Item.Choice("Wat is dit?", listOf("a", "b"), 0)))
+    }
+
     @Test fun skippedItemsDoNotCount() {
         val q = LessonQueue(listOf(choice, gap))
         q.skip()

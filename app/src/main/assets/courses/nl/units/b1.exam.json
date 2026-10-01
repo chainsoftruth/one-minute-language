@@ -1,0 +1,177 @@
+{
+  "id": "b1.exam", "level": "B1", "kind": "checkpoint",
+  "title": "B1 practice exam",
+  "subtitle": "Reading, listening, writing and speaking tasks in the style of the official exams, with the score and your mistakes at the end",
+  "lessons": [
+    {
+      "id": "b1.exam.l1", "title": "Reading 1 of 5: a work email", "kind": "test",
+      "explain": [
+        { "type": "p", "text": "This practice exam follows the **format** of the official B1 exams: five reading texts with three or four questions each, six listening fragments, three writing tasks and six speaking tasks. The texts and questions are new; they are not copied from any real exam." },
+        { "type": "tip", "text": "In a test lesson you get **no feedback while you answer**. At the end you see your score and the questions you got wrong. Take about ten minutes for each reading text. Do the skills in any order." }
+      ],
+      "text": "Onderwerp: nieuwe regels voor thuiswerken. Beste collega's, vanaf 1 april geldt er een nieuwe regeling voor thuiswerken. Iedereen mag voortaan twee dagen per week thuiswerken, als de teamleider daarmee akkoord gaat. Uw teamleider maakt hierover afspraken met u. Wij vragen u om op de dagen dat u thuiswerkt, tussen negen en vijf uur bereikbaar te zijn per telefoon en per e-mail. Op dinsdag is er altijd een teamoverleg. Op die dag werkt iedereen op kantoor. Voor nieuwe collega's geldt een uitzondering: in de eerste drie maanden werkt u op kantoor, zodat u uw collega's goed leert kennen. Wilt u thuis een werkplek inrichten? Dan krijgt u eenmalig een bijdrage van 150 euro voor een bureaustoel of een beeldscherm. U vraagt die aan met het formulier op het intranet en u stuurt de rekening mee. Hebt u vragen? Neem dan contact op met personeelszaken. Met vriendelijke groet, Lotte de Wit, personeelszaken",
+      "items": [
+        { "type": "choice", "q": "Wie moet akkoord gaan als je thuis wilt werken?", "options": ["De teamleider", "Personeelszaken", "De directeur"], "answer": 0 },
+        { "type": "choice", "q": "Wat geldt er voor nieuwe collega's?", "options": ["Zij werken de eerste drie maanden op kantoor", "Zij mogen drie maanden lang thuiswerken", "Zij krijgen geen bijdrage voor een werkplek"], "answer": 0 },
+        { "type": "choice", "q": "Wat moet je doen om de bijdrage van 150 euro te krijgen?", "options": ["Het formulier invullen en de rekening meesturen", "De rekening aan de teamleider geven", "Een e-mail sturen naar de directeur"], "answer": 0 },
+        { "type": "choice", "q": "Op welke dag werkt iedereen op kantoor?", "options": ["Op dinsdag", "Op maandag", "Op vrijdag"], "answer": 0 }
+      ]
+    },
+    {
+      "id": "b1.exam.l2", "title": "Reading 2 of 5: a news article", "kind": "test",
+      "text": "Nieuwe bibliotheek geopend. De gemeente Zonnedaal heeft gisteren de nieuwe bibliotheek geopend in het oude postkantoor. Burgemeester Karin Smit knipte het lint door. De nieuwe bibliotheek is veel groter dan de oude. Behalve boeken zijn er een leescafé, een speelhoek voor kinderen en een ruimte met computers waar mensen rustig kunnen werken. Op maandag en woensdag is er een taalcafé. Daar kunnen nieuwkomers gratis Nederlands oefenen met vrijwilligers. De bibliotheek is zes dagen per week open en op donderdag zelfs tot negen uur 's avonds. Kinderen onder de achttien jaar betalen niets voor een lidmaatschap. Volwassenen betalen 40 euro per jaar. Volgens directeur Peter Mulder komen er nu al meer bezoekers dan in de oude bibliotheek. Vooral studenten gebruiken de rustige werkplekken, zegt hij. De gemeente hoopt dat nog meer mensen de weg naar de bibliotheek vinden.",
+      "items": [
+        { "type": "choice", "q": "Waar is de nieuwe bibliotheek?", "options": ["In het oude postkantoor", "Naast het gemeentehuis", "In een nieuw gebouw bij het station"], "answer": 0 },
+        { "type": "choice", "q": "Wat kunnen nieuwkomers op maandag en woensdag doen?", "options": ["Gratis Nederlands oefenen", "Een lidmaatschap kopen", "Boeken lenen zonder pas"], "answer": 0 },
+        { "type": "choice", "q": "Wanneer is de bibliotheek het langst open?", "options": ["Op donderdag", "Op zaterdag", "Op maandag"], "answer": 0 },
+        { "type": "choice", "q": "Wat zegt de directeur?", "options": ["Er komen meer bezoekers dan vroeger, vooral studenten", "Er komen minder bezoekers dan vroeger", "Het gebouw is te klein voor de computers"], "answer": 0 }
+      ]
+    },
+    {
+      "id": "b1.exam.l3", "title": "Reading 3 of 5: a letter from the council", "kind": "test",
+      "text": "Betreft: werkzaamheden in de Beukenlaan. Beste bewoners van de Beukenlaan, vanaf maandag 10 juni wordt uw straat vernieuwd. De werkzaamheden duren ongeveer zes weken. Wat betekent dit voor u? In die periode kunnen auto's de straat niet in. Voetgangers en fietsers kunnen er wel door. Uw auto kunt u parkeren op het parkeerterrein bij het zwembad. Daarvoor hebt u een vergunning nodig, die u gratis kunt ophalen bij het gemeentehuis. Het afval wordt opgehaald aan het begin van de straat. Zet uw container daar neer op de ophaaldag. Hulpdiensten, zoals de brandweer en de ambulance, kunnen de straat altijd in. Verwacht u een bezorging of verhuist u binnenkort? Meld dat dan minstens drie dagen van tevoren bij de gemeente. Het werk begint elke dag om zeven uur 's ochtends en eindigt om vier uur. Wij begrijpen dat dit vervelend is en bedanken u voor uw begrip. Met vriendelijke groet, afdeling Openbare Werken",
+      "items": [
+        { "type": "choice", "q": "Hoe lang duren de werkzaamheden?", "options": ["Ongeveer zes weken", "Ongeveer drie dagen", "Ongeveer twee maanden"], "answer": 0 },
+        { "type": "choice", "q": "Waar kunnen de bewoners hun auto parkeren?", "options": ["Op het parkeerterrein bij het zwembad", "Voor het gemeentehuis", "Aan het begin van de straat"], "answer": 0 },
+        { "type": "choice", "q": "Wat moet je doen als je een bezorging verwacht?", "options": ["Dat minstens drie dagen van tevoren melden bij de gemeente", "De bezorger een vergunning geven", "De container naar het begin van de straat brengen"], "answer": 0 },
+        { "type": "choice", "q": "Wie kan de straat tijdens de werkzaamheden wel in met een auto?", "options": ["De brandweer en de ambulance", "Alle bewoners met een vergunning", "De vuilniswagen"], "answer": 0 }
+      ]
+    },
+    {
+      "id": "b1.exam.l4", "title": "Reading 4 of 5: a message to a friend", "kind": "test",
+      "text": "Hoi Marit, bedankt voor je uitnodiging voor je verjaardag! Ik kom graag. Ik heb wel een vraag. In je bericht stond zaterdag om vier uur, maar Jeroen zei dat je het feest hebt verplaatst naar zondag. Klopt dat? Als het zondag is, kan ik helaas niet om vier uur komen, want ik moet dan tot vijf uur werken. Ik kan om zes uur bij je zijn. Is dat te laat voor het eten? Ik wil ook graag iets meenemen. Jij schreef dat iedereen iets te eten meeneemt, dus ik maak een salade. Moet ik ook iets te drinken meebrengen? Verder wil ik weten of ik mijn fiets bij jou kan zetten, want ik kom niet met de auto. Laat je me snel iets weten? Dan kan ik de boodschappen op tijd doen. Ik heb er zin in! Groetjes, Sanne",
+      "items": [
+        { "type": "choice", "q": "Waarom schrijft Sanne dit bericht?", "options": ["Ze wil weten of het feest verplaatst is en hoe laat ze kan komen", "Ze kan niet naar het feest komen", "Ze wil een cadeau voor Marit kopen"], "answer": 0 },
+        { "type": "choice", "q": "Waarom kan Sanne niet om vier uur komen?", "options": ["Ze moet tot vijf uur werken", "Ze heeft een andere afspraak met Jeroen", "Ze moet nog boodschappen doen"], "answer": 0 },
+        { "type": "choice", "q": "Wat wil Sanne meenemen naar het feest?", "options": ["Een salade", "Een taart", "Een fles wijn"], "answer": 0 },
+        { "type": "choice", "q": "Hoe gaat Sanne naar het feest?", "options": ["Op de fiets", "Met de auto", "Met de trein"], "answer": 0 }
+      ]
+    },
+    {
+      "id": "b1.exam.l5", "title": "Reading 5 of 5: an advertisement", "kind": "test",
+      "text": "Open dag in buurthuis De Ontmoeting. Wilt u nieuwe mensen ontmoeten of iets nieuws leren? Kom dan op zaterdag 14 september naar onze open dag, van tien tot vier uur. Het hele huis is open. U kunt kennismaken met onze cursussen, zoals schilderen, koken en Nederlands praten, en met onze clubs: de wandelclub, de kaartclub en de fotoclub. Er zijn rondleidingen voor wie het gebouw nog niet kent en kinderen kunnen meedoen aan een speurtocht. Om twaalf uur is er soep voor iedereen. De toegang is gratis en u hoeft zich niet aan te melden. Wilt u een cursus volgen? Dan kunt u zich die dag inschrijven en krijgt u tien procent korting. Het buurthuis is makkelijk te bereiken met bus 12. De halte is vlak voor de deur. Kunt u niet komen? Op onze website staat het hele programma.",
+      "items": [
+        { "type": "choice", "q": "Wat kun je op de open dag doen?", "options": ["Kennismaken met cursussen en clubs", "Een cursus volgen die dag", "Een rondleiding door de stad maken"], "answer": 0 },
+        { "type": "choice", "q": "Wat kost de open dag?", "options": ["Niets, en je hoeft je niet aan te melden", "Niets, maar je moet je vooraf aanmelden", "Tien procent minder dan normaal"], "answer": 0 },
+        { "type": "choice", "q": "Wat gebeurt er om twaalf uur?", "options": ["Er is soep voor iedereen", "Er begint een rondleiding", "De kinderen beginnen aan een speurtocht"], "answer": 0 },
+        { "type": "choice", "q": "Wat is het voordeel als je je op de open dag inschrijft voor een cursus?", "options": ["Je krijgt tien procent korting", "Je mag gratis meedoen", "Je krijgt een gratis rondleiding"], "answer": 0 }
+      ]
+    },
+    {
+      "id": "b1.exam.l6", "title": "Listening: six fragments", "kind": "test",
+      "explain": [
+        { "type": "tip", "text": "Each fragment is played by tapping the speaker; you may listen as often as you like in this practice. In the real exam you hear each fragment once or twice. Every fragment has two or three questions." }
+      ],
+      "items": [
+        { "type": "listen", "nl": "Dames en heren, voor uw aandacht. De intercity naar Groningen van half drie vertrekt vandaag niet van spoor vier, maar van spoor zeven. Door werkzaamheden rijdt deze trein tot Zwolle een andere route. Daardoor is de reistijd twintig minuten langer. Reizigers naar Meppel kunnen overstappen in Zwolle. Wij bieden u onze excuses aan voor het ongemak.", "q": "Van welk spoor vertrekt de trein naar Groningen?", "options": ["Van spoor zeven", "Van spoor vier", "Van spoor twintig"], "answer": 0 },
+        { "type": "listen", "nl": "Dames en heren, voor uw aandacht. De intercity naar Groningen van half drie vertrekt vandaag niet van spoor vier, maar van spoor zeven. Door werkzaamheden rijdt deze trein tot Zwolle een andere route. Daardoor is de reistijd twintig minuten langer. Reizigers naar Meppel kunnen overstappen in Zwolle. Wij bieden u onze excuses aan voor het ongemak.", "q": "Waarom is de reistijd langer?", "options": ["De trein rijdt een andere route door werkzaamheden", "Er is een storing aan de trein", "De trein stopt bij meer stations"], "answer": 0 },
+        { "type": "listen", "nl": "Goedemorgen, u spreekt met de assistente van tandarts Van Dam. Uw afspraak van donderdagmiddag moet helaas worden verplaatst, omdat de tandarts ziek is. Wij kunnen u een nieuwe afspraak aanbieden op maandag om kwart over negen of op dinsdagmiddag om drie uur. Wilt u ons vóór woensdag laten weten wat u wilt? U kunt bellen of een e-mail sturen. Als wij niets van u horen, bellen wij u op woensdag zelf.", "q": "Waarom wordt de afspraak verplaatst?", "options": ["De tandarts is ziek", "De patiënt heeft gebeld", "De praktijk is dicht"], "answer": 0 },
+        { "type": "listen", "nl": "Goedemorgen, u spreekt met de assistente van tandarts Van Dam. Uw afspraak van donderdagmiddag moet helaas worden verplaatst, omdat de tandarts ziek is. Wij kunnen u een nieuwe afspraak aanbieden op maandag om kwart over negen of op dinsdagmiddag om drie uur. Wilt u ons vóór woensdag laten weten wat u wilt? U kunt bellen of een e-mail sturen. Als wij niets van u horen, bellen wij u op woensdag zelf.", "q": "Wat moet de patiënt doen?", "options": ["Vóór woensdag laten weten welke nieuwe tijd hij wil", "Op donderdag toch naar de tandarts gaan", "Een nieuwe tandarts zoeken"], "answer": 0 },
+        { "type": "listen", "nl": "Goedemorgen, u spreekt met de assistente van tandarts Van Dam. Uw afspraak van donderdagmiddag moet helaas worden verplaatst, omdat de tandarts ziek is. Wij kunnen u een nieuwe afspraak aanbieden op maandag om kwart over negen of op dinsdagmiddag om drie uur. Wilt u ons vóór woensdag laten weten wat u wilt? U kunt bellen of een e-mail sturen. Als wij niets van u horen, bellen wij u op woensdag zelf.", "q": "Wat gebeurt er als de patiënt niets laat weten?", "options": ["De assistente belt hem op woensdag", "De afspraak vervalt", "Hij krijgt een brief"], "answer": 0 },
+        { "type": "listen", "nl": "Het weer voor morgen. In het noorden is het vanochtend bewolkt en regent het, maar in de loop van de middag wordt het droog en komt de zon erdoor. In het zuiden is het de hele dag zonnig, met temperaturen tot twintig graden. Aan de kust waait een krachtige wind. Zwemmen in zee wordt afgeraden. In het westen kan er in de ochtend mist zijn.", "q": "Hoe is het weer morgen in het zuiden?", "options": ["De hele dag zonnig", "Eerst regen, later droog", "Bewolkt met mist"], "answer": 0 },
+        { "type": "listen", "nl": "Het weer voor morgen. In het noorden is het vanochtend bewolkt en regent het, maar in de loop van de middag wordt het droog en komt de zon erdoor. In het zuiden is het de hele dag zonnig, met temperaturen tot twintig graden. Aan de kust waait een krachtige wind. Zwemmen in zee wordt afgeraden. In het westen kan er in de ochtend mist zijn.", "q": "Wat wordt aan de kust afgeraden?", "options": ["Zwemmen in zee", "Fietsen langs het strand", "Autorijden in de mist"], "answer": 0 },
+        { "type": "listen", "nl": "Hoi Jeroen, met Anja. Ik bel over de vergadering van morgen. Die begint niet om tien uur, maar om half elf, omdat de directeur eerst een andere afspraak heeft. We zitten ook niet in kamer twee, maar in de grote vergaderzaal op de eerste verdieping. Kun jij de presentatie meenemen op een usb-stick? Mijn laptop doet het niet goed. Bedankt, tot morgen!", "q": "Hoe laat begint de vergadering?", "options": ["Om half elf", "Om tien uur", "Om elf uur"], "answer": 0 },
+        { "type": "listen", "nl": "Hoi Jeroen, met Anja. Ik bel over de vergadering van morgen. Die begint niet om tien uur, maar om half elf, omdat de directeur eerst een andere afspraak heeft. We zitten ook niet in kamer twee, maar in de grote vergaderzaal op de eerste verdieping. Kun jij de presentatie meenemen op een usb-stick? Mijn laptop doet het niet goed. Bedankt, tot morgen!", "q": "Waar is de vergadering?", "options": ["In de grote vergaderzaal op de eerste verdieping", "In kamer twee", "In het kantoor van de directeur"], "answer": 0 },
+        { "type": "listen", "nl": "Hoi Jeroen, met Anja. Ik bel over de vergadering van morgen. Die begint niet om tien uur, maar om half elf, omdat de directeur eerst een andere afspraak heeft. We zitten ook niet in kamer twee, maar in de grote vergaderzaal op de eerste verdieping. Kun jij de presentatie meenemen op een usb-stick? Mijn laptop doet het niet goed. Bedankt, tot morgen!", "q": "Wat moet Jeroen meenemen?", "options": ["De presentatie op een usb-stick", "Zijn laptop", "Een lijst met namen"], "answer": 0 },
+        { "type": "listen", "nl": "Het openbaar vervoer in de grote steden wordt volgend jaar duurder. De prijzen stijgen met gemiddeld drie procent. Volgens de vervoerders is dat nodig, omdat de kosten voor energie en personeel zijn gestegen. Reizigersorganisaties zijn er niet blij mee. Zij vinden dat eerst de kwaliteit beter moet worden: er rijden te weinig treinen in de spits en veel stations zijn niet toegankelijk voor mensen in een rolstoel.", "q": "Waarom worden de prijzen volgens de vervoerders hoger?", "options": ["De kosten voor energie en personeel zijn gestegen", "Er rijden meer treinen", "De stations zijn vernieuwd"], "answer": 0 },
+        { "type": "listen", "nl": "Het openbaar vervoer in de grote steden wordt volgend jaar duurder. De prijzen stijgen met gemiddeld drie procent. Volgens de vervoerders is dat nodig, omdat de kosten voor energie en personeel zijn gestegen. Reizigersorganisaties zijn er niet blij mee. Zij vinden dat eerst de kwaliteit beter moet worden: er rijden te weinig treinen in de spits en veel stations zijn niet toegankelijk voor mensen in een rolstoel.", "q": "Wat vinden de reizigersorganisaties?", "options": ["De kwaliteit moet eerst beter worden", "De prijzen zijn nu te laag", "Er moeten meer stations komen"], "answer": 0 },
+        { "type": "listen", "nl": "Veel mensen slapen slecht in de zomer. Dat komt vaak doordat het in de slaapkamer te warm is. Een paar tips. Zet 's ochtends vroeg de ramen open en doe ze overdag dicht, zodat de warmte buiten blijft. Drink 's avonds geen koffie of alcohol, want daarvan slaap je slechter. Als u niet kunt slapen, kijk dan niet op uw telefoon, maar lees een boek. Duren de problemen langer dan een maand? Ga dan naar uw huisarts.", "q": "Waardoor slapen veel mensen in de zomer slecht?", "options": ["Het is in de slaapkamer te warm", "Ze drinken te weinig water", "Ze gaan te vroeg naar bed"], "answer": 0 },
+        { "type": "listen", "nl": "Veel mensen slapen slecht in de zomer. Dat komt vaak doordat het in de slaapkamer te warm is. Een paar tips. Zet 's ochtends vroeg de ramen open en doe ze overdag dicht, zodat de warmte buiten blijft. Drink 's avonds geen koffie of alcohol, want daarvan slaap je slechter. Als u niet kunt slapen, kijk dan niet op uw telefoon, maar lees een boek. Duren de problemen langer dan een maand? Ga dan naar uw huisarts.", "q": "Wat moet je 's avonds beter niet drinken?", "options": ["Koffie en alcohol", "Water en thee", "Melk en sap"], "answer": 0 },
+        { "type": "listen", "nl": "Veel mensen slapen slecht in de zomer. Dat komt vaak doordat het in de slaapkamer te warm is. Een paar tips. Zet 's ochtends vroeg de ramen open en doe ze overdag dicht, zodat de warmte buiten blijft. Drink 's avonds geen koffie of alcohol, want daarvan slaap je slechter. Als u niet kunt slapen, kijk dan niet op uw telefoon, maar lees een boek. Duren de problemen langer dan een maand? Ga dan naar uw huisarts.", "q": "Wanneer moet je naar de huisarts?", "options": ["Als de slaapproblemen langer dan een maand duren", "Als je een nacht slecht slaapt", "Als je in de zomer niet kunt slapen"], "answer": 0 }
+      ]
+    },
+    {
+      "id": "b1.exam.l7", "title": "Writing: three tasks", "kind": "test",
+      "explain": [
+        { "type": "tip", "text": "Writing tasks are not marked by the app. After each task you can check your text with the grammar check (if you switched it on in Settings) and compare it with the model answer. Look at the required points: a good text covers every one of them." }
+      ],
+      "items": [
+        {
+          "type": "write",
+          "task": "Task 1, a form. You want to sign up for a Dutch course. Fill in the online form in short sentences: your name, your date of birth, your address, the level you want to start at and why you want to learn Dutch.",
+          "points": ["Name", "Date of birth", "Address", "The level", "The reason, in one or two sentences"],
+          "minWords": 20, "maxWords": 45,
+          "model": "Naam: Amira Said. Geboortedatum: 12 mei 1995. Adres: Kastanjelaan 8, Zonnedaal. Niveau: B1. Reden: ik wil beter Nederlands spreken, omdat ik graag een betere baan wil vinden."
+        },
+        {
+          "type": "write",
+          "task": "Task 2, a short message. You are going on holiday next week and your neighbour is going to water your plants. Write a short message to her: ask her kindly, say when you are away, say where the key is and thank her.",
+          "points": ["Ask her to water the plants", "When you are away", "Where the key is", "Thank her"],
+          "minWords": 40, "maxWords": 70,
+          "model": "Hoi Els, volgende week ga ik op vakantie. Wil jij mijn planten water geven? Ik ben van maandag tot en met zondag weg. De sleutel ligt onder de grote bloempot naast de voordeur. Je hoeft maar twee keer te komen, op woensdag en op zaterdag. Heel erg bedankt! Ik neem iets lekkers voor je mee. Groetjes, Amira"
+        },
+        {
+          "type": "write",
+          "task": "Task 3, an email. You follow a Dutch course on Tuesday evening, but you have a new job and from next month you are working on Tuesday evenings. Write a formal email to the language school: say who you are and which group you are in, ask for a place in the Thursday evening group, explain why and ask what you have to do.",
+          "points": ["A formal greeting", "Who you are and which group you are in", "Your request", "The reason", "A question about what you must do", "A formal closing"],
+          "minWords": 100, "maxWords": 150,
+          "model": "Geachte heer/mevrouw, ik ben Amira Said en ik zit sinds september in de groep van dinsdagavond, niveau B1. Ik heb een nieuwe baan en vanaf volgende maand moet ik op dinsdagavond werken. Daarom kan ik niet meer naar de les komen. Ik wil de cursus echter graag afmaken, want ik vind de lessen erg leuk en ik leer veel. Is er nog een plek in de groep van donderdagavond, ook op niveau B1? Dan kan ik vanaf volgende maand op donderdag komen. Wat moet ik doen om van groep te wisselen? Moet ik een formulier invullen of kan ik het met u regelen per e-mail? Ik hoor graag zo snel mogelijk van u. Alvast hartelijk dank voor uw hulp. Met vriendelijke groet, Amira Said"
+        }
+      ]
+    },
+    {
+      "id": "b1.exam.l8", "title": "Speaking: six tasks", "kind": "test",
+      "explain": [
+        { "type": "tip", "text": "Speak out loud, as in the real exam. Each task gives you a situation; answer in full sentences and always give a **reason** or an **example**. After each task you can compare with the model answer. Think of about 30 to 60 seconds per answer." }
+      ],
+      "items": [
+        {
+          "type": "prompt",
+          "task": "Task 1. What do you like to do in your free time and why?",
+          "model": "In mijn vrije tijd ga ik graag wandelen, omdat ik dan alles kan vergeten en veel frisse lucht krijg. Soms ga ik met mijn vriendin, maar ik vind het ook fijn om alleen te lopen. Verder lees ik veel, vooral op de bank met een kop thee.",
+          "seconds": 40,
+          "points": ["What you do", "A reason", "An example or extra detail"]
+        },
+        {
+          "type": "prompt",
+          "task": "Task 2. Should children learn to programme at school? Give your opinion with at least one reason.",
+          "model": "Volgens mij is het een goed idee dat kinderen leren programmeren. Bijna alles wat we gebruiken, werkt met computers, dus het is handig om te begrijpen hoe dat werkt. Aan de andere kant moeten kinderen ook nog genoeg leren lezen en rekenen. Over het algemeen vind ik dat het een keuzevak mag zijn.",
+          "seconds": 50,
+          "points": ["Your opinion", "A reason", "Maybe a disadvantage"]
+        },
+        {
+          "type": "prompt",
+          "task": "Task 3. Describe a situation. You are at the station and your train is cancelled. There are many people at the information desk. What do you do and what do you ask?",
+          "model": "Mijn trein is geannuleerd en er staat een lange rij bij de balie. Ik kijk eerst op mijn telefoon wanneer de volgende trein gaat. Als dat niet lukt, ga ik naar de balie en vraag ik: Wanneer gaat er een andere trein naar Utrecht? Ik vraag ook of ik een bericht voor mijn werk kan sturen, want ik ben te laat.",
+          "seconds": 50,
+          "points": ["What you do first", "What you ask", "Another action"]
+        },
+        {
+          "type": "prompt",
+          "task": "Task 4. Tell about something that happened to you that you did not expect. What happened, what did you do and what did you think of it?",
+          "model": "Vorig jaar kreeg ik een brief van de gemeente. Ik dacht dat ik een boete had, maar het was een uitnodiging voor een gratis cursus. Ik ben er naartoe gegaan en ik heb daar veel nieuwe mensen ontmoet. Ik vond het een leuke verrassing.",
+          "seconds": 60,
+          "points": ["What happened", "What you did", "What you thought"]
+        },
+        {
+          "type": "prompt",
+          "task": "Task 5. Phone the doctor's assistant. You have an appointment tomorrow, but you cannot come. Say who you are, cancel the appointment, give a reason and ask for a new appointment.",
+          "model": "Goedemorgen, met Mark de Wit. Ik heb morgen om tien uur een afspraak, maar ik kan helaas niet komen, want ik moet voor mijn werk naar een andere stad. Kan ik een nieuwe afspraak maken? Volgende week woensdag past mij het beste, liefst in de ochtend.",
+          "seconds": 50,
+          "points": ["Who you are", "Cancel the appointment", "The reason", "Ask for a new appointment"]
+        },
+        {
+          "type": "prompt",
+          "task": "Task 6. A friend has been offered a job in another city, but has lived in this city for ten years. Give your friend advice.",
+          "model": "Als ik jou was, zou ik de baan nemen. Het is een kans om iets nieuws te proberen en je kunt altijd terug. Ik zou eerst een weekend naar die stad gaan om te kijken of je er wilt wonen. Je vrienden kun je ook blijven zien, want met de trein is het maar twee uur reizen.",
+          "seconds": 50,
+          "points": ["Advice with Als ik jou was", "A reason", "A practical tip"]
+        }
+      ]
+    },
+    {
+      "id": "b1.exam.l9", "title": "Official practice exams", "kind": "test",
+      "explain": [
+        { "type": "p", "text": "Well done. The app cannot replace the real practice material. The sites below are free and official or close to it: they have exams with sound files, answer keys and the real task formats, so you can see exactly how the integration exam and the State Exam NT2 look." },
+        { "type": "tip", "text": "Do one complete exam under exam conditions (no dictionary, a timer, no pauses) and check your answers with the key. Do the weakest skill again with the practice lessons in this course." }
+      ],
+      "sources": [
+        { "title": "DUO Inburgeren: the integration exams (official)", "url": "https://www.inburgeren.nl/" },
+        { "title": "Staatsexamens NT2: official site", "url": "https://www.staatsexamensnt2.nl/" },
+        { "title": "Oefenexamens NT2: free practice exams", "url": "https://oefenexamensnt2.nl/" },
+        { "title": "Inburgering.nl: B1 practice exams", "url": "https://www.inburgering.nl/oefenexamens-b1" },
+        { "title": "NT2 TaalMenu: B1 menu", "url": "https://nt2taalmenu.nl/nt2-b1-menu/" }
+      ]
+    }
+  ]
+}

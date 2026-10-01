@@ -417,6 +417,22 @@ private fun DonePhase(viewModel: LessonViewModel, onClose: () -> Unit, onNextLes
             style = MaterialTheme.typography.bodyLarge,
             textAlign = TextAlign.Center
         )
+        if (viewModel.wrongSummary.isNotEmpty()) {
+            // Test lessons give no feedback while you answer, so the wrong items are listed here.
+            Spacer(Modifier.height(16.dp))
+            Column(
+                modifier = Modifier.weight(1f, fill = false).verticalScroll(rememberScrollState()),
+                verticalArrangement = Arrangement.spacedBy(8.dp)
+            ) {
+                viewModel.wrongSummary.forEach { (asked, right) ->
+                    Column {
+                        Text(asked, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        Text("✗ → $right", style = MaterialTheme.typography.bodyLarge)
+                    }
+                    HorizontalDivider()
+                }
+            }
+        }
         Spacer(Modifier.height(32.dp))
         viewModel.nextLesson?.let { next ->
             Button(onClick = { onNextLesson(next.id) }, modifier = Modifier.fillMaxWidth()) { Text("Next lesson: ${next.title}") }

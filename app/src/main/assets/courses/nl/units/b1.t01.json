@@ -1,0 +1,155 @@
+{
+  "id": "b1.t01", "level": "B1", "kind": "theme",
+  "title": "Work",
+  "subtitle": "Read a job ad and safety rules, join a meeting, handle a job interview and write work emails",
+  "lessons": [
+    {
+      "id": "b1.t01.l1", "title": "Finding a job", "kind": "vocab",
+      "vocab": [
+        "sollicitant", "motivatiebrief", "referentie", "arbeidsmarkt", "uitzendbureau", "vaste_baan", "tijdelijk_contract", "werkervaring",
+        "vaardigheid", "sterkte", "zwakte", "functioneringsgesprek", "kennismakingsgesprek", "proefdag", "aannemen", "aanstellen",
+        "ambitieus", "gemotiveerd", "betrouwbaar", "flexibel", "dienstverband", "arbeidsvoorwaarden", "opzegtermijn", "loopbaan"
+      ]
+    },
+    {
+      "id": "b1.t01.l2", "title": "At the workplace", "kind": "vocab",
+      "vocab": [
+        "werkoverleg", "teamleider", "afdelingshoofd", "werkdruk", "werksfeer", "veiligheidsvoorschrift", "veiligheidsschoen", "werkkleding",
+        "nooduitgang", "ontruiming", "verbandtrommel", "bedrijfshulpverlener", "ploegendienst", "nachtdienst", "rapportage", "planning",
+        "verantwoordelijkheid", "samenwerken", "afstemmen", "begeleiden", "inwerken", "ziekteverzuim", "thuiswerken", "nauwkeurig"
+      ]
+    },
+    {
+      "id": "b1.t01.l3", "title": "A job advert", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "A job advert (*vacature*) has a fixed pattern: who we are, what you will do, what we ask and what we offer. Find the hours, the contract, the salary and how to apply. Tap a word you don't know." }
+      ],
+      "text": "Vacature: medewerker klantenservice (32 tot 36 uur per week). Wij zijn een webwinkel in Zwolle die fietsonderdelen verkoopt. Voor ons team klantenservice zoeken wij per 1 maart een nieuwe collega. Wat ga je doen? Je beantwoordt vragen van klanten per telefoon en per e-mail. Je helpt klanten bij het kiezen van het juiste product en je handelt klachten af. Ook houd je de gegevens van de klanten bij in ons systeem. Je werkt in een team van acht mensen onder leiding van teamleider Fatima. Wat vragen wij? Je spreekt en schrijft goed Nederlands, op niveau B1 of hoger. Je bent vriendelijk, geduldig en nauwkeurig. Werkervaring in de klantenservice is mooi meegenomen, maar niet nodig: wij leren je alles in de eerste weken. Je kunt twee avonden per week werken en eens in de twee weken op zaterdag. Wat bieden wij? Je krijgt een contract voor een jaar, met uitzicht op een vaste baan. Het salaris is 2400 euro bruto per maand bij een volledige werkweek, plus vakantiegeld en een reiskostenvergoeding. Zodra je goed bent ingewerkt, kun je één dag per week thuiswerken. Natuurlijk betalen wij ook een cursus als je jezelf wilt ontwikkelen. Solliciteren? Stuur vóór 15 januari je motivatiebrief en je cv via de website van ons bedrijf. Wij nodigen de beste kandidaten uit voor een kennismakingsgesprek en een proefdag.",
+      "items": [
+        { "type": "choice", "q": "Wat doet een medewerker klantenservice in dit bedrijf?", "options": ["Hij beantwoordt vragen van klanten en handelt klachten af", "Hij repareert fietsen in de winkel", "Hij verkoopt fietsonderdelen op de markt"], "answer": 0, "en": "What does the customer service employee do?" },
+        { "type": "choice", "q": "Wat staat er over werkervaring?", "options": ["Het is handig, maar je hebt het niet nodig", "Je hebt minstens een jaar ervaring nodig", "Het bedrijf wil alleen mensen zonder ervaring"], "answer": 0, "en": "What does it say about work experience?" },
+        { "type": "choice", "q": "Hoe lang duurt het contract?", "options": ["Een jaar", "Een maand", "Het is een vast contract"], "answer": 0, "en": "How long does the contract last?" },
+        { "type": "choice", "q": "Wanneer mag je thuiswerken?", "options": ["Als je goed bent ingewerkt", "Vanaf de eerste dag", "Alleen op zaterdag"], "answer": 0, "en": "When may you work from home?" },
+        { "type": "choice", "q": "Wat moet je vóór 15 januari doen als je de baan wilt?", "options": ["Een motivatiebrief en cv sturen", "Een proefdag volgen", "Naar het kantoor in Zwolle komen"], "answer": 0, "en": "What must you do before 15 January if you want the job?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: B1 menu (reading texts)", "url": "https://nt2taalmenu.nl/nt2-b1-menu/" }
+      ]
+    },
+    {
+      "id": "b1.t01.l4", "title": "Safety rules and the rota", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "Workplace instructions are written as short rules and orders: *Draag …*, *Meld …*, *Gebruik … niet*. Look for what you must do, what you must not do and who to tell." }
+      ],
+      "text": "Veiligheidsregels voor het magazijn. Lees deze regels goed voordat u begint met werken. Draag altijd veiligheidsschoenen en werkkleding. Ze liggen klaar in de kleedkamer en u hoeft er niets voor te betalen. Mag u een heftruck gebruiken? Alleen als u een certificaat hebt. Hebt u geen certificaat? Vraag dan uw teamleider om een cursus. Loop nooit onder een lading door en blijf uit de buurt van rijdende heftrucks. Houd de looproutes en de nooduitgangen altijd vrij. Zet dus nooit dozen of pallets in de gang. Ziet u een gevaarlijke situatie? Meld die meteen aan uw teamleider, ook als er nog niets is gebeurd. Bij brand blijft u rustig, waarschuwt u de bedrijfshulpverlener en verlaat u het gebouw via de dichtstbijzijnde nooduitgang. Gebruik de lift niet. De verbandtrommel hangt naast de koffieautomaat. Bent u gewond geraakt? Ga dan eerst naar de bedrijfshulpverlener en meld het ongeluk daarna bij de teamleider. Het rooster. De vroege dienst duurt van zes tot twee uur, de late dienst van twee tot tien uur. Het rooster hangt elke vrijdag voor de volgende week op het prikbord. Wilt u een dienst ruilen met een collega? Overleg dat minstens twee dagen van tevoren met uw teamleider. Bent u ziek? Bel dan vóór zes uur 's ochtends naar het magazijn en niet naar een collega.",
+      "items": [
+        { "type": "choice", "q": "Wat moet je in het magazijn altijd dragen?", "options": ["Veiligheidsschoenen en werkkleding", "Een helm en handschoenen", "Je eigen kleren"], "answer": 0, "en": "What must you always wear in the warehouse?" },
+        { "type": "choice", "q": "Wanneer mag je een heftruck gebruiken?", "options": ["Als je een certificaat hebt", "Als je teamleider er niet is", "Als je er een cursus voor wilt"], "answer": 0, "en": "When may you use a forklift?" },
+        { "type": "choice", "q": "Wat doe je bij brand?", "options": ["De bedrijfshulpverlener waarschuwen en het gebouw verlaten", "De lift nemen en buiten wachten", "Eerst alle dozen uit de gang halen"], "answer": 0, "en": "What do you do in case of fire?" },
+        { "type": "choice", "q": "Je wilt een dienst ruilen met een collega. Wat moet je doen?", "options": ["Minstens twee dagen van tevoren met je teamleider overleggen", "Het rooster op het prikbord veranderen", "Het alleen aan je collega vertellen"], "answer": 0, "en": "You want to swap a shift with a colleague. What must you do?" },
+        { "type": "choice", "q": "Je bent ziek. Wie bel je en wanneer?", "options": ["Het magazijn, vóór zes uur 's ochtends", "Een collega, na het werk", "De bedrijfshulpverlener, op de dag zelf"], "answer": 0, "en": "You are ill. Whom do you call and when?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: B1 menu (reading texts)", "url": "https://nt2taalmenu.nl/nt2-b1-menu/" }
+      ]
+    },
+    {
+      "id": "b1.t01.l5", "title": "A team meeting", "kind": "listening",
+      "dialogue": [
+        { "who": "A", "nl": "Goedemorgen allemaal. We beginnen met het rooster voor volgende week.", "en": "Good morning everyone. We start with the rota for next week." },
+        { "who": "B", "nl": "Ik wil graag vrijdag vrij nemen. Mijn dochter heeft dan een afspraak bij de tandarts.", "en": "I would like to take Friday off. My daughter has a dentist's appointment then." },
+        { "who": "A", "nl": "Dat is geen probleem, maar dan moet iemand anders je dienst overnemen. Kun jij met Joris overleggen?", "en": "That is no problem, but then someone else has to take over your shift. Can you talk to Joris?" },
+        { "who": "B", "nl": "Dat doe ik vandaag nog. Hoe staat het met de bestelling van de klant uit Breda?", "en": "I will do that today. How is the order from the customer in Breda going?" },
+        { "who": "A", "nl": "Die moet uiterlijk donderdag klaar zijn. De leverancier heeft de onderdelen gisteren geleverd.", "en": "It has to be ready by Thursday at the latest. The supplier delivered the parts yesterday." },
+        { "who": "B", "nl": "Mooi. Dan kan ik morgen beginnen met inpakken. Wie controleert de bestelling?", "en": "Good. Then I can start packing tomorrow. Who checks the order?" },
+        { "who": "A", "nl": "Dat doet Sandra. Zij kijkt of alles klopt voordat het naar de klant gaat.", "en": "Sandra does that. She checks that everything is right before it goes to the customer." },
+        { "who": "B", "nl": "En de werkdruk? Vorige week was het erg druk. Ik heb drie dagen achter elkaar overgewerkt.", "en": "And the workload? Last week it was very busy. I worked overtime three days in a row." },
+        { "who": "A", "nl": "Dat weet ik, en daar wil ik iets aan doen. Ik heb de directie gevraagd om twee tijdelijke collega's.", "en": "I know, and I want to do something about that. I have asked management for two temporary colleagues." },
+        { "who": "B", "nl": "Dat zou fijn zijn. Dank je wel.", "en": "That would be nice. Thank you." }
+      ],
+      "items": [
+        { "type": "listen", "nl": "Ik wil graag vrijdag vrij nemen.", "q": "Which day does he want off?", "options": ["Friday", "Thursday", "Monday"], "answer": 0 },
+        { "type": "listen", "nl": "De bestelling moet uiterlijk donderdag klaar zijn.", "q": "When must the order be ready?", "options": ["By Thursday at the latest", "On Friday", "Next week"], "answer": 0 },
+        { "type": "listen", "nl": "Sandra kijkt of alles klopt voordat het naar de klant gaat.", "q": "What does Sandra do?", "options": ["She checks the order", "She packs the order", "She phones the customer"], "answer": 0 },
+        { "type": "listen", "nl": "Ik heb de directie gevraagd om twee tijdelijke collega's.", "q": "What has the team leader asked for?", "options": ["Two temporary colleagues", "A higher salary", "More days off"], "answer": 0 },
+        { "type": "listen", "nl": "Vorige week was het erg druk." },
+        { "type": "choice", "q": "Waarom wil de medewerker vrijdag vrij?", "options": ["Zijn dochter heeft een afspraak bij de tandarts", "Hij is ziek", "Hij gaat op vakantie"], "answer": 0, "en": "Why does the employee want Friday off?" },
+        { "type": "choice", "q": "Wat is er vorige week gebeurd?", "options": ["Het was erg druk en hij heeft overgewerkt", "De leverancier heeft niets geleverd", "De bestelling was niet goed"], "answer": 0, "en": "What happened last week?" }
+      ],
+      "sources": [
+        { "title": "Easy Dutch (YouTube): street interviews with Dutch subtitles", "url": "https://www.youtube.com/@EasyDutch" }
+      ]
+    },
+    {
+      "id": "b1.t01.l6", "title": "A job interview", "kind": "speaking",
+      "dialogue": [
+        { "who": "A", "nl": "Goedemiddag en welkom. Gaat u zitten. Wilt u zich eerst even voorstellen?", "en": "Good afternoon and welcome. Please sit down. Would you first introduce yourself?" },
+        { "who": "B", "nl": "Goedemiddag. Ik ben Amira Said, ik ben negenentwintig jaar en ik woon sinds drie jaar in Nederland.", "en": "Good afternoon. I am Amira Said, I am twenty-nine and I have lived in the Netherlands for three years." },
+        { "who": "A", "nl": "U hebt gesolliciteerd naar de baan bij de klantenservice. Waarom wilt u hier werken?", "en": "You applied for the job in customer service. Why do you want to work here?" },
+        { "who": "B", "nl": "Ik werk graag met mensen en ik vind het leuk om problemen op te lossen. Uw bedrijf is bovendien goed bereikbaar voor mij.", "en": "I like working with people and I enjoy solving problems. Your company is also easy for me to get to." },
+        { "who": "A", "nl": "Wat voor werkervaring hebt u?", "en": "What work experience do you have?" },
+        { "who": "B", "nl": "Ik heb twee jaar in een winkel gewerkt en daarna een jaar in een kantoor. Daar heb ik veel geleerd over klantcontact.", "en": "I worked in a shop for two years and then a year in an office. There I learned a lot about customer contact." },
+        { "who": "A", "nl": "Wat is uw sterkste kant en wat is uw zwakke punt?", "en": "What is your strongest point and what is your weak point?" },
+        { "who": "B", "nl": "Ik ben nauwkeurig en betrouwbaar. Soms vind ik het moeilijk om nee te zeggen als iemand om hulp vraagt.", "en": "I am accurate and reliable. Sometimes I find it hard to say no when someone asks for help." },
+        { "who": "A", "nl": "Wanneer zou u kunnen beginnen?", "en": "When could you start?" },
+        { "who": "B", "nl": "Over vier weken, want ik heb een opzegtermijn van één maand.", "en": "In four weeks, because I have a notice period of one month." },
+        { "who": "A", "nl": "Dank u wel. U hoort deze week van ons.", "en": "Thank you. You will hear from us this week." }
+      ],
+      "items": [
+        { "type": "speak", "nl": "Ik werk graag met mensen en ik vind het leuk om problemen op te lossen.", "en": "I like working with people and I enjoy solving problems." },
+        { "type": "speak", "nl": "Ik heb twee jaar in een winkel gewerkt.", "en": "I worked in a shop for two years." },
+        {
+          "type": "prompt",
+          "task": "The interviewer says: Vertel iets over jezelf. Introduce yourself: your name, where you live, what you do (work or study) and what you enjoy.",
+          "model": "Ik heet Amira. Ik woon in Utrecht, samen met mijn man en onze zoon. Ik werk op dit moment in een kantoor, maar ik wil graag meer met mensen werken. In mijn vrije tijd lees ik veel en ik ga graag wandelen.",
+          "seconds": 40,
+          "points": ["Your name", "Where you live", "Your work or study", "What you enjoy"]
+        },
+        {
+          "type": "prompt",
+          "task": "The interviewer asks: Waarom wilt u hier werken? Give two reasons.",
+          "model": "Ik wil hier werken, omdat ik graag met klanten praat en omdat ik wil blijven leren. Ik denk dat dit bedrijf goed bij mij past.",
+          "seconds": 40,
+          "points": ["Start with: Ik wil hier werken, omdat ...", "A first reason", "A second reason"]
+        },
+        {
+          "type": "prompt",
+          "task": "Tell the interviewer about your strongest point and your weakest point at work, with a short example of each.",
+          "model": "Mijn sterkste kant is dat ik betrouwbaar ben. Als ik iets beloof, dan doe ik het ook. Mijn zwakke punt is dat ik soms te veel tijd nodig heb voor een taak, omdat ik alles twee keer controleer.",
+          "seconds": 50,
+          "points": ["Your strongest point", "An example", "Your weak point", "An example"]
+        }
+      ]
+    },
+    {
+      "id": "b1.t01.l7", "title": "Emails at work", "kind": "writing",
+      "explain": [
+        { "type": "p", "text": "Work emails are **formal** unless you know the person well. Use the person's title and name, **u** and **uw**, and a clear closing. Put the reason for your email in the first sentence." },
+        { "type": "table", "head": ["", "Formal", "Informal"], "rows": [["Greeting", "Geachte heer/mevrouw De Vries,", "Beste Jan, / Hoi Jan,"], ["Reason", "Hierbij solliciteer ik naar …", "Ik mail je omdat …"], ["Closing", "Met vriendelijke groet,", "Groetjes, / Tot snel,"]] },
+        { "type": "ex", "nl": "Ik wil graag solliciteren naar de functie van medewerker klantenservice.", "en": "I would like to apply for the job of customer service employee." },
+        { "type": "ex", "nl": "Kunt u mij laten weten of dit mogelijk is?", "en": "Can you let me know whether this is possible?" },
+        { "type": "tip", "text": "Useful phrases: *Graag stel ik mij voor als …*, *Ik ben beschikbaar vanaf …*, *Alvast hartelijk dank*, *Ik zie uw reactie graag tegemoet*." }
+      ],
+      "items": [
+        {
+          "type": "write",
+          "task": "You read the job advert for customer service employee at the web shop in Zwolle. Write an application email: say which job you apply for, tell something about your experience and your best qualities, say why you want the job and when you can start.",
+          "points": ["A formal greeting and the job you apply for", "Your work experience", "Your best qualities and why you want the job", "When you can start", "A formal closing"],
+          "minWords": 100, "maxWords": 150,
+          "model": "Geachte heer/mevrouw, hierbij solliciteer ik naar de functie van medewerker klantenservice die ik op uw website heb gezien. Ik ben Amira Said en ik woon sinds drie jaar in Nederland. Ik heb twee jaar in een winkel gewerkt en een jaar in een kantoor. Daar heb ik veel met klanten gesproken, per telefoon en per e-mail. Ik ben vriendelijk, nauwkeurig en betrouwbaar, en ik kan goed samenwerken. Ik wil graag bij uw bedrijf werken, omdat ik het leuk vind om klanten te helpen en omdat ik wil blijven leren. Mijn Nederlands is goed: ik heb niveau B1. Ik heb een opzegtermijn van één maand en ik kan dus over vier weken beginnen. Ik kom graag langs voor een gesprek. Met vriendelijke groet, Amira Said"
+        },
+        {
+          "type": "write",
+          "task": "Next Wednesday you cannot work: you have an appointment at the town hall. Write a short formal email to your team leader, Ms Jansen. Ask for a day off, say why, and offer to swap your shift with a colleague.",
+          "points": ["A formal greeting", "Ask for a day off next Wednesday", "The reason", "Offer to swap your shift", "A formal closing"],
+          "minWords": 50, "maxWords": 90,
+          "model": "Geachte mevrouw Jansen, volgende week woensdag heb ik een afspraak bij de gemeente. Daarom wil ik graag een dag vrij nemen. Ik kan niet naar een andere dag verplaatsen, want de afspraak staat al vast. Misschien kan ik mijn dienst ruilen met een collega. Ik heb al aan Joris gevraagd of hij kan. Kunt u mij laten weten of dat goed is? Alvast hartelijk dank. Met vriendelijke groet, Amira Said"
+        }
+      ],
+      "sources": [
+        { "title": "Oefenen.nl: free practice (account needed)", "url": "https://oefenen.nl/" },
+        { "title": "NT2 TaalMenu: B1 menu (writing and letters)", "url": "https://nt2taalmenu.nl/nt2-b1-menu/" }
+      ]
+    }
+  ]
+}

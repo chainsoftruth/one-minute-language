@@ -113,7 +113,9 @@ class CourseContentTest {
 
     @Test fun readingTextsBelongToReadingLessons() {
         for (course in courseDirs()) for (unit in units(course.name)) for (lesson in unit.lessons) {
-            assertEquals("${lesson.id}: only reading lessons have a text, and every one has it", lesson.kind == LessonKind.READING, lesson.text != null)
+            // The exam's reading parts are test lessons with a text (no feedback until the end).
+            assertTrue("${lesson.id}: only reading lessons and tests have a text, and every reading lesson has it",
+                if (lesson.kind == LessonKind.READING) lesson.text != null else lesson.kind == LessonKind.TEST || lesson.text == null)
             lesson.text?.let { assertTrue("${lesson.id}: reading text of 40+ words", words(it).size >= 40) }
         }
     }
@@ -139,6 +141,33 @@ class CourseContentTest {
             assertTrue("${unit.id}: at least 60 items, has ${items.size}", items.size >= 60)
             assertTrue("${unit.id}: at least 40% production items, has $production of ${items.size}", production * 10 >= items.size * 4)
         }
+    }
+
+    /** Stage 12: every B1 theme unit has the full skill set, and the exam follows the plan's format. */
+    @Test fun b1ThemeUnitsAndTheExamHaveTheirParts() {
+        val b1 = units("nl").filter { it.level == "B1" }
+        val themes = b1.filter { it.kind == UnitKind.THEME }
+        assertEquals(listOf("b1.t01", "b1.t02", "b1.t03", "b1.t04", "b1.t05", "b1.t06", "b1.t07"), themes.map { it.id })
+        for (unit in themes) {
+            val kinds = unit.lessons.map { it.kind }
+            assertTrue("${unit.id}: at least one vocab lesson", LessonKind.VOCAB in kinds)
+            assertEquals("${unit.id}: two readings", 2, kinds.count { it == LessonKind.READING })
+            assertEquals("${unit.id}: two dialogues (listening + roleplay)", 2, unit.lessons.count { it.dialogue.isNotEmpty() })
+            assertTrue("${unit.id}: a speaking lesson with 2-3 open prompts", unit.lessons.first { it.kind == LessonKind.SPEAKING }.items.count { it is Item.OpenPrompt } in 2..3)
+            assertTrue("${unit.id}: writing", unit.lessons.any { it.kind == LessonKind.WRITING && it.items.count { i -> i is Item.Write } in 1..2 })
+            unit.lessons.filter { it.kind == LessonKind.READING }.forEach {
+                assertTrue("${it.id}: B1 readings have 200-350 words", words(it.text!!).size in 200..350)
+            }
+            assertTrue("${unit.id}: links a resource", unit.lessons.any { it.sources.isNotEmpty() })
+        }
+        val exam = b1.first { it.id == "b1.exam" }
+        val tests = exam.lessons.filter { it.kind == LessonKind.TEST }
+        assertEquals("five reading tests with a text and 3-4 questions", 5, tests.count { it.text != null && it.items.size in 3..4 })
+        assertTrue("6 listening fragments with 2-3 questions each", tests.flatMap { it.items }.filterIsInstance<Item.Listen>().groupBy { it.nl }.let { it.size == 6 && it.values.all { q -> q.size in 2..3 } })
+        assertEquals("three writing tasks", 3, tests.flatMap { it.items }.count { it is Item.Write })
+        assertEquals("six speaking tasks", 6, tests.flatMap { it.items }.count { it is Item.OpenPrompt })
+        val last = exam.lessons.last()
+        assertTrue("the last lesson only links the official practice exams", last.items.isEmpty() && last.sources.size >= 3)
     }
 
     /** In b1.g04 a participle + auxiliary pair at the end of a clause can be written in two orders, so the item must list both. */

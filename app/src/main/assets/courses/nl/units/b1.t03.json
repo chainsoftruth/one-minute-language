@@ -1,0 +1,153 @@
+{
+  "id": "b1.t03", "level": "B1", "kind": "theme",
+  "title": "Health 2",
+  "subtitle": "Read an insurance letter and a news article, follow a GP consultation, describe symptoms and write an incident report",
+  "lessons": [
+    {
+      "id": "b1.t03.l1", "title": "Doctor and hospital", "kind": "vocab",
+      "vocab": [
+        "verwijzing", "verwijsbrief", "symptoom", "diagnose", "behandeling", "therapie", "fysiotherapeut", "ziekenhuisopname", "bezoektijd",
+        "bloedonderzoek", "bijsluiter", "bijwerking", "dosering", "pijnstiller", "antibioticum", "vaccinatie", "griepprik", "verdoving",
+        "herstel", "revalidatie", "bedrust", "voorschrijven", "opereren", "genezen_van"
+      ]
+    },
+    {
+      "id": "b1.t03.l2", "title": "Insurance and a healthy life", "kind": "vocab",
+      "vocab": [
+        "basisverzekering", "aanvullende_verzekering", "polis", "eigen_risico", "zorgverzekeraar", "vergoeding", "zorgverlener", "beroepsgeheim",
+        "wachtlijst", "ggz", "geestelijke_gezondheid", "gezonde_leefstijl", "beweging", "voeding", "overgewicht", "stoppen_met_roken",
+        "verslaving", "slapeloosheid", "chronisch", "acuut", "vermoeid", "uitgeput", "ongezond", "lijden_aan"
+      ]
+    },
+    {
+      "id": "b1.t03.l3", "title": "A letter from your health insurer", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "A letter from an insurer is formal and full of fixed words (*polis*, *premie*, *eigen risico*, *verwijzing*). Find what changes, what you must do and by when. Tap a word you don't know." }
+      ],
+      "text": "Betreft: uw zorgverzekering voor het nieuwe jaar. Geachte mevrouw Van Dijk, hierbij sturen wij u de polis van uw zorgverzekering voor het komende jaar. In deze brief leest u wat er verandert. De premie van uw basisverzekering wordt 12 euro per maand hoger. U blijft verzekerd voor de huisarts, het ziekenhuis en de medicijnen. Voor een bezoek aan de huisarts betaalt u geen eigen risico. Voor andere zorg wel. Het eigen risico is een bedrag dat u zelf betaalt, voordat de verzekering gaat betalen. Gaat u naar een specialist, bijvoorbeeld een oogarts of een kinderarts? Dan hebt u eerst een verwijzing van uw huisarts nodig. Zonder verwijzing vergoeden wij de behandeling niet. Uw aanvullende verzekering voor de tandarts en de fysiotherapie blijft hetzelfde. U krijgt daarvoor nog steeds een vergoeding van 250 euro per jaar. Wilt u iets veranderen? U kunt tot en met 31 december een andere verzekering kiezen. Doet u niets, dan loopt uw verzekering gewoon door. Bewaar deze brief goed, want u hebt de polis nodig als u een rekening wilt declareren. Hebt u vragen? U kunt ons op werkdagen bellen van acht tot zes uur of een bericht sturen via uw persoonlijke pagina op onze website. Met vriendelijke groet, Zorgverzekeraar Noorderlicht",
+      "items": [
+        { "type": "choice", "q": "Waarover gaat deze brief?", "options": ["De zorgverzekering van het komende jaar", "Een afspraak bij de huisarts", "Een rekening van het ziekenhuis"], "answer": 0, "en": "What is this letter about?" },
+        { "type": "choice", "q": "Wat verandert er in het nieuwe jaar?", "options": ["De premie van de basisverzekering wordt hoger", "De aanvullende verzekering wordt duurder", "Het eigen risico verdwijnt"], "answer": 0, "en": "What changes in the new year?" },
+        { "type": "choice", "q": "Wanneer hebt u een verwijzing nodig?", "options": ["Als u naar een specialist gaat", "Als u naar de huisarts gaat", "Als u naar de tandarts gaat"], "answer": 0, "en": "When do you need a referral?" },
+        { "type": "choice", "q": "Wat is het eigen risico?", "options": ["Een bedrag dat u zelf betaalt voordat de verzekering betaalt", "De premie die u elke maand betaalt", "Een vergoeding voor de tandarts"], "answer": 0, "en": "What is the own risk (eigen risico)?" },
+        { "type": "choice", "q": "Wat gebeurt er als u niets doet?", "options": ["Uw verzekering loopt gewoon door", "Uw verzekering stopt op 31 december", "U krijgt een nieuwe polis met een andere verzekeraar"], "answer": 0, "en": "What happens if you do nothing?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: B1 menu (reading texts)", "url": "https://nt2taalmenu.nl/nt2-b1-menu/" }
+      ]
+    },
+    {
+      "id": "b1.t03.l4", "title": "A busy GP practice", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "A news article starts with the main point. The later sentences give reasons, advice and examples. Ask yourself: what is the problem, what is the cause and what do they advise? Tap a word you don't know." }
+      ],
+      "text": "Huisartsen waarschuwen: kom niet voor elk klein klachtje. Veel huisartsenpraktijken in Nederland zijn te druk. In sommige regio's moeten patiënten twee weken wachten op een afspraak. Volgens de huisartsen komt dat doordat er te weinig huisartsen zijn en doordat mensen ook vaak met kleine klachten komen. Daarom vragen de huisartsen hun patiënten om eerst na te denken: moet ik echt naar de dokter? Bij een lichte verkoudheid of een kleine schaafwond is een bezoek meestal niet nodig. Dan helpen rust en een middel van de drogist. Hebt u koorts die langer dan drie dagen duurt, of voelt u zich echt erg ziek? Bel dan wel de praktijk. Bij spoed, bijvoorbeeld bij pijn op de borst, belt u 112. Buiten kantooruren kunt u terecht bij de huisartsenpost. Veel praktijken werken nu met een doktersassistente die aan de telefoon bepaalt hoe dringend een klacht is. Sommige praktijken bieden ook een gesprek via de computer aan. Zo hoeven patiënten minder vaak naar de praktijk te komen en blijft er meer tijd over voor mensen die echt zorg nodig hebben. Huisarts Nadia Kok uit Zwolle zegt dat mensen met een serieuze klacht altijd welkom zijn. Het gaat erom dat iedereen op tijd de juiste hulp krijgt.",
+      "items": [
+        { "type": "choice", "q": "Wat is het probleem volgens het artikel?", "options": ["Veel huisartsenpraktijken zijn te druk", "Er zijn te veel huisartsen", "Mensen gaan nooit naar de dokter"], "answer": 0, "en": "What is the problem according to the article?" },
+        { "type": "choice", "q": "Waardoor ontstaat dat probleem?", "options": ["Er zijn te weinig huisartsen en mensen komen ook met kleine klachten", "De praktijken zijn te vroeg dicht", "De wachtlijsten in de ziekenhuizen zijn te lang"], "answer": 0, "en": "What causes the problem?" },
+        { "type": "choice", "q": "Wat adviseren huisartsen bij een lichte verkoudheid?", "options": ["Thuis rusten en een middel van de drogist nemen", "Meteen een afspraak maken", "Naar de huisartsenpost gaan"], "answer": 0, "en": "What do GPs advise for a mild cold?" },
+        { "type": "choice", "q": "Wie bepaalt aan de telefoon hoe dringend een klacht is?", "options": ["De doktersassistente", "De apotheker", "De huisarts zelf"], "answer": 0, "en": "Who decides on the phone how urgent a complaint is?" },
+        { "type": "choice", "q": "Wat bedoelt huisarts Kok met haar laatste zin?", "options": ["Iedereen moet op tijd de juiste hulp krijgen", "Mensen moeten altijd thuis blijven", "Alleen ernstig zieke mensen mogen bellen"], "answer": 0, "en": "What does GP Kok mean with her last sentence?" }
+      ],
+      "sources": [
+        { "title": "NOS Journaal in Makkelijke Taal: about the programme", "url": "https://over.nos.nl/nieuws/nieuw-nos-journaal-in-makkelijke-taal/" }
+      ]
+    },
+    {
+      "id": "b1.t03.l5", "title": "At the GP", "kind": "listening",
+      "dialogue": [
+        { "who": "A", "nl": "Goedemorgen, mevrouw Bakker. Wat kan ik voor u doen?", "en": "Good morning, Ms Bakker. What can I do for you?" },
+        { "who": "B", "nl": "Goedemorgen, dokter. Ik heb al twee weken last van mijn rug. Het wordt niet beter.", "en": "Good morning, doctor. I have had back trouble for two weeks. It is not getting better." },
+        { "who": "A", "nl": "Waar hebt u precies pijn? En wanneer is het begonnen?", "en": "Where exactly does it hurt? And when did it start?" },
+        { "who": "B", "nl": "Onderin mijn rug, aan de rechterkant. Het begon nadat ik een zware doos had getild. Vooral 's ochtends heb ik veel pijn.", "en": "Low in my back, on the right-hand side. It started after I had lifted a heavy box. I have a lot of pain, especially in the morning." },
+        { "who": "A", "nl": "Hebt u al iets ingenomen?", "en": "Have you taken anything yet?" },
+        { "who": "B", "nl": "Ik heb een pijnstiller genomen, maar die helpt maar een beetje.", "en": "I took a painkiller, but it only helps a little." },
+        { "who": "A", "nl": "Ik kijk even naar uw rug. Het lijkt een spierblessure. Ik schrijf een sterkere pijnstiller voor en ik verwijs u door naar de fysiotherapeut.", "en": "Let me have a look at your back. It looks like a muscle injury. I will prescribe a stronger painkiller and refer you to the physiotherapist." },
+        { "who": "B", "nl": "Moet ik thuisblijven? Ik werk in een magazijn.", "en": "Do I have to stay at home? I work in a warehouse." },
+        { "who": "A", "nl": "Niet tillen de komende twee weken. Ik schrijf een briefje voor uw werkgever. Komt u over twee weken terug als het niet beter is.", "en": "No lifting for the next two weeks. I will write a note for your employer. Come back in two weeks if it is not better." },
+        { "who": "B", "nl": "Dank u wel, dokter.", "en": "Thank you, doctor." }
+      ],
+      "items": [
+        { "type": "listen", "nl": "Ik heb al twee weken last van mijn rug.", "q": "What is the problem?", "options": ["Back pain for two weeks", "A headache since Monday", "A broken arm"], "answer": 0 },
+        { "type": "listen", "nl": "Het begon nadat ik een zware doos had getild.", "q": "When did it start?", "options": ["After lifting a heavy box", "After a fall on the stairs", "After a long walk"], "answer": 0 },
+        { "type": "listen", "nl": "Ik schrijf een sterkere pijnstiller voor.", "q": "What does the doctor prescribe?", "options": ["A stronger painkiller", "Antibiotics", "A cream"], "answer": 0 },
+        { "type": "listen", "nl": "Niet tillen de komende twee weken.", "q": "What must she not do?", "options": ["Lift things", "Walk", "Go to work at all"], "answer": 0 },
+        { "type": "listen", "nl": "Komt u over twee weken terug." },
+        { "type": "choice", "q": "Waar werkt de patiënt?", "options": ["In een magazijn", "In een ziekenhuis", "In een kantoor"], "answer": 0, "en": "Where does the patient work?" },
+        { "type": "choice", "q": "Wat doet de huisarts voor de werkgever?", "options": ["Hij schrijft een briefje", "Hij belt de werkgever", "Hij stuurt een rekening"], "answer": 0, "en": "What does the doctor do for the employer?" }
+      ],
+      "sources": [
+        { "title": "Easy Dutch (YouTube): street interviews with Dutch subtitles", "url": "https://www.youtube.com/@EasyDutch" }
+      ]
+    },
+    {
+      "id": "b1.t03.l6", "title": "Making an appointment", "kind": "speaking",
+      "dialogue": [
+        { "who": "A", "nl": "Huisartsenpraktijk Van der Meer, goedemorgen.", "en": "Van der Meer GP practice, good morning." },
+        { "who": "B", "nl": "Goedemorgen. Ik zou graag een afspraak willen maken. Ik heb sinds drie dagen erge hoofdpijn.", "en": "Good morning. I would like to make an appointment. I have had a bad headache for three days." },
+        { "who": "A", "nl": "Bent u ook misselijk of hebt u koorts?", "en": "Do you also feel sick or do you have a fever?" },
+        { "who": "B", "nl": "Ik ben een beetje misselijk, maar ik heb geen koorts.", "en": "I feel a bit sick, but I have no fever." },
+        { "who": "A", "nl": "Hebt u al iets tegen de pijn genomen?", "en": "Have you taken anything for the pain?" },
+        { "who": "B", "nl": "Ja, twee pijnstillers per dag, maar het helpt niet echt.", "en": "Yes, two painkillers a day, but it doesn't really help." },
+        { "who": "A", "nl": "Dan kunt u vanmiddag om kwart over drie bij de dokter terecht. Past dat u?", "en": "Then you can see the doctor this afternoon at a quarter past three. Does that suit you?" },
+        { "who": "B", "nl": "Ja, dat past. Wat moet ik meenemen?", "en": "Yes, that suits me. What do I need to bring?" },
+        { "who": "A", "nl": "Uw identiteitsbewijs en een lijst met uw medicijnen, als u medicijnen gebruikt.", "en": "Your ID and a list of your medicines, if you take any." },
+        { "who": "B", "nl": "Dank u wel. Tot vanmiddag.", "en": "Thank you. See you this afternoon." }
+      ],
+      "items": [
+        { "type": "speak", "nl": "Ik heb sinds drie dagen erge hoofdpijn.", "en": "I have had a bad headache for three days." },
+        { "type": "speak", "nl": "Ik heb al twee pijnstillers genomen, maar het helpt niet.", "en": "I have already taken two painkillers, but it doesn't help." },
+        {
+          "type": "prompt",
+          "task": "Phone your GP practice. Say who you are, what is wrong, since when you have the problem and ask for an appointment.",
+          "model": "Goedemorgen, met Mark de Wit. Ik heb sinds vier dagen keelpijn en ik hoest veel. Ik zou graag een afspraak willen maken. Kan ik vandaag nog langskomen?",
+          "seconds": 40,
+          "points": ["Who you are", "What is wrong", "Since when", "Ask for an appointment"]
+        },
+        {
+          "type": "prompt",
+          "task": "You are at the doctor's. Describe your symptoms in detail: where it hurts, how long you have had it, when it is worst and what you have already tried.",
+          "model": "Ik heb pijn in mijn linkerknie. Het begon twee weken geleden na het hardlopen. Vooral als ik de trap op loop, doet het veel pijn. Ik heb koud water en rust geprobeerd, maar het wordt niet beter.",
+          "seconds": 60,
+          "points": ["Where it hurts", "How long you have had it", "When it is worst", "What you have tried"]
+        },
+        {
+          "type": "prompt",
+          "task": "Tell what you do to stay healthy: what you eat, how you exercise and how you sleep. Say one thing you would like to do better.",
+          "model": "Ik probeer gezond te eten, met veel groente en weinig suiker. Ik fiets elke dag naar mijn werk en ik ga één keer per week zwemmen. Ik slaap meestal zeven uur. Ik zou graag minder koffie willen drinken.",
+          "seconds": 60,
+          "points": ["What you eat", "How you exercise", "How you sleep", "Something you want to do better"]
+        }
+      ]
+    },
+    {
+      "id": "b1.t03.l7", "title": "A short report", "kind": "writing",
+      "explain": [
+        { "type": "p", "text": "A short report of an incident is written in the **past tense** and sticks to the facts. Answer these questions in order: what happened, when, where, who was involved, what was the result and what was done afterwards." },
+        { "type": "table", "head": ["Question", "Example"], "rows": [["Wat is er gebeurd?", "Een collega is uitgegleden."], ["Wanneer en waar?", "Op dinsdag om 14.30 uur in de kantine."], ["Wie?", "Mijn collega Jan en ik."], ["Gevolg?", "Hij heeft zijn pols bezeerd."], ["Wat is er gedaan?", "De bedrijfshulpverlener heeft hem geholpen."]] },
+        { "type": "ex", "nl": "Op dinsdag is er een ongeluk gebeurd in het magazijn.", "en": "On Tuesday an accident happened in the warehouse." },
+        { "type": "ex", "nl": "Daarna heb ik mijn teamleider gewaarschuwd.", "en": "Afterwards I warned my team leader." },
+        { "type": "tip", "text": "Do not give opinions in a report. Use *Ik zag dat …*, *Daarna …*, *Gelukkig …*." }
+      ],
+      "items": [
+        {
+          "type": "write",
+          "task": "At work a colleague slipped on a wet floor in the canteen and hurt his wrist. Write a short report for your team leader: what happened, when and where, who was involved, what the result was and what was done afterwards.",
+          "points": ["What happened", "When and where", "Who was involved", "The result", "What was done afterwards"],
+          "minWords": 80, "maxWords": 120,
+          "model": "Op dinsdag 4 maart om half drie is er een ongeluk gebeurd in de kantine. De vloer was nat, omdat iemand koffie had gemorst. Mijn collega Jan Pieters liep naar de koffieautomaat en is uitgegleden. Hij viel op zijn rechterhand en kon zijn pols niet meer bewegen. Ik heb direct de bedrijfshulpverlener gebeld. Zij heeft Jan geholpen en daarna is hij naar de huisarts gegaan. Ik heb de vloer schoongemaakt en een bordje neergezet. Daarna heb ik mijn teamleider gewaarschuwd. Gelukkig is de pols niet gebroken."
+        },
+        {
+          "type": "write",
+          "task": "Your doctor sent you to a physiotherapist. Write an email to your health insurer: say who you are, ask whether the treatment is paid for, say that you have a referral and ask what you have to do.",
+          "points": ["A formal greeting", "Who you are", "Your question about the treatment", "That you have a referral", "A formal closing"],
+          "minWords": 60, "maxWords": 100,
+          "model": "Geachte heer/mevrouw, mijn naam is Amira Said en ik ben sinds drie jaar bij u verzekerd. Mijn huisarts heeft mij doorverwezen naar een fysiotherapeut, omdat ik last heb van mijn rug. Ik heb een verwijzing van mijn huisarts. Kunt u mij laten weten of u de behandeling vergoedt? En wat moet ik doen om de rekening te declareren? Alvast hartelijk dank voor uw antwoord. Met vriendelijke groet, Amira Said"
+        }
+      ],
+      "sources": [
+        { "title": "Oefenen.nl: free practice (account needed)", "url": "https://oefenen.nl/" }
+      ]
+    }
+  ]
+}

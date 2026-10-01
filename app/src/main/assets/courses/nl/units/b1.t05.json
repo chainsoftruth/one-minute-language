@@ -1,0 +1,153 @@
+{
+  "id": "b1.t05", "level": "B1", "kind": "theme",
+  "title": "Housing 2",
+  "subtitle": "Read a rental contract and a letter from a housing association, solve a problem with a neighbour and write about your move",
+  "lessons": [
+    {
+      "id": "b1.t05.l1", "title": "Renting and buying", "kind": "vocab",
+      "vocab": [
+        "huurovereenkomst", "huurprijs", "huurverhoging", "servicekosten", "waarborgsom", "huurcommissie", "woningcorporatie",
+        "sociale_huurwoning", "inschrijfduur", "woningzoekende", "woonruimte", "energielabel", "makelaar", "bezichtiging", "hypotheek",
+        "eigenaar", "verbouwing", "gebrek", "reparatieverzoek", "aannemer", "opzegtermijn", "de_huur_opzeggen", "adreswijziging", "brp"
+      ]
+    },
+    {
+      "id": "b1.t05.l2", "title": "Neighbours and problems at home", "kind": "vocab",
+      "vocab": [
+        "geluidsoverlast", "huisregels", "burenruzie", "bemiddeling", "bovenbuurman", "benedenbuurvrouw", "portiek", "gemeenschappelijke_ruimte",
+        "gehorig", "tochtig", "schimmelen", "lekken", "verstopping", "thermostaat", "meterstand", "energieleverancier", "stroomstoring",
+        "dubbel_glas", "isoleren", "ventileren", "overlast_veroorzaken", "rekening_houden_met", "klagen_over", "verhuizen_naar"
+      ]
+    },
+    {
+      "id": "b1.t05.l3", "title": "A rental contract", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "A contract is written in numbered articles (*artikel*). Each article is one rule: who pays what, who must do what and what is not allowed. Look at the numbers and the words *moet*, *mag niet* and *kan*. Tap a word you don't know." }
+      ],
+      "text": "Huurovereenkomst (uittreksel). Artikel 1. De huurder huurt de woning aan de Kastanjelaan 8 in Zonnedaal. De huur is 950 euro per maand. De huurder betaalt de huur vóór de eerste dag van elke maand. Daarnaast betaalt de huurder 60 euro per maand voor servicekosten, bijvoorbeeld voor het schoonmaken van het trappenhuis en de verlichting. Artikel 2. De huurder betaalt een borg van twee maanden huur, dus 1900 euro. De verhuurder moet de borg binnen twee weken na het einde van het contract terugbetalen, als de woning netjes is achtergelaten. Artikel 3. De huurder moet de woning schoon en heel houden. Kleine reparaties, zoals een lamp of een kraan, betaalt de huurder zelf. Voor grote problemen, zoals een lekkage of een kapotte verwarming, moet de huurder direct de verhuurder bellen. Artikel 4. Huisdieren zijn niet toegestaan zonder schriftelijke toestemming van de verhuurder. Roken is in de woning niet toegestaan. Artikel 5. De huurder mag geen overlast veroorzaken voor de buren. Na tien uur 's avonds moet het rustig zijn. Artikel 6. De huurder kan het contract opzeggen met een opzegtermijn van één maand. Voor de verhuurder is de opzegtermijn drie maanden. De opzegging moet schriftelijk gebeuren. Artikel 7. De huurder mag de woning niet aan iemand anders verhuren zonder schriftelijke toestemming van de verhuurder.",
+      "items": [
+        { "type": "choice", "q": "Hoeveel borg betaalt de huurder?", "options": ["Twee maanden huur", "Eén maand huur", "Drie maanden huur"], "answer": 0, "en": "How much deposit does the tenant pay?" },
+        { "type": "choice", "q": "Wie betaalt een kleine reparatie, zoals een kapotte lamp?", "options": ["De huurder", "De verhuurder", "De buren"], "answer": 0, "en": "Who pays for a small repair, such as a broken lamp?" },
+        { "type": "choice", "q": "Wat moet de huurder doen bij een lekkage?", "options": ["Direct de verhuurder bellen", "Zelf een loodgieter betalen", "Een week wachten"], "answer": 0, "en": "What must the tenant do in case of a leak?" },
+        { "type": "choice", "q": "Mag de huurder een hond nemen?", "options": ["Alleen met schriftelijke toestemming van de verhuurder", "Ja, dat mag altijd", "Nee, dat mag nooit"], "answer": 0, "en": "May the tenant get a dog?" },
+        { "type": "choice", "q": "Wat zegt artikel 6?", "options": ["De huurder kan met een maand opzegtermijn opzeggen en de verhuurder met drie maanden", "Beide partijen hebben een opzegtermijn van drie maanden", "De huurder kan het contract niet opzeggen"], "answer": 0, "en": "What does article 6 say?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: B1 menu (reading texts)", "url": "https://nt2taalmenu.nl/nt2-b1-menu/" }
+      ]
+    },
+    {
+      "id": "b1.t05.l4", "title": "A letter from the housing association", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "A housing association (*woningcorporatie*) letter explains a procedure step by step. Find out how the system works, what you must do and what happens if you don't. Tap a word you don't know." }
+      ],
+      "text": "Betreft: uw inschrijving bij woningcorporatie Wooncompleet. Beste meneer Aydin, hartelijk dank voor uw inschrijving. U staat nu twee jaar ingeschreven als woningzoekende. Dat betekent dat u inschrijfduur hebt opgebouwd. Wij verdelen de woningen op basis van inschrijfduur en inkomen. Hoe werkt het? Op onze website ziet u elke week welke woningen vrij zijn. Reageert u op een woning, dan staat u op de lijst van mensen die belangstelling hebben. De woning gaat naar de persoon met de langste inschrijfduur. Bent u aan de beurt? Dan krijgt u een uitnodiging voor een bezichtiging. Wilt u de woning, dan tekent u binnen drie dagen de huurovereenkomst. Mist u een afspraak zonder bericht, dan verliest u uw plaats. Let op: uw inkomen mag niet te hoog zijn voor een sociale huurwoning. Daarom vragen wij u elk jaar uw inkomen aan ons door te geven. Hebt u een laag inkomen? Dan hebt u misschien recht op huurtoeslag. Dat is een bijdrage van de overheid aan de huur. U vraagt die aan bij de Belastingdienst, met uw DigiD. Verandert er iets in uw situatie, bijvoorbeeld door een nieuw adres of een nieuwe baan? Meld dat dan binnen vier weken aan ons. Hebt u vragen? U kunt ons bellen of een bericht sturen via de website. Met vriendelijke groet, Wooncompleet",
+      "items": [
+        { "type": "choice", "q": "Wat betekent inschrijfduur?", "options": ["De tijd dat je als woningzoekende bent ingeschreven", "De tijd dat je in een woning woont", "De tijd die je moet wachten op een antwoord"], "answer": 0, "en": "What does inschrijfduur mean?" },
+        { "type": "choice", "q": "Aan wie gaat een woning als meer mensen reageren?", "options": ["Aan de persoon met de langste inschrijfduur", "Aan de persoon die het eerst reageert", "Aan de persoon met het laagste inkomen"], "answer": 0, "en": "To whom does a home go if several people respond?" },
+        { "type": "choice", "q": "Wat gebeurt er als je een afspraak mist zonder bericht?", "options": ["Je verliest je plaats", "Je krijgt een nieuwe uitnodiging", "Je moet een boete betalen"], "answer": 0, "en": "What happens if you miss an appointment without notice?" },
+        { "type": "choice", "q": "Wat is huurtoeslag?", "options": ["Een bijdrage van de overheid aan de huur", "Een extra bedrag dat je aan de corporatie betaalt", "Een verhoging van de huur"], "answer": 0, "en": "What is rent allowance?" },
+        { "type": "choice", "q": "Wat moet je doen als je een nieuwe baan krijgt?", "options": ["Het binnen vier weken melden aan de corporatie", "Het jaar daarna melden", "Niets, want dat hoeft niet"], "answer": 0, "en": "What must you do if you get a new job?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: B1 menu (reading texts)", "url": "https://nt2taalmenu.nl/nt2-b1-menu/" }
+      ]
+    },
+    {
+      "id": "b1.t05.l5", "title": "A complaint about noise", "kind": "listening",
+      "dialogue": [
+        { "who": "A", "nl": "Goedenavond. Sorry dat ik zo laat aanbel. Ik woon onder u, in nummer vier.", "en": "Good evening. Sorry to ring the bell so late. I live below you, at number four." },
+        { "who": "B", "nl": "Goedenavond. Is er iets aan de hand?", "en": "Good evening. Is something wrong?" },
+        { "who": "A", "nl": "Eerlijk gezegd wel. De laatste weken is er elke avond veel lawaai bij u. Gisteren hoorde ik tot twaalf uur muziek.", "en": "Honestly, yes. For the past few weeks there has been a lot of noise at your place every evening. Yesterday I heard music until twelve o'clock." },
+        { "who": "B", "nl": "Dat spijt me. Ik wist niet dat u er zoveel last van had. We hadden gisteren bezoek.", "en": "I am sorry. I didn't know it bothered you so much. We had visitors yesterday." },
+        { "who": "A", "nl": "Ik begrijp dat het soms gezellig is, maar ik moet 's ochtends om zes uur op voor mijn werk.", "en": "I understand that it is sometimes fun, but I have to get up at six in the morning for work." },
+        { "who": "B", "nl": "Dat is vervelend. We zullen na tien uur stiller zijn.", "en": "That is unpleasant. We will be quieter after ten o'clock." },
+        { "who": "A", "nl": "Dank u. En de kinderen? Die rennen ook vaak door de kamer.", "en": "Thank you. And the children? They also often run through the room." },
+        { "who": "B", "nl": "Wij leggen een vloerkleed neer. Dan is het minder hoorbaar.", "en": "We will put down a rug. Then it will be less audible." },
+        { "who": "A", "nl": "Dat zou fijn zijn. Als er toch een probleem is, kom ik gewoon even langs.", "en": "That would be nice. If there is still a problem, I will just drop by." },
+        { "who": "B", "nl": "Goed, afgesproken.", "en": "Fine, agreed." }
+      ],
+      "items": [
+        { "type": "listen", "nl": "Ik woon onder u, in nummer vier.", "q": "Where does the speaker live?", "options": ["Below the other person", "Above the other person", "Next door"], "answer": 0 },
+        { "type": "listen", "nl": "Gisteren hoorde ik tot twaalf uur muziek.", "q": "What did he hear yesterday?", "options": ["Music until twelve", "Children until ten", "A party until two"], "answer": 0 },
+        { "type": "listen", "nl": "Ik moet 's ochtends om zes uur op voor mijn werk.", "q": "Why is the noise a problem for him?", "options": ["He gets up at six for work", "He has a baby", "He works at night"], "answer": 0 },
+        { "type": "listen", "nl": "Wij leggen een vloerkleed neer.", "q": "What does the neighbour promise?", "options": ["To put down a rug", "To buy new curtains", "To move house"], "answer": 0 },
+        { "type": "listen", "nl": "Goed, afgesproken." },
+        { "type": "choice", "q": "Na hoe laat wil de bovenbuur stiller zijn?", "options": ["Na tien uur", "Na twaalf uur", "Na acht uur"], "answer": 0, "en": "After what time will the upstairs neighbour be quieter?" },
+        { "type": "choice", "q": "Hoe eindigt het gesprek?", "options": ["Ze maken een afspraak en blijven vriendelijk", "Ze krijgen ruzie", "De buurman belt de huisbaas"], "answer": 0, "en": "How does the conversation end?" }
+      ],
+      "sources": [
+        { "title": "Taalklas: free Dutch video course", "url": "https://www.taalklas.nl/" }
+      ]
+    },
+    {
+      "id": "b1.t05.l6", "title": "Solving a problem politely", "kind": "speaking",
+      "dialogue": [
+        { "who": "A", "nl": "Goedemiddag. Kan ik u even spreken? Ik ben uw buurvrouw van nummer zes.", "en": "Good afternoon. Can I talk to you for a moment? I am your neighbour from number six." },
+        { "who": "B", "nl": "Ja, natuurlijk. Komt u binnen. Wat kan ik voor u doen?", "en": "Yes, of course. Come in. What can I do for you?" },
+        { "who": "A", "nl": "Uw hond blaft de hele dag als u op uw werk bent. Mijn baby kan er niet door slapen.", "en": "Your dog barks all day when you are at work. My baby cannot sleep because of it." },
+        { "who": "B", "nl": "Oh, dat wist ik niet. Dat spijt me heel erg. Ik zal er iets aan doen.", "en": "Oh, I didn't know that. I am very sorry. I will do something about it." },
+        { "who": "A", "nl": "Wat denkt u te doen?", "en": "What do you think you will do?" },
+        { "who": "B", "nl": "Ik vraag mijn zus om overdag met hem te gaan wandelen. Dan blaft hij minder.", "en": "I will ask my sister to take him for a walk during the day. Then he barks less." },
+        { "who": "A", "nl": "Dat klinkt goed. Kunt u dat deze week regelen?", "en": "That sounds good. Can you arrange that this week?" },
+        { "who": "B", "nl": "Ja, dat beloof ik. Als hij toch nog blaft, mag u altijd bij mij aanbellen.", "en": "Yes, I promise. If he still barks, you can always ring my doorbell." },
+        { "who": "A", "nl": "Dank u wel. Dat waardeer ik.", "en": "Thank you. I appreciate that." },
+        { "who": "B", "nl": "Graag gedaan. Fijn dat u het mij hebt verteld.", "en": "You're welcome. I'm glad you told me." }
+      ],
+      "items": [
+        { "type": "speak", "nl": "Dat spijt me heel erg. Ik zal er iets aan doen.", "en": "I am very sorry. I will do something about it." },
+        { "type": "speak", "nl": "Als hij toch nog blaft, mag u altijd bij mij aanbellen.", "en": "If he still barks, you can always ring my doorbell." },
+        {
+          "type": "prompt",
+          "task": "Your neighbour plays loud music late at night. Ring the bell and tell him politely about the problem. Say what you hear, why it is a problem and what you ask him to do.",
+          "model": "Goedenavond. Sorry dat ik u stoor. Ik hoor bijna elke avond tot laat muziek en ik moet 's ochtends vroeg op voor mijn werk. Zou u de muziek na tien uur zachter kunnen zetten?",
+          "seconds": 50,
+          "points": ["A polite start", "What you hear", "Why it is a problem", "What you ask him to do"]
+        },
+        {
+          "type": "prompt",
+          "task": "A neighbour tells you that your children make too much noise. Respond politely: apologise, say you did not know and offer a solution.",
+          "model": "Oh, dat wist ik niet. Dat spijt me. Ik zal met de kinderen praten en na acht uur mogen ze niet meer rennen. Als er toch nog overlast is, wilt u dat dan tegen mij zeggen?",
+          "seconds": 50,
+          "points": ["Apologise", "Say you did not know", "Offer a solution"]
+        },
+        {
+          "type": "prompt",
+          "task": "Describe your ideal home and neighbourhood: how big, where, and what must be nearby.",
+          "model": "Mijn ideale woning is een appartement met drie kamers en een balkon. Ik wil graag in een rustige wijk wonen, dicht bij een station en een supermarkt. In de buurt moet ook een park zijn, want ik loop graag.",
+          "seconds": 60,
+          "points": ["The home", "The neighbourhood", "What must be nearby"]
+        }
+      ]
+    },
+    {
+      "id": "b1.t05.l7", "title": "We have moved", "kind": "writing",
+      "explain": [
+        { "type": "p", "text": "After a move you must tell several people and organisations. Friends get an **informal** message. The council, your landlord and your energy supplier get a **formal** one. In the Netherlands you must report your move to the council (*gemeente*) at most four weeks before or within five days after the move." },
+        { "type": "table", "head": ["", "To a friend", "To the energy supplier"], "rows": [["Greeting", "Hoi Sanne,", "Geachte heer/mevrouw,"], ["Message", "We zijn verhuisd! Ons nieuwe adres is …", "Per 1 maart verhuis ik. Mijn nieuwe adres is …"], ["Closing", "Tot snel! Groetjes,", "Met vriendelijke groet,"]] },
+        { "type": "ex", "nl": "Per 1 maart woon ik aan de Kastanjelaan 8.", "en": "From 1 March I live at Kastanjelaan 8." },
+        { "type": "ex", "nl": "De meterstand is vandaag 4521.", "en": "The meter reading today is 4521." },
+        { "type": "tip", "text": "Useful: *Per … verhuis ik naar …*, *Mijn oude adres was …*, *Wilt u mijn gegevens aanpassen?*, *U bent van harte welkom!*" }
+      ],
+      "items": [
+        {
+          "type": "write",
+          "task": "You have moved to a new flat. Write a friendly message to a friend: say that you have moved, give your new address, say what you like about the new home and invite your friend for coffee.",
+          "points": ["An informal greeting", "You have moved and your new address", "What you like about the home", "An invitation", "An informal closing"],
+          "minWords": 60, "maxWords": 100,
+          "model": "Hoi Sanne, we zijn verhuisd! Sinds zaterdag wonen we aan de Kastanjelaan 8 in Zonnedaal. Het appartement is groter dan ons oude huis en we hebben nu een balkon met uitzicht op een park. De buren zijn ook erg aardig. Het is nog een beetje rommelig, want er staan nog veel dozen in de kamer. Maar je bent van harte welkom voor een kop koffie! Laat maar weten wanneer het jou uitkomt. Tot snel! Groetjes, Amira"
+        },
+        {
+          "type": "write",
+          "task": "Write a formal email to your energy supplier: say that you are moving, give the date, your old and your new address and the meter reading, and ask them to change your details.",
+          "points": ["A formal greeting", "The date of your move", "Old and new address", "The meter reading", "Ask them to change your details"],
+          "minWords": 70, "maxWords": 110,
+          "model": "Geachte heer/mevrouw, per 1 maart verhuis ik. Mijn oude adres is Lindenstraat 12 in Utrecht en mijn nieuwe adres is Kastanjelaan 8 in Zonnedaal. Mijn klantnummer is 123456. Op de dag van de verhuizing was de meterstand voor elektriciteit 4521 en voor gas 1873. Wilt u mijn gegevens aanpassen en mij een bevestiging sturen? Ik wil de nieuwe rekening graag op het nieuwe adres ontvangen. Alvast hartelijk dank voor uw hulp. Met vriendelijke groet, Amira Said"
+        }
+      ],
+      "sources": [
+        { "title": "Oefenen.nl: free practice (account needed)", "url": "https://oefenen.nl/" }
+      ]
+    }
+  ]
+}

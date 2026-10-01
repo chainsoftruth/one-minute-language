@@ -39,6 +39,7 @@ import com.example.oneminutelanguage.course.dueAt
 import com.example.oneminutelanguage.course.gradeChoice
 import com.example.oneminutelanguage.course.gradeMatch
 import com.example.oneminutelanguage.course.gradeText
+import com.example.oneminutelanguage.course.itemPrompt
 import com.example.oneminutelanguage.course.lessonAfter
 import com.example.oneminutelanguage.course.unitIdOf
 import com.example.oneminutelanguage.course.vocabCardSchedule
@@ -112,6 +113,9 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
 
     var score by mutableIntStateOf(0); private set
     var mistakes by mutableIntStateOf(0); private set
+
+    /** Test lessons: the wrong items (what was asked, the right answer) for the summary on the Done screen. */
+    var wrongSummary by mutableStateOf<List<Pair<String, String>>>(emptyList()); private set
     var nextLesson by mutableStateOf<Lesson?>(null); private set
 
     /** Speaking items: tries used so far and the last close-but-not-good guess (shown so the learner can retry). */
@@ -143,7 +147,7 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
                 lesson = found.copy(items = built.map { it.item })
             } else {
                 lesson = found
-                if (found.kind == LessonKind.READING && found.text != null) {
+                if (found.text != null) {
                     wordLookup = WordLookup(CourseRepository.lexicon(application, id).values)
                 }
             }
@@ -186,7 +190,8 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
             phase = if (l.kind == LessonKind.LISTENING) LessonPhase.Dialogue else LessonPhase.Roleplay
             return
         }
-        if (l.kind == LessonKind.READING && l.text != null && !readingDone) {
+        // Reading lessons and reading tests (the exam) both open with their text.
+        if ((l.kind == LessonKind.READING || l.kind == LessonKind.TEST) && l.text != null && !readingDone) {
             readingDone = true
             phase = LessonPhase.Reading
             return
@@ -305,6 +310,9 @@ class LessonViewModel(application: Application, savedStateHandle: SavedStateHand
         val hasItems = lesson?.items?.isNotEmpty() == true
         score = if (hasItems) queue.score else 100
         mistakes = if (hasItems) queue.mistakes else 0
+        if (hasItems && lesson?.kind == LessonKind.TEST) {
+            wrongSummary = queue.wrongItems.map { itemPrompt(it) to expectedAnswer(it) }
+        }
         phase = LessonPhase.Done
         // A drill is practice only: no lesson progress, no review cards.
         if (isDrill) return

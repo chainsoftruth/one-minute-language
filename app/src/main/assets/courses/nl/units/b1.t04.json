@@ -1,0 +1,151 @@
+{
+  "id": "b1.t04", "level": "B1", "kind": "theme",
+  "title": "Society & civic life",
+  "subtitle": "Read a letter from the council and an article about elections, hear a news item, give your opinion and write to the council",
+  "lessons": [
+    {
+      "id": "b1.t04.l1", "title": "Government and elections", "kind": "vocab",
+      "vocab": [
+        "tweede_kamer", "kabinet", "coalitie", "oppositie", "wethouder", "raadslid", "kiesrecht", "stembureau", "stempas", "kiezer",
+        "kandidaat", "verkiezingsprogramma", "opkomst", "uitslag", "stemmen_op", "beleid", "wetgeving", "rechtsstaat",
+        "vrijheid_van_meningsuiting", "discriminatie", "gelijke_behandeling", "burgerschap", "democratisch", "inspraak"
+      ]
+    },
+    {
+      "id": "b1.t04.l2", "title": "Services and everyday duties", "kind": "vocab",
+      "vocab": [
+        "digid", "belastingdienst", "belastingaangifte", "belastingteruggave", "zorgtoeslag", "huurtoeslag", "afvalstoffenheffing", "gft_afval",
+        "restafval", "grofvuil", "milieustraat", "ophaaldag", "afvalkalender", "duurzaamheid", "recyclen", "bezwaar_maken", "ombudsman",
+        "vrijwilligerswerk", "mantelzorg", "buurtinitiatief", "inspraakavond", "zich_inzetten_voor", "bijstand", "klimaatverandering"
+      ]
+    },
+    {
+      "id": "b1.t04.l3", "title": "New rules for waste", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "A letter from the council (*gemeente*) tells residents about new rules. Look for the date, what changes and what you must do yourself. Tap a word you don't know." }
+      ],
+      "text": "Betreft: nieuwe regels voor het ophalen van afval. Beste inwoners van Zonnedaal, vanaf 1 januari verandert er iets in de manier waarop wij uw afval ophalen. Wij willen met zijn allen meer afval scheiden, want dat is beter voor het milieu. Wat betekent dit voor u? Het restafval gaat in de grijze container. Die halen wij voortaan eens per vier weken op in plaats van elke twee weken. De groene container is voor gft-afval: groente-, fruit- en tuinafval. Die halen wij elke week op. Plastic, blik en drinkpakken gaan in de oranje zak, papier en karton in de blauwe container. Glas brengt u zelf naar de glasbak. Grote spullen, zoals een oude bank of een kast, mag u niet naast de container zetten. Die kunt u gratis wegbrengen naar de milieustraat of laten ophalen na een afspraak. Op onze website vindt u een afvalkalender met alle ophaaldagen. Zet uw container op de ophaaldag vóór zeven uur 's ochtends aan de straat en haal hem daarna weer weg. Gooit u afval op straat? Dan kunt u een boete van 150 euro krijgen. Hebt u vragen of is uw container kapot? Neem dan contact op met de gemeente. Met vriendelijke groet, het college van burgemeester en wethouders",
+      "items": [
+        { "type": "choice", "q": "Wanneer gaan de nieuwe regels in?", "options": ["Op 1 januari", "Over vier weken", "Op de eerste ophaaldag"], "answer": 0, "en": "When do the new rules start?" },
+        { "type": "choice", "q": "Hoe vaak wordt het restafval voortaan opgehaald?", "options": ["Eens per vier weken", "Elke twee weken", "Elke week"], "answer": 0, "en": "How often will the residual waste be collected from now on?" },
+        { "type": "choice", "q": "Wat hoort in de groene container?", "options": ["Groente-, fruit- en tuinafval", "Papier en karton", "Plastic en blik"], "answer": 0, "en": "What goes in the green container?" },
+        { "type": "choice", "q": "Je hebt een oude bank. Wat moet je doen?", "options": ["Naar de milieustraat brengen of laten ophalen na een afspraak", "Naast de grijze container zetten", "In de blauwe container doen"], "answer": 0, "en": "You have an old sofa. What must you do?" },
+        { "type": "choice", "q": "Wat gebeurt er als je afval op straat gooit?", "options": ["Je kunt een boete krijgen", "Je moet de straat schoonmaken", "Je krijgt een nieuwe container"], "answer": 0, "en": "What happens if you throw rubbish on the street?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: B1 menu (reading texts)", "url": "https://nt2taalmenu.nl/nt2-b1-menu/" }
+      ]
+    },
+    {
+      "id": "b1.t04.l4", "title": "Local elections", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "This is a news-style article that explains how elections work. Look for who may vote, what you do on the day and who counts the votes. Tap a word you don't know." }
+      ],
+      "text": "Vandaag zijn in heel Nederland de gemeenteraadsverkiezingen. Inwoners kiezen elke vier jaar een nieuwe gemeenteraad. De raad bepaalt het beleid van de gemeente, bijvoorbeeld over scholen, wegen, afval en sportvelden. Ook kiezen de Nederlanders elke vier jaar de Tweede Kamer. Dat is het parlement dat wetten maakt en de regering controleert. Wie mag stemmen? Iedereen van achttien jaar of ouder met de Nederlandse nationaliteit. Voor de gemeenteraad mogen ook mensen stemmen die niet de Nederlandse nationaliteit hebben, maar al minstens vijf jaar legaal in Nederland wonen. Kiezers krijgen thuis een stempas. Daarmee gaan ze, samen met een identiteitsbewijs, naar een stembureau, bijvoorbeeld in een school of een bibliotheek. In het stemhokje kleuren ze een vakje rood. Als de stembureaus om negen uur 's avonds sluiten, tellen vrijwilligers de stemmen. De uitslag is vaak dezelfde avond bekend. De opkomst bij gemeenteraadsverkiezingen is meestal lager dan bij de verkiezingen voor de Tweede Kamer. Volgens onderzoekers weten veel mensen niet precies wat de gemeenteraad doet. Daarom organiseren gemeenten en scholen voor de verkiezingen debatten en lessen. Zo kunnen jonge mensen en nieuwkomers ontdekken waarom hun stem telt. Stemmen is een belangrijk recht in een democratie. Artikel 1 van de Grondwet zegt bovendien dat iedereen in Nederland gelijk wordt behandeld en dat discriminatie verboden is.",
+      "items": [
+        { "type": "choice", "q": "Wat bepaalt de gemeenteraad?", "options": ["Het beleid van de gemeente", "De wetten van het land", "De regels van de verkiezingen"], "answer": 0, "en": "What does the municipal council decide?" },
+        { "type": "choice", "q": "Wie mag voor de gemeenteraad stemmen?", "options": ["Ook mensen zonder Nederlandse nationaliteit die al vijf jaar legaal in Nederland wonen", "Alleen mensen met de Nederlandse nationaliteit", "Iedereen die in Nederland woont"], "answer": 0, "en": "Who may vote for the municipal council?" },
+        { "type": "choice", "q": "Wat neem je mee naar het stembureau?", "options": ["Je stempas en een identiteitsbewijs", "Alleen een identiteitsbewijs", "Een brief van de gemeente"], "answer": 0, "en": "What do you take to the polling station?" },
+        { "type": "choice", "q": "Wie telt de stemmen?", "options": ["Vrijwilligers", "De burgemeester", "De leden van de Tweede Kamer"], "answer": 0, "en": "Who counts the votes?" },
+        { "type": "choice", "q": "Waarom is de opkomst volgens onderzoekers laag?", "options": ["Veel mensen weten niet precies wat de gemeenteraad doet", "De stembureaus zijn te ver weg", "Mensen vinden de stempas te ingewikkeld"], "answer": 0, "en": "Why is the turnout low according to researchers?" }
+      ],
+      "sources": [
+        { "title": "NOS Journaal in Makkelijke Taal: about the programme", "url": "https://over.nos.nl/nieuws/nieuw-nos-journaal-in-makkelijke-taal/" }
+      ]
+    },
+    {
+      "id": "b1.t04.l5", "title": "A news item", "kind": "listening",
+      "dialogue": [
+        { "who": "A", "nl": "Dit is het nieuws van twaalf uur. Binnenkort moeten veel mensen hun belastingaangifte doen. Onze verslaggever Eva is bij de Belastingdienst. Eva, wat kunnen mensen verwachten?", "en": "This is the twelve o'clock news. Soon many people must file their tax return. Our reporter Eva is at the Tax Office. Eva, what can people expect?" },
+        { "who": "B", "nl": "Goedemiddag. Vanaf vandaag kunnen mensen de aangifte online doen. Dat kan met DigiD, de digitale sleutel voor veel zaken met de overheid.", "en": "Good afternoon. From today people can file their return online. That is possible with DigiD, the digital key for many things with the government." },
+        { "who": "A", "nl": "Moet iedereen aangifte doen?", "en": "Does everyone have to file a return?" },
+        { "who": "B", "nl": "Niet iedereen. Je krijgt een brief als je aangifte moet doen. Maar veel mensen doen het vrijwillig, omdat ze dan vaak geld terugkrijgen.", "en": "Not everyone. You get a letter if you have to file. But many people do it voluntarily, because they often get money back." },
+        { "who": "A", "nl": "Hoe lang hebben mensen de tijd?", "en": "How long do people have?" },
+        { "who": "B", "nl": "Tot 1 mei. Wie te laat is, kan een boete krijgen. Wie meer tijd nodig heeft, kan uitstel vragen.", "en": "Until 1 May. Anyone who is late can get a fine. Anyone who needs more time can ask for a delay." },
+        { "who": "A", "nl": "En als iemand het moeilijk vindt?", "en": "And if someone finds it difficult?" },
+        { "who": "B", "nl": "Dan kunnen ze hulp vragen. Veel bibliotheken helpen gratis en de Belastingdienst heeft ook een telefoonlijn.", "en": "Then they can ask for help. Many libraries help for free and the Tax Office also has a phone line." },
+        { "who": "A", "nl": "Dank je wel, Eva.", "en": "Thank you, Eva." }
+      ],
+      "items": [
+        { "type": "listen", "nl": "Vanaf vandaag kunnen mensen de aangifte online doen.", "q": "How can people file their return?", "options": ["Online", "By post only", "At the town hall"], "answer": 0 },
+        { "type": "listen", "nl": "Je krijgt een brief als je aangifte moet doen.", "q": "How do you know you have to file?", "options": ["You get a letter", "You get a text message", "You see it on the news"], "answer": 0 },
+        { "type": "listen", "nl": "Wie te laat is, kan een boete krijgen.", "q": "What happens if you are late?", "options": ["You can get a fine", "Nothing", "You must come to the office"], "answer": 0 },
+        { "type": "listen", "nl": "Veel bibliotheken helpen gratis.", "q": "Where can you get free help?", "options": ["In libraries", "At the post office", "At the bank"], "answer": 0 },
+        { "type": "listen", "nl": "Dan kunnen ze hulp vragen." },
+        { "type": "choice", "q": "Wat is DigiD?", "options": ["Een digitale sleutel voor zaken met de overheid", "Een nieuwe belasting", "Een telefoonlijn van de Belastingdienst"], "answer": 0, "en": "What is DigiD?" },
+        { "type": "choice", "q": "Tot wanneer kan men aangifte doen?", "options": ["Tot 1 mei", "Tot het einde van het jaar", "Tot volgende week"], "answer": 0, "en": "Until when can people file?" }
+      ],
+      "sources": [
+        { "title": "NOS Journaal in Makkelijke Taal: about the programme", "url": "https://over.nos.nl/nieuws/nieuw-nos-journaal-in-makkelijke-taal/" }
+      ]
+    },
+    {
+      "id": "b1.t04.l6", "title": "An opinion about the street", "kind": "speaking",
+      "dialogue": [
+        { "who": "A", "nl": "Heb je de brief van de gemeente gelezen? Ze willen onze straat autovrij maken.", "en": "Have you read the letter from the council? They want to make our street car-free." },
+        { "who": "B", "nl": "Ja, ik heb hem gelezen. Eerlijk gezegd vind ik het geen goed plan.", "en": "Yes, I have read it. Honestly, I don't think it is a good plan." },
+        { "who": "A", "nl": "Waarom niet? Het zou veiliger zijn voor de kinderen.", "en": "Why not? It would be safer for the children." },
+        { "who": "B", "nl": "Dat klopt, maar mijn moeder is slecht ter been. Zij kan niet ver lopen, dus ze moet met de auto voor de deur kunnen komen.", "en": "That is true, but my mother has difficulty walking. She cannot walk far, so she must be able to come to the door by car." },
+        { "who": "A", "nl": "Dat is een goed punt. Misschien kan de gemeente een uitzondering maken voor mensen die slecht kunnen lopen.", "en": "That is a good point. Maybe the council can make an exception for people who cannot walk well." },
+        { "who": "B", "nl": "Dat lijkt me een goed idee. Wat vind jij van de speelplek die ze erbij willen maken?", "en": "That sounds like a good idea. What do you think of the playground they want to add?" },
+        { "who": "A", "nl": "Daar ben ik helemaal voor. Er is te weinig plek voor kinderen om buiten te spelen.", "en": "I am completely in favour of that. There is too little space for children to play outside." },
+        { "who": "B", "nl": "Daar ben ik het mee eens. Zullen we samen naar de inspraakavond gaan?", "en": "I agree with that. Shall we go to the consultation evening together?" },
+        { "who": "A", "nl": "Ja, dat doen we. Dan kunnen we onze mening geven.", "en": "Yes, let's do that. Then we can give our opinion." }
+      ],
+      "items": [
+        { "type": "speak", "nl": "Eerlijk gezegd vind ik het geen goed plan.", "en": "Honestly, I don't think it is a good plan." },
+        { "type": "speak", "nl": "Daar ben ik het helemaal mee eens.", "en": "I completely agree with that." },
+        {
+          "type": "prompt",
+          "task": "The council wants to build more cycle paths and remove some parking spaces. Give your opinion with two reasons.",
+          "model": "Volgens mij is dat een goed plan. Ik fiets zelf elke dag en het is nu op sommige plekken gevaarlijk. Bovendien is het beter voor het milieu als meer mensen op de fiets gaan. Aan de andere kant begrijp ik dat sommige mensen een parkeerplaats nodig hebben.",
+          "seconds": 60,
+          "points": ["Give your opinion", "A first reason", "A second reason", "Show you understand the other side"]
+        },
+        {
+          "type": "prompt",
+          "task": "You are at the consultation evening (inspraakavond). Introduce yourself, say where you live, give your opinion on the plan and ask one question.",
+          "model": "Goedenavond, mijn naam is Karim en ik woon in de Lindenstraat. Ik ben voor het plan, maar ik maak me zorgen over het verkeer in de zijstraten. Kunt u uitleggen hoe de gemeente dat wil oplossen?",
+          "seconds": 50,
+          "points": ["Introduce yourself", "Where you live", "Your opinion", "A question"]
+        },
+        {
+          "type": "prompt",
+          "task": "Explain to a new neighbour how to separate waste in your town: which containers there are and what goes in them.",
+          "model": "Wij hebben een grijze container voor restafval en een groene container voor groente- en fruitafval. Plastic doen we in een oranje zak en papier in de blauwe container. Glas brengen we zelf naar de glasbak. Het afval wordt op dinsdag opgehaald.",
+          "seconds": 60,
+          "points": ["The containers", "What goes in each one", "When the waste is collected"]
+        }
+      ]
+    },
+    {
+      "id": "b1.t04.l7", "title": "Writing to the council", "kind": "writing",
+      "explain": [
+        { "type": "p", "text": "A letter or email to the council (*gemeente*) is formal. Start with a subject line (*Betreft: …*) so the civil servant knows at once what it is about. Then say what the problem is, since when, and what you want the council to do." },
+        { "type": "table", "head": ["Part", "Example"], "rows": [["Betreft", "Betreft: klacht over het ophalen van afval"], ["Problem", "Mijn grijze container is drie weken niet geleegd."], ["Request", "Ik verzoek u de container zo snel mogelijk te legen."], ["Closing", "Ik zie uw reactie graag tegemoet. Met vriendelijke groet,"]] },
+        { "type": "ex", "nl": "Ik wil graag een klacht indienen over het ophalen van het afval.", "en": "I would like to file a complaint about the collection of the waste." },
+        { "type": "ex", "nl": "Ik verzoek u om een nieuwe container te sturen.", "en": "I request that you send a new container." },
+        { "type": "tip", "text": "Formal requests: *Ik verzoek u …*, *Zou u … kunnen …?*, *Ik wil u vragen om …*. A formal complaint ends with *Ik zie uw reactie graag tegemoet.*" }
+      ],
+      "items": [
+        {
+          "type": "write",
+          "task": "The grey container in your street has not been emptied for three weeks and the rubbish is starting to smell. Write a formal complaint to the council: give a subject line, say what the problem is and since when, say what you have already done and ask them to solve it quickly.",
+          "points": ["A subject line (Betreft)", "The problem and since when", "What you have already done", "What you ask the council to do", "A formal closing"],
+          "minWords": 80, "maxWords": 120,
+          "model": "Betreft: klacht over het ophalen van afval. Geachte heer/mevrouw, ik woon aan de Lindenstraat 12 en mijn grijze container is al drie weken niet geleegd. De container is vol en het afval begint te stinken. Op de afvalkalender staat dat het afval elke vier weken wordt opgehaald, maar de vuilniswagen is niet gekomen. Ik heb vorige week al gebeld, maar ik kreeg geen antwoord. Ik verzoek u daarom om de container zo snel mogelijk te laten legen. Ik zie uw reactie graag tegemoet. Met vriendelijke groet, Karim Aydin"
+        },
+        {
+          "type": "write",
+          "task": "You have a large old wardrobe that you want to throw away. Write a short formal email to the council: ask how you can have it collected, say where you live and when you are at home.",
+          "points": ["A subject line", "What you want to throw away", "Your question", "Your address and when you are at home", "A formal closing"],
+          "minWords": 60, "maxWords": 100,
+          "model": "Betreft: ophalen van grofvuil. Geachte heer/mevrouw, ik heb een oude kast die ik wil weggooien. De kast is te groot voor de container en ik kan hem niet zelf naar de milieustraat brengen. Kunt u mij laten weten hoe ik hem kan laten ophalen? Ik woon aan de Lindenstraat 12. Ik ben in de week na vier uur thuis. Alvast hartelijk dank voor uw hulp. Met vriendelijke groet, Karim Aydin"
+        }
+      ],
+      "sources": [
+        { "title": "Oefenen.nl: free practice (account needed)", "url": "https://oefenen.nl/" }
+      ]
+    }
+  ]
+}

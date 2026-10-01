@@ -1,0 +1,159 @@
+{
+  "id": "b1.t07", "level": "B1", "kind": "theme",
+  "title": "Travel 2",
+  "subtitle": "Read about delay compensation and a lost suitcase, hear a holiday story, tell about a trip and write to a friend",
+  "lessons": [
+    {
+      "id": "b1.t07.l1", "title": "Journeys and problems", "kind": "vocab",
+      "vocab": [
+        "stationshal", "reisplanner", "vervoersbewijs", "spitsuur", "overstaptijd", "omleiding", "wegwerkzaamheden", "verkeersopstopping",
+        "pechhulp", "inchecken", "bagageband", "verloren_bagage", "handbagage", "ruimbagage", "compensatie", "annulering", "boardingpas",
+        "tussenstop", "beveiligingscontrole", "annuleringsverzekering", "reisdocument", "visum", "bestemming", "reisadvies"
+      ]
+    },
+    {
+      "id": "b1.t07.l2", "title": "Holidays and places", "kind": "vocab",
+      "vocab": [
+        "hotelkamer", "tweepersoonskamer", "jeugdherberg", "bed_and_breakfast", "vakantiepark", "boeking", "reserveringsnummer", "uitchecken",
+        "toeristenbelasting", "souvenirwinkel", "stadswandeling", "randstad", "grote_stad", "noorden", "zuiden", "oosten", "westen", "kust",
+        "waddeneiland", "dagtocht", "overnachten", "bezichtigen", "schilderachtig", "afgelegen"
+      ]
+    },
+    {
+      "id": "b1.t07.l3", "title": "Your rights when you are late", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "This text explains rules and what you must do, step by step. Find out when you have a right to money, when you do not, and which documents you must keep. Tap a word you don't know." }
+      ],
+      "text": "Reizen met vertraging: wat zijn uw rechten? Is uw trein of vlucht te laat of geannuleerd? Dan hebt u soms recht op een vergoeding. Bij de trein krijgt u een deel van uw geld terug als de vertraging lang duurt. Op de website van de vervoerder ziet u hoe lang dat moet zijn en hoe u de vergoeding aanvraagt. Bij een vlucht gelden andere regels. Is uw vlucht meer dan drie uur te laat of wordt hij geannuleerd, dan krijgt u vaak een compensatie van 250 tot 600 euro. Het bedrag hangt af van de afstand. Dat geldt niet als de vertraging komt door slecht weer of een staking, want dan is het geen schuld van de maatschappij. Wat moet u doen? Bewaar uw boardingpas en uw boeking. Schrijf op hoe lang de vertraging duurde en wat de reden was. Moet u lang wachten? Dan mag u van de maatschappij eten en drinken vragen. Moet u overnachten, dan hebt u recht op een hotel. Dien daarna een schriftelijke klacht in bij de maatschappij. Krijgt u binnen zes weken geen antwoord, of bent u het niet eens met het antwoord? Dan kunt u een klacht indienen bij een onafhankelijke klachtencommissie. Doe dat zo snel mogelijk, want voor elke klacht is er een uiterste datum. Dus wacht niet te lang.",
+      "items": [
+        { "type": "choice", "q": "Wanneer krijg je vaak compensatie voor een vlucht?", "options": ["Als de vlucht meer dan drie uur te laat is of geannuleerd wordt", "Als de vlucht tien minuten te laat is", "Als je je boardingpas bent kwijtgeraakt"], "answer": 0, "en": "When do you often get compensation for a flight?" },
+        { "type": "choice", "q": "Wanneer krijg je geen compensatie?", "options": ["Als de vertraging komt door slecht weer of een staking", "Als je geen bagage hebt", "Als je een goedkoop ticket hebt"], "answer": 0, "en": "When do you get no compensation?" },
+        { "type": "choice", "q": "Wat moet je bewaren?", "options": ["Je boardingpas en je boeking", "Je paspoort en je visum", "Je bonnetjes van het restaurant"], "answer": 0, "en": "What must you keep?" },
+        { "type": "choice", "q": "Je moet overnachten door de vertraging. Waar heb je recht op?", "options": ["Een hotel", "Een nieuwe vlucht naar een andere stad", "Een bedrag van 600 euro"], "answer": 0, "en": "You have to stay overnight because of the delay. What are you entitled to?" },
+        { "type": "choice", "q": "Wat kun je doen als de maatschappij niet binnen zes weken antwoordt?", "options": ["Een klacht indienen bij een onafhankelijke klachtencommissie", "Opnieuw een boeking maken", "Naar de rechter in je woonplaats gaan"], "answer": 0, "en": "What can you do if the airline does not answer within six weeks?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: B1 menu (reading texts)", "url": "https://nt2taalmenu.nl/nt2-b1-menu/" }
+      ]
+    },
+    {
+      "id": "b1.t07.l4", "title": "A lost suitcase", "kind": "reading",
+      "explain": [
+        { "type": "tip", "text": "This is a formal email from a traveller. Look for what happened, what he already did, what he asks and what he sends with the email. Tap a word you don't know." }
+      ],
+      "text": "Betreft: vermiste koffer, vlucht NL 482 van Lissabon naar Amsterdam. Geachte heer/mevrouw, op zaterdag 12 juli ben ik met vlucht NL 482 uit Lissabon in Amsterdam aangekomen. Ik heb lang bij de bagageband gewacht, maar mijn koffer kwam niet. Ik heb dat direct gemeld bij de balie voor verloren bagage. Een medewerker zei dat de koffer waarschijnlijk in Lissabon is gebleven. Ik kreeg een formulier en een dossiernummer: 778899. Mijn koffer is zwart en heeft een rode band om het handvat. Er zit ook een label aan met mijn naam. In de koffer zaten kleren, schoenen, medicijnen en een fototoestel. Helaas heb ik mijn koffer nog niet teruggekregen en dat is erg vervelend, want ik heb de medicijnen echt nodig. Ik moest nieuwe kleren en medicijnen kopen, omdat ik nog drie dagen in Amsterdam bleef voor mijn werk. Ik heb alle bonnetjes bewaard. Samen kosten de spullen 185 euro. Wilt u mijn koffer zo snel mogelijk zoeken en naar mijn huisadres sturen? En wilt u mij de kosten van de nieuwe spullen vergoeden? Ik stuur de bonnetjes en een kopie van mijn boardingpas mee. Ik hoor graag binnen veertien dagen van u. Alvast bedankt voor uw hulp. Met vriendelijke groet, Piet van Dijk",
+      "items": [
+        { "type": "choice", "q": "Wat is er gebeurd?", "options": ["De koffer van de schrijver was niet op de bagageband", "De vlucht was geannuleerd", "De schrijver heeft zijn paspoort verloren"], "answer": 0, "en": "What happened?" },
+        { "type": "choice", "q": "Wat heeft de schrijver direct gedaan?", "options": ["Hij heeft het gemeld bij de balie voor verloren bagage", "Hij heeft een nieuwe koffer gekocht", "Hij is naar huis gegaan"], "answer": 0, "en": "What did the writer do straight away?" },
+        { "type": "choice", "q": "Hoe ziet de koffer eruit?", "options": ["Zwart met een rode band om het handvat", "Rood met een zwarte band", "Blauw met een label"], "answer": 0, "en": "What does the suitcase look like?" },
+        { "type": "choice", "q": "Waarom heeft de schrijver nieuwe spullen gekocht?", "options": ["Hij bleef nog drie dagen in Amsterdam en had zijn kleren en medicijnen nodig", "Zijn oude spullen waren kapot", "Hij wilde een cadeau kopen"], "answer": 0, "en": "Why did the writer buy new things?" },
+        { "type": "choice", "q": "Wat stuurt de schrijver met zijn e-mail mee?", "options": ["De bonnetjes en een kopie van zijn boardingpas", "Zijn paspoort", "Een foto van zijn koffer"], "answer": 0, "en": "What does the writer send with his email?" }
+      ],
+      "sources": [
+        { "title": "NT2 TaalMenu: B1 menu (reading texts)", "url": "https://nt2taalmenu.nl/nt2-b1-menu/" }
+      ]
+    },
+    {
+      "id": "b1.t07.l5", "title": "A holiday story", "kind": "listening",
+      "dialogue": [
+        { "who": "A", "nl": "Hoi Lisa! Wat leuk om je te zien. Hoe was je vakantie in Zuid-Limburg?", "en": "Hi Lisa! Nice to see you. How was your holiday in South Limburg?" },
+        { "who": "B", "nl": "Heerlijk! We zijn vorige week een weekend naar Maastricht geweest.", "en": "Lovely! We went to Maastricht for a weekend last week." },
+        { "who": "A", "nl": "Hoe zijn jullie gegaan?", "en": "How did you travel?" },
+        { "who": "B", "nl": "Met de trein. Eerst was er een storing bij Eindhoven, dus we zijn een uur te laat aangekomen. Daarna ging alles goed.", "en": "By train. First there was a disruption near Eindhoven, so we arrived an hour late. After that everything went well." },
+        { "who": "A", "nl": "Wat hebben jullie gedaan?", "en": "What did you do?" },
+        { "who": "B", "nl": "We hebben de stad bekeken, we hebben in een gezellig restaurant gegeten en op zondag zijn we gaan wandelen in de heuvels buiten de stad.", "en": "We looked around the city, we ate in a cosy restaurant and on Sunday we went hiking in the hills outside the city." },
+        { "who": "A", "nl": "Klinkt mooi. Hoe was het weer?", "en": "Sounds lovely. How was the weather?" },
+        { "who": "B", "nl": "Zaterdag regende het de hele dag, maar op zondag scheen de zon. Het uitzicht was prachtig.", "en": "On Saturday it rained all day, but on Sunday the sun was shining. The view was beautiful." },
+        { "who": "A", "nl": "Hebben jullie veel foto's gemaakt?", "en": "Did you take a lot of photos?" },
+        { "who": "B", "nl": "Ja, honderden! Ik laat ze je morgen zien. Ik wil volgend jaar zeker terug.", "en": "Yes, hundreds! I will show them to you tomorrow. I definitely want to go back next year." }
+      ],
+      "items": [
+        { "type": "listen", "nl": "We zijn vorige week een weekend naar Maastricht geweest.", "q": "Where did she go?", "options": ["To Maastricht", "To Groningen", "To Zwolle"], "answer": 0 },
+        { "type": "listen", "nl": "Eerst was er een storing bij Eindhoven, dus we zijn een uur te laat aangekomen.", "q": "Why were they late?", "options": ["There was a disruption on the line", "They missed the train", "The train was full"], "answer": 0 },
+        { "type": "listen", "nl": "Op zondag zijn we gaan wandelen in de heuvels buiten de stad.", "q": "What did they do on Sunday?", "options": ["They went hiking in the hills", "They visited a museum", "They went shopping"], "answer": 0 },
+        { "type": "listen", "nl": "Zaterdag regende het de hele dag.", "q": "What was the weather on Saturday?", "options": ["It rained all day", "The sun was shining", "It was very windy"], "answer": 0 },
+        { "type": "listen", "nl": "Ik wil volgend jaar zeker terug." },
+        { "type": "choice", "q": "Hoe zijn ze naar Maastricht gegaan?", "options": ["Met de trein", "Met de auto", "Met de bus"], "answer": 0, "en": "How did they go to Maastricht?" },
+        { "type": "choice", "q": "Wat vond Lisa van het uitzicht?", "options": ["Prachtig", "Gewoon", "Niet mooi"], "answer": 0, "en": "What did Lisa think of the view?" }
+      ],
+      "sources": [
+        { "title": "Easy Dutch (YouTube): street interviews with Dutch subtitles", "url": "https://www.youtube.com/@EasyDutch" }
+      ]
+    },
+    {
+      "id": "b1.t07.l6", "title": "Telling about a trip", "kind": "speaking",
+      "explain": [
+        { "type": "p", "text": "When you talk about travel in the Netherlands, it helps to know the map. The country has **twelve provinces**. The **Randstad** is the busy western area with Amsterdam, Rotterdam, The Hague and Utrecht. **Amsterdam** is the capital, but the government sits in **Den Haag**." },
+        { "type": "table", "head": ["Region", "Provinces (capital)"], "rows": [["Noorden", "Groningen (Groningen), Friesland (Leeuwarden), Drenthe (Assen)"], ["Oosten", "Overijssel (Zwolle), Gelderland (Arnhem), Flevoland (Lelystad)"], ["Westen", "Noord-Holland (Haarlem), Zuid-Holland (Den Haag), Utrecht (Utrecht)"], ["Zuiden", "Zeeland (Middelburg), Noord-Brabant ('s-Hertogenbosch), Limburg (Maastricht)"]] },
+        { "type": "ex", "nl": "Ik ben vorig jaar naar Friesland gegaan.", "en": "Last year I went to Friesland." },
+        { "type": "ex", "nl": "Ik vond de stad gezellig, maar het weer was helaas niet zo mooi.", "en": "I thought the city was nice, but unfortunately the weather was not so good." },
+        { "type": "tip", "text": "Tell a trip in the **perfect tense** (*ik ben … geweest, we hebben … gezien*) and give your **opinion** in the past tense (*ik vond het …*). The sequence words *eerst*, *daarna*, *tot slot* help." }
+      ],
+      "dialogue": [
+        { "who": "A", "nl": "Goedemorgen! Hoe was je weekend?", "en": "Good morning! How was your weekend?" },
+        { "who": "B", "nl": "Heel leuk! Ik ben naar Groningen geweest om een oude vriend te bezoeken.", "en": "Very nice! I went to Groningen to visit an old friend." },
+        { "who": "A", "nl": "Oh, leuk. Hoe ben je gegaan?", "en": "Oh, nice. How did you go?" },
+        { "who": "B", "nl": "Met de trein. De reis duurde bijna drie uur, maar dat vond ik niet erg, want ik had een goed boek bij me.", "en": "By train. The journey took almost three hours, but I didn't mind, because I had a good book with me." },
+        { "who": "A", "nl": "En wat hebben jullie gedaan?", "en": "And what did you do?" },
+        { "who": "B", "nl": "We hebben de binnenstad bekeken, we zijn naar een museum gegaan en 's avonds hebben we lekker gegeten.", "en": "We looked around the city centre, we went to a museum and in the evening we had a nice meal." },
+        { "who": "A", "nl": "Wat vond je van de stad?", "en": "What did you think of the city?" },
+        { "who": "B", "nl": "Ik vond hem gezellig en jong. Er zijn veel studenten, dus het is er altijd druk. Het weer was helaas niet zo mooi.", "en": "I thought it was cosy and young. There are many students, so it is always busy. The weather was unfortunately not so good." },
+        { "who": "A", "nl": "Ga je nog een keer terug?", "en": "Are you going back again?" },
+        { "who": "B", "nl": "Zeker. Volgende keer wil ik ook naar een van de Waddeneilanden.", "en": "Definitely. Next time I also want to go to one of the Wadden Islands." }
+      ],
+      "items": [
+        { "type": "speak", "nl": "Ik ben naar Groningen geweest om een oude vriend te bezoeken.", "en": "I went to Groningen to visit an old friend." },
+        { "type": "speak", "nl": "Ik vond de stad gezellig en jong.", "en": "I thought the city was cosy and young." },
+        {
+          "type": "prompt",
+          "task": "Describe your last trip or holiday: where you went, how you travelled, two things you did and what you thought of it.",
+          "model": "Vorig jaar ben ik met mijn gezin naar Zeeland gegaan. We zijn met de auto gegaan en we hebben in een klein vakantiehuisje gelogeerd. We hebben veel gefietst en we hebben op het strand gespeeld. Ik vond het erg mooi en rustig, maar het was soms koud.",
+          "seconds": 70,
+          "points": ["Where you went", "How you travelled", "Two things you did", "What you thought of it"]
+        },
+        {
+          "type": "prompt",
+          "task": "You arrive at the airport but your suitcase does not come out on the belt. Report it at the lost luggage desk: say who you are, which flight you were on, what the suitcase looks like and where you are staying.",
+          "model": "Goedemiddag, mijn naam is Sanne Bakker. Ik kom met de vlucht uit Lissabon en mijn koffer is niet op de band. Het is een zwarte koffer met een rode band om het handvat. Ik logeer de komende drie dagen in een hotel in Amsterdam.",
+          "seconds": 60,
+          "points": ["Who you are", "Your flight", "What the suitcase looks like", "Where you are staying"]
+        },
+        {
+          "type": "prompt",
+          "task": "Tell about a place in the Netherlands you would like to visit: which province it is in, what you want to do there and why.",
+          "model": "Ik wil graag naar Friesland. Dat is een provincie in het noorden. Ik wil daar fietsen en schaatsen als het koud genoeg is. Ik wil ook naar Leeuwarden, want ik heb gehoord dat het een mooie stad is.",
+          "seconds": 50,
+          "points": ["The place and the province", "What you want to do", "Why"]
+        }
+      ]
+    },
+    {
+      "id": "b1.t07.l7", "title": "A holiday story for a friend", "kind": "writing",
+      "explain": [
+        { "type": "p", "text": "A holiday story to a friend is **informal** and in the **perfect tense** or simple past. Start with a greeting, tell the story in order (*eerst, daarna, op zondag, tot slot*), say what you thought and end with a friendly closing." },
+        { "type": "ex", "nl": "Eerst zijn we met de trein naar Maastricht gegaan.", "en": "First we went to Maastricht by train." },
+        { "type": "ex", "nl": "Het was echt een geweldig weekend!", "en": "It was really a great weekend!" },
+        { "type": "tip", "text": "Useful: *Je raadt nooit wat er is gebeurd!*, *Het was prachtig / lekker / tegenvallend*, *Ik raad je aan om ook eens te gaan*." }
+      ],
+      "items": [
+        {
+          "type": "write",
+          "task": "Write a letter or email to a friend about your last holiday. Say where you went and with whom, how you travelled, what you did, one problem and what you thought of it. Use the perfect tense.",
+          "points": ["An informal greeting", "Where, with whom and how you travelled", "What you did", "One problem", "What you thought and a friendly closing"],
+          "minWords": 100, "maxWords": 150,
+          "model": "Hoi Sanne, ik ben net terug van mijn vakantie en ik wil je er alles over vertellen. Ik ben met mijn zus een week naar Noord-Spanje gegaan. We zijn eerst met de trein naar Parijs gereisd en daarna met de nachttrein verder. Dat was erg leuk, maar ook vermoeiend. In Spanje hebben we elke dag gewandeld en we hebben veel lekker gegeten. Op de derde dag is mijn tas gestolen in een restaurant. Gelukkig zat mijn paspoort in mijn zak, maar ik moest wel mijn telefoon opnieuw kopen. Desondanks vond ik de vakantie fantastisch. Het weer was prachtig en de mensen waren erg vriendelijk. Ik raad je aan om ook eens te gaan! Groetjes, Amira"
+        },
+        {
+          "type": "write",
+          "task": "Your train was two hours late and you missed an appointment. Write a formal email to the railway company: say which train, what happened, what the result was and that you ask for compensation.",
+          "points": ["A subject line", "Which train and when", "What happened and the result", "Your request for compensation", "A formal closing"],
+          "minWords": 70, "maxWords": 110,
+          "model": "Betreft: verzoek om vergoeding voor vertraging. Geachte heer/mevrouw, op dinsdag 4 maart ben ik met de trein van 8.15 uur van Utrecht naar Zwolle gereisd. De trein was door een storing twee uur te laat. Daardoor heb ik mijn afspraak met de dokter gemist en moest ik een nieuwe afspraak maken. Ik heb mijn vervoersbewijs bewaard en stuur het mee. Ik verzoek u mij een vergoeding te geven voor deze vertraging. Ik hoor graag binnen veertien dagen van u. Met vriendelijke groet, Amira Said"
+        }
+      ],
+      "sources": [
+        { "title": "Oefenen.nl: free practice (account needed)", "url": "https://oefenen.nl/" }
+      ]
+    }
+  ]
+}
