@@ -7,7 +7,7 @@ import androidx.sqlite.db.SupportSQLiteDatabase
 
 @Database(
     entities = [WordEntity::class, DailyStatsEntity::class, LessonProgressEntity::class, ReviewCardEntity::class],
-    version = 5,
+    version = 6,
     exportSchema = true
 )
 abstract class AppDatabase : RoomDatabase() {
@@ -42,5 +42,12 @@ val MIGRATION_4_5 = object : Migration(4, 5) {
         db.execSQL("CREATE TABLE IF NOT EXISTS `lesson_progress` (`lessonId` TEXT NOT NULL, `courseId` TEXT NOT NULL, `completedAt` INTEGER NOT NULL, `bestScore` INTEGER NOT NULL, `attempts` INTEGER NOT NULL, PRIMARY KEY(`lessonId`))")
         db.execSQL("CREATE TABLE IF NOT EXISTS `review_cards` (`cardId` TEXT NOT NULL, `courseId` TEXT NOT NULL, `dueAt` INTEGER NOT NULL, `intervalDays` REAL NOT NULL, `ease` REAL NOT NULL, `reps` INTEGER NOT NULL, `lapses` INTEGER NOT NULL, PRIMARY KEY(`cardId`))")
         db.execSQL("ALTER TABLE daily_stats ADD COLUMN exercisesDone INTEGER NOT NULL DEFAULT 0")
+    }
+}
+
+// Nullable, no default: existing words get their topic from the lexicon the next time the Words tab opens.
+val MIGRATION_5_6 = object : Migration(5, 6) {
+    override fun migrate(db: SupportSQLiteDatabase) {
+        db.execSQL("ALTER TABLE words ADD COLUMN topic TEXT")
     }
 }

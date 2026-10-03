@@ -109,7 +109,8 @@ fun AppScaffold(startAtAddWord: Boolean) {
                     onLessonClick = { navController.navigate("lesson/$it") },
                     onLearnClick = { navController.switchTab("learn") },
                     onReviewClick = { navController.navigate("review") },
-                    onProgressClick = { navController.navigate("progress") }
+                    onProgressClick = { navController.navigate("progress") },
+                    onWordsClick = { navController.switchTab("words") }
                 )
             }
             composable("learn") {

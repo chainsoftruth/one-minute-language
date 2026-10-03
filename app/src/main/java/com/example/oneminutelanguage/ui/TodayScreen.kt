@@ -55,6 +55,7 @@ fun TodayScreen(
     onLearnClick: () -> Unit,
     onReviewClick: () -> Unit,
     onProgressClick: () -> Unit,
+    onWordsClick: () -> Unit,
     viewModel: MainViewModel = viewModel()
 ) {
     val context = LocalContext.current
@@ -144,7 +145,8 @@ fun TodayScreen(
                 label = "words in your collection",
                 icon = Icons.AutoMirrored.Filled.MenuBook,
                 modifier = Modifier.weight(1f),
-                accent = MaterialTheme.appColors.violet
+                accent = MaterialTheme.appColors.violet,
+                onClick = onWordsClick
             )
         }
 

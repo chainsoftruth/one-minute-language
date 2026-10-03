@@ -45,6 +45,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -66,7 +67,10 @@ import com.example.oneminutelanguage.course.searchLexicon
 import com.example.oneminutelanguage.course.sendToWidgetMessage
 import com.example.oneminutelanguage.speech.WordSpeaker
 import com.example.oneminutelanguage.ui.components.ArticleTag
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -74,8 +78,13 @@ fun DictionaryScreen(onBack: () -> Unit, viewModel: DictionaryViewModel = viewMo
     val snackbar = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
     var selected by remember { mutableStateOf<LexEntry?>(null) }
-    val results = remember(viewModel.entries, viewModel.query, viewModel.level, viewModel.topic) {
-        searchLexicon(viewModel.entries, viewModel.query, viewModel.level, viewModel.topic)
+    // Searching ~4,000 entries is too slow for the main thread. A new keystroke cancels the previous search, which also debounces typing.
+    var results by remember { mutableStateOf<List<LexEntry>?>(null) }
+    LaunchedEffect(viewModel.entries, viewModel.query, viewModel.level, viewModel.topic) {
+        if (viewModel.query.isNotEmpty()) delay(150)
+        results = withContext(Dispatchers.Default) {
+            searchLexicon(viewModel.entries, viewModel.query, viewModel.level, viewModel.topic)
+        }
     }
 
     Scaffold(
@@ -107,12 +116,13 @@ fun DictionaryScreen(onBack: () -> Unit, viewModel: DictionaryViewModel = viewMo
                     FilterChip(selected = viewModel.topic == t.id, onClick = { viewModel.topic = if (viewModel.topic == t.id) null else t.id }, label = { Text(t.title) })
                 }
             }
+            val shown = results
             when {
-                viewModel.loading -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
                 viewModel.failed -> Text("Something's wrong with the course files, so the dictionary can't load.", modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.bodyLarge)
-                results.isEmpty() -> Text("No words found.", modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.bodyLarge)
+                viewModel.loading || shown == null -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
+                shown.isEmpty() -> Text("No words found.", modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.bodyLarge)
                 else -> LazyColumn(modifier = Modifier.fillMaxSize()) {
-                    items(results, key = { it.id }) { entry ->
+                    items(shown, key = { it.id }) { entry ->
                         ListItem(
                             modifier = Modifier.clickable { selected = entry },
                             colors = ListItemDefaults.colors(containerColor = Color.Transparent),

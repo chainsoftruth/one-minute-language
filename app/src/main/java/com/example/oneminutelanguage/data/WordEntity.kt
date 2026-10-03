@@ -20,5 +20,11 @@ data class WordEntity(
     val isEnabled: Boolean = true,
 
     /** First correct quiz answer; set = the word has left the widget's focus set. */
-    val learnedAt: Long? = null
+    val learnedAt: Long? = null,
+
+    /** Course topic id (`food_drink`); null for words the lexicon doesn't know. */
+    val topic: String? = null
 )
+
+/** One row of the topic list: how many words a topic has and how many of them are switched on. */
+data class TopicCount(val topic: String, val total: Int, val enabled: Int)

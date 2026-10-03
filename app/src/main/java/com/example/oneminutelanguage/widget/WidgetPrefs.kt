@@ -7,6 +7,7 @@ object WidgetPrefs {
     private const val KEY_LAST_WORD_ID = "last_word_id"
     private const val KEY_SHOWING_CHILD_A = "showing_child_a"
     private const val KEY_FOCUS_MODE = "focus_mode"
+    private const val KEY_TOPIC = "topic"
     private const val NO_LAST_WORD = -1L
 
     fun getLastWordId(context: Context, appWidgetId: Int): Long {
@@ -30,6 +31,18 @@ object WidgetPrefs {
         context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
             .edit()
             .putBoolean(KEY_FOCUS_MODE, enabled)
+            .apply()
+    }
+
+    /** The one topic the widget shows words from; null = every enabled word. */
+    fun getTopic(context: Context): String? {
+        return context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE).getString(KEY_TOPIC, null)
+    }
+
+    fun setTopic(context: Context, topic: String?) {
+        context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+            .edit()
+            .putString(KEY_TOPIC, topic)
             .apply()
     }
 

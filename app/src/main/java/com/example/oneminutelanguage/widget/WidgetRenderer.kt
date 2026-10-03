@@ -17,7 +17,6 @@ import com.example.oneminutelanguage.MainActivity
 import com.example.oneminutelanguage.R
 import com.example.oneminutelanguage.speech.SpeakWordActivity
 import com.example.oneminutelanguage.data.DatabaseProvider
-import com.example.oneminutelanguage.data.WordDao
 import com.example.oneminutelanguage.data.WordEntity
 import com.example.oneminutelanguage.translation.LanguageSettingsStore
 import com.example.oneminutelanguage.translation.withoutHints
@@ -25,13 +24,13 @@ import com.google.mlkit.nl.translate.TranslateLanguage
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import kotlin.math.ceil
-import kotlin.random.Random
 
 object WidgetRenderer {
     private const val ROOT_PADDING_DP = 6f
     private const val SECONDARY_MARGIN_DP = 1f
     private const val ADD_BUTTON_DP = 28f
-    private const val ADD_BUTTON_GAP_DP = 2f
+    /** Margin above and beside the button (so the launcher's rounded corner doesn't clip it) plus the gap to the text. */
+    private const val ADD_BUTTON_GAP_DP = 8f
     private const val PRIMARY_MAX_SP = 28
     private const val PRIMARY_MIN_SP = 14
     private const val SECONDARY_MAX_SP = 18
@@ -57,11 +56,13 @@ object WidgetRenderer {
             val wordDao = DatabaseProvider.getDatabase(context).wordDao()
 
             val lastWordId = WidgetPrefs.getLastWordId(context, appWidgetId)
+            val pool = widgetPool(wordDao.getEnabledWordsOnce(), WidgetPrefs.getTopic(context))
+            val focus = WidgetPrefs.isFocusMode(context)
+            // A re-render keeps the current word while it is still in the pool (a topic change or a disabled word drops it).
             val word = if (advance) {
-                pickWord(context, wordDao, lastWordId)
+                pickWord(pool, lastWordId, focus)
             } else {
-                wordDao.getWordById(lastWordId)?.takeIf { it.isEnabled }
-                    ?: pickWord(context, wordDao, lastWordId)
+                pool.find { it.id == lastWordId } ?: pickWord(pool, lastWordId, focus)
             }
 
             if (word != null) {
@@ -207,23 +208,19 @@ object WidgetRenderer {
         return dp * context.resources.displayMetrics.density
     }
 
-    /** Focus mode rotates through the focus set; off (or every word learned) = random pick. */
-    private suspend fun pickWord(context: Context, wordDao: WordDao, lastWordId: Long): WordEntity? {
-        val focusWord = if (WidgetPrefs.isFocusMode(context)) {
-            nextFocusWord(wordDao.getEnabledWordsOnce(), lastWordId)
-        } else null
-        return focusWord ?: pickRandomWord(wordDao, lastWordId)
-    }
-
-    private suspend fun pickRandomWord(wordDao: WordDao, excludeId: Long): WordEntity? {
-        val count = wordDao.getWordCountExcluding(excludeId)
-        if (count <= 0) {
-            return wordDao.getWordAtOffset(0)
-        }
-        val offset = Random.nextInt(count)
-        return wordDao.getWordAtOffsetExcluding(excludeId, offset)
+    /** Focus mode rotates through the focus set; off (or every word learned) = random pick, never the same word twice in a row. */
+    private fun pickWord(pool: List<WordEntity>, lastWordId: Long, focusMode: Boolean): WordEntity? {
+        val focusWord = if (focusMode) nextFocusWord(pool, lastWordId) else null
+        return focusWord ?: pool.filter { it.id != lastWordId }.randomOrNull() ?: pool.firstOrNull()
     }
 }
+
+/**
+ * The words the widget may show: the enabled ones, narrowed to [topic] when one is chosen.
+ * A topic with nothing switched on falls back to all enabled words, so the widget never goes blank by surprise.
+ */
+internal fun widgetPool(enabled: List<WordEntity>, topic: String?): List<WordEntity> =
+    if (topic == null) enabled else enabled.filter { it.topic == topic }.ifEmpty { enabled }
 
 /**
  * "De fiets" / "het huis" -> ("de", "fiets") / ("het", "huis"); anything else -> (null, word).

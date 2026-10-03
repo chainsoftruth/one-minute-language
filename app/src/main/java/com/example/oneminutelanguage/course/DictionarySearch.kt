@@ -9,10 +9,11 @@ private fun key(s: String) = stripDiacritics(s.lowercase().trim())
 fun searchLexicon(entries: Collection<LexEntry>, query: String, level: String? = null, topic: String? = null): List<LexEntry> {
     val q = key(query)
     val scoped = entries.filter { (level == null || it.lvl == level) && (topic == null || it.topic == topic) }
-    if (q.isEmpty()) return scoped.sortedBy { key(it.nl) }
-    return scoped.mapNotNull { e -> rank(e, q)?.let { it to e } }
-        .sortedWith(compareBy({ it.first }, { key(it.second.nl) }))
-        .map { it.second }
+    // The sort key is computed once per entry: normalising inside the comparator ran it ~50,000 times for the whole list.
+    if (q.isEmpty()) return scoped.map { key(it.nl) to it }.sortedBy { it.first }.map { it.second }
+    return scoped.mapNotNull { e -> rank(e, q)?.let { Triple(it, key(e.nl), e) } }
+        .sortedWith(compareBy({ it.first }, { it.second }))
+        .map { it.third }
 }
 
 private fun rank(e: LexEntry, q: String): Int? {

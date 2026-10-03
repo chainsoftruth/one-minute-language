@@ -117,12 +117,14 @@
         </LinearLayout>
     </ViewFlipper>
 
-    <!-- Round button; its size + margin is WidgetRenderer.ADD_BUTTON_DP + ADD_BUTTON_GAP_DP. -->
+    <!-- Round button; its size + margin (6dp, plus 2dp gap) is WidgetRenderer.ADD_BUTTON_DP + ADD_BUTTON_GAP_DP. -->
     <TextView
         android:id="@+id/btn_add_word"
         android:layout_width="28dp"
         android:layout_height="28dp"
         android:layout_gravity="top|end"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="6dp"
         android:background="@drawable/widget_add_bg"
         android:gravity="center"
         android:includeFontPadding="false"

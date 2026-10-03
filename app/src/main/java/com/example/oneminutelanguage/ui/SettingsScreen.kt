@@ -213,6 +213,8 @@ fun SettingsScreen(
                         )
                     }
                 )
+
+                WidgetTopicRow(viewModel)
             }
         }
     }
@@ -238,6 +240,55 @@ fun SettingsScreen(
                 }
             }
         )
+    }
+}
+
+/** Limits the widget (and its focus set) to the words of one topic. */
+@Composable
+private fun WidgetTopicRow(viewModel: SettingsViewModel) {
+    val topics by viewModel.topics.collectAsState()
+    var expanded by remember { mutableStateOf(false) }
+    val selected = viewModel.widgetTopic
+    val selectedCount = topics.find { it.topic == selected }
+    fun title(id: String) = viewModel.topicTitles[id] ?: id
+
+    Box {
+        ListItem(
+            modifier = Modifier.clickable(enabled = topics.isNotEmpty()) { expanded = true },
+            colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+            headlineContent = { Text("Widget topic") },
+            supportingContent = {
+                Text(
+                    when {
+                        topics.isEmpty() -> "Words get a topic when you add them from the dictionary or the starter list."
+                        selected == null -> "All topics. Pick one to practise only its words (switched-on ones, $FOCUS_SET_SIZE at a time in focus mode)."
+                        selectedCount == null -> "${title(selected)}: no words yet, showing all topics."
+                        selectedCount.enabled == 0 -> "${title(selected)}: all its words are switched off, showing all topics."
+                        else -> "${title(selected)} · ${selectedCount.enabled} words switched on"
+                    }
+                )
+            },
+            trailingContent = { Icon(imageVector = Icons.Default.ArrowDropDown, contentDescription = null) }
+        )
+
+        DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+            DropdownMenuItem(
+                text = { Text("All topics") },
+                onClick = {
+                    viewModel.onSelectWidgetTopic(null)
+                    expanded = false
+                }
+            )
+            topics.forEach { t ->
+                DropdownMenuItem(
+                    text = { Text("${title(t.topic)} · ${t.enabled}/${t.total}") },
+                    onClick = {
+                        viewModel.onSelectWidgetTopic(t.topic)
+                        expanded = false
+                    }
+                )
+            }
+        }
     }
 }
 

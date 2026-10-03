@@ -1,6 +1,8 @@
 package com.example.oneminutelanguage.translation
 
 import android.content.Context
+import com.example.oneminutelanguage.course.lexiconTopicIndex
+import com.example.oneminutelanguage.course.topicOf
 import com.example.oneminutelanguage.data.DatabaseProvider
 import com.example.oneminutelanguage.data.WordEntity
 import kotlinx.coroutines.Dispatchers
@@ -19,15 +21,19 @@ object DefaultWordsImporter {
             LanguageSettingsStore.getTargetLanguage(context)
         )
 
-        pairs.forEachIndexed { index, (sourceRaw, targetRaw) ->
+        val topics = lexiconTopicIndex(context)
+
+        pairs.forEachIndexed { index, (sourceRaw, targetRaw, dutch) ->
             onProgress(index + 1, pairs.size)
 
             val sourceText = capitalize(sourceRaw.withoutNumericHints())
             val existing = wordDao.findByLanguage1Word(sourceText)
+            // The topic comes from the Dutch entry, whatever language pair is in use.
+            val topic = topicOf(topics, dutch)
 
             if (existing != null) {
-                if (!existing.isDefault) {
-                    wordDao.updateWord(existing.copy(isDefault = true))
+                if (!existing.isDefault || (existing.topic == null && topic != null)) {
+                    wordDao.updateWord(existing.copy(isDefault = true, topic = existing.topic ?: topic))
                 }
                 return@forEachIndexed
             }
@@ -37,7 +43,8 @@ object DefaultWordsImporter {
                     language1Word = sourceText,
                     language2Word = capitalize(targetRaw.withoutNumericHints()),
                     dateAdded = System.currentTimeMillis(),
-                    isDefault = true
+                    isDefault = true,
+                    topic = topic
                 )
             )
         }
@@ -47,15 +54,15 @@ object DefaultWordsImporter {
         DatabaseProvider.getDatabase(context).wordDao().deleteAllDefaultWords()
     }
 
-    /** words.json is an array of {"en": "...", "nl": "...", ...}; entries missing either language are skipped. */
-    private suspend fun loadWordPairs(context: Context, source: String, target: String): List<Pair<String, String>> {
+    /** (source word, target word, Dutch word). words.json is an array of {"en": "...", "nl": "...", ...}; entries missing either language are skipped. */
+    private suspend fun loadWordPairs(context: Context, source: String, target: String): List<Triple<String, String, String>> {
         return withContext(Dispatchers.IO) {
             val json = context.assets.open("words.json").bufferedReader().use { it.readText() }
             val array = JSONArray(json)
             (0 until array.length())
                 .map { array.getJSONObject(it) }
                 .filter { it.has(source) && it.has(target) }
-                .map { it.getString(source) to it.getString(target) }
+                .map { Triple(it.getString(source), it.getString(target), it.optString("nl")) }
         }
     }
 

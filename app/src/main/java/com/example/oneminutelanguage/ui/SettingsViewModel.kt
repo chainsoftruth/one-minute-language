@@ -7,13 +7,20 @@ import androidx.compose.runtime.setValue
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.room.withTransaction
+import com.example.oneminutelanguage.course.backfillTopics
+import com.example.oneminutelanguage.course.loadTopicTitles
 import com.example.oneminutelanguage.data.DatabaseProvider
+import com.example.oneminutelanguage.data.TopicCount
 import com.example.oneminutelanguage.translation.DefaultWordsImporter
 import com.example.oneminutelanguage.translation.DefaultWordsPrefs
 import com.example.oneminutelanguage.translation.LanguageSettingsStore
 import com.example.oneminutelanguage.translation.TranslationHelper
 import com.example.oneminutelanguage.widget.WidgetPrefs
 import com.example.oneminutelanguage.widget.WidgetUpdater
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
 class SettingsViewModel(application: Application) : AndroidViewModel(application) {
@@ -44,6 +51,31 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
     fun onToggleFocusMode(enabled: Boolean) {
         WidgetPrefs.setFocusMode(getApplication(), enabled)
         focusMode = enabled
+    }
+
+    var widgetTopic by mutableStateOf(WidgetPrefs.getTopic(application))
+        private set
+
+    /** Topics that have words, with how many are switched on. */
+    val topics: StateFlow<List<TopicCount>> = wordDao.getTopicCounts()
+        .map { counts -> counts.sortedBy { it.topic } }
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptyList())
+
+    var topicTitles by mutableStateOf<Map<String, String>>(emptyMap())
+        private set
+
+    init {
+        viewModelScope.launch {
+            topicTitles = loadTopicTitles(application)
+            backfillTopics(application)
+        }
+    }
+
+    /** null = every enabled word. The widget switches to the new topic straight away. */
+    fun onSelectWidgetTopic(topic: String?) {
+        WidgetPrefs.setTopic(getApplication(), topic)
+        widgetTopic = topic
+        viewModelScope.launch { WidgetUpdater.refreshWidget(getApplication()) }
     }
 
     fun selectSourceLanguage(code: String) {

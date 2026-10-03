@@ -11,7 +11,7 @@ A home-screen widget that quietly teaches you one word at a time, plus a full Du
 ![Min SDK](https://img.shields.io/badge/minSdk-24-blue)
 ![Jetpack Compose](https://img.shields.io/badge/UI-Jetpack%20Compose-4285F4?logo=jetpackcompose&logoColor=white)
 ![ML Kit](https://img.shields.io/badge/translation-ML%20Kit-EA4335?logo=googletranslate&logoColor=white)
-![Version](https://img.shields.io/badge/version-2.0-success)
+![Version](https://img.shields.io/badge/version-2.1-success)
 
 </div>
 
@@ -36,6 +36,17 @@ Two modes in one app. **Quick** is the widget: a word sitting quietly on your ho
 | 🧭 **Placement test** | 30 questions suggest where to start, so you can skip what you already know |
 | 📊 **Progress and can-do list** | Level and skill meters, words mastered, and a B1 "I can…" checklist linked to the units that train each skill |
 | 📚 **Starter pack** | 679 hand-checked starter words for English–Dutch (583–590 for the other languages), one tap to import, one tap to cleanly remove later |
+
+## 🆕 What's new in v2.1
+
+Topics, a calmer dictionary and a tidier widget.
+
+- 🗂️ **Topics for your words** — every word from the starter list or the dictionary now belongs to a topic. The **My words** tab has topic chips; pick one and *Select all* / *Deselect all* switch just that topic on or off.
+- 🎯 **Widget topic** — Settings → Widget → *Widget topic* limits the widget (and its focus set of 20) to one topic.
+- ⚡ **Faster dictionary** — searching runs in the background, with a spinner while it loads.
+- 🎨 **My words** restyled to match the rest of the app; the **words in your collection** tile on Today opens it.
+- 🔘 The widget's **+** button no longer gets clipped by the rounded corner.
+- Upgrade: the database upgrades itself; your words and settings are kept.
 
 ## 🆕 What's new in v2.0
 

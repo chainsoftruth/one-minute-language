@@ -1,6 +1,6 @@
 package com.example.oneminutelanguage.ui
 
-import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -10,8 +10,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -19,16 +21,16 @@ import androidx.compose.material.icons.filled.Book
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material3.AlertDialog
-import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Card
+import androidx.compose.material3.FilterChip
 import androidx.compose.material3.FloatingActionButton
-import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
-import androidx.compose.material3.LargeTopAppBar
 import androidx.compose.material3.ListItem
 import androidx.compose.material3.ListItemDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.OutlinedTextFieldDefaults
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarDuration
 import androidx.compose.material3.SnackbarHost
@@ -37,8 +39,8 @@ import androidx.compose.material3.SnackbarResult
 import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
-import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -48,19 +50,18 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.oneminutelanguage.data.WordEntity
-import com.example.oneminutelanguage.ui.theme.appColors
 import com.example.oneminutelanguage.translation.LanguageSettingsStore
 import com.example.oneminutelanguage.translation.SupportedLanguages
 import com.example.oneminutelanguage.ui.components.ArticleTag
+import com.example.oneminutelanguage.ui.components.appCardColors
+import com.example.oneminutelanguage.ui.theme.appColors
 import kotlinx.coroutines.launch
 
 /** The Words tab. */
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DatabaseScreen(
     viewModel: DatabaseViewModel = viewModel(),
@@ -69,11 +70,19 @@ fun DatabaseScreen(
 ) {
     val query by viewModel.searchQuery.collectAsState()
     val words by viewModel.words.collectAsState()
+    val topics by viewModel.topics.collectAsState()
+    val topic by viewModel.topic.collectAsState()
+    val topicTitle = topic?.let { viewModel.topicTitles[it] ?: it }
 
     var pendingBulkEnable by remember { mutableStateOf<Boolean?>(null) }
     var editingWord by remember { mutableStateOf<WordEntity?>(null) }
     val snackbarHostState = remember { SnackbarHostState() }
     val scope = rememberCoroutineScope()
+
+    // A topic whose words were all deleted has no chip left to unselect it.
+    LaunchedEffect(topics) {
+        if (topic != null && topics.none { it.topic == topic }) viewModel.selectTopic(null)
+    }
 
     editingWord?.let { word ->
         EditWordDialog(
@@ -87,15 +96,17 @@ fun DatabaseScreen(
     }
 
     pendingBulkEnable?.let { enable ->
+        val what = if (topicTitle != null) "all $topicTitle words" else "all words"
         AlertDialog(
             onDismissRequest = { pendingBulkEnable = null },
-            title = { Text(if (enable) "Enable all words?" else "Disable all words?") },
+            title = { Text(if (enable) "Enable $what?" else "Disable $what?") },
             text = {
                 Text(
-                    if (enable) {
-                        "All words will be shown on the widget."
-                    } else {
-                        "No words will be shown on the widget until you enable some again."
+                    when {
+                        enable && topicTitle != null -> "Every word in this topic will be shown on the widget."
+                        enable -> "All words will be shown on the widget."
+                        topicTitle != null -> "These words won't be shown on the widget until you enable them again."
+                        else -> "No words will be shown on the widget until you enable some again."
                     }
                 )
             },
@@ -117,27 +128,10 @@ fun DatabaseScreen(
         )
     }
 
-    val scrollBehavior = TopAppBarDefaults.exitUntilCollapsedScrollBehavior()
-
     Scaffold(
-        modifier = Modifier.nestedScroll(scrollBehavior.nestedScrollConnection),
         containerColor = Color.Transparent,
         // The app scaffold already pads for the bottom bar.
         contentWindowInsets = WindowInsets(0),
-        topBar = {
-            LargeTopAppBar(
-                title = { Text("My words") },
-                actions = {
-                    IconButton(onClick = onDictionaryClick) { Icon(Icons.Default.Book, contentDescription = "Dictionary") }
-                },
-                scrollBehavior = scrollBehavior,
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = Color.Transparent,
-                    // The page gradient's top colour: opaque, but no visible band against the background.
-                    scrolledContainerColor = MaterialTheme.appColors.page.first()
-                )
-            )
-        },
         snackbarHost = { SnackbarHost(snackbarHostState) },
         floatingActionButton = {
             FloatingActionButton(onClick = onAddWordClick) {
@@ -149,8 +143,14 @@ fun DatabaseScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(innerPadding)
+                .statusBarsPadding()
                 .padding(horizontal = 16.dp)
         ) {
+            Row(modifier = Modifier.fillMaxWidth().padding(top = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+                Text("My words", style = MaterialTheme.typography.headlineSmall, modifier = Modifier.weight(1f))
+                IconButton(onClick = onDictionaryClick) { Icon(Icons.Default.Book, contentDescription = "Dictionary") }
+            }
+
             OutlinedTextField(
                 value = query,
                 onValueChange = viewModel::onSearchQueryChange,
@@ -160,13 +160,44 @@ fun DatabaseScreen(
                 },
                 singleLine = true,
                 shape = MaterialTheme.shapes.large,
-                modifier = Modifier.fillMaxWidth()
+                colors = OutlinedTextFieldDefaults.colors(
+                    focusedContainerColor = MaterialTheme.appColors.glass,
+                    unfocusedContainerColor = MaterialTheme.appColors.glass,
+                    unfocusedBorderColor = Color.Transparent
+                ),
+                modifier = Modifier.fillMaxWidth().padding(top = 8.dp)
             )
+
+            // Topics let you switch whole groups on or off: pick one, then Select all / Deselect all.
+            if (topics.isNotEmpty()) {
+                LazyRow(
+                    contentPadding = PaddingValues(vertical = 8.dp),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    item {
+                        FilterChip(selected = topic == null, onClick = { viewModel.selectTopic(null) }, label = { Text("All") })
+                    }
+                    items(topics, key = { it.topic }) { t ->
+                        FilterChip(
+                            selected = topic == t.topic,
+                            onClick = { viewModel.selectTopic(if (topic == t.topic) null else t.topic) },
+                            label = { Text("${viewModel.topicTitles[t.topic] ?: t.topic} · ${t.enabled}/${t.total}") }
+                        )
+                    }
+                }
+            }
 
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 verticalAlignment = Alignment.CenterVertically
             ) {
+                Text(
+                    text = if (words.size == 1) "1 word" else "${words.size} words",
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.weight(1f).padding(start = 4.dp)
+                )
+
                 TextButton(onClick = { pendingBulkEnable = true }) {
                     Text("Select all")
                 }
@@ -178,7 +209,7 @@ fun DatabaseScreen(
 
             if (words.isEmpty()) {
                 Text(
-                    text = if (query.isBlank()) "No words yet. Tap + to add one." else "No matches for \"$query\".",
+                    text = if (query.isBlank() && topic == null) "No words yet. Tap + to add one." else "No matches.",
                     style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(top = 8.dp)
                 )
@@ -186,7 +217,8 @@ fun DatabaseScreen(
                 // Bottom padding keeps the last row clear of the FAB.
                 LazyColumn(
                     modifier = Modifier.fillMaxSize(),
-                    contentPadding = PaddingValues(bottom = 88.dp)
+                    contentPadding = PaddingValues(bottom = 88.dp),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
                 ) {
                     items(words, key = { it.id }) { word ->
                         WordRow(
@@ -208,7 +240,6 @@ fun DatabaseScreen(
                                 }
                             }
                         )
-                        HorizontalDivider(color = MaterialTheme.colorScheme.outlineVariant)
                     }
                 }
             }
@@ -276,45 +307,46 @@ private fun WordRow(
     val article = articleOf(word.language2Word)
     val headline = if (article != null) word.language2Word.drop(article.length).trim() else word.language2Word
 
-    ListItem(
-        modifier = Modifier.clickable(onClick = onClick),
-        colors = ListItemDefaults.colors(containerColor = Color.Transparent),
-        leadingContent = article?.let { { ArticleTag(it) } },
-        headlineContent = {
-            Text(
-                text = headline,
-                style = MaterialTheme.typography.titleMedium,
-                color = if (word.isEnabled) {
-                    MaterialTheme.colorScheme.onSurface
-                } else {
-                    MaterialTheme.colorScheme.onSurfaceVariant
-                }
-            )
-        },
-        supportingContent = {
-            Text(
-                text = word.language1Word,
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-        },
-        trailingContent = {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Switch(
-                    checked = word.isEnabled,
-                    onCheckedChange = onEnabledChange
+    Card(onClick = onClick, modifier = Modifier.fillMaxWidth(), shape = MaterialTheme.shapes.medium, colors = appCardColors()) {
+        ListItem(
+            colors = ListItemDefaults.colors(containerColor = Color.Transparent),
+            leadingContent = article?.let { { ArticleTag(it) } },
+            headlineContent = {
+                Text(
+                    text = headline,
+                    style = MaterialTheme.typography.titleMedium,
+                    color = if (word.isEnabled) {
+                        MaterialTheme.colorScheme.onSurface
+                    } else {
+                        MaterialTheme.colorScheme.onSurfaceVariant
+                    }
                 )
-
-                Spacer(modifier = Modifier.width(4.dp))
-
-                IconButton(onClick = onDelete) {
-                    Icon(
-                        imageVector = Icons.Default.Delete,
-                        contentDescription = "Delete word",
-                        tint = MaterialTheme.colorScheme.error
+            },
+            supportingContent = {
+                Text(
+                    text = word.language1Word,
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                )
+            },
+            trailingContent = {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Switch(
+                        checked = word.isEnabled,
+                        onCheckedChange = onEnabledChange
                     )
+
+                    Spacer(modifier = Modifier.width(4.dp))
+
+                    IconButton(onClick = onDelete) {
+                        Icon(
+                            imageVector = Icons.Default.Delete,
+                            contentDescription = "Delete word",
+                            tint = MaterialTheme.colorScheme.error
+                        )
+                    }
                 }
             }
-        }
-    )
+        )
+    }
 }

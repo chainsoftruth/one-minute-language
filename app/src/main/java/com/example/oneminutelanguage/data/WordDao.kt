@@ -30,35 +30,26 @@ interface WordDao {
     @Query("UPDATE words SET learnedAt = :time WHERE id = :id AND learnedAt IS NULL")
     suspend fun markLearned(id: Long, time: Long)
 
-    @Query("SELECT * FROM words ORDER BY dateAdded DESC")
-    fun getAllWords(): Flow<List<WordEntity>>
-
     @Query("SELECT COUNT(*) FROM words")
     fun getWordCount(): Flow<Int>
 
-    @Query("SELECT * FROM words ORDER BY dateAdded DESC LIMIT 1")
-    suspend fun getLatestWord(): WordEntity?
-
     @Query("SELECT * FROM words WHERE id = :id LIMIT 1")
     suspend fun getWordById(id: Long): WordEntity?
-
-    @Query("SELECT COUNT(*) FROM words")
-    suspend fun getTotalWordCountOnce(): Int
-
-    @Query("SELECT COUNT(*) FROM words WHERE isEnabled = 1 AND id != :excludeId")
-    suspend fun getWordCountExcluding(excludeId: Long): Int
-
-    @Query("SELECT * FROM words WHERE isEnabled = 1 LIMIT 1 OFFSET :offset")
-    suspend fun getWordAtOffset(offset: Int): WordEntity?
-
-    @Query("SELECT * FROM words WHERE isEnabled = 1 AND id != :excludeId LIMIT 1 OFFSET :offset")
-    suspend fun getWordAtOffsetExcluding(excludeId: Long, offset: Int): WordEntity?
 
     @Query("UPDATE words SET isEnabled = :enabled WHERE id = :id")
     suspend fun setWordEnabled(id: Long, enabled: Boolean)
 
     @Query("UPDATE words SET isEnabled = :enabled")
     suspend fun setAllWordsEnabled(enabled: Boolean)
+
+    @Query("UPDATE words SET isEnabled = :enabled WHERE topic = :topic")
+    suspend fun setTopicEnabled(topic: String, enabled: Boolean)
+
+    @Query("UPDATE words SET topic = :topic WHERE id = :id")
+    suspend fun setTopic(id: Long, topic: String)
+
+    @Query("SELECT topic, COUNT(*) AS total, SUM(isEnabled) AS enabled FROM words WHERE topic IS NOT NULL GROUP BY topic")
+    fun getTopicCounts(): Flow<List<TopicCount>>
 
     @Query("UPDATE words SET language1Word = language2Word, language2Word = language1Word")
     suspend fun swapLanguageColumns()
@@ -78,9 +69,9 @@ interface WordDao {
 
     @Query(
         "SELECT * FROM words " +
-            "WHERE language1Word LIKE '%' || :query || '%' " +
-            "OR language2Word LIKE '%' || :query || '%' " +
+            "WHERE (language1Word LIKE '%' || :query || '%' OR language2Word LIKE '%' || :query || '%') " +
+            "AND (:topic IS NULL OR topic = :topic) " +
             "ORDER BY dateAdded DESC"
     )
-    fun searchWords(query: String): Flow<List<WordEntity>>
+    fun searchWords(query: String, topic: String?): Flow<List<WordEntity>>
 }

@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.defaultMinSize
@@ -92,9 +93,10 @@ fun StatTile(
     label: String,
     icon: ImageVector,
     modifier: Modifier = Modifier,
-    accent: Accent = MaterialTheme.appColors.blue
+    accent: Accent = MaterialTheme.appColors.blue,
+    onClick: (() -> Unit)? = null
 ) {
-    Card(modifier = modifier, shape = MaterialTheme.shapes.medium, colors = appCardColors()) {
+    val content: @Composable ColumnScope.() -> Unit = {
         Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
             IconTile(icon, accent, size = 36.dp, modifier = Modifier.padding(bottom = 8.dp))
             Text(text = value, style = MaterialTheme.typography.displaySmall)
@@ -105,6 +107,8 @@ fun StatTile(
             )
         }
     }
+    if (onClick == null) Card(modifier = modifier, shape = MaterialTheme.shapes.medium, colors = appCardColors(), content = content)
+    else Card(onClick = onClick, modifier = modifier, shape = MaterialTheme.shapes.medium, colors = appCardColors(), content = content)
 }
 
 @Composable
